@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "748244C51908C0E6008EC388"
-               BuildableName = "MessageDisplayKit.app"
-               BlueprintName = "MessageDisplayKit"
-               ReferencedContainer = "container:MessageDisplayKit.xcodeproj">
+               BlueprintIdentifier = "748245001908C730008EC388"
+               BuildableName = "MessageDisplayExample.app"
+               BlueprintName = "MessageDisplayExample"
+               ReferencedContainer = "container:MessageDisplayExample.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,20 +32,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "748244E01908C0E6008EC388"
-               BuildableName = "MessageDisplayKitTests.xctest"
-               BlueprintName = "MessageDisplayKitTests"
-               ReferencedContainer = "container:MessageDisplayKit.xcodeproj">
+               BlueprintIdentifier = "7482451B1908C730008EC388"
+               BuildableName = "MessageDisplayExampleTests.xctest"
+               BlueprintName = "MessageDisplayExampleTests"
+               ReferencedContainer = "container:MessageDisplayExample.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "748244C51908C0E6008EC388"
-            BuildableName = "MessageDisplayKit.app"
-            BlueprintName = "MessageDisplayKit"
-            ReferencedContainer = "container:MessageDisplayKit.xcodeproj">
+            BlueprintIdentifier = "748245001908C730008EC388"
+            BuildableName = "MessageDisplayExample.app"
+            BlueprintName = "MessageDisplayExample"
+            ReferencedContainer = "container:MessageDisplayExample.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -61,10 +61,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "748244C51908C0E6008EC388"
-            BuildableName = "MessageDisplayKit.app"
-            BlueprintName = "MessageDisplayKit"
-            ReferencedContainer = "container:MessageDisplayKit.xcodeproj">
+            BlueprintIdentifier = "748245001908C730008EC388"
+            BuildableName = "MessageDisplayExample.app"
+            BlueprintName = "MessageDisplayExample"
+            ReferencedContainer = "container:MessageDisplayExample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -79,10 +79,10 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "748244C51908C0E6008EC388"
-            BuildableName = "MessageDisplayKit.app"
-            BlueprintName = "MessageDisplayKit"
-            ReferencedContainer = "container:MessageDisplayKit.xcodeproj">
+            BlueprintIdentifier = "748245001908C730008EC388"
+            BuildableName = "MessageDisplayExample.app"
+            BlueprintName = "MessageDisplayExample"
+            ReferencedContainer = "container:MessageDisplayExample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

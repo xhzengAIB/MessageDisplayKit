@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>MessageDisplayKit.xcscheme</key>
+		<key>MessageDisplayExample.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,12 +12,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>748244C51908C0E6008EC388</key>
+		<key>748245001908C730008EC388</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>748244E01908C0E6008EC388</key>
+		<key>7482451B1908C730008EC388</key>
 		<dict>
 			<key>primary</key>
 			<true/>
