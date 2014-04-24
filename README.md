@@ -53,3 +53,6 @@ English: MessageDisplayKit is acailable under the MIT license, see the LICENSE f
                            
 English：If you use the open source components in your project, please [Email us](mailto:xhzengAIB@gmail.com?subject=From%20GitHub%20MessageDisplayKit) to tell us the name of your application, otherwise the consequence is proud.
 
+
+## Thanks you
+[jessesquires](https://github.com/jessesquires/MessagesTableViewController)
