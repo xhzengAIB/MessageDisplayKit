@@ -55,4 +55,4 @@ English：If you use the open source components in your project, please [Email u
 
 
 ## Thanks you
-[jessesquires](https://github.com/jessesquires/MessagesTableViewController) created JSMessagesViewController. My Project base on JSMessagesViewController.
+Thanks you [jessesquires](https://github.com/jessesquires/MessagesTableViewController) created JSMessagesViewController. My Project base on JSMessagesViewController.
