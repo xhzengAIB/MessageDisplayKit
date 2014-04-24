@@ -31,4 +31,6 @@ typedef void(^KeyboardWillChangeBlock)(CGRect keyboardRect, UIViewAnimationOptio
 
 @property (nonatomic, copy) KeyboardWillChangeBlock keyboardWillChange;
 
+@property (nonatomic, assign) CGFloat messageInputBarHeight;
+
 @end

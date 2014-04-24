@@ -81,6 +81,9 @@
     _allowsSendMultiMedia = YES;
     _allowsSendFace = YES;
     _inputViewStyle = XHMessageInputViewStyleFlat;
+    
+    self.delegate = self;
+    self.dataSource = self;
 }
 
 - (id)init {
@@ -142,16 +145,51 @@
                              
                              [weakSelf setTableViewInsetsWithBottomValue:weakSelf.view.frame.size.height
                               - weakSelf.messageInputView.frame.origin.y];
+                             [weakSelf scrollToBottomAnimated:NO];
                          }
                          completion:nil];
     };
     
+    void (^AnimationForMessageInputViewAtPoint)(CGPoint point) = ^(CGPoint point) {
+        CGRect inputViewFrame = weakSelf.messageInputView.frame;
+        CGPoint keyboardOrigin = [weakSelf.view convertPoint:point fromView:nil];
+        inputViewFrame.origin.y = keyboardOrigin.y - inputViewFrame.size.height;
+        weakSelf.messageInputView.frame = inputViewFrame;
+    };
+    
+    self.messageTableView.keyboardDidScrollToPoint = ^(CGPoint point) {
+        AnimationForMessageInputViewAtPoint(point);
+    };
+    
+    self.messageTableView.keyboardWillSnapBackToPoint = ^(CGPoint point) {
+        AnimationForMessageInputViewAtPoint(point);
+        if ([weakSelf.messageInputView.inputTextView isFirstResponder])
+            [weakSelf scrollToBottomAnimated:YES];
+    };
+    
+    self.messageTableView.keyboardWillBeDismissed = ^() {
+        CGRect inputViewFrame = weakSelf.messageInputView.frame;
+        inputViewFrame.origin.y = weakSelf.view.bounds.size.height - inputViewFrame.size.height;
+        weakSelf.messageInputView.frame = inputViewFrame;
+    };
+    
+    self.messageTableView.keyboardDidHide = ^() {
+        [weakSelf.messageInputView.inputTextView resignFirstResponder];
+    };
+    
     // 初始化输入工具条
     XHMessageInputView *inputView = [[XHMessageInputView alloc] initWithFrame:inputFrame];
+    inputView.allowsSendFace = self.allowsSendFace;
+    inputView.allowsSendVoice = self.allowsSendVoice;
+    inputView.allowsSendMultiMedia = self.allowsSendMultiMedia;
     [self.view addSubview:inputView];
+    
+    
+    self.messageTableView.messageInputBarHeight = CGRectGetHeight(_messageInputView.bounds);
     
     _messageInputView = inputView;
     _messageInputView.inputTextView.placeHolder = @"发送新消息";
+    _messageInputView.inputTextView.delegate = self;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -159,8 +197,10 @@
     // KVO 检查contentSize
     [self.messageInputView.inputTextView addObserver:self
                                      forKeyPath:@"contentSize"
-                                        options:NSKeyValueObservingOptionNew
+                                        options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld
                                         context:nil];
+    
+    [self scrollToBottomAnimated:NO];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -248,7 +288,6 @@
                                                                       inputViewFrame.origin.y - changeInHeight,
                                                                       inputViewFrame.size.width,
                                                                       inputViewFrame.size.height + changeInHeight);
-                             
                              if (!isShrinking) {
                                  // growing the view, animate the text view frame AFTER input view frame
                                  [self.messageInputView adjustTextViewHeightBy:changeInHeight];
@@ -294,6 +333,12 @@
     return insets;
 }
 
+#pragma mark - XHMessageTableViewController delegate
+
+- (BOOL)shouldPreventScrollToBottomWhileUserScrolling {
+    return YES;
+}
+
 #pragma mark - Text view delegate
 
 - (void)textViewDidBeginEditing:(UITextView *)textView
@@ -302,8 +347,6 @@
 	
     if (!self.previousTextViewContentHeight)
 		self.previousTextViewContentHeight = textView.contentSize.height;
-    
-    [self scrollToBottomAnimated:YES];
 }
 
 - (void)textViewDidChange:(UITextView *)textView {
@@ -349,7 +392,7 @@
 #pragma mark - Table view delegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 44;
+    return 90;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

@@ -20,6 +20,7 @@ static NSString * const KeyboardWillChangeBlockKey = @"KeyboardWillChangeBlockKe
 static NSString * const KeyboardViewKey = @"KeyboardViewKey";
 static NSString * const PreviousKeyboardYKey = @"PreviousKeyboardYKey";
 
+static NSString * const MessageInputBarHeightKey = @"MessageInputBarHeightKey";
 
 @interface UIScrollView (XHKetboradControl)
 
@@ -86,6 +87,13 @@ static NSString * const PreviousKeyboardYKey = @"PreviousKeyboardYKey";
 }
 - (CGFloat)previousKeyboardY {
     return [objc_getAssociatedObject(self, &PreviousKeyboardYKey) floatValue];
+}
+
+- (void)setMessageInputBarHeight:(CGFloat)messageInputBarHeight {
+    objc_setAssociatedObject(self, &MessageInputBarHeightKey, [NSNumber numberWithFloat:messageInputBarHeight], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+- (CGFloat)messageInputBarHeight {
+    return [objc_getAssociatedObject(self, &MessageInputBarHeightKey) floatValue];
 }
 
 #pragma mark - Helper Method
@@ -168,6 +176,7 @@ static NSString * const PreviousKeyboardYKey = @"PreviousKeyboardYKey";
     
     UIWindow *panWindow = [[UIApplication sharedApplication] keyWindow];
     CGPoint location = [pan locationInView:panWindow];
+    location.y += self.messageInputBarHeight;
     CGPoint velocity = [pan velocityInView:panWindow];
     
     switch (pan.state) {
@@ -217,11 +226,7 @@ static NSString * const PreviousKeyboardYKey = @"PreviousKeyboardYKey";
                                                                           self.keyboardView.frame.size.width,
                                                                           self.keyboardView.frame.size.height);
                                  }
-                                 completion:^(BOOL finished){
-                                     if (self.keyboardDidHide) {
-                                         self.keyboardDidHide();
-                                     }
-                                 }];
+                                 completion:NULL];
             }
             break;
             

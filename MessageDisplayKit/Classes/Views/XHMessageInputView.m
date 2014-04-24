@@ -65,7 +65,10 @@
 #pragma mark - Life cycle
 
 - (void)setup {
+    self.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin);
+    self.opaque = YES;
     self.userInteractionEnabled = YES;
+    
     _allowsSendVoice = YES;
     _allowsSendFace = YES;
     _allowsSendMultiMedia = YES;
@@ -126,7 +129,7 @@
 }
 
 + (CGFloat)maxLines {
-    return ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone) ? 4.0f : 8.0f;
+    return ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone) ? 3.0f : 8.0f;
 }
 
 + (CGFloat)maxHeight {
