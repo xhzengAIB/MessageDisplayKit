@@ -49,22 +49,24 @@
 /**
  *  是否允许手势关闭键盘，默认是允许
  */
-@property (nonatomic, assign) BOOL allowsPanToDismissKeyboard;
+@property (nonatomic, assign) BOOL allowsPanToDismissKeyboard; // default is YES
 
 /**
  *  是否允许发送语音
  */
-@property (nonatomic, assign) BOOL allowsSendVoice;
+@property (nonatomic, assign) BOOL allowsSendVoice; // default is YES
 
 /**
  *  是否允许发送多媒体
  */
-@property (nonatomic, assign) BOOL allowsSendMultiMedia;
+@property (nonatomic, assign) BOOL allowsSendMultiMedia; // default is YES
 
 /**
  *  是否支持发送表情
  */
-@property (nonatomic, assign) BOOL allowsSendFace;
+@property (nonatomic, assign) BOOL allowsSendFace; // default is YES
+
+@property (nonatomic, assign) XHMessageInputViewStyle inputViewStyle;
 
 #pragma mark - Messages view controller
 /**

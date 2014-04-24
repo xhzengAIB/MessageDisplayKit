@@ -16,7 +16,7 @@
 
 #pragma mark - layout subViews UI
 
-- (void)setupMessageInputViewBarWithStyle:(XHMessageInputViewType)style {
+- (void)setupMessageInputViewBarWithStyle:(XHMessageInputViewStyle)style {
     // 配置输入工具条的样式和布局
     
     CGFloat sendButtonWidth = (style == XHMessageInputViewStyleQuasiphysical) ? 78.0f : 64.0f;
@@ -65,9 +65,12 @@
 #pragma mark - Life cycle
 
 - (void)setup {
-    self.allowsSendVoice = YES;
-    self.allowsSendFace = YES;
-    self.allowsSendMultiMedia = YES;
+    self.userInteractionEnabled = YES;
+    _allowsSendVoice = YES;
+    _allowsSendFace = YES;
+    _allowsSendMultiMedia = YES;
+    
+    _messageInputViewStyle = XHMessageInputViewStyleFlat;
 }
 
 - (void)awakeFromNib {
@@ -85,21 +88,17 @@
 
 - (void)willMoveToSuperview:(UIView *)newSuperview {
     if (newSuperview) {
-        [self setupMessageInputViewBarWithStyle:self.messageInputViewType];
+        [self setupMessageInputViewBarWithStyle:self.messageInputViewStyle];
     }
 }
 
 #pragma mark - Message input view
 
-- (NSUInteger)numberOfLinesWithText:(NSString *)text {
-    return [[text componentsSeparatedByString:@"\n"] count] + 1;
-}
-
 - (void)adjustTextViewHeightBy:(CGFloat)changeInHeight {
     CGRect prevFrame = self.inputTextView.frame;
     
     NSUInteger numLines = MAX([self.inputTextView numberOfLinesOfText],
-                              [self numberOfLinesWithText:self.inputTextView.text]);
+                              [self.inputTextView.text numberOfLines]);
     
     self.inputTextView.frame = CGRectMake(prevFrame.origin.x,
                                      prevFrame.origin.y,

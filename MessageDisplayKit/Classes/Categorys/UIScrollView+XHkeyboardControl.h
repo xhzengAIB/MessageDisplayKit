@@ -20,8 +20,8 @@ typedef void(^KeyboardWillChangeBlock)(CGRect keyboardRect, UIViewAnimationOptio
 
 @interface UIScrollView (XHkeyboardControl)
 
-- (void)setupPanGestureControlKeyboardHide;
-- (void)disSetupPanGestureControlKeyboardHide;
+- (void)setupPanGestureControlKeyboardHide:(BOOL)isPanGestured;
+- (void)disSetupPanGestureControlKeyboardHide:(BOOL)isPanGestured;
 
 @property (nonatomic, copy) KeyboardWillBeDismissedBlock keyboardWillBeDismissed;
 @property (nonatomic, copy) KeyboardDidHideBlock keyboardDidHide;

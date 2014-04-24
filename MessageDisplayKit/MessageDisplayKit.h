@@ -9,6 +9,8 @@
 #ifndef MessageDisplayExample_MessageDisplayKit_h
 #define MessageDisplayExample_MessageDisplayKit_h
 
-
+#import "XHMacro.h"
+#import "NSString+MessageInputView.h"
+#import "XHMessageTableViewController.h"
 
 #endif

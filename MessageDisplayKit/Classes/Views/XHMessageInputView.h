@@ -10,7 +10,7 @@
 
 #import "XHMessageTextView.h"
 
-typedef NS_ENUM(NSInteger, XHMessageInputViewType) {
+typedef NS_ENUM(NSInteger, XHMessageInputViewStyle) {
     // 分两种,一种是iOS6样式的，一种是iOS7样式的
     XHMessageInputViewStyleQuasiphysical,
     XHMessageInputViewStyleFlat
@@ -26,7 +26,7 @@ typedef NS_ENUM(NSInteger, XHMessageInputViewType) {
 /**
  *  当前输入工具条的样式
  */
-@property (assign, nonatomic) XHMessageInputViewType messageInputViewType;  // default is XHMessageInputViewStyleFlat
+@property (assign, nonatomic) XHMessageInputViewStyle messageInputViewStyle;  // default is XHMessageInputViewStyleFlat
 
 /**
  *  是否允许发送语音

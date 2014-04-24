@@ -27,6 +27,13 @@
 		748245631909060E008EC388 /* XHMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 748245621909060E008EC388 /* XHMessageTableViewCell.m */; };
 		7482456819090B84008EC388 /* XHMessageBubbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7482456719090B84008EC388 /* XHMessageBubbleView.m */; };
 		7482456B19090C04008EC388 /* XHMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7482456A19090C04008EC388 /* XHMessage.m */; };
+		7482457C19091E11008EC388 /* input-bar-flat.png in Resources */ = {isa = PBXBuildFile; fileRef = 7482457A19091E11008EC388 /* input-bar-flat.png */; };
+		7482457D19091E11008EC388 /* input-bar-flat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7482457B19091E11008EC388 /* input-bar-flat@2x.png */; };
+		7482458419091E4E008EC388 /* input-bar-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 7482458219091E4E008EC388 /* input-bar-background.png */; };
+		7482458519091E4E008EC388 /* input-bar-background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7482458319091E4E008EC388 /* input-bar-background@2x.png */; };
+		7482458819091E5A008EC388 /* input-field-cover.png in Resources */ = {isa = PBXBuildFile; fileRef = 7482458619091E5A008EC388 /* input-field-cover.png */; };
+		7482458919091E5A008EC388 /* input-field-cover@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7482458719091E5A008EC388 /* input-field-cover@2x.png */; };
+		7482458F19092170008EC388 /* NSString+MessageInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7482458E19092170008EC388 /* NSString+MessageInputView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +81,15 @@
 		7482456919090C04008EC388 /* XHMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMessage.h; sourceTree = "<group>"; };
 		7482456A19090C04008EC388 /* XHMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMessage.m; sourceTree = "<group>"; };
 		7482457519090D6B008EC388 /* XHMessageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMessageModel.h; sourceTree = "<group>"; };
+		7482457919091BBA008EC388 /* XHMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMacro.h; sourceTree = "<group>"; };
+		7482457A19091E11008EC388 /* input-bar-flat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "input-bar-flat.png"; sourceTree = "<group>"; };
+		7482457B19091E11008EC388 /* input-bar-flat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "input-bar-flat@2x.png"; sourceTree = "<group>"; };
+		7482458219091E4E008EC388 /* input-bar-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "input-bar-background.png"; sourceTree = "<group>"; };
+		7482458319091E4E008EC388 /* input-bar-background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "input-bar-background@2x.png"; sourceTree = "<group>"; };
+		7482458619091E5A008EC388 /* input-field-cover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "input-field-cover.png"; sourceTree = "<group>"; };
+		7482458719091E5A008EC388 /* input-field-cover@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "input-field-cover@2x.png"; sourceTree = "<group>"; };
+		7482458D19092170008EC388 /* NSString+MessageInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MessageInputView.h"; sourceTree = "<group>"; };
+		7482458E19092170008EC388 /* NSString+MessageInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MessageInputView.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +201,12 @@
 		748245361908D450008EC388 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7482457A19091E11008EC388 /* input-bar-flat.png */,
+				7482457B19091E11008EC388 /* input-bar-flat@2x.png */,
+				7482458219091E4E008EC388 /* input-bar-background.png */,
+				7482458319091E4E008EC388 /* input-bar-background@2x.png */,
+				7482458619091E5A008EC388 /* input-field-cover.png */,
+				7482458719091E5A008EC388 /* input-field-cover@2x.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -192,6 +214,7 @@
 		7482454D190902DA008EC388 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				7482457819091BA2008EC388 /* Macro */,
 				7482454E190902DA008EC388 /* Categorys */,
 				74824554190902DA008EC388 /* Models */,
 				74824555190902DA008EC388 /* Views */,
@@ -205,6 +228,8 @@
 			children = (
 				7482454F190902DA008EC388 /* UIScrollView+XHkeyboardControl.h */,
 				74824550190902DA008EC388 /* UIScrollView+XHkeyboardControl.m */,
+				7482458D19092170008EC388 /* NSString+MessageInputView.h */,
+				7482458E19092170008EC388 /* NSString+MessageInputView.m */,
 			);
 			path = Categorys;
 			sourceTree = "<group>";
@@ -243,6 +268,14 @@
 				7482456719090B84008EC388 /* XHMessageBubbleView.m */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		7482457819091BA2008EC388 /* Macro */ = {
+			isa = PBXGroup;
+			children = (
+				7482457919091BBA008EC388 /* XHMacro.h */,
+			);
+			path = Macro;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,8 +353,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7482458819091E5A008EC388 /* input-field-cover.png in Resources */,
+				7482457D19091E11008EC388 /* input-bar-flat@2x.png in Resources */,
 				7482450F1908C730008EC388 /* InfoPlist.strings in Resources */,
+				7482458419091E4E008EC388 /* input-bar-background.png in Resources */,
+				7482457C19091E11008EC388 /* input-bar-flat.png in Resources */,
 				748245171908C730008EC388 /* Images.xcassets in Resources */,
+				7482458919091E5A008EC388 /* input-field-cover@2x.png in Resources */,
+				7482458519091E4E008EC388 /* input-bar-background@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +381,7 @@
 			files = (
 				74824560190902DA008EC388 /* XHMessageTextView.m in Sources */,
 				7482456B19090C04008EC388 /* XHMessage.m in Sources */,
+				7482458F19092170008EC388 /* NSString+MessageInputView.m in Sources */,
 				748245151908C730008EC388 /* AppDelegate.m in Sources */,
 				7482455F190902DA008EC388 /* XHMessageTableView.m in Sources */,
 				7482456819090B84008EC388 /* XHMessageBubbleView.m in Sources */,

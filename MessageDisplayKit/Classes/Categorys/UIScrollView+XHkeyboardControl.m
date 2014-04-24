@@ -17,11 +17,14 @@ static NSString * const KeyboardDidScrollToPointBlockKey = @"KeyboardDidScrollTo
 static NSString * const KeyboardWillSnapBackToPointBlockKey = @"KeyboardWillSnapBackToPointBlockKey";
 static NSString * const KeyboardWillChangeBlockKey = @"KeyboardWillChangeBlockKey";
 
+static NSString * const KeyboardViewKey = @"KeyboardViewKey";
+static NSString * const PreviousKeyboardYKey = @"PreviousKeyboardYKey";
+
 
 @interface UIScrollView (XHKetboradControl)
 
-@property (weak, nonatomic) UIView *keyboardView;
-@property (assign, nonatomic) CGFloat previousKeyboardY;
+@property (nonatomic, weak) UIView *keyboardView;
+@property (nonatomic, assign) CGFloat previousKeyboardY;
 
 @end
 
@@ -71,6 +74,20 @@ static NSString * const KeyboardWillChangeBlockKey = @"KeyboardWillChangeBlockKe
     return objc_getAssociatedObject(self, &KeyboardWillChangeBlockKey);
 }
 
+- (void)setKeyboardView:(UIView *)keyboardView {
+    objc_setAssociatedObject(self, &KeyboardViewKey, keyboardView, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+- (UIView *)keyboardView {
+    return objc_getAssociatedObject(self, &KeyboardViewKey);
+}
+
+- (void)setPreviousKeyboardY:(CGFloat)previousKeyboardY {
+    objc_setAssociatedObject(self, &PreviousKeyboardYKey, [NSNumber numberWithFloat:previousKeyboardY], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+- (CGFloat)previousKeyboardY {
+    return [objc_getAssociatedObject(self, &PreviousKeyboardYKey) floatValue];
+}
+
 #pragma mark - Helper Method
 
 + (UIView *)findKeyboard {
@@ -106,7 +123,7 @@ static NSString * const KeyboardWillChangeBlockKey = @"KeyboardWillChangeBlockKe
     return nil;
 }
 
-- (void)setupPanGestureControlKeyboardHide {
+- (void)setupPanGestureControlKeyboardHide:(BOOL)isPanGestured {
     // 键盘通知
     [[NSNotificationCenter defaultCenter] addObserver:self
 											 selector:@selector(handleWillShowKeyboardNotification:)
@@ -128,12 +145,16 @@ static NSString * const KeyboardWillChangeBlockKey = @"KeyboardWillChangeBlockKe
                                                  name:UIKeyboardDidHideNotification
                                                object:nil];
     
-    [self.panGestureRecognizer addTarget:self action:@selector(handlePanGesture:)];
+    if (isPanGestured)
+        [self.panGestureRecognizer addTarget:self action:@selector(handlePanGesture:)];
 }
 
-- (void)disSetupPanGestureControlKeyboardHide {
+- (void)disSetupPanGestureControlKeyboardHide:(BOOL)isPanGestured {
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillShowNotification object:nil];
 	[[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillHideNotification object:nil];
+    
+    if (isPanGestured)
+        [self.panGestureRecognizer removeTarget:self action:@selector(handlePanGesture:)];
 }
 
 #pragma mark - Gestures
