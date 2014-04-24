@@ -19,6 +19,11 @@
 		748245201908C730008EC388 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748245081908C730008EC388 /* UIKit.framework */; };
 		748245281908C730008EC388 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 748245261908C730008EC388 /* InfoPlist.strings */; };
 		7482452A1908C730008EC388 /* MessageDisplayExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 748245291908C730008EC388 /* MessageDisplayExampleTests.m */; };
+		7482455C190902DA008EC388 /* UIScrollView+XHkeyboardControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 74824550190902DA008EC388 /* UIScrollView+XHkeyboardControl.m */; };
+		7482455D190902DA008EC388 /* XHMessageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74824553190902DA008EC388 /* XHMessageTableViewController.m */; };
+		7482455E190902DA008EC388 /* XHMessageInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74824557190902DA008EC388 /* XHMessageInputView.m */; };
+		7482455F190902DA008EC388 /* XHMessageTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74824559190902DA008EC388 /* XHMessageTableView.m */; };
+		74824560190902DA008EC388 /* XHMessageTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7482455B190902DA008EC388 /* XHMessageTextView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,16 @@
 		748245271908C730008EC388 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		748245291908C730008EC388 /* MessageDisplayExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageDisplayExampleTests.m; sourceTree = "<group>"; };
 		748245341908C753008EC388 /* MessageDisplayKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageDisplayKit.h; sourceTree = "<group>"; };
+		7482454F190902DA008EC388 /* UIScrollView+XHkeyboardControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+XHkeyboardControl.h"; sourceTree = "<group>"; };
+		74824550190902DA008EC388 /* UIScrollView+XHkeyboardControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+XHkeyboardControl.m"; sourceTree = "<group>"; };
+		74824552190902DA008EC388 /* XHMessageTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMessageTableViewController.h; sourceTree = "<group>"; };
+		74824553190902DA008EC388 /* XHMessageTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMessageTableViewController.m; sourceTree = "<group>"; };
+		74824556190902DA008EC388 /* XHMessageInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMessageInputView.h; sourceTree = "<group>"; };
+		74824557190902DA008EC388 /* XHMessageInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMessageInputView.m; sourceTree = "<group>"; };
+		74824558190902DA008EC388 /* XHMessageTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMessageTableView.h; sourceTree = "<group>"; };
+		74824559190902DA008EC388 /* XHMessageTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMessageTableView.m; sourceTree = "<group>"; };
+		7482455A190902DA008EC388 /* XHMessageTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMessageTextView.h; sourceTree = "<group>"; };
+		7482455B190902DA008EC388 /* XHMessageTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMessageTextView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,9 +165,67 @@
 			isa = PBXGroup;
 			children = (
 				748245341908C753008EC388 /* MessageDisplayKit.h */,
+				7482454D190902DA008EC388 /* Classes */,
+				748245361908D450008EC388 /* Resources */,
 			);
 			name = MessageDisplayKit;
 			path = ../../MessageDisplayKit;
+			sourceTree = "<group>";
+		};
+		748245361908D450008EC388 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7482454D190902DA008EC388 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				7482454E190902DA008EC388 /* Categorys */,
+				74824554190902DA008EC388 /* Models */,
+				74824555190902DA008EC388 /* Views */,
+				74824551190902DA008EC388 /* Controllers */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		7482454E190902DA008EC388 /* Categorys */ = {
+			isa = PBXGroup;
+			children = (
+				7482454F190902DA008EC388 /* UIScrollView+XHkeyboardControl.h */,
+				74824550190902DA008EC388 /* UIScrollView+XHkeyboardControl.m */,
+			);
+			path = Categorys;
+			sourceTree = "<group>";
+		};
+		74824551190902DA008EC388 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				74824552190902DA008EC388 /* XHMessageTableViewController.h */,
+				74824553190902DA008EC388 /* XHMessageTableViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		74824554190902DA008EC388 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		74824555190902DA008EC388 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				74824556190902DA008EC388 /* XHMessageInputView.h */,
+				74824557190902DA008EC388 /* XHMessageInputView.m */,
+				74824558190902DA008EC388 /* XHMessageTableView.h */,
+				74824559190902DA008EC388 /* XHMessageTableView.m */,
+				7482455A190902DA008EC388 /* XHMessageTextView.h */,
+				7482455B190902DA008EC388 /* XHMessageTextView.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,8 +323,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74824560190902DA008EC388 /* XHMessageTextView.m in Sources */,
 				748245151908C730008EC388 /* AppDelegate.m in Sources */,
+				7482455F190902DA008EC388 /* XHMessageTableView.m in Sources */,
+				7482455D190902DA008EC388 /* XHMessageTableViewController.m in Sources */,
 				748245111908C730008EC388 /* main.m in Sources */,
+				7482455C190902DA008EC388 /* UIScrollView+XHkeyboardControl.m in Sources */,
+				7482455E190902DA008EC388 /* XHMessageInputView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +451,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MessageDisplayExample/MessageDisplayExample-Prefix.pch";
 				INFOPLIST_FILE = "MessageDisplayExample/MessageDisplayExample-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -386,6 +465,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MessageDisplayExample/MessageDisplayExample-Prefix.pch";
 				INFOPLIST_FILE = "MessageDisplayExample/MessageDisplayExample-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -450,6 +530,7 @@
 				7482452F1908C730008EC388 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		748245301908C730008EC388 /* Build configuration list for PBXNativeTarget "MessageDisplayExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -458,6 +539,7 @@
 				748245321908C730008EC388 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
