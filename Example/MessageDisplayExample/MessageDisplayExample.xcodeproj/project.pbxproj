@@ -27,7 +27,6 @@
 		748245631909060E008EC388 /* XHMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 748245621909060E008EC388 /* XHMessageTableViewCell.m */; };
 		7482456819090B84008EC388 /* XHMessageBubbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7482456719090B84008EC388 /* XHMessageBubbleView.m */; };
 		7482456B19090C04008EC388 /* XHMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7482456A19090C04008EC388 /* XHMessage.m */; };
-		7482457419090D2C008EC388 /* XHMedia.m in Sources */ = {isa = PBXBuildFile; fileRef = 7482457319090D2C008EC388 /* XHMedia.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,8 +73,7 @@
 		7482456719090B84008EC388 /* XHMessageBubbleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMessageBubbleView.m; sourceTree = "<group>"; };
 		7482456919090C04008EC388 /* XHMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMessage.h; sourceTree = "<group>"; };
 		7482456A19090C04008EC388 /* XHMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMessage.m; sourceTree = "<group>"; };
-		7482457219090D2C008EC388 /* XHMedia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMedia.h; sourceTree = "<group>"; };
-		7482457319090D2C008EC388 /* XHMedia.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMedia.m; sourceTree = "<group>"; };
+		7482457519090D6B008EC388 /* XHMessageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMessageModel.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,10 +221,9 @@
 		74824554190902DA008EC388 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7482457519090D6B008EC388 /* XHMessageModel.h */,
 				7482456919090C04008EC388 /* XHMessage.h */,
 				7482456A19090C04008EC388 /* XHMessage.m */,
-				7482457219090D2C008EC388 /* XHMedia.h */,
-				7482457319090D2C008EC388 /* XHMedia.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -343,7 +340,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7482457419090D2C008EC388 /* XHMedia.m in Sources */,
 				74824560190902DA008EC388 /* XHMessageTextView.m in Sources */,
 				7482456B19090C04008EC388 /* XHMessage.m in Sources */,
 				748245151908C730008EC388 /* AppDelegate.m in Sources */,
