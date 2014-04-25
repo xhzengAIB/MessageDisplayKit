@@ -12,13 +12,18 @@
 
 @interface XHMessageTableViewController ()
 
-// 判断是否用户手指滚动
+/**
+ *  判断是否用户手指滚动
+ */
 @property (assign, nonatomic) BOOL isUserScrolling;
 
+/**
+ *  记录旧的textView contentSize Heigth
+ */
 @property (assign, nonatomic) CGFloat previousTextViewContentHeight;
 
-@property (nonatomic, strong, readwrite) XHMessageTableView *messageTableView;
 
+@property (nonatomic, strong, readwrite) XHMessageTableView *messageTableView;
 @property (nonatomic, strong, readwrite) XHMessageInputView *messageInputView;
 
 @end
@@ -95,6 +100,7 @@
 }
 
 - (void)initilzer {
+    // 默认设置用户滚动为NO
     _isUserScrolling = NO;
     
     // 初始化message tableView
@@ -150,6 +156,7 @@
                          completion:nil];
     };
     
+    // 控制输入工具条的位置块
     void (^AnimationForMessageInputViewAtPoint)(CGPoint point) = ^(CGPoint point) {
         CGRect inputViewFrame = weakSelf.messageInputView.frame;
         CGPoint keyboardOrigin = [weakSelf.view convertPoint:point fromView:nil];
@@ -181,13 +188,12 @@
     inputView.allowsSendVoice = self.allowsSendVoice;
     inputView.allowsSendMultiMedia = self.allowsSendMultiMedia;
     [self.view addSubview:inputView];
-    
-    
-    self.messageTableView.messageInputBarHeight = CGRectGetHeight(_messageInputView.bounds);
-    
     _messageInputView = inputView;
     _messageInputView.inputTextView.placeHolder = @"发送新消息";
     _messageInputView.inputTextView.delegate = self;
+    
+    // 设置手势滑动，默认添加一个bar的高度值
+    self.messageTableView.messageInputBarHeight = CGRectGetHeight(_messageInputView.bounds);
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -197,7 +203,7 @@
                                      forKeyPath:@"contentSize"
                                         options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld
                                         context:nil];
-    
+    // 滚动到底部
     [self scrollToBottomAnimated:NO];
 }
 
@@ -365,6 +371,14 @@
 
 - (void)textViewDidEndEditing:(UITextView *)textView {
     [textView resignFirstResponder];
+}
+
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
+    if ([text isEqualToString:@"\n"]) {
+        [self finishSendMessage];
+        return NO;
+    }
+    return YES;
 }
 
 #pragma mark - Scroll view delegate

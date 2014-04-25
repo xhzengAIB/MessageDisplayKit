@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		74778EF0190A6136008535F6 /* holdDownButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74778EEF190A6136008535F6 /* holdDownButton@2x.png */; };
 		748245051908C730008EC388 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748245041908C730008EC388 /* Foundation.framework */; };
 		748245071908C730008EC388 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748245061908C730008EC388 /* CoreGraphics.framework */; };
 		748245091908C730008EC388 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748245081908C730008EC388 /* UIKit.framework */; };
@@ -36,6 +37,11 @@
 		7482458F19092170008EC388 /* NSString+MessageInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7482458E19092170008EC388 /* NSString+MessageInputView.m */; };
 		748245971909F33F008EC388 /* XHMessageBubbleFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 748245961909F33F008EC388 /* XHMessageBubbleFactory.m */; };
 		7482459A1909F370008EC388 /* XHMessageAvatorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 748245991909F370008EC388 /* XHMessageAvatorFactory.m */; };
+		748245A1190A4FF8008EC388 /* voice@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7482459D190A4FF8008EC388 /* voice@2x.png */; };
+		748245A2190A4FF8008EC388 /* face@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7482459E190A4FF8008EC388 /* face@2x.png */; };
+		748245A3190A4FF8008EC388 /* multiMedia@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7482459F190A4FF8008EC388 /* multiMedia@2x.png */; };
+		748245A4190A4FF8008EC388 /* keyborad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 748245A0190A4FF8008EC388 /* keyborad@2x.png */; };
+		748245A6190A506A008EC388 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 748245A5190A506A008EC388 /* View.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +55,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		74778EEF190A6136008535F6 /* holdDownButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "holdDownButton@2x.png"; sourceTree = "<group>"; };
 		748245011908C730008EC388 /* MessageDisplayExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessageDisplayExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		748245041908C730008EC388 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		748245061908C730008EC388 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -96,6 +103,11 @@
 		748245961909F33F008EC388 /* XHMessageBubbleFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMessageBubbleFactory.m; sourceTree = "<group>"; };
 		748245981909F370008EC388 /* XHMessageAvatorFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMessageAvatorFactory.h; sourceTree = "<group>"; };
 		748245991909F370008EC388 /* XHMessageAvatorFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMessageAvatorFactory.m; sourceTree = "<group>"; };
+		7482459D190A4FF8008EC388 /* voice@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "voice@2x.png"; sourceTree = "<group>"; };
+		7482459E190A4FF8008EC388 /* face@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "face@2x.png"; sourceTree = "<group>"; };
+		7482459F190A4FF8008EC388 /* multiMedia@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "multiMedia@2x.png"; sourceTree = "<group>"; };
+		748245A0190A4FF8008EC388 /* keyborad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "keyborad@2x.png"; sourceTree = "<group>"; };
+		748245A5190A506A008EC388 /* View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +219,11 @@
 		748245361908D450008EC388 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				74778EEF190A6136008535F6 /* holdDownButton@2x.png */,
+				7482459D190A4FF8008EC388 /* voice@2x.png */,
+				7482459E190A4FF8008EC388 /* face@2x.png */,
+				7482459F190A4FF8008EC388 /* multiMedia@2x.png */,
+				748245A0190A4FF8008EC388 /* keyborad@2x.png */,
 				7482457A19091E11008EC388 /* input-bar-flat.png */,
 				7482457B19091E11008EC388 /* input-bar-flat@2x.png */,
 				7482458219091E4E008EC388 /* input-bar-background.png */,
@@ -246,6 +263,7 @@
 			children = (
 				74824552190902DA008EC388 /* XHMessageTableViewController.h */,
 				74824553190902DA008EC388 /* XHMessageTableViewController.m */,
+				748245A5190A506A008EC388 /* View.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -372,11 +390,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				7482458819091E5A008EC388 /* input-field-cover.png in Resources */,
+				74778EF0190A6136008535F6 /* holdDownButton@2x.png in Resources */,
+				748245A1190A4FF8008EC388 /* voice@2x.png in Resources */,
 				7482457D19091E11008EC388 /* input-bar-flat@2x.png in Resources */,
+				748245A2190A4FF8008EC388 /* face@2x.png in Resources */,
 				7482450F1908C730008EC388 /* InfoPlist.strings in Resources */,
+				748245A6190A506A008EC388 /* View.xib in Resources */,
 				7482458419091E4E008EC388 /* input-bar-background.png in Resources */,
 				7482457C19091E11008EC388 /* input-bar-flat.png in Resources */,
+				748245A3190A4FF8008EC388 /* multiMedia@2x.png in Resources */,
 				748245171908C730008EC388 /* Images.xcassets in Resources */,
+				748245A4190A4FF8008EC388 /* keyborad@2x.png in Resources */,
 				7482458919091E5A008EC388 /* input-field-cover@2x.png in Resources */,
 				7482458519091E4E008EC388 /* input-bar-background@2x.png in Resources */,
 			);

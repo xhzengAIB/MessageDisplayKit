@@ -10,27 +10,139 @@
 
 @interface XHMessageInputView ()
 
+@property (nonatomic, strong, readwrite) UIButton *voiceChangeButton;
+
+@property (nonatomic, strong, readwrite) UIButton *multiMediaSendButton;
+
+@property (nonatomic, strong, readwrite) UIButton *faceSendButton;
+
+@property (nonatomic, strong, readwrite) UIButton *holdDownButtonButton;
+
 @end
 
 @implementation XHMessageInputView
 
+#pragma mark - Action
+
+- (void)messageStyleButtonClicked:(UIButton *)sender {
+    NSInteger index = sender.tag;
+    switch (index) {
+        case 0: {
+            sender.selected = !sender.selected;
+            if (sender.selected) {
+                [self.inputTextView resignFirstResponder];
+            } else {
+                [self.inputTextView becomeFirstResponder];
+            }
+            
+            [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+                self.holdDownButtonButton.alpha = sender.selected;
+            } completion:^(BOOL finished) {
+                
+            }];
+        }
+            break;
+        case 1:
+            break;
+        case 2:
+            break;
+        default:
+            break;
+    }
+}
+
 #pragma mark - layout subViews UI
+
+- (UIButton *)createButtonWithImage:(UIImage *)image {
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, [XHMessageInputView textViewLineHeight], [XHMessageInputView textViewLineHeight])];
+    [button setBackgroundImage:image forState:UIControlStateNormal];
+    
+    return button;
+}
 
 - (void)setupMessageInputViewBarWithStyle:(XHMessageInputViewStyle)style {
     // 配置输入工具条的样式和布局
     
-    CGFloat sendButtonWidth = (style == XHMessageInputViewStyleQuasiphysical) ? 78.0f : 64.0f;
+    // 需要显示按钮的总宽度，包括间隔在内
+    CGFloat allButtonWidth = 0.0;
     
-    CGFloat width = self.frame.size.width - sendButtonWidth;
+    // 水平间隔
+    CGFloat horizontalPadding = 8;
+    
+    // 垂直间隔
+    CGFloat verticalPadding = 3;
+    
+    // 输入框
+    CGFloat textViewLeftMargin = ((style == XHMessageInputViewStyleFlat) ? 6.0 : 4.0);
+    
+    // 每个按钮统一使用的frame变量
+    CGRect buttonFrame;
+    
+    // 按钮对象消息
+    UIButton *button;
+    
+    // 允许发送语音
+    if (self.allowsSendVoice) {
+        button = [self createButtonWithImage:[UIImage imageNamed:@"voice"]];
+        [button addTarget:self action:@selector(messageStyleButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+        button.tag = 0;
+        [button setImage:[UIImage imageNamed:@"keyborad"] forState:UIControlStateSelected];
+        buttonFrame = button.frame;
+        buttonFrame.origin = CGPointMake(horizontalPadding, verticalPadding);
+        button.frame = buttonFrame;
+        [self addSubview:button];
+        allButtonWidth += CGRectGetMaxX(buttonFrame);
+        textViewLeftMargin += CGRectGetMaxX(buttonFrame);
+        
+        self.voiceChangeButton = button;
+    }
+    
+    // 允许发送多媒体消息，为什么不是先放表情按钮呢？因为布局的需要！
+    if (self.allowsSendMultiMedia) {
+        button = [self createButtonWithImage:[UIImage imageNamed:@"multiMedia"]];
+        [button addTarget:self action:@selector(messageStyleButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+        button.tag = 2;
+        buttonFrame = button.frame;
+        buttonFrame.origin = CGPointMake(CGRectGetWidth(self.bounds) - horizontalPadding - CGRectGetWidth(buttonFrame), verticalPadding);
+        button.frame = buttonFrame;
+        [self addSubview:button];
+        allButtonWidth += CGRectGetWidth(buttonFrame) + horizontalPadding * 2.5;
+        
+        self.multiMediaSendButton = button;
+    }
+    
+    // 允许发送表情
+    if (self.allowsSendFace) {
+        button = [self createButtonWithImage:[UIImage imageNamed:@"face"]];
+        [button addTarget:self action:@selector(messageStyleButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+        button.tag = 1;
+        buttonFrame = button.frame;
+        if (self.allowsSendMultiMedia) {
+            buttonFrame.origin = CGPointMake(CGRectGetMinX(self.multiMediaSendButton.frame) - CGRectGetWidth(buttonFrame) - horizontalPadding, verticalPadding);
+            allButtonWidth += CGRectGetWidth(buttonFrame) + horizontalPadding * 1.5;
+        } else {
+            buttonFrame.origin = CGPointMake(CGRectGetWidth(self.bounds) - horizontalPadding - CGRectGetWidth(buttonFrame), verticalPadding);
+            allButtonWidth += CGRectGetWidth(buttonFrame) + horizontalPadding * 2.5;
+        }
+        button.frame = buttonFrame;
+        [self addSubview:button];
+        
+        self.faceSendButton = button;
+    }
+    
+    // 输入框的高度和宽度
+    CGFloat width = CGRectGetWidth(self.bounds) - allButtonWidth;
     CGFloat height = [XHMessageInputView textViewLineHeight];
     
     XHMessageTextView *textView = [[XHMessageTextView  alloc] initWithFrame:CGRectZero];
+    textView.returnKeyType = UIReturnKeySend;
+    textView.enablesReturnKeyAutomatically = YES;
     [self addSubview:textView];
 	_inputTextView = textView;
     
     switch (style) {
         case XHMessageInputViewStyleQuasiphysical: {
-            _inputTextView.frame = CGRectMake(6.0f, 3.0f, width, height);
+            _inputTextView.frame = CGRectMake(textViewLeftMargin, 3.0f, width, height);
             _inputTextView.backgroundColor = [UIColor whiteColor];
             
             self.image = [[UIImage imageNamed:@"input-bar-background"] resizableImageWithCapInsets:UIEdgeInsetsMake(19.0f, 3.0f, 19.0f, 3.0f)
@@ -47,7 +159,7 @@
             break;
         }
         case XHMessageInputViewStyleFlat: {
-            _inputTextView.frame = CGRectMake(4.0f, 4.5f, width, height);
+            _inputTextView.frame = CGRectMake(textViewLeftMargin, 4.5f, width, height);
             _inputTextView.backgroundColor = [UIColor clearColor];
             _inputTextView.layer.borderColor = [UIColor colorWithWhite:0.8f alpha:1.0f].CGColor;
             _inputTextView.layer.borderWidth = 0.65f;
@@ -59,6 +171,15 @@
         }
         default:
             break;
+    }
+    
+    if (self.allowsSendVoice) {
+        button = [self createButtonWithImage:[UIImage imageNamed:@"holdDownButton"]];
+        buttonFrame = _inputTextView.frame;
+        button.frame = buttonFrame;
+        button.alpha = self.voiceChangeButton.selected;
+        [self addSubview:button];
+        self.holdDownButtonButton = button;
     }
 }
 

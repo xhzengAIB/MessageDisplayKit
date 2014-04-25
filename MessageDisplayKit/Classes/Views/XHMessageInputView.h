@@ -43,6 +43,13 @@ typedef NS_ENUM(NSInteger, XHMessageInputViewStyle) {
  */
 @property (nonatomic, assign) BOOL allowsSendFace; // default is YES
 
+@property (nonatomic, strong, readonly) UIButton *voiceChangeButton;
+
+@property (nonatomic, strong, readonly) UIButton *multiMediaSendButton;
+
+@property (nonatomic, strong, readonly) UIButton *faceSendButton;
+
+@property (nonatomic, strong, readonly) UIButton *holdDownButtonButton;
 
 #pragma mark - Message input view
 
