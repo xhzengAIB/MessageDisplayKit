@@ -10,7 +10,16 @@
 #define MessageDisplayExample_MessageDisplayKit_h
 
 #import "XHMacro.h"
+
+#import "UIImage+XHRounded.h"
 #import "NSString+MessageInputView.h"
+#import "UIScrollView+XHkeyboardControl.h"
+
+#import "XHMessageAvatorFactory.h"
+#import "XHMessageBubbleFactory.h"
+
+#import "XHMessageTableViewCell.h"
+
 #import "XHMessageTableViewController.h"
 
 #endif

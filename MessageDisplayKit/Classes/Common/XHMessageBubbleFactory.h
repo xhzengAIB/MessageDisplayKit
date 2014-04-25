@@ -14,13 +14,21 @@ typedef NS_ENUM(NSInteger, XHBubbleMessageType) {
 };
 
 typedef NS_ENUM(NSUInteger, XHBubbleImageViewStyle) {
-    XHBubbleImageViewStyleCircle
+    XHBubbleImageViewStyleWeChat
+};
+
+typedef NS_ENUM(NSInteger, XHBubbleMessageMediaType) {
+    XHBubbleMessagePhoto,
+    XHBubbleMessageVideo,
+    XHBubbleMessageText,
+    XHBubbleMessageVioce
 };
 
 @interface XHMessageBubbleFactory : NSObject
 
 + (UIImageView *)bubbleImageViewForType:(XHBubbleMessageType)type
-                                  style:(XHBubbleImageViewStyle *)style;
+                                  style:(XHBubbleImageViewStyle)style
+                              meidaType:(XHBubbleMessageMediaType)mediaType;
 
 
 @end

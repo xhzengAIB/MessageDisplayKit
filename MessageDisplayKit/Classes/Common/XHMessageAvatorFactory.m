@@ -12,8 +12,19 @@
 
 + (UIImage *)avatarImageNamed:(UIImage *)originImage
             messageAvatorType:(XHMessageAvatorType)messageAvatorType {
-    
-    return originImage;
+    CGFloat radius = 0.0;
+    switch (messageAvatorType) {
+        case XHMessageAvatorCircle:
+            radius = originImage.size.width / 2.0;
+            break;
+        case XHMessageAvatorSquare:
+            radius = 8;
+            break;
+        default:
+            break;
+    }
+    UIImage *avator = [originImage createRoundedWithRadius:radius];
+    return avator;
 }
 
 @end
