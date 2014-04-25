@@ -163,8 +163,6 @@
     
     self.messageTableView.keyboardWillSnapBackToPoint = ^(CGPoint point) {
         AnimationForMessageInputViewAtPoint(point);
-        if ([weakSelf.messageInputView.inputTextView isFirstResponder])
-            [weakSelf scrollToBottomAnimated:YES];
     };
     
     self.messageTableView.keyboardWillBeDismissed = ^() {
@@ -255,8 +253,10 @@
     [self.messageTableView reloadData];
     [self.messageTableView setNeedsLayout];
 }
+
+#pragma mark - UITextView Helper method
+
 - (CGFloat)getTextViewContentH:(UITextView*)textView {
-    
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
         return ceilf([textView sizeThatFits:textView.frame.size].height);
     } else {
