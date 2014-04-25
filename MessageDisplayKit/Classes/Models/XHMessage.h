@@ -24,6 +24,9 @@
 @property (nonatomic, copy) NSString *viocePath;
 @property (nonatomic, copy) NSString *vioceUrl;
 
+@property (nonatomic, strong) UIImage *avator;
+@property (nonatomic, copy) NSString *avatorUrl;
+
 @property (nonatomic, copy) NSString *sender;
 
 @property (nonatomic, strong) NSDate *date;
