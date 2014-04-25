@@ -174,7 +174,7 @@
     
     // block回调键盘通知
     WEAKSELF
-    self.messageTableView.keyboardWillChange = ^(CGRect keyboardRect, UIViewAnimationOptions options, double duration){
+    self.messageTableView.keyboardWillChange = ^(CGRect keyboardRect, UIViewAnimationOptions options, double duration, BOOL showKeyborad){
         [UIView animateWithDuration:duration
                               delay:0.0
                             options:options
@@ -196,7 +196,8 @@
                              
                              [weakSelf setTableViewInsetsWithBottomValue:weakSelf.view.frame.size.height
                               - weakSelf.messageInputView.frame.origin.y];
-                             [weakSelf scrollToBottomAnimated:NO];
+                             if (showKeyborad)
+                                 [weakSelf scrollToBottomAnimated:NO];
                          }
                          completion:nil];
     };
@@ -446,7 +447,7 @@
 #pragma mark - Table view delegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 150;
+    return 300;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

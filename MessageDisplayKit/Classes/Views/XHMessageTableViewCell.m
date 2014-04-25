@@ -32,7 +32,7 @@
         [self.contentView addSubview:self.avatorImageView];
         
         // bubble container
-        _bubbleContainerView = [[UIView alloc] initWithFrame:CGRectMake(55, 10, CGRectGetWidth([[UIScreen mainScreen] bounds]) - 110, 120)];
+        _bubbleContainerView = [[UIView alloc] initWithFrame:CGRectMake(55, 10, CGRectGetWidth([[UIScreen mainScreen] bounds]) - 110, 280)];
         [self.contentView addSubview:self.bubbleContainerView];
         
         // Action Button
@@ -43,13 +43,13 @@
         [self.bubbleContainerView addSubview:btn];
         
         // demo label
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(22, 8, CGRectGetWidth(self.bubbleContainerView.bounds) - 30, CGRectGetHeight(self.bubbleContainerView.bounds) - 16)];
-        label.font = [UIFont systemFontOfSize:13.0];
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(22, 8, CGRectGetWidth(self.bubbleContainerView.bounds) - 34, CGRectGetHeight(self.bubbleContainerView.bounds) - 16)];
+        label.font = [UIFont systemFontOfSize:16.0];
         label.backgroundColor = [UIColor clearColor];
         label.textColor = [UIColor blackColor];
         label.numberOfLines = 0;
         label.lineBreakMode = NSLineBreakByCharWrapping;
-        label.text = @"这是华捷微信，为什么模仿这个页面效果呢？希望微信团队能看到我们在努力，请微信团队给个机会，让我好好的努力靠近大神，希望自己也能发亮，好像有点过分的希望了，如果能支持，大家帮帮忙支持这个开源库吧！我是Jack，叫华仔也行，曾宪华就是我啦！Call Me 15915895880";
+        label.text = @"这是华捷微信，为什么模仿这个页面效果呢？希望微信团队能看到我们在努力，请微信团队给个机会，让我好好的努力靠近大神，希望自己也能发亮，好像有点过分的希望了，如果大家喜欢这个开源库，请大家帮帮忙支持这个开源库吧！我是Jack，叫华仔也行，曾宪华就是我啦！Call Me 15915895880";
         [self.bubbleContainerView addSubview:label];
         
         //bubble image
