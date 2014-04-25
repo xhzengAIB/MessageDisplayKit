@@ -79,8 +79,6 @@
 
 - (void)finishSendMessage {
     [self.messageInputView.inputTextView setText:nil];
-    [self textViewDidChange:self.messageInputView.inputTextView];
-    [self.messageTableView reloadData];
 }
 
 - (void)setBackgroundColor:(UIColor *)color {
@@ -234,10 +232,11 @@
     inputView.allowsSendFace = self.allowsSendFace;
     inputView.allowsSendVoice = self.allowsSendVoice;
     inputView.allowsSendMultiMedia = self.allowsSendMultiMedia;
+    inputView.delegate = self;
     [self.view addSubview:inputView];
+    
     _messageInputView = inputView;
-    _messageInputView.inputTextView.placeHolder = @"发送新消息";
-    _messageInputView.inputTextView.delegate = self;
+    
     
     // 设置手势滑动，默认添加一个bar的高度值
     self.messageTableView.messageInputBarHeight = CGRectGetHeight(_messageInputView.bounds);
@@ -309,7 +308,7 @@
 
 #pragma mark - UITextView Helper method
 
-- (CGFloat)getTextViewContentH:(UITextView*)textView {
+- (CGFloat)getTextViewContentH:(UITextView *)textView {
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
         return ceilf([textView sizeThatFits:textView.frame.size].height);
     } else {
@@ -402,30 +401,15 @@
     return YES;
 }
 
-#pragma mark - Text view delegate
+#pragma mark - XHMessageInputView Delegate
 
-- (void)textViewDidBeginEditing:(UITextView *)textView
-{
-    [textView becomeFirstResponder];
-	
+- (void)inputTextViewDidBeginEditing:(XHMessageTextView *)messageInputTextView {
     if (!self.previousTextViewContentHeight)
-		self.previousTextViewContentHeight = [self getTextViewContentH:textView];
+		self.previousTextViewContentHeight = [self getTextViewContentH:messageInputTextView];
 }
 
-- (void)textViewDidChange:(UITextView *)textView {
-//    self.messageInputView.sendButton.enabled = ([[textView.text js_stringByTrimingWhitespace] length] > 0);
-}
-
-- (void)textViewDidEndEditing:(UITextView *)textView {
-    [textView resignFirstResponder];
-}
-
-- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
-    if ([text isEqualToString:@"\n"]) {
-        [self finishSendMessage];
-        return NO;
-    }
-    return YES;
+- (void)didSendMessageWithText:(NSString *)text {
+    DLog(@"text : %@", text);
 }
 
 #pragma mark - Scroll view delegate
@@ -466,7 +450,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [self finishSendMessage];
+    
 }
 
 #pragma mark - Key-value observing

@@ -11,14 +11,14 @@
 
 #import "XHMacro.h"
 
-#import "XHMessage.h"
-
 #import "UIImage+XHRounded.h"
 #import "NSString+MessageInputView.h"
 #import "UIScrollView+XHkeyboardControl.h"
 
 #import "XHMessageAvatorFactory.h"
 #import "XHMessageBubbleFactory.h"
+
+#import "XHMessage.h"
 
 #import "XHMessageTableViewCell.h"
 

@@ -8,7 +8,7 @@
 
 #import "XHMessageInputView.h"
 
-@interface XHMessageInputView ()
+@interface XHMessageInputView () <UITextViewDelegate>
 
 @property (nonatomic, strong, readwrite) UIButton *voiceChangeButton;
 
@@ -141,6 +141,9 @@
     textView.returnKeyType = UIReturnKeySend;
     textView.enablesReturnKeyAutomatically = YES; // UITextView内部判断send按钮是否可以用
     
+    textView.placeHolder = @"发送新消息";
+    textView.delegate = self;
+    
     [self addSubview:textView];
 	_inputTextView = textView;
     
@@ -268,5 +271,28 @@
     return ([XHMessageInputView maxLines] + 1.0f) * [XHMessageInputView textViewLineHeight];
 }
 
+#pragma mark - Text view delegate
+
+- (void)textViewDidBeginEditing:(UITextView *)textView {
+    [textView becomeFirstResponder];
+    if ([self.delegate respondsToSelector:@selector(inputTextViewDidBeginEditing:)]) {
+        [self.delegate inputTextViewDidBeginEditing:self.inputTextView];
+    }
+}
+
+- (void)textViewDidEndEditing:(UITextView *)textView {
+    [textView resignFirstResponder];
+}
+
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
+    if ([text isEqualToString:@"\n"]) {
+        if ([self.delegate respondsToSelector:@selector(didSendMessageWithText:)]) {
+            [self.delegate didSendMessageWithText:textView.text];
+        }
+        self.inputTextView.text = nil;
+        return NO;
+    }
+    return YES;
+}
 
 @end

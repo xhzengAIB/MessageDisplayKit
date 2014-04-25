@@ -16,7 +16,22 @@ typedef NS_ENUM(NSInteger, XHMessageInputViewStyle) {
     XHMessageInputViewStyleFlat
 };
 
+@protocol XHMessageInputViewDelegate <NSObject>
+
+@required
+- (void)inputTextViewDidBeginEditing:(XHMessageTextView *)messageInputTextView;
+
+@optional
+- (void)didSendMessageWithText:(NSString *)text;
+- (void)didSendMessageWithPhoto:(UIImage *)photo;
+- (void)didSendMessageWithVideo:(NSString *)videoPath;
+- (void)didSendMessageWithVioce:(NSString *)viocePath;
+
+@end
+
 @interface XHMessageInputView : UIImageView
+
+@property (nonatomic, weak) id <XHMessageInputViewDelegate> delegate;
 
 /**
  *  用于输入文本消息的输入框

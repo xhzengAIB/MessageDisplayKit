@@ -29,7 +29,7 @@
 
 @end
 
-@interface XHMessageTableViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UITextViewDelegate, XHMessageTableViewControllerDelegate, XHMessageTableViewControllerDataSource>
+@interface XHMessageTableViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, XHMessageTableViewControllerDelegate, XHMessageTableViewControllerDataSource, XHMessageInputViewDelegate>
 
 @property (nonatomic, weak) id <XHMessageTableViewControllerDelegate> delegate;
 
