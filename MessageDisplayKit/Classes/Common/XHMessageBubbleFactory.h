@@ -8,6 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
+typedef NS_ENUM(NSInteger, XHBubbleMessageType) {
+    XHBubbleMessageTypeReceiving,
+    XHBubbleMessageTypeSending
+};
+
+typedef NS_ENUM(NSUInteger, XHBubbleImageViewStyle) {
+    XHBubbleImageViewStyleCircle
+};
+
 @interface XHMessageBubbleFactory : NSObject
+
++ (UIImageView *)bubbleImageViewForType:(XHBubbleMessageType)type
+                                  style:(XHBubbleImageViewStyle *)style;
+
 
 @end

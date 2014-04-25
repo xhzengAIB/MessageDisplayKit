@@ -8,6 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+typedef NS_ENUM(NSInteger, XHMessageAvatorType) {
+    XHMessageAvatorSquare,
+    XHMessageAvatorCircle
+};
+
 @interface XHMessageAvatorFactory : NSObject
+
++ (UIImage *)avatarImageNamed:(UIImage *)originImage
+            messageAvatorType:(XHMessageAvatorType)type;
 
 @end

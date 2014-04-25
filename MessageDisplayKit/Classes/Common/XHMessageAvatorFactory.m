@@ -10,4 +10,10 @@
 
 @implementation XHMessageAvatorFactory
 
++ (UIImage *)avatarImageNamed:(UIImage *)originImage
+            messageAvatorType:(XHMessageAvatorType)messageAvatorType {
+    
+    return originImage;
+}
+
 @end
