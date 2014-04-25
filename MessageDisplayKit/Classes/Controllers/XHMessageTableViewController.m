@@ -28,6 +28,53 @@
 
 @implementation XHMessageTableViewController
 
+#pragma mark - DataSource Change
+
+- (void)addMessage:(XHMessage *)addedMessage {
+    NSMutableArray *messages = [NSMutableArray arrayWithArray:self.messages];
+    [messages addObject:addedMessage];
+    self.messages = messages;
+    
+    NSMutableArray *indexPaths = [NSMutableArray arrayWithCapacity:1];
+    [indexPaths addObject:[NSIndexPath indexPathForRow:messages.count inSection:0]];
+    
+    [self.messageTableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationBottom];
+}
+
+- (void)removeMessage:(XHMessage *)reomvedMessage {
+    NSMutableArray *messages = [NSMutableArray arrayWithArray:self.messages];
+    [messages removeObject:reomvedMessage];
+    self.messages = messages;
+    
+    NSMutableArray *indexPaths = [NSMutableArray arrayWithCapacity:1];
+    [indexPaths addObject:[NSIndexPath indexPathForRow:messages.count + 1 inSection:0]];
+    
+    [self.messageTableView deleteRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationTop];
+}
+
+- (void)insertOldMessages:(NSArray *)oldMessages {
+    NSMutableArray *messages = [NSMutableArray arrayWithArray:oldMessages];
+    [messages addObjectsFromArray:self.messages];
+    self.messages = messages;
+    
+    NSMutableArray *indexPaths = [NSMutableArray arrayWithCapacity:oldMessages.count];
+    [oldMessages enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:idx inSection:0];
+        [indexPaths addObject:indexPath];
+    }];
+    
+    [self.messageTableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationTop];
+}
+
+#pragma mark - Propertys
+
+- (NSMutableArray *)messages {
+    if (!_messages) {
+        _messages = [[NSMutableArray alloc] initWithCapacity:0];
+    }
+    return _messages;
+}
+
 #pragma mark - Messages view controller
 
 - (void)finishSendMessage {
@@ -64,6 +111,8 @@
 						  atScrollPosition:position
 								  animated:animated];
 }
+
+#pragma mark - Previte Method
 
 - (BOOL)shouldAllowScroll {
     if (self.isUserScrolling) {
