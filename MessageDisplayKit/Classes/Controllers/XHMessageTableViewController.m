@@ -255,14 +255,24 @@
     [self.messageTableView reloadData];
     [self.messageTableView setNeedsLayout];
 }
+- (CGFloat)getTextViewContentH:(UITextView*)textView {
+    
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
+        return ceilf([textView sizeThatFits:textView.frame.size].height);
+    } else {
+        return textView.contentSize.height;
+    }
+}
 
 #pragma mark - Layout message input view
 
 - (void)layoutAndAnimateMessageInputTextView:(UITextView *)textView {
     CGFloat maxHeight = [XHMessageInputView maxHeight];
     
-    BOOL isShrinking = textView.contentSize.height < self.previousTextViewContentHeight;
-    CGFloat changeInHeight = textView.contentSize.height - self.previousTextViewContentHeight;
+    CGFloat contentH = [self getTextViewContentH:textView];
+    
+    BOOL isShrinking = contentH < self.previousTextViewContentHeight;
+    CGFloat changeInHeight = contentH - _previousTextViewContentHeight;
     
     if (!isShrinking && (self.previousTextViewContentHeight == maxHeight || textView.text.length == 0)) {
         changeInHeight = 0;
@@ -296,7 +306,7 @@
                          completion:^(BOOL finished) {
                          }];
         
-        self.previousTextViewContentHeight = MIN(textView.contentSize.height, maxHeight);
+        self.previousTextViewContentHeight = MIN(contentH, maxHeight);
     }
     
     // Once we reached the max height, we have to consider the bottom offset for the text view.
@@ -307,7 +317,7 @@
         dispatch_after(popTime,
                        dispatch_get_main_queue(),
                        ^(void) {
-                           CGPoint bottomOffset = CGPointMake(0.0f, textView.contentSize.height - textView.bounds.size.height);
+                           CGPoint bottomOffset = CGPointMake(0.0f, contentH - textView.bounds.size.height);
                            [textView setContentOffset:bottomOffset animated:YES];
                        });
     }
@@ -346,7 +356,7 @@
     [textView becomeFirstResponder];
 	
     if (!self.previousTextViewContentHeight)
-		self.previousTextViewContentHeight = textView.contentSize.height;
+		self.previousTextViewContentHeight = [self getTextViewContentH:textView];
 }
 
 - (void)textViewDidChange:(UITextView *)textView {
