@@ -41,7 +41,6 @@
 		748245A2190A4FF8008EC388 /* face@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7482459E190A4FF8008EC388 /* face@2x.png */; };
 		748245A3190A4FF8008EC388 /* multiMedia@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7482459F190A4FF8008EC388 /* multiMedia@2x.png */; };
 		748245A4190A4FF8008EC388 /* keyborad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 748245A0190A4FF8008EC388 /* keyborad@2x.png */; };
-		748245A6190A506A008EC388 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 748245A5190A506A008EC388 /* View.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,7 +106,6 @@
 		7482459E190A4FF8008EC388 /* face@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "face@2x.png"; sourceTree = "<group>"; };
 		7482459F190A4FF8008EC388 /* multiMedia@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "multiMedia@2x.png"; sourceTree = "<group>"; };
 		748245A0190A4FF8008EC388 /* keyborad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "keyborad@2x.png"; sourceTree = "<group>"; };
-		748245A5190A506A008EC388 /* View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,7 +261,6 @@
 			children = (
 				74824552190902DA008EC388 /* XHMessageTableViewController.h */,
 				74824553190902DA008EC388 /* XHMessageTableViewController.m */,
-				748245A5190A506A008EC388 /* View.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -395,7 +392,6 @@
 				7482457D19091E11008EC388 /* input-bar-flat@2x.png in Resources */,
 				748245A2190A4FF8008EC388 /* face@2x.png in Resources */,
 				7482450F1908C730008EC388 /* InfoPlist.strings in Resources */,
-				748245A6190A506A008EC388 /* View.xib in Resources */,
 				7482458419091E4E008EC388 /* input-bar-background.png in Resources */,
 				7482457C19091E11008EC388 /* input-bar-flat.png in Resources */,
 				748245A3190A4FF8008EC388 /* multiMedia@2x.png in Resources */,

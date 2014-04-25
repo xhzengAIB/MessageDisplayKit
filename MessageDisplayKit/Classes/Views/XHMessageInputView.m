@@ -134,12 +134,17 @@
     CGFloat width = CGRectGetWidth(self.bounds) - allButtonWidth;
     CGFloat height = [XHMessageInputView textViewLineHeight];
     
+    // 初始化输入框
     XHMessageTextView *textView = [[XHMessageTextView  alloc] initWithFrame:CGRectZero];
+    
+    // 这个是仿微信的一个细节体验
     textView.returnKeyType = UIReturnKeySend;
-    textView.enablesReturnKeyAutomatically = YES;
+    textView.enablesReturnKeyAutomatically = YES; // UITextView内部判断send按钮是否可以用
+    
     [self addSubview:textView];
 	_inputTextView = textView;
     
+    // 配置不同iOS SDK版本的样式
     switch (style) {
         case XHMessageInputViewStyleQuasiphysical: {
             _inputTextView.frame = CGRectMake(textViewLeftMargin, 3.0f, width, height);
@@ -173,6 +178,7 @@
             break;
     }
     
+    // 如果是可以发送语言的，那就需要一个按钮录音的按钮，事件可以在外部添加
     if (self.allowsSendVoice) {
         button = [self createButtonWithImage:[UIImage imageNamed:@"holdDownButton"]];
         buttonFrame = _inputTextView.frame;
@@ -186,10 +192,13 @@
 #pragma mark - Life cycle
 
 - (void)setup {
+    // 配置自适应
     self.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin);
     self.opaque = YES;
+    // 由于继承UIImageView，所以需要这个属性设置
     self.userInteractionEnabled = YES;
     
+    // 默认设置
     _allowsSendVoice = YES;
     _allowsSendFace = YES;
     _allowsSendMultiMedia = YES;
@@ -211,6 +220,7 @@
 }
 
 - (void)willMoveToSuperview:(UIView *)newSuperview {
+    // 当别的地方需要add的时候，就会调用这里
     if (newSuperview) {
         [self setupMessageInputViewBarWithStyle:self.messageInputViewStyle];
     }
@@ -219,6 +229,7 @@
 #pragma mark - Message input view
 
 - (void)adjustTextViewHeightBy:(CGFloat)changeInHeight {
+    // 动态改变自身的高度和输入框的高度
     CGRect prevFrame = self.inputTextView.frame;
     
     NSUInteger numLines = MAX([self.inputTextView numberOfLinesOfText],
