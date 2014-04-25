@@ -28,6 +28,10 @@
 
 @property (nonatomic, strong) NSDate *date;
 
+@property (nonatomic, assign) BOOL sended;
+
+@property (nonatomic, assign) XHBubbleMessageMediaType messageMediaType;
+
 
 /**
  *  初始化文本消息

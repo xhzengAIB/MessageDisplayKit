@@ -18,9 +18,9 @@ typedef NS_ENUM(NSUInteger, XHBubbleImageViewStyle) {
 };
 
 typedef NS_ENUM(NSInteger, XHBubbleMessageMediaType) {
+    XHBubbleMessageText,
     XHBubbleMessagePhoto,
     XHBubbleMessageVideo,
-    XHBubbleMessageText,
     XHBubbleMessageVioce
 };
 
