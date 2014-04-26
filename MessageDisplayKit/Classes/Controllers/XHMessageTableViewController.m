@@ -412,6 +412,30 @@
 
 - (void)didSendMessageWithText:(NSString *)text {
     DLog(@"text : %@", text);
+    if ([self.delegate respondsToSelector:@selector(didSendText:fromSender:onDate:)]) {
+        [self.delegate didSendText:text fromSender:self.messageSender onDate:[NSDate date]];
+    }
+}
+
+- (void)didSendMessageWithPhoto:(UIImage *)photo {
+    DLog(@"send photo : %@", photo);
+    if ([self.delegate respondsToSelector:@selector(didSendPhoto:fromSender:onDate:)]) {
+        [self.delegate didSendPhoto:photo fromSender:self.messageSender onDate:[NSDate date]];
+    }
+}
+
+- (void)didSendMessageWithVideo:(NSString *)videoPath {
+    DLog(@"send videoPath : %@", videoPath);
+    if ([self.delegate respondsToSelector:@selector(didSendVideo:fromSender:onDate:)]) {
+        [self.delegate didSendVideo:videoPath fromSender:self.messageSender onDate:[NSDate date]];
+    }
+}
+
+- (void)didSendMessageWithVioce:(NSString *)viocePath {
+    DLog(@"send viocePath : %@", viocePath);
+    if ([self.delegate respondsToSelector:@selector(didSendVioce:fromSender:onDate:)]) {
+        [self.delegate didSendVioce:viocePath fromSender:self.messageSender onDate:[NSDate date]];
+    }
 }
 
 #pragma mark - Scroll view delegate
@@ -429,6 +453,35 @@
     self.isUserScrolling = NO;
 }
 
+#pragma mark - XHMessageTableViewController Delegate
+
+- (void)didSendText:(NSString *)text fromSender:(NSString *)sender onDate:(NSDate *)date {
+    // subClass
+}
+
+- (void)didSendPhoto:(UIImage *)photo fromSender:(NSString *)sender onDate:(NSDate *)date {
+    // subClass
+}
+
+- (void)didSendVideo:(NSString *)videoPath fromSender:(NSString *)sender onDate:(NSDate *)date {
+    // subClass
+}
+
+- (void)didSendVioce:(NSString *)viocePath fromSender:(NSString *)sender onDate:(NSDate *)date {
+    // subClass
+}
+
+- (XHBubbleMessageType)messageTypeForRowAtIndexPath:(NSIndexPath *)indexPath {
+    // subClass
+    return XHBubbleMessageTypeSending;
+}
+
+#pragma mark - XHMessageTableViewController DataSource
+
+- (id <XHMessageModel>)messageForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return self.messages[indexPath.row];
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -436,15 +489,28 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 100;
+    return self.messages.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *cellIdentifier = @"cellIdentifier";
-    XHMessageTableViewCell *messageTableViewCell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    if (!messageTableViewCell) {
-        messageTableViewCell = [[XHMessageTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+    XHBubbleMessageType type = [self.delegate messageTypeForRowAtIndexPath:indexPath];
+    
+    id <XHMessageModel> message = [self.dataSource messageForRowAtIndexPath:indexPath];
+    
+    BOOL displayTimestamp = YES;
+    if ([self.delegate respondsToSelector:@selector(shouldDisplayTimestampForRowAtIndexPath:)]) {
+        displayTimestamp = [self.delegate shouldDisplayTimestampForRowAtIndexPath:indexPath];
     }
+    
+    static NSString *cellIdentifier = @"XHMessageTableViewCell";
+    
+    XHMessageTableViewCell *messageTableViewCell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    
+    if (!messageTableViewCell) {
+        messageTableViewCell = [[XHMessageTableViewCell alloc] initWithBubbleMessageType:type displaysTimestamp:displayTimestamp reuseIdentifier:cellIdentifier];
+    }
+    
+    [messageTableViewCell setMessage:message];
     
     return messageTableViewCell;
 }

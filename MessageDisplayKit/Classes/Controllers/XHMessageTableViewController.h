@@ -19,14 +19,14 @@
 - (void)didSendText:(NSString *)text fromSender:(NSString *)sender onDate:(NSDate *)date;
 - (void)didSendPhoto:(UIImage *)photo fromSender:(NSString *)sender onDate:(NSDate *)date;
 - (void)didSendVideo:(NSString *)videoPath fromSender:(NSString *)sender onDate:(NSDate *)date;
-- (void)didSendVoice:(NSString *)viocePath fromSender:(NSString *)sender onDate:(NSDate *)date;
+- (void)didSendVioce:(NSString *)viocePath fromSender:(NSString *)sender onDate:(NSDate *)date;
 
 - (XHBubbleMessageType)messageTypeForRowAtIndexPath:(NSIndexPath *)indexPath;
 
 @optional
 
 - (BOOL)shouldDisplayTimestampForRowAtIndexPath:(NSIndexPath *)indexPath;
-- (void)configureCell:(JSBubbleMessageCell *)cell atIndexPath:(NSIndexPath *)indexPath;
+- (void)configureCell:(XHMessageTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
 
 /**
  *  协议回掉是否支持用户手动滚动

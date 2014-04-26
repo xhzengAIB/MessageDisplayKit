@@ -18,5 +18,10 @@
 
 @property (nonatomic, weak, readonly) UILabel *timestampLabel;
 
+- (instancetype)initWithBubbleMessageType:(XHBubbleMessageType)type
+                        displaysTimestamp:(BOOL)displayTimestamp
+                          reuseIdentifier:(NSString *)cellIdentifier;
+
+- (void)setMessage:(id <XHMessageModel>)message;
 
 @end

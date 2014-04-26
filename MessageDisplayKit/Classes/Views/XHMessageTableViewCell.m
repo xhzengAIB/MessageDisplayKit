@@ -130,11 +130,12 @@
     [self addGestureRecognizer:tabpGestureRecognizer];
 }
 
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+- (instancetype)initWithBubbleMessageType:(XHBubbleMessageType)type
+                        displaysTimestamp:(BOOL)displayTimestamp
+                          reuseIdentifier:(NSString *)cellIdentifier {
+    self = [self initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     if (self) {
-        // Initialization code
-        [self setup];
+        // 如果初始化成功，那就根据Message类型进行初始化控件，比如配置头像，配置发送和接收的样式
         
         // avator
         UIButton *avatorButton = [[UIButton alloc] initWithFrame:CGRectMake(8, 15, 40, 40)];
@@ -146,6 +147,19 @@
         XHMessageBubbleView *messageBubbleView = [[XHMessageBubbleView alloc] initWithFrame:CGRectMake(55, 10, CGRectGetWidth([[UIScreen mainScreen] bounds]) - 110, 280)];
         [self.contentView addSubview:messageBubbleView];
         self.messageBubbleView = messageBubbleView;
+    }
+    return self;
+}
+
+- (void)setMessage:(id <XHMessageModel>)message {
+    
+}
+
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self) {
+        // Initialization code
+        [self setup];
     }
     return self;
 }
