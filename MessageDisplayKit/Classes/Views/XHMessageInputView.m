@@ -10,13 +10,13 @@
 
 @interface XHMessageInputView () <UITextViewDelegate>
 
-@property (nonatomic, strong, readwrite) UIButton *voiceChangeButton;
+@property (nonatomic, weak, readwrite) UIButton *voiceChangeButton;
 
-@property (nonatomic, strong, readwrite) UIButton *multiMediaSendButton;
+@property (nonatomic, weak, readwrite) UIButton *multiMediaSendButton;
 
-@property (nonatomic, strong, readwrite) UIButton *faceSendButton;
+@property (nonatomic, weak, readwrite) UIButton *faceSendButton;
 
-@property (nonatomic, strong, readwrite) UIButton *holdDownButtonButton;
+@property (nonatomic, weak, readwrite) UIButton *holdDownButtonButton;
 
 @end
 

@@ -13,12 +13,12 @@
 /**
  *  提示用户输入的标语
  */
-@property (copy, nonatomic) NSString *placeHolder;
+@property (nonatomic, copy) NSString *placeHolder;
 
 /**
  *  标语文本的颜色
  */
-@property (strong, nonatomic) UIColor *placeHolderTextColor;
+@property (nonatomic, strong) UIColor *placeHolderTextColor;
 
 /**
  *  获取自身文本占据有多少行

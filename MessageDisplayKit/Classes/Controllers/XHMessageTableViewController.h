@@ -43,12 +43,12 @@
 /**
  *  用于显示消息的TableView
  */
-@property (nonatomic, strong, readonly) XHMessageTableView *messageTableView;
+@property (nonatomic, weak, readonly) XHMessageTableView *messageTableView;
 
 /**
  *  用于显示发送消息类型控制的工具条，在底部
  */
-@property (nonatomic, strong, readonly) XHMessageInputView *messageInputView;
+@property (nonatomic, weak, readonly) XHMessageInputView *messageInputView;
 
 #pragma mark - Message View Controller Default stup
 /**

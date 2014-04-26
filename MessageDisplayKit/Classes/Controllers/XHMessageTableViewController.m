@@ -21,8 +21,8 @@
 @property (assign, nonatomic) CGFloat previousTextViewContentHeight;
 
 
-@property (nonatomic, strong, readwrite) XHMessageTableView *messageTableView;
-@property (nonatomic, strong, readwrite) XHMessageInputView *messageInputView;
+@property (nonatomic, weak, readwrite) XHMessageTableView *messageTableView;
+@property (nonatomic, weak, readwrite) XHMessageInputView *messageInputView;
 
 @end
 

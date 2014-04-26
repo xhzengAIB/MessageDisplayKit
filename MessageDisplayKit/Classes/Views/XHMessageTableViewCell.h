@@ -12,6 +12,11 @@
 
 @interface XHMessageTableViewCell : UITableViewCell
 
-@property (nonatomic, strong, readonly) XHMessageBubbleView *messageBubbleView;
+@property (nonatomic, weak, readonly) XHMessageBubbleView *messageBubbleView;
+
+@property (nonatomic, weak, readonly) UIButton *avatorButton;
+
+@property (nonatomic, weak, readonly) UILabel *timestampLabel;
+
 
 @end

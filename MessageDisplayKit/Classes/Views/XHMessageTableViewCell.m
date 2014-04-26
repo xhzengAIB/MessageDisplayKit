@@ -12,8 +12,8 @@
     
 }
 
-@property (nonatomic, strong) UIButton *avatorButton;
-@property (nonatomic, strong, readwrite) XHMessageBubbleView *messageBubbleView;
+@property (nonatomic, weak, readwrite) UIButton *avatorButton;
+@property (nonatomic, weak, readwrite) XHMessageBubbleView *messageBubbleView;
 
 @end
 
@@ -137,13 +137,15 @@
         [self setup];
         
         // avator
-        _avatorButton = [[UIButton alloc] initWithFrame:CGRectMake(8, 15, 40, 40)];
-        [_avatorButton setImage:[XHMessageAvatorFactory avatarImageNamed:[UIImage imageNamed:@"meIcon"] messageAvatorType:XHMessageAvatorCircle] forState:UIControlStateNormal];
-        [self.contentView addSubview:self.avatorButton];
+        UIButton *avatorButton = [[UIButton alloc] initWithFrame:CGRectMake(8, 15, 40, 40)];
+        [avatorButton setImage:[XHMessageAvatorFactory avatarImageNamed:[UIImage imageNamed:@"meIcon"] messageAvatorType:XHMessageAvatorCircle] forState:UIControlStateNormal];
+        [self.contentView addSubview:avatorButton];
+        self.avatorButton = avatorButton;
         
         // bubble container
-        _messageBubbleView = [[XHMessageBubbleView alloc] initWithFrame:CGRectMake(55, 10, CGRectGetWidth([[UIScreen mainScreen] bounds]) - 110, 280)];
-        [self.contentView addSubview:self.messageBubbleView];
+        XHMessageBubbleView *messageBubbleView = [[XHMessageBubbleView alloc] initWithFrame:CGRectMake(55, 10, CGRectGetWidth([[UIScreen mainScreen] bounds]) - 110, 280)];
+        [self.contentView addSubview:messageBubbleView];
+        self.messageBubbleView = messageBubbleView;
     }
     return self;
 }
