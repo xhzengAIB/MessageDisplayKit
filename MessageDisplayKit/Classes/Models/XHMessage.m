@@ -112,6 +112,10 @@
     return self;
 }
 
+- (void)dealloc {
+    
+}
+
 #pragma mark - NSCoding
 
 - (id)initWithCoder:(NSCoder *)aDecoder {

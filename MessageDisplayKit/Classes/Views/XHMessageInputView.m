@@ -222,6 +222,13 @@
     return self;
 }
 
+- (void)dealloc {
+    _voiceChangeButton = nil;
+    _multiMediaSendButton = nil;
+    _faceSendButton = nil;
+    _holdDownButtonButton = nil;
+}
+
 - (void)willMoveToSuperview:(UIView *)newSuperview {
     // 当别的地方需要add的时候，就会调用这里
     if (newSuperview) {
