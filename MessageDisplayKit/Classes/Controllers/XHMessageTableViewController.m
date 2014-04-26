@@ -417,6 +417,11 @@
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
 	self.isUserScrolling = YES;
+    
+    UIMenuController *menu = [UIMenuController sharedMenuController];
+    if (menu.isMenuVisible) {
+        [menu setMenuVisible:NO animated:YES];
+    }
 }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
@@ -438,7 +443,6 @@
     XHMessageTableViewCell *messageTableViewCell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (!messageTableViewCell) {
         messageTableViewCell = [[XHMessageTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
-        messageTableViewCell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     
     return messageTableViewCell;

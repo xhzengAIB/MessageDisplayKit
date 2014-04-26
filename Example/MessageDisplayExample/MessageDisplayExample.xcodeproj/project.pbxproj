@@ -30,6 +30,8 @@
 		7482458F19092170008EC388 /* NSString+MessageInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7482458E19092170008EC388 /* NSString+MessageInputView.m */; };
 		748245971909F33F008EC388 /* XHMessageBubbleFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 748245961909F33F008EC388 /* XHMessageBubbleFactory.m */; };
 		7482459A1909F370008EC388 /* XHMessageAvatorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 748245991909F370008EC388 /* XHMessageAvatorFactory.m */; };
+		74BBB01B190B7E2D00093577 /* reciveBackgroudImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74BBB01A190B7E2D00093577 /* reciveBackgroudImage@2x.png */; };
+		74BBB020190B8EAB00093577 /* MessageDisplayKitString.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74BBB022190B8EAB00093577 /* MessageDisplayKitString.strings */; };
 		74FAB0B9190A81DC005623D0 /* UIImage+XHRounded.m in Sources */ = {isa = PBXBuildFile; fileRef = 74FAB0B8190A81DC005623D0 /* UIImage+XHRounded.m */; };
 		74FAB0CF190A92CC005623D0 /* weChatBubble_Receiving_Cavern@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74FAB0BD190A92CC005623D0 /* weChatBubble_Receiving_Cavern@2x.png */; };
 		74FAB0D0190A92CC005623D0 /* weChatBubble_Receiving_Solid@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74FAB0BE190A92CC005623D0 /* weChatBubble_Receiving_Solid@2x.png */; };
@@ -46,7 +48,6 @@
 		74FAB0DB190A92CC005623D0 /* keyborad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74FAB0CC190A92CC005623D0 /* keyborad@2x.png */; };
 		74FAB0DC190A92CC005623D0 /* multiMedia@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74FAB0CD190A92CC005623D0 /* multiMedia@2x.png */; };
 		74FAB0DD190A92CC005623D0 /* voice@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74FAB0CE190A92CC005623D0 /* voice@2x.png */; };
-		74FAB0E2190A9A39005623D0 /* reciveBackgroudImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74FAB0E1190A9A39005623D0 /* reciveBackgroudImage@2x.png */; };
 		74FAB0E4190A9E13005623D0 /* meIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74FAB0E3190A9E13005623D0 /* meIcon@2x.png */; };
 /* End PBXBuildFile section */
 
@@ -102,6 +103,11 @@
 		748245961909F33F008EC388 /* XHMessageBubbleFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMessageBubbleFactory.m; sourceTree = "<group>"; };
 		748245981909F370008EC388 /* XHMessageAvatorFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMessageAvatorFactory.h; sourceTree = "<group>"; };
 		748245991909F370008EC388 /* XHMessageAvatorFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMessageAvatorFactory.m; sourceTree = "<group>"; };
+		74BBB01A190B7E2D00093577 /* reciveBackgroudImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reciveBackgroudImage@2x.png"; sourceTree = "<group>"; };
+		74BBB01E190B8E9500093577 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		74BBB01F190B8E9500093577 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		74BBB021190B8EAB00093577 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MessageDisplayKitString.strings; sourceTree = "<group>"; };
+		74BBB023190B8EAD00093577 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/MessageDisplayKitString.strings"; sourceTree = "<group>"; };
 		74FAB0B7190A81DC005623D0 /* UIImage+XHRounded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+XHRounded.h"; sourceTree = "<group>"; };
 		74FAB0B8190A81DC005623D0 /* UIImage+XHRounded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+XHRounded.m"; sourceTree = "<group>"; };
 		74FAB0BD190A92CC005623D0 /* weChatBubble_Receiving_Cavern@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weChatBubble_Receiving_Cavern@2x.png"; sourceTree = "<group>"; };
@@ -119,7 +125,6 @@
 		74FAB0CC190A92CC005623D0 /* keyborad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "keyborad@2x.png"; sourceTree = "<group>"; };
 		74FAB0CD190A92CC005623D0 /* multiMedia@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "multiMedia@2x.png"; sourceTree = "<group>"; };
 		74FAB0CE190A92CC005623D0 /* voice@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "voice@2x.png"; sourceTree = "<group>"; };
-		74FAB0E1190A9A39005623D0 /* reciveBackgroudImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "reciveBackgroudImage@2x.png"; sourceTree = "<group>"; };
 		74FAB0E3190A9E13005623D0 /* meIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "meIcon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -314,7 +319,7 @@
 			isa = PBXGroup;
 			children = (
 				74FAB0E3190A9E13005623D0 /* meIcon@2x.png */,
-				74FAB0E1190A9A39005623D0 /* reciveBackgroudImage@2x.png */,
+				74BBB022190B8EAB00093577 /* MessageDisplayKitString.strings */,
 				74FAB0BB190A92CC005623D0 /* BubbleImages */,
 				74FAB0C1190A92CC005623D0 /* InputViewImages */,
 			);
@@ -332,6 +337,7 @@
 		74FAB0BC190A92CC005623D0 /* WeChat */ = {
 			isa = PBXGroup;
 			children = (
+				74BBB01A190B7E2D00093577 /* reciveBackgroudImage@2x.png */,
 				74FAB0BD190A92CC005623D0 /* weChatBubble_Receiving_Cavern@2x.png */,
 				74FAB0BE190A92CC005623D0 /* weChatBubble_Receiving_Solid@2x.png */,
 				74FAB0BF190A92CC005623D0 /* weChatBubble_Sending_Cavern@2x.png */,
@@ -432,6 +438,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				"zh-Hans",
 			);
 			mainGroup = 748244F81908C730008EC388;
 			productRefGroup = 748245021908C730008EC388 /* Products */;
@@ -451,6 +458,7 @@
 			files = (
 				74FAB0D1190A92CC005623D0 /* weChatBubble_Sending_Cavern@2x.png in Resources */,
 				74FAB0D9190A92CC005623D0 /* face@2x.png in Resources */,
+				74BBB01B190B7E2D00093577 /* reciveBackgroudImage@2x.png in Resources */,
 				7482450F1908C730008EC388 /* InfoPlist.strings in Resources */,
 				74FAB0D8190A92CC005623D0 /* input-field-cover@2x.png in Resources */,
 				74FAB0E4190A9E13005623D0 /* meIcon@2x.png in Resources */,
@@ -461,7 +469,7 @@
 				748245171908C730008EC388 /* Images.xcassets in Resources */,
 				74FAB0DC190A92CC005623D0 /* multiMedia@2x.png in Resources */,
 				74FAB0DB190A92CC005623D0 /* keyborad@2x.png in Resources */,
-				74FAB0E2190A9A39005623D0 /* reciveBackgroudImage@2x.png in Resources */,
+				74BBB020190B8EAB00093577 /* MessageDisplayKitString.strings in Resources */,
 				74FAB0DA190A92CC005623D0 /* holdDownButton@2x.png in Resources */,
 				74FAB0D2190A92CC005623D0 /* weChatBubble_Sending_Solid@2x.png in Resources */,
 				74FAB0D6190A92CC005623D0 /* input-bar-flat@2x.png in Resources */,
@@ -526,6 +534,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				7482450E1908C730008EC388 /* en */,
+				74BBB01E190B8E9500093577 /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -534,8 +543,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				748245271908C730008EC388 /* en */,
+				74BBB01F190B8E9500093577 /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		74BBB022190B8EAB00093577 /* MessageDisplayKitString.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74BBB021190B8EAB00093577 /* en */,
+				74BBB023190B8EAD00093577 /* zh-Hans */,
+			);
+			name = MessageDisplayKitString.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

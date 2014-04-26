@@ -12,61 +12,161 @@
     
 }
 
-@property (nonatomic, strong) UIImageView *avatorImageView;
-@property (nonatomic, strong) UIView *bubbleContainerView;
+@property (nonatomic, strong) UIButton *avatorButton;
+@property (nonatomic, strong, readwrite) XHMessageBubbleView *messageBubbleView;
 
 @end
 
 @implementation XHMessageTableViewCell
 
+#pragma mark - Copying
+
+- (BOOL)canBecomeFirstResponder {
+    return YES;
+}
+
+- (BOOL)becomeFirstResponder {
+    return [super becomeFirstResponder];
+}
+
+- (BOOL)canPerformAction:(SEL)action withSender:(id)sender {
+    return (action == @selector(copyed:) || action == @selector(transpond:) || action == @selector(favorites:) || action == @selector(more:));
+}
+
+- (void)copyed:(id)sender {
+    [[UIPasteboard generalPasteboard] setString:@"曾宪华，Jack"];
+    [self resignFirstResponder];
+    DLog(@"Cell was copy");
+    
+}
+- (void)transpond:(id)sender {
+    DLog(@"Cell was transpond");
+}
+
+- (void)favorites:(id)sender {
+    DLog(@"Cell was favorites");
+}
+
+- (void)more:(id)sender {
+    DLog(@"Cell was more");
+}
+
+#pragma mark - Gestures
+
+- (void)handleLongPressGesture:(UILongPressGestureRecognizer *)longPress {
+    if (longPress.state != UIGestureRecognizerStateBegan || ![self becomeFirstResponder])
+        return;
+    
+    UIMenuItem *copy = [[UIMenuItem alloc] initWithTitle:NSLocalizedStringFromTable(@"copy", @"MessageDisplayKitString", @"复制文本消息") action:@selector(copyed:)];
+    UIMenuItem *transpond = [[UIMenuItem alloc] initWithTitle:NSLocalizedStringFromTable(@"transpond", @"MessageDisplayKitString", @"转发") action:@selector(transpond:)];
+    UIMenuItem *favorites = [[UIMenuItem alloc] initWithTitle:NSLocalizedStringFromTable(@"favorites", @"MessageDisplayKitString", @"收藏") action:@selector(favorites:)];
+    UIMenuItem *more = [[UIMenuItem alloc] initWithTitle:NSLocalizedStringFromTable(@"more", @"MessageDisplayKitString", @"更多") action:@selector(more:)];
+    
+    UIMenuController *menu = [UIMenuController sharedMenuController];
+    [menu setMenuItems:[NSArray arrayWithObjects:copy, transpond, favorites, more, nil]];
+    
+    
+    CGRect targetRect = [self convertRect:self.messageBubbleView.frame
+                                 fromView:self.messageBubbleView];
+    
+    [menu setTargetRect:CGRectInset(targetRect, 0.0f, 4.0f) inView:self];
+    
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(handleMenuWillShowNotification:)
+                                                 name:UIMenuControllerWillShowMenuNotification
+                                               object:nil];
+    [menu setMenuVisible:YES animated:YES];
+}
+
+- (void)tapGestureRecognizerHandle:(UITapGestureRecognizer *)tapGestureRecognizer {
+    UIMenuController *menu = [UIMenuController sharedMenuController];
+    if (menu.isMenuVisible) {
+        [menu setMenuVisible:NO animated:YES];
+    }
+}
+
+#pragma mark - Notifications
+
+- (void)handleMenuWillHideNotification:(NSNotification *)notification {
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:UIMenuControllerWillHideMenuNotification
+                                                  object:nil];
+}
+
+- (void)handleMenuWillShowNotification:(NSNotification *)notification {
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:UIMenuControllerWillShowMenuNotification
+                                                  object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(handleMenuWillHideNotification:)
+                                                 name:UIMenuControllerWillHideMenuNotification
+                                               object:nil];
+}
+
 #pragma mark - Life cycle
+
+- (void)setup {
+    self.backgroundColor = [UIColor clearColor];
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
+    self.accessoryType = UITableViewCellAccessoryNone;
+    self.accessoryView = nil;
+    
+    self.imageView.image = nil;
+    self.imageView.hidden = YES;
+    self.textLabel.text = nil;
+    self.textLabel.hidden = YES;
+    self.detailTextLabel.text = nil;
+    self.detailTextLabel.hidden = YES;
+    
+    UILongPressGestureRecognizer *recognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self
+                                                                                             action:@selector(handleLongPressGesture:)];
+    [recognizer setMinimumPressDuration:0.4f];
+    [self addGestureRecognizer:recognizer];
+    
+    
+    UITapGestureRecognizer *tabpGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGestureRecognizerHandle:)];
+    [self addGestureRecognizer:tabpGestureRecognizer];
+}
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         // Initialization code
+        [self setup];
         
         // avator
-        _avatorImageView = [[UIImageView alloc] initWithFrame:CGRectMake(8, 15, 40, 40)];
-        _avatorImageView.image = [XHMessageAvatorFactory avatarImageNamed:[UIImage imageNamed:@"meIcon"] messageAvatorType:XHMessageAvatorCircle];
-        [self.contentView addSubview:self.avatorImageView];
+        _avatorButton = [[UIButton alloc] initWithFrame:CGRectMake(8, 15, 40, 40)];
+        [_avatorButton setImage:[XHMessageAvatorFactory avatarImageNamed:[UIImage imageNamed:@"meIcon"] messageAvatorType:XHMessageAvatorCircle] forState:UIControlStateNormal];
+        [self.contentView addSubview:self.avatorButton];
         
         // bubble container
-        _bubbleContainerView = [[UIView alloc] initWithFrame:CGRectMake(55, 10, CGRectGetWidth([[UIScreen mainScreen] bounds]) - 110, 280)];
-        [self.contentView addSubview:self.bubbleContainerView];
-        
-        // Action Button
-        UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-        btn.frame = CGRectMake(0, 0, self.bubbleContainerView.frame.size.width, self.bubbleContainerView.frame.size.height);
-        [btn.imageView setContentMode:UIViewContentModeScaleAspectFill];
-        [btn setBackgroundImage:[UIImage imageNamed:@"reciveBackgroudImage"] forState:UIControlStateNormal];
-        [self.bubbleContainerView addSubview:btn];
-        
-        // demo label
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(22, 8, CGRectGetWidth(self.bubbleContainerView.bounds) - 34, CGRectGetHeight(self.bubbleContainerView.bounds) - 16)];
-        label.font = [UIFont systemFontOfSize:16.0];
-        label.backgroundColor = [UIColor clearColor];
-        label.textColor = [UIColor blackColor];
-        label.numberOfLines = 0;
-        label.lineBreakMode = NSLineBreakByCharWrapping;
-        label.text = @"这是华捷微信，为什么模仿这个页面效果呢？希望微信团队能看到我们在努力，请微信团队给个机会，让我好好的努力靠近大神，希望自己也能发亮，好像有点过分的希望了，如果大家喜欢这个开源库，请大家帮帮忙支持这个开源库吧！我是Jack，叫华仔也行，曾宪华就是我啦！Call Me 15915895880";
-        [self.bubbleContainerView addSubview:label];
-        
-        //bubble image
-        UIImageView *bubbleImageView = [XHMessageBubbleFactory bubbleImageViewForType:XHBubbleMessageTypeReceiving style:XHBubbleImageViewStyleWeChat meidaType:XHBubbleMessagePhoto];
-        bubbleImageView.frame = self.bubbleContainerView.bounds;
-        [self.bubbleContainerView addSubview:bubbleImageView];
+        _messageBubbleView = [[XHMessageBubbleView alloc] initWithFrame:CGRectMake(55, 10, CGRectGetWidth([[UIScreen mainScreen] bounds]) - 110, 280)];
+        [self.contentView addSubview:self.messageBubbleView];
     }
     return self;
 }
 
-- (void)awakeFromNib
-{
+- (void)awakeFromNib {
     // Initialization code
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated
-{
+- (void)dealloc {
+    _avatorButton = nil;
+    _messageBubbleView = nil;
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+#pragma mark - TableViewCell
+
+- (void)prepareForReuse {
+    // 这里做清除工作
+    
+    [super prepareForReuse];
+}
+
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state

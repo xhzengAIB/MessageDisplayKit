@@ -12,4 +12,6 @@
 
 @interface XHMessageTableViewCell : UITableViewCell
 
+@property (nonatomic, strong, readonly) XHMessageBubbleView *messageBubbleView;
+
 @end
