@@ -24,4 +24,8 @@
 
 - (void)setMessage:(id <XHMessageModel>)message;
 
++ (CGFloat)calculateCellHeightWithMessage:(id <XHMessageModel>)message
+                        BubbleMessageType:(XHBubbleMessageType)type
+                        displaysTimestamp:(BOOL)displayTimestamp;
+
 @end

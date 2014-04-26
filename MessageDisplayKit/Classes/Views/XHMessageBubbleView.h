@@ -10,4 +10,10 @@
 
 @interface XHMessageBubbleView : UIView
 
+- (instancetype)initWithFrame:(CGRect)frame
+                   bubbleType:(XHBubbleMessageType)bubleType;
+
+
++ (CGFloat)calculateCellHeightWithMessage:(id <XHMessageModel>)message;
+
 @end

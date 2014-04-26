@@ -473,13 +473,17 @@
 
 - (XHBubbleMessageType)messageTypeForRowAtIndexPath:(NSIndexPath *)indexPath {
     // subClass
-    return XHBubbleMessageTypeSending;
+    if (indexPath.row % 2) {
+        return XHBubbleMessageTypeReceiving;
+    } else {
+        return XHBubbleMessageTypeSending;
+    }
 }
 
 #pragma mark - XHMessageTableViewController DataSource
 
 - (id <XHMessageModel>)messageForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return self.messages[indexPath.row];
+    return nil;
 }
 
 #pragma mark - Table view data source
@@ -489,7 +493,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.messages.count;
+    return 100;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

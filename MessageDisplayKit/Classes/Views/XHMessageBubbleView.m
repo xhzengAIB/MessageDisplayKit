@@ -10,22 +10,37 @@
 
 @implementation XHMessageBubbleView
 
++ (CGFloat)calculateCellHeightWithMessage:(id <XHMessageModel>)message {
+    return 44;
+}
+
 #pragma mark - Life cycle
 
-- (id)initWithFrame:(CGRect)frame
-{
+- (instancetype)initWithFrame:(CGRect)frame
+                   bubbleType:(XHBubbleMessageType)bubleType {
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
         // Action Button
-        UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-        btn.frame = self.bounds;
-        [btn.imageView setContentMode:UIViewContentModeScaleAspectFill];
-        [btn setBackgroundImage:[UIImage imageNamed:@"reciveBackgroudImage"] forState:UIControlStateNormal];
-        [self addSubview:btn];
+        //bubble image
+        UIImageView *bubbleImageView = [XHMessageBubbleFactory bubbleImageViewForType:bubleType style:XHBubbleImageViewStyleWeChat meidaType:XHBubbleMessageText];
+        bubbleImageView.frame = self.bounds;
+        [self addSubview:bubbleImageView];
+        
+        CGRect labelFrame;
+        switch (bubleType) {
+            case XHBubbleMessageTypeSending:
+                labelFrame = CGRectMake(14, 8, CGRectGetWidth(self.bounds) - 34, CGRectGetHeight(self.bounds) - 16);
+                break;
+            case XHBubbleMessageTypeReceiving:
+                labelFrame = CGRectMake(22, 8, CGRectGetWidth(self.bounds) - 34, CGRectGetHeight(self.bounds) - 16);
+                break;
+            default:
+                break;
+        }
         
         // demo label
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(22, 8, CGRectGetWidth(self.bounds) - 34, CGRectGetHeight(self.bounds) - 16)];
+        UILabel *label = [[UILabel alloc] initWithFrame:labelFrame];
         label.font = [UIFont systemFontOfSize:16.0];
         label.backgroundColor = [UIColor clearColor];
         label.textColor = [UIColor blackColor];
@@ -34,10 +49,7 @@
         label.text = @"这是华捷微信，为什么模仿这个页面效果呢？希望微信团队能看到我们在努力，请微信团队给个机会，让我好好的努力靠近大神，希望自己也能发亮，好像有点过分的希望了，如果大家喜欢这个开源库，请大家帮帮忙支持这个开源库吧！我是Jack，叫华仔也行，曾宪华就是我啦！Call Me 15915895880";
         [self addSubview:label];
         
-        //bubble image
-        UIImageView *bubbleImageView = [XHMessageBubbleFactory bubbleImageViewForType:XHBubbleMessageTypeReceiving style:XHBubbleImageViewStyleWeChat meidaType:XHBubbleMessagePhoto];
-        bubbleImageView.frame = self.bounds;
-        [self addSubview:bubbleImageView];
+        
     }
     return self;
 }

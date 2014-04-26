@@ -8,6 +8,11 @@
 
 #import "XHMessageTableViewCell.h"
 
+static const CGFloat kXHLabelPadding = 5.0f;
+static const CGFloat kXHTimeStampLabelHeight = 15.0f;
+
+CGFloat const kXHAvatarImageSize = 40.0f;
+
 @interface XHMessageTableViewCell () {
     
 }
@@ -138,13 +143,26 @@
         // 如果初始化成功，那就根据Message类型进行初始化控件，比如配置头像，配置发送和接收的样式
         
         // avator
-        UIButton *avatorButton = [[UIButton alloc] initWithFrame:CGRectMake(8, 15, 40, 40)];
+        CGRect avatorButtonFrame;
+        switch (type) {
+            case XHBubbleMessageTypeReceiving:
+                avatorButtonFrame = CGRectMake(8, 15, kXHAvatarImageSize, kXHAvatarImageSize);
+                break;
+            case XHBubbleMessageTypeSending:
+                avatorButtonFrame = CGRectMake(CGRectGetWidth(self.bounds) - kXHAvatarImageSize - 8, 15, kXHAvatarImageSize, kXHAvatarImageSize);
+                break;
+                
+            default:
+                break;
+        }
+        
+        UIButton *avatorButton = [[UIButton alloc] initWithFrame:avatorButtonFrame];
         [avatorButton setImage:[XHMessageAvatorFactory avatarImageNamed:[UIImage imageNamed:@"meIcon"] messageAvatorType:XHMessageAvatorCircle] forState:UIControlStateNormal];
         [self.contentView addSubview:avatorButton];
         self.avatorButton = avatorButton;
         
         // bubble container
-        XHMessageBubbleView *messageBubbleView = [[XHMessageBubbleView alloc] initWithFrame:CGRectMake(55, 10, CGRectGetWidth([[UIScreen mainScreen] bounds]) - 110, 280)];
+        XHMessageBubbleView *messageBubbleView = [[XHMessageBubbleView alloc] initWithFrame:CGRectMake(55, 10, CGRectGetWidth([[UIScreen mainScreen] bounds]) - 110, 280) bubbleType:type];
         [self.contentView addSubview:messageBubbleView];
         self.messageBubbleView = messageBubbleView;
     }
@@ -153,6 +171,21 @@
 
 - (void)setMessage:(id <XHMessageModel>)message {
     
+}
+
++ (CGFloat)calculateCellHeightWithMessage:(id <XHMessageModel>)message
+                        BubbleMessageType:(XHBubbleMessageType)type
+                        displaysTimestamp:(BOOL)displayTimestamp {
+    
+    CGFloat timestampHeight = displayTimestamp ? kXHTimeStampLabelHeight : 0.0f;
+    CGFloat avatarHeight = kXHAvatarImageSize;
+    
+    CGFloat subviewHeights = timestampHeight + kXHLabelPadding;
+    
+    CGFloat bubbleHeight = [XHMessageBubbleView calculateCellHeightWithMessage:message];
+    
+    return subviewHeights + MAX(avatarHeight, bubbleHeight);
+
 }
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
