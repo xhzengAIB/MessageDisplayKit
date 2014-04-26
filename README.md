@@ -19,17 +19,15 @@ Data detectors (recognizes phone numbers, links, dates, etc.)
 Timestamps
 * 6、头像                                             
 Avatars
-* 7、子标题                                           
-Subtitles
-* 8、向下滑动隐藏键盘                                 
+* 7、向下滑动隐藏键盘                                 
 Swipe down to hide keyboard
-* 9、动态调整输入文本视图类型                         
+* 8、动态调整输入文本视图类型                         
 Dynamically resizes input text view as you type
-* 10、自动启用/禁用发送按钮(如果文本视图是空的或不是)  
+* 9、自动启用/禁用发送按钮(如果文本视图是空的或不是)  
 Automatically enables/disables send button (if text view is empty or not)
-* 11、发送/接收声音效果                                
+* 10、发送/接收声音效果                                
 Send/Receive sound effects
-* 12、通用于iPhone和iPad                               
+* 11、通用于iPhone和iPad                               
 Universal for iPhone and iPad
 
 
