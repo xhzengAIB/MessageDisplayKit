@@ -14,6 +14,20 @@
 
 @protocol XHMessageTableViewControllerDelegate <NSObject>
 
+@required
+
+- (void)didSendText:(NSString *)text fromSender:(NSString *)sender onDate:(NSDate *)date;
+- (void)didSendPhoto:(UIImage *)photo fromSender:(NSString *)sender onDate:(NSDate *)date;
+- (void)didSendVideo:(NSString *)videoPath fromSender:(NSString *)sender onDate:(NSDate *)date;
+- (void)didSendVoice:(NSString *)viocePath fromSender:(NSString *)sender onDate:(NSDate *)date;
+
+- (XHBubbleMessageType)messageTypeForRowAtIndexPath:(NSIndexPath *)indexPath;
+
+@optional
+
+- (BOOL)shouldDisplayTimestampForRowAtIndexPath:(NSIndexPath *)indexPath;
+- (void)configureCell:(JSBubbleMessageCell *)cell atIndexPath:(NSIndexPath *)indexPath;
+
 /**
  *  协议回掉是否支持用户手动滚动
  *
@@ -25,7 +39,9 @@
 
 @protocol XHMessageTableViewControllerDataSource <NSObject>
 
+@required
 
+- (id<XHMessageModel>)messageForRowAtIndexPath:(NSIndexPath *)indexPath;
 
 @end
 
@@ -39,6 +55,11 @@
  *  数据源，显示多少消息
  */
 @property (nonatomic, strong) NSMutableArray *messages;
+
+/**
+ *  消息的主体，默认为nil
+ */
+@property (nonatomic, copy) NSString *messageSender;
 
 /**
  *  用于显示消息的TableView
