@@ -283,6 +283,7 @@
 }
 
 - (void)dealloc {
+    _messages = nil;
     _delegate = nil;
     _dataSource = nil;
     _messageTableView.delegate = nil;
