@@ -10,6 +10,11 @@
 
 @interface XHMessageBubbleView : UIView
 
+@property (nonatomic, weak, readonly) UITextView *messageDisplayTextView;
+@property (nonatomic, weak, readonly) UIImageView *bubbleImageView;
+
+@property (nonatomic, assign, readonly) XHBubbleMessageType bubleType;
+
 - (instancetype)initWithFrame:(CGRect)frame
                    bubbleType:(XHBubbleMessageType)bubleType;
 

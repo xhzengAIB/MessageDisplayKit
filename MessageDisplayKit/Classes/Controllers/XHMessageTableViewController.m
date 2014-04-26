@@ -145,16 +145,20 @@
 }
 
 - (void)initilzer {
+    if ([self respondsToSelector:@selector(automaticallyAdjustsScrollViewInsets)]) {
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    }
     // 默认设置用户滚动为NO
     _isUserScrolling = NO;
     
     // 初始化message tableView
-	XHMessageTableView *tableView = [[XHMessageTableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
-	tableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-	tableView.dataSource = self;
-	tableView.delegate = self;
-	[self.view addSubview:tableView];
-	_messageTableView = tableView;
+	XHMessageTableView *messageTableView = [[XHMessageTableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
+	messageTableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+	messageTableView.dataSource = self;
+	messageTableView.delegate = self;
+	[self.view addSubview:messageTableView];
+    [self.view sendSubviewToBack:messageTableView];
+	_messageTableView = messageTableView;
     
     // 设置Message TableView 的bottom edg
     CGFloat inputViewHeight = (self.inputViewStyle == XHMessageInputViewStyleFlat) ? 45.0f : 40.0f;
@@ -235,6 +239,7 @@
     inputView.allowsSendMultiMedia = self.allowsSendMultiMedia;
     inputView.delegate = self;
     [self.view addSubview:inputView];
+    [self.view bringSubviewToFront:inputView];
     
     _messageInputView = inputView;
     
@@ -389,7 +394,7 @@
     UIEdgeInsets insets = UIEdgeInsetsZero;
     
     if ([self respondsToSelector:@selector(topLayoutGuide)]) {
-        insets.top = self.topLayoutGuide.length;
+        insets.top = 64;
     }
     
     insets.bottom = bottom;
