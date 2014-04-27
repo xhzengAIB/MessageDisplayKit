@@ -199,9 +199,6 @@
                                    self.view.frame.size.width,
                                    inputViewHeight);
     
-    // 设置键盘通知或者手势控制键盘消失
-    [self.messageTableView setupPanGestureControlKeyboardHide:self.allowsPanToDismissKeyboard];
-    
     // block回调键盘通知
     WEAKSELF
     self.messageTableView.keyboardWillChange = ^(CGRect keyboardRect, UIViewAnimationOptions options, double duration, BOOL showKeyborad){
@@ -276,6 +273,9 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    // 设置键盘通知或者手势控制键盘消失
+    [self.messageTableView setupPanGestureControlKeyboardHide:self.allowsPanToDismissKeyboard];
+    
     // KVO 检查contentSize
     [self.messageInputView.inputTextView addObserver:self
                                      forKeyPath:@"contentSize"
