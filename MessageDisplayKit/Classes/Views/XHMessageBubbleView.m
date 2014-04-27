@@ -103,8 +103,20 @@
 }
 
 - (void)configureMessageDisplayTextViewWithMessage:(id <XHMessageModel>)message {
+    switch (message.messageMediaType) {
+        case XHBubbleMessageText:
+            _messageDisplayTextView.text = message.text;
+            break;
+        case XHBubbleMessagePhoto:
+            break;
+        case XHBubbleMessageVideo:
+            break;
+        case XHBubbleMessageVioce:
+            break;
+        default:
+            break;
+    }
     
-    _messageDisplayTextView.text = message.text;
     [self setNeedsLayout];
 }
 
