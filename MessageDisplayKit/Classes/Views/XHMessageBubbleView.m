@@ -163,6 +163,7 @@
             _bubblePhotoImageView.messagePhoto = message.photo;
             break;
         case XHBubbleMessageVideo:
+            _bubblePhotoImageView.messagePhoto = message.videoConverPhoto;
             break;
         case XHBubbleMessageVioce:
             break;
@@ -227,22 +228,34 @@
 {
     [super layoutSubviews];
     
-    self.bubbleImageView.frame = [self bubbleFrame];
-    
-    CGFloat textX = self.bubbleImageView.frame.origin.x;
-    
-    if (self.message.bubbleMessageType == XHBubbleMessageTypeReceiving) {
-        textX += (self.bubbleImageView.image.capInsets.left / 2.0f);
+    XHBubbleMessageMediaType currentType = self.message.messageMediaType;
+    switch (currentType) {
+        case XHBubbleMessageText:
+        case XHBubbleMessageVioce: {
+            self.bubbleImageView.frame = [self bubbleFrame];
+            
+            CGFloat textX = self.bubbleImageView.frame.origin.x;
+            
+            if (self.message.bubbleMessageType == XHBubbleMessageTypeReceiving) {
+                textX += (self.bubbleImageView.image.capInsets.left / 2.0f);
+            }
+            
+            CGRect textFrame = CGRectMake(textX,
+                                          self.bubbleImageView.frame.origin.y,
+                                          self.bubbleImageView.frame.size.width - (self.bubbleImageView.image.capInsets.right / 2.0f),
+                                          self.bubbleImageView.frame.size.height - kMarginTop);
+            
+            self.messageDisplayTextView.frame = CGRectIntegral(textFrame);
+            break;
+        }
+        case XHBubbleMessagePhoto:
+        case XHBubbleMessageVideo: {
+            self.bubblePhotoImageView.frame = CGRectMake([self bubbleFrame].origin.x - 2, 0, [self bubbleFrame].size.width, [self bubbleFrame].size.height);
+            break;
+        }
+        default:
+            break;
     }
-    
-    CGRect textFrame = CGRectMake(textX,
-                                  self.bubbleImageView.frame.origin.y,
-                                  self.bubbleImageView.frame.size.width - (self.bubbleImageView.image.capInsets.right / 2.0f),
-                                  self.bubbleImageView.frame.size.height - kMarginTop);
-    
-    self.messageDisplayTextView.frame = CGRectIntegral(textFrame);
-    
-    self.bubblePhotoImageView.frame = CGRectMake([self bubbleFrame].origin.x - 2, 0, [self bubbleFrame].size.width, [self bubbleFrame].size.height);
 }
 
 /*
