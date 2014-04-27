@@ -40,7 +40,7 @@
     switch (mediaType) {
         case XHBubbleMessagePhoto:
         case XHBubbleMessageVideo:
-            messageTypeString = [messageTypeString stringByAppendingString:@"_Cavern"];
+            messageTypeString = [messageTypeString stringByAppendingString:@"_Solid"];
             break;
         case XHBubbleMessageText:
         case XHBubbleMessageVioce:

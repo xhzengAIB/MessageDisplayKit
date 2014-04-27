@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>A98FBBF2-6DAA-4302-AFDA-4530C692494C</string>
+	<string>FA3609A9-ED6A-40D1-8AA1-4A73C30C5726</string>
 	<key>IDESourceControlProjectName</key>
 	<string>MessageDisplayExample</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>4EDE569E-18D1-49B6-885F-7D828ED905CE</key>
-		<string>https://github.com/xhzengAIB/MessageDisplayKit.git</string>
+		<key>DB6A1799-7BB1-46E4-AEA5-37004ACDDB6E</key>
+		<string>https://github.com/xhzengAIB/MessageDisplayKit</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Example/MessageDisplayExample/MessageDisplayExample.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>4EDE569E-18D1-49B6-885F-7D828ED905CE</key>
+		<key>DB6A1799-7BB1-46E4-AEA5-37004ACDDB6E</key>
 		<string>../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/xhzengAIB/MessageDisplayKit.git</string>
+	<string>https://github.com/xhzengAIB/MessageDisplayKit</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>4EDE569E-18D1-49B6-885F-7D828ED905CE</string>
+	<string>DB6A1799-7BB1-46E4-AEA5-37004ACDDB6E</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>4EDE569E-18D1-49B6-885F-7D828ED905CE</string>
+			<string>DB6A1799-7BB1-46E4-AEA5-37004ACDDB6E</string>
 			<key>IDESourceControlWCCName</key>
 			<string>MessageDisplayKit</string>
 		</dict>

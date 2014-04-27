@@ -19,6 +19,8 @@
 @property (nonatomic, weak, readwrite) UITextView *messageDisplayTextView;
 @property (nonatomic, weak, readwrite) UIImageView *bubbleImageView;
 
+@property (nonatomic, weak, readwrite) UIImageView *photoImageView;
+
 @property (nonatomic, strong, readwrite) id <XHMessageModel> message;
 
 @end
@@ -28,9 +30,9 @@
 #pragma mark - Bubble view
 
 + (CGSize)textSizeForText:(NSString *)txt {
-    CGFloat maxWidth = [UIScreen mainScreen].applicationFrame.size.width * (kIsiPad ? 0.8 : 0.55);
+    CGFloat maxWidth = CGRectGetWidth([[UIScreen mainScreen] bounds]) * (kIsiPad ? 0.8 : 0.55);
     CGFloat maxHeight = MAX([XHMessageTextView numberOfLinesForMessage:txt],
-                            200) * [XHMessageInputView textViewLineHeight];
+                            kXHMessageBubbleDisplayMaxLine) * [XHMessageInputView textViewLineHeight];
     maxHeight += kXHAvatarImageSize;
     
     CGSize stringSize;
@@ -58,8 +60,34 @@
                       textSize.height + kPaddingTop + kPaddingBottom);
 }
 
++ (CGSize)neddedSizeForPhoto:(UIImage *)photo {
+    // 这里需要缩放后的size
+    CGSize photoSize = CGSizeMake(100, 100);
+    return photoSize;
+}
+
 + (CGFloat)calculateCellHeightWithMessage:(id <XHMessageModel>)message {
-    CGSize size = [XHMessageBubbleView neededSizeForText:message.text];
+    CGSize size;
+    switch (message.messageMediaType) {
+        case XHBubbleMessageText: {
+            size = [XHMessageBubbleView neededSizeForText:message.text];
+            break;
+        }
+        case XHBubbleMessagePhoto: {
+            size = [XHMessageBubbleView neddedSizeForPhoto:message.photo];
+            break;
+        }
+        case XHBubbleMessageVideo: {
+            size = [XHMessageBubbleView neddedSizeForPhoto:message.videoConverPhoto];
+            break;
+        }
+        case XHBubbleMessageVioce: {
+            size = CGSizeMake(100, [XHMessageInputView textViewLineHeight]);
+            break;
+        }
+        default:
+            break;
+    }
     return size.height + kMarginTop + kMarginBottom;
 }
 
@@ -80,7 +108,27 @@
 #pragma mark - Getters
 
 - (CGRect)bubbleFrame {
-    CGSize bubbleSize = [XHMessageBubbleView neededSizeForText:self.message.text];
+    CGSize bubbleSize;
+    switch (self.message.messageMediaType) {
+        case XHBubbleMessageText: {
+            bubbleSize = [XHMessageBubbleView neededSizeForText:self.message.text];
+            break;
+        }
+        case XHBubbleMessagePhoto: {
+            bubbleSize = [XHMessageBubbleView neddedSizeForPhoto:self.message.photo];
+            break;
+        }
+        case XHBubbleMessageVideo: {
+            bubbleSize = [XHMessageBubbleView neddedSizeForPhoto:self.message.videoConverPhoto];
+            break;
+        }
+        case XHBubbleMessageVioce: {
+            bubbleSize = CGSizeMake(100, [XHMessageInputView textViewLineHeight]);
+            break;
+        }
+        default:
+            break;
+    }
     
     return CGRectIntegral(CGRectMake((self.message.bubbleMessageType == XHBubbleMessageTypeSending ? CGRectGetWidth(self.bounds) - bubbleSize.width : 0.0f),
                                      kMarginTop,
@@ -108,6 +156,7 @@
             _messageDisplayTextView.text = message.text;
             break;
         case XHBubbleMessagePhoto:
+            _photoImageView.image = message.photo;
             break;
         case XHBubbleMessageVideo:
             break;
@@ -150,12 +199,18 @@
             messageDisplayTextView.contentOffset = CGPointZero;
             messageDisplayTextView.dataDetectorTypes = UIDataDetectorTypeAll;
             [self addSubview:messageDisplayTextView];
-            [self bringSubviewToFront:messageDisplayTextView];
             _messageDisplayTextView = messageDisplayTextView;
             
             if ([_messageDisplayTextView respondsToSelector:@selector(textContainerInset)]) {
                 _messageDisplayTextView.textContainerInset = UIEdgeInsetsMake(8.0f, 4.0f, 2.0f, 4.0f);
             }
+        }
+        
+        if (!_photoImageView) {
+            UIImageView *photoImageView = [[UIImageView alloc] initWithFrame:CGRectZero];
+            photoImageView.contentMode = UIViewContentModeScaleToFill;
+            [self addSubview:photoImageView];
+            _photoImageView = photoImageView;
         }
     }
     return self;
@@ -183,6 +238,8 @@
                                   self.bubbleImageView.frame.size.height - kMarginTop);
     
     self.messageDisplayTextView.frame = CGRectIntegral(textFrame);
+    
+    self.photoImageView.frame = CGRectMake(self.bubbleImageView.frame.origin.x + (self.bubbleImageView.image.capInsets.right / 3.0f), self.bubbleImageView.frame.origin.y + (self.bubbleImageView.image.capInsets.right / 3.0f), CGRectGetWidth(self.bubbleImageView.frame) - (self.bubbleImageView.image.capInsets.right), CGRectGetHeight(self.bubbleImageView.frame) - (self.bubbleImageView.image.capInsets.right * 2.0 / 3.0f));
 }
 
 /*
