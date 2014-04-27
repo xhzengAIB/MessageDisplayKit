@@ -19,7 +19,7 @@
 @property (nonatomic, weak, readwrite) UITextView *messageDisplayTextView;
 @property (nonatomic, weak, readwrite) UIImageView *bubbleImageView;
 
-@property (nonatomic, weak, readwrite) UIImageView *photoImageView;
+@property (nonatomic, weak, readwrite) XHBubblePhotoImageView *bubblePhotoImageView;
 
 @property (nonatomic, strong, readwrite) id <XHMessageModel> message;
 
@@ -147,7 +147,11 @@
 }
 
 - (void)configureBubbleImageView:(id <XHMessageModel>)message {
-    _bubbleImageView.image = [XHMessageBubbleFactory bubbleImageViewForType:message.bubbleMessageType style:XHBubbleImageViewStyleWeChat meidaType:message.messageMediaType];
+    if (message.bubbleMessageType == XHBubbleMessageText) {
+        _bubbleImageView.image = [XHMessageBubbleFactory bubbleImageViewForType:message.bubbleMessageType style:XHBubbleImageViewStyleWeChat meidaType:message.messageMediaType];
+    } else {
+        _bubbleImageView.image = nil;
+    }
 }
 
 - (void)configureMessageDisplayTextViewWithMessage:(id <XHMessageModel>)message {
@@ -156,7 +160,7 @@
             _messageDisplayTextView.text = message.text;
             break;
         case XHBubbleMessagePhoto:
-            _photoImageView.image = message.photo;
+            _bubblePhotoImageView.messagePhoto = message.photo;
             break;
         case XHBubbleMessageVideo:
             break;
@@ -206,11 +210,10 @@
             }
         }
         
-        if (!_photoImageView) {
-            UIImageView *photoImageView = [[UIImageView alloc] initWithFrame:CGRectZero];
-            photoImageView.contentMode = UIViewContentModeScaleToFill;
-            [self addSubview:photoImageView];
-            _photoImageView = photoImageView;
+        if (!_bubblePhotoImageView) {
+            XHBubblePhotoImageView *bubblePhotoImageView = [[XHBubblePhotoImageView alloc] initWithFrame:CGRectZero messagePhoto:nil rightArrow:(message.bubbleMessageType == XHBubbleMessageTypeSending ? YES : NO)];
+            [self addSubview:bubblePhotoImageView];
+            _bubblePhotoImageView = bubblePhotoImageView;
         }
     }
     return self;
@@ -239,7 +242,7 @@
     
     self.messageDisplayTextView.frame = CGRectIntegral(textFrame);
     
-    self.photoImageView.frame = CGRectMake(self.bubbleImageView.frame.origin.x + (self.bubbleImageView.image.capInsets.right / 3.0f), self.bubbleImageView.frame.origin.y + (self.bubbleImageView.image.capInsets.right / 3.0f), CGRectGetWidth(self.bubbleImageView.frame) - (self.bubbleImageView.image.capInsets.right), CGRectGetHeight(self.bubbleImageView.frame) - (self.bubbleImageView.image.capInsets.right * 2.0 / 3.0f));
+    self.bubblePhotoImageView.frame = CGRectMake([self bubbleFrame].origin.x - 2, 0, [self bubbleFrame].size.width, [self bubbleFrame].size.height);
 }
 
 /*

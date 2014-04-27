@@ -31,6 +31,7 @@
 		7482458F19092170008EC388 /* NSString+MessageInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7482458E19092170008EC388 /* NSString+MessageInputView.m */; };
 		748245971909F33F008EC388 /* XHMessageBubbleFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 748245961909F33F008EC388 /* XHMessageBubbleFactory.m */; };
 		7482459A1909F370008EC388 /* XHMessageAvatorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 748245991909F370008EC388 /* XHMessageAvatorFactory.m */; };
+		748FFCE2190D737B00752C8A /* XHBubblePhotoImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 748FFCE1190D737B00752C8A /* XHBubblePhotoImageView.m */; };
 		74BBB020190B8EAB00093577 /* MessageDisplayKitString.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74BBB022190B8EAB00093577 /* MessageDisplayKitString.strings */; };
 		74BBB02C190BE8C400093577 /* XHMessageRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74BBB02B190BE8C400093577 /* XHMessageRootViewController.m */; };
 		74BBB032190C28CD00093577 /* XHDemoWeChatMessageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74BBB031190C28CD00093577 /* XHDemoWeChatMessageTableViewController.m */; };
@@ -107,6 +108,8 @@
 		748245961909F33F008EC388 /* XHMessageBubbleFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMessageBubbleFactory.m; sourceTree = "<group>"; };
 		748245981909F370008EC388 /* XHMessageAvatorFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMessageAvatorFactory.h; sourceTree = "<group>"; };
 		748245991909F370008EC388 /* XHMessageAvatorFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMessageAvatorFactory.m; sourceTree = "<group>"; };
+		748FFCE0190D737B00752C8A /* XHBubblePhotoImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHBubblePhotoImageView.h; sourceTree = "<group>"; };
+		748FFCE1190D737B00752C8A /* XHBubblePhotoImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHBubblePhotoImageView.m; sourceTree = "<group>"; };
 		74BBB01E190B8E9500093577 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		74BBB01F190B8E9500093577 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		74BBB021190B8EAB00093577 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MessageDisplayKitString.strings; sourceTree = "<group>"; };
@@ -304,6 +307,8 @@
 				748245621909060E008EC388 /* XHMessageTableViewCell.m */,
 				7482456619090B84008EC388 /* XHMessageBubbleView.h */,
 				7482456719090B84008EC388 /* XHMessageBubbleView.m */,
+				748FFCE0190D737B00752C8A /* XHBubblePhotoImageView.h */,
+				748FFCE1190D737B00752C8A /* XHBubblePhotoImageView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -518,6 +523,7 @@
 				7482455F190902DA008EC388 /* XHMessageTableView.m in Sources */,
 				7482456819090B84008EC388 /* XHMessageBubbleView.m in Sources */,
 				748245631909060E008EC388 /* XHMessageTableViewCell.m in Sources */,
+				748FFCE2190D737B00752C8A /* XHBubblePhotoImageView.m in Sources */,
 				74FAB0B9190A81DC005623D0 /* UIImage+XHRounded.m in Sources */,
 				7482455D190902DA008EC388 /* XHMessageTableViewController.m in Sources */,
 				74BBB02C190BE8C400093577 /* XHMessageRootViewController.m in Sources */,
