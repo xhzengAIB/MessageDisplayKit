@@ -10,7 +10,7 @@
 
 @implementation XHMessageBubbleFactory
 
-+ (UIImageView *)bubbleImageViewForType:(XHBubbleMessageType)type
++ (UIImage *)bubbleImageViewForType:(XHBubbleMessageType)type
                                   style:(XHBubbleImageViewStyle)style
                               meidaType:(XHBubbleMessageMediaType)mediaType {
     NSString *messageTypeString;
@@ -53,8 +53,7 @@
     
     UIImage *bublleImage = [UIImage imageNamed:messageTypeString];
     UIEdgeInsets bubbleImageEdgeInsets = [self bubbleImageEdgeInsetsWithStyle:style];
-    UIImageView *bubbleImageView = [[UIImageView alloc] initWithImage:XH_STRETCH_IMAGE(bublleImage, bubbleImageEdgeInsets)];
-    return bubbleImageView;
+    return XH_STRETCH_IMAGE(bublleImage, bubbleImageEdgeInsets);
 }
 
 + (UIEdgeInsets)bubbleImageEdgeInsetsWithStyle:(XHBubbleImageViewStyle)style {

@@ -21,8 +21,6 @@
 - (void)didSendVideo:(NSString *)videoPath fromSender:(NSString *)sender onDate:(NSDate *)date;
 - (void)didSendVioce:(NSString *)viocePath fromSender:(NSString *)sender onDate:(NSDate *)date;
 
-- (XHBubbleMessageType)messageTypeForRowAtIndexPath:(NSIndexPath *)indexPath;
-
 @optional
 
 - (BOOL)shouldDisplayTimestampForRowAtIndexPath:(NSIndexPath *)indexPath;
@@ -110,7 +108,7 @@
  *
  *  @param reomvedMessage 删除的目标消息对象
  */
-- (void)removeMessage:(XHMessage *)reomvedMessage;
+- (void)removeMessageAtIndexPath:(NSIndexPath *)indexPath;
 
 /**
  *  插入旧消息数据到头部，仿微信的做法
@@ -131,6 +129,8 @@
  *  @param color 背景颜色
  */
 - (void)setBackgroundColor:(UIColor *)color;
+
+- (void)setBackgroundImage:(UIImage *)backgroundImage;
 
 /**
  *  是否滚动到底部

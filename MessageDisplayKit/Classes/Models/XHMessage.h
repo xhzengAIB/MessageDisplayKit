@@ -35,6 +35,8 @@
 
 @property (nonatomic, assign) XHBubbleMessageMediaType messageMediaType;
 
+@property (nonatomic, assign) XHBubbleMessageType bubbleMessageType;
+
 
 /**
  *  初始化文本消息

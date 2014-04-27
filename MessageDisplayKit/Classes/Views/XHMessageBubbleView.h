@@ -13,11 +13,16 @@
 @property (nonatomic, weak, readonly) UITextView *messageDisplayTextView;
 @property (nonatomic, weak, readonly) UIImageView *bubbleImageView;
 
-@property (nonatomic, assign, readonly) XHBubbleMessageType bubleType;
+@property (nonatomic, strong) UIFont *font UI_APPEARANCE_SELECTOR;
+
+@property (nonatomic, strong, readonly)  id <XHMessageModel> message;
 
 - (instancetype)initWithFrame:(CGRect)frame
-                   bubbleType:(XHBubbleMessageType)bubleType;
+                      message:(id <XHMessageModel>)message;
 
+- (CGRect)bubbleFrame;
+
+- (void)configureCellWithMessage:(id <XHMessageModel>)message;
 
 + (CGFloat)calculateCellHeightWithMessage:(id <XHMessageModel>)message;
 

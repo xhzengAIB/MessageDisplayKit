@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+static CGFloat const kXHAvatarImageSize = 40.0f;
+
 typedef NS_ENUM(NSInteger, XHMessageAvatorType) {
     XHMessageAvatorSquare,
     XHMessageAvatorCircle

@@ -9,16 +9,16 @@
 #import <Foundation/Foundation.h>
 
 typedef NS_ENUM(NSInteger, XHBubbleMessageType) {
-    XHBubbleMessageTypeReceiving,
+    XHBubbleMessageTypeReceiving = 0,
     XHBubbleMessageTypeSending
 };
 
 typedef NS_ENUM(NSUInteger, XHBubbleImageViewStyle) {
-    XHBubbleImageViewStyleWeChat
+    XHBubbleImageViewStyleWeChat = 0
 };
 
 typedef NS_ENUM(NSInteger, XHBubbleMessageMediaType) {
-    XHBubbleMessageText,
+    XHBubbleMessageText = 0,
     XHBubbleMessagePhoto,
     XHBubbleMessageVideo,
     XHBubbleMessageVioce
@@ -26,7 +26,7 @@ typedef NS_ENUM(NSInteger, XHBubbleMessageMediaType) {
 
 @interface XHMessageBubbleFactory : NSObject
 
-+ (UIImageView *)bubbleImageViewForType:(XHBubbleMessageType)type
++ (UIImage *)bubbleImageViewForType:(XHBubbleMessageType)type
                                   style:(XHBubbleImageViewStyle)style
                               meidaType:(XHBubbleMessageMediaType)mediaType;
 

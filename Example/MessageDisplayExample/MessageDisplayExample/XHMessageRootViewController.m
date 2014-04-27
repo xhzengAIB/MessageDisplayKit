@@ -8,7 +8,7 @@
 
 #import "XHMessageRootViewController.h"
 
-#import "XHMessageTableViewController.h"
+#import "XHDemoWeChatMessageTableViewController.h"
 
 @interface XHMessageRootViewController ()
 
@@ -17,8 +17,8 @@
 @implementation XHMessageRootViewController
 
 - (void)enterMessage {
-    XHMessageTableViewController *messageTableViewController = [[XHMessageTableViewController alloc] init];
-    [self.navigationController pushViewController:messageTableViewController animated:YES];
+    XHDemoWeChatMessageTableViewController *demoWeChatMessageTableViewController = [[XHDemoWeChatMessageTableViewController alloc] init];
+    [self.navigationController pushViewController:demoWeChatMessageTableViewController animated:YES];
 }
 
 - (void)viewDidLoad {
@@ -26,7 +26,7 @@
     // Do any additional setup after loading the view.
     UIButton *enterMessageTableViewControllerButton = [UIButton buttonWithType:UIButtonTypeCustom];
     enterMessageTableViewControllerButton.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds));
-    [enterMessageTableViewControllerButton setTitle:@"进入消息页面" forState:UIControlStateNormal];
+    [enterMessageTableViewControllerButton setTitle:@"进入华捷微信" forState:UIControlStateNormal];
     [enterMessageTableViewControllerButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [enterMessageTableViewControllerButton addTarget:self action:@selector(enterMessage) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:enterMessageTableViewControllerButton];

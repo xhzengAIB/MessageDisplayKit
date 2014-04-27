@@ -30,40 +30,59 @@
 
 #pragma mark - DataSource Change
 
-- (void)addMessage:(XHMessage *)addedMessage {
-    NSMutableArray *messages = [NSMutableArray arrayWithArray:self.messages];
-    [messages addObject:addedMessage];
-    self.messages = messages;
-    
-    NSMutableArray *indexPaths = [NSMutableArray arrayWithCapacity:1];
-    [indexPaths addObject:[NSIndexPath indexPathForRow:messages.count inSection:0]];
-    
-    [self.messageTableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationBottom];
+- (void)exChangeMessageDataSourceQueue:(void (^)())queue {
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), queue);
 }
 
-- (void)removeMessage:(XHMessage *)reomvedMessage {
-    NSMutableArray *messages = [NSMutableArray arrayWithArray:self.messages];
-    [messages removeObject:reomvedMessage];
-    self.messages = messages;
+- (void)exMainQueue:(void (^)())queue {
+    dispatch_async(dispatch_get_main_queue(), queue);
+}
+
+- (void)addMessage:(XHMessage *)addedMessage {
+    WEAKSELF
+    [self exChangeMessageDataSourceQueue:^{
+        NSMutableArray *messages = [NSMutableArray arrayWithArray:self.messages];
+        [messages addObject:addedMessage];
+        
+        NSMutableArray *indexPaths = [NSMutableArray arrayWithCapacity:1];
+        [indexPaths addObject:[NSIndexPath indexPathForRow:messages.count - 1 inSection:0]];
+        
+        [weakSelf exMainQueue:^{
+            weakSelf.messages = messages;
+            [weakSelf.messageTableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationNone];
+            [weakSelf scrollToBottomAnimated:YES];
+        }];
+    }];
+}
+
+- (void)removeMessageAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row >= self.messages.count)
+        return;
+    [self.messages removeObjectAtIndex:indexPath.row];
     
     NSMutableArray *indexPaths = [NSMutableArray arrayWithCapacity:1];
-    [indexPaths addObject:[NSIndexPath indexPathForRow:messages.count + 1 inSection:0]];
+    [indexPaths addObject:indexPath];
     
-    [self.messageTableView deleteRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationTop];
+    [self.messageTableView deleteRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationBottom];
 }
 
 - (void)insertOldMessages:(NSArray *)oldMessages {
-    NSMutableArray *messages = [NSMutableArray arrayWithArray:oldMessages];
-    [messages addObjectsFromArray:self.messages];
-    self.messages = messages;
-    
-    NSMutableArray *indexPaths = [NSMutableArray arrayWithCapacity:oldMessages.count];
-    [oldMessages enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:idx inSection:0];
-        [indexPaths addObject:indexPath];
+    WEAKSELF
+    [self exChangeMessageDataSourceQueue:^{
+        NSMutableArray *messages = [NSMutableArray arrayWithArray:oldMessages];
+        [messages addObjectsFromArray:self.messages];
+        
+        NSMutableArray *indexPaths = [NSMutableArray arrayWithCapacity:oldMessages.count];
+        [oldMessages enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            NSIndexPath *indexPath = [NSIndexPath indexPathForRow:idx inSection:0];
+            [indexPaths addObject:indexPath];
+        }];
+        
+        [weakSelf exMainQueue:^{
+            weakSelf.messages = messages;
+            [weakSelf.messageTableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationBottom];
+        }];
     }];
-    
-    [self.messageTableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationTop];
 }
 
 #pragma mark - Propertys
@@ -84,6 +103,11 @@
 - (void)setBackgroundColor:(UIColor *)color {
     self.view.backgroundColor = color;
     _messageTableView.backgroundColor = color;
+}
+
+- (void)setBackgroundImage:(UIImage *)backgroundImage {
+    self.messageTableView.backgroundView = nil;
+    self.messageTableView.backgroundView = [[UIImageView alloc] initWithImage:backgroundImage];
 }
 
 - (void)scrollToBottomAnimated:(BOOL)animated {
@@ -156,6 +180,8 @@
 	messageTableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 	messageTableView.dataSource = self;
 	messageTableView.delegate = self;
+    messageTableView.separatorColor = [UIColor clearColor];
+    messageTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 	[self.view addSubview:messageTableView];
     [self.view sendSubviewToBack:messageTableView];
 	_messageTableView = messageTableView;
@@ -280,6 +306,7 @@
     
     // 初始化消息页面布局
     [self initilzer];
+    [[XHMessageBubbleView appearance] setFont:[UIFont systemFontOfSize:16.0f]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -476,19 +503,10 @@
     // subClass
 }
 
-- (XHBubbleMessageType)messageTypeForRowAtIndexPath:(NSIndexPath *)indexPath {
-    // subClass
-    if (indexPath.row % 2) {
-        return XHBubbleMessageTypeReceiving;
-    } else {
-        return XHBubbleMessageTypeSending;
-    }
-}
-
 #pragma mark - XHMessageTableViewController DataSource
 
 - (id <XHMessageModel>)messageForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return nil;
+    return self.messages[indexPath.row];
 }
 
 #pragma mark - Table view data source
@@ -498,12 +516,10 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 100;
+    return self.messages.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    XHBubbleMessageType type = [self.delegate messageTypeForRowAtIndexPath:indexPath];
-    
     id <XHMessageModel> message = [self.dataSource messageForRowAtIndexPath:indexPath];
     
     BOOL displayTimestamp = YES;
@@ -516,10 +532,15 @@
     XHMessageTableViewCell *messageTableViewCell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     if (!messageTableViewCell) {
-        messageTableViewCell = [[XHMessageTableViewCell alloc] initWithBubbleMessageType:type displaysTimestamp:displayTimestamp reuseIdentifier:cellIdentifier];
+        messageTableViewCell = [[XHMessageTableViewCell alloc] initWithMessage:message displaysTimestamp:displayTimestamp reuseIdentifier:cellIdentifier];
     }
     
-    [messageTableViewCell setMessage:message];
+    [messageTableViewCell configureCellWithMessage:message displaysTimestamp:displayTimestamp];
+    [messageTableViewCell setBackgroundColor:tableView.backgroundColor];
+    
+    if ([self.delegate respondsToSelector:@selector(configureCell:atIndexPath:)]) {
+        [self.delegate configureCell:messageTableViewCell atIndexPath:indexPath];
+    }
     
     return messageTableViewCell;
 }
@@ -527,11 +548,14 @@
 #pragma mark - Table view delegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 300;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    id <XHMessageModel> message = [self.dataSource messageForRowAtIndexPath:indexPath];
     
+    BOOL displayTimestamp = YES;
+    if ([self.delegate respondsToSelector:@selector(shouldDisplayTimestampForRowAtIndexPath:)]) {
+        displayTimestamp = [self.delegate shouldDisplayTimestampForRowAtIndexPath:indexPath];
+    }
+    
+    return [XHMessageTableViewCell calculateCellHeightWithMessage:message displaysTimestamp:displayTimestamp];
 }
 
 #pragma mark - Key-value observing
