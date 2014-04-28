@@ -18,6 +18,8 @@
 @property (nonatomic, weak, readonly) XHMessageDisplayTextView *messageDisplayTextView;
 @property (nonatomic, weak, readonly) UIImageView *bubbleImageView;
 
+@property (nonatomic, weak, readonly) UIImageView *animationVoiceImageView;
+
 @property (nonatomic, weak, readonly) XHBubblePhotoImageView *bubblePhotoImageView;
 
 

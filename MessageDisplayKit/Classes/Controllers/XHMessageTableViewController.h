@@ -11,13 +11,6 @@
 #import "XHMessageTableView.h"
 #import "XHMessageInputView.h"
 
-typedef enum {
-    XHMessageTypeText   =   0,
-    XHMessageTypePhoto  =   1,
-    XHMessageTypeVideo  =   2,
-    XHMessageTypeVioce  =   3
-} XHMessageType;
-
 
 @protocol XHMessageTableViewControllerDelegate <NSObject>
 
@@ -26,7 +19,7 @@ typedef enum {
 - (void)didSendText:(NSString *)text fromSender:(NSString *)sender onDate:(NSDate *)date;
 - (void)didSendPhoto:(UIImage *)photo fromSender:(NSString *)sender onDate:(NSDate *)date;
 - (void)didSendVideo:(NSString *)videoPath fromSender:(NSString *)sender onDate:(NSDate *)date;
-- (void)didSendVioce:(NSString *)viocePath fromSender:(NSString *)sender onDate:(NSDate *)date;
+- (void)didSendvoice:(NSString *)voicePath fromSender:(NSString *)sender onDate:(NSDate *)date;
 
 @optional
 
@@ -127,10 +120,8 @@ typedef enum {
 #pragma mark - Messages view controller
 /**
  *  完成发送消息的函数
- *  @param type 发送的消息类型
  */
-
-- (void)finishSendMessage:(XHMessageType)type;
+- (void)finishSendMessageWithBubbleMessageType:(XHBubbleMessageMediaType)mediaType;
 
 /**
  *  设置View、tableView的背景颜色

@@ -96,10 +96,9 @@
 
 #pragma mark - Messages view controller
 
-- (void)finishSendMessage:(XHMessageType)type {
-    switch (type) {
-        case XHMessageTypeText:
-        {
+- (void)finishSendMessageWithBubbleMessageType:(XHBubbleMessageMediaType)mediaType {
+    switch (mediaType) {
+        case XHBubbleMessageText: {
             [self.messageInputView.inputTextView setText:nil];
             if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
                 self.messageInputView.inputTextView.enablesReturnKeyAutomatically = NO;
@@ -110,16 +109,13 @@
             }
             break;
         }
-        case XHMessageTypePhoto:
-        {
+        case XHBubbleMessagePhoto: {
             break;
         }
-        case XHMessageTypeVideo:
-        {
+        case XHBubbleMessageVideo: {
             break;
         }
-        case XHMessageTypeVioce:
-        {
+        case XHBubbleMessagevoice: {
             break;
         }
         default:
@@ -500,10 +496,10 @@
     }
 }
 
-- (void)didSendMessageWithVioce:(NSString *)viocePath {
-    DLog(@"send viocePath : %@", viocePath);
-    if ([self.delegate respondsToSelector:@selector(didSendVioce:fromSender:onDate:)]) {
-        [self.delegate didSendVioce:viocePath fromSender:self.messageSender onDate:[NSDate date]];
+- (void)didSendMessageWithvoice:(NSString *)voicePath {
+    DLog(@"send voicePath : %@", voicePath);
+    if ([self.delegate respondsToSelector:@selector(didSendvoice:fromSender:onDate:)]) {
+        [self.delegate didSendvoice:voicePath fromSender:self.messageSender onDate:[NSDate date]];
     }
 }
 
@@ -536,7 +532,7 @@
     // subClass
 }
 
-- (void)didSendVioce:(NSString *)viocePath fromSender:(NSString *)sender onDate:(NSDate *)date {
+- (void)didSendvoice:(NSString *)voicePath fromSender:(NSString *)sender onDate:(NSDate *)date {
     // subClass
 }
 

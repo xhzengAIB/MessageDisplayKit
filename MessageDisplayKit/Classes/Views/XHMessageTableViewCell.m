@@ -21,8 +21,11 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
     
 }
 
-@property (nonatomic, weak, readwrite) UIButton *avatorButton;
 @property (nonatomic, weak, readwrite) XHMessageBubbleView *messageBubbleView;
+
+@property (nonatomic, weak, readwrite) UIButton *avatorButton;
+
+@property (nonatomic, weak, readwrite) UILabel *timestampLabel;
 
 @property (nonatomic, assign) BOOL displayTimestamp;
 
@@ -279,6 +282,7 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
 
 - (void)dealloc {
     _avatorButton = nil;
+    _timestampLabel = nil;
     _messageBubbleView = nil;
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
@@ -309,6 +313,7 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
 - (void)prepareForReuse {
     // 这里做清除工作
     [super prepareForReuse];
+    self.messageBubbleView.animationVoiceImageView.image = nil;
     self.messageBubbleView.messageDisplayTextView.text = nil;
     self.messageBubbleView.bubblePhotoImageView.messagePhoto = nil;
     self.timestampLabel.text = nil;
