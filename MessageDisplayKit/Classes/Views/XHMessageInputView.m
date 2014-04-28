@@ -10,6 +10,8 @@
 
 @interface XHMessageInputView () <UITextViewDelegate>
 
+@property (nonatomic, weak, readwrite) XHMessageTextView *inputTextView;
+
 @property (nonatomic, weak, readwrite) UIButton *voiceChangeButton;
 
 @property (nonatomic, weak, readwrite) UIButton *multiMediaSendButton;
@@ -226,6 +228,9 @@
 }
 
 - (void)dealloc {
+    _inputTextView.delegate = nil;
+    _inputTextView = nil;
+    
     _voiceChangeButton = nil;
     _multiMediaSendButton = nil;
     _faceSendButton = nil;
@@ -299,7 +304,6 @@
         if ([self.delegate respondsToSelector:@selector(didSendMessageWithText:)]) {
             [self.delegate didSendMessageWithText:textView.text];
         }
-        self.inputTextView.text = nil;
         return NO;
     }
     return YES;

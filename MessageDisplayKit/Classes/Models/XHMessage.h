@@ -21,8 +21,8 @@
 @property (nonatomic, copy) NSString *videoPath;
 @property (nonatomic, copy) NSString *videoUrl;
 
-@property (nonatomic, copy) NSString *viocePath;
-@property (nonatomic, copy) NSString *vioceUrl;
+@property (nonatomic, copy) NSString *voicePath;
+@property (nonatomic, copy) NSString *voiceUrl;
 
 @property (nonatomic, strong) UIImage *avator;
 @property (nonatomic, copy) NSString *avatorUrl;
@@ -88,15 +88,15 @@
 /**
  *  初始化语音类型的消息
  *
- *  @param viocePath 目标语音的本地路径
- *  @param vioceUrl  目标语音在服务器的地址
+ *  @param voicePath 目标语音的本地路径
+ *  @param voiceUrl  目标语音在服务器的地址
  *  @param sender    发送者
  *  @param date      发送时间
  *
  *  @return 返回Message model 对象
  */
-- (instancetype)initWithViocePath:(NSString *)viocePath
-                         vioceUrl:(NSString *)vioceUrl
+- (instancetype)initWithvoicePath:(NSString *)voicePath
+                         voiceUrl:(NSString *)voiceUrl
                                   sender:(NSString *)sender
                                     date:(NSDate *)date;
 

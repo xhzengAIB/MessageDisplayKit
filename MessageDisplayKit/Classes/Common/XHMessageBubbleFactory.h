@@ -21,7 +21,7 @@ typedef NS_ENUM(NSInteger, XHBubbleMessageMediaType) {
     XHBubbleMessageText = 0,
     XHBubbleMessagePhoto = 1,
     XHBubbleMessageVideo = 2,
-    XHBubbleMessageVioce = 3,
+    XHBubbleMessagevoice = 3,
 };
 
 @interface XHMessageBubbleFactory : NSObject
