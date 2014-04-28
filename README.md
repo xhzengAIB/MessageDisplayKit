@@ -27,14 +27,14 @@ Dynamically resizes input text view as you type
 Automatically enables/disables send button (if text view is empty or not)
 * 10、发送/接收声音效果                                
 Send/Receive sound effects
-* 11、发送语音
-Send the voice message
-* 12、发送图片
-Send the photo message
-* 13、发送视频
-Send the video message
+* 11、发送语音                           
+Send the voice message                           
+* 12、发送图片                           
+Send the photo message                           
+* 13、发送视频                           
+Send the video message                           
 * 14、通用于iPhone和iPad                               
-Universal for iPhone and iPad
+Universal for iPhone and iPad                           
 
 
 
