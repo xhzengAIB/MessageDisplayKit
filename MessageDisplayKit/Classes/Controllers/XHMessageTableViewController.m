@@ -96,35 +96,8 @@
 
 #pragma mark - Messages view controller
 
-- (void)finishSendMessage:(XHMessageType)type {
-    switch (type) {
-        case XHMessageTypeText:
-        {
-            [self.messageInputView.inputTextView setText:nil];
-            if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
-                self.messageInputView.inputTextView.enablesReturnKeyAutomatically = NO;
-                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                    self.messageInputView.inputTextView.enablesReturnKeyAutomatically = YES;
-                    [self.messageInputView.inputTextView reloadInputViews];
-                });
-            }
-            break;
-        }
-        case XHMessageTypePhoto:
-        {
-            break;
-        }
-        case XHMessageTypeVideo:
-        {
-            break;
-        }
-        case XHMessageTypeVioce:
-        {
-            break;
-        }
-        default:
-            break;
-    }
+- (void)finishSendMessage {
+    [self.messageInputView.inputTextView setText:nil];
 }
 
 - (void)setBackgroundColor:(UIColor *)color {
@@ -483,6 +456,14 @@
     DLog(@"text : %@", text);
     if ([self.delegate respondsToSelector:@selector(didSendText:fromSender:onDate:)]) {
         [self.delegate didSendText:text fromSender:self.messageSender onDate:[NSDate date]];
+        
+        if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
+            self.messageInputView.inputTextView.enablesReturnKeyAutomatically = NO;
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                self.messageInputView.inputTextView.enablesReturnKeyAutomatically = YES;
+                [self.messageInputView.inputTextView reloadInputViews];
+            });
+        }
     }
 }
 
