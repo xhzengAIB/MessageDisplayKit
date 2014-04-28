@@ -11,7 +11,7 @@ A messages UI for iPhone and iPad,You can send txt, voice, image,video,emotion .
 Highly customizable
 * 2、任意消息的大小                                   
 Arbitrary message sizes
-* 3、复制&粘贴消息
+* 3、复制&粘贴消息                       
 Copy & paste messages
 * 4、数据检查器(确认电话号码、链接、日期等)           
 Data detectors (recognizes phone numbers, links, dates, etc.)
@@ -27,7 +27,13 @@ Dynamically resizes input text view as you type
 Automatically enables/disables send button (if text view is empty or not)
 * 10、发送/接收声音效果                                
 Send/Receive sound effects
-* 11、通用于iPhone和iPad                               
+* 11、发送语音
+Send the voice message
+* 12、发送图片
+Send the photo message
+* 13、发送视频
+Send the video message
+* 14、通用于iPhone和iPad                               
 Universal for iPhone and iPad
 
 
