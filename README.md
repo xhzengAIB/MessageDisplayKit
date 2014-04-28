@@ -45,6 +45,14 @@ Universal for iPhone and iPad
 * [MessageDisplayKit][playerLink]
 
 
+## Profile
+
+[CocosPods](http://cocosPods.org) is the recommended methods of installation MessageDisplayKit, just add the following line to `Profile`:
+
+```
+pod 'MessageDisplayKit', '~> 0.1.0'
+```
+
 ## License
 
 中文: MessageDisplayKit 是在MIT协议下使用的，可以在LICENSE文件里面找到相关的使用协议信息.     
