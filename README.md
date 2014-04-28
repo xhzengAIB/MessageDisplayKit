@@ -2,7 +2,7 @@ MessageDisplayKit
 =================
 
 用于显示iPhone和iPad的消息页面，你可以发送文本、声音、图片、视频等消息。模仿微信App。                        
-A messages UI for iPhone and iPad,You can send txt, voice, image,video,emotion .etc messages. like WeChat App.                                 
+A messages UI for iPhone and iPad,You can send text, voice, image,video,emotion .etc messages. like WeChat App.                                 
 
 
 ## 将来                                            Features 
