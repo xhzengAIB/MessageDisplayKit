@@ -1,3 +1,5 @@
+[image](https://github.com/xhzengAIB/LearnEnglish/blob/master/Screenshots/MessageDisplayKitExample.gif)    
+
 MessageDisplayKit
 =================
 
