@@ -19,6 +19,8 @@
         
         self.sender = sender;
         self.date = date;
+        
+        self.messageMediaType = XHBubbleMessageText;
     }
     return self;
 }
@@ -47,6 +49,8 @@
         
         self.sender = sender;
         self.date = date;
+        
+        self.messageMediaType = XHBubbleMessagePhoto;
     }
     return self;
 }
@@ -75,6 +79,8 @@
         
         self.sender = sender;
         self.date = date;
+        
+        self.messageMediaType = XHBubbleMessageVideo;
     }
     return self;
 }
@@ -100,8 +106,14 @@
         
         self.sender = sender;
         self.date = date;
+        
+        self.messageMediaType = XHBubbleMessageVioce;
     }
     return self;
+}
+
+- (void)dealloc {
+    
 }
 
 #pragma mark - NSCoding

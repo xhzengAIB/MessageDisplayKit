@@ -8,29 +8,152 @@
 
 #import "XHMessageInputView.h"
 
-@interface XHMessageInputView ()
+@interface XHMessageInputView () <UITextViewDelegate>
+
+@property (nonatomic, weak, readwrite) UIButton *voiceChangeButton;
+
+@property (nonatomic, weak, readwrite) UIButton *multiMediaSendButton;
+
+@property (nonatomic, weak, readwrite) UIButton *faceSendButton;
+
+@property (nonatomic, weak, readwrite) UIButton *holdDownButtonButton;
 
 @end
 
 @implementation XHMessageInputView
 
+#pragma mark - Action
+
+- (void)messageStyleButtonClicked:(UIButton *)sender {
+    NSInteger index = sender.tag;
+    switch (index) {
+        case 0: {
+            sender.selected = !sender.selected;
+            if (sender.selected) {
+                [self.inputTextView resignFirstResponder];
+            } else {
+                [self.inputTextView becomeFirstResponder];
+            }
+            
+            [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+                self.holdDownButtonButton.alpha = sender.selected;
+            } completion:^(BOOL finished) {
+                
+            }];
+        }
+            break;
+        case 1:
+            break;
+        case 2:
+            break;
+        default:
+            break;
+    }
+}
+
 #pragma mark - layout subViews UI
+
+- (UIButton *)createButtonWithImage:(UIImage *)image HLImage:(UIImage *)hlImage {
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, [XHMessageInputView textViewLineHeight], [XHMessageInputView textViewLineHeight])];
+    if (image)
+        [button setBackgroundImage:image forState:UIControlStateNormal];
+    if (hlImage)
+        [button setBackgroundImage:hlImage forState:UIControlStateHighlighted];
+    
+    return button;
+}
 
 - (void)setupMessageInputViewBarWithStyle:(XHMessageInputViewStyle)style {
     // 配置输入工具条的样式和布局
     
-    CGFloat sendButtonWidth = (style == XHMessageInputViewStyleQuasiphysical) ? 78.0f : 64.0f;
+    // 需要显示按钮的总宽度，包括间隔在内
+    CGFloat allButtonWidth = 0.0;
     
-    CGFloat width = self.frame.size.width - sendButtonWidth;
+    // 水平间隔
+    CGFloat horizontalPadding = 8;
+    
+    // 垂直间隔
+    CGFloat verticalPadding = 5;
+    
+    // 输入框
+    CGFloat textViewLeftMargin = ((style == XHMessageInputViewStyleFlat) ? 6.0 : 4.0);
+    
+    // 每个按钮统一使用的frame变量
+    CGRect buttonFrame;
+    
+    // 按钮对象消息
+    UIButton *button;
+    
+    // 允许发送语音
+    if (self.allowsSendVoice) {
+        button = [self createButtonWithImage:[UIImage imageNamed:@"voice"] HLImage:[UIImage imageNamed:@"voice_HL"]];
+        [button addTarget:self action:@selector(messageStyleButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+        button.tag = 0;
+        [button setImage:[UIImage imageNamed:@"keyborad"] forState:UIControlStateSelected];
+        buttonFrame = button.frame;
+        buttonFrame.origin = CGPointMake(horizontalPadding, verticalPadding);
+        button.frame = buttonFrame;
+        [self addSubview:button];
+        allButtonWidth += CGRectGetMaxX(buttonFrame);
+        textViewLeftMargin += CGRectGetMaxX(buttonFrame);
+        
+        self.voiceChangeButton = button;
+    }
+    
+    // 允许发送多媒体消息，为什么不是先放表情按钮呢？因为布局的需要！
+    if (self.allowsSendMultiMedia) {
+        button = [self createButtonWithImage:[UIImage imageNamed:@"multiMedia"] HLImage:[UIImage imageNamed:@"multiMedia_HL"]];
+        [button addTarget:self action:@selector(messageStyleButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+        button.tag = 2;
+        buttonFrame = button.frame;
+        buttonFrame.origin = CGPointMake(CGRectGetWidth(self.bounds) - horizontalPadding - CGRectGetWidth(buttonFrame), verticalPadding);
+        button.frame = buttonFrame;
+        [self addSubview:button];
+        allButtonWidth += CGRectGetWidth(buttonFrame) + horizontalPadding * 2.5;
+        
+        self.multiMediaSendButton = button;
+    }
+    
+    // 允许发送表情
+    if (self.allowsSendFace) {
+        button = [self createButtonWithImage:[UIImage imageNamed:@"face"] HLImage:[UIImage imageNamed:@"face_HL"]];
+        [button addTarget:self action:@selector(messageStyleButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+        button.tag = 1;
+        buttonFrame = button.frame;
+        if (self.allowsSendMultiMedia) {
+            buttonFrame.origin = CGPointMake(CGRectGetMinX(self.multiMediaSendButton.frame) - CGRectGetWidth(buttonFrame) - horizontalPadding, verticalPadding);
+            allButtonWidth += CGRectGetWidth(buttonFrame) + horizontalPadding * 1.5;
+        } else {
+            buttonFrame.origin = CGPointMake(CGRectGetWidth(self.bounds) - horizontalPadding - CGRectGetWidth(buttonFrame), verticalPadding);
+            allButtonWidth += CGRectGetWidth(buttonFrame) + horizontalPadding * 2.5;
+        }
+        button.frame = buttonFrame;
+        [self addSubview:button];
+        
+        self.faceSendButton = button;
+    }
+    
+    // 输入框的高度和宽度
+    CGFloat width = CGRectGetWidth(self.bounds) - allButtonWidth;
     CGFloat height = [XHMessageInputView textViewLineHeight];
     
+    // 初始化输入框
     XHMessageTextView *textView = [[XHMessageTextView  alloc] initWithFrame:CGRectZero];
+    
+    // 这个是仿微信的一个细节体验
+    textView.returnKeyType = UIReturnKeySend;
+    textView.enablesReturnKeyAutomatically = YES; // UITextView内部判断send按钮是否可以用
+    
+    textView.placeHolder = @"发送新消息";
+    textView.delegate = self;
+    
     [self addSubview:textView];
 	_inputTextView = textView;
     
+    // 配置不同iOS SDK版本的样式
     switch (style) {
         case XHMessageInputViewStyleQuasiphysical: {
-            _inputTextView.frame = CGRectMake(6.0f, 3.0f, width, height);
+            _inputTextView.frame = CGRectMake(textViewLeftMargin, 3.0f, width, height);
             _inputTextView.backgroundColor = [UIColor whiteColor];
             
             self.image = [[UIImage imageNamed:@"input-bar-background"] resizableImageWithCapInsets:UIEdgeInsetsMake(19.0f, 3.0f, 19.0f, 3.0f)
@@ -47,7 +170,7 @@
             break;
         }
         case XHMessageInputViewStyleFlat: {
-            _inputTextView.frame = CGRectMake(4.0f, 4.5f, width, height);
+            _inputTextView.frame = CGRectMake(textViewLeftMargin, 4.5f, width, height);
             _inputTextView.backgroundColor = [UIColor clearColor];
             _inputTextView.layer.borderColor = [UIColor colorWithWhite:0.8f alpha:1.0f].CGColor;
             _inputTextView.layer.borderWidth = 0.65f;
@@ -60,15 +183,28 @@
         default:
             break;
     }
+    
+    // 如果是可以发送语言的，那就需要一个按钮录音的按钮，事件可以在外部添加
+    if (self.allowsSendVoice) {
+        button = [self createButtonWithImage:[UIImage imageNamed:@"holdDownButton"] HLImage:nil];
+        buttonFrame = _inputTextView.frame;
+        button.frame = buttonFrame;
+        button.alpha = self.voiceChangeButton.selected;
+        [self addSubview:button];
+        self.holdDownButtonButton = button;
+    }
 }
 
 #pragma mark - Life cycle
 
 - (void)setup {
+    // 配置自适应
     self.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin);
     self.opaque = YES;
+    // 由于继承UIImageView，所以需要这个属性设置
     self.userInteractionEnabled = YES;
     
+    // 默认设置
     _allowsSendVoice = YES;
     _allowsSendFace = YES;
     _allowsSendMultiMedia = YES;
@@ -89,7 +225,15 @@
     return self;
 }
 
+- (void)dealloc {
+    _voiceChangeButton = nil;
+    _multiMediaSendButton = nil;
+    _faceSendButton = nil;
+    _holdDownButtonButton = nil;
+}
+
 - (void)willMoveToSuperview:(UIView *)newSuperview {
+    // 当别的地方需要add的时候，就会调用这里
     if (newSuperview) {
         [self setupMessageInputViewBarWithStyle:self.messageInputViewStyle];
     }
@@ -98,6 +242,7 @@
 #pragma mark - Message input view
 
 - (void)adjustTextViewHeightBy:(CGFloat)changeInHeight {
+    // 动态改变自身的高度和输入框的高度
     CGRect prevFrame = self.inputTextView.frame;
     
     NSUInteger numLines = MAX([self.inputTextView numberOfLinesOfText],
@@ -136,5 +281,28 @@
     return ([XHMessageInputView maxLines] + 1.0f) * [XHMessageInputView textViewLineHeight];
 }
 
+#pragma mark - Text view delegate
+
+- (void)textViewDidBeginEditing:(UITextView *)textView {
+    [textView becomeFirstResponder];
+    if ([self.delegate respondsToSelector:@selector(inputTextViewDidBeginEditing:)]) {
+        [self.delegate inputTextViewDidBeginEditing:self.inputTextView];
+    }
+}
+
+- (void)textViewDidEndEditing:(UITextView *)textView {
+    [textView resignFirstResponder];
+}
+
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
+    if ([text isEqualToString:@"\n"]) {
+        if ([self.delegate respondsToSelector:@selector(didSendMessageWithText:)]) {
+            [self.delegate didSendMessageWithText:textView.text];
+        }
+        self.inputTextView.text = nil;
+        return NO;
+    }
+    return YES;
+}
 
 @end
