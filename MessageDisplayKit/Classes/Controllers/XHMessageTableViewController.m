@@ -289,6 +289,9 @@
                              [self scrollToBottomAnimated:NO];
                              
                              if (isShrinking) {
+                                 if ([[[UIDevice currentDevice] systemVersion] floatValue] < 7.0) {
+                                     self.previousTextViewContentHeight = MIN(contentH, maxHeight);
+                                 }
                                  // if shrinking the view, animate text view frame BEFORE input view frame
                                  [self.messageInputView adjustTextViewHeightBy:changeInHeight];
                              }
@@ -299,6 +302,9 @@
                                                                       inputViewFrame.size.width,
                                                                       inputViewFrame.size.height + changeInHeight);
                              if (!isShrinking) {
+                                 if ([[[UIDevice currentDevice] systemVersion] floatValue] < 7.0) {
+                                     self.previousTextViewContentHeight = MIN(contentH, maxHeight);
+                                 }
                                  // growing the view, animate the text view frame AFTER input view frame
                                  [self.messageInputView adjustTextViewHeightBy:changeInHeight];
                              }
@@ -334,9 +340,12 @@
 - (UIEdgeInsets)tableViewInsetsWithBottomValue:(CGFloat)bottom {
     UIEdgeInsets insets = UIEdgeInsetsZero;
     
+//#warning test for XCode 4.6.1
+//#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 70000
     if ([self respondsToSelector:@selector(topLayoutGuide)]) {
         insets.top = self.topLayoutGuide.length;
     }
+//#endif
     
     insets.bottom = bottom;
     
