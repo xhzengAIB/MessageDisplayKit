@@ -16,17 +16,32 @@ typedef NS_ENUM(NSInteger, XHMessageInputViewStyle) {
     XHMessageInputViewStyleFlat
 };
 
+@protocol XHMessageInputViewDelegate <NSObject>
+
+@required
+- (void)inputTextViewDidBeginEditing:(XHMessageTextView *)messageInputTextView;
+
+@optional
+- (void)didSendMessageWithText:(NSString *)text;
+- (void)didSendMessageWithPhoto:(UIImage *)photo;
+- (void)didSendMessageWithVideo:(NSString *)videoPath;
+- (void)didSendMessageWithVioce:(NSString *)viocePath;
+
+@end
+
 @interface XHMessageInputView : UIImageView
+
+@property (nonatomic, weak) id <XHMessageInputViewDelegate> delegate;
 
 /**
  *  用于输入文本消息的输入框
  */
-@property (nonatomic, strong, readonly) XHMessageTextView *inputTextView;
+@property (nonatomic, weak, readonly) XHMessageTextView *inputTextView;
 
 /**
  *  当前输入工具条的样式
  */
-@property (assign, nonatomic) XHMessageInputViewStyle messageInputViewStyle;  // default is XHMessageInputViewStyleFlat
+@property (nonatomic, assign) XHMessageInputViewStyle messageInputViewStyle;  // default is XHMessageInputViewStyleFlat
 
 /**
  *  是否允许发送语音
@@ -43,6 +58,13 @@ typedef NS_ENUM(NSInteger, XHMessageInputViewStyle) {
  */
 @property (nonatomic, assign) BOOL allowsSendFace; // default is YES
 
+@property (nonatomic, weak, readonly) UIButton *voiceChangeButton;
+
+@property (nonatomic, weak, readonly) UIButton *multiMediaSendButton;
+
+@property (nonatomic, weak, readonly) UIButton *faceSendButton;
+
+@property (nonatomic, weak, readonly) UIButton *holdDownButtonButton;
 
 #pragma mark - Message input view
 

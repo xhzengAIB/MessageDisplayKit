@@ -279,7 +279,7 @@ static NSString * const MessageInputBarHeightKey = @"MessageInputBarHeightKey";
 	double duration = [[notification.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
     
     if (self.keyboardWillChange) {
-        self.keyboardWillChange(keyboardRect, [self animationOptionsForCurve:curve], duration);
+        self.keyboardWillChange(keyboardRect, [self animationOptionsForCurve:curve], duration, (([notification.name isEqualToString:UIKeyboardWillShowNotification]) ? YES : NO));
     }
 }
 

@@ -123,6 +123,12 @@
     return self;
 }
 
+- (void)dealloc {
+    _placeHolder = nil;
+    _placeHolderTextColor = nil;
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UITextViewTextDidChangeNotification object:self];
+}
+
 #pragma mark - Drawing
 
 - (void)drawRect:(CGRect)rect

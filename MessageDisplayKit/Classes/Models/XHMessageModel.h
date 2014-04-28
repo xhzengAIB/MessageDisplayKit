@@ -13,6 +13,8 @@
 @protocol XHMessageModel <NSObject>
 
 @required
+- (NSString *)text;
+
 - (UIImage *)photo;
 - (NSString *)thumbnailUrl;
 - (NSString *)originPhotoUrl;
@@ -23,6 +25,13 @@
 
 - (NSString *)viocePath;
 - (NSString *)vioceUrl;
+
+- (UIImage *)avator;
+- (NSString *)avatorUrl;
+
+- (XHBubbleMessageMediaType)messageMediaType;
+
+- (XHBubbleMessageType)bubbleMessageType;
 
 @optional
 

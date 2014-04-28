@@ -8,34 +8,106 @@
 
 #import "XHMessageTableViewController.h"
 
-#import "UIScrollView+XHkeyboardControl.h"
-
 @interface XHMessageTableViewController ()
 
-// 判断是否用户手指滚动
+/**
+ *  判断是否用户手指滚动
+ */
 @property (assign, nonatomic) BOOL isUserScrolling;
 
+/**
+ *  记录旧的textView contentSize Heigth
+ */
 @property (assign, nonatomic) CGFloat previousTextViewContentHeight;
 
-@property (nonatomic, strong, readwrite) XHMessageTableView *messageTableView;
 
-@property (nonatomic, strong, readwrite) XHMessageInputView *messageInputView;
+@property (nonatomic, weak, readwrite) XHMessageTableView *messageTableView;
+@property (nonatomic, weak, readwrite) XHMessageInputView *messageInputView;
 
 @end
 
 @implementation XHMessageTableViewController
 
+#pragma mark - DataSource Change
+
+- (void)exChangeMessageDataSourceQueue:(void (^)())queue {
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), queue);
+}
+
+- (void)exMainQueue:(void (^)())queue {
+    dispatch_async(dispatch_get_main_queue(), queue);
+}
+
+- (void)addMessage:(XHMessage *)addedMessage {
+    WEAKSELF
+    [self exChangeMessageDataSourceQueue:^{
+        NSMutableArray *messages = [NSMutableArray arrayWithArray:self.messages];
+        [messages addObject:addedMessage];
+        
+        NSMutableArray *indexPaths = [NSMutableArray arrayWithCapacity:1];
+        [indexPaths addObject:[NSIndexPath indexPathForRow:messages.count - 1 inSection:0]];
+        
+        [weakSelf exMainQueue:^{
+            weakSelf.messages = messages;
+            [weakSelf.messageTableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationNone];
+            [weakSelf scrollToBottomAnimated:YES];
+        }];
+    }];
+}
+
+- (void)removeMessageAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row >= self.messages.count)
+        return;
+    [self.messages removeObjectAtIndex:indexPath.row];
+    
+    NSMutableArray *indexPaths = [NSMutableArray arrayWithCapacity:1];
+    [indexPaths addObject:indexPath];
+    
+    [self.messageTableView deleteRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationBottom];
+}
+
+- (void)insertOldMessages:(NSArray *)oldMessages {
+    WEAKSELF
+    [self exChangeMessageDataSourceQueue:^{
+        NSMutableArray *messages = [NSMutableArray arrayWithArray:oldMessages];
+        [messages addObjectsFromArray:self.messages];
+        
+        NSMutableArray *indexPaths = [NSMutableArray arrayWithCapacity:oldMessages.count];
+        [oldMessages enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            NSIndexPath *indexPath = [NSIndexPath indexPathForRow:idx inSection:0];
+            [indexPaths addObject:indexPath];
+        }];
+        
+        [weakSelf exMainQueue:^{
+            weakSelf.messages = messages;
+            [weakSelf.messageTableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationBottom];
+        }];
+    }];
+}
+
+#pragma mark - Propertys
+
+- (NSMutableArray *)messages {
+    if (!_messages) {
+        _messages = [[NSMutableArray alloc] initWithCapacity:0];
+    }
+    return _messages;
+}
+
 #pragma mark - Messages view controller
 
 - (void)finishSendMessage {
     [self.messageInputView.inputTextView setText:nil];
-    [self textViewDidChange:self.messageInputView.inputTextView];
-    [self.messageTableView reloadData];
 }
 
 - (void)setBackgroundColor:(UIColor *)color {
     self.view.backgroundColor = color;
     _messageTableView.backgroundColor = color;
+}
+
+- (void)setBackgroundImage:(UIImage *)backgroundImage {
+    self.messageTableView.backgroundView = nil;
+    self.messageTableView.backgroundView = [[UIImageView alloc] initWithImage:backgroundImage];
 }
 
 - (void)scrollToBottomAnimated:(BOOL)animated {
@@ -61,6 +133,8 @@
 						  atScrollPosition:position
 								  animated:animated];
 }
+
+#pragma mark - Previte Method
 
 - (BOOL)shouldAllowScroll {
     if (self.isUserScrolling) {
@@ -95,15 +169,23 @@
 }
 
 - (void)initilzer {
+    if ([self respondsToSelector:@selector(automaticallyAdjustsScrollViewInsets)]) {
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    }
+    // 默认设置用户滚动为NO
     _isUserScrolling = NO;
     
     // 初始化message tableView
-	XHMessageTableView *tableView = [[XHMessageTableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
-	tableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-	tableView.dataSource = self;
-	tableView.delegate = self;
-	[self.view addSubview:tableView];
-	_messageTableView = tableView;
+	XHMessageTableView *messageTableView = [[XHMessageTableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+	messageTableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+	messageTableView.dataSource = self;
+	messageTableView.delegate = self;
+    messageTableView.separatorColor = [UIColor clearColor];
+    messageTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    [messageTableView addObserver:self forKeyPath:@"frame" options:NSKeyValueObservingOptionNew context:NULL];
+	[self.view addSubview:messageTableView];
+    [self.view sendSubviewToBack:messageTableView];
+	_messageTableView = messageTableView;
     
     // 设置Message TableView 的bottom edg
     CGFloat inputViewHeight = (self.inputViewStyle == XHMessageInputViewStyleFlat) ? 45.0f : 40.0f;
@@ -118,12 +200,9 @@
                                    self.view.frame.size.width,
                                    inputViewHeight);
     
-    // 设置键盘通知或者手势控制键盘消失
-    [self.messageTableView setupPanGestureControlKeyboardHide:self.allowsPanToDismissKeyboard];
-    
     // block回调键盘通知
     WEAKSELF
-    self.messageTableView.keyboardWillChange = ^(CGRect keyboardRect, UIViewAnimationOptions options, double duration){
+    self.messageTableView.keyboardWillChange = ^(CGRect keyboardRect, UIViewAnimationOptions options, double duration, BOOL showKeyborad){
         [UIView animateWithDuration:duration
                               delay:0.0
                             options:options
@@ -145,11 +224,13 @@
                              
                              [weakSelf setTableViewInsetsWithBottomValue:weakSelf.view.frame.size.height
                               - weakSelf.messageInputView.frame.origin.y];
-                             [weakSelf scrollToBottomAnimated:NO];
+                             if (showKeyborad)
+                                 [weakSelf scrollToBottomAnimated:NO];
                          }
                          completion:nil];
     };
     
+    // 控制输入工具条的位置块
     void (^AnimationForMessageInputViewAtPoint)(CGPoint point) = ^(CGPoint point) {
         CGRect inputViewFrame = weakSelf.messageInputView.frame;
         CGPoint keyboardOrigin = [weakSelf.view convertPoint:point fromView:nil];
@@ -163,8 +244,6 @@
     
     self.messageTableView.keyboardWillSnapBackToPoint = ^(CGPoint point) {
         AnimationForMessageInputViewAtPoint(point);
-        if ([weakSelf.messageInputView.inputTextView isFirstResponder])
-            [weakSelf scrollToBottomAnimated:YES];
     };
     
     self.messageTableView.keyboardWillBeDismissed = ^() {
@@ -182,24 +261,28 @@
     inputView.allowsSendFace = self.allowsSendFace;
     inputView.allowsSendVoice = self.allowsSendVoice;
     inputView.allowsSendMultiMedia = self.allowsSendMultiMedia;
+    inputView.delegate = self;
     [self.view addSubview:inputView];
-    
-    
-    self.messageTableView.messageInputBarHeight = CGRectGetHeight(_messageInputView.bounds);
+    [self.view bringSubviewToFront:inputView];
     
     _messageInputView = inputView;
-    _messageInputView.inputTextView.placeHolder = @"发送新消息";
-    _messageInputView.inputTextView.delegate = self;
+    
+    
+    // 设置手势滑动，默认添加一个bar的高度值
+    self.messageTableView.messageInputBarHeight = CGRectGetHeight(_messageInputView.bounds);
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    // 设置键盘通知或者手势控制键盘消失
+    [self.messageTableView setupPanGestureControlKeyboardHide:self.allowsPanToDismissKeyboard];
+    
     // KVO 检查contentSize
     [self.messageInputView.inputTextView addObserver:self
                                      forKeyPath:@"contentSize"
-                                        options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld
+                                        options:NSKeyValueObservingOptionNew
                                         context:nil];
-    
+    // 滚动到底部
     [self scrollToBottomAnimated:NO];
 }
 
@@ -224,6 +307,7 @@
     
     // 初始化消息页面布局
     [self initilzer];
+    [[XHMessageBubbleView appearance] setFont:[UIFont systemFontOfSize:16.0f]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -232,6 +316,7 @@
 }
 
 - (void)dealloc {
+    _messages = nil;
     _delegate = nil;
     _dataSource = nil;
     _messageTableView.delegate = nil;
@@ -255,8 +340,10 @@
     [self.messageTableView reloadData];
     [self.messageTableView setNeedsLayout];
 }
-- (CGFloat)getTextViewContentH:(UITextView*)textView {
-    
+
+#pragma mark - UITextView Helper method
+
+- (CGFloat)getTextViewContentH:(UITextView *)textView {
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
         return ceilf([textView sizeThatFits:textView.frame.size].height);
     } else {
@@ -335,7 +422,7 @@
     UIEdgeInsets insets = UIEdgeInsetsZero;
     
     if ([self respondsToSelector:@selector(topLayoutGuide)]) {
-        insets.top = self.topLayoutGuide.length;
+        insets.top = 64;
     }
     
     insets.bottom = bottom;
@@ -349,32 +436,78 @@
     return YES;
 }
 
-#pragma mark - Text view delegate
+#pragma mark - XHMessageInputView Delegate
 
-- (void)textViewDidBeginEditing:(UITextView *)textView
-{
-    [textView becomeFirstResponder];
-	
+- (void)inputTextViewDidBeginEditing:(XHMessageTextView *)messageInputTextView {
     if (!self.previousTextViewContentHeight)
-		self.previousTextViewContentHeight = [self getTextViewContentH:textView];
+		self.previousTextViewContentHeight = [self getTextViewContentH:messageInputTextView];
 }
 
-- (void)textViewDidChange:(UITextView *)textView {
-//    self.messageInputView.sendButton.enabled = ([[textView.text js_stringByTrimingWhitespace] length] > 0);
+- (void)didSendMessageWithText:(NSString *)text {
+    DLog(@"text : %@", text);
+    if ([self.delegate respondsToSelector:@selector(didSendText:fromSender:onDate:)]) {
+        [self.delegate didSendText:text fromSender:self.messageSender onDate:[NSDate date]];
+    }
 }
 
-- (void)textViewDidEndEditing:(UITextView *)textView {
-    [textView resignFirstResponder];
+- (void)didSendMessageWithPhoto:(UIImage *)photo {
+    DLog(@"send photo : %@", photo);
+    if ([self.delegate respondsToSelector:@selector(didSendPhoto:fromSender:onDate:)]) {
+        [self.delegate didSendPhoto:photo fromSender:self.messageSender onDate:[NSDate date]];
+    }
+}
+
+- (void)didSendMessageWithVideo:(NSString *)videoPath {
+    DLog(@"send videoPath : %@", videoPath);
+    if ([self.delegate respondsToSelector:@selector(didSendVideo:fromSender:onDate:)]) {
+        [self.delegate didSendVideo:videoPath fromSender:self.messageSender onDate:[NSDate date]];
+    }
+}
+
+- (void)didSendMessageWithVioce:(NSString *)viocePath {
+    DLog(@"send viocePath : %@", viocePath);
+    if ([self.delegate respondsToSelector:@selector(didSendVioce:fromSender:onDate:)]) {
+        [self.delegate didSendVioce:viocePath fromSender:self.messageSender onDate:[NSDate date]];
+    }
 }
 
 #pragma mark - Scroll view delegate
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
 	self.isUserScrolling = YES;
+    
+    UIMenuController *menu = [UIMenuController sharedMenuController];
+    if (menu.isMenuVisible) {
+        [menu setMenuVisible:NO animated:YES];
+    }
 }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
     self.isUserScrolling = NO;
+}
+
+#pragma mark - XHMessageTableViewController Delegate
+
+- (void)didSendText:(NSString *)text fromSender:(NSString *)sender onDate:(NSDate *)date {
+    // subClass
+}
+
+- (void)didSendPhoto:(UIImage *)photo fromSender:(NSString *)sender onDate:(NSDate *)date {
+    // subClass
+}
+
+- (void)didSendVideo:(NSString *)videoPath fromSender:(NSString *)sender onDate:(NSDate *)date {
+    // subClass
+}
+
+- (void)didSendVioce:(NSString *)viocePath fromSender:(NSString *)sender onDate:(NSDate *)date {
+    // subClass
+}
+
+#pragma mark - XHMessageTableViewController DataSource
+
+- (id <XHMessageModel>)messageForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return self.messages[indexPath.row];
 }
 
 #pragma mark - Table view data source
@@ -384,29 +517,46 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 100;
+    return self.messages.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *cellIdentifier = @"cellIdentifier";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+    id <XHMessageModel> message = [self.dataSource messageForRowAtIndexPath:indexPath];
+    
+    BOOL displayTimestamp = YES;
+    if ([self.delegate respondsToSelector:@selector(shouldDisplayTimestampForRowAtIndexPath:)]) {
+        displayTimestamp = [self.delegate shouldDisplayTimestampForRowAtIndexPath:indexPath];
     }
     
-    cell.textLabel.text = @"先测试";
+    static NSString *cellIdentifier = @"XHMessageTableViewCell";
     
-    return cell;
+    XHMessageTableViewCell *messageTableViewCell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    
+    if (!messageTableViewCell) {
+        messageTableViewCell = [[XHMessageTableViewCell alloc] initWithMessage:message displaysTimestamp:displayTimestamp reuseIdentifier:cellIdentifier];
+    }
+    
+    [messageTableViewCell configureCellWithMessage:message displaysTimestamp:displayTimestamp];
+    [messageTableViewCell setBackgroundColor:tableView.backgroundColor];
+    
+    if ([self.delegate respondsToSelector:@selector(configureCell:atIndexPath:)]) {
+        [self.delegate configureCell:messageTableViewCell atIndexPath:indexPath];
+    }
+    
+    return messageTableViewCell;
 }
 
 #pragma mark - Table view delegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 90;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [self finishSendMessage];
+    id <XHMessageModel> message = [self.dataSource messageForRowAtIndexPath:indexPath];
+    
+    BOOL displayTimestamp = YES;
+    if ([self.delegate respondsToSelector:@selector(shouldDisplayTimestampForRowAtIndexPath:)]) {
+        displayTimestamp = [self.delegate shouldDisplayTimestampForRowAtIndexPath:indexPath];
+    }
+    
+    return [XHMessageTableViewCell calculateCellHeightWithMessage:message displaysTimestamp:displayTimestamp];
 }
 
 #pragma mark - Key-value observing

@@ -15,7 +15,7 @@ typedef void(^KeyboardDidShowBlock)(void);
 typedef void(^KeyboardDidScrollToPointBlock)(CGPoint point);
 typedef void(^KeyboardWillSnapBackToPointBlock)(CGPoint point);
 
-typedef void(^KeyboardWillChangeBlock)(CGRect keyboardRect, UIViewAnimationOptions options, double duration);
+typedef void(^KeyboardWillChangeBlock)(CGRect keyboardRect, UIViewAnimationOptions options, double duration, BOOL showKeyborad);
 
 
 @interface UIScrollView (XHkeyboardControl)

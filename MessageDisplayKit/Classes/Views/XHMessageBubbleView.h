@@ -8,6 +8,30 @@
 
 #import <UIKit/UIKit.h>
 
+#import "XHMessageDisplayTextView.h"
+#import "XHBubblePhotoImageView.h"
+
+#define kXHMessageBubbleDisplayMaxLine 200
+
 @interface XHMessageBubbleView : UIView
+
+@property (nonatomic, weak, readonly) XHMessageDisplayTextView *messageDisplayTextView;
+@property (nonatomic, weak, readonly) UIImageView *bubbleImageView;
+
+@property (nonatomic, weak, readonly) XHBubblePhotoImageView *bubblePhotoImageView;
+
+
+@property (nonatomic, strong) UIFont *font UI_APPEARANCE_SELECTOR;
+
+@property (nonatomic, strong, readonly)  id <XHMessageModel> message;
+
+- (instancetype)initWithFrame:(CGRect)frame
+                      message:(id <XHMessageModel>)message;
+
+- (CGRect)bubbleFrame;
+
+- (void)configureCellWithMessage:(id <XHMessageModel>)message;
+
++ (CGFloat)calculateCellHeightWithMessage:(id <XHMessageModel>)message;
 
 @end
