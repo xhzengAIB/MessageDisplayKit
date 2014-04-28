@@ -11,6 +11,8 @@
 
 #import "XHMacro.h"
 
+#import "XHFoundationCommon.h"
+
 #import "UIImage+XHRounded.h"
 #import "NSString+MessageInputView.h"
 #import "UIScrollView+XHkeyboardControl.h"

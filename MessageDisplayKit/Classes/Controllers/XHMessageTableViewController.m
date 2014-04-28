@@ -176,12 +176,13 @@
     _isUserScrolling = NO;
     
     // 初始化message tableView
-	XHMessageTableView *messageTableView = [[XHMessageTableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
+	XHMessageTableView *messageTableView = [[XHMessageTableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
 	messageTableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 	messageTableView.dataSource = self;
 	messageTableView.delegate = self;
     messageTableView.separatorColor = [UIColor clearColor];
     messageTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    [messageTableView addObserver:self forKeyPath:@"frame" options:NSKeyValueObservingOptionNew context:NULL];
 	[self.view addSubview:messageTableView];
     [self.view sendSubviewToBack:messageTableView];
 	_messageTableView = messageTableView;
