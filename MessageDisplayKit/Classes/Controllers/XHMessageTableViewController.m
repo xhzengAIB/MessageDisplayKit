@@ -280,7 +280,7 @@
     // KVO 检查contentSize
     [self.messageInputView.inputTextView addObserver:self
                                      forKeyPath:@"contentSize"
-                                        options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld
+                                        options:NSKeyValueObservingOptionNew
                                         context:nil];
     // 滚动到底部
     [self scrollToBottomAnimated:NO];
