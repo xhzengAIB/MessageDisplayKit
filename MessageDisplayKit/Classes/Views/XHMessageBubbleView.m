@@ -16,7 +16,7 @@
 
 @interface XHMessageBubbleView ()
 
-@property (nonatomic, weak, readwrite) UITextView *messageDisplayTextView;
+@property (nonatomic, weak, readwrite) XHMessageDisplayTextView *messageDisplayTextView;
 @property (nonatomic, weak, readwrite) UIImageView *bubbleImageView;
 
 @property (nonatomic, weak, readwrite) XHBubblePhotoImageView *bubblePhotoImageView;
@@ -190,10 +190,11 @@
         }
         
         if (!_messageDisplayTextView) {
-            UITextView *messageDisplayTextView = [[UITextView alloc] initWithFrame:CGRectZero];
+            XHMessageDisplayTextView *messageDisplayTextView = [[XHMessageDisplayTextView alloc] initWithFrame:CGRectZero];
             messageDisplayTextView.font = [UIFont systemFontOfSize:16.0f];
             messageDisplayTextView.textColor = [UIColor blackColor];
             messageDisplayTextView.editable = NO;
+            messageDisplayTextView.selectable = NO;
             messageDisplayTextView.userInteractionEnabled = YES;
             messageDisplayTextView.showsHorizontalScrollIndicator = NO;
             messageDisplayTextView.showsVerticalScrollIndicator = NO;

@@ -7,13 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+
+#import "XHMessageDisplayTextView.h"
 #import "XHBubblePhotoImageView.h"
 
 #define kXHMessageBubbleDisplayMaxLine 200
 
 @interface XHMessageBubbleView : UIView
 
-@property (nonatomic, weak, readonly) UITextView *messageDisplayTextView;
+@property (nonatomic, weak, readonly) XHMessageDisplayTextView *messageDisplayTextView;
 @property (nonatomic, weak, readonly) UIImageView *bubbleImageView;
 
 @property (nonatomic, weak, readonly) XHBubblePhotoImageView *bubblePhotoImageView;
