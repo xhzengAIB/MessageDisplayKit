@@ -25,7 +25,7 @@ typedef NS_ENUM(NSInteger, XHMessageInputViewStyle) {
 - (void)didSendMessageWithText:(NSString *)text;
 - (void)didSendMessageWithPhoto:(UIImage *)photo;
 - (void)didSendMessageWithVideo:(NSString *)videoPath;
-- (void)didSendMessageWithVioce:(NSString *)viocePath;
+- (void)didSendMessageWithvoice:(NSString *)voicePath;
 
 @end
 

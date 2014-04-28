@@ -23,8 +23,8 @@
 - (NSString *)videoPath;
 - (NSString *)videoUrl;
 
-- (NSString *)viocePath;
-- (NSString *)vioceUrl;
+- (NSString *)voicePath;
+- (NSString *)voiceUrl;
 
 - (UIImage *)avator;
 - (NSString *)avatorUrl;

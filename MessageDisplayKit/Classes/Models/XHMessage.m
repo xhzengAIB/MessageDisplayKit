@@ -88,26 +88,26 @@
 /**
  *  初始化语音类型的消息
  *
- *  @param viocePath 目标语音的本地路径
- *  @param vioceUrl  目标语音在服务器的地址
+ *  @param voicePath 目标语音的本地路径
+ *  @param voiceUrl  目标语音在服务器的地址
  *  @param sender    发送者
  *  @param date      发送时间
  *
  *  @return 返回Message model 对象
  */
-- (instancetype)initWithViocePath:(NSString *)viocePath
-                         vioceUrl:(NSString *)vioceUrl
+- (instancetype)initWithvoicePath:(NSString *)voicePath
+                         voiceUrl:(NSString *)voiceUrl
                            sender:(NSString *)sender
                              date:(NSDate *)date {
     self = [super init];
     if (self) {
-        self.viocePath = viocePath;
-        self.videoUrl = vioceUrl;
+        self.voicePath = voicePath;
+        self.videoUrl = voiceUrl;
         
         self.sender = sender;
         self.date = date;
         
-        self.messageMediaType = XHBubbleMessageVioce;
+        self.messageMediaType = XHBubbleMessagevoice;
     }
     return self;
 }
@@ -123,8 +123,8 @@
     _videoPath = nil;
     _videoUrl = nil;
     
-    _viocePath = nil;
-    _vioceUrl = nil;
+    _voicePath = nil;
+    _voiceUrl = nil;
     
     _avator = nil;
     _avatorUrl = nil;
@@ -149,8 +149,8 @@
         _videoPath = [aDecoder decodeObjectForKey:@"videoPath"];
         _videoUrl = [aDecoder decodeObjectForKey:@"videoUrl"];
         
-        _viocePath = [aDecoder decodeObjectForKey:@"viocePath"];
-        _vioceUrl = [aDecoder decodeObjectForKey:@"vioceUrl"];
+        _voicePath = [aDecoder decodeObjectForKey:@"voicePath"];
+        _voiceUrl = [aDecoder decodeObjectForKey:@"voiceUrl"];
         
         _avator = [aDecoder decodeObjectForKey:@"avator"];
         _avatorUrl = [aDecoder decodeObjectForKey:@"avatorUrl"];
@@ -172,8 +172,8 @@
     [aCoder encodeObject:self.videoPath forKey:@"videoPath"];
     [aCoder encodeObject:self.videoUrl forKey:@"videoUrl"];
     
-    [aCoder encodeObject:self.viocePath forKey:@"viocePath"];
-    [aCoder encodeObject:self.vioceUrl forKey:@"vioceUrl"];
+    [aCoder encodeObject:self.voicePath forKey:@"voicePath"];
+    [aCoder encodeObject:self.voiceUrl forKey:@"voiceUrl"];
     
     [aCoder encodeObject:self.avator forKey:@"avator"];
     [aCoder encodeObject:self.avatorUrl forKey:@"avatorUrl"];
@@ -202,9 +202,9 @@
                                                                       videoUrl:[self.videoUrl copy]
                                                                         sender:[self.sender copy]
                                                                           date:[self.date copy]];
-        case XHBubbleMessageVioce:
-            return [[[self class] allocWithZone:zone] initWithViocePath:[self.viocePath copy]
-                                                                     vioceUrl:[self.vioceUrl copy]
+        case XHBubbleMessagevoice:
+            return [[[self class] allocWithZone:zone] initWithvoicePath:[self.voicePath copy]
+                                                                     voiceUrl:[self.voiceUrl copy]
                                                                         sender:[self.sender copy]
                                                                           date:[self.date copy]];
         default:

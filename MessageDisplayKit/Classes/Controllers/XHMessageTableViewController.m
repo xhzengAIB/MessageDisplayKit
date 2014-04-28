@@ -96,8 +96,31 @@
 
 #pragma mark - Messages view controller
 
-- (void)finishSendMessage {
-    [self.messageInputView.inputTextView setText:nil];
+- (void)finishSendMessageWithBubbleMessageType:(XHBubbleMessageMediaType)mediaType {
+    switch (mediaType) {
+        case XHBubbleMessageText: {
+            [self.messageInputView.inputTextView setText:nil];
+            if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
+                self.messageInputView.inputTextView.enablesReturnKeyAutomatically = NO;
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    self.messageInputView.inputTextView.enablesReturnKeyAutomatically = YES;
+                    [self.messageInputView.inputTextView reloadInputViews];
+                });
+            }
+            break;
+        }
+        case XHBubbleMessagePhoto: {
+            break;
+        }
+        case XHBubbleMessageVideo: {
+            break;
+        }
+        case XHBubbleMessagevoice: {
+            break;
+        }
+        default:
+            break;
+    }
 }
 
 - (void)setBackgroundColor:(UIColor *)color {
@@ -473,10 +496,10 @@
     }
 }
 
-- (void)didSendMessageWithVioce:(NSString *)viocePath {
-    DLog(@"send viocePath : %@", viocePath);
-    if ([self.delegate respondsToSelector:@selector(didSendVioce:fromSender:onDate:)]) {
-        [self.delegate didSendVioce:viocePath fromSender:self.messageSender onDate:[NSDate date]];
+- (void)didSendMessageWithvoice:(NSString *)voicePath {
+    DLog(@"send voicePath : %@", voicePath);
+    if ([self.delegate respondsToSelector:@selector(didSendvoice:fromSender:onDate:)]) {
+        [self.delegate didSendvoice:voicePath fromSender:self.messageSender onDate:[NSDate date]];
     }
 }
 
@@ -509,7 +532,7 @@
     // subClass
 }
 
-- (void)didSendVioce:(NSString *)viocePath fromSender:(NSString *)sender onDate:(NSDate *)date {
+- (void)didSendvoice:(NSString *)voicePath fromSender:(NSString *)sender onDate:(NSDate *)date {
     // subClass
 }
 

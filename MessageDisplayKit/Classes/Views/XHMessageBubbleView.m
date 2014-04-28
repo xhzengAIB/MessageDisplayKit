@@ -96,7 +96,7 @@
             bubbleSize = [XHMessageBubbleView neededSizeForPhoto:message.videoConverPhoto];
             break;
         }
-        case XHBubbleMessageVioce: {
+        case XHBubbleMessagevoice: {
             bubbleSize = CGSizeMake(100, [XHMessageInputView textViewLineHeight]);
             break;
         }
@@ -143,7 +143,7 @@
 
 - (void)configureBubbleImageView:(id <XHMessageModel>)message {
     XHBubbleMessageMediaType currentType = message.messageMediaType;
-    if (currentType == XHBubbleMessageText || currentType == XHBubbleMessageVioce) {
+    if (currentType == XHBubbleMessageText || currentType == XHBubbleMessagevoice) {
         _bubbleImageView.image = [XHMessageBubbleFactory bubbleImageViewForType:message.bubbleMessageType style:XHBubbleImageViewStyleWeChat meidaType:message.messageMediaType];
         _bubbleImageView.hidden = NO;
         
@@ -174,7 +174,7 @@
         case XHBubbleMessageVideo:
             _bubblePhotoImageView.messagePhoto = message.videoConverPhoto;
             break;
-        case XHBubbleMessageVioce:
+        case XHBubbleMessagevoice:
             break;
         default:
             break;
@@ -251,7 +251,7 @@
     
     switch (currentType) {
         case XHBubbleMessageText:
-        case XHBubbleMessageVioce: {
+        case XHBubbleMessagevoice: {
             self.bubbleImageView.frame = bubbleFrame;
             
             CGFloat textX = self.bubbleImageView.frame.origin.x;
