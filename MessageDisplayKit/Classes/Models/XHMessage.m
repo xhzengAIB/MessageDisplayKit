@@ -139,7 +139,21 @@
 - (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super init];
     if (self) {
+        _text = [aDecoder decodeObjectForKey:@"text"];
         
+        _photo = [aDecoder decodeObjectForKey:@"photo"];
+        _thumbnailUrl = [aDecoder decodeObjectForKey:@"thumbnailUrl"];
+        _originPhotoUrl = [aDecoder decodeObjectForKey:@"originPhotoUrl"];
+        
+        _videoConverPhoto = [aDecoder decodeObjectForKey:@"videoConverPhoto"];
+        _videoPath = [aDecoder decodeObjectForKey:@"videoPath"];
+        _videoUrl = [aDecoder decodeObjectForKey:@"videoUrl"];
+        
+        _viocePath = [aDecoder decodeObjectForKey:@"viocePath"];
+        _vioceUrl = [aDecoder decodeObjectForKey:@"vioceUrl"];
+        
+        _avator = [aDecoder decodeObjectForKey:@"avator"];
+        _avatorUrl = [aDecoder decodeObjectForKey:@"avatorUrl"];
         
         _sender = [aDecoder decodeObjectForKey:@"sender"];
         _date = [aDecoder decodeObjectForKey:@"date"];
@@ -148,6 +162,22 @@
 }
 
 - (void)encodeWithCoder:(NSCoder *)aCoder {
+    [aCoder encodeObject:self.text forKey:@"text"];
+    
+    [aCoder encodeObject:self.photo forKey:@"photo"];
+    [aCoder encodeObject:self.thumbnailUrl forKey:@"thumbnailUrl"];
+    [aCoder encodeObject:self.originPhotoUrl forKey:@"originPhotoUrl"];
+    
+    [aCoder encodeObject:self.videoConverPhoto forKey:@"videoConverPhoto"];
+    [aCoder encodeObject:self.videoPath forKey:@"videoPath"];
+    [aCoder encodeObject:self.videoUrl forKey:@"videoUrl"];
+    
+    [aCoder encodeObject:self.viocePath forKey:@"viocePath"];
+    [aCoder encodeObject:self.vioceUrl forKey:@"vioceUrl"];
+    
+    [aCoder encodeObject:self.avator forKey:@"avator"];
+    [aCoder encodeObject:self.avatorUrl forKey:@"avatorUrl"];
+    
     [aCoder encodeObject:self.sender forKey:@"sender"];
     [aCoder encodeObject:self.date forKey:@"date"];
 }
@@ -155,9 +185,31 @@
 #pragma mark - NSCopying
 
 - (id)copyWithZone:(NSZone *)zone {
-    return [[[self class] allocWithZone:zone] initWithText:[self.text copy]
-                                                    sender:[self.sender copy]
-                                                      date:[self.date copy]];
+    switch (self.messageMediaType) {
+        case XHBubbleMessageText:
+            return [[[self class] allocWithZone:zone] initWithText:[self.text copy]
+                                                            sender:[self.sender copy]
+                                                              date:[self.date copy]];
+        case XHBubbleMessagePhoto:
+            return [[[self class] allocWithZone:zone] initWithPhoto:[self.photo copy]
+                                                       thumbnailUrl:[self.thumbnailUrl copy]
+                                                     originPhotoUrl:[self.originPhotoUrl copy]
+                                                             sender:[self.sender copy]
+                                                               date:[self.date copy]];
+        case XHBubbleMessageVideo:
+            return [[[self class] allocWithZone:zone] initWithVideoConverPhoto:[self.videoConverPhoto copy]
+                                                                     videoPath:[self.videoPath copy]
+                                                                      videoUrl:[self.videoUrl copy]
+                                                                        sender:[self.sender copy]
+                                                                          date:[self.date copy]];
+        case XHBubbleMessageVioce:
+            return [[[self class] allocWithZone:zone] initWithViocePath:[self.viocePath copy]
+                                                                     vioceUrl:[self.vioceUrl copy]
+                                                                        sender:[self.sender copy]
+                                                                          date:[self.date copy]];
+        default:
+            return nil;
+    }
 }
 
 @end
