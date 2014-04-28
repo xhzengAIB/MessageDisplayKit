@@ -53,9 +53,12 @@
 
 #pragma mark - layout subViews UI
 
-- (UIButton *)createButtonWithImage:(UIImage *)image {
+- (UIButton *)createButtonWithImage:(UIImage *)image HLImage:(UIImage *)hlImage {
     UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, [XHMessageInputView textViewLineHeight], [XHMessageInputView textViewLineHeight])];
-    [button setBackgroundImage:image forState:UIControlStateNormal];
+    if (image)
+        [button setBackgroundImage:image forState:UIControlStateNormal];
+    if (hlImage)
+        [button setBackgroundImage:hlImage forState:UIControlStateHighlighted];
     
     return button;
 }
@@ -70,7 +73,7 @@
     CGFloat horizontalPadding = 8;
     
     // 垂直间隔
-    CGFloat verticalPadding = 3;
+    CGFloat verticalPadding = 5;
     
     // 输入框
     CGFloat textViewLeftMargin = ((style == XHMessageInputViewStyleFlat) ? 6.0 : 4.0);
@@ -83,7 +86,7 @@
     
     // 允许发送语音
     if (self.allowsSendVoice) {
-        button = [self createButtonWithImage:[UIImage imageNamed:@"voice"]];
+        button = [self createButtonWithImage:[UIImage imageNamed:@"voice"] HLImage:[UIImage imageNamed:@"voice_HL"]];
         [button addTarget:self action:@selector(messageStyleButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
         button.tag = 0;
         [button setImage:[UIImage imageNamed:@"keyborad"] forState:UIControlStateSelected];
@@ -99,7 +102,7 @@
     
     // 允许发送多媒体消息，为什么不是先放表情按钮呢？因为布局的需要！
     if (self.allowsSendMultiMedia) {
-        button = [self createButtonWithImage:[UIImage imageNamed:@"multiMedia"]];
+        button = [self createButtonWithImage:[UIImage imageNamed:@"multiMedia"] HLImage:[UIImage imageNamed:@"multiMedia_HL"]];
         [button addTarget:self action:@selector(messageStyleButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
         button.tag = 2;
         buttonFrame = button.frame;
@@ -113,7 +116,7 @@
     
     // 允许发送表情
     if (self.allowsSendFace) {
-        button = [self createButtonWithImage:[UIImage imageNamed:@"face"]];
+        button = [self createButtonWithImage:[UIImage imageNamed:@"face"] HLImage:[UIImage imageNamed:@"face_HL"]];
         [button addTarget:self action:@selector(messageStyleButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
         button.tag = 1;
         buttonFrame = button.frame;
@@ -183,7 +186,7 @@
     
     // 如果是可以发送语言的，那就需要一个按钮录音的按钮，事件可以在外部添加
     if (self.allowsSendVoice) {
-        button = [self createButtonWithImage:[UIImage imageNamed:@"holdDownButton"]];
+        button = [self createButtonWithImage:[UIImage imageNamed:@"holdDownButton"] HLImage:nil];
         buttonFrame = _inputTextView.frame;
         button.frame = buttonFrame;
         button.alpha = self.voiceChangeButton.selected;

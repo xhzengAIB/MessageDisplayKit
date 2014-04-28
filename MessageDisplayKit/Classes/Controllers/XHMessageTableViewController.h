@@ -130,6 +130,11 @@
  */
 - (void)setBackgroundColor:(UIColor *)color;
 
+/**
+ *  设置消息列表的背景图片
+ *
+ *  @param backgroundImage 目标背景图片
+ */
 - (void)setBackgroundImage:(UIImage *)backgroundImage;
 
 /**
