@@ -10,7 +10,7 @@
 
 @interface XHBubblePhotoImageView ()
 
-@property (nonatomic, assign) BOOL rightArrow;
+@property (nonatomic, assign) XHBubbleMessageType bubbleMessageType;
 
 @end
 
@@ -21,13 +21,16 @@
     [self setNeedsDisplay];
 }
 
-- (id)initWithFrame:(CGRect)frame messagePhoto:(UIImage *)messagePhoto rightArrow:(BOOL)rightArrow {
+- (void)configureMessagePhoto:(UIImage *)messagePhoto onBubbleMessageType:(XHBubbleMessageType)bubbleMessageType {
+    self.bubbleMessageType = bubbleMessageType;
+    self.messagePhoto = messagePhoto;
+}
+
+- (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
         self.backgroundColor = [UIColor clearColor];
-        self.messagePhoto = messagePhoto;
-        self.rightArrow = rightArrow;
     }
     return self;
 }
@@ -70,7 +73,7 @@
     CGContextAddLineToPoint(context, width, margin+radius);
     CGContextAddLineToPoint(context, width, height-margin-radius);
     CGContextAddLineToPoint(context, width-margin, height-margin-radius);
-    if (self.rightArrow) {
+    if (self.bubbleMessageType == XHBubbleMessageTypeSending) {
         //绘制右边三角形
         CGContextAddLineToPoint(context,width-margin , margin+radius+triangleMarginTop+triangleSize);
         CGContextAddLineToPoint(context,width , margin+radius+triangleMarginTop+triangleSize*0.5);
@@ -105,7 +108,7 @@
     CGContextAddLineToPoint(context, 0, radius + margin);
     CGContextAddLineToPoint(context, margin, radius + margin);
     
-    if (!self.rightArrow) {
+    if (!self.bubbleMessageType == XHBubbleMessageTypeSending) {
         //绘制左边三角形
         CGContextAddLineToPoint(context, margin , margin + radius + triangleMarginTop);
         CGContextAddLineToPoint(context,0 , margin + radius + triangleMarginTop + triangleSize * 0.5);

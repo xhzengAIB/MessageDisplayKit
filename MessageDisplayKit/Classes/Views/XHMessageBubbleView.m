@@ -147,10 +147,11 @@
 }
 
 - (void)configureBubbleImageView:(id <XHMessageModel>)message {
-    if (message.bubbleMessageType == XHBubbleMessageText) {
+    if (message.messageMediaType == XHBubbleMessageText) {
         _bubbleImageView.image = [XHMessageBubbleFactory bubbleImageViewForType:message.bubbleMessageType style:XHBubbleImageViewStyleWeChat meidaType:message.messageMediaType];
+        _bubbleImageView.hidden = NO;
     } else {
-        _bubbleImageView.image = nil;
+        _bubbleImageView.hidden = YES;
     }
 }
 
@@ -160,7 +161,7 @@
             _messageDisplayTextView.text = message.text;
             break;
         case XHBubbleMessagePhoto:
-            _bubblePhotoImageView.messagePhoto = message.photo;
+            [_bubblePhotoImageView configureMessagePhoto:message.photo onBubbleMessageType:self.message.bubbleMessageType];
             break;
         case XHBubbleMessageVideo:
             _bubblePhotoImageView.messagePhoto = message.videoConverPhoto;
@@ -194,7 +195,8 @@
             messageDisplayTextView.font = [UIFont systemFontOfSize:16.0f];
             messageDisplayTextView.textColor = [UIColor blackColor];
             messageDisplayTextView.editable = NO;
-            messageDisplayTextView.selectable = NO;
+            if ([messageDisplayTextView respondsToSelector:@selector(setSelectable:)])
+                messageDisplayTextView.selectable = NO;
             messageDisplayTextView.userInteractionEnabled = YES;
             messageDisplayTextView.showsHorizontalScrollIndicator = NO;
             messageDisplayTextView.showsVerticalScrollIndicator = NO;
@@ -213,7 +215,7 @@
         }
         
         if (!_bubblePhotoImageView) {
-            XHBubblePhotoImageView *bubblePhotoImageView = [[XHBubblePhotoImageView alloc] initWithFrame:CGRectZero messagePhoto:nil rightArrow:(message.bubbleMessageType == XHBubbleMessageTypeSending ? YES : NO)];
+            XHBubblePhotoImageView *bubblePhotoImageView = [[XHBubblePhotoImageView alloc] initWithFrame:CGRectZero];
             [self addSubview:bubblePhotoImageView];
             _bubblePhotoImageView = bubblePhotoImageView;
         }

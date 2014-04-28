@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface XHBubblePhotoImageView : UIView
 
 @property (nonatomic, strong) UIImage *messagePhoto;
 
-- (id)initWithFrame:(CGRect)frame messagePhoto:(UIImage *)messagePhoto rightArrow:(BOOL)rightArrow;
+- (void)configureMessagePhoto:(UIImage *)messagePhoto onBubbleMessageType:(XHBubbleMessageType)bubbleMessageType;
 
 @end
