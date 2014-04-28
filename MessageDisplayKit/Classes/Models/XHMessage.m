@@ -113,7 +113,25 @@
 }
 
 - (void)dealloc {
+    _text = nil;
     
+    _photo = nil;
+    _thumbnailUrl = nil;
+    _originPhotoUrl = nil;
+    
+    _videoConverPhoto = nil;
+    _videoPath = nil;
+    _videoUrl = nil;
+    
+    _viocePath = nil;
+    _vioceUrl = nil;
+    
+    _avator = nil;
+    _avatorUrl = nil;
+    
+    _sender = nil;
+    
+    _date = nil;
 }
 
 #pragma mark - NSCoding

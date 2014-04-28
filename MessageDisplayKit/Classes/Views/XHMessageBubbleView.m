@@ -235,7 +235,11 @@
 }
 
 - (void)dealloc {
-    
+    _bubbleImageView = nil;
+    _bubblePhotoImageView = nil;
+    _animationVoiceImageView = nil;
+    _font = nil;
+    _message = nil;
 }
 
 - (void)layoutSubviews
