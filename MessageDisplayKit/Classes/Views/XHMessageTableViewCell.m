@@ -21,6 +21,9 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
     
 }
 
+@property (nonatomic, strong) UITapGestureRecognizer *sigleTapGestureRecognizer;
+@property (nonatomic, strong) UITapGestureRecognizer *doubleTapGestureRecognizer;
+
 @property (nonatomic, weak, readwrite) XHMessageBubbleView *messageBubbleView;
 
 @property (nonatomic, weak, readwrite) UIButton *avatorButton;
@@ -32,6 +35,29 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
 @end
 
 @implementation XHMessageTableViewCell
+
+#pragma Propertys
+
+- (UITapGestureRecognizer *)sigleTapGestureRecognizer {
+    if (!_sigleTapGestureRecognizer) {
+        _sigleTapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(sigleTapGestureRecognizerHandle:)];
+    }
+    return _sigleTapGestureRecognizer;
+}
+
+- (UITapGestureRecognizer *)doubleTapGestureRecognizer {
+    if (!_doubleTapGestureRecognizer) {
+        _doubleTapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doubleTapGestureRecognizerHandle:)];
+    }
+    return _doubleTapGestureRecognizer;
+}
+
+
+- (void)avatorButtonClicked:(UIButton *)sender {
+    if ([self.delegate respondsToSelector:@selector(didSelectedAvatorAtIndexPath:)]) {
+        [self.delegate didSelectedAvatorAtIndexPath:self.indexPath];
+    }
+}
 
 #pragma mark - Copying
 
@@ -100,6 +126,22 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
     }
 }
 
+- (void)sigleTapGestureRecognizerHandle:(UITapGestureRecognizer *)tapGestureRecognizer {
+    if (tapGestureRecognizer.state == UIGestureRecognizerStateEnded) {
+        if ([self.delegate respondsToSelector:@selector(multiMediaMessageDidSelectedOnMessage:atIndexPath:)]) {
+            [self.delegate multiMediaMessageDidSelectedOnMessage:self.messageBubbleView.message atIndexPath:self.indexPath];
+        }
+    }
+}
+
+- (void)doubleTapGestureRecognizerHandle:(UITapGestureRecognizer *)tapGestureRecognizer {
+    if (tapGestureRecognizer.state == UIGestureRecognizerStateEnded) {
+        if ([self.delegate respondsToSelector:@selector(didDoubleSelectedOnTextMessage:atIndexPath:)]) {
+            [self.delegate didDoubleSelectedOnTextMessage:self.messageBubbleView.message atIndexPath:self.indexPath];
+        }
+    }
+}
+
 #pragma mark - Notifications
 
 - (void)handleMenuWillHideNotification:(NSNotification *)notification {
@@ -140,8 +182,8 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
     [self addGestureRecognizer:recognizer];
     
     
-    UITapGestureRecognizer *tabpGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGestureRecognizerHandle:)];
-    [self addGestureRecognizer:tabpGestureRecognizer];
+    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGestureRecognizerHandle:)];
+    [self addGestureRecognizer:tapGestureRecognizer];
 }
 
 - (XHBubbleMessageType)bubbleMessageType {
@@ -188,6 +230,7 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
         
         UIButton *avatorButton = [[UIButton alloc] initWithFrame:avatorButtonFrame];
         [avatorButton setImage:[XHMessageAvatorFactory avatarImageNamed:[UIImage imageNamed:@"meIcon"] messageAvatorType:XHMessageAvatorCircle] forState:UIControlStateNormal];
+        [avatorButton addTarget:self action:@selector(avatorButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
         [self.contentView addSubview:avatorButton];
         self.avatorButton = avatorButton;
         
@@ -239,6 +282,35 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
 }
 
 - (void)configureMessageBubbleViewWithMessage:(id <XHMessageModel>)message {
+    XHBubbleMessageMediaType currentMediaType = message.messageMediaType;
+    for (UIGestureRecognizer *gesTureRecognizer in self.messageBubbleView.bubbleImageView.gestureRecognizers) {
+        [self.messageBubbleView.bubbleImageView removeGestureRecognizer:gesTureRecognizer];
+    }
+    for (UIGestureRecognizer *gesTureRecognizer in self.messageBubbleView.bubblePhotoImageView.gestureRecognizers) {
+        [self.messageBubbleView.bubblePhotoImageView removeGestureRecognizer:gesTureRecognizer];
+    }
+    switch (currentMediaType) {
+        case XHBubbleMessagePhoto:
+        case XHBubbleMessageVideo: {
+            UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(sigleTapGestureRecognizerHandle:)];
+            [self.messageBubbleView.bubblePhotoImageView addGestureRecognizer:tapGestureRecognizer];
+            break;
+        }
+        case XHBubbleMessageText:
+        case XHBubbleMessagevoice: {
+            UITapGestureRecognizer *tapGestureRecognizer;
+            if (currentMediaType == XHBubbleMessageText) {
+                tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doubleTapGestureRecognizerHandle:)];
+            } else {
+                tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(sigleTapGestureRecognizerHandle:)];
+            }
+            tapGestureRecognizer.numberOfTapsRequired = (currentMediaType == XHBubbleMessageText ? 2 : 1);
+            [self.messageBubbleView.bubbleImageView addGestureRecognizer:tapGestureRecognizer];
+            break;
+        }
+        default:
+            break;
+    }
     [self.messageBubbleView configureCellWithMessage:message];
 }
 

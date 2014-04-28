@@ -24,6 +24,27 @@ typedef NS_ENUM(NSInteger, XHBubbleMessageMediaType) {
     XHBubbleMessagevoice = 3,
 };
 
+typedef NS_ENUM(NSInteger, XHBubbleMessageMenuSelecteType) {
+    XHBubbleMessageTextCopy = 0,
+    XHBubbleMessageTextTranspond = 1,
+    XHBubbleMessageTextFavorites = 2,
+    XHBubbleMessageTextMore = 3,
+    
+    XHBubbleMessagePhotoCopy = 4,
+    XHBubbleMessagePhotoTranspond = 5,
+    XHBubbleMessagePhotoFavorites = 6,
+    XHBubbleMessagePhotoMore = 7,
+    
+    XHBubbleMessageVideoTranspond = 8,
+    XHBubbleMessageVideoFavorites = 9,
+    XHBubbleMessageVideoMore = 10,
+    
+    XHBubbleMessageVoicePlay = 11,
+    XHBubbleMessageVoiceFavorites = 12,
+    XHBubbleMessageVoiceTurnToText = 13,
+    XHBubbleMessageVoiceMore = 14,
+};
+
 @interface XHMessageBubbleFactory : NSObject
 
 + (UIImage *)bubbleImageViewForType:(XHBubbleMessageType)type

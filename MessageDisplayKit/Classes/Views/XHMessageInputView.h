@@ -22,10 +22,39 @@ typedef NS_ENUM(NSInteger, XHMessageInputViewStyle) {
 - (void)inputTextViewDidBeginEditing:(XHMessageTextView *)messageInputTextView;
 
 @optional
+/**
+ *  发送文本消息，包括系统的表情
+ *
+ *  @param text 目标文本消息
+ */
 - (void)didSendMessageWithText:(NSString *)text;
-- (void)didSendMessageWithPhoto:(UIImage *)photo;
-- (void)didSendMessageWithVideo:(NSString *)videoPath;
-- (void)didSendMessageWithvoice:(NSString *)voicePath;
+
+/**
+ *  点击+号按钮Action
+ */
+- (void)didSelectedMultipleMediaAction;
+
+
+/**
+ *  按下录音按钮开始录音
+ */
+- (void)didStartRecordingVoice;
+/**
+ *  手指向上滑动取消录音
+ */
+- (void)didCancelRecordingVoice;
+/**
+ *  松开手指完成录音
+ */
+- (void)didFinishRecoingVoice;
+
+
+/**
+ *  发送第三方表情
+ *
+ *  @param facePath 目标表情的本地路径
+ */
+- (void)didSendFaceMessageWithFacePath:(NSString *)facePath;
 
 @end
 
@@ -58,16 +87,33 @@ typedef NS_ENUM(NSInteger, XHMessageInputViewStyle) {
  */
 @property (nonatomic, assign) BOOL allowsSendFace; // default is YES
 
+/**
+ *  切换文本和语音的按钮
+ */
 @property (nonatomic, weak, readonly) UIButton *voiceChangeButton;
 
+/**
+ *  +号按钮
+ */
 @property (nonatomic, weak, readonly) UIButton *multiMediaSendButton;
 
+/**
+ *  第三方表情按钮
+ */
 @property (nonatomic, weak, readonly) UIButton *faceSendButton;
 
-@property (nonatomic, weak, readonly) UIButton *holdDownButtonButton;
+/**
+ *  语音录制按钮
+ */
+@property (nonatomic, weak, readonly) UIButton *holdDownButton;
 
 #pragma mark - Message input view
 
+/**
+ *  动态改变高度
+ *
+ *  @param changeInHeight 目标变化的高度
+ */
 - (void)adjustTextViewHeightBy:(CGFloat)changeInHeight;
 
 /**

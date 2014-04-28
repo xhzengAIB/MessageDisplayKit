@@ -334,10 +334,10 @@
 		74824555190902DA008EC388 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				74824556190902DA008EC388 /* XHMessageInputView.h */,
-				74824557190902DA008EC388 /* XHMessageInputView.m */,
 				74824558190902DA008EC388 /* XHMessageTableView.h */,
 				74824559190902DA008EC388 /* XHMessageTableView.m */,
+				74824556190902DA008EC388 /* XHMessageInputView.h */,
+				74824557190902DA008EC388 /* XHMessageInputView.m */,
 				7482455A190902DA008EC388 /* XHMessageTextView.h */,
 				7482455B190902DA008EC388 /* XHMessageTextView.m */,
 				748245611909060E008EC388 /* XHMessageTableViewCell.h */,

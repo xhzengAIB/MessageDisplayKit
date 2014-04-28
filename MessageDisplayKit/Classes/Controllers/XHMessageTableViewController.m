@@ -468,19 +468,7 @@
     return YES;
 }
 
-#pragma mark - XHMessageInputView Delegate
-
-- (void)inputTextViewDidBeginEditing:(XHMessageTextView *)messageInputTextView {
-    if (!self.previousTextViewContentHeight)
-		self.previousTextViewContentHeight = [self getTextViewContentH:messageInputTextView];
-}
-
-- (void)didSendMessageWithText:(NSString *)text {
-    DLog(@"text : %@", text);
-    if ([self.delegate respondsToSelector:@selector(didSendText:fromSender:onDate:)]) {
-        [self.delegate didSendText:text fromSender:self.messageSender onDate:[NSDate date]];
-    }
-}
+#pragma mark - XHMessage Send helper Method
 
 - (void)didSendMessageWithPhoto:(UIImage *)photo {
     DLog(@"send photo : %@", photo);
@@ -501,6 +489,70 @@
     if ([self.delegate respondsToSelector:@selector(didSendvoice:fromSender:onDate:)]) {
         [self.delegate didSendvoice:voicePath fromSender:self.messageSender onDate:[NSDate date]];
     }
+}
+
+#pragma mark - XHMessageInputView Delegate
+
+- (void)inputTextViewDidBeginEditing:(XHMessageTextView *)messageInputTextView {
+    if (!self.previousTextViewContentHeight)
+		self.previousTextViewContentHeight = [self getTextViewContentH:messageInputTextView];
+}
+
+- (void)didSendMessageWithText:(NSString *)text {
+    DLog(@"text : %@", text);
+    if ([self.delegate respondsToSelector:@selector(didSendText:fromSender:onDate:)]) {
+        [self.delegate didSendText:text fromSender:self.messageSender onDate:[NSDate date]];
+    }
+}
+
+- (void)didSelectedMultipleMediaAction {
+    DLog(@"didSelectedMultipleMediaAction");
+}
+
+- (void)didSendFaceMessageWithFacePath:(NSString *)facePath {
+    DLog(@"facePath : %@", facePath);
+}
+
+- (void)didStartRecordingVoice {
+    DLog(@"didStartRecordingVoice");
+}
+
+- (void)didCancelRecordingVoice {
+    DLog(@"didCancelRecordingVoice");
+}
+
+- (void)didFinishRecoingVoice {
+    DLog(@"didFinishRecoingVoice");
+}
+
+#pragma mark - XHMessageTableViewCell delegate
+
+- (void)multiMediaMessageDidSelectedOnMessage:(id<XHMessageModel>)message atIndexPath:(NSIndexPath *)indexPath {
+    switch (message.messageMediaType) {
+        case XHBubbleMessagePhoto:
+            DLog(@"message : %@", message.photo);
+            break;
+        case XHBubbleMessageVideo:
+            DLog(@"message : %@", message.videoConverPhoto);
+            break;
+        case XHBubbleMessagevoice:
+            DLog(@"message : %@", message.voicePath);
+            break;
+        default:
+            break;
+    }
+}
+
+- (void)didDoubleSelectedOnTextMessage:(id<XHMessageModel>)message atIndexPath:(NSIndexPath *)indexPath {
+    DLog(@"text : %@", message.text);
+}
+
+- (void)didSelectedAvatorAtIndexPath:(NSIndexPath *)indexPath {
+    DLog(@"indexPath : %@", indexPath);
+}
+
+- (void)menuDidSelectedAtBubbleMessageMenuSelecteType:(XHBubbleMessageMenuSelecteType)bubbleMessageMenuSelecteType {
+    
 }
 
 #pragma mark - Scroll view delegate
@@ -566,8 +618,10 @@
     
     if (!messageTableViewCell) {
         messageTableViewCell = [[XHMessageTableViewCell alloc] initWithMessage:message displaysTimestamp:displayTimestamp reuseIdentifier:cellIdentifier];
+        messageTableViewCell.delegate = self;
     }
     
+    messageTableViewCell.indexPath = indexPath;
     [messageTableViewCell configureCellWithMessage:message displaysTimestamp:displayTimestamp];
     [messageTableViewCell setBackgroundColor:tableView.backgroundColor];
     

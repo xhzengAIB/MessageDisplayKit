@@ -147,18 +147,24 @@
         _bubbleImageView.image = [XHMessageBubbleFactory bubbleImageViewForType:message.bubbleMessageType style:XHBubbleImageViewStyleWeChat meidaType:message.messageMediaType];
         _bubbleImageView.hidden = NO;
         
+        _bubblePhotoImageView.hidden = YES;
+        
         if (currentType == XHBubbleMessageText) {
+            _messageDisplayTextView.hidden = NO;
             _animationVoiceImageView.hidden = YES;
         } else {
+            _messageDisplayTextView.hidden = YES;
             [_animationVoiceImageView removeFromSuperview];
             _animationVoiceImageView = nil;
             
             UIImageView *animationVoiceImageView = [XHMessageVoiceFactory messageVoiceAnimationImageViewWithBubbleMessageType:message.bubbleMessageType];
-            _animationVoiceImageView = animationVoiceImageView;
             [self addSubview:animationVoiceImageView];
+            _animationVoiceImageView = animationVoiceImageView;
             _animationVoiceImageView.hidden = NO;
         }
     } else {
+        _bubblePhotoImageView.hidden = NO;
+        _messageDisplayTextView.hidden = YES;
         _bubbleImageView.hidden = YES;
     }
 }
@@ -195,6 +201,7 @@
             //bubble image
             UIImageView *bubbleImageView = [[UIImageView alloc] init];
             bubbleImageView.frame = self.bounds;
+            bubbleImageView.userInteractionEnabled = YES;
             [self addSubview:bubbleImageView];
             _bubbleImageView = bubbleImageView;
         }

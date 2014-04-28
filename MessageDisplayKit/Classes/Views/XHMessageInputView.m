@@ -18,7 +18,7 @@
 
 @property (nonatomic, weak, readwrite) UIButton *faceSendButton;
 
-@property (nonatomic, weak, readwrite) UIButton *holdDownButtonButton;
+@property (nonatomic, weak, readwrite) UIButton *holdDownButton;
 
 @end
 
@@ -38,18 +38,43 @@
             }
             
             [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-                self.holdDownButtonButton.alpha = sender.selected;
+                self.holdDownButton.alpha = sender.selected;
             } completion:^(BOOL finished) {
                 
             }];
+            
+            break;
         }
+        case 1: {
+            
             break;
-        case 1:
+        }
+        case 2: {
+            if ([self.delegate respondsToSelector:@selector(didSelectedMultipleMediaAction)]) {
+                [self.delegate didSelectedMultipleMediaAction];
+            }
             break;
-        case 2:
-            break;
+        }
         default:
             break;
+    }
+}
+
+- (void)holdDownButtonTouchDown {
+    if ([self.delegate respondsToSelector:@selector(didStartRecordingVoice)]) {
+        [self.delegate didStartRecordingVoice];
+    }
+}
+
+- (void)holdDownButtonTouchUpOutside {
+    if ([self.delegate respondsToSelector:@selector(didCancelRecordingVoice)]) {
+        [self.delegate didCancelRecordingVoice];
+    }
+}
+
+- (void)holdDownButtonTouchUpInside {
+    if ([self.delegate respondsToSelector:@selector(didFinishRecoingVoice)]) {
+        [self.delegate didFinishRecoingVoice];
     }
 }
 
@@ -192,8 +217,11 @@
         buttonFrame = _inputTextView.frame;
         button.frame = buttonFrame;
         button.alpha = self.voiceChangeButton.selected;
+        [button addTarget:self action:@selector(holdDownButtonTouchDown) forControlEvents:UIControlEventTouchDown];
+        [button addTarget:self action:@selector(holdDownButtonTouchUpOutside) forControlEvents:UIControlEventTouchUpOutside];
+        [button addTarget:self action:@selector(holdDownButtonTouchUpInside) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:button];
-        self.holdDownButtonButton = button;
+        self.holdDownButton = button;
     }
 }
 
@@ -234,7 +262,7 @@
     _voiceChangeButton = nil;
     _multiMediaSendButton = nil;
     _faceSendButton = nil;
-    _holdDownButtonButton = nil;
+    _holdDownButton = nil;
 }
 
 - (void)willMoveToSuperview:(UIView *)newSuperview {

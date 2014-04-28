@@ -57,11 +57,6 @@
     [self setNeedsDisplay];
 }
 
-- (void)insertText:(NSString *)text {
-    [super insertText:text];
-    [self setNeedsDisplay];
-}
-
 - (void)setAttributedText:(NSAttributedString *)attributedText {
     [super setAttributedText:attributedText];
     [self setNeedsDisplay];
