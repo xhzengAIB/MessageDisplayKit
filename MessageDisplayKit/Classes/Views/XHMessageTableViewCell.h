@@ -10,6 +10,8 @@
 
 #import "XHMessageBubbleView.h"
 
+@class XHMessageTableViewCell;
+
 @protocol XHMessageTableViewCellDelegate <NSObject>
 
 @optional
@@ -18,8 +20,9 @@
  *
  *  @param message   被操作的目标消息Model
  *  @param indexPath 该目标消息在哪个IndexPath里面
+ *  @param messageTableViewCell 目标消息在该Cell上
  */
-- (void)multiMediaMessageDidSelectedOnMessage:(id <XHMessageModel>)message atIndexPath:(NSIndexPath *)indexPath;
+- (void)multiMediaMessageDidSelectedOnMessage:(id <XHMessageModel>)message atIndexPath:(NSIndexPath *)indexPath onMessageTableViewCell:(XHMessageTableViewCell *)messageTableViewCell;
 
 /**
  *  双击文本消息，触发这个回调

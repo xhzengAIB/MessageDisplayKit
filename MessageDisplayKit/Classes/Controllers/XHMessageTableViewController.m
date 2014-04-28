@@ -529,7 +529,7 @@
 
 #pragma mark - XHMessageTableViewCell delegate
 
-- (void)multiMediaMessageDidSelectedOnMessage:(id<XHMessageModel>)message atIndexPath:(NSIndexPath *)indexPath {
+- (void)multiMediaMessageDidSelectedOnMessage:(id<XHMessageModel>)message atIndexPath:(NSIndexPath *)indexPath onMessageTableViewCell:(XHMessageTableViewCell *)messageTableViewCell {
     switch (message.messageMediaType) {
         case XHBubbleMessagePhoto:
             DLog(@"message : %@", message.photo);
@@ -539,6 +539,8 @@
             break;
         case XHBubbleMessagevoice:
             DLog(@"message : %@", message.voicePath);
+            [messageTableViewCell.messageBubbleView.animationVoiceImageView startAnimating];
+            [messageTableViewCell.messageBubbleView.animationVoiceImageView performSelector:@selector(stopAnimating) withObject:nil afterDelay:10];
             break;
         default:
             break;

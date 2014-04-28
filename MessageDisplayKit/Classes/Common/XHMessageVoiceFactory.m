@@ -30,7 +30,7 @@
     
     messageVoiceAniamtionImageView.image = [UIImage imageNamed:[imageSepatorName stringByAppendingString:@"VoiceNodePlaying"]];
     messageVoiceAniamtionImageView.animationImages = images;
-    messageVoiceAniamtionImageView.animationDuration = 0.5;
+    messageVoiceAniamtionImageView.animationDuration = 1.0;
     [messageVoiceAniamtionImageView stopAnimating];
     
     return messageVoiceAniamtionImageView;
