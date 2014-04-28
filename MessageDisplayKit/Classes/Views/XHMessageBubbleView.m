@@ -19,6 +19,7 @@
 @interface XHMessageBubbleView ()
 
 @property (nonatomic, weak, readwrite) XHMessageDisplayTextView *messageDisplayTextView;
+
 @property (nonatomic, weak, readwrite) UIImageView *bubbleImageView;
 
 @property (nonatomic, weak, readwrite) UIImageView *animationVoiceImageView;

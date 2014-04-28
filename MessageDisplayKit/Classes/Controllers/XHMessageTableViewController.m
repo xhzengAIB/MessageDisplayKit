@@ -223,8 +223,32 @@
                                    self.view.frame.size.width,
                                    inputViewHeight);
     
-    // block回调键盘通知
     WEAKSELF
+    if (self.allowsPanToDismissKeyboard) {
+        // 控制输入工具条的位置块
+        void (^AnimationForMessageInputViewAtPoint)(CGPoint point) = ^(CGPoint point) {
+            CGRect inputViewFrame = weakSelf.messageInputView.frame;
+            CGPoint keyboardOrigin = [weakSelf.view convertPoint:point fromView:nil];
+            inputViewFrame.origin.y = keyboardOrigin.y - inputViewFrame.size.height;
+            weakSelf.messageInputView.frame = inputViewFrame;
+        };
+        
+        self.messageTableView.keyboardDidScrollToPoint = ^(CGPoint point) {
+            AnimationForMessageInputViewAtPoint(point);
+        };
+        
+        self.messageTableView.keyboardWillSnapBackToPoint = ^(CGPoint point) {
+            AnimationForMessageInputViewAtPoint(point);
+        };
+        
+        self.messageTableView.keyboardWillBeDismissed = ^() {
+            CGRect inputViewFrame = weakSelf.messageInputView.frame;
+            inputViewFrame.origin.y = weakSelf.view.bounds.size.height - inputViewFrame.size.height;
+            weakSelf.messageInputView.frame = inputViewFrame;
+        };
+    }
+    
+    // block回调键盘通知
     self.messageTableView.keyboardWillChange = ^(CGRect keyboardRect, UIViewAnimationOptions options, double duration, BOOL showKeyborad){
         [UIView animateWithDuration:duration
                               delay:0.0
@@ -251,28 +275,6 @@
                                  [weakSelf scrollToBottomAnimated:NO];
                          }
                          completion:nil];
-    };
-    
-    // 控制输入工具条的位置块
-    void (^AnimationForMessageInputViewAtPoint)(CGPoint point) = ^(CGPoint point) {
-        CGRect inputViewFrame = weakSelf.messageInputView.frame;
-        CGPoint keyboardOrigin = [weakSelf.view convertPoint:point fromView:nil];
-        inputViewFrame.origin.y = keyboardOrigin.y - inputViewFrame.size.height;
-        weakSelf.messageInputView.frame = inputViewFrame;
-    };
-    
-    self.messageTableView.keyboardDidScrollToPoint = ^(CGPoint point) {
-        AnimationForMessageInputViewAtPoint(point);
-    };
-    
-    self.messageTableView.keyboardWillSnapBackToPoint = ^(CGPoint point) {
-        AnimationForMessageInputViewAtPoint(point);
-    };
-    
-    self.messageTableView.keyboardWillBeDismissed = ^() {
-        CGRect inputViewFrame = weakSelf.messageInputView.frame;
-        inputViewFrame.origin.y = weakSelf.view.bounds.size.height - inputViewFrame.size.height;
-        weakSelf.messageInputView.frame = inputViewFrame;
     };
     
     self.messageTableView.keyboardDidHide = ^() {
