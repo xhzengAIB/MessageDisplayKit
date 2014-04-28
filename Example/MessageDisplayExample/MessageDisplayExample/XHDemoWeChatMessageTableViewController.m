@@ -71,6 +71,7 @@
 
 - (void)didSendText:(NSString *)text fromSender:(NSString *)sender onDate:(NSDate *)date {
     [self addMessage:[[XHMessage alloc] initWithText:text sender:sender date:date]];
+    [self finishSendMessage:XHMessageTypeText];
 }
 
 - (void)didSendPhoto:(UIImage *)photo fromSender:(NSString *)sender onDate:(NSDate *)date {

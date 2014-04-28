@@ -11,6 +11,13 @@
 #import "XHMessageTableView.h"
 #import "XHMessageInputView.h"
 
+typedef enum {
+    XHMessageTypeText   =   0,
+    XHMessageTypePhoto  =   1,
+    XHMessageTypeVideo  =   2,
+    XHMessageTypeVioce  =   3
+} XHMessageType;
+
 
 @protocol XHMessageTableViewControllerDelegate <NSObject>
 
@@ -120,8 +127,10 @@
 #pragma mark - Messages view controller
 /**
  *  完成发送消息的函数
+ *  @param type 发送的消息类型
  */
-- (void)finishSendMessage;
+
+- (void)finishSendMessage:(XHMessageType)type;
 
 /**
  *  设置View、tableView的背景颜色
