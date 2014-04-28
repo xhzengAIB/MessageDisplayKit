@@ -36,6 +36,10 @@
             [messages addObject:message];
             
             [messages addObject:[[XHMessage alloc] initWithText:@"这是华捷微信，为什么模仿这个页面效果呢？希望微信团队能看到我们在努力，请微信团队给个机会，让我好好的努力靠近大神，希望自己也能发亮，好像有点过分的希望了，如果大家喜欢这个开源库，请大家帮帮忙支持这个开源库吧！我是Jack，叫华仔也行，曾宪华就是我啦！Call Me 15915895880" sender:@"曾宪华" date:[NSDate date]]];
+            
+            XHMessage *voiceMessage = [[XHMessage alloc] initWithViocePath:nil vioceUrl:nil sender:@"Jack" date:[NSDate date]];
+            voiceMessage.bubbleMessageType = (i % 2) ? XHBubbleMessageTypeSending : XHBubbleMessageTypeReceiving;
+            [messages addObject:voiceMessage];
         }
         dispatch_async(dispatch_get_main_queue(), ^{
             weakSelf.messages = messages;

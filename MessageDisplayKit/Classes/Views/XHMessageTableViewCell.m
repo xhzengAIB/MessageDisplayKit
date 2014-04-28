@@ -309,6 +309,7 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
 - (void)prepareForReuse {
     // 这里做清除工作
     [super prepareForReuse];
+    self.messageBubbleView.animationVoiceImageView.image = nil;
     self.messageBubbleView.messageDisplayTextView.text = nil;
     self.messageBubbleView.bubblePhotoImageView.messagePhoto = nil;
     self.timestampLabel.text = nil;

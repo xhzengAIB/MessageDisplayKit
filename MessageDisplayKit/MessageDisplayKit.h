@@ -19,6 +19,7 @@
 
 #import "XHMessageAvatorFactory.h"
 #import "XHMessageBubbleFactory.h"
+#import "XHMessageVoiceFactory.h"
 
 #import "XHMessage.h"
 

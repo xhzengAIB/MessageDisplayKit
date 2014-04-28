@@ -42,16 +42,17 @@
 		74D1C5CC190E2885003B1BCA /* keyborad_HL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74D1C5C9190E2885003B1BCA /* keyborad_HL@2x.png */; };
 		74D1C5CD190E2885003B1BCA /* multiMedia_HL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74D1C5CA190E2885003B1BCA /* multiMedia_HL@2x.png */; };
 		74D1C5CE190E2885003B1BCA /* voice_HL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74D1C5CB190E2885003B1BCA /* voice_HL@2x.png */; };
-		74D1C5DA190E291E003B1BCA /* ReceiverVoiceNodePlaying000_ios7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74D1C5D0190E291E003B1BCA /* ReceiverVoiceNodePlaying000_ios7@2x.png */; };
-		74D1C5DB190E291E003B1BCA /* ReceiverVoiceNodePlaying001_ios7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74D1C5D1190E291E003B1BCA /* ReceiverVoiceNodePlaying001_ios7@2x.png */; };
-		74D1C5DC190E291E003B1BCA /* ReceiverVoiceNodePlaying002_ios7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74D1C5D2190E291E003B1BCA /* ReceiverVoiceNodePlaying002_ios7@2x.png */; };
-		74D1C5DD190E291E003B1BCA /* ReceiverVoiceNodePlaying003_ios7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74D1C5D3190E291E003B1BCA /* ReceiverVoiceNodePlaying003_ios7@2x.png */; };
-		74D1C5DE190E291E003B1BCA /* ReceiverVoiceNodePlaying_ios7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74D1C5D4190E291E003B1BCA /* ReceiverVoiceNodePlaying_ios7@2x.png */; };
-		74D1C5DF190E291E003B1BCA /* SenderVoiceNodePlaying000_ios7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74D1C5D5190E291E003B1BCA /* SenderVoiceNodePlaying000_ios7@2x.png */; };
-		74D1C5E0190E291E003B1BCA /* SenderVoiceNodePlaying001_ios7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74D1C5D6190E291E003B1BCA /* SenderVoiceNodePlaying001_ios7@2x.png */; };
-		74D1C5E1190E291E003B1BCA /* SenderVoiceNodePlaying002_ios7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74D1C5D7190E291E003B1BCA /* SenderVoiceNodePlaying002_ios7@2x.png */; };
-		74D1C5E2190E291E003B1BCA /* SenderVoiceNodePlaying003_ios7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74D1C5D8190E291E003B1BCA /* SenderVoiceNodePlaying003_ios7@2x.png */; };
-		74D1C5E3190E291E003B1BCA /* SenderVoiceNodePlaying_ios7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74D1C5D9190E291E003B1BCA /* SenderVoiceNodePlaying_ios7@2x.png */; };
+		74D1C5DA190E291E003B1BCA /* ReceiverVoiceNodePlaying000@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74D1C5D0190E291E003B1BCA /* ReceiverVoiceNodePlaying000@2x.png */; };
+		74D1C5DB190E291E003B1BCA /* ReceiverVoiceNodePlaying001@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74D1C5D1190E291E003B1BCA /* ReceiverVoiceNodePlaying001@2x.png */; };
+		74D1C5DC190E291E003B1BCA /* ReceiverVoiceNodePlaying002@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74D1C5D2190E291E003B1BCA /* ReceiverVoiceNodePlaying002@2x.png */; };
+		74D1C5DD190E291E003B1BCA /* ReceiverVoiceNodePlaying003@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74D1C5D3190E291E003B1BCA /* ReceiverVoiceNodePlaying003@2x.png */; };
+		74D1C5DE190E291E003B1BCA /* ReceiverVoiceNodePlaying@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74D1C5D4190E291E003B1BCA /* ReceiverVoiceNodePlaying@2x.png */; };
+		74D1C5DF190E291E003B1BCA /* SenderVoiceNodePlaying000@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74D1C5D5190E291E003B1BCA /* SenderVoiceNodePlaying000@2x.png */; };
+		74D1C5E0190E291E003B1BCA /* SenderVoiceNodePlaying001@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74D1C5D6190E291E003B1BCA /* SenderVoiceNodePlaying001@2x.png */; };
+		74D1C5E1190E291E003B1BCA /* SenderVoiceNodePlaying002@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74D1C5D7190E291E003B1BCA /* SenderVoiceNodePlaying002@2x.png */; };
+		74D1C5E2190E291E003B1BCA /* SenderVoiceNodePlaying003@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74D1C5D8190E291E003B1BCA /* SenderVoiceNodePlaying003@2x.png */; };
+		74D1C5E3190E291E003B1BCA /* SenderVoiceNodePlaying@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74D1C5D9190E291E003B1BCA /* SenderVoiceNodePlaying@2x.png */; };
+		74D1C5E9190E2BE6003B1BCA /* XHMessageVoiceFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 74D1C5E8190E2BE6003B1BCA /* XHMessageVoiceFactory.m */; };
 		74FAB0B9190A81DC005623D0 /* UIImage+XHRounded.m in Sources */ = {isa = PBXBuildFile; fileRef = 74FAB0B8190A81DC005623D0 /* UIImage+XHRounded.m */; };
 		74FAB0CF190A92CC005623D0 /* weChatBubble_Receiving_Cavern@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74FAB0BD190A92CC005623D0 /* weChatBubble_Receiving_Cavern@2x.png */; };
 		74FAB0D0190A92CC005623D0 /* weChatBubble_Receiving_Solid@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74FAB0BE190A92CC005623D0 /* weChatBubble_Receiving_Solid@2x.png */; };
@@ -143,16 +144,18 @@
 		74D1C5C9190E2885003B1BCA /* keyborad_HL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "keyborad_HL@2x.png"; sourceTree = "<group>"; };
 		74D1C5CA190E2885003B1BCA /* multiMedia_HL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "multiMedia_HL@2x.png"; sourceTree = "<group>"; };
 		74D1C5CB190E2885003B1BCA /* voice_HL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "voice_HL@2x.png"; sourceTree = "<group>"; };
-		74D1C5D0190E291E003B1BCA /* ReceiverVoiceNodePlaying000_ios7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ReceiverVoiceNodePlaying000_ios7@2x.png"; sourceTree = "<group>"; };
-		74D1C5D1190E291E003B1BCA /* ReceiverVoiceNodePlaying001_ios7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ReceiverVoiceNodePlaying001_ios7@2x.png"; sourceTree = "<group>"; };
-		74D1C5D2190E291E003B1BCA /* ReceiverVoiceNodePlaying002_ios7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ReceiverVoiceNodePlaying002_ios7@2x.png"; sourceTree = "<group>"; };
-		74D1C5D3190E291E003B1BCA /* ReceiverVoiceNodePlaying003_ios7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ReceiverVoiceNodePlaying003_ios7@2x.png"; sourceTree = "<group>"; };
-		74D1C5D4190E291E003B1BCA /* ReceiverVoiceNodePlaying_ios7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ReceiverVoiceNodePlaying_ios7@2x.png"; sourceTree = "<group>"; };
-		74D1C5D5190E291E003B1BCA /* SenderVoiceNodePlaying000_ios7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SenderVoiceNodePlaying000_ios7@2x.png"; sourceTree = "<group>"; };
-		74D1C5D6190E291E003B1BCA /* SenderVoiceNodePlaying001_ios7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SenderVoiceNodePlaying001_ios7@2x.png"; sourceTree = "<group>"; };
-		74D1C5D7190E291E003B1BCA /* SenderVoiceNodePlaying002_ios7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SenderVoiceNodePlaying002_ios7@2x.png"; sourceTree = "<group>"; };
-		74D1C5D8190E291E003B1BCA /* SenderVoiceNodePlaying003_ios7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SenderVoiceNodePlaying003_ios7@2x.png"; sourceTree = "<group>"; };
-		74D1C5D9190E291E003B1BCA /* SenderVoiceNodePlaying_ios7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SenderVoiceNodePlaying_ios7@2x.png"; sourceTree = "<group>"; };
+		74D1C5D0190E291E003B1BCA /* ReceiverVoiceNodePlaying000@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ReceiverVoiceNodePlaying000@2x.png"; sourceTree = "<group>"; };
+		74D1C5D1190E291E003B1BCA /* ReceiverVoiceNodePlaying001@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ReceiverVoiceNodePlaying001@2x.png"; sourceTree = "<group>"; };
+		74D1C5D2190E291E003B1BCA /* ReceiverVoiceNodePlaying002@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ReceiverVoiceNodePlaying002@2x.png"; sourceTree = "<group>"; };
+		74D1C5D3190E291E003B1BCA /* ReceiverVoiceNodePlaying003@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ReceiverVoiceNodePlaying003@2x.png"; sourceTree = "<group>"; };
+		74D1C5D4190E291E003B1BCA /* ReceiverVoiceNodePlaying@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ReceiverVoiceNodePlaying@2x.png"; sourceTree = "<group>"; };
+		74D1C5D5190E291E003B1BCA /* SenderVoiceNodePlaying000@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SenderVoiceNodePlaying000@2x.png"; sourceTree = "<group>"; };
+		74D1C5D6190E291E003B1BCA /* SenderVoiceNodePlaying001@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SenderVoiceNodePlaying001@2x.png"; sourceTree = "<group>"; };
+		74D1C5D7190E291E003B1BCA /* SenderVoiceNodePlaying002@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SenderVoiceNodePlaying002@2x.png"; sourceTree = "<group>"; };
+		74D1C5D8190E291E003B1BCA /* SenderVoiceNodePlaying003@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SenderVoiceNodePlaying003@2x.png"; sourceTree = "<group>"; };
+		74D1C5D9190E291E003B1BCA /* SenderVoiceNodePlaying@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SenderVoiceNodePlaying@2x.png"; sourceTree = "<group>"; };
+		74D1C5E7190E2BE6003B1BCA /* XHMessageVoiceFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMessageVoiceFactory.h; sourceTree = "<group>"; };
+		74D1C5E8190E2BE6003B1BCA /* XHMessageVoiceFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMessageVoiceFactory.m; sourceTree = "<group>"; };
 		74FAB0B7190A81DC005623D0 /* UIImage+XHRounded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+XHRounded.h"; sourceTree = "<group>"; };
 		74FAB0B8190A81DC005623D0 /* UIImage+XHRounded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+XHRounded.m"; sourceTree = "<group>"; };
 		74FAB0BD190A92CC005623D0 /* weChatBubble_Receiving_Cavern@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weChatBubble_Receiving_Cavern@2x.png"; sourceTree = "<group>"; };
@@ -364,6 +367,8 @@
 				748245961909F33F008EC388 /* XHMessageBubbleFactory.m */,
 				748245981909F370008EC388 /* XHMessageAvatorFactory.h */,
 				748245991909F370008EC388 /* XHMessageAvatorFactory.m */,
+				74D1C5E7190E2BE6003B1BCA /* XHMessageVoiceFactory.h */,
+				74D1C5E8190E2BE6003B1BCA /* XHMessageVoiceFactory.m */,
 				74D1C5C4190DFC1D003B1BCA /* XHFoundationCommon.h */,
 				74D1C5C5190DFC1D003B1BCA /* XHFoundationCommon.m */,
 			);
@@ -373,16 +378,16 @@
 		74D1C5CF190E291E003B1BCA /* VoiceAnimationImages */ = {
 			isa = PBXGroup;
 			children = (
-				74D1C5D0190E291E003B1BCA /* ReceiverVoiceNodePlaying000_ios7@2x.png */,
-				74D1C5D1190E291E003B1BCA /* ReceiverVoiceNodePlaying001_ios7@2x.png */,
-				74D1C5D2190E291E003B1BCA /* ReceiverVoiceNodePlaying002_ios7@2x.png */,
-				74D1C5D3190E291E003B1BCA /* ReceiverVoiceNodePlaying003_ios7@2x.png */,
-				74D1C5D4190E291E003B1BCA /* ReceiverVoiceNodePlaying_ios7@2x.png */,
-				74D1C5D5190E291E003B1BCA /* SenderVoiceNodePlaying000_ios7@2x.png */,
-				74D1C5D6190E291E003B1BCA /* SenderVoiceNodePlaying001_ios7@2x.png */,
-				74D1C5D7190E291E003B1BCA /* SenderVoiceNodePlaying002_ios7@2x.png */,
-				74D1C5D8190E291E003B1BCA /* SenderVoiceNodePlaying003_ios7@2x.png */,
-				74D1C5D9190E291E003B1BCA /* SenderVoiceNodePlaying_ios7@2x.png */,
+				74D1C5D0190E291E003B1BCA /* ReceiverVoiceNodePlaying000@2x.png */,
+				74D1C5D1190E291E003B1BCA /* ReceiverVoiceNodePlaying001@2x.png */,
+				74D1C5D2190E291E003B1BCA /* ReceiverVoiceNodePlaying002@2x.png */,
+				74D1C5D3190E291E003B1BCA /* ReceiverVoiceNodePlaying003@2x.png */,
+				74D1C5D4190E291E003B1BCA /* ReceiverVoiceNodePlaying@2x.png */,
+				74D1C5D5190E291E003B1BCA /* SenderVoiceNodePlaying000@2x.png */,
+				74D1C5D6190E291E003B1BCA /* SenderVoiceNodePlaying001@2x.png */,
+				74D1C5D7190E291E003B1BCA /* SenderVoiceNodePlaying002@2x.png */,
+				74D1C5D8190E291E003B1BCA /* SenderVoiceNodePlaying003@2x.png */,
+				74D1C5D9190E291E003B1BCA /* SenderVoiceNodePlaying@2x.png */,
 			);
 			path = VoiceAnimationImages;
 			sourceTree = "<group>";
@@ -537,12 +542,12 @@
 				74FAB0D1190A92CC005623D0 /* weChatBubble_Sending_Cavern@2x.png in Resources */,
 				74FAB0D9190A92CC005623D0 /* face@2x.png in Resources */,
 				74BBB034190D226300093577 /* JieIcon@2x.png in Resources */,
-				74D1C5DD190E291E003B1BCA /* ReceiverVoiceNodePlaying003_ios7@2x.png in Resources */,
+				74D1C5DD190E291E003B1BCA /* ReceiverVoiceNodePlaying003@2x.png in Resources */,
 				7482450F1908C730008EC388 /* InfoPlist.strings in Resources */,
-				74D1C5E0190E291E003B1BCA /* SenderVoiceNodePlaying001_ios7@2x.png in Resources */,
-				74D1C5DE190E291E003B1BCA /* ReceiverVoiceNodePlaying_ios7@2x.png in Resources */,
+				74D1C5E0190E291E003B1BCA /* SenderVoiceNodePlaying001@2x.png in Resources */,
+				74D1C5DE190E291E003B1BCA /* ReceiverVoiceNodePlaying@2x.png in Resources */,
 				74FAB0D8190A92CC005623D0 /* input-field-cover@2x.png in Resources */,
-				74D1C5E1190E291E003B1BCA /* SenderVoiceNodePlaying002_ios7@2x.png in Resources */,
+				74D1C5E1190E291E003B1BCA /* SenderVoiceNodePlaying002@2x.png in Resources */,
 				74D1C5C8190E2772003B1BCA /* face_HL@2x.png in Resources */,
 				74FAB0E4190A9E13005623D0 /* meIcon@2x.png in Resources */,
 				74FAB0D0190A92CC005623D0 /* weChatBubble_Receiving_Solid@2x.png in Resources */,
@@ -550,23 +555,23 @@
 				74FAB0CF190A92CC005623D0 /* weChatBubble_Receiving_Cavern@2x.png in Resources */,
 				74FAB0D5190A92CC005623D0 /* input-bar-flat.png in Resources */,
 				74D1C5CC190E2885003B1BCA /* keyborad_HL@2x.png in Resources */,
-				74D1C5DC190E291E003B1BCA /* ReceiverVoiceNodePlaying002_ios7@2x.png in Resources */,
+				74D1C5DC190E291E003B1BCA /* ReceiverVoiceNodePlaying002@2x.png in Resources */,
 				74FAB0D3190A92CC005623D0 /* input-bar-background.png in Resources */,
 				748245171908C730008EC388 /* Images.xcassets in Resources */,
 				74FAB0DC190A92CC005623D0 /* multiMedia@2x.png in Resources */,
 				7475BA33190D4B7B001DD9B1 /* TableViewBackgroundImage@2x.png in Resources */,
-				74D1C5DA190E291E003B1BCA /* ReceiverVoiceNodePlaying000_ios7@2x.png in Resources */,
+				74D1C5DA190E291E003B1BCA /* ReceiverVoiceNodePlaying000@2x.png in Resources */,
 				74FAB0DB190A92CC005623D0 /* keyborad@2x.png in Resources */,
-				74D1C5E2190E291E003B1BCA /* SenderVoiceNodePlaying003_ios7@2x.png in Resources */,
+				74D1C5E2190E291E003B1BCA /* SenderVoiceNodePlaying003@2x.png in Resources */,
 				74BBB020190B8EAB00093577 /* MessageDisplayKitString.strings in Resources */,
 				74FAB0DA190A92CC005623D0 /* holdDownButton@2x.png in Resources */,
-				74D1C5E3190E291E003B1BCA /* SenderVoiceNodePlaying_ios7@2x.png in Resources */,
+				74D1C5E3190E291E003B1BCA /* SenderVoiceNodePlaying@2x.png in Resources */,
 				74FAB0D2190A92CC005623D0 /* weChatBubble_Sending_Solid@2x.png in Resources */,
-				74D1C5DF190E291E003B1BCA /* SenderVoiceNodePlaying000_ios7@2x.png in Resources */,
+				74D1C5DF190E291E003B1BCA /* SenderVoiceNodePlaying000@2x.png in Resources */,
 				74FAB0D6190A92CC005623D0 /* input-bar-flat@2x.png in Resources */,
 				74FAB0DD190A92CC005623D0 /* voice@2x.png in Resources */,
 				74FAB0D7190A92CC005623D0 /* input-field-cover.png in Resources */,
-				74D1C5DB190E291E003B1BCA /* ReceiverVoiceNodePlaying001_ios7@2x.png in Resources */,
+				74D1C5DB190E291E003B1BCA /* ReceiverVoiceNodePlaying001@2x.png in Resources */,
 				74FAB0D4190A92CC005623D0 /* input-bar-background@2x.png in Resources */,
 				74D1C5CD190E2885003B1BCA /* multiMedia_HL@2x.png in Resources */,
 			);
@@ -588,6 +593,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				74BBB032190C28CD00093577 /* XHDemoWeChatMessageTableViewController.m in Sources */,
+				74D1C5E9190E2BE6003B1BCA /* XHMessageVoiceFactory.m in Sources */,
 				7482459A1909F370008EC388 /* XHMessageAvatorFactory.m in Sources */,
 				74D1C5BF190DE55B003B1BCA /* XHMessageDisplayTextView.m in Sources */,
 				74824560190902DA008EC388 /* XHMessageTextView.m in Sources */,

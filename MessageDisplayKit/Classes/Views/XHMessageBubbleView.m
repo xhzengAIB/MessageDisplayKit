@@ -14,10 +14,14 @@
 #define kPaddingBottom 8.0f
 #define kBubblePaddingRight 35.0f
 
+#define kVoiceMargin 20.0f
+
 @interface XHMessageBubbleView ()
 
 @property (nonatomic, weak, readwrite) XHMessageDisplayTextView *messageDisplayTextView;
 @property (nonatomic, weak, readwrite) UIImageView *bubbleImageView;
+
+@property (nonatomic, weak, readwrite) UIImageView *animationVoiceImageView;
 
 @property (nonatomic, weak, readwrite) XHBubblePhotoImageView *bubblePhotoImageView;
 
@@ -60,35 +64,46 @@
                       textSize.height + kPaddingTop + kPaddingBottom);
 }
 
-+ (CGSize)neddedSizeForPhoto:(UIImage *)photo {
++ (CGSize)neededSizeForPhoto:(UIImage *)photo {
     // 这里需要缩放后的size
     CGSize photoSize = CGSizeMake(100, 100);
     return photoSize;
 }
 
++ (CGSize)neededSizeForVoicePath:(NSString *)voicePath {
+    // 这里的100只是暂时固定，到时候会根据一个函数来计算
+    CGSize voiceSize = CGSizeMake(100, [XHMessageInputView textViewLineHeight]);
+    return voiceSize;
+}
+
 + (CGFloat)calculateCellHeightWithMessage:(id <XHMessageModel>)message {
-    CGSize size;
+    CGSize size = [XHMessageBubbleView getBubbleFrameWithMessage:message];
+    return size.height + kMarginTop + kMarginBottom;
+}
+
++ (CGSize)getBubbleFrameWithMessage:(id <XHMessageModel>)message {
+    CGSize bubbleSize;
     switch (message.messageMediaType) {
         case XHBubbleMessageText: {
-            size = [XHMessageBubbleView neededSizeForText:message.text];
+            bubbleSize = [XHMessageBubbleView neededSizeForText:message.text];
             break;
         }
         case XHBubbleMessagePhoto: {
-            size = [XHMessageBubbleView neddedSizeForPhoto:message.photo];
+            bubbleSize = [XHMessageBubbleView neededSizeForPhoto:message.photo];
             break;
         }
         case XHBubbleMessageVideo: {
-            size = [XHMessageBubbleView neddedSizeForPhoto:message.videoConverPhoto];
+            bubbleSize = [XHMessageBubbleView neededSizeForPhoto:message.videoConverPhoto];
             break;
         }
         case XHBubbleMessageVioce: {
-            size = CGSizeMake(100, [XHMessageInputView textViewLineHeight]);
+            bubbleSize = CGSizeMake(100, [XHMessageInputView textViewLineHeight]);
             break;
         }
         default:
             break;
     }
-    return size.height + kMarginTop + kMarginBottom;
+    return bubbleSize;
 }
 
 #pragma mark - UIAppearance Getters
@@ -108,27 +123,7 @@
 #pragma mark - Getters
 
 - (CGRect)bubbleFrame {
-    CGSize bubbleSize;
-    switch (self.message.messageMediaType) {
-        case XHBubbleMessageText: {
-            bubbleSize = [XHMessageBubbleView neededSizeForText:self.message.text];
-            break;
-        }
-        case XHBubbleMessagePhoto: {
-            bubbleSize = [XHMessageBubbleView neddedSizeForPhoto:self.message.photo];
-            break;
-        }
-        case XHBubbleMessageVideo: {
-            bubbleSize = [XHMessageBubbleView neddedSizeForPhoto:self.message.videoConverPhoto];
-            break;
-        }
-        case XHBubbleMessageVioce: {
-            bubbleSize = CGSizeMake(100, [XHMessageInputView textViewLineHeight]);
-            break;
-        }
-        default:
-            break;
-    }
+    CGSize bubbleSize = [XHMessageBubbleView getBubbleFrameWithMessage:self.message];
     
     return CGRectIntegral(CGRectMake((self.message.bubbleMessageType == XHBubbleMessageTypeSending ? CGRectGetWidth(self.bounds) - bubbleSize.width : 0.0f),
                                      kMarginTop,
@@ -143,19 +138,32 @@
     
     [self configureBubbleImageView:message];
     
-    [self configureMessageDisplayTextViewWithMessage:message];
+    [self configureMessageDisplayMediaWithMessage:message];
 }
 
 - (void)configureBubbleImageView:(id <XHMessageModel>)message {
-    if (message.messageMediaType == XHBubbleMessageText) {
+    XHBubbleMessageMediaType currentType = message.messageMediaType;
+    if (currentType == XHBubbleMessageText || currentType == XHBubbleMessageVioce) {
         _bubbleImageView.image = [XHMessageBubbleFactory bubbleImageViewForType:message.bubbleMessageType style:XHBubbleImageViewStyleWeChat meidaType:message.messageMediaType];
         _bubbleImageView.hidden = NO;
+        
+        if (currentType == XHBubbleMessageText) {
+            _animationVoiceImageView.hidden = YES;
+        } else {
+            [_animationVoiceImageView removeFromSuperview];
+            _animationVoiceImageView = nil;
+            
+            UIImageView *animationVoiceImageView = [XHMessageVoiceFactory messageVoiceAnimationImageViewWithBubbleMessageType:message.bubbleMessageType];
+            _animationVoiceImageView = animationVoiceImageView;
+            [self addSubview:animationVoiceImageView];
+            _animationVoiceImageView.hidden = NO;
+        }
     } else {
         _bubbleImageView.hidden = YES;
     }
 }
 
-- (void)configureMessageDisplayTextViewWithMessage:(id <XHMessageModel>)message {
+- (void)configureMessageDisplayMediaWithMessage:(id <XHMessageModel>)message {
     switch (message.messageMediaType) {
         case XHBubbleMessageText:
             _messageDisplayTextView.text = message.text;
@@ -182,6 +190,7 @@
         // Initialization code
         _message = message;
         
+        // 1、初始化气泡的背景
         if (!_bubbleImageView) {
             //bubble image
             UIImageView *bubbleImageView = [[UIImageView alloc] init];
@@ -190,6 +199,7 @@
             _bubbleImageView = bubbleImageView;
         }
         
+        // 2、初始化显示文本消息的TextView
         if (!_messageDisplayTextView) {
             XHMessageDisplayTextView *messageDisplayTextView = [[XHMessageDisplayTextView alloc] initWithFrame:CGRectZero];
             messageDisplayTextView.font = [UIFont systemFontOfSize:16.0f];
@@ -214,6 +224,7 @@
             }
         }
         
+        // 3、初始化显示图片的控件
         if (!_bubblePhotoImageView) {
             XHBubblePhotoImageView *bubblePhotoImageView = [[XHBubblePhotoImageView alloc] initWithFrame:CGRectZero];
             [self addSubview:bubblePhotoImageView];
@@ -232,10 +243,12 @@
     [super layoutSubviews];
     
     XHBubbleMessageMediaType currentType = self.message.messageMediaType;
+    CGRect bubbleFrame = [self bubbleFrame];
+    
     switch (currentType) {
         case XHBubbleMessageText:
         case XHBubbleMessageVioce: {
-            self.bubbleImageView.frame = [self bubbleFrame];
+            self.bubbleImageView.frame = bubbleFrame;
             
             CGFloat textX = self.bubbleImageView.frame.origin.x;
             
@@ -244,16 +257,21 @@
             }
             
             CGRect textFrame = CGRectMake(textX,
-                                          self.bubbleImageView.frame.origin.y,
-                                          self.bubbleImageView.frame.size.width - (self.bubbleImageView.image.capInsets.right / 2.0f),
-                                          self.bubbleImageView.frame.size.height - kMarginTop);
+                                          bubbleFrame.origin.y,
+                                          bubbleFrame.size.width - (self.bubbleImageView.image.capInsets.right / 2.0f),
+                                          bubbleFrame.size.height - kMarginTop);
             
             self.messageDisplayTextView.frame = CGRectIntegral(textFrame);
+            
+            CGRect animationVoiceImageViewFrame = self.animationVoiceImageView.frame;
+            animationVoiceImageViewFrame.origin = CGPointMake((self.message.bubbleMessageType == XHBubbleMessageTypeReceiving ? (bubbleFrame.origin.x + kVoiceMargin) : (bubbleFrame.origin.x + CGRectGetWidth(bubbleFrame) - kVoiceMargin - CGRectGetWidth(animationVoiceImageViewFrame))), 17);
+            self.animationVoiceImageView.frame = animationVoiceImageViewFrame;
             break;
         }
         case XHBubbleMessagePhoto:
         case XHBubbleMessageVideo: {
-            self.bubblePhotoImageView.frame = CGRectMake([self bubbleFrame].origin.x - 2, 0, [self bubbleFrame].size.width, [self bubbleFrame].size.height);
+            CGRect photoImageViewFrame = CGRectMake(bubbleFrame.origin.x - 2, 0, bubbleFrame.size.width, bubbleFrame.size.height);
+            self.bubblePhotoImageView.frame = photoImageViewFrame;
             break;
         }
         default:
