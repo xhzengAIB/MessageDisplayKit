@@ -44,7 +44,7 @@ Universal for iPhone and iPad
 
 * iOS 6.0+ 
 * ARC
-* [MessageDisplayKit][playerLink]
+* [MessageDisplayKit][https://github.com/xhzengAIB/MessageDisplayKit]
 
 
 ## Profile
