@@ -52,7 +52,7 @@ Universal for iPhone and iPad
 [CocosPods](http://cocosPods.org) is the recommended methods of installation MessageDisplayKit, just add the following line to `Profile`:
 
 ```
-pod 'MessageDisplayKit', '~> 0.1.0'
+pod 'MessageDisplayKit', '~> 0.1.1'
 ```
 
 ## License
