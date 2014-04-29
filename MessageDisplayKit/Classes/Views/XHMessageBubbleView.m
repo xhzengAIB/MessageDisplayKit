@@ -101,6 +101,14 @@
             bubbleSize = CGSizeMake(100, [XHMessageInputView textViewLineHeight]);
             break;
         }
+        case XHBubbleMessageFace:
+            // 是否固定大小呢？
+            bubbleSize = CGSizeMake(100, 100);
+            break;
+        case XHBubbleMessageLocalPosition:
+            // 固定大小，必须的
+            bubbleSize = CGSizeMake(100, 100);
+            break;
         default:
             break;
     }
@@ -144,29 +152,59 @@
 
 - (void)configureBubbleImageView:(id <XHMessageModel>)message {
     XHBubbleMessageMediaType currentType = message.messageMediaType;
-    if (currentType == XHBubbleMessageText || currentType == XHBubbleMessagevoice) {
-        _bubbleImageView.image = [XHMessageBubbleFactory bubbleImageViewForType:message.bubbleMessageType style:XHBubbleImageViewStyleWeChat meidaType:message.messageMediaType];
-        _bubbleImageView.hidden = NO;
-        
-        _bubblePhotoImageView.hidden = YES;
-        
-        if (currentType == XHBubbleMessageText) {
-            _messageDisplayTextView.hidden = NO;
-            _animationVoiceImageView.hidden = YES;
-        } else {
-            _messageDisplayTextView.hidden = YES;
-            [_animationVoiceImageView removeFromSuperview];
-            _animationVoiceImageView = nil;
+    
+    switch (currentType) {
+        case XHBubbleMessageText:
+        case XHBubbleMessagevoice:
+        case XHBubbleMessageFace: {
+            _bubbleImageView.image = [XHMessageBubbleFactory bubbleImageViewForType:message.bubbleMessageType style:XHBubbleImageViewStyleWeChat meidaType:message.messageMediaType];
+            // 只要是文本、语音、第三方表情，背景的气泡都不能隐藏
+            _bubbleImageView.hidden = NO;
             
-            UIImageView *animationVoiceImageView = [XHMessageVoiceFactory messageVoiceAnimationImageViewWithBubbleMessageType:message.bubbleMessageType];
-            [self addSubview:animationVoiceImageView];
-            _animationVoiceImageView = animationVoiceImageView;
-            _animationVoiceImageView.hidden = NO;
+            // 只要是文本、语音、第三方表情，都需要把显示尖嘴图片的控件隐藏了
+            _bubblePhotoImageView.hidden = YES;
+            
+            
+            if (currentType == XHBubbleMessageText) {
+                // 如果是文本消息，那文本消息的控件需要显示
+                _messageDisplayTextView.hidden = NO;
+                // 那语言的gif动画imageView就需要隐藏了
+                _animationVoiceImageView.hidden = YES;
+            } else {
+                // 那如果不文本消息，必须把文本消息的控件隐藏了啊
+                _messageDisplayTextView.hidden = YES;
+                
+                // 对语音消息的进行特殊处理，第三方表情可以直接利用背景气泡的ImageView控件
+                if (currentType == XHBubbleMessagevoice) {
+                    [_animationVoiceImageView removeFromSuperview];
+                    _animationVoiceImageView = nil;
+                    
+                    UIImageView *animationVoiceImageView = [XHMessageVoiceFactory messageVoiceAnimationImageViewWithBubbleMessageType:message.bubbleMessageType];
+                    [self addSubview:animationVoiceImageView];
+                    _animationVoiceImageView = animationVoiceImageView;
+                    _animationVoiceImageView.hidden = NO;
+                } else {
+                    _animationVoiceImageView.hidden = YES;
+                }
+            }
+            break;
         }
-    } else {
-        _bubblePhotoImageView.hidden = NO;
-        _messageDisplayTextView.hidden = YES;
-        _bubbleImageView.hidden = YES;
+        case XHBubbleMessagePhoto:
+        case XHBubbleMessageVideo: {
+            // 只要是图片和视频消息，必须把尖嘴显示控件显示出来
+            _bubblePhotoImageView.hidden = NO;
+            
+            // 那其他的控件都必须隐藏
+            _messageDisplayTextView.hidden = YES;
+            _bubbleImageView.hidden = YES;
+            _animationVoiceImageView.hidden = YES;
+            break;
+        }
+        case XHBubbleMessageLocalPosition:
+            break;
+            
+        default:
+            break;
     }
 }
 
@@ -182,6 +220,12 @@
             _bubblePhotoImageView.messagePhoto = message.videoConverPhoto;
             break;
         case XHBubbleMessagevoice:
+            break;
+        case XHBubbleMessageFace:
+            // 直接设置GIF
+            _bubbleImageView.image = [UIImage imageNamed:message.text];
+            break;
+        case XHBubbleMessageLocalPosition:
             break;
         default:
             break;
