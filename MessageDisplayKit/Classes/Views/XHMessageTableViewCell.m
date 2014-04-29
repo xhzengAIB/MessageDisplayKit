@@ -27,13 +27,83 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
 
 @property (nonatomic, weak, readwrite) UILabel *timestampLabel;
 
+/**
+ *  是否显示时间轴Label
+ */
 @property (nonatomic, assign) BOOL displayTimestamp;
+
+/**
+ *  1、是否显示Time Line的label
+ *
+ *  @param message 需要配置的目标消息Model
+ */
+- (void)configureTimestamp:(BOOL)displayTimestamp atMessage:(id <XHMessageModel>)message;
+
+/**
+ *  2、配置头像
+ *
+ *  @param message 需要配置的目标消息Model
+ */
+- (void)configAvatorWithMessage:(id <XHMessageModel>)message;
+
+/**
+ *  3、配置需要显示什么消息内容，比如语音、文字、视频、图片
+ *
+ *  @param message 需要配置的目标消息Model
+ */
+- (void)configureMessageBubbleViewWithMessage:(id <XHMessageModel>)message;
+
+/**
+ *  头像按钮，点击事件
+ *
+ *  @param sender 头像按钮对象
+ */
+- (void)avatorButtonClicked:(UIButton *)sender;
+
+/**
+ *  统一一个方法隐藏MenuController，多处需要调用
+ */
+- (void)setupNormalMenuController;
+
+/**
+ *  点击Cell的手势处理方法，用于隐藏MenuController的
+ *
+ *  @param tapGestureRecognizer 点击手势对象
+ */
+- (void)tapGestureRecognizerHandle:(UITapGestureRecognizer *)tapGestureRecognizer;
+
+/**
+ *  长按Cell的手势处理方法，用于显示MenuController的
+ *
+ *  @param longPressGestureRecognizer 长按手势对象
+ */
+- (void)longPressGestureRecognizerHandle:(UILongPressGestureRecognizer *)longPressGestureRecognizer;
+
+/**
+ *  单击手势处理方法，用于点击多媒体消息触发方法，比如点击语音需要播放的回调、点击图片需要查看大图的回调
+ *
+ *  @param tapGestureRecognizer 点击手势对象
+ */
+- (void)sigleTapGestureRecognizerHandle:(UITapGestureRecognizer *)tapGestureRecognizer;
+
+/**
+ *  双击手势处理方法，用于双击文本消息，进行放大文本的回调
+ *
+ *  @param tapGestureRecognizer 双击手势对象
+ */
+- (void)doubleTapGestureRecognizerHandle:(UITapGestureRecognizer *)tapGestureRecognizer;
 
 @end
 
 @implementation XHMessageTableViewCell
 
-#pragma mark - Copying
+- (void)avatorButtonClicked:(UIButton *)sender {
+    if ([self.delegate respondsToSelector:@selector(didSelectedAvatorAtIndexPath:)]) {
+        [self.delegate didSelectedAvatorAtIndexPath:self.indexPath];
+    }
+}
+
+#pragma mark - Copying Method
 
 - (BOOL)canBecomeFirstResponder {
     return YES;
@@ -46,6 +116,8 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
 - (BOOL)canPerformAction:(SEL)action withSender:(id)sender {
     return (action == @selector(copyed:) || action == @selector(transpond:) || action == @selector(favorites:) || action == @selector(more:));
 }
+
+#pragma mark - Menu Actions
 
 - (void)copyed:(id)sender {
     [[UIPasteboard generalPasteboard] setString:self.messageBubbleView.messageDisplayTextView.text];
@@ -65,10 +137,86 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
     DLog(@"Cell was more");
 }
 
+#pragma mark - Setters
+
+- (void)configureCellWithMessage:(id <XHMessageModel>)message
+               displaysTimestamp:(BOOL)displayTimestamp {
+    // 1、是否显示Time Line的label
+    [self configureTimestamp:displayTimestamp atMessage:message];
+    
+    // 2、配置头像
+    [self configAvatorWithMessage:message];
+    
+    // 3、配置需要显示什么消息内容，比如语音、文字、视频、图片
+    [self configureMessageBubbleViewWithMessage:message];
+}
+
+- (void)configureTimestamp:(BOOL)displayTimestamp atMessage:(id <XHMessageModel>)message {
+    self.displayTimestamp = displayTimestamp;
+    self.timestampLabel.hidden = !self.displayTimestamp;
+    if (displayTimestamp) {
+        self.timestampLabel.text = [NSDateFormatter localizedStringFromDate:message.date
+                                                                  dateStyle:NSDateFormatterMediumStyle
+                                                                  timeStyle:NSDateFormatterShortStyle];
+    }
+}
+
+- (void)configAvatorWithMessage:(id <XHMessageModel>)message {
+    if (message.avator) {
+        [self.avatorButton setImage:[XHMessageAvatorFactory avatarImageNamed:message.avator messageAvatorType:XHMessageAvatorCircle] forState:UIControlStateNormal];
+    } else {
+        [self.avatorButton setImage:[XHMessageAvatorFactory avatarImageNamed:[UIImage imageNamed:@"meIcon"] messageAvatorType:XHMessageAvatorCircle] forState:UIControlStateNormal];
+    }
+}
+
+- (void)configureMessageBubbleViewWithMessage:(id <XHMessageModel>)message {
+    XHBubbleMessageMediaType currentMediaType = message.messageMediaType;
+    for (UIGestureRecognizer *gesTureRecognizer in self.messageBubbleView.bubbleImageView.gestureRecognizers) {
+        [self.messageBubbleView.bubbleImageView removeGestureRecognizer:gesTureRecognizer];
+    }
+    for (UIGestureRecognizer *gesTureRecognizer in self.messageBubbleView.bubblePhotoImageView.gestureRecognizers) {
+        [self.messageBubbleView.bubblePhotoImageView removeGestureRecognizer:gesTureRecognizer];
+    }
+    switch (currentMediaType) {
+        case XHBubbleMessagePhoto:
+        case XHBubbleMessageVideo: {
+            UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(sigleTapGestureRecognizerHandle:)];
+            [self.messageBubbleView.bubblePhotoImageView addGestureRecognizer:tapGestureRecognizer];
+            break;
+        }
+        case XHBubbleMessageText:
+        case XHBubbleMessagevoice: {
+            UITapGestureRecognizer *tapGestureRecognizer;
+            if (currentMediaType == XHBubbleMessageText) {
+                tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doubleTapGestureRecognizerHandle:)];
+            } else {
+                tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(sigleTapGestureRecognizerHandle:)];
+            }
+            tapGestureRecognizer.numberOfTapsRequired = (currentMediaType == XHBubbleMessageText ? 2 : 1);
+            [self.messageBubbleView.bubbleImageView addGestureRecognizer:tapGestureRecognizer];
+            break;
+        }
+        default:
+            break;
+    }
+    [self.messageBubbleView configureCellWithMessage:message];
+}
+
 #pragma mark - Gestures
 
-- (void)handleLongPressGesture:(UILongPressGestureRecognizer *)longPress {
-    if (longPress.state != UIGestureRecognizerStateBegan || ![self becomeFirstResponder])
+- (void)setupNormalMenuController {
+    UIMenuController *menu = [UIMenuController sharedMenuController];
+    if (menu.isMenuVisible) {
+        [menu setMenuVisible:NO animated:YES];
+    }
+}
+
+- (void)tapGestureRecognizerHandle:(UITapGestureRecognizer *)tapGestureRecognizer {
+    [self setupNormalMenuController];
+}
+
+- (void)longPressGestureRecognizerHandle:(UILongPressGestureRecognizer *)longPressGestureRecognizer {
+    if (longPressGestureRecognizer.state != UIGestureRecognizerStateBegan || ![self becomeFirstResponder])
         return;
     
     UIMenuItem *copy = [[UIMenuItem alloc] initWithTitle:NSLocalizedStringFromTable(@"copy", @"MessageDisplayKitString", @"复制文本消息") action:@selector(copyed:)];
@@ -93,10 +241,20 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
     [menu setMenuVisible:YES animated:YES];
 }
 
-- (void)tapGestureRecognizerHandle:(UITapGestureRecognizer *)tapGestureRecognizer {
-    UIMenuController *menu = [UIMenuController sharedMenuController];
-    if (menu.isMenuVisible) {
-        [menu setMenuVisible:NO animated:YES];
+- (void)sigleTapGestureRecognizerHandle:(UITapGestureRecognizer *)tapGestureRecognizer {
+    if (tapGestureRecognizer.state == UIGestureRecognizerStateEnded) {
+        [self setupNormalMenuController];
+        if ([self.delegate respondsToSelector:@selector(multiMediaMessageDidSelectedOnMessage:atIndexPath:onMessageTableViewCell:)]) {
+            [self.delegate multiMediaMessageDidSelectedOnMessage:self.messageBubbleView.message atIndexPath:self.indexPath onMessageTableViewCell:self];
+        }
+    }
+}
+
+- (void)doubleTapGestureRecognizerHandle:(UITapGestureRecognizer *)tapGestureRecognizer {
+    if (tapGestureRecognizer.state == UIGestureRecognizerStateEnded) {
+        if ([self.delegate respondsToSelector:@selector(didDoubleSelectedOnTextMessage:atIndexPath:)]) {
+            [self.delegate didDoubleSelectedOnTextMessage:self.messageBubbleView.message atIndexPath:self.indexPath];
+        }
     }
 }
 
@@ -119,6 +277,25 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
                                                object:nil];
 }
 
+#pragma mark - Getters
+
+- (XHBubbleMessageType)bubbleMessageType {
+    return self.messageBubbleView.message.bubbleMessageType;
+}
+
++ (CGFloat)calculateCellHeightWithMessage:(id <XHMessageModel>)message
+                        displaysTimestamp:(BOOL)displayTimestamp {
+    
+    CGFloat timestampHeight = displayTimestamp ? (kXHTimeStampLabelHeight + kXHLabelPadding * 2) : kXHLabelPadding;
+    CGFloat avatarHeight = kXHAvatarImageSize;
+    
+    CGFloat subviewHeights = timestampHeight + kXHBubbleMessageViewPadding * 2;
+    
+    CGFloat bubbleHeight = [XHMessageBubbleView calculateCellHeightWithMessage:message];
+    
+    return subviewHeights + MAX(avatarHeight, bubbleHeight);
+}
+
 #pragma mark - Life cycle
 
 - (void)setup {
@@ -134,18 +311,13 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
     self.detailTextLabel.text = nil;
     self.detailTextLabel.hidden = YES;
     
-    UILongPressGestureRecognizer *recognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self
-                                                                                             action:@selector(handleLongPressGesture:)];
+    UILongPressGestureRecognizer *recognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressGestureRecognizerHandle:)];
     [recognizer setMinimumPressDuration:0.4f];
     [self addGestureRecognizer:recognizer];
     
     
-    UITapGestureRecognizer *tabpGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGestureRecognizerHandle:)];
-    [self addGestureRecognizer:tabpGestureRecognizer];
-}
-
-- (XHBubbleMessageType)bubbleMessageType {
-    return self.messageBubbleView.message.bubbleMessageType;
+    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGestureRecognizerHandle:)];
+    [self addGestureRecognizer:tapGestureRecognizer];
 }
 
 - (instancetype)initWithMessage:(id <XHMessageModel>)message
@@ -188,6 +360,7 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
         
         UIButton *avatorButton = [[UIButton alloc] initWithFrame:avatorButtonFrame];
         [avatorButton setImage:[XHMessageAvatorFactory avatarImageNamed:[UIImage imageNamed:@"meIcon"] messageAvatorType:XHMessageAvatorCircle] forState:UIControlStateNormal];
+        [avatorButton addTarget:self action:@selector(avatorButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
         [self.contentView addSubview:avatorButton];
         self.avatorButton = avatorButton;
         
@@ -220,53 +393,6 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
     return self;
 }
 
-- (void)configureTimestamp:(BOOL)displayTimestamp atMessage:(id <XHMessageModel>)message {
-    self.displayTimestamp = displayTimestamp;
-    self.timestampLabel.hidden = !self.displayTimestamp;
-    if (displayTimestamp) {
-        self.timestampLabel.text = [NSDateFormatter localizedStringFromDate:message.date
-                                                                  dateStyle:NSDateFormatterMediumStyle
-                                                                  timeStyle:NSDateFormatterShortStyle];
-    }
-}
-
-- (void)configAvatorWithMessage:(id <XHMessageModel>)message {
-    if (message.avator) {
-        [self.avatorButton setImage:[XHMessageAvatorFactory avatarImageNamed:message.avator messageAvatorType:XHMessageAvatorCircle] forState:UIControlStateNormal];
-    } else {
-        [self.avatorButton setImage:[XHMessageAvatorFactory avatarImageNamed:[UIImage imageNamed:@"meIcon"] messageAvatorType:XHMessageAvatorCircle] forState:UIControlStateNormal];
-    }
-}
-
-- (void)configureMessageBubbleViewWithMessage:(id <XHMessageModel>)message {
-    [self.messageBubbleView configureCellWithMessage:message];
-}
-
-- (void)configureCellWithMessage:(id <XHMessageModel>)message
-               displaysTimestamp:(BOOL)displayTimestamp {
-    // 1、是否显示Time Line的label
-    [self configureTimestamp:displayTimestamp atMessage:message];
-    
-    // 2、配置头像
-    [self configAvatorWithMessage:message];
-    
-    // 3、配置需要显示什么消息内容，比如语音、文字、视频、图片
-    [self configureMessageBubbleViewWithMessage:message];
-}
-
-+ (CGFloat)calculateCellHeightWithMessage:(id <XHMessageModel>)message
-                        displaysTimestamp:(BOOL)displayTimestamp {
-    
-    CGFloat timestampHeight = displayTimestamp ? (kXHTimeStampLabelHeight + kXHLabelPadding * 2) : kXHLabelPadding;
-    CGFloat avatarHeight = kXHAvatarImageSize;
-    
-    CGFloat subviewHeights = timestampHeight + kXHBubbleMessageViewPadding * 2;
-    
-    CGFloat bubbleHeight = [XHMessageBubbleView calculateCellHeightWithMessage:message];
-    
-    return subviewHeights + MAX(avatarHeight, bubbleHeight);
-}
-
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
@@ -278,13 +404,7 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
 
 - (void)awakeFromNib {
     // Initialization code
-}
-
-- (void)dealloc {
-    _avatorButton = nil;
-    _timestampLabel = nil;
-    _messageBubbleView = nil;
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [self setup];
 }
 
 - (void)layoutSubviews {
@@ -306,6 +426,13 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
     
     self.avatorButton.frame = avatorButtonFrame;
     self.messageBubbleView.frame = bubbleMessageViewFrame;
+}
+
+- (void)dealloc {
+    _avatorButton = nil;
+    _timestampLabel = nil;
+    _messageBubbleView = nil;
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 #pragma mark - TableViewCell

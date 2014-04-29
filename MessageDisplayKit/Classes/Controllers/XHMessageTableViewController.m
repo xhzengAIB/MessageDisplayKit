@@ -118,6 +118,12 @@
         case XHBubbleMessagevoice: {
             break;
         }
+        case XHBubbleMessageFace: {
+            break;
+        }
+        case XHBubbleMessageLocalPosition: {
+            break;
+        }
         default:
             break;
     }
@@ -191,6 +197,10 @@
     return self;
 }
 
+- (void)awakeFromNib {
+    [self setup];
+}
+
 - (void)initilzer {
     if ([self respondsToSelector:@selector(automaticallyAdjustsScrollViewInsets)]) {
         self.automaticallyAdjustsScrollViewInsets = NO;
@@ -223,8 +233,32 @@
                                    self.view.frame.size.width,
                                    inputViewHeight);
     
-    // block回调键盘通知
     WEAKSELF
+    if (self.allowsPanToDismissKeyboard) {
+        // 控制输入工具条的位置块
+        void (^AnimationForMessageInputViewAtPoint)(CGPoint point) = ^(CGPoint point) {
+            CGRect inputViewFrame = weakSelf.messageInputView.frame;
+            CGPoint keyboardOrigin = [weakSelf.view convertPoint:point fromView:nil];
+            inputViewFrame.origin.y = keyboardOrigin.y - inputViewFrame.size.height;
+            weakSelf.messageInputView.frame = inputViewFrame;
+        };
+        
+        self.messageTableView.keyboardDidScrollToPoint = ^(CGPoint point) {
+            AnimationForMessageInputViewAtPoint(point);
+        };
+        
+        self.messageTableView.keyboardWillSnapBackToPoint = ^(CGPoint point) {
+            AnimationForMessageInputViewAtPoint(point);
+        };
+        
+        self.messageTableView.keyboardWillBeDismissed = ^() {
+            CGRect inputViewFrame = weakSelf.messageInputView.frame;
+            inputViewFrame.origin.y = weakSelf.view.bounds.size.height - inputViewFrame.size.height;
+            weakSelf.messageInputView.frame = inputViewFrame;
+        };
+    }
+    
+    // block回调键盘通知
     self.messageTableView.keyboardWillChange = ^(CGRect keyboardRect, UIViewAnimationOptions options, double duration, BOOL showKeyborad){
         [UIView animateWithDuration:duration
                               delay:0.0
@@ -251,28 +285,6 @@
                                  [weakSelf scrollToBottomAnimated:NO];
                          }
                          completion:nil];
-    };
-    
-    // 控制输入工具条的位置块
-    void (^AnimationForMessageInputViewAtPoint)(CGPoint point) = ^(CGPoint point) {
-        CGRect inputViewFrame = weakSelf.messageInputView.frame;
-        CGPoint keyboardOrigin = [weakSelf.view convertPoint:point fromView:nil];
-        inputViewFrame.origin.y = keyboardOrigin.y - inputViewFrame.size.height;
-        weakSelf.messageInputView.frame = inputViewFrame;
-    };
-    
-    self.messageTableView.keyboardDidScrollToPoint = ^(CGPoint point) {
-        AnimationForMessageInputViewAtPoint(point);
-    };
-    
-    self.messageTableView.keyboardWillSnapBackToPoint = ^(CGPoint point) {
-        AnimationForMessageInputViewAtPoint(point);
-    };
-    
-    self.messageTableView.keyboardWillBeDismissed = ^() {
-        CGRect inputViewFrame = weakSelf.messageInputView.frame;
-        inputViewFrame.origin.y = weakSelf.view.bounds.size.height - inputViewFrame.size.height;
-        weakSelf.messageInputView.frame = inputViewFrame;
     };
     
     self.messageTableView.keyboardDidHide = ^() {
@@ -468,19 +480,7 @@
     return YES;
 }
 
-#pragma mark - XHMessageInputView Delegate
-
-- (void)inputTextViewDidBeginEditing:(XHMessageTextView *)messageInputTextView {
-    if (!self.previousTextViewContentHeight)
-		self.previousTextViewContentHeight = [self getTextViewContentH:messageInputTextView];
-}
-
-- (void)didSendMessageWithText:(NSString *)text {
-    DLog(@"text : %@", text);
-    if ([self.delegate respondsToSelector:@selector(didSendText:fromSender:onDate:)]) {
-        [self.delegate didSendText:text fromSender:self.messageSender onDate:[NSDate date]];
-    }
-}
+#pragma mark - XHMessage Send helper Method
 
 - (void)didSendMessageWithPhoto:(UIImage *)photo {
     DLog(@"send photo : %@", photo);
@@ -503,7 +503,73 @@
     }
 }
 
-#pragma mark - Scroll view delegate
+#pragma mark - XHMessageInputView Delegate
+
+- (void)inputTextViewDidBeginEditing:(XHMessageTextView *)messageInputTextView {
+    if (!self.previousTextViewContentHeight)
+		self.previousTextViewContentHeight = [self getTextViewContentH:messageInputTextView];
+}
+
+- (void)didSendMessageWithText:(NSString *)text {
+    DLog(@"text : %@", text);
+    if ([self.delegate respondsToSelector:@selector(didSendText:fromSender:onDate:)]) {
+        [self.delegate didSendText:text fromSender:self.messageSender onDate:[NSDate date]];
+    }
+}
+
+- (void)didSelectedMultipleMediaAction {
+    DLog(@"didSelectedMultipleMediaAction");
+}
+
+- (void)didSendFaceMessageWithFacePath:(NSString *)facePath {
+    DLog(@"facePath : %@", facePath);
+}
+
+- (void)didStartRecordingVoice {
+    DLog(@"didStartRecordingVoice");
+}
+
+- (void)didCancelRecordingVoice {
+    DLog(@"didCancelRecordingVoice");
+}
+
+- (void)didFinishRecoingVoice {
+    DLog(@"didFinishRecoingVoice");
+}
+
+#pragma mark - XHMessageTableViewCell delegate
+
+- (void)multiMediaMessageDidSelectedOnMessage:(id<XHMessageModel>)message atIndexPath:(NSIndexPath *)indexPath onMessageTableViewCell:(XHMessageTableViewCell *)messageTableViewCell {
+    switch (message.messageMediaType) {
+        case XHBubbleMessagePhoto:
+            DLog(@"message : %@", message.photo);
+            break;
+        case XHBubbleMessageVideo:
+            DLog(@"message : %@", message.videoConverPhoto);
+            break;
+        case XHBubbleMessagevoice:
+            DLog(@"message : %@", message.voicePath);
+            [messageTableViewCell.messageBubbleView.animationVoiceImageView startAnimating];
+            [messageTableViewCell.messageBubbleView.animationVoiceImageView performSelector:@selector(stopAnimating) withObject:nil afterDelay:10];
+            break;
+        default:
+            break;
+    }
+}
+
+- (void)didDoubleSelectedOnTextMessage:(id<XHMessageModel>)message atIndexPath:(NSIndexPath *)indexPath {
+    DLog(@"text : %@", message.text);
+}
+
+- (void)didSelectedAvatorAtIndexPath:(NSIndexPath *)indexPath {
+    DLog(@"indexPath : %@", indexPath);
+}
+
+- (void)menuDidSelectedAtBubbleMessageMenuSelecteType:(XHBubbleMessageMenuSelecteType)bubbleMessageMenuSelecteType {
+    
+}
+
+#pragma mark - UIScrollView delegate
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
 	self.isUserScrolling = YES;
@@ -516,24 +582,6 @@
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
     self.isUserScrolling = NO;
-}
-
-#pragma mark - XHMessageTableViewController Delegate
-
-- (void)didSendText:(NSString *)text fromSender:(NSString *)sender onDate:(NSDate *)date {
-    // subClass
-}
-
-- (void)didSendPhoto:(UIImage *)photo fromSender:(NSString *)sender onDate:(NSDate *)date {
-    // subClass
-}
-
-- (void)didSendVideo:(NSString *)videoPath fromSender:(NSString *)sender onDate:(NSDate *)date {
-    // subClass
-}
-
-- (void)didSendvoice:(NSString *)voicePath fromSender:(NSString *)sender onDate:(NSDate *)date {
-    // subClass
 }
 
 #pragma mark - XHMessageTableViewController DataSource
@@ -566,8 +614,10 @@
     
     if (!messageTableViewCell) {
         messageTableViewCell = [[XHMessageTableViewCell alloc] initWithMessage:message displaysTimestamp:displayTimestamp reuseIdentifier:cellIdentifier];
+        messageTableViewCell.delegate = self;
     }
     
+    messageTableViewCell.indexPath = indexPath;
     [messageTableViewCell configureCellWithMessage:message displaysTimestamp:displayTimestamp];
     [messageTableViewCell setBackgroundColor:tableView.backgroundColor];
     

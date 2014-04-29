@@ -25,12 +25,14 @@
     }
     NSMutableArray *images = [NSMutableArray arrayWithCapacity:4];
     for (NSInteger i = 0; i < 4; i ++) {
-        [images addObject:[UIImage imageNamed:[imageSepatorName stringByAppendingFormat:@"VoiceNodePlaying00%d", i]]];
+        UIImage *image = [UIImage imageNamed:[imageSepatorName stringByAppendingFormat:@"VoiceNodePlaying00%ld", (long)i]];
+        if (image)
+            [images addObject:image];
     }
     
     messageVoiceAniamtionImageView.image = [UIImage imageNamed:[imageSepatorName stringByAppendingString:@"VoiceNodePlaying"]];
     messageVoiceAniamtionImageView.animationImages = images;
-    messageVoiceAniamtionImageView.animationDuration = 0.5;
+    messageVoiceAniamtionImageView.animationDuration = 1.0;
     [messageVoiceAniamtionImageView stopAnimating];
     
     return messageVoiceAniamtionImageView;

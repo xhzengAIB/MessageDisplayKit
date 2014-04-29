@@ -9,8 +9,8 @@
 #import <Foundation/Foundation.h>
 
 typedef NS_ENUM(NSInteger, XHBubbleMessageType) {
-    XHBubbleMessageTypeReceiving = 0,
-    XHBubbleMessageTypeSending
+    XHBubbleMessageTypeSending = 0,
+    XHBubbleMessageTypeReceiving
 };
 
 typedef NS_ENUM(NSUInteger, XHBubbleImageViewStyle) {
@@ -22,6 +22,29 @@ typedef NS_ENUM(NSInteger, XHBubbleMessageMediaType) {
     XHBubbleMessagePhoto = 1,
     XHBubbleMessageVideo = 2,
     XHBubbleMessagevoice = 3,
+    XHBubbleMessageFace = 4,
+    XHBubbleMessageLocalPosition = 5,
+};
+
+typedef NS_ENUM(NSInteger, XHBubbleMessageMenuSelecteType) {
+    XHBubbleMessageTextCopy = 0,
+    XHBubbleMessageTextTranspond = 1,
+    XHBubbleMessageTextFavorites = 2,
+    XHBubbleMessageTextMore = 3,
+    
+    XHBubbleMessagePhotoCopy = 4,
+    XHBubbleMessagePhotoTranspond = 5,
+    XHBubbleMessagePhotoFavorites = 6,
+    XHBubbleMessagePhotoMore = 7,
+    
+    XHBubbleMessageVideoTranspond = 8,
+    XHBubbleMessageVideoFavorites = 9,
+    XHBubbleMessageVideoMore = 10,
+    
+    XHBubbleMessageVoicePlay = 11,
+    XHBubbleMessageVoiceFavorites = 12,
+    XHBubbleMessageVoiceTurnToText = 13,
+    XHBubbleMessageVoiceMore = 14,
 };
 
 @interface XHMessageBubbleFactory : NSObject
