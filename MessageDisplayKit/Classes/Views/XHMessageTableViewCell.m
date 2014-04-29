@@ -404,6 +404,7 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
 
 - (void)awakeFromNib {
     // Initialization code
+    [self setup];
 }
 
 - (void)layoutSubviews {

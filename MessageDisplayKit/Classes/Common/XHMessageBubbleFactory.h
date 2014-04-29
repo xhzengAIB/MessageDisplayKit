@@ -9,8 +9,8 @@
 #import <Foundation/Foundation.h>
 
 typedef NS_ENUM(NSInteger, XHBubbleMessageType) {
-    XHBubbleMessageTypeReceiving = 0,
-    XHBubbleMessageTypeSending
+    XHBubbleMessageTypeSending = 0,
+    XHBubbleMessageTypeReceiving
 };
 
 typedef NS_ENUM(NSUInteger, XHBubbleImageViewStyle) {

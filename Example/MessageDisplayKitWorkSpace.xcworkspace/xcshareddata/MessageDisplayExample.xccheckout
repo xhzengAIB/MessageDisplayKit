@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>FA3609A9-ED6A-40D1-8AA1-4A73C30C5726</string>
+	<key>IDESourceControlProjectName</key>
+	<string>MessageDisplayExample</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>DB6A1799-7BB1-46E4-AEA5-37004ACDDB6E</key>
+		<string>https://github.com/xhzengAIB/MessageDisplayKit</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Example/MessageDisplayExample/MessageDisplayExample.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>DB6A1799-7BB1-46E4-AEA5-37004ACDDB6E</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/xhzengAIB/MessageDisplayKit</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>DB6A1799-7BB1-46E4-AEA5-37004ACDDB6E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DB6A1799-7BB1-46E4-AEA5-37004ACDDB6E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MessageDisplayKit</string>
+		</dict>
+	</array>
+</dict>
+</plist>

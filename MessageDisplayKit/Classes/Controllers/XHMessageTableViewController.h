@@ -10,7 +10,7 @@
 
 #import "XHMessageTableView.h"
 #import "XHMessageInputView.h"
-
+#import "UIScrollView+XHkeyboardControl.h"
 
 @protocol XHMessageTableViewControllerDelegate <NSObject>
 

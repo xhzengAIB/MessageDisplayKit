@@ -12,7 +12,7 @@
 		<key>MessageDisplayFramework.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -23,6 +23,11 @@
 			<true/>
 		</dict>
 		<key>74180BE4190F447100A35C82</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>74180CB9190F526100A35C82</key>
 		<dict>
 			<key>primary</key>
 			<true/>

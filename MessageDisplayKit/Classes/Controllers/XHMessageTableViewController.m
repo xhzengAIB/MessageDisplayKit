@@ -191,6 +191,10 @@
     return self;
 }
 
+- (void)awakeFromNib {
+    [self setup];
+}
+
 - (void)initilzer {
     if ([self respondsToSelector:@selector(automaticallyAdjustsScrollViewInsets)]) {
         self.automaticallyAdjustsScrollViewInsets = NO;
@@ -559,7 +563,7 @@
     
 }
 
-#pragma mark - Scroll view delegate
+#pragma mark - UIScrollView delegate
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
 	self.isUserScrolling = YES;

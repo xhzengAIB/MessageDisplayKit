@@ -49,6 +49,7 @@
 		74180C1A190F450D00A35C82 /* XHMessageDisplayTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 74D1C5BD190DE55B003B1BCA /* XHMessageDisplayTextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74180C1B190F450F00A35C82 /* XHBubblePhotoImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 748FFCE0190D737B00752C8A /* XHBubblePhotoImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74180C1C190F451200A35C82 /* XHMessageTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 74824552190902DA008EC388 /* XHMessageTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		74180CCA190F52C300A35C82 /* MessageDisplayKitString.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74BBB022190B8EAB00093577 /* MessageDisplayKitString.strings */; };
 		7475BA33190D4B7B001DD9B1 /* TableViewBackgroundImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7475BA32190D4B7B001DD9B1 /* TableViewBackgroundImage@2x.png */; };
 		748245051908C730008EC388 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748245041908C730008EC388 /* Foundation.framework */; };
 		748245071908C730008EC388 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748245061908C730008EC388 /* CoreGraphics.framework */; };
@@ -140,6 +141,7 @@
 		74180BEE190F447100A35C82 /* MessageDisplayFrameworkTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MessageDisplayFrameworkTests-Info.plist"; sourceTree = "<group>"; };
 		74180BF0190F447100A35C82 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		74180BF2190F447100A35C82 /* MessageDisplayFrameworkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageDisplayFrameworkTests.m; sourceTree = "<group>"; };
+		74180CBB190F526100A35C82 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		7475BA32190D4B7B001DD9B1 /* TableViewBackgroundImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TableViewBackgroundImage@2x.png"; sourceTree = "<group>"; };
 		748245011908C730008EC388 /* MessageDisplayExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessageDisplayExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		748245041908C730008EC388 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -341,6 +343,7 @@
 				748245061908C730008EC388 /* CoreGraphics.framework */,
 				748245081908C730008EC388 /* UIKit.framework */,
 				7482451D1908C730008EC388 /* XCTest.framework */,
+				74180CBB190F526100A35C82 /* CoreFoundation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -725,6 +728,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				74180BDC190F447100A35C82 /* InfoPlist.strings in Resources */,
+				74180CCA190F52C300A35C82 /* MessageDisplayKitString.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1191,6 +1195,7 @@
 				74180BF5190F447100A35C82 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		74180BF9190F447100A35C82 /* Build configuration list for PBXNativeTarget "MessageDisplayFrameworkTests" */ = {
 			isa = XCConfigurationList;
@@ -1199,6 +1204,7 @@
 				74180BF7190F447100A35C82 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		748244FC1908C730008EC388 /* Build configuration list for PBXProject "MessageDisplayExample" */ = {
 			isa = XCConfigurationList;
