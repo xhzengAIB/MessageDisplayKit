@@ -13,35 +13,35 @@ A messages UI for iPhone and iPad,You can send text, voice, image,video,emotion 
 ## 将来                                            Features 
 
 * 1、高度可定制的。                                     
-Highly customizable.
+Highly customizable.                           
 * 2、任意消息的大小。                                   
-Arbitrary message sizes.
+Arbitrary message sizes.                           
 * 3、复制&粘贴消息。                       
-Copy & paste messages.
+Copy & paste messages.                           
 * 4、数据检查器(确认电话号码、链接、日期等)。           
-Data detectors (recognizes phone numbers, links, dates, etc.).
+Data detectors (recognizes phone numbers, links, dates, etc.).                           
 * 5、时间戳。                                           
-Timestamps.
+Timestamps.                           
 * 6、头像。                                             
-Avatars.
+Avatars.                           
 * 7、向下滑动隐藏键盘。                                 
-Swipe down to hide keyboard.
+Swipe down to hide keyboard.                           
 * 8、动态调整输入文本视图类型。                         
-Dynamically resizes input text view as you type.
-* 9、自动启用/禁用发送按钮(如果文本视图是空的或不是)。  
-Automatically enables/disables send button (if text view is empty or not).
+Dynamically resizes input text view as you type.                           
+* 9、自动启用/禁用发送按钮(如果文本视图是空的或不是)。                             
+Automatically enables/disables send button (if text view is empty or not).                           
 * 10、发送/接收声音效果。                                
-Send/Receive sound effects.
+Send/Receive sound effects.                           
 * 11、发送语音。                           
 Send the voice message.                           
 * 12、发送图片。                           
 Send the photo message.                           
 * 13、发送视频。                           
 Send the video message.                           
-* 14、发送地理位置。
-Send the local position message.
-* 15、发送第三方gif表情。
-Send the gif face message.
+* 14、发送地理位置。                           
+Send the local position message.                           
+* 15、发送第三方gif表情。                           
+Send the gif face message.                           
 * 16、通用于iPhone和iPad。                               
 Universal for iPhone and iPad.                           
 
