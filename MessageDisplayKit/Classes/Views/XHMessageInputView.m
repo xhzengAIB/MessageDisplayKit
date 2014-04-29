@@ -53,7 +53,9 @@
             break;
         }
         case 1: {
-            
+            if ([self.delegate respondsToSelector:@selector(didSendFaceMessageWithFacePath:)]) {
+                [self.delegate didSendFaceMessageWithFacePath:[[NSBundle mainBundle] pathForResource:@"Demo.gif" ofType:nil]];
+            }
             break;
         }
         case 2: {

@@ -56,6 +56,7 @@
 		74180D37190F561100A35C82 /* JieIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74180D15190F561100A35C82 /* JieIcon@2x.png */; };
 		74180D38190F561100A35C82 /* meIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74180D16190F561100A35C82 /* meIcon@2x.png */; };
 		74180D39190F561100A35C82 /* TableViewBackgroundImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74180D17190F561100A35C82 /* TableViewBackgroundImage@2x.png */; };
+		74180D76190FF7D700A35C82 /* Demo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 74180D75190FF7D700A35C82 /* Demo.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +126,7 @@
 		74180D16190F561100A35C82 /* meIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "meIcon@2x.png"; sourceTree = "<group>"; };
 		74180D17190F561100A35C82 /* TableViewBackgroundImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TableViewBackgroundImage@2x.png"; sourceTree = "<group>"; };
 		74180D18190F561100A35C82 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/MessageDisplayKitString.strings"; sourceTree = "<group>"; };
+		74180D75190FF7D700A35C82 /* Demo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Demo.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +247,7 @@
 				74180D03190F561100A35C82 /* InputViewImages */,
 				74180D15190F561100A35C82 /* JieIcon@2x.png */,
 				74180D16190F561100A35C82 /* meIcon@2x.png */,
+				74180D75190FF7D700A35C82 /* Demo.gif */,
 				74180D17190F561100A35C82 /* TableViewBackgroundImage@2x.png */,
 			);
 			path = Resources;
@@ -412,6 +415,7 @@
 				74180D22190F561100A35C82 /* SenderVoiceNodePlaying@2x.png in Resources */,
 				74180D2B190F561100A35C82 /* input-bar-flat@2x.png in Resources */,
 				74180D38190F561100A35C82 /* meIcon@2x.png in Resources */,
+				74180D76190FF7D700A35C82 /* Demo.gif in Resources */,
 				74180D1A190F561100A35C82 /* ReceiverVoiceNodePlaying001@2x.png in Resources */,
 				74180D24190F561100A35C82 /* weChatBubble_Receiving_Solid@2x.png in Resources */,
 				74180D30190F561100A35C82 /* holdDownButton@2x.png in Resources */,

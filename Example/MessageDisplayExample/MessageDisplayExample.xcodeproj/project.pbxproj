@@ -50,6 +50,7 @@
 		74180C1B190F450F00A35C82 /* XHBubblePhotoImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 748FFCE0190D737B00752C8A /* XHBubblePhotoImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74180C1C190F451200A35C82 /* XHMessageTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 74824552190902DA008EC388 /* XHMessageTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74180CCA190F52C300A35C82 /* MessageDisplayKitString.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74BBB022190B8EAB00093577 /* MessageDisplayKitString.strings */; };
+		74180D74190FF7C600A35C82 /* Demo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 74180D73190FF7C600A35C82 /* Demo.gif */; };
 		7475BA33190D4B7B001DD9B1 /* TableViewBackgroundImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7475BA32190D4B7B001DD9B1 /* TableViewBackgroundImage@2x.png */; };
 		748245051908C730008EC388 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748245041908C730008EC388 /* Foundation.framework */; };
 		748245071908C730008EC388 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748245061908C730008EC388 /* CoreGraphics.framework */; };
@@ -141,6 +142,7 @@
 		74180BF0190F447100A35C82 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		74180BF2190F447100A35C82 /* MessageDisplayFrameworkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageDisplayFrameworkTests.m; sourceTree = "<group>"; };
 		74180CBB190F526100A35C82 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		74180D73190FF7C600A35C82 /* Demo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Demo.gif; sourceTree = "<group>"; };
 		7475BA32190D4B7B001DD9B1 /* TableViewBackgroundImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TableViewBackgroundImage@2x.png"; sourceTree = "<group>"; };
 		748245011908C730008EC388 /* MessageDisplayExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessageDisplayExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		748245041908C730008EC388 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -509,6 +511,7 @@
 		74FAB0BA190A92CC005623D0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				74180D73190FF7C600A35C82 /* Demo.gif */,
 				74BBB033190D226300093577 /* JieIcon@2x.png */,
 				74FAB0E3190A9E13005623D0 /* meIcon@2x.png */,
 				7475BA32190D4B7B001DD9B1 /* TableViewBackgroundImage@2x.png */,
@@ -775,6 +778,7 @@
 				74FAB0D7190A92CC005623D0 /* input-field-cover.png in Resources */,
 				74D1C5DB190E291E003B1BCA /* ReceiverVoiceNodePlaying001@2x.png in Resources */,
 				74FAB0D4190A92CC005623D0 /* input-bar-background@2x.png in Resources */,
+				74180D74190FF7C600A35C82 /* Demo.gif in Resources */,
 				74D1C5CD190E2885003B1BCA /* multiMedia_HL@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
