@@ -1,7 +1,9 @@
 ![image](https://github.com/xhzengAIB/LearnEnglish/raw/master/Screenshots/MessageDisplayKitExample.gif)
 
-## 建议
-如果发现原理上不懂的时候，请不要着急，因为代码都有注释，如果看完注释还是不懂的话，那你只能到群里问了，或者在githu开issue，[点击这里](https://github.com/xhzengAIB/MessageDisplayKit/issues?state=open)移步新建一个issue（至于怎么新建，打开issue页面，里面有一个new issue的按钮，点击之后你就会的了），写上你不明白的地方，我会在github给予帮助。
+## 建议    Suggest
+*如果发现原理上不懂的时候，请不要着急，因为代码都有注释，如果看完注释还是不懂的话，那你只能在githu开issue，[点击这里](https://github.com/xhzengAIB/MessageDisplayKit/issues?state=open)移步新建一个issue（至于怎么新建，打开issue页面，里面有一个new issue的按钮，点击之后你就会的了），写上你不明白的地方，我会在github给予帮助。                        
+
+*If found in principle don't understand, please don't try so hard, because the code has a comment, if finish see note or don't understand, that you can only open issue in githu, [click here] (https://github.com/xhzengAIB/MessageDisplayKit/issues?state=open) set a new issue (as to how new, opens the page of the issue, there is a new issue of button, click on the following you will), write down you don't understand of place, I will help them in making.
 
 MessageDisplayKit
 =================
