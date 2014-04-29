@@ -90,8 +90,12 @@
     [self finishSendMessageWithBubbleMessageType:XHBubbleMessagevoice];
 }
 
-- (void)configureCell:(XHMessageTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
-    
+- (void)didSendFace:(NSString *)facePath fromSender:(NSString *)sender onDate:(NSDate *)date {
+    [self finishSendMessageWithBubbleMessageType:XHBubbleMessageFace];
+}
+
+- (void)didSendLocalPosition {
+    [self finishSendMessageWithBubbleMessageType:XHBubbleMessageLocalPosition];
 }
 
 - (BOOL)shouldDisplayTimestampForRowAtIndexPath:(NSIndexPath *)indexPath {

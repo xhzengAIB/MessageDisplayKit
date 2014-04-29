@@ -118,6 +118,12 @@
         case XHBubbleMessagevoice: {
             break;
         }
+        case XHBubbleMessageFace: {
+            break;
+        }
+        case XHBubbleMessageLocalPosition: {
+            break;
+        }
         default:
             break;
     }
@@ -576,24 +582,6 @@
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
     self.isUserScrolling = NO;
-}
-
-#pragma mark - XHMessageTableViewController Delegate
-
-- (void)didSendText:(NSString *)text fromSender:(NSString *)sender onDate:(NSDate *)date {
-    // subClass
-}
-
-- (void)didSendPhoto:(UIImage *)photo fromSender:(NSString *)sender onDate:(NSDate *)date {
-    // subClass
-}
-
-- (void)didSendVideo:(NSString *)videoPath fromSender:(NSString *)sender onDate:(NSDate *)date {
-    // subClass
-}
-
-- (void)didSendvoice:(NSString *)voicePath fromSender:(NSString *)sender onDate:(NSDate *)date {
-    // subClass
 }
 
 #pragma mark - XHMessageTableViewController DataSource

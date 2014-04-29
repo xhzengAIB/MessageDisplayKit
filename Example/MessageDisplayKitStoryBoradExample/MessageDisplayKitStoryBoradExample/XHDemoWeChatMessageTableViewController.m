@@ -90,6 +90,14 @@
     [self finishSendMessageWithBubbleMessageType:XHBubbleMessagevoice];
 }
 
+- (void)didSendFace:(NSString *)facePath fromSender:(NSString *)sender onDate:(NSDate *)date {
+    [self finishSendMessageWithBubbleMessageType:XHBubbleMessageFace];
+}
+
+- (void)didSendLocalPosition {
+    [self finishSendMessageWithBubbleMessageType:XHBubbleMessageLocalPosition];
+}
+
 - (void)configureCell:(XHMessageTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     
 }

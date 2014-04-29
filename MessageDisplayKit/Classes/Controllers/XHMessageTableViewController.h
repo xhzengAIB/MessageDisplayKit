@@ -14,16 +14,72 @@
 
 @protocol XHMessageTableViewControllerDelegate <NSObject>
 
-@required
-
+@optional
+/**
+ *  发送文本消息的回调方法
+ *
+ *  @param text   目标文本字符串
+ *  @param sender 发送者的名字
+ *  @param date   发送时间
+ */
 - (void)didSendText:(NSString *)text fromSender:(NSString *)sender onDate:(NSDate *)date;
+
+/**
+ *  发送图片消息的回调方法
+ *
+ *  @param photo  目标图片对象，后续有可能会换
+ *  @param sender 发送者的名字
+ *  @param date   发送时间
+ */
 - (void)didSendPhoto:(UIImage *)photo fromSender:(NSString *)sender onDate:(NSDate *)date;
+
+/**
+ *  发送视频消息的回调方法
+ *
+ *  @param videoPath 目标视频本地路径
+ *  @param sender    发送者的名字
+ *  @param date      发送时间
+ */
 - (void)didSendVideo:(NSString *)videoPath fromSender:(NSString *)sender onDate:(NSDate *)date;
+
+/**
+ *  发送语音消息的回调方法
+ *
+ *  @param voicePath 目标语音本地路径
+ *  @param sender    发送者的名字
+ *  @param date      发送时间
+ */
 - (void)didSendvoice:(NSString *)voicePath fromSender:(NSString *)sender onDate:(NSDate *)date;
 
-@optional
+/**
+ *  发送第三方表情消息的回调方法
+ *
+ *  @param facePath 目标第三方表情的本地路径
+ *  @param sender   发送者的名字
+ *  @param date     发送时间
+ */
+- (void)didSendFace:(NSString *)facePath fromSender:(NSString *)sender onDate:(NSDate *)date;
 
+/**
+ *  有些网友说需要发送地理位置，这个我暂时放一放
+ */
+- (void)didSendLocalPosition;
+
+/**
+ *  是否显示时间轴Label的回调方法
+ *
+ *  @param indexPath 目标消息的位置IndexPath
+ *
+ *  @return 根据indexPath获取消息的Model的对象，从而判断返回YES or NO来控制是否显示时间轴Label
+ */
 - (BOOL)shouldDisplayTimestampForRowAtIndexPath:(NSIndexPath *)indexPath;
+
+/**
+ *  配置Cell的样式或者字体
+ *
+ *  @param cell      目标Cell
+ *  @param indexPath 目标Cell所在位置IndexPath
+ */
 - (void)configureCell:(XHMessageTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
 
 /**
