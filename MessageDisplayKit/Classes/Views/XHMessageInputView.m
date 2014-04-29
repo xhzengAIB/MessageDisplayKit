@@ -20,6 +20,9 @@
 
 @property (nonatomic, weak, readwrite) UIButton *holdDownButton;
 
+//data
+@property (nonatomic, copy) NSString *inputedText;
+
 @end
 
 @implementation XHMessageInputView
@@ -32,8 +35,12 @@
         case 0: {
             sender.selected = !sender.selected;
             if (sender.selected) {
+                self.inputedText = self.inputTextView.text;
+                self.inputTextView.text = @"";
                 [self.inputTextView resignFirstResponder];
             } else {
+                self.inputTextView.text = self.inputedText;
+                self.inputedText = nil;
                 [self.inputTextView becomeFirstResponder];
             }
             
