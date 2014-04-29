@@ -1,11 +1,12 @@
 ![image](https://github.com/xhzengAIB/LearnEnglish/raw/master/Screenshots/MessageDisplayKitExample.gif)
 
+## 建议
+如果发现原理上不懂的时候，请不要着急，因为代码都有注释，如果看完注释还是不懂的话，那你只能到群里问了，或者在githu开issue，[点击这里](https://github.com/xhzengAIB/MessageDisplayKit/issues?state=open)移步新建一个issue（至于怎么新建，打开issue页面，里面有一个new issue的按钮，点击之后你就会的了），写上你不明白的地方，我会在github给予帮助。
+
 MessageDisplayKit
 =================
-
 用于显示iPhone和iPad的消息页面，你可以发送文本、声音、图片、视频等消息。模仿微信App。                        
 A messages UI for iPhone and iPad,You can send text, voice, image,video,emotion .etc messages. like WeChat App.                                 
-
 
 ## 将来                                            Features 
 
