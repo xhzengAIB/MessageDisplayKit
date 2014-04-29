@@ -57,7 +57,6 @@
 		7482450F1908C730008EC388 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7482450D1908C730008EC388 /* InfoPlist.strings */; };
 		748245111908C730008EC388 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 748245101908C730008EC388 /* main.m */; };
 		748245151908C730008EC388 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 748245141908C730008EC388 /* AppDelegate.m */; };
-		748245171908C730008EC388 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 748245161908C730008EC388 /* Images.xcassets */; };
 		7482451E1908C730008EC388 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7482451D1908C730008EC388 /* XCTest.framework */; };
 		7482451F1908C730008EC388 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748245041908C730008EC388 /* Foundation.framework */; };
 		748245201908C730008EC388 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748245081908C730008EC388 /* UIKit.framework */; };
@@ -153,7 +152,6 @@
 		748245121908C730008EC388 /* MessageDisplayExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MessageDisplayExample-Prefix.pch"; sourceTree = "<group>"; };
 		748245131908C730008EC388 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		748245141908C730008EC388 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		748245161908C730008EC388 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7482451C1908C730008EC388 /* MessageDisplayExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MessageDisplayExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7482451D1908C730008EC388 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		748245251908C730008EC388 /* MessageDisplayExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MessageDisplayExampleTests-Info.plist"; sourceTree = "<group>"; };
@@ -357,7 +355,6 @@
 				74BBB02B190BE8C400093577 /* XHMessageRootViewController.m */,
 				74BBB030190C28CD00093577 /* XHDemoWeChatMessageTableViewController.h */,
 				74BBB031190C28CD00093577 /* XHDemoWeChatMessageTableViewController.m */,
-				748245161908C730008EC388 /* Images.xcassets */,
 				7482450B1908C730008EC388 /* Supporting Files */,
 			);
 			path = MessageDisplayExample;
@@ -763,7 +760,6 @@
 				74D1C5CC190E2885003B1BCA /* keyborad_HL@2x.png in Resources */,
 				74D1C5DC190E291E003B1BCA /* ReceiverVoiceNodePlaying002@2x.png in Resources */,
 				74FAB0D3190A92CC005623D0 /* input-bar-background.png in Resources */,
-				748245171908C730008EC388 /* Images.xcassets in Resources */,
 				74FAB0DC190A92CC005623D0 /* multiMedia@2x.png in Resources */,
 				7475BA33190D4B7B001DD9B1 /* TableViewBackgroundImage@2x.png in Resources */,
 				74D1C5DA190E291E003B1BCA /* ReceiverVoiceNodePlaying000@2x.png in Resources */,

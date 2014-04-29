@@ -16,7 +16,6 @@
 		74180C8A190F496E00A35C82 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74180C88190F496E00A35C82 /* Main_iPhone.storyboard */; };
 		74180C8D190F496E00A35C82 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74180C8B190F496E00A35C82 /* Main_iPad.storyboard */; };
 		74180C90190F496E00A35C82 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74180C8F190F496E00A35C82 /* ViewController.m */; };
-		74180C92190F496E00A35C82 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74180C91190F496E00A35C82 /* Images.xcassets */; };
 		74180C99190F496E00A35C82 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74180C98190F496E00A35C82 /* XCTest.framework */; };
 		74180C9A190F496E00A35C82 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74180C76190F496E00A35C82 /* Foundation.framework */; };
 		74180C9B190F496E00A35C82 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74180C7A190F496E00A35C82 /* UIKit.framework */; };
@@ -84,7 +83,6 @@
 		74180C8C190F496E00A35C82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		74180C8E190F496E00A35C82 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		74180C8F190F496E00A35C82 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		74180C91190F496E00A35C82 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		74180C97190F496E00A35C82 /* MessageDisplayKitStoryBoradExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MessageDisplayKitStoryBoradExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		74180C98190F496E00A35C82 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		74180CA0190F496E00A35C82 /* MessageDisplayKitStoryBoradExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MessageDisplayKitStoryBoradExampleTests-Info.plist"; sourceTree = "<group>"; };
@@ -196,7 +194,6 @@
 				74180C8F190F496E00A35C82 /* ViewController.m */,
 				74180CE7190F54C100A35C82 /* XHDemoWeChatMessageTableViewController.h */,
 				74180CE8190F54C100A35C82 /* XHDemoWeChatMessageTableViewController.m */,
-				74180C91190F496E00A35C82 /* Images.xcassets */,
 				74180C7D190F496E00A35C82 /* Supporting Files */,
 			);
 			path = MessageDisplayKitStoryBoradExample;
@@ -419,7 +416,6 @@
 				74180D24190F561100A35C82 /* weChatBubble_Receiving_Solid@2x.png in Resources */,
 				74180D30190F561100A35C82 /* holdDownButton@2x.png in Resources */,
 				74180D20190F561100A35C82 /* SenderVoiceNodePlaying002@2x.png in Resources */,
-				74180C92190F496E00A35C82 /* Images.xcassets in Resources */,
 				74180D21190F561100A35C82 /* SenderVoiceNodePlaying003@2x.png in Resources */,
 				74180D1C190F561100A35C82 /* ReceiverVoiceNodePlaying003@2x.png in Resources */,
 				74180D34190F561100A35C82 /* multiMedia_HL@2x.png in Resources */,
