@@ -9,9 +9,24 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>MessageDisplayFramework.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>74180BD5190F447100A35C82</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>74180BE4190F447100A35C82</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>748245001908C730008EC388</key>
 		<dict>
 			<key>primary</key>

@@ -25,7 +25,7 @@
     }
     NSMutableArray *images = [NSMutableArray arrayWithCapacity:4];
     for (NSInteger i = 0; i < 4; i ++) {
-        [images addObject:[UIImage imageNamed:[imageSepatorName stringByAppendingFormat:@"VoiceNodePlaying00%d", i]]];
+        [images addObject:[UIImage imageNamed:[imageSepatorName stringByAppendingFormat:@"VoiceNodePlaying00%ld", (long)i]]];
     }
     
     messageVoiceAniamtionImageView.image = [UIImage imageNamed:[imageSepatorName stringByAppendingString:@"VoiceNodePlaying"]];
