@@ -185,7 +185,7 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
             break;
         }
         case XHBubbleMessageText:
-        case XHBubbleMessagevoice: {
+        case XHBubbleMessageVoice: {
             UITapGestureRecognizer *tapGestureRecognizer;
             if (currentMediaType == XHBubbleMessageText) {
                 tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doubleTapGestureRecognizerHandle:)];

@@ -43,7 +43,7 @@
             messageTypeString = [messageTypeString stringByAppendingString:@"_Solid"];
             break;
         case XHBubbleMessageText:
-        case XHBubbleMessagevoice:
+        case XHBubbleMessageVoice:
             messageTypeString = [messageTypeString stringByAppendingString:@"_Solid"];
             break;
         default:

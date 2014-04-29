@@ -87,7 +87,7 @@
 }
 
 - (void)didSendvoice:(NSString *)voicePath fromSender:(NSString *)sender onDate:(NSDate *)date {
-    [self finishSendMessageWithBubbleMessageType:XHBubbleMessagevoice];
+    [self finishSendMessageWithBubbleMessageType:XHBubbleMessageVoice];
 }
 
 - (void)didSendFace:(NSString *)facePath fromSender:(NSString *)sender onDate:(NSDate *)date {

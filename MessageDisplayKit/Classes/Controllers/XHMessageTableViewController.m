@@ -115,7 +115,7 @@
         case XHBubbleMessageVideo: {
             break;
         }
-        case XHBubbleMessagevoice: {
+        case XHBubbleMessageVoice: {
             break;
         }
         case XHBubbleMessageFace: {
@@ -547,7 +547,7 @@
         case XHBubbleMessageVideo:
             DLog(@"message : %@", message.videoConverPhoto);
             break;
-        case XHBubbleMessagevoice:
+        case XHBubbleMessageVoice:
             DLog(@"message : %@", message.voicePath);
             [messageTableViewCell.messageBubbleView.animationVoiceImageView startAnimating];
             [messageTableViewCell.messageBubbleView.animationVoiceImageView performSelector:@selector(stopAnimating) withObject:nil afterDelay:10];

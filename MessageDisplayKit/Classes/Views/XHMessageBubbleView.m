@@ -97,7 +97,7 @@
             bubbleSize = [XHMessageBubbleView neededSizeForPhoto:message.videoConverPhoto];
             break;
         }
-        case XHBubbleMessagevoice: {
+        case XHBubbleMessageVoice: {
             bubbleSize = CGSizeMake(100, [XHMessageInputView textViewLineHeight]);
             break;
         }
@@ -155,7 +155,7 @@
     
     switch (currentType) {
         case XHBubbleMessageText:
-        case XHBubbleMessagevoice:
+        case XHBubbleMessageVoice:
         case XHBubbleMessageFace: {
             _bubbleImageView.image = [XHMessageBubbleFactory bubbleImageViewForType:message.bubbleMessageType style:XHBubbleImageViewStyleWeChat meidaType:message.messageMediaType];
             // 只要是文本、语音、第三方表情，背景的气泡都不能隐藏
@@ -175,7 +175,7 @@
                 _messageDisplayTextView.hidden = YES;
                 
                 // 对语音消息的进行特殊处理，第三方表情可以直接利用背景气泡的ImageView控件
-                if (currentType == XHBubbleMessagevoice) {
+                if (currentType == XHBubbleMessageVoice) {
                     [_animationVoiceImageView removeFromSuperview];
                     _animationVoiceImageView = nil;
                     
@@ -219,7 +219,7 @@
         case XHBubbleMessageVideo:
             _bubblePhotoImageView.messagePhoto = message.videoConverPhoto;
             break;
-        case XHBubbleMessagevoice:
+        case XHBubbleMessageVoice:
             break;
         case XHBubbleMessageFace:
             // 直接设置GIF
@@ -303,7 +303,7 @@
     
     switch (currentType) {
         case XHBubbleMessageText:
-        case XHBubbleMessagevoice: {
+        case XHBubbleMessageVoice: {
             self.bubbleImageView.frame = bubbleFrame;
             
             CGFloat textX = self.bubbleImageView.frame.origin.x;

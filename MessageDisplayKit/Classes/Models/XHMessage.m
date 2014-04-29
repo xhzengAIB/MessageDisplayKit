@@ -107,7 +107,7 @@
         self.sender = sender;
         self.date = date;
         
-        self.messageMediaType = XHBubbleMessagevoice;
+        self.messageMediaType = XHBubbleMessageVoice;
     }
     return self;
 }
@@ -202,7 +202,7 @@
                                                                       videoUrl:[self.videoUrl copy]
                                                                         sender:[self.sender copy]
                                                                           date:[self.date copy]];
-        case XHBubbleMessagevoice:
+        case XHBubbleMessageVoice:
             return [[[self class] allocWithZone:zone] initWithvoicePath:[self.voicePath copy]
                                                                      voiceUrl:[self.voiceUrl copy]
                                                                         sender:[self.sender copy]
