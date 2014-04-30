@@ -40,6 +40,10 @@
             XHMessage *voiceMessage = [[XHMessage alloc] initWithvoicePath:nil voiceUrl:nil sender:@"Jack" date:[NSDate date]];
             voiceMessage.bubbleMessageType = (i % 2) ? XHBubbleMessageTypeSending : XHBubbleMessageTypeReceiving;
             [messages addObject:voiceMessage];
+            
+            XHMessage *localPositionMessage = [[XHMessage alloc] initWithLocalPositionPhoto:[UIImage imageNamed:@"Fav_Cell_Loc"] sender:@"Jack" date:[NSDate date]];
+            localPositionMessage.bubbleMessageType = (i % 2) ? XHBubbleMessageTypeSending : XHBubbleMessageTypeReceiving;
+            [messages addObject:localPositionMessage];
         }
         dispatch_async(dispatch_get_main_queue(), ^{
             weakSelf.messages = messages;

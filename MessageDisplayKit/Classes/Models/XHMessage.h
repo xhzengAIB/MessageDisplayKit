@@ -24,6 +24,10 @@
 @property (nonatomic, copy) NSString *voicePath;
 @property (nonatomic, copy) NSString *voiceUrl;
 
+@property (nonatomic, copy) NSString *facePath;
+
+@property (nonatomic, strong) UIImage *localPositionPhoto;
+
 @property (nonatomic, strong) UIImage *avator;
 @property (nonatomic, copy) NSString *avatorUrl;
 
@@ -99,5 +103,13 @@
                          voiceUrl:(NSString *)voiceUrl
                                   sender:(NSString *)sender
                                     date:(NSDate *)date;
+
+- (instancetype)initWithFacePath:(NSString *)facePath
+                           sender:(NSString *)sender
+                             date:(NSDate *)date;
+
+- (instancetype)initWithLocalPositionPhoto:(UIImage *)localPositionPhoto
+                          sender:(NSString *)sender
+                            date:(NSDate *)date;
 
 @end

@@ -57,6 +57,7 @@
 		74180D38190F561100A35C82 /* meIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74180D16190F561100A35C82 /* meIcon@2x.png */; };
 		74180D39190F561100A35C82 /* TableViewBackgroundImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74180D17190F561100A35C82 /* TableViewBackgroundImage@2x.png */; };
 		74180D76190FF7D700A35C82 /* Demo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 74180D75190FF7D700A35C82 /* Demo.gif */; };
+		74180D801910865B00A35C82 /* Fav_Cell_Loc@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74180D7F1910865B00A35C82 /* Fav_Cell_Loc@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +128,7 @@
 		74180D17190F561100A35C82 /* TableViewBackgroundImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TableViewBackgroundImage@2x.png"; sourceTree = "<group>"; };
 		74180D18190F561100A35C82 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/MessageDisplayKitString.strings"; sourceTree = "<group>"; };
 		74180D75190FF7D700A35C82 /* Demo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Demo.gif; sourceTree = "<group>"; };
+		74180D7F1910865B00A35C82 /* Fav_Cell_Loc@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fav_Cell_Loc@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -264,6 +266,7 @@
 		74180CF1190F561000A35C82 /* WeChat */ = {
 			isa = PBXGroup;
 			children = (
+				74180D7E1910865B00A35C82 /* LocalPositionImages */,
 				74180CF2190F561000A35C82 /* VoiceAnimationImages */,
 				74180CFD190F561100A35C82 /* weChatBubble_Receiving_Cavern@2x.png */,
 				74180CFE190F561100A35C82 /* weChatBubble_Receiving_Solid@2x.png */,
@@ -326,6 +329,14 @@
 				74180D14190F561100A35C82 /* voice_HL@2x.png */,
 			);
 			path = ToolButtons;
+			sourceTree = "<group>";
+		};
+		74180D7E1910865B00A35C82 /* LocalPositionImages */ = {
+			isa = PBXGroup;
+			children = (
+				74180D7F1910865B00A35C82 /* Fav_Cell_Loc@2x.png */,
+			);
+			path = LocalPositionImages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -440,6 +451,7 @@
 				74180D33190F561100A35C82 /* multiMedia@2x.png in Resources */,
 				74180D25190F561100A35C82 /* weChatBubble_Sending_Cavern@2x.png in Resources */,
 				74180D27190F561100A35C82 /* MessageDisplayKitString.strings in Resources */,
+				74180D801910865B00A35C82 /* Fav_Cell_Loc@2x.png in Resources */,
 				74180D35190F561100A35C82 /* voice@2x.png in Resources */,
 				74180D1B190F561100A35C82 /* ReceiverVoiceNodePlaying002@2x.png in Resources */,
 			);

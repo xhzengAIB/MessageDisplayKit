@@ -24,6 +24,9 @@
 - (NSString *)videoUrl;
 
 - (NSString *)voicePath;
+- (UIImage *)localPositionPhoto;
+
+- (NSString *)facePath;
 - (NSString *)voiceUrl;
 
 - (UIImage *)avator;

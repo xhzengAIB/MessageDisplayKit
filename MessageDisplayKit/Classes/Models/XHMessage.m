@@ -112,6 +112,36 @@
     return self;
 }
 
+- (instancetype)initWithFacePath:(NSString *)facePath
+                          sender:(NSString *)sender
+                            date:(NSDate *)date {
+    self = [super init];
+    if (self) {
+        self.facePath = facePath;
+        
+        self.sender = sender;
+        self.date = date;
+        
+        self.messageMediaType = XHBubbleMessageFace;
+    }
+    return self;
+}
+
+- (instancetype)initWithLocalPositionPhoto:(UIImage *)localPositionPhoto
+                                    sender:(NSString *)sender
+                                      date:(NSDate *)date {
+    self = [super init];
+    if (self) {
+        self.localPositionPhoto = localPositionPhoto;
+        
+        self.sender = sender;
+        self.date = date;
+        
+        self.messageMediaType = XHBubbleMessageLocalPosition;
+    }
+    return self;
+}
+
 - (void)dealloc {
     _text = nil;
     
@@ -125,6 +155,10 @@
     
     _voicePath = nil;
     _voiceUrl = nil;
+    
+    _facePath = nil;
+    
+    _localPositionPhoto = nil;
     
     _avator = nil;
     _avatorUrl = nil;
@@ -152,6 +186,10 @@
         _voicePath = [aDecoder decodeObjectForKey:@"voicePath"];
         _voiceUrl = [aDecoder decodeObjectForKey:@"voiceUrl"];
         
+        _facePath = [aDecoder decodeObjectForKey:@"facePath"];
+        
+        _localPositionPhoto = [aDecoder decodeObjectForKey:@"localPositionPhoto"];
+        
         _avator = [aDecoder decodeObjectForKey:@"avator"];
         _avatorUrl = [aDecoder decodeObjectForKey:@"avatorUrl"];
         
@@ -175,8 +213,12 @@
     [aCoder encodeObject:self.voicePath forKey:@"voicePath"];
     [aCoder encodeObject:self.voiceUrl forKey:@"voiceUrl"];
     
-    [aCoder encodeObject:self.avator forKey:@"avator"];
-    [aCoder encodeObject:self.avatorUrl forKey:@"avatorUrl"];
+    [aCoder encodeObject:self.voicePath forKey:@"voicePath"];
+    [aCoder encodeObject:self.voiceUrl forKey:@"voiceUrl"];
+    
+    [aCoder encodeObject:self.facePath forKey:@"facePath"];
+    
+    [aCoder encodeObject:self.localPositionPhoto forKey:@"localPositionPhoto"];
     
     [aCoder encodeObject:self.sender forKey:@"sender"];
     [aCoder encodeObject:self.date forKey:@"date"];
@@ -207,6 +249,14 @@
                                                                      voiceUrl:[self.voiceUrl copy]
                                                                         sender:[self.sender copy]
                                                                           date:[self.date copy]];
+        case XHBubbleMessageFace:
+            return [[[self class] allocWithZone:zone] initWithFacePath:[self.facePath copy]
+                                                                sender:[self.sender copy]
+                                                                  date:[self.date copy]];
+        case XHBubbleMessageLocalPosition:
+            return [[[self class] allocWithZone:zone] initWithLocalPositionPhoto:[self.localPositionPhoto copy]
+                                                                          sender:[self.sender copy]
+                                                                            date:[self.date copy]];
         default:
             return nil;
     }

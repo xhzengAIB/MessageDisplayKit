@@ -51,6 +51,7 @@
 		74180C1C190F451200A35C82 /* XHMessageTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 74824552190902DA008EC388 /* XHMessageTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74180CCA190F52C300A35C82 /* MessageDisplayKitString.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74BBB022190B8EAB00093577 /* MessageDisplayKitString.strings */; };
 		74180D74190FF7C600A35C82 /* Demo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 74180D73190FF7C600A35C82 /* Demo.gif */; };
+		74180D7D1910864400A35C82 /* Fav_Cell_Loc@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74180D7C1910864400A35C82 /* Fav_Cell_Loc@2x.png */; };
 		7475BA33190D4B7B001DD9B1 /* TableViewBackgroundImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7475BA32190D4B7B001DD9B1 /* TableViewBackgroundImage@2x.png */; };
 		748245051908C730008EC388 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748245041908C730008EC388 /* Foundation.framework */; };
 		748245071908C730008EC388 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748245061908C730008EC388 /* CoreGraphics.framework */; };
@@ -143,6 +144,7 @@
 		74180BF2190F447100A35C82 /* MessageDisplayFrameworkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageDisplayFrameworkTests.m; sourceTree = "<group>"; };
 		74180CBB190F526100A35C82 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		74180D73190FF7C600A35C82 /* Demo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Demo.gif; sourceTree = "<group>"; };
+		74180D7C1910864400A35C82 /* Fav_Cell_Loc@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fav_Cell_Loc@2x.png"; sourceTree = "<group>"; };
 		7475BA32190D4B7B001DD9B1 /* TableViewBackgroundImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TableViewBackgroundImage@2x.png"; sourceTree = "<group>"; };
 		748245011908C730008EC388 /* MessageDisplayExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessageDisplayExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		748245041908C730008EC388 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -310,6 +312,14 @@
 				74180BEF190F447100A35C82 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		74180D7B1910864400A35C82 /* LocalPositionImages */ = {
+			isa = PBXGroup;
+			children = (
+				74180D7C1910864400A35C82 /* Fav_Cell_Loc@2x.png */,
+			);
+			path = LocalPositionImages;
 			sourceTree = "<group>";
 		};
 		748244F81908C730008EC388 = {
@@ -533,6 +543,7 @@
 		74FAB0BC190A92CC005623D0 /* WeChat */ = {
 			isa = PBXGroup;
 			children = (
+				74180D7B1910864400A35C82 /* LocalPositionImages */,
 				74D1C5CF190E291E003B1BCA /* VoiceAnimationImages */,
 				74FAB0BD190A92CC005623D0 /* weChatBubble_Receiving_Cavern@2x.png */,
 				74FAB0BE190A92CC005623D0 /* weChatBubble_Receiving_Solid@2x.png */,
@@ -774,6 +785,7 @@
 				74FAB0D2190A92CC005623D0 /* weChatBubble_Sending_Solid@2x.png in Resources */,
 				74D1C5DF190E291E003B1BCA /* SenderVoiceNodePlaying000@2x.png in Resources */,
 				74FAB0D6190A92CC005623D0 /* input-bar-flat@2x.png in Resources */,
+				74180D7D1910864400A35C82 /* Fav_Cell_Loc@2x.png in Resources */,
 				74FAB0DD190A92CC005623D0 /* voice@2x.png in Resources */,
 				74FAB0D7190A92CC005623D0 /* input-field-cover.png in Resources */,
 				74D1C5DB190E291E003B1BCA /* ReceiverVoiceNodePlaying001@2x.png in Resources */,

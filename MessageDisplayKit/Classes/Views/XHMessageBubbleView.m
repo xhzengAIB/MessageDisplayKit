@@ -190,7 +190,8 @@
             break;
         }
         case XHBubbleMessagePhoto:
-        case XHBubbleMessageVideo: {
+        case XHBubbleMessageVideo:
+        case XHBubbleMessageLocalPosition: {
             // 只要是图片和视频消息，必须把尖嘴显示控件显示出来
             _bubblePhotoImageView.hidden = NO;
             
@@ -200,9 +201,6 @@
             _animationVoiceImageView.hidden = YES;
             break;
         }
-        case XHBubbleMessageLocalPosition:
-            break;
-            
         default:
             break;
     }
@@ -223,9 +221,12 @@
             break;
         case XHBubbleMessageFace:
             // 直接设置GIF
-            _bubbleImageView.image = [UIImage imageNamed:message.text];
+            _bubbleImageView.image = [UIImage imageNamed:message.facePath];
             break;
         case XHBubbleMessageLocalPosition:
+            
+            DLog(@"地理位置：%d", _bubblePhotoImageView.hidden);
+            [_bubblePhotoImageView configureMessagePhoto:message.localPositionPhoto onBubbleMessageType:self.message.bubbleMessageType];
             break;
         default:
             break;
@@ -303,7 +304,8 @@
     
     switch (currentType) {
         case XHBubbleMessageText:
-        case XHBubbleMessageVoice: {
+        case XHBubbleMessageVoice:
+        case XHBubbleMessageFace: {
             self.bubbleImageView.frame = bubbleFrame;
             
             CGFloat textX = self.bubbleImageView.frame.origin.x;
@@ -325,7 +327,8 @@
             break;
         }
         case XHBubbleMessagePhoto:
-        case XHBubbleMessageVideo: {
+        case XHBubbleMessageVideo:
+        case XHBubbleMessageLocalPosition: {
             CGRect photoImageViewFrame = CGRectMake(bubbleFrame.origin.x - 2, 0, bubbleFrame.size.width, bubbleFrame.size.height);
             self.bubblePhotoImageView.frame = photoImageViewFrame;
             break;
