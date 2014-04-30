@@ -552,6 +552,12 @@
             [messageTableViewCell.messageBubbleView.animationVoiceImageView startAnimating];
             [messageTableViewCell.messageBubbleView.animationVoiceImageView performSelector:@selector(stopAnimating) withObject:nil afterDelay:10];
             break;
+        case XHBubbleMessageFace:
+            DLog(@"facePath : %@", message.facePath);
+            break;
+        case XHBubbleMessageLocalPosition:
+            DLog(@"facePath : %@", message.localPositionPhoto);
+            break;
         default:
             break;
     }
