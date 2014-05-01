@@ -136,8 +136,6 @@
 /**
  *  替换键盘的位置的第三方功能控件
  */
-@property (nonatomic, weak, readonly) XHPlugMenuView *plugMenuView;
-
 @property (nonatomic, weak, readonly) XHShareMenuView *shareMenuView;
 
 #pragma mark - Message View Controller Default stup

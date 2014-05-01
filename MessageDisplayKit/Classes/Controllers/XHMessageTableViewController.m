@@ -25,7 +25,6 @@
 
 @property (nonatomic, weak, readwrite) XHMessageTableView *messageTableView;
 @property (nonatomic, weak, readwrite) XHMessageInputView *messageInputView;
-@property (nonatomic, weak, readwrite) XHPlugMenuView *plugMenuView;
 @property (nonatomic, weak, readwrite) XHShareMenuView *shareMenuView;
 
 @end
@@ -98,24 +97,10 @@
     return _messages;
 }
 
-- (XHPlugMenuView *)plugMenuView {
-    if (!_plugMenuView) {
-        CGFloat keyboardViewHeight = 216;
-        XHPlugMenuView *plugMenuView = [[XHPlugMenuView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.view.bounds) - keyboardViewHeight, CGRectGetWidth(self.view.bounds), keyboardViewHeight)];
-        plugMenuView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
-        plugMenuView.alpha = 0.0;
-        [plugMenuView reloadDataWithPlugItems:self.plugItems];
-        [self.view addSubview:plugMenuView];
-        [self.view bringSubviewToFront:plugMenuView];
-        _plugMenuView = plugMenuView;
-    }
-    return _plugMenuView;
-}
-
 - (XHShareMenuView *)shareMenuView {
     if (!_shareMenuView) {
         CGFloat keyboardViewHeight = 216;
-        XHShareMenuView *shareMenuView = [[XHShareMenuView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.view.bounds), CGRectGetWidth(self.view.bounds), keyboardViewHeight)];
+        XHShareMenuView *shareMenuView = [[XHShareMenuView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.view.bounds) - keyboardViewHeight, CGRectGetWidth(self.view.bounds), keyboardViewHeight)];
         shareMenuView.backgroundColor = [UIColor grayColor];
         shareMenuView.alpha = 0.0;
         shareMenuView.shareMenuItems = self.shareMenuItems;
@@ -323,8 +308,9 @@
     
     self.messageTableView.keyboardDidChange = ^(BOOL didShowed) {
         if ([weakSelf.messageInputView.inputTextView isFirstResponder]) {
-            if (didShowed)
-                weakSelf.plugMenuView.alpha = 0.0;
+            if (didShowed) {
+                weakSelf.shareMenuView.alpha = 0.0;
+            }
         }
     };
     
@@ -565,21 +551,16 @@
 - (void)didSelectedMultipleMediaAction {
     DLog(@"didSelectedMultipleMediaAction");
     self.textViewInputViewType = XHTextViewPlugMenuInputViewType;
+    
     [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-        /*
-         self.plugMenuView.alpha = 1.0;
-         CGRect inputViewFrame = self.messageInputView.frame;
-         inputViewFrame.origin.y = CGRectGetMinY(self.plugMenuView.frame) - CGRectGetHeight(inputViewFrame);
-         self.messageInputView.frame = inputViewFrame;
-         */
-        
-        self.shareMenuView.alpha = 1.0;
-        CGRect inputViewFrame = self.shareMenuView.frame;
+        CGRect inputViewFrame = self.messageInputView.frame;
         inputViewFrame.origin.y = CGRectGetMinY(self.shareMenuView.frame) - CGRectGetHeight(inputViewFrame);
-        self.shareMenuView.frame = inputViewFrame;
+        self.messageInputView.frame = inputViewFrame;
+        
     } completion:^(BOOL finished) {
         
     }];
+    self.shareMenuView.alpha = 1.0;
     [self.messageInputView.inputTextView resignFirstResponder];
 }
 
