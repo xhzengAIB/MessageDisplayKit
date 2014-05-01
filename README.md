@@ -22,9 +22,9 @@ It's ok if you don't understand how the code works. Most code has comments, whic
 pod 'MessageDisplayKit', '~> 0.1.1'
 ```
 
-## TODO Features 
+## 特性 Features 
 
-* 1、高度可定制的。                                     
+* 1、高度可定制。                                     
 Highly customizable.                           
 * 2、任意消息的大小。                                   
 Arbitrary message sizes.                           
@@ -64,10 +64,10 @@ Support both iPhone and iPad.
 English: MessageDisplayKit is available under the MIT license, see the LICENSE file for more information.     
 
 
-## 须知       Note
-中文：如果您在您的项目中使用该开源组件,请给我们发[电子邮件](mailto:xhzengAIB@gmail.com?subject=From%20GitHub%20MessageDisplayKit)告诉我们您的应用程序的名称，谢谢！            
+## 须知       Notes
+如果您在您的项目中使用该开源组件,请给我们发[电子邮件](mailto:xhzengAIB@gmail.com?subject=From%20GitHub%20MessageDisplayKit)告诉我们您的应用程序的名称，谢谢！            
                            
-English: If you use this open source components in your project, please [Email us](mailto:xhzengAIB@gmail.com?subject=From%20GitHub%20MessageDisplayKit) to notify us the name of your application(s). Thanks!
+If you use this open source components in your project, please [Email us](mailto:xhzengAIB@gmail.com?subject=From%20GitHub%20MessageDisplayKit) to notify us the name of your application(s). Thanks!
 
 ## Credits
 Thanks to [jessesquires](https://github.com/jessesquires/MessagesTableViewController) who created JSMessagesViewController on which my work is based.
