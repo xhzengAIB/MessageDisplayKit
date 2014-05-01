@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		74065FC71912C02B00E1CE95 /* sharemore_friendcard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74065FBD1912C02B00E1CE95 /* sharemore_friendcard@2x.png */; };
+		74065FC81912C02B00E1CE95 /* sharemore_location@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74065FBE1912C02B00E1CE95 /* sharemore_location@2x.png */; };
+		74065FC91912C02B00E1CE95 /* sharemore_myfav@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74065FBF1912C02B00E1CE95 /* sharemore_myfav@2x.png */; };
+		74065FCA1912C02B00E1CE95 /* sharemore_openapi@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74065FC01912C02B00E1CE95 /* sharemore_openapi@2x.png */; };
+		74065FCB1912C02B00E1CE95 /* sharemore_pic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74065FC11912C02B00E1CE95 /* sharemore_pic@2x.png */; };
+		74065FCC1912C02B00E1CE95 /* sharemore_video@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74065FC21912C02B00E1CE95 /* sharemore_video@2x.png */; };
+		74065FCD1912C02B00E1CE95 /* sharemore_videovoip@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74065FC31912C02B00E1CE95 /* sharemore_videovoip@2x.png */; };
+		74065FCE1912C02B00E1CE95 /* sharemore_voiceinput@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74065FC41912C02B00E1CE95 /* sharemore_voiceinput@2x.png */; };
+		74065FCF1912C02B00E1CE95 /* sharemore_voipvoice@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74065FC51912C02B00E1CE95 /* sharemore_voipvoice@2x.png */; };
+		74065FD01912C02B00E1CE95 /* sharemore_wxtalk@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74065FC61912C02B00E1CE95 /* sharemore_wxtalk@2x.png */; };
 		74180C77190F496E00A35C82 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74180C76190F496E00A35C82 /* Foundation.framework */; };
 		74180C79190F496E00A35C82 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74180C78190F496E00A35C82 /* CoreGraphics.framework */; };
 		74180C7B190F496E00A35C82 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74180C7A190F496E00A35C82 /* UIKit.framework */; };
@@ -71,6 +81,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		74065FBD1912C02B00E1CE95 /* sharemore_friendcard@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sharemore_friendcard@2x.png"; sourceTree = "<group>"; };
+		74065FBE1912C02B00E1CE95 /* sharemore_location@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sharemore_location@2x.png"; sourceTree = "<group>"; };
+		74065FBF1912C02B00E1CE95 /* sharemore_myfav@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sharemore_myfav@2x.png"; sourceTree = "<group>"; };
+		74065FC01912C02B00E1CE95 /* sharemore_openapi@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sharemore_openapi@2x.png"; sourceTree = "<group>"; };
+		74065FC11912C02B00E1CE95 /* sharemore_pic@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sharemore_pic@2x.png"; sourceTree = "<group>"; };
+		74065FC21912C02B00E1CE95 /* sharemore_video@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sharemore_video@2x.png"; sourceTree = "<group>"; };
+		74065FC31912C02B00E1CE95 /* sharemore_videovoip@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sharemore_videovoip@2x.png"; sourceTree = "<group>"; };
+		74065FC41912C02B00E1CE95 /* sharemore_voiceinput@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sharemore_voiceinput@2x.png"; sourceTree = "<group>"; };
+		74065FC51912C02B00E1CE95 /* sharemore_voipvoice@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sharemore_voipvoice@2x.png"; sourceTree = "<group>"; };
+		74065FC61912C02B00E1CE95 /* sharemore_wxtalk@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sharemore_wxtalk@2x.png"; sourceTree = "<group>"; };
 		74180C73190F496E00A35C82 /* MessageDisplayKitStoryBoradExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessageDisplayKitStoryBoradExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74180C76190F496E00A35C82 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		74180C78190F496E00A35C82 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -156,6 +176,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		74065FBC1912C02B00E1CE95 /* PlugImages */ = {
+			isa = PBXGroup;
+			children = (
+				74065FBD1912C02B00E1CE95 /* sharemore_friendcard@2x.png */,
+				74065FBE1912C02B00E1CE95 /* sharemore_location@2x.png */,
+				74065FBF1912C02B00E1CE95 /* sharemore_myfav@2x.png */,
+				74065FC01912C02B00E1CE95 /* sharemore_openapi@2x.png */,
+				74065FC11912C02B00E1CE95 /* sharemore_pic@2x.png */,
+				74065FC21912C02B00E1CE95 /* sharemore_video@2x.png */,
+				74065FC31912C02B00E1CE95 /* sharemore_videovoip@2x.png */,
+				74065FC41912C02B00E1CE95 /* sharemore_voiceinput@2x.png */,
+				74065FC51912C02B00E1CE95 /* sharemore_voipvoice@2x.png */,
+				74065FC61912C02B00E1CE95 /* sharemore_wxtalk@2x.png */,
+			);
+			path = PlugImages;
+			sourceTree = "<group>";
+		};
 		74180C6A190F496E00A35C82 = {
 			isa = PBXGroup;
 			children = (
@@ -266,6 +303,7 @@
 		74180CF1190F561000A35C82 /* WeChat */ = {
 			isa = PBXGroup;
 			children = (
+				74065FBC1912C02B00E1CE95 /* PlugImages */,
 				74180D7E1910865B00A35C82 /* LocalPositionImages */,
 				74180CF2190F561000A35C82 /* VoiceAnimationImages */,
 				74180CFD190F561100A35C82 /* weChatBubble_Receiving_Cavern@2x.png */,
@@ -417,6 +455,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				74180D1F190F561100A35C82 /* SenderVoiceNodePlaying001@2x.png in Resources */,
+				74065FC91912C02B00E1CE95 /* sharemore_myfav@2x.png in Resources */,
 				74180D2E190F561100A35C82 /* face@2x.png in Resources */,
 				74180D1E190F561100A35C82 /* SenderVoiceNodePlaying000@2x.png in Resources */,
 				74180D37190F561100A35C82 /* JieIcon@2x.png in Resources */,
@@ -428,7 +467,9 @@
 				74180D38190F561100A35C82 /* meIcon@2x.png in Resources */,
 				74180D76190FF7D700A35C82 /* Demo.gif in Resources */,
 				74180D1A190F561100A35C82 /* ReceiverVoiceNodePlaying001@2x.png in Resources */,
+				74065FCB1912C02B00E1CE95 /* sharemore_pic@2x.png in Resources */,
 				74180D24190F561100A35C82 /* weChatBubble_Receiving_Solid@2x.png in Resources */,
+				74065FC71912C02B00E1CE95 /* sharemore_friendcard@2x.png in Resources */,
 				74180D30190F561100A35C82 /* holdDownButton@2x.png in Resources */,
 				74180D20190F561100A35C82 /* SenderVoiceNodePlaying002@2x.png in Resources */,
 				74180D21190F561100A35C82 /* SenderVoiceNodePlaying003@2x.png in Resources */,
@@ -442,15 +483,22 @@
 				74180D29190F561100A35C82 /* input-bar-background@2x.png in Resources */,
 				74180D1D190F561100A35C82 /* ReceiverVoiceNodePlaying@2x.png in Resources */,
 				74180D32190F561100A35C82 /* keyborad_HL@2x.png in Resources */,
+				74065FCA1912C02B00E1CE95 /* sharemore_openapi@2x.png in Resources */,
 				74180D26190F561100A35C82 /* weChatBubble_Sending_Solid@2x.png in Resources */,
+				74065FCC1912C02B00E1CE95 /* sharemore_video@2x.png in Resources */,
 				74180D23190F561100A35C82 /* weChatBubble_Receiving_Cavern@2x.png in Resources */,
+				74065FCD1912C02B00E1CE95 /* sharemore_videovoip@2x.png in Resources */,
 				74180D39190F561100A35C82 /* TableViewBackgroundImage@2x.png in Resources */,
 				74180D19190F561100A35C82 /* ReceiverVoiceNodePlaying000@2x.png in Resources */,
+				74065FD01912C02B00E1CE95 /* sharemore_wxtalk@2x.png in Resources */,
 				74180C8A190F496E00A35C82 /* Main_iPhone.storyboard in Resources */,
 				74180C81190F496E00A35C82 /* InfoPlist.strings in Resources */,
 				74180D33190F561100A35C82 /* multiMedia@2x.png in Resources */,
 				74180D25190F561100A35C82 /* weChatBubble_Sending_Cavern@2x.png in Resources */,
 				74180D27190F561100A35C82 /* MessageDisplayKitString.strings in Resources */,
+				74065FCF1912C02B00E1CE95 /* sharemore_voipvoice@2x.png in Resources */,
+				74065FCE1912C02B00E1CE95 /* sharemore_voiceinput@2x.png in Resources */,
+				74065FC81912C02B00E1CE95 /* sharemore_location@2x.png in Resources */,
 				74180D801910865B00A35C82 /* Fav_Cell_Loc@2x.png in Resources */,
 				74180D35190F561100A35C82 /* voice@2x.png in Resources */,
 				74180D1B190F561100A35C82 /* ReceiverVoiceNodePlaying002@2x.png in Resources */,

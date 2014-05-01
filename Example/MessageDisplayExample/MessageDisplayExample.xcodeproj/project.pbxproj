@@ -17,10 +17,10 @@
 		74065FAF19123ABC00E1CE95 /* sharemore_openapi@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74065FA419123ABC00E1CE95 /* sharemore_openapi@2x.png */; };
 		74065FB019123ABC00E1CE95 /* sharemore_pic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74065FA519123ABC00E1CE95 /* sharemore_pic@2x.png */; };
 		74065FB119123ABC00E1CE95 /* sharemore_friendcard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74065FA619123ABC00E1CE95 /* sharemore_friendcard@2x.png */; };
-		74065FB419123DDB00E1CE95 /* XHShareMenuView.h in Headers */ = {isa = PBXBuildFile; fileRef = 74065FB219123DDB00E1CE95 /* XHShareMenuView.h */; };
+		74065FB419123DDB00E1CE95 /* XHShareMenuView.h in Headers */ = {isa = PBXBuildFile; fileRef = 74065FB219123DDB00E1CE95 /* XHShareMenuView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74065FB519123DDB00E1CE95 /* XHShareMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74065FB319123DDB00E1CE95 /* XHShareMenuView.m */; };
 		74065FB619123DDB00E1CE95 /* XHShareMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74065FB319123DDB00E1CE95 /* XHShareMenuView.m */; };
-		74065FB919123E1C00E1CE95 /* XHShareMenuItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 74065FB719123E1C00E1CE95 /* XHShareMenuItem.h */; };
+		74065FB919123E1C00E1CE95 /* XHShareMenuItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 74065FB719123E1C00E1CE95 /* XHShareMenuItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74065FBA19123E1C00E1CE95 /* XHShareMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 74065FB819123E1C00E1CE95 /* XHShareMenuItem.m */; };
 		74065FBB19123E1C00E1CE95 /* XHShareMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 74065FB819123E1C00E1CE95 /* XHShareMenuItem.m */; };
 		74180BDC190F447100A35C82 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74180BDA190F447100A35C82 /* InfoPlist.strings */; };
@@ -661,11 +661,11 @@
 				74180C16190F450800A35C82 /* XHMessageInputView.h in Headers */,
 				74180C1B190F450F00A35C82 /* XHBubblePhotoImageView.h in Headers */,
 				74180C18190F450B00A35C82 /* XHMessageTableViewCell.h in Headers */,
+				74065FB919123E1C00E1CE95 /* XHShareMenuItem.h in Headers */,
 				74180C1C190F451200A35C82 /* XHMessageTableViewController.h in Headers */,
 				74180C19190F450C00A35C82 /* XHMessageBubbleView.h in Headers */,
 				74180C17190F450900A35C82 /* XHMessageTextView.h in Headers */,
 				74065FB419123DDB00E1CE95 /* XHShareMenuView.h in Headers */,
-				74065FB919123E1C00E1CE95 /* XHShareMenuItem.h in Headers */,
 				74180C15190F450600A35C82 /* XHMessageTableView.h in Headers */,
 				74180C14190F450400A35C82 /* XHMessage.h in Headers */,
 				74180C10190F44F800A35C82 /* UIScrollView+XHkeyboardControl.h in Headers */,
