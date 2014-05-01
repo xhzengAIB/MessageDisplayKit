@@ -72,7 +72,7 @@ English: MessageDisplayKit is available under the MIT license, see the LICENSE f
 ## 须知       Note
 中文：如果您在您的项目中使用该开源组件,请给我们发[电子邮件](mailto:xhzengAIB@gmail.com?subject=From%20GitHub%20MessageDisplayKit)告诉我们您的应用程序的名称,否则后果自负。              
                            
-English：If you use this open source components in your project, please [Email us](mailto:xhzengAIB@gmail.com?subject=From%20GitHub%20MessageDisplayKit) to notify us the name of your application(s).
+English: If you use this open source components in your project, please [Email us](mailto:xhzengAIB@gmail.com?subject=From%20GitHub%20MessageDisplayKit) to notify us the name of your application(s).
 
 
 ## Thanks you
