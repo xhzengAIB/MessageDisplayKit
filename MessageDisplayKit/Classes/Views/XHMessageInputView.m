@@ -325,6 +325,13 @@
 
 #pragma mark - Text view delegate
 
+- (BOOL)textViewShouldBeginEditing:(UITextView *)textView {
+    if ([self.delegate respondsToSelector:@selector(inputTextViewWillBeginEditing:)]) {
+        [self.delegate inputTextViewWillBeginEditing:self.inputTextView];
+    }
+    return YES;
+}
+
 - (void)textViewDidBeginEditing:(UITextView *)textView {
     [textView becomeFirstResponder];
     if ([self.delegate respondsToSelector:@selector(inputTextViewDidBeginEditing:)]) {

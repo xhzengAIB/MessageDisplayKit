@@ -10,7 +10,8 @@
 
 #import "XHMessageTableView.h"
 #import "XHMessageInputView.h"
-#import "UIScrollView+XHkeyboardControl.h"
+#import "XHPlugMenuView.h"
+#import "XHShareMenuView.h"
 
 @protocol XHMessageTableViewControllerDelegate <NSObject>
 
@@ -111,6 +112,13 @@
 @property (nonatomic, strong) NSMutableArray *messages;
 
 /**
+ *  第三方接入的功能，也包括系统自身的功能，比如拍照、发送地理位置
+ */
+@property (nonatomic, strong) NSArray *plugItems;
+
+@property (nonatomic, strong) NSArray *shareMenuItems;
+
+/**
  *  消息的主体，默认为nil
  */
 @property (nonatomic, copy) NSString *messageSender;
@@ -124,6 +132,13 @@
  *  用于显示发送消息类型控制的工具条，在底部
  */
 @property (nonatomic, weak, readonly) XHMessageInputView *messageInputView;
+
+/**
+ *  替换键盘的位置的第三方功能控件
+ */
+@property (nonatomic, weak, readonly) XHPlugMenuView *plugMenuView;
+
+@property (nonatomic, weak, readonly) XHShareMenuView *shareMenuView;
 
 #pragma mark - Message View Controller Default stup
 /**

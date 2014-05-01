@@ -22,6 +22,8 @@
 #import "XHMessageVoiceFactory.h"
 
 #import "XHMessage.h"
+#import "XHPlugItem.h"
+#import "XHShareMenuItem.h"
 
 #import "XHMessageTableViewCell.h"
 

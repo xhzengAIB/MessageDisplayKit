@@ -12,7 +12,7 @@
 
 static NSString * const KeyboardWillBeDismissedBlockKey = @"KeyboardWillBeDismissedBlockKey";
 static NSString * const KeyboardDidHideBlockKey = @"KeyboardDidHideBlockKey";
-static NSString * const KeyboardDidShowBlockKey = @"KeyboardDidShowBlockKey";
+static NSString * const KeyboardDidChangeBlockKey = @"KeyboardDidChangeBlockKey";
 static NSString * const KeyboardDidScrollToPointBlockKey = @"KeyboardDidScrollToPointBlockKey";
 static NSString * const KeyboardWillSnapBackToPointBlockKey = @"KeyboardWillSnapBackToPointBlockKey";
 static NSString * const KeyboardWillChangeBlockKey = @"KeyboardWillChangeBlockKey";
@@ -24,7 +24,6 @@ static NSString * const MessageInputBarHeightKey = @"MessageInputBarHeightKey";
 
 @interface UIScrollView (XHKetboradControl)
 
-@property (nonatomic, weak) UIView *keyboardView;
 @property (nonatomic, assign) CGFloat previousKeyboardY;
 
 @end
@@ -47,11 +46,11 @@ static NSString * const MessageInputBarHeightKey = @"MessageInputBarHeightKey";
     return objc_getAssociatedObject(self, &KeyboardDidHideBlockKey);
 }
 
-- (void)setKeyboardDidShow:(KeyboardDidShowBlock)keyboardDidShow {
-    objc_setAssociatedObject(self, &KeyboardDidShowBlockKey, keyboardDidShow, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+- (void)setKeyboardDidChange:(KeyboardDidShowBlock)keyboardDidChange {
+    objc_setAssociatedObject(self, &KeyboardDidChangeBlockKey, keyboardDidChange, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
-- (KeyboardDidShowBlock)keyboardDidShow {
-    return objc_getAssociatedObject(self, &KeyboardDidShowBlockKey);
+- (KeyboardDidShowBlock)keyboardDidChange {
+    return objc_getAssociatedObject(self, &KeyboardDidChangeBlockKey);
 }
 
 - (void)setKeyboardWillSnapBackToPoint:(KeyboardWillSnapBackToPointBlock)keyboardWillSnapBackToPoint {
@@ -254,13 +253,19 @@ static NSString * const MessageInputBarHeightKey = @"MessageInputBarHeightKey";
 #pragma mark - Keyboard notifications
 
 - (void)handleKeyboardWillShowHideNotification:(NSNotification *)notification {
+    BOOL didShowed = YES;
     if([notification.name isEqualToString:UIKeyboardDidShowNotification]) {
         self.keyboardView = [UIScrollView findKeyboard].superview;
         self.keyboardView.hidden = NO;
+        didShowed = YES;
     }
     else if([notification.name isEqualToString:UIKeyboardDidHideNotification]) {
+        didShowed = NO;
         self.keyboardView.hidden = NO;
         [self resignFirstResponder];
+    }
+    if (self.keyboardDidChange) {
+        self.keyboardDidChange(didShowed);
     }
 }
 

@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		74065FA719123ABC00E1CE95 /* sharemore_wxtalk@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74065F9C19123ABC00E1CE95 /* sharemore_wxtalk@2x.png */; };
+		74065FA819123ABC00E1CE95 /* sharemore_video@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74065F9D19123ABC00E1CE95 /* sharemore_video@2x.png */; };
+		74065FA919123ABC00E1CE95 /* sharemore_videovoip@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74065F9E19123ABC00E1CE95 /* sharemore_videovoip@2x.png */; };
+		74065FAA19123ABC00E1CE95 /* sharemore_voiceinput@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74065F9F19123ABC00E1CE95 /* sharemore_voiceinput@2x.png */; };
+		74065FAB19123ABC00E1CE95 /* sharemore_voipvoice@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74065FA019123ABC00E1CE95 /* sharemore_voipvoice@2x.png */; };
+		74065FAD19123ABC00E1CE95 /* sharemore_location@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74065FA219123ABC00E1CE95 /* sharemore_location@2x.png */; };
+		74065FAE19123ABC00E1CE95 /* sharemore_myfav@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74065FA319123ABC00E1CE95 /* sharemore_myfav@2x.png */; };
+		74065FAF19123ABC00E1CE95 /* sharemore_openapi@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74065FA419123ABC00E1CE95 /* sharemore_openapi@2x.png */; };
+		74065FB019123ABC00E1CE95 /* sharemore_pic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74065FA519123ABC00E1CE95 /* sharemore_pic@2x.png */; };
+		74065FB119123ABC00E1CE95 /* sharemore_friendcard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74065FA619123ABC00E1CE95 /* sharemore_friendcard@2x.png */; };
+		74065FB419123DDB00E1CE95 /* XHShareMenuView.h in Headers */ = {isa = PBXBuildFile; fileRef = 74065FB219123DDB00E1CE95 /* XHShareMenuView.h */; };
+		74065FB519123DDB00E1CE95 /* XHShareMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74065FB319123DDB00E1CE95 /* XHShareMenuView.m */; };
+		74065FB619123DDB00E1CE95 /* XHShareMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74065FB319123DDB00E1CE95 /* XHShareMenuView.m */; };
+		74065FB919123E1C00E1CE95 /* XHShareMenuItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 74065FB719123E1C00E1CE95 /* XHShareMenuItem.h */; };
+		74065FBA19123E1C00E1CE95 /* XHShareMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 74065FB819123E1C00E1CE95 /* XHShareMenuItem.m */; };
+		74065FBB19123E1C00E1CE95 /* XHShareMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 74065FB819123E1C00E1CE95 /* XHShareMenuItem.m */; };
 		74180BDC190F447100A35C82 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74180BDA190F447100A35C82 /* InfoPlist.strings */; };
 		74180BE6190F447100A35C82 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7482451D1908C730008EC388 /* XCTest.framework */; };
 		74180BE7190F447100A35C82 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748245041908C730008EC388 /* Foundation.framework */; };
@@ -52,6 +68,18 @@
 		74180CCA190F52C300A35C82 /* MessageDisplayKitString.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74BBB022190B8EAB00093577 /* MessageDisplayKitString.strings */; };
 		74180D74190FF7C600A35C82 /* Demo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 74180D73190FF7C600A35C82 /* Demo.gif */; };
 		74180D7D1910864400A35C82 /* Fav_Cell_Loc@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74180D7C1910864400A35C82 /* Fav_Cell_Loc@2x.png */; };
+		74180DB61910CB1900A35C82 /* XHPlugMenuView.h in Headers */ = {isa = PBXBuildFile; fileRef = 74180DB41910CB1900A35C82 /* XHPlugMenuView.h */; };
+		74180DB71910CB1900A35C82 /* XHPlugMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74180DB51910CB1900A35C82 /* XHPlugMenuView.m */; };
+		74180DB81910CB1900A35C82 /* XHPlugMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74180DB51910CB1900A35C82 /* XHPlugMenuView.m */; };
+		74180DBB1910CB3100A35C82 /* XHPlugItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 74180DB91910CB3100A35C82 /* XHPlugItem.h */; };
+		74180DBC1910CB3100A35C82 /* XHPlugItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 74180DBA1910CB3100A35C82 /* XHPlugItem.m */; };
+		74180DBD1910CB3100A35C82 /* XHPlugItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 74180DBA1910CB3100A35C82 /* XHPlugItem.m */; };
+		74180DC01910CF0100A35C82 /* XHPlugMenuCollectionViewFlowLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 74180DBE1910CF0100A35C82 /* XHPlugMenuCollectionViewFlowLayout.h */; };
+		74180DC11910CF0100A35C82 /* XHPlugMenuCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 74180DBF1910CF0100A35C82 /* XHPlugMenuCollectionViewFlowLayout.m */; };
+		74180DC21910CF0100A35C82 /* XHPlugMenuCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 74180DBF1910CF0100A35C82 /* XHPlugMenuCollectionViewFlowLayout.m */; };
+		74180DC51910D21A00A35C82 /* XHPlugMenuCollectionViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 74180DC31910D21A00A35C82 /* XHPlugMenuCollectionViewCell.h */; };
+		74180DC61910D21A00A35C82 /* XHPlugMenuCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 74180DC41910D21A00A35C82 /* XHPlugMenuCollectionViewCell.m */; };
+		74180DC71910D21A00A35C82 /* XHPlugMenuCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 74180DC41910D21A00A35C82 /* XHPlugMenuCollectionViewCell.m */; };
 		7475BA33190D4B7B001DD9B1 /* TableViewBackgroundImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7475BA32190D4B7B001DD9B1 /* TableViewBackgroundImage@2x.png */; };
 		748245051908C730008EC388 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748245041908C730008EC388 /* Foundation.framework */; };
 		748245071908C730008EC388 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748245061908C730008EC388 /* CoreGraphics.framework */; };
@@ -134,6 +162,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		74065F9C19123ABC00E1CE95 /* sharemore_wxtalk@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sharemore_wxtalk@2x.png"; sourceTree = "<group>"; };
+		74065F9D19123ABC00E1CE95 /* sharemore_video@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sharemore_video@2x.png"; sourceTree = "<group>"; };
+		74065F9E19123ABC00E1CE95 /* sharemore_videovoip@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sharemore_videovoip@2x.png"; sourceTree = "<group>"; };
+		74065F9F19123ABC00E1CE95 /* sharemore_voiceinput@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sharemore_voiceinput@2x.png"; sourceTree = "<group>"; };
+		74065FA019123ABC00E1CE95 /* sharemore_voipvoice@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sharemore_voipvoice@2x.png"; sourceTree = "<group>"; };
+		74065FA219123ABC00E1CE95 /* sharemore_location@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sharemore_location@2x.png"; sourceTree = "<group>"; };
+		74065FA319123ABC00E1CE95 /* sharemore_myfav@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sharemore_myfav@2x.png"; sourceTree = "<group>"; };
+		74065FA419123ABC00E1CE95 /* sharemore_openapi@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sharemore_openapi@2x.png"; sourceTree = "<group>"; };
+		74065FA519123ABC00E1CE95 /* sharemore_pic@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sharemore_pic@2x.png"; sourceTree = "<group>"; };
+		74065FA619123ABC00E1CE95 /* sharemore_friendcard@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sharemore_friendcard@2x.png"; sourceTree = "<group>"; };
+		74065FB219123DDB00E1CE95 /* XHShareMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHShareMenuView.h; sourceTree = "<group>"; };
+		74065FB319123DDB00E1CE95 /* XHShareMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHShareMenuView.m; sourceTree = "<group>"; };
+		74065FB719123E1C00E1CE95 /* XHShareMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHShareMenuItem.h; sourceTree = "<group>"; };
+		74065FB819123E1C00E1CE95 /* XHShareMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHShareMenuItem.m; sourceTree = "<group>"; };
 		74180BD6190F447100A35C82 /* MessageDisplayFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MessageDisplayFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		74180BD9190F447100A35C82 /* MessageDisplayFramework-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MessageDisplayFramework-Info.plist"; sourceTree = "<group>"; };
 		74180BDB190F447100A35C82 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -145,6 +187,14 @@
 		74180CBB190F526100A35C82 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		74180D73190FF7C600A35C82 /* Demo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Demo.gif; sourceTree = "<group>"; };
 		74180D7C1910864400A35C82 /* Fav_Cell_Loc@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fav_Cell_Loc@2x.png"; sourceTree = "<group>"; };
+		74180DB41910CB1900A35C82 /* XHPlugMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHPlugMenuView.h; sourceTree = "<group>"; };
+		74180DB51910CB1900A35C82 /* XHPlugMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHPlugMenuView.m; sourceTree = "<group>"; };
+		74180DB91910CB3100A35C82 /* XHPlugItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHPlugItem.h; sourceTree = "<group>"; };
+		74180DBA1910CB3100A35C82 /* XHPlugItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHPlugItem.m; sourceTree = "<group>"; };
+		74180DBE1910CF0100A35C82 /* XHPlugMenuCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHPlugMenuCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		74180DBF1910CF0100A35C82 /* XHPlugMenuCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHPlugMenuCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		74180DC31910D21A00A35C82 /* XHPlugMenuCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHPlugMenuCollectionViewCell.h; sourceTree = "<group>"; };
+		74180DC41910D21A00A35C82 /* XHPlugMenuCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHPlugMenuCollectionViewCell.m; sourceTree = "<group>"; };
 		7475BA32190D4B7B001DD9B1 /* TableViewBackgroundImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TableViewBackgroundImage@2x.png"; sourceTree = "<group>"; };
 		748245011908C730008EC388 /* MessageDisplayExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessageDisplayExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		748245041908C730008EC388 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -278,6 +328,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		74065F9B19123AB400E1CE95 /* PlugImages */ = {
+			isa = PBXGroup;
+			children = (
+				74065F9C19123ABC00E1CE95 /* sharemore_wxtalk@2x.png */,
+				74065F9D19123ABC00E1CE95 /* sharemore_video@2x.png */,
+				74065F9E19123ABC00E1CE95 /* sharemore_videovoip@2x.png */,
+				74065F9F19123ABC00E1CE95 /* sharemore_voiceinput@2x.png */,
+				74065FA019123ABC00E1CE95 /* sharemore_voipvoice@2x.png */,
+				74065FA219123ABC00E1CE95 /* sharemore_location@2x.png */,
+				74065FA319123ABC00E1CE95 /* sharemore_myfav@2x.png */,
+				74065FA419123ABC00E1CE95 /* sharemore_openapi@2x.png */,
+				74065FA519123ABC00E1CE95 /* sharemore_pic@2x.png */,
+				74065FA619123ABC00E1CE95 /* sharemore_friendcard@2x.png */,
+			);
+			path = PlugImages;
+			sourceTree = "<group>";
+		};
 		74180BD7190F447100A35C82 /* MessageDisplayFramework */ = {
 			isa = PBXGroup;
 			children = (
@@ -453,6 +520,10 @@
 				7482457519090D6B008EC388 /* XHMessageModel.h */,
 				7482456919090C04008EC388 /* XHMessage.h */,
 				7482456A19090C04008EC388 /* XHMessage.m */,
+				74180DB91910CB3100A35C82 /* XHPlugItem.h */,
+				74180DBA1910CB3100A35C82 /* XHPlugItem.m */,
+				74065FB719123E1C00E1CE95 /* XHShareMenuItem.h */,
+				74065FB819123E1C00E1CE95 /* XHShareMenuItem.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -474,6 +545,14 @@
 				74D1C5BE190DE55B003B1BCA /* XHMessageDisplayTextView.m */,
 				748FFCE0190D737B00752C8A /* XHBubblePhotoImageView.h */,
 				748FFCE1190D737B00752C8A /* XHBubblePhotoImageView.m */,
+				74065FB219123DDB00E1CE95 /* XHShareMenuView.h */,
+				74065FB319123DDB00E1CE95 /* XHShareMenuView.m */,
+				74180DB41910CB1900A35C82 /* XHPlugMenuView.h */,
+				74180DB51910CB1900A35C82 /* XHPlugMenuView.m */,
+				74180DC31910D21A00A35C82 /* XHPlugMenuCollectionViewCell.h */,
+				74180DC41910D21A00A35C82 /* XHPlugMenuCollectionViewCell.m */,
+				74180DBE1910CF0100A35C82 /* XHPlugMenuCollectionViewFlowLayout.h */,
+				74180DBF1910CF0100A35C82 /* XHPlugMenuCollectionViewFlowLayout.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -543,6 +622,7 @@
 		74FAB0BC190A92CC005623D0 /* WeChat */ = {
 			isa = PBXGroup;
 			children = (
+				74065F9B19123AB400E1CE95 /* PlugImages */,
 				74180D7B1910864400A35C82 /* LocalPositionImages */,
 				74D1C5CF190E291E003B1BCA /* VoiceAnimationImages */,
 				74FAB0BD190A92CC005623D0 /* weChatBubble_Receiving_Cavern@2x.png */,
@@ -598,8 +678,11 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74180DC01910CF0100A35C82 /* XHPlugMenuCollectionViewFlowLayout.h in Headers */,
 				74180C0A190F44EA00A35C82 /* MessageDisplayKit.h in Headers */,
 				74180C0E190F44F500A35C82 /* XHMessageVoiceFactory.h in Headers */,
+				74180DB61910CB1900A35C82 /* XHPlugMenuView.h in Headers */,
+				74180DBB1910CB3100A35C82 /* XHPlugItem.h in Headers */,
 				74180C0F190F44F600A35C82 /* XHFoundationCommon.h in Headers */,
 				74180C0D190F44F300A35C82 /* XHMessageAvatorFactory.h in Headers */,
 				74180C12190F450000A35C82 /* UIImage+XHRounded.h in Headers */,
@@ -607,11 +690,14 @@
 				74180C13190F450200A35C82 /* XHMessageModel.h in Headers */,
 				74180C1A190F450D00A35C82 /* XHMessageDisplayTextView.h in Headers */,
 				74180C16190F450800A35C82 /* XHMessageInputView.h in Headers */,
+				74180DC51910D21A00A35C82 /* XHPlugMenuCollectionViewCell.h in Headers */,
 				74180C1B190F450F00A35C82 /* XHBubblePhotoImageView.h in Headers */,
 				74180C18190F450B00A35C82 /* XHMessageTableViewCell.h in Headers */,
 				74180C1C190F451200A35C82 /* XHMessageTableViewController.h in Headers */,
 				74180C19190F450C00A35C82 /* XHMessageBubbleView.h in Headers */,
 				74180C17190F450900A35C82 /* XHMessageTextView.h in Headers */,
+				74065FB419123DDB00E1CE95 /* XHShareMenuView.h in Headers */,
+				74065FB919123E1C00E1CE95 /* XHShareMenuItem.h in Headers */,
 				74180C15190F450600A35C82 /* XHMessageTableView.h in Headers */,
 				74180C14190F450400A35C82 /* XHMessage.h in Headers */,
 				74180C10190F44F800A35C82 /* UIScrollView+XHkeyboardControl.h in Headers */,
@@ -758,6 +844,7 @@
 			files = (
 				74FAB0D1190A92CC005623D0 /* weChatBubble_Sending_Cavern@2x.png in Resources */,
 				74FAB0D9190A92CC005623D0 /* face@2x.png in Resources */,
+				74065FAA19123ABC00E1CE95 /* sharemore_voiceinput@2x.png in Resources */,
 				74BBB034190D226300093577 /* JieIcon@2x.png in Resources */,
 				74D1C5DD190E291E003B1BCA /* ReceiverVoiceNodePlaying003@2x.png in Resources */,
 				7482450F1908C730008EC388 /* InfoPlist.strings in Resources */,
@@ -769,14 +856,20 @@
 				74FAB0E4190A9E13005623D0 /* meIcon@2x.png in Resources */,
 				74FAB0D0190A92CC005623D0 /* weChatBubble_Receiving_Solid@2x.png in Resources */,
 				74D1C5CE190E2885003B1BCA /* voice_HL@2x.png in Resources */,
+				74065FA819123ABC00E1CE95 /* sharemore_video@2x.png in Resources */,
+				74065FB119123ABC00E1CE95 /* sharemore_friendcard@2x.png in Resources */,
+				74065FAB19123ABC00E1CE95 /* sharemore_voipvoice@2x.png in Resources */,
 				74FAB0CF190A92CC005623D0 /* weChatBubble_Receiving_Cavern@2x.png in Resources */,
 				74FAB0D5190A92CC005623D0 /* input-bar-flat.png in Resources */,
 				74D1C5CC190E2885003B1BCA /* keyborad_HL@2x.png in Resources */,
 				74D1C5DC190E291E003B1BCA /* ReceiverVoiceNodePlaying002@2x.png in Resources */,
+				74065FB019123ABC00E1CE95 /* sharemore_pic@2x.png in Resources */,
 				74FAB0D3190A92CC005623D0 /* input-bar-background.png in Resources */,
 				74FAB0DC190A92CC005623D0 /* multiMedia@2x.png in Resources */,
 				7475BA33190D4B7B001DD9B1 /* TableViewBackgroundImage@2x.png in Resources */,
 				74D1C5DA190E291E003B1BCA /* ReceiverVoiceNodePlaying000@2x.png in Resources */,
+				74065FA919123ABC00E1CE95 /* sharemore_videovoip@2x.png in Resources */,
+				74065FAF19123ABC00E1CE95 /* sharemore_openapi@2x.png in Resources */,
 				74FAB0DB190A92CC005623D0 /* keyborad@2x.png in Resources */,
 				74D1C5E2190E291E003B1BCA /* SenderVoiceNodePlaying003@2x.png in Resources */,
 				74BBB020190B8EAB00093577 /* MessageDisplayKitString.strings in Resources */,
@@ -787,7 +880,10 @@
 				74FAB0D6190A92CC005623D0 /* input-bar-flat@2x.png in Resources */,
 				74180D7D1910864400A35C82 /* Fav_Cell_Loc@2x.png in Resources */,
 				74FAB0DD190A92CC005623D0 /* voice@2x.png in Resources */,
+				74065FAD19123ABC00E1CE95 /* sharemore_location@2x.png in Resources */,
+				74065FAE19123ABC00E1CE95 /* sharemore_myfav@2x.png in Resources */,
 				74FAB0D7190A92CC005623D0 /* input-field-cover.png in Resources */,
+				74065FA719123ABC00E1CE95 /* sharemore_wxtalk@2x.png in Resources */,
 				74D1C5DB190E291E003B1BCA /* ReceiverVoiceNodePlaying001@2x.png in Resources */,
 				74FAB0D4190A92CC005623D0 /* input-bar-background@2x.png in Resources */,
 				74180D74190FF7C600A35C82 /* Demo.gif in Resources */,
@@ -827,21 +923,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74065FB619123DDB00E1CE95 /* XHShareMenuView.m in Sources */,
 				74180BFA190F448800A35C82 /* XHMessageBubbleFactory.m in Sources */,
 				74180C06190F44AE00A35C82 /* XHMessageBubbleView.m in Sources */,
 				74180BFD190F449400A35C82 /* XHFoundationCommon.m in Sources */,
 				74180C08190F44B100A35C82 /* XHBubblePhotoImageView.m in Sources */,
+				74180DC21910CF0100A35C82 /* XHPlugMenuCollectionViewFlowLayout.m in Sources */,
+				74180DC71910D21A00A35C82 /* XHPlugMenuCollectionViewCell.m in Sources */,
 				74180C09190F44B400A35C82 /* XHMessageTableViewController.m in Sources */,
 				74180C07190F44AF00A35C82 /* XHMessageDisplayTextView.m in Sources */,
+				74065FBB19123E1C00E1CE95 /* XHShareMenuItem.m in Sources */,
 				74180BFE190F44A000A35C82 /* UIScrollView+XHkeyboardControl.m in Sources */,
 				74180C04190F44AB00A35C82 /* XHMessageTextView.m in Sources */,
 				74180C03190F44AA00A35C82 /* XHMessageInputView.m in Sources */,
+				74180DB81910CB1900A35C82 /* XHPlugMenuView.m in Sources */,
 				74180C05190F44AC00A35C82 /* XHMessageTableViewCell.m in Sources */,
 				74180BFF190F44A200A35C82 /* NSString+MessageInputView.m in Sources */,
 				74180C01190F44A600A35C82 /* XHMessage.m in Sources */,
 				74180C00190F44A300A35C82 /* UIImage+XHRounded.m in Sources */,
 				74180C02190F44A800A35C82 /* XHMessageTableView.m in Sources */,
 				74180BFC190F448E00A35C82 /* XHMessageVoiceFactory.m in Sources */,
+				74180DBD1910CB3100A35C82 /* XHPlugItem.m in Sources */,
 				74180BFB190F448A00A35C82 /* XHMessageAvatorFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -860,6 +962,7 @@
 			files = (
 				74BBB032190C28CD00093577 /* XHDemoWeChatMessageTableViewController.m in Sources */,
 				74D1C5E9190E2BE6003B1BCA /* XHMessageVoiceFactory.m in Sources */,
+				74180DBC1910CB3100A35C82 /* XHPlugItem.m in Sources */,
 				7482459A1909F370008EC388 /* XHMessageAvatorFactory.m in Sources */,
 				74D1C5BF190DE55B003B1BCA /* XHMessageDisplayTextView.m in Sources */,
 				74824560190902DA008EC388 /* XHMessageTextView.m in Sources */,
@@ -871,11 +974,16 @@
 				7482455F190902DA008EC388 /* XHMessageTableView.m in Sources */,
 				7482456819090B84008EC388 /* XHMessageBubbleView.m in Sources */,
 				748245631909060E008EC388 /* XHMessageTableViewCell.m in Sources */,
+				74180DB71910CB1900A35C82 /* XHPlugMenuView.m in Sources */,
+				74065FBA19123E1C00E1CE95 /* XHShareMenuItem.m in Sources */,
 				748FFCE2190D737B00752C8A /* XHBubblePhotoImageView.m in Sources */,
+				74065FB519123DDB00E1CE95 /* XHShareMenuView.m in Sources */,
 				74FAB0B9190A81DC005623D0 /* UIImage+XHRounded.m in Sources */,
 				7482455D190902DA008EC388 /* XHMessageTableViewController.m in Sources */,
+				74180DC11910CF0100A35C82 /* XHPlugMenuCollectionViewFlowLayout.m in Sources */,
 				74BBB02C190BE8C400093577 /* XHMessageRootViewController.m in Sources */,
 				748245111908C730008EC388 /* main.m in Sources */,
+				74180DC61910D21A00A35C82 /* XHPlugMenuCollectionViewCell.m in Sources */,
 				7482455C190902DA008EC388 /* UIScrollView+XHkeyboardControl.m in Sources */,
 				7482455E190902DA008EC388 /* XHMessageInputView.m in Sources */,
 			);

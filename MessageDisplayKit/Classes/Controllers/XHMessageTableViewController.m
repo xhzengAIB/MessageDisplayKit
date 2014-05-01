@@ -13,16 +13,20 @@
 /**
  *  判断是否用户手指滚动
  */
-@property (assign, nonatomic) BOOL isUserScrolling;
+@property (nonatomic, assign) BOOL isUserScrolling;
 
 /**
  *  记录旧的textView contentSize Heigth
  */
-@property (assign, nonatomic) CGFloat previousTextViewContentHeight;
+@property (nonatomic, assign) CGFloat previousTextViewContentHeight;
+
+@property (nonatomic, assign) XHTextViewInputViewType textViewInputViewType;
 
 
 @property (nonatomic, weak, readwrite) XHMessageTableView *messageTableView;
 @property (nonatomic, weak, readwrite) XHMessageInputView *messageInputView;
+@property (nonatomic, weak, readwrite) XHPlugMenuView *plugMenuView;
+@property (nonatomic, weak, readwrite) XHShareMenuView *shareMenuView;
 
 @end
 
@@ -92,6 +96,34 @@
         _messages = [[NSMutableArray alloc] initWithCapacity:0];
     }
     return _messages;
+}
+
+- (XHPlugMenuView *)plugMenuView {
+    if (!_plugMenuView) {
+        CGFloat keyboardViewHeight = 216;
+        XHPlugMenuView *plugMenuView = [[XHPlugMenuView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.view.bounds) - keyboardViewHeight, CGRectGetWidth(self.view.bounds), keyboardViewHeight)];
+        plugMenuView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
+        plugMenuView.alpha = 0.0;
+        [plugMenuView reloadDataWithPlugItems:self.plugItems];
+        [self.view addSubview:plugMenuView];
+        [self.view bringSubviewToFront:plugMenuView];
+        _plugMenuView = plugMenuView;
+    }
+    return _plugMenuView;
+}
+
+- (XHShareMenuView *)shareMenuView {
+    if (!_shareMenuView) {
+        CGFloat keyboardViewHeight = 216;
+        XHShareMenuView *shareMenuView = [[XHShareMenuView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.view.bounds), CGRectGetWidth(self.view.bounds), keyboardViewHeight)];
+        shareMenuView.backgroundColor = [UIColor grayColor];
+        shareMenuView.alpha = 0.0;
+        shareMenuView.shareMenuItems = self.shareMenuItems;
+        [self.view addSubview:shareMenuView];
+        [self.view bringSubviewToFront:shareMenuView];
+        _shareMenuView = shareMenuView;
+    }
+    return _shareMenuView;
 }
 
 #pragma mark - Messages view controller
@@ -259,32 +291,41 @@
     }
     
     // block回调键盘通知
-    self.messageTableView.keyboardWillChange = ^(CGRect keyboardRect, UIViewAnimationOptions options, double duration, BOOL showKeyborad){
-        [UIView animateWithDuration:duration
-                              delay:0.0
-                            options:options
-                         animations:^{
-                             CGFloat keyboardY = [weakSelf.view convertRect:keyboardRect fromView:nil].origin.y;
-                             
-                             CGRect inputViewFrame = weakSelf.messageInputView.frame;
-                             CGFloat inputViewFrameY = keyboardY - inputViewFrame.size.height;
-                             
-                             // for ipad modal form presentations
-                             CGFloat messageViewFrameBottom = weakSelf.view.frame.size.height - inputViewFrame.size.height;
-                             if (inputViewFrameY > messageViewFrameBottom)
-                                 inputViewFrameY = messageViewFrameBottom;
-                             
-                             weakSelf.messageInputView.frame = CGRectMake(inputViewFrame.origin.x,
-                                                                          inputViewFrameY,
-                                                                          inputViewFrame.size.width,
-                                                                          inputViewFrame.size.height);
-                             
-                             [weakSelf setTableViewInsetsWithBottomValue:weakSelf.view.frame.size.height
-                              - weakSelf.messageInputView.frame.origin.y];
-                             if (showKeyborad)
-                                 [weakSelf scrollToBottomAnimated:NO];
-                         }
-                         completion:nil];
+    self.messageTableView.keyboardWillChange = ^(CGRect keyboardRect, UIViewAnimationOptions options, double duration, BOOL showKeyborad) {
+        if (weakSelf.textViewInputViewType == XHTextViewNormalInputViewType) {
+            [UIView animateWithDuration:duration
+                                  delay:0.0
+                                options:options
+                             animations:^{
+                                 CGFloat keyboardY = [weakSelf.view convertRect:keyboardRect fromView:nil].origin.y;
+                                 
+                                 CGRect inputViewFrame = weakSelf.messageInputView.frame;
+                                 CGFloat inputViewFrameY = keyboardY - inputViewFrame.size.height;
+                                 
+                                 // for ipad modal form presentations
+                                 CGFloat messageViewFrameBottom = weakSelf.view.frame.size.height - inputViewFrame.size.height;
+                                 if (inputViewFrameY > messageViewFrameBottom)
+                                     inputViewFrameY = messageViewFrameBottom;
+                                 
+                                 weakSelf.messageInputView.frame = CGRectMake(inputViewFrame.origin.x,
+                                                                              inputViewFrameY,
+                                                                              inputViewFrame.size.width,
+                                                                              inputViewFrame.size.height);
+                                 
+                                 [weakSelf setTableViewInsetsWithBottomValue:weakSelf.view.frame.size.height
+                                  - weakSelf.messageInputView.frame.origin.y];
+                                 if (showKeyborad)
+                                     [weakSelf scrollToBottomAnimated:NO];
+                             }
+                             completion:nil];
+        }
+    };
+    
+    self.messageTableView.keyboardDidChange = ^(BOOL didShowed) {
+        if ([weakSelf.messageInputView.inputTextView isFirstResponder]) {
+            if (didShowed)
+                weakSelf.plugMenuView.alpha = 0.0;
+        }
     };
     
     self.messageTableView.keyboardDidHide = ^() {
@@ -505,6 +546,10 @@
 
 #pragma mark - XHMessageInputView Delegate
 
+- (void)inputTextViewWillBeginEditing:(XHMessageTextView *)messageInputTextView {
+    self.textViewInputViewType = XHTextViewNormalInputViewType;
+}
+
 - (void)inputTextViewDidBeginEditing:(XHMessageTextView *)messageInputTextView {
     if (!self.previousTextViewContentHeight)
 		self.previousTextViewContentHeight = [self getTextViewContentH:messageInputTextView];
@@ -519,6 +564,23 @@
 
 - (void)didSelectedMultipleMediaAction {
     DLog(@"didSelectedMultipleMediaAction");
+    self.textViewInputViewType = XHTextViewPlugMenuInputViewType;
+    [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        /*
+         self.plugMenuView.alpha = 1.0;
+         CGRect inputViewFrame = self.messageInputView.frame;
+         inputViewFrame.origin.y = CGRectGetMinY(self.plugMenuView.frame) - CGRectGetHeight(inputViewFrame);
+         self.messageInputView.frame = inputViewFrame;
+         */
+        
+        self.shareMenuView.alpha = 1.0;
+        CGRect inputViewFrame = self.shareMenuView.frame;
+        inputViewFrame.origin.y = CGRectGetMinY(self.shareMenuView.frame) - CGRectGetHeight(inputViewFrame);
+        self.shareMenuView.frame = inputViewFrame;
+    } completion:^(BOOL finished) {
+        
+    }];
+    [self.messageInputView.inputTextView resignFirstResponder];
 }
 
 - (void)didSendFaceMessageWithFacePath:(NSString *)facePath {
