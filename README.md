@@ -13,7 +13,6 @@ It's ok if you don't understand how the code works. Most code has comments, whic
 
 * iOS 6.0+ 
 * ARC
-* [MessageDisplayKit](https://github.com/xhzengAIB/MessageDisplayKit)
 
 ## Podfile
 
