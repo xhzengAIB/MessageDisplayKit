@@ -5,9 +5,9 @@ A messages UI for iPhone and iPad. You can send texts, voice messages, images, v
 
 ![image](https://github.com/xhzengAIB/LearnEnglish/raw/master/Screenshots/MessageDisplayKitExample.gif)
 
-代码都有注释，如果看完注释还是不懂的话，那你只能在githu开issue，[点击这里](https://github.com/xhzengAIB/MessageDisplayKit/issues?state=open)移步新建一个issue（至于怎么新建，打开issue页面，里面有一个new issue的按钮，点击之后你就会的了），写上你不明白的地方，我会在github给予帮助。                        
+代码都有注释，如果看完注释还是不懂的话，那你只能在githu开issue，[点击这里](https://github.com/xhzengAIB/MessageDisplayKit/issues?state=open)移步新建一个issue，写上你不明白的地方，我会在github给予帮助。                        
 
-It's ok if you don't understand how the code works. Most code has comments, which I believe will help you a lot. Feel free to [open an issue] (https://github.com/xhzengAIB/MessageDisplayKit/issues?state=open) if you have any questions (Open issue page, there's a ``new issue" button). I will do my best to answer them.
+It's ok if you don't understand how the code works. Most code has comments, which I believe will help you a lot. Feel free to [open an issue] (https://github.com/xhzengAIB/MessageDisplayKit/issues?state=open) if you have any questions. I will do my best to answer them.
 
 ## 组件要求                                        Requirements
 
@@ -16,11 +16,13 @@ It's ok if you don't understand how the code works. Most code has comments, whic
 
 ## Podfile
 
-[CocosPods](http://cocosPods.org) is the recommended methods of installation MessageDisplayKit, just add the following line to `Podfile`:
+[CocosPods](http://cocosPods.org) is the recommended method to install MessageDisplayKit, just add the following line to `Podfile`
 
 ```
 pod 'MessageDisplayKit', '~> 0.1.1'
 ```
+
+and run `pod install`, then you're all done!
 
 ## 特性 Features 
 
@@ -41,7 +43,7 @@ Swipe down to hide keyboard.
 * 8、动态调整输入文本视图类型。                         
 Dynamically resize input text view as you type.                           
 * 9、自动启用/禁用发送按钮(如果文本视图是空的或不是)。                             
-Automatically enable/disable send button (if text view is empty or not).                           
+Automatically enable/disable send button according to the content of text view.                           
 * 10、发送/接收声音效果。                           
 Send/Receive sound effects.                           
 * 11、发送语音。                           
@@ -59,7 +61,7 @@ Support both iPhone and iPad.
 
 ## License
 
-中文: MessageDisplayKit 是在MIT协议下使用的，可以在LICENSE文件里面找到相关的使用协议信息.     
+中文: MessageDisplayKit 是在MIT协议下使用的，可以在LICENSE文件里面找到相关的使用协议信息。
 
 English: MessageDisplayKit is available under the MIT license, see the LICENSE file for more information.     
 
