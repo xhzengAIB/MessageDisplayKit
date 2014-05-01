@@ -32,7 +32,7 @@
     }
     
     if (!_shareMenuItemTitleLabel) {
-        UILabel *shareMenuItemTitleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.shareMenuItemButton.frame), kXHPlugItemIconSize, KXHPlugItemHeight - kXHPlugItemIconSize)];
+        UILabel *shareMenuItemTitleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.shareMenuItemButton.frame), kXHShareMenuItemIconSize, KXHShareMenuItemHeight - kXHShareMenuItemIconSize)];
         shareMenuItemTitleLabel.backgroundColor = [UIColor clearColor];
         shareMenuItemTitleLabel.textColor = [UIColor blackColor];
         shareMenuItemTitleLabel.font = [UIFont systemFontOfSize:12];
@@ -90,8 +90,8 @@
         [self.shareMenuScrollView addSubview:shareMenuItemView];
     }
     
-    self.shareMenuPageControl.numberOfPages = (self.shareMenuItems.count / (kXHPlugPerRowItemCount * 2) + (self.shareMenuItems.count % (kXHPlugPerRowItemCount * 2) ? 1 : 0));
-    [self.shareMenuScrollView setContentSize:CGSizeMake(((self.shareMenuItems.count / (kXHPlugPerRowItemCount * 2) + (self.shareMenuItems.count % (kXHPlugPerRowItemCount * 2) ? 1 : 0)) * CGRectGetWidth(self.bounds)), CGRectGetHeight(self.shareMenuScrollView.bounds))];
+    self.shareMenuPageControl.numberOfPages = (self.shareMenuItems.count / (kXHShareMenuPerRowItemCount * 2) + (self.shareMenuItems.count % (kXHShareMenuPerRowItemCount * 2) ? 1 : 0));
+    [self.shareMenuScrollView setContentSize:CGSizeMake(((self.shareMenuItems.count / (kXHShareMenuPerRowItemCount * 2) + (self.shareMenuItems.count % (kXHShareMenuPerRowItemCount * 2) ? 1 : 0)) * CGRectGetWidth(self.bounds)), CGRectGetHeight(self.shareMenuScrollView.bounds))];
 }
 
 #pragma mark - Life cycle

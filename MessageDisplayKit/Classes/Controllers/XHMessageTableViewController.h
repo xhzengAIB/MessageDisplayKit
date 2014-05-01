@@ -10,7 +10,6 @@
 
 #import "XHMessageTableView.h"
 #import "XHMessageInputView.h"
-#import "XHPlugMenuView.h"
 #import "XHShareMenuView.h"
 
 @protocol XHMessageTableViewControllerDelegate <NSObject>
