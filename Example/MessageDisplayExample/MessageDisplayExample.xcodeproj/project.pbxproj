@@ -23,6 +23,9 @@
 		74065FB919123E1C00E1CE95 /* XHShareMenuItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 74065FB719123E1C00E1CE95 /* XHShareMenuItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74065FBA19123E1C00E1CE95 /* XHShareMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 74065FB819123E1C00E1CE95 /* XHShareMenuItem.m */; };
 		74065FBB19123E1C00E1CE95 /* XHShareMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 74065FB819123E1C00E1CE95 /* XHShareMenuItem.m */; };
+		740660A71913552800E1CE95 /* UIImage+XHAnimatedFaceGif.h in Headers */ = {isa = PBXBuildFile; fileRef = 740660A51913552800E1CE95 /* UIImage+XHAnimatedFaceGif.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		740660A81913552800E1CE95 /* UIImage+XHAnimatedFaceGif.m in Sources */ = {isa = PBXBuildFile; fileRef = 740660A61913552800E1CE95 /* UIImage+XHAnimatedFaceGif.m */; };
+		740660A91913552800E1CE95 /* UIImage+XHAnimatedFaceGif.m in Sources */ = {isa = PBXBuildFile; fileRef = 740660A61913552800E1CE95 /* UIImage+XHAnimatedFaceGif.m */; };
 		74180BDC190F447100A35C82 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74180BDA190F447100A35C82 /* InfoPlist.strings */; };
 		74180BE6190F447100A35C82 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7482451D1908C730008EC388 /* XCTest.framework */; };
 		74180BE7190F447100A35C82 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748245041908C730008EC388 /* Foundation.framework */; };
@@ -164,6 +167,8 @@
 		74065FB319123DDB00E1CE95 /* XHShareMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHShareMenuView.m; sourceTree = "<group>"; };
 		74065FB719123E1C00E1CE95 /* XHShareMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHShareMenuItem.h; sourceTree = "<group>"; };
 		74065FB819123E1C00E1CE95 /* XHShareMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHShareMenuItem.m; sourceTree = "<group>"; };
+		740660A51913552800E1CE95 /* UIImage+XHAnimatedFaceGif.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+XHAnimatedFaceGif.h"; sourceTree = "<group>"; };
+		740660A61913552800E1CE95 /* UIImage+XHAnimatedFaceGif.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+XHAnimatedFaceGif.m"; sourceTree = "<group>"; };
 		74180BD6190F447100A35C82 /* MessageDisplayFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MessageDisplayFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		74180BD9190F447100A35C82 /* MessageDisplayFramework-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MessageDisplayFramework-Info.plist"; sourceTree = "<group>"; };
 		74180BDB190F447100A35C82 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -481,6 +486,8 @@
 				7482458E19092170008EC388 /* NSString+MessageInputView.m */,
 				74FAB0B7190A81DC005623D0 /* UIImage+XHRounded.h */,
 				74FAB0B8190A81DC005623D0 /* UIImage+XHRounded.m */,
+				740660A51913552800E1CE95 /* UIImage+XHAnimatedFaceGif.h */,
+				740660A61913552800E1CE95 /* UIImage+XHAnimatedFaceGif.m */,
 			);
 			path = Categorys;
 			sourceTree = "<group>";
@@ -668,6 +675,7 @@
 				74065FB419123DDB00E1CE95 /* XHShareMenuView.h in Headers */,
 				74180C15190F450600A35C82 /* XHMessageTableView.h in Headers */,
 				74180C14190F450400A35C82 /* XHMessage.h in Headers */,
+				740660A71913552800E1CE95 /* UIImage+XHAnimatedFaceGif.h in Headers */,
 				74180C10190F44F800A35C82 /* UIScrollView+XHkeyboardControl.h in Headers */,
 				74180C0B190F44EC00A35C82 /* XHMessageBubbleFactory.h in Headers */,
 				74180C0C190F44ED00A35C82 /* XHMacro.h in Headers */,
@@ -905,6 +913,7 @@
 				74180C05190F44AC00A35C82 /* XHMessageTableViewCell.m in Sources */,
 				74180BFF190F44A200A35C82 /* NSString+MessageInputView.m in Sources */,
 				74180C01190F44A600A35C82 /* XHMessage.m in Sources */,
+				740660A91913552800E1CE95 /* UIImage+XHAnimatedFaceGif.m in Sources */,
 				74180C00190F44A300A35C82 /* UIImage+XHRounded.m in Sources */,
 				74180C02190F44A800A35C82 /* XHMessageTableView.m in Sources */,
 				74180BFC190F448E00A35C82 /* XHMessageVoiceFactory.m in Sources */,
@@ -939,6 +948,7 @@
 				748245631909060E008EC388 /* XHMessageTableViewCell.m in Sources */,
 				74065FBA19123E1C00E1CE95 /* XHShareMenuItem.m in Sources */,
 				748FFCE2190D737B00752C8A /* XHBubblePhotoImageView.m in Sources */,
+				740660A81913552800E1CE95 /* UIImage+XHAnimatedFaceGif.m in Sources */,
 				74065FB519123DDB00E1CE95 /* XHShareMenuView.m in Sources */,
 				74FAB0B9190A81DC005623D0 /* UIImage+XHRounded.m in Sources */,
 				7482455D190902DA008EC388 /* XHMessageTableViewController.m in Sources */,

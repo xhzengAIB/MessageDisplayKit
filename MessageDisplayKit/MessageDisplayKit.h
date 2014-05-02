@@ -13,6 +13,7 @@
 
 #import "XHFoundationCommon.h"
 
+#import "UIImage+XHAnimatedFaceGif.h"
 #import "UIImage+XHRounded.h"
 #import "NSString+MessageInputView.h"
 #import "UIScrollView+XHkeyboardControl.h"

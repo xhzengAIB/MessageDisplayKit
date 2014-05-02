@@ -222,7 +222,7 @@
             break;
         case XHBubbleMessageFace:
             // 直接设置GIF
-            _bubbleImageView.image = [UIImage imageNamed:message.facePath];
+            _bubbleImageView.image = [UIImage animatedImageWithAnimatedGIFURL:[NSURL fileURLWithPath:message.facePath]];
             break;
         case XHBubbleMessageLocalPosition:
             

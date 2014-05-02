@@ -566,6 +566,8 @@
 
 - (void)didSendFaceMessageWithFacePath:(NSString *)facePath {
     DLog(@"facePath : %@", facePath);
+    XHMessage *message = [[XHMessage alloc] initWithFacePath:facePath sender:@"Jayson" date:[NSDate date]];
+    [self addMessage:message];
 }
 
 - (void)didStartRecordingVoice {
