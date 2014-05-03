@@ -10,6 +10,15 @@
 
 @implementation XHEmotionSectionBar
 
+- (void)reloadData {
+    if (!self.emotionManagers.count)
+        return;
+    
+    
+}
+
+#pragma mark - Lefy cycle
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -17,6 +26,12 @@
         // Initialization code
     }
     return self;
+}
+
+- (void)willMoveToSuperview:(UIView *)newSuperview {
+    if (newSuperview) {
+        [self reloadData];
+    }
 }
 
 /*

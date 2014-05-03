@@ -123,6 +123,10 @@
     return [self.emotionManagers objectAtIndex:column];
 }
 
+- (NSArray *)emotionManagersAtManager {
+    return self.emotionManagers;
+}
+
 #pragma mark - XHMessageTableViewController Delegate
 
 - (void)didSendText:(NSString *)text fromSender:(NSString *)sender onDate:(NSDate *)date {

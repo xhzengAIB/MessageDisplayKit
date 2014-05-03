@@ -34,9 +34,15 @@
         return ;
     }
     
+    self.emotionSectionBar.emotionManagers = [self.dataSource emotionManagersAtManager];
+    [self.emotionSectionBar reloadData];
+    
+    
     XHEmotionManager *emotionManager = [self.dataSource emotionManagerForColumn:self.selectedIndex];
     NSInteger numberOfEmotions = emotionManager.emotions.count;
     self.emotionPageControl.numberOfPages = (numberOfEmotions / (kXHEmotionPerRowItemCount * 2) + (numberOfEmotions % (kXHEmotionPerRowItemCount * 2) ? 1 : 0));
+    
+    
     [self.emotionCollectionView reloadData];
 }
 

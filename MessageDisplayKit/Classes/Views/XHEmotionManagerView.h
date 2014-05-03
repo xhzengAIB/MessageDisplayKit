@@ -27,6 +27,8 @@
 
 - (XHEmotionManager *)emotionManagerForColumn:(NSInteger)column;
 
+- (NSArray *)emotionManagersAtManager;
+
 - (NSInteger)numberOfEmotionManagers;
 
 @end

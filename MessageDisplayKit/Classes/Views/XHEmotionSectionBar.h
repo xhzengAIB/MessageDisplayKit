@@ -8,6 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol XHEmotionSectionBarDelegate <NSObject>
+
+- (void)didSelecteEmotionManager:(XHEmotionManager *)emotionManager atSection:(NSInteger)section;
+
+@end
+
 @interface XHEmotionSectionBar : UIView
+
+@property (nonatomic, weak) id <XHEmotionSectionBarDelegate> delegate;
+
+@property (nonatomic, strong) NSArray *emotionManagers;
+
+- (void)reloadData;
 
 @end
