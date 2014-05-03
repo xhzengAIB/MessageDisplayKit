@@ -570,6 +570,8 @@
 
 - (void)inputTextViewWillBeginEditing:(XHMessageTextView *)messageInputTextView {
     self.textViewInputViewType = XHTextViewNormalInputViewType;
+    self.messageInputView.faceSendButton.selected = NO;
+    self.messageInputView.voiceChangeButton.selected = NO;
 }
 
 - (void)inputTextViewDidBeginEditing:(XHMessageTextView *)messageInputTextView {

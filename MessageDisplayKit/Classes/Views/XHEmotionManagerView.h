@@ -11,7 +11,7 @@
 
 #define kXHEmotionPerRowItemCount 4
 #define kXHEmotionPageControlHeight 38
-#define kXHEmotionSectionBarHeight 35
+#define kXHEmotionSectionBarHeight 36
 
 @protocol XHEmotionManagerViewDelegate <NSObject>
 
