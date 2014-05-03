@@ -53,8 +53,9 @@
             break;
         }
         case 1: {
-            if ([self.delegate respondsToSelector:@selector(didSendFaceMessage)]) {
-                [self.delegate didSendFaceMessage];
+            sender.selected = !sender.selected;
+            if ([self.delegate respondsToSelector:@selector(didSendFaceMessage:)]) {
+                [self.delegate didSendFaceMessage:sender.selected];
             }
             break;
         }
@@ -153,6 +154,7 @@
     // 允许发送表情
     if (self.allowsSendFace) {
         button = [self createButtonWithImage:[UIImage imageNamed:@"face"] HLImage:[UIImage imageNamed:@"face_HL"]];
+        [button setImage:[UIImage imageNamed:@"keyborad"] forState:UIControlStateSelected];
         [button addTarget:self action:@selector(messageStyleButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
         button.tag = 1;
         buttonFrame = button.frame;

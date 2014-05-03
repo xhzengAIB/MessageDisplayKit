@@ -600,19 +600,23 @@
     [self.messageInputView.inputTextView resignFirstResponder];
 }
 
-- (void)didSendFaceMessage {
-    self.textViewInputViewType = XHTextViewFaceInputViewType;
-    
-    [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-        CGRect inputViewFrame = self.messageInputView.frame;
-        inputViewFrame.origin.y = CGRectGetMinY(self.shareMenuView.frame) - CGRectGetHeight(inputViewFrame);
-        self.messageInputView.frame = inputViewFrame;
+- (void)didSendFaceMessage:(BOOL)sendFace {
+    if (sendFace) {
+        self.textViewInputViewType = XHTextViewFaceInputViewType;
         
-    } completion:^(BOOL finished) {
-        
-    }];
-    self.emotionManagerView.alpha = 1.0;
-    [self.messageInputView.inputTextView resignFirstResponder];
+        [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+            CGRect inputViewFrame = self.messageInputView.frame;
+            inputViewFrame.origin.y = CGRectGetMinY(self.shareMenuView.frame) - CGRectGetHeight(inputViewFrame);
+            self.messageInputView.frame = inputViewFrame;
+            
+        } completion:^(BOOL finished) {
+            
+        }];
+        self.emotionManagerView.alpha = 1.0;
+        [self.messageInputView.inputTextView resignFirstResponder];
+    } else {
+        [self.messageInputView.inputTextView becomeFirstResponder];
+    }
 }
 
 - (void)didStartRecordingVoice {
@@ -696,6 +700,10 @@
 }
 
 - (XHEmotionManager *)emotionManagerForColumn:(NSInteger)column {
+    return nil;
+}
+
+- (NSArray *)emotionManagersAtManager {
     return nil;
 }
 
