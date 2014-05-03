@@ -8,10 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-#import "XHMessageTableView.h"
-#import "XHMessageInputView.h"
-#import "XHShareMenuView.h"
-
 @protocol XHMessageTableViewControllerDelegate <NSObject>
 
 @optional
@@ -99,7 +95,7 @@
 
 @end
 
-@interface XHMessageTableViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, XHMessageTableViewControllerDelegate, XHMessageTableViewControllerDataSource, XHMessageInputViewDelegate, XHMessageTableViewCellDelegate, XHShareMenuViewDelegate>
+@interface XHMessageTableViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, XHMessageTableViewControllerDelegate, XHMessageTableViewControllerDataSource, XHMessageInputViewDelegate, XHMessageTableViewCellDelegate, XHShareMenuViewDelegate, XHEmotionManagerViewDelegate, XHEmotionManagerViewDataSource>
 
 @property (nonatomic, weak) id <XHMessageTableViewControllerDelegate> delegate;
 
@@ -136,6 +132,10 @@
  *  替换键盘的位置的第三方功能控件
  */
 @property (nonatomic, weak, readonly) XHShareMenuView *shareMenuView;
+
+
+
+@property (nonatomic, weak, readonly) XHEmotionManagerView *emotionManagerView;
 
 #pragma mark - Message View Controller Default stup
 /**

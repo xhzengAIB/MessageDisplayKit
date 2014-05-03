@@ -7,7 +7,39 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XHEmotionManager.h"
+
+#define kXHEmotionPerRowItemCount 4
+#define kXHEmotionPageControlHeight 38
+#define kXHEmotionSectionBarHeight 35
+
+@protocol XHEmotionManagerViewDelegate <NSObject>
+
+@optional
+
+- (void)didSelecteEmotion:(XHEmotion *)emotion atIndexPath:(NSIndexPath *)indexPath;
+
+@end
+
+@protocol XHEmotionManagerViewDataSource <NSObject>
+
+@required
+
+- (XHEmotionManager *)emotionManagerForColumn:(NSInteger)column;
+
+- (NSInteger)numberOfEmotionManagers;
+
+@end
 
 @interface XHEmotionManagerView : UIView
+
+@property (nonatomic, weak) id <XHEmotionManagerViewDelegate> delegate;
+
+@property (nonatomic, weak) id <XHEmotionManagerViewDataSource> dataSource;
+
+@property (nonatomic, assign) BOOL isShowEmotionStoreButton; // default is YES
+
+- (void)reloadData;
+
 
 @end

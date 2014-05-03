@@ -26,8 +26,14 @@
 
 #import "XHMessage.h"
 #import "XHShareMenuItem.h"
+#import "XHEmotion.h"
+#import "XHEmotionManager.h"
 
+#import "XHMessageTableView.h"
 #import "XHMessageTableViewCell.h"
+#import "XHMessageInputView.h"
+#import "XHShareMenuView.h"
+#import "XHEmotionManagerView.h"
 
 #import "XHMessageTableViewController.h"
 

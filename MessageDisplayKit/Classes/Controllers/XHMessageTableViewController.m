@@ -26,6 +26,7 @@
 @property (nonatomic, weak, readwrite) XHMessageTableView *messageTableView;
 @property (nonatomic, weak, readwrite) XHMessageInputView *messageInputView;
 @property (nonatomic, weak, readwrite) XHShareMenuView *shareMenuView;
+@property (nonatomic, weak, readwrite) XHEmotionManagerView *emotionManagerView;
 
 @property (nonatomic, strong) XHPhotographyHelper *photographyHelper;
 
@@ -108,10 +109,25 @@
         shareMenuView.alpha = 0.0;
         shareMenuView.shareMenuItems = self.shareMenuItems;
         [self.view addSubview:shareMenuView];
-        [self.view bringSubviewToFront:shareMenuView];
         _shareMenuView = shareMenuView;
     }
+    [self.view bringSubviewToFront:_shareMenuView];
     return _shareMenuView;
+}
+
+- (XHEmotionManagerView *)emotionManagerView {
+    if (!_emotionManagerView) {
+        CGFloat keyboardViewHeight = 216;
+        XHEmotionManagerView *emotionManagerView = [[XHEmotionManagerView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.view.bounds) - keyboardViewHeight, CGRectGetWidth(self.view.bounds), keyboardViewHeight)];
+        emotionManagerView.delegate = self;
+        emotionManagerView.dataSource = self;
+        emotionManagerView.backgroundColor = [UIColor grayColor];
+        emotionManagerView.alpha = 0.0;
+        [self.view addSubview:emotionManagerView];
+        _emotionManagerView = emotionManagerView;
+    }
+    [self.view bringSubviewToFront:_emotionManagerView];
+    return _emotionManagerView;
 }
 
 - (XHPhotographyHelper *)photographyHelper {
@@ -324,6 +340,7 @@
         if ([weakSelf.messageInputView.inputTextView isFirstResponder]) {
             if (didShowed) {
                 weakSelf.shareMenuView.alpha = 0.0;
+                weakSelf.emotionManagerView.alpha = 0.0;
             }
         }
     };
@@ -544,6 +561,11 @@
     }
 }
 
+- (void)didSendFaceMessageWithFacePath:(NSString *)facePath {
+    XHMessage *message = [[XHMessage alloc] initWithFacePath:facePath sender:@"Jayson" date:[NSDate date]];
+    [self addMessage:message];
+}
+
 #pragma mark - XHMessageInputView Delegate
 
 - (void)inputTextViewWillBeginEditing:(XHMessageTextView *)messageInputTextView {
@@ -578,10 +600,19 @@
     [self.messageInputView.inputTextView resignFirstResponder];
 }
 
-- (void)didSendFaceMessageWithFacePath:(NSString *)facePath {
-    DLog(@"facePath : %@", facePath);
-    XHMessage *message = [[XHMessage alloc] initWithFacePath:facePath sender:@"Jayson" date:[NSDate date]];
-    [self addMessage:message];
+- (void)didSendFaceMessage {
+    self.textViewInputViewType = XHTextViewFaceInputViewType;
+    
+    [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        CGRect inputViewFrame = self.messageInputView.frame;
+        inputViewFrame.origin.y = CGRectGetMinY(self.shareMenuView.frame) - CGRectGetHeight(inputViewFrame);
+        self.messageInputView.frame = inputViewFrame;
+        
+    } completion:^(BOOL finished) {
+        
+    }];
+    self.emotionManagerView.alpha = 1.0;
+    [self.messageInputView.inputTextView resignFirstResponder];
 }
 
 - (void)didStartRecordingVoice {
@@ -650,6 +681,22 @@
         default:
             break;
     }
+}
+
+#pragma mark - XHEmotionManagerView delegate
+
+- (void)didSelecteEmotion:(XHEmotion *)emotion atIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"indexPath : %@ ", indexPath);
+}
+
+#pragma mark - XHEmotionManagerView DataSource
+
+- (NSInteger)numberOfEmotionManagers {
+    return 0;
+}
+
+- (XHEmotionManager *)emotionManagerForColumn:(NSInteger)column {
+    return nil;
 }
 
 #pragma mark - UIScrollView delegate

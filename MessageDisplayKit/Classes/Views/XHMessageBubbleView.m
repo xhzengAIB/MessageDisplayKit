@@ -225,8 +225,6 @@
             _bubbleImageView.image = [UIImage animatedImageWithAnimatedGIFURL:[NSURL fileURLWithPath:message.facePath]];
             break;
         case XHBubbleMessageLocalPosition:
-            
-            DLog(@"地理位置：%d", _bubblePhotoImageView.hidden);
             [_bubblePhotoImageView configureMessagePhoto:message.localPositionPhoto onBubbleMessageType:self.message.bubbleMessageType];
             break;
         default:

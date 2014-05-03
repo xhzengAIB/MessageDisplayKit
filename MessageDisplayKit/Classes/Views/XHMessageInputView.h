@@ -67,7 +67,7 @@ typedef NS_ENUM(NSInteger, XHMessageInputViewStyle) {
  *
  *  @param facePath 目标表情的本地路径
  */
-- (void)didSendFaceMessageWithFacePath:(NSString *)facePath;
+- (void)didSendFaceMessage;
 
 @end
 
