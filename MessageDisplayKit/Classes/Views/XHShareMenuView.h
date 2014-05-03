@@ -12,7 +12,8 @@
 
 @protocol XHShareMenuViewDelegate <NSObject>
 
-- (void)didSelecteShareMenuItem:(XHShareMenuItem *)shareMenuItem AtIndexPath:(NSIndexPath *)indexPath;
+@optional
+- (void)didSelecteShareMenuItem:(XHShareMenuItem *)shareMenuItem atIndex:(NSInteger)index;
 
 @end
 

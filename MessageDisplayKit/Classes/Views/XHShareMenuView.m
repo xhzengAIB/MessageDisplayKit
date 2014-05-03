@@ -70,6 +70,15 @@
 
 @implementation XHShareMenuView
 
+- (void)shareMenuItemButtonClicked:(UIButton *)sender {
+    if ([self.delegate respondsToSelector:@selector(didSelecteShareMenuItem:atIndex:)]) {
+        NSInteger index = sender.tag;
+        if (index < self.shareMenuItems.count) {
+            [self.delegate didSelecteShareMenuItem:[self.shareMenuItems objectAtIndex:index] atIndex:index];
+        }
+    }
+}
+
 - (void)reloadData {
     if (!_shareMenuItems.count)
         return;
@@ -84,6 +93,8 @@
         CGRect shareMenuItemViewFrame = CGRectMake((index % kXHShareMenuPerRowItemCount) * (kXHShareMenuItemIconSize + paddingX) + paddingX + (page * CGRectGetWidth(self.bounds)), ((index / kXHShareMenuPerRowItemCount) - kXHShareMenuPerColum * page) * (KXHShareMenuItemHeight + paddingY) + paddingY, kXHShareMenuItemIconSize, KXHShareMenuItemHeight);
         XHShareMenuItemView *shareMenuItemView = [[XHShareMenuItemView alloc] initWithFrame:shareMenuItemViewFrame];
         
+        shareMenuItemView.shareMenuItemButton.tag = index;
+        [shareMenuItemView.shareMenuItemButton addTarget:self action:@selector(shareMenuItemButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
         [shareMenuItemView.shareMenuItemButton setImage:shareMenuItem.normalIconImage forState:UIControlStateNormal];
         shareMenuItemView.shareMenuItemTitleLabel.text = shareMenuItem.title;
         

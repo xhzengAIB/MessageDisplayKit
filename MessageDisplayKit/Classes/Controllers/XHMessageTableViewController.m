@@ -101,6 +101,7 @@
     if (!_shareMenuView) {
         CGFloat keyboardViewHeight = 216;
         XHShareMenuView *shareMenuView = [[XHShareMenuView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.view.bounds) - keyboardViewHeight, CGRectGetWidth(self.view.bounds), keyboardViewHeight)];
+        shareMenuView.delegate = self;
         shareMenuView.backgroundColor = [UIColor grayColor];
         shareMenuView.alpha = 0.0;
         shareMenuView.shareMenuItems = self.shareMenuItems;
@@ -618,6 +619,12 @@
 
 - (void)menuDidSelectedAtBubbleMessageMenuSelecteType:(XHBubbleMessageMenuSelecteType)bubbleMessageMenuSelecteType {
     
+}
+
+#pragma mark - XHShareMenuView delegate
+
+- (void)didSelecteShareMenuItem:(XHShareMenuItem *)shareMenuItem atIndex:(NSInteger)index {
+    NSLog(@"title : %@   index:%d", shareMenuItem.title, index);
 }
 
 #pragma mark - UIScrollView delegate
