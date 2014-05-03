@@ -29,6 +29,9 @@
 		740660B41914CA0000E1CE95 /* XHPhotographyHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 740660B21914CA0000E1CE95 /* XHPhotographyHelper.h */; };
 		740660B51914CA0000E1CE95 /* XHPhotographyHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 740660B31914CA0000E1CE95 /* XHPhotographyHelper.m */; };
 		740660B61914CA0000E1CE95 /* XHPhotographyHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 740660B31914CA0000E1CE95 /* XHPhotographyHelper.m */; };
+		740660B91914D22A00E1CE95 /* XHEmotionManagerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 740660B71914D22A00E1CE95 /* XHEmotionManagerView.h */; };
+		740660BA1914D22A00E1CE95 /* XHEmotionManagerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 740660B81914D22A00E1CE95 /* XHEmotionManagerView.m */; };
+		740660BB1914D22A00E1CE95 /* XHEmotionManagerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 740660B81914D22A00E1CE95 /* XHEmotionManagerView.m */; };
 		74180BDC190F447100A35C82 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74180BDA190F447100A35C82 /* InfoPlist.strings */; };
 		74180BE6190F447100A35C82 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7482451D1908C730008EC388 /* XCTest.framework */; };
 		74180BE7190F447100A35C82 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748245041908C730008EC388 /* Foundation.framework */; };
@@ -174,6 +177,8 @@
 		740660A61913552800E1CE95 /* UIImage+XHAnimatedFaceGif.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+XHAnimatedFaceGif.m"; sourceTree = "<group>"; };
 		740660B21914CA0000E1CE95 /* XHPhotographyHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHPhotographyHelper.h; sourceTree = "<group>"; };
 		740660B31914CA0000E1CE95 /* XHPhotographyHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHPhotographyHelper.m; sourceTree = "<group>"; };
+		740660B71914D22A00E1CE95 /* XHEmotionManagerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHEmotionManagerView.h; sourceTree = "<group>"; };
+		740660B81914D22A00E1CE95 /* XHEmotionManagerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHEmotionManagerView.m; sourceTree = "<group>"; };
 		74180BD6190F447100A35C82 /* MessageDisplayFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MessageDisplayFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		74180BD9190F447100A35C82 /* MessageDisplayFramework-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MessageDisplayFramework-Info.plist"; sourceTree = "<group>"; };
 		74180BDB190F447100A35C82 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -537,6 +542,8 @@
 				748FFCE1190D737B00752C8A /* XHBubblePhotoImageView.m */,
 				74065FB219123DDB00E1CE95 /* XHShareMenuView.h */,
 				74065FB319123DDB00E1CE95 /* XHShareMenuView.m */,
+				740660B71914D22A00E1CE95 /* XHEmotionManagerView.h */,
+				740660B81914D22A00E1CE95 /* XHEmotionManagerView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -677,6 +684,7 @@
 				74180C1B190F450F00A35C82 /* XHBubblePhotoImageView.h in Headers */,
 				74180C18190F450B00A35C82 /* XHMessageTableViewCell.h in Headers */,
 				74065FB919123E1C00E1CE95 /* XHShareMenuItem.h in Headers */,
+				740660B91914D22A00E1CE95 /* XHEmotionManagerView.h in Headers */,
 				74180C1C190F451200A35C82 /* XHMessageTableViewController.h in Headers */,
 				74180C19190F450C00A35C82 /* XHMessageBubbleView.h in Headers */,
 				74180C17190F450900A35C82 /* XHMessageTextView.h in Headers */,
@@ -912,6 +920,7 @@
 				74180C06190F44AE00A35C82 /* XHMessageBubbleView.m in Sources */,
 				74180BFD190F449400A35C82 /* XHFoundationCommon.m in Sources */,
 				74180C08190F44B100A35C82 /* XHBubblePhotoImageView.m in Sources */,
+				740660BB1914D22A00E1CE95 /* XHEmotionManagerView.m in Sources */,
 				740660B61914CA0000E1CE95 /* XHPhotographyHelper.m in Sources */,
 				74180C09190F44B400A35C82 /* XHMessageTableViewController.m in Sources */,
 				74180C07190F44AF00A35C82 /* XHMessageDisplayTextView.m in Sources */,
@@ -943,6 +952,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				74BBB032190C28CD00093577 /* XHDemoWeChatMessageTableViewController.m in Sources */,
+				740660BA1914D22A00E1CE95 /* XHEmotionManagerView.m in Sources */,
 				74D1C5E9190E2BE6003B1BCA /* XHMessageVoiceFactory.m in Sources */,
 				7482459A1909F370008EC388 /* XHMessageAvatorFactory.m in Sources */,
 				74D1C5BF190DE55B003B1BCA /* XHMessageDisplayTextView.m in Sources */,
