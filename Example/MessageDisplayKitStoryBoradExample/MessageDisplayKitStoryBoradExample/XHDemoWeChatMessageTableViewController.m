@@ -104,9 +104,21 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - UITableView delegate
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 //    [self removeMessageAtIndexPath:indexPath];
 //    [self insertOldMessages:self.messages];
+}
+
+#pragma mark - XHEmotionManagerView DataSource
+
+- (NSInteger)numberOfEmotionManagers {
+    return self.emotionManagers.count;
+}
+
+- (XHEmotionManager *)emotionManagerForColumn:(NSInteger)column {
+    return [self.emotionManagers objectAtIndex:column];
 }
 
 #pragma mark - XHMessageTableViewController Delegate
