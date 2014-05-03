@@ -48,18 +48,40 @@
         
         
         // 添加第三方接入数据
-        NSMutableArray *plugItems = [NSMutableArray array];
+        NSMutableArray *shareMenuItems = [NSMutableArray array];
         NSArray *plugIcons = @[@"sharemore_pic", @"sharemore_video", @"sharemore_location", @"sharemore_friendcard", @"sharemore_myfav", @"sharemore_wxtalk", @"sharemore_videovoip", @"sharemore_voiceinput", @"sharemore_openapi", @"sharemore_openapi"];
         NSArray *plugTitle = @[@"照片", @"拍摄", @"位置", @"名片", @"我的收藏", @"实时对讲机", @"视频聊天", @"语音输入", @"大众点评", @"应用"];
         for (NSInteger i = 0; i < 10; i ++) {
             XHShareMenuItem *shareMenuItem = [[XHShareMenuItem alloc] initWithNormalIconImage:[UIImage imageNamed:[plugIcons objectAtIndex:i]] title:[plugTitle objectAtIndex:i]];
-            [plugItems addObject:shareMenuItem];
+            [shareMenuItems addObject:shareMenuItem];
+        }
+        
+        NSMutableArray *emotionManagers = [NSMutableArray array];
+        for (NSInteger i = 0; i < 10; i ++) {
+            XHEmotionManager *emotionManager = [[XHEmotionManager alloc] init];
+            
+            NSMutableArray *emotions = [NSMutableArray array];
+            for (NSInteger j = 0; j < 32; j ++) {
+                XHEmotion *emotion = [[XHEmotion alloc] init];
+                NSString *imageName = [NSString stringWithFormat:@"section%ld_emotion%ld", (long)i , (long)j % 16];
+                emotion.emotionConverPhoto = [UIImage imageNamed:imageName];
+                [emotions addObject:emotion];
+            }
+            emotionManager.emotions = emotions;
+            
+            [emotionManagers addObject:emotionManager];
         }
         
         dispatch_async(dispatch_get_main_queue(), ^{
-            weakSelf.shareMenuItems = plugItems;
+            weakSelf.emotionManagers = emotionManagers;
+            [weakSelf.emotionManagerView reloadData];
+            
+            weakSelf.shareMenuItems = shareMenuItems;
+            [weakSelf.shareMenuView reloadData];
+            
             weakSelf.messages = messages;
             [weakSelf.messageTableView reloadData];
+            
             [weakSelf scrollToBottomAnimated:YES];
         });
     });
