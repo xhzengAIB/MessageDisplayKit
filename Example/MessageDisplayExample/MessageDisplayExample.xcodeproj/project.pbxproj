@@ -26,6 +26,9 @@
 		740660A71913552800E1CE95 /* UIImage+XHAnimatedFaceGif.h in Headers */ = {isa = PBXBuildFile; fileRef = 740660A51913552800E1CE95 /* UIImage+XHAnimatedFaceGif.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		740660A81913552800E1CE95 /* UIImage+XHAnimatedFaceGif.m in Sources */ = {isa = PBXBuildFile; fileRef = 740660A61913552800E1CE95 /* UIImage+XHAnimatedFaceGif.m */; };
 		740660A91913552800E1CE95 /* UIImage+XHAnimatedFaceGif.m in Sources */ = {isa = PBXBuildFile; fileRef = 740660A61913552800E1CE95 /* UIImage+XHAnimatedFaceGif.m */; };
+		740660B41914CA0000E1CE95 /* XHPhotographyHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 740660B21914CA0000E1CE95 /* XHPhotographyHelper.h */; };
+		740660B51914CA0000E1CE95 /* XHPhotographyHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 740660B31914CA0000E1CE95 /* XHPhotographyHelper.m */; };
+		740660B61914CA0000E1CE95 /* XHPhotographyHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 740660B31914CA0000E1CE95 /* XHPhotographyHelper.m */; };
 		74180BDC190F447100A35C82 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74180BDA190F447100A35C82 /* InfoPlist.strings */; };
 		74180BE6190F447100A35C82 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7482451D1908C730008EC388 /* XCTest.framework */; };
 		74180BE7190F447100A35C82 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748245041908C730008EC388 /* Foundation.framework */; };
@@ -169,6 +172,8 @@
 		74065FB819123E1C00E1CE95 /* XHShareMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHShareMenuItem.m; sourceTree = "<group>"; };
 		740660A51913552800E1CE95 /* UIImage+XHAnimatedFaceGif.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+XHAnimatedFaceGif.h"; sourceTree = "<group>"; };
 		740660A61913552800E1CE95 /* UIImage+XHAnimatedFaceGif.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+XHAnimatedFaceGif.m"; sourceTree = "<group>"; };
+		740660B21914CA0000E1CE95 /* XHPhotographyHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHPhotographyHelper.h; sourceTree = "<group>"; };
+		740660B31914CA0000E1CE95 /* XHPhotographyHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHPhotographyHelper.m; sourceTree = "<group>"; };
 		74180BD6190F447100A35C82 /* MessageDisplayFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MessageDisplayFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		74180BD9190F447100A35C82 /* MessageDisplayFramework-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MessageDisplayFramework-Info.plist"; sourceTree = "<group>"; };
 		74180BDB190F447100A35C82 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -555,6 +560,8 @@
 				74D1C5E8190E2BE6003B1BCA /* XHMessageVoiceFactory.m */,
 				74D1C5C4190DFC1D003B1BCA /* XHFoundationCommon.h */,
 				74D1C5C5190DFC1D003B1BCA /* XHFoundationCommon.m */,
+				740660B21914CA0000E1CE95 /* XHPhotographyHelper.h */,
+				740660B31914CA0000E1CE95 /* XHPhotographyHelper.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -659,6 +666,7 @@
 			files = (
 				74180C0A190F44EA00A35C82 /* MessageDisplayKit.h in Headers */,
 				74180C0E190F44F500A35C82 /* XHMessageVoiceFactory.h in Headers */,
+				740660B41914CA0000E1CE95 /* XHPhotographyHelper.h in Headers */,
 				74180C0F190F44F600A35C82 /* XHFoundationCommon.h in Headers */,
 				74180C0D190F44F300A35C82 /* XHMessageAvatorFactory.h in Headers */,
 				74180C12190F450000A35C82 /* UIImage+XHRounded.h in Headers */,
@@ -904,6 +912,7 @@
 				74180C06190F44AE00A35C82 /* XHMessageBubbleView.m in Sources */,
 				74180BFD190F449400A35C82 /* XHFoundationCommon.m in Sources */,
 				74180C08190F44B100A35C82 /* XHBubblePhotoImageView.m in Sources */,
+				740660B61914CA0000E1CE95 /* XHPhotographyHelper.m in Sources */,
 				74180C09190F44B400A35C82 /* XHMessageTableViewController.m in Sources */,
 				74180C07190F44AF00A35C82 /* XHMessageDisplayTextView.m in Sources */,
 				74065FBB19123E1C00E1CE95 /* XHShareMenuItem.m in Sources */,
@@ -938,6 +947,7 @@
 				7482459A1909F370008EC388 /* XHMessageAvatorFactory.m in Sources */,
 				74D1C5BF190DE55B003B1BCA /* XHMessageDisplayTextView.m in Sources */,
 				74824560190902DA008EC388 /* XHMessageTextView.m in Sources */,
+				740660B51914CA0000E1CE95 /* XHPhotographyHelper.m in Sources */,
 				7482456B19090C04008EC388 /* XHMessage.m in Sources */,
 				7482458F19092170008EC388 /* NSString+MessageInputView.m in Sources */,
 				74D1C5C6190DFC1D003B1BCA /* XHFoundationCommon.m in Sources */,

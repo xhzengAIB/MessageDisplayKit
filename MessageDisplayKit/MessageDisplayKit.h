@@ -22,6 +22,8 @@
 #import "XHMessageBubbleFactory.h"
 #import "XHMessageVoiceFactory.h"
 
+#import "XHPhotographyHelper.h"
+
 #import "XHMessage.h"
 #import "XHShareMenuItem.h"
 

@@ -27,6 +27,8 @@
 @property (nonatomic, weak, readwrite) XHMessageInputView *messageInputView;
 @property (nonatomic, weak, readwrite) XHShareMenuView *shareMenuView;
 
+@property (nonatomic, strong) XHPhotographyHelper *photographyHelper;
+
 @end
 
 @implementation XHMessageTableViewController
@@ -110,6 +112,17 @@
         _shareMenuView = shareMenuView;
     }
     return _shareMenuView;
+}
+
+- (XHPhotographyHelper *)photographyHelper {
+    if (!_photographyHelper) {
+        WEAKSELF
+        _photographyHelper = [[XHPhotographyHelper alloc] initWithViewController:self didFinishTakeMediaCompledBlock:^(UIImage *image, NSDictionary *editingInfo) {
+            XHMessage *photoMessage = [[XHMessage alloc] initWithPhoto:[editingInfo valueForKey:UIImagePickerControllerOriginalImage] thumbnailUrl:nil originPhotoUrl:nil sender:@"Jayson" date:[NSDate date]];
+            [weakSelf addMessage:photoMessage];
+        }];
+    }
+    return _photographyHelper;
 }
 
 #pragma mark - Messages view controller
@@ -624,7 +637,19 @@
 #pragma mark - XHShareMenuView delegate
 
 - (void)didSelecteShareMenuItem:(XHShareMenuItem *)shareMenuItem atIndex:(NSInteger)index {
-    NSLog(@"title : %@   index:%d", shareMenuItem.title, index);
+    NSLog(@"title : %@   index:%ld", shareMenuItem.title, (long)index);
+    switch (index) {
+        case 0: {
+            [self.photographyHelper showOnPickerViewControllerSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+            break;
+        }
+        case 1: {
+            [self.photographyHelper showOnPickerViewControllerSourceType:UIImagePickerControllerSourceTypeCamera];
+            break;
+        }
+        default:
+            break;
+    }
 }
 
 #pragma mark - UIScrollView delegate
