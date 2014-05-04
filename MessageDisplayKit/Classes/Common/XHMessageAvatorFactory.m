@@ -7,6 +7,7 @@
 //
 
 #import "XHMessageAvatorFactory.h"
+#import "UIImage+XHRounded.h"
 
 @implementation XHMessageAvatorFactory
 
