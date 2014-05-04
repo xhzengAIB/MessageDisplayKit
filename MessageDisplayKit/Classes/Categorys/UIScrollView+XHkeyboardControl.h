@@ -11,7 +11,7 @@
 
 typedef void(^KeyboardWillBeDismissedBlock)(void);
 typedef void(^KeyboardDidHideBlock)(void);
-typedef void(^KeyboardDidShowBlock)(void);
+typedef void(^KeyboardDidShowBlock)(BOOL didShowed);
 typedef void(^KeyboardDidScrollToPointBlock)(CGPoint point);
 typedef void(^KeyboardWillSnapBackToPointBlock)(CGPoint point);
 
@@ -19,6 +19,8 @@ typedef void(^KeyboardWillChangeBlock)(CGRect keyboardRect, UIViewAnimationOptio
 
 
 @interface UIScrollView (XHkeyboardControl)
+
+@property (nonatomic, weak) UIView *keyboardView;
 
 /**
  *  根据是否需要手势控制键盘消失注册键盘的通知
@@ -45,9 +47,9 @@ typedef void(^KeyboardWillChangeBlock)(CGRect keyboardRect, UIViewAnimationOptio
 @property (nonatomic, copy) KeyboardDidHideBlock keyboardDidHide;
 
 /**
- *  键盘刚好显示
+ *  键盘刚好变换完成
  */
-@property (nonatomic, copy) KeyboardDidShowBlock keyboardDidShow;
+@property (nonatomic, copy) KeyboardDidShowBlock keyboardDidChange;
 
 /**
  *  手势控制键盘，滑动到某一点的回调

@@ -52,8 +52,8 @@
     CGFloat radius = 6;
     CGFloat margin = 8;//留出上下左右的边距
     
-    CGFloat triangleSize = 20;//等边三角形的边长
-    CGFloat triangleMarginTop = 8;//等边三角形距离圆角的距离
+    CGFloat triangleSize = 8;//三角形的边长
+    CGFloat triangleMarginTop = 8;//三角形距离圆角的距离
     
     CGFloat borderOffset = 3;//阴影偏移量
     UIColor *borderColor = [UIColor blackColor];//阴影的颜色

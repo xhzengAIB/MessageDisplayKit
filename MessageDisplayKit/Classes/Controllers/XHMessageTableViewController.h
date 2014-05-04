@@ -8,10 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-#import "XHMessageTableView.h"
-#import "XHMessageInputView.h"
-#import "UIScrollView+XHkeyboardControl.h"
-
 @protocol XHMessageTableViewControllerDelegate <NSObject>
 
 @optional
@@ -49,7 +45,7 @@
  *  @param sender    发送者的名字
  *  @param date      发送时间
  */
-- (void)didSendvoice:(NSString *)voicePath fromSender:(NSString *)sender onDate:(NSDate *)date;
+- (void)didSendVoice:(NSString *)voicePath fromSender:(NSString *)sender onDate:(NSDate *)date;
 
 /**
  *  发送第三方表情消息的回调方法
@@ -99,7 +95,7 @@
 
 @end
 
-@interface XHMessageTableViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, XHMessageTableViewControllerDelegate, XHMessageTableViewControllerDataSource, XHMessageInputViewDelegate, XHMessageTableViewCellDelegate>
+@interface XHMessageTableViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, XHMessageTableViewControllerDelegate, XHMessageTableViewControllerDataSource, XHMessageInputViewDelegate, XHMessageTableViewCellDelegate, XHShareMenuViewDelegate, XHEmotionManagerViewDelegate, XHEmotionManagerViewDataSource>
 
 @property (nonatomic, weak) id <XHMessageTableViewControllerDelegate> delegate;
 
@@ -109,6 +105,13 @@
  *  数据源，显示多少消息
  */
 @property (nonatomic, strong) NSMutableArray *messages;
+
+/**
+ *  第三方接入的功能，也包括系统自身的功能，比如拍照、发送地理位置
+ */
+@property (nonatomic, strong) NSArray *plugItems;
+
+@property (nonatomic, strong) NSArray *shareMenuItems;
 
 /**
  *  消息的主体，默认为nil
@@ -124,6 +127,15 @@
  *  用于显示发送消息类型控制的工具条，在底部
  */
 @property (nonatomic, weak, readonly) XHMessageInputView *messageInputView;
+
+/**
+ *  替换键盘的位置的第三方功能控件
+ */
+@property (nonatomic, weak, readonly) XHShareMenuView *shareMenuView;
+
+
+
+@property (nonatomic, weak, readonly) XHEmotionManagerView *emotionManagerView;
 
 #pragma mark - Message View Controller Default stup
 /**

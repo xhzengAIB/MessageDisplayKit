@@ -155,7 +155,7 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
     self.displayTimestamp = displayTimestamp;
     self.timestampLabel.hidden = !self.displayTimestamp;
     if (displayTimestamp) {
-        self.timestampLabel.text = [NSDateFormatter localizedStringFromDate:message.date
+        self.timestampLabel.text = [NSDateFormatter localizedStringFromDate:message.timestamp
                                                                   dateStyle:NSDateFormatterMediumStyle
                                                                   timeStyle:NSDateFormatterShortStyle];
     }
@@ -179,13 +179,15 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
     }
     switch (currentMediaType) {
         case XHBubbleMessagePhoto:
-        case XHBubbleMessageVideo: {
+        case XHBubbleMessageVideo:
+        case XHBubbleMessageLocalPosition: {
             UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(sigleTapGestureRecognizerHandle:)];
             [self.messageBubbleView.bubblePhotoImageView addGestureRecognizer:tapGestureRecognizer];
             break;
         }
         case XHBubbleMessageText:
-        case XHBubbleMessagevoice: {
+        case XHBubbleMessageVoice:
+        case XHBubbleMessageFace: {
             UITapGestureRecognizer *tapGestureRecognizer;
             if (currentMediaType == XHBubbleMessageText) {
                 tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doubleTapGestureRecognizerHandle:)];

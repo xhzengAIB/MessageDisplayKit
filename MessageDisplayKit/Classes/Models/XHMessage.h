@@ -24,12 +24,16 @@
 @property (nonatomic, copy) NSString *voicePath;
 @property (nonatomic, copy) NSString *voiceUrl;
 
+@property (nonatomic, copy) NSString *emotionPath;
+
+@property (nonatomic, strong) UIImage *localPositionPhoto;
+
 @property (nonatomic, strong) UIImage *avator;
 @property (nonatomic, copy) NSString *avatorUrl;
 
 @property (nonatomic, copy) NSString *sender;
 
-@property (nonatomic, strong) NSDate *date;
+@property (nonatomic, strong) NSDate *timestamp;
 
 @property (nonatomic, assign) BOOL sended;
 
@@ -49,7 +53,7 @@
  */
 - (instancetype)initWithText:(NSString *)text
                       sender:(NSString *)sender
-                        date:(NSDate *)date;
+                        timestamp:(NSDate *)timestamp;
 
 /**
  *  初始化图片类型的消息
@@ -66,7 +70,7 @@
                  thumbnailUrl:(NSString *)thumbnailUrl
                originPhotoUrl:(NSString *)originPhotoUrl
                        sender:(NSString *)sender
-                         date:(NSDate *)date;
+                         timestamp:(NSDate *)timestamp;
 
 /**
  *  初始化视频类型的消息
@@ -83,7 +87,7 @@
                                videoPath:(NSString *)videoPath
                                 videoUrl:(NSString *)videoUrl
                                   sender:(NSString *)sender
-                                    date:(NSDate *)date;
+                                    timestamp:(NSDate *)timestamp;
 
 /**
  *  初始化语音类型的消息
@@ -95,9 +99,17 @@
  *
  *  @return 返回Message model 对象
  */
-- (instancetype)initWithvoicePath:(NSString *)voicePath
+- (instancetype)initWithVoicePath:(NSString *)voicePath
                          voiceUrl:(NSString *)voiceUrl
                                   sender:(NSString *)sender
-                                    date:(NSDate *)date;
+                                    timestamp:(NSDate *)timestamp;
+
+- (instancetype)initWithEmotionPath:(NSString *)emotionPath
+                           sender:(NSString *)sender
+                             timestamp:(NSDate *)timestamp;
+
+- (instancetype)initWithLocalPositionPhoto:(UIImage *)localPositionPhoto
+                          sender:(NSString *)sender
+                            timestamp:(NSDate *)timestamp;
 
 @end

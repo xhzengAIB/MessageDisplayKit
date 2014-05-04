@@ -13,16 +13,22 @@
 /**
  *  判断是否用户手指滚动
  */
-@property (assign, nonatomic) BOOL isUserScrolling;
+@property (nonatomic, assign) BOOL isUserScrolling;
 
 /**
  *  记录旧的textView contentSize Heigth
  */
-@property (assign, nonatomic) CGFloat previousTextViewContentHeight;
+@property (nonatomic, assign) CGFloat previousTextViewContentHeight;
+
+@property (nonatomic, assign) XHTextViewInputViewType textViewInputViewType;
 
 
 @property (nonatomic, weak, readwrite) XHMessageTableView *messageTableView;
 @property (nonatomic, weak, readwrite) XHMessageInputView *messageInputView;
+@property (nonatomic, weak, readwrite) XHShareMenuView *shareMenuView;
+@property (nonatomic, weak, readwrite) XHEmotionManagerView *emotionManagerView;
+
+@property (nonatomic, strong) XHPhotographyHelper *photographyHelper;
 
 @end
 
@@ -94,6 +100,47 @@
     return _messages;
 }
 
+- (XHShareMenuView *)shareMenuView {
+    if (!_shareMenuView) {
+        CGFloat keyboardViewHeight = 216;
+        XHShareMenuView *shareMenuView = [[XHShareMenuView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.view.bounds) - keyboardViewHeight, CGRectGetWidth(self.view.bounds), keyboardViewHeight)];
+        shareMenuView.delegate = self;
+        shareMenuView.backgroundColor = [UIColor grayColor];
+        shareMenuView.alpha = 0.0;
+        shareMenuView.shareMenuItems = self.shareMenuItems;
+        [self.view addSubview:shareMenuView];
+        _shareMenuView = shareMenuView;
+    }
+    [self.view bringSubviewToFront:_shareMenuView];
+    return _shareMenuView;
+}
+
+- (XHEmotionManagerView *)emotionManagerView {
+    if (!_emotionManagerView) {
+        CGFloat keyboardViewHeight = 216;
+        XHEmotionManagerView *emotionManagerView = [[XHEmotionManagerView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.view.bounds) - keyboardViewHeight, CGRectGetWidth(self.view.bounds), keyboardViewHeight)];
+        emotionManagerView.delegate = self;
+        emotionManagerView.dataSource = self;
+        emotionManagerView.backgroundColor = [UIColor grayColor];
+        emotionManagerView.alpha = 0.0;
+        [self.view addSubview:emotionManagerView];
+        _emotionManagerView = emotionManagerView;
+    }
+    [self.view bringSubviewToFront:_emotionManagerView];
+    return _emotionManagerView;
+}
+
+- (XHPhotographyHelper *)photographyHelper {
+    if (!_photographyHelper) {
+        WEAKSELF
+        _photographyHelper = [[XHPhotographyHelper alloc] initWithViewController:self didFinishTakeMediaCompledBlock:^(UIImage *image, NSDictionary *editingInfo) {
+            XHMessage *photoMessage = [[XHMessage alloc] initWithPhoto:[editingInfo valueForKey:UIImagePickerControllerOriginalImage] thumbnailUrl:nil originPhotoUrl:nil sender:@"Jayson" timestamp:[NSDate date]];
+            [weakSelf addMessage:photoMessage];
+        }];
+    }
+    return _photographyHelper;
+}
+
 #pragma mark - Messages view controller
 
 - (void)finishSendMessageWithBubbleMessageType:(XHBubbleMessageMediaType)mediaType {
@@ -115,7 +162,7 @@
         case XHBubbleMessageVideo: {
             break;
         }
-        case XHBubbleMessagevoice: {
+        case XHBubbleMessageVoice: {
             break;
         }
         case XHBubbleMessageFace: {
@@ -259,32 +306,43 @@
     }
     
     // block回调键盘通知
-    self.messageTableView.keyboardWillChange = ^(CGRect keyboardRect, UIViewAnimationOptions options, double duration, BOOL showKeyborad){
-        [UIView animateWithDuration:duration
-                              delay:0.0
-                            options:options
-                         animations:^{
-                             CGFloat keyboardY = [weakSelf.view convertRect:keyboardRect fromView:nil].origin.y;
-                             
-                             CGRect inputViewFrame = weakSelf.messageInputView.frame;
-                             CGFloat inputViewFrameY = keyboardY - inputViewFrame.size.height;
-                             
-                             // for ipad modal form presentations
-                             CGFloat messageViewFrameBottom = weakSelf.view.frame.size.height - inputViewFrame.size.height;
-                             if (inputViewFrameY > messageViewFrameBottom)
-                                 inputViewFrameY = messageViewFrameBottom;
-                             
-                             weakSelf.messageInputView.frame = CGRectMake(inputViewFrame.origin.x,
-                                                                          inputViewFrameY,
-                                                                          inputViewFrame.size.width,
-                                                                          inputViewFrame.size.height);
-                             
-                             [weakSelf setTableViewInsetsWithBottomValue:weakSelf.view.frame.size.height
-                              - weakSelf.messageInputView.frame.origin.y];
-                             if (showKeyborad)
-                                 [weakSelf scrollToBottomAnimated:NO];
-                         }
-                         completion:nil];
+    self.messageTableView.keyboardWillChange = ^(CGRect keyboardRect, UIViewAnimationOptions options, double duration, BOOL showKeyborad) {
+        if (weakSelf.textViewInputViewType == XHTextViewNormalInputViewType) {
+            [UIView animateWithDuration:duration
+                                  delay:0.0
+                                options:options
+                             animations:^{
+                                 CGFloat keyboardY = [weakSelf.view convertRect:keyboardRect fromView:nil].origin.y;
+                                 
+                                 CGRect inputViewFrame = weakSelf.messageInputView.frame;
+                                 CGFloat inputViewFrameY = keyboardY - inputViewFrame.size.height;
+                                 
+                                 // for ipad modal form presentations
+                                 CGFloat messageViewFrameBottom = weakSelf.view.frame.size.height - inputViewFrame.size.height;
+                                 if (inputViewFrameY > messageViewFrameBottom)
+                                     inputViewFrameY = messageViewFrameBottom;
+                                 
+                                 weakSelf.messageInputView.frame = CGRectMake(inputViewFrame.origin.x,
+                                                                              inputViewFrameY,
+                                                                              inputViewFrame.size.width,
+                                                                              inputViewFrame.size.height);
+                                 
+                                 [weakSelf setTableViewInsetsWithBottomValue:weakSelf.view.frame.size.height
+                                  - weakSelf.messageInputView.frame.origin.y];
+                                 if (showKeyborad)
+                                     [weakSelf scrollToBottomAnimated:NO];
+                             }
+                             completion:nil];
+        }
+    };
+    
+    self.messageTableView.keyboardDidChange = ^(BOOL didShowed) {
+        if ([weakSelf.messageInputView.inputTextView isFirstResponder]) {
+            if (didShowed) {
+                weakSelf.shareMenuView.alpha = 0.0;
+                weakSelf.emotionManagerView.alpha = 0.0;
+            }
+        }
     };
     
     self.messageTableView.keyboardDidHide = ^() {
@@ -324,7 +382,7 @@
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     // 取消输入框
-    [self.messageInputView resignFirstResponder];
+    [self.messageInputView.inputTextView resignFirstResponder];
     [self setEditing:NO animated:YES];
     
     // remove键盘通知或者手势
@@ -498,16 +556,45 @@
 
 - (void)didSendMessageWithvoice:(NSString *)voicePath {
     DLog(@"send voicePath : %@", voicePath);
-    if ([self.delegate respondsToSelector:@selector(didSendvoice:fromSender:onDate:)]) {
-        [self.delegate didSendvoice:voicePath fromSender:self.messageSender onDate:[NSDate date]];
+    if ([self.delegate respondsToSelector:@selector(didSendVoice:fromSender:onDate:)]) {
+        [self.delegate didSendVoice:voicePath fromSender:self.messageSender onDate:[NSDate date]];
     }
+}
+
+- (void)didSendFaceMessageWithFacePath:(NSString *)facePath {
+    XHMessage *message = [[XHMessage alloc] initWithEmotionPath:facePath sender:@"Jayson" timestamp:[NSDate date]];
+    [self addMessage:message];
 }
 
 #pragma mark - XHMessageInputView Delegate
 
+- (void)inputTextViewWillBeginEditing:(XHMessageTextView *)messageInputTextView {
+    self.textViewInputViewType = XHTextViewNormalInputViewType;
+    self.messageInputView.faceSendButton.selected = NO;
+    self.messageInputView.voiceChangeButton.selected = NO;
+}
+
 - (void)inputTextViewDidBeginEditing:(XHMessageTextView *)messageInputTextView {
     if (!self.previousTextViewContentHeight)
 		self.previousTextViewContentHeight = [self getTextViewContentH:messageInputTextView];
+}
+
+- (void)didChangeSendVoiceMeesgae:(BOOL)changed {
+    if (changed) {
+        if (self.textViewInputViewType == XHTextViewNormalInputViewType)
+            return;
+        
+        self.shareMenuView.alpha = 0.0;
+        self.emotionManagerView.alpha = 0.0;
+        [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+            CGRect inputViewFrame = self.messageInputView.frame;
+            inputViewFrame.origin.y = CGRectGetHeight(self.view.bounds) - CGRectGetHeight(inputViewFrame);
+            self.messageInputView.frame = inputViewFrame;
+            
+        } completion:^(BOOL finished) {
+            
+        }];
+    }
 }
 
 - (void)didSendMessageWithText:(NSString *)text {
@@ -519,10 +606,37 @@
 
 - (void)didSelectedMultipleMediaAction {
     DLog(@"didSelectedMultipleMediaAction");
+    self.textViewInputViewType = XHTextViewPlugMenuInputViewType;
+    
+    [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        CGRect inputViewFrame = self.messageInputView.frame;
+        inputViewFrame.origin.y = CGRectGetMinY(self.shareMenuView.frame) - CGRectGetHeight(inputViewFrame);
+        self.messageInputView.frame = inputViewFrame;
+        
+    } completion:^(BOOL finished) {
+        
+    }];
+    self.shareMenuView.alpha = 1.0;
+    [self.messageInputView.inputTextView resignFirstResponder];
 }
 
-- (void)didSendFaceMessageWithFacePath:(NSString *)facePath {
-    DLog(@"facePath : %@", facePath);
+- (void)didSendFaceMessage:(BOOL)sendFace {
+    if (sendFace) {
+        self.textViewInputViewType = XHTextViewFaceInputViewType;
+        
+        [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+            CGRect inputViewFrame = self.messageInputView.frame;
+            inputViewFrame.origin.y = CGRectGetMinY(self.shareMenuView.frame) - CGRectGetHeight(inputViewFrame);
+            self.messageInputView.frame = inputViewFrame;
+            
+        } completion:^(BOOL finished) {
+            
+        }];
+        self.emotionManagerView.alpha = 1.0;
+        [self.messageInputView.inputTextView resignFirstResponder];
+    } else {
+        [self.messageInputView.inputTextView becomeFirstResponder];
+    }
 }
 
 - (void)didStartRecordingVoice {
@@ -547,10 +661,16 @@
         case XHBubbleMessageVideo:
             DLog(@"message : %@", message.videoConverPhoto);
             break;
-        case XHBubbleMessagevoice:
+        case XHBubbleMessageVoice:
             DLog(@"message : %@", message.voicePath);
             [messageTableViewCell.messageBubbleView.animationVoiceImageView startAnimating];
             [messageTableViewCell.messageBubbleView.animationVoiceImageView performSelector:@selector(stopAnimating) withObject:nil afterDelay:10];
+            break;
+        case XHBubbleMessageFace:
+            DLog(@"facePath : %@", message.emotionPath);
+            break;
+        case XHBubbleMessageLocalPosition:
+            DLog(@"facePath : %@", message.localPositionPhoto);
             break;
         default:
             break;
@@ -567,6 +687,44 @@
 
 - (void)menuDidSelectedAtBubbleMessageMenuSelecteType:(XHBubbleMessageMenuSelecteType)bubbleMessageMenuSelecteType {
     
+}
+
+#pragma mark - XHShareMenuView delegate
+
+- (void)didSelecteShareMenuItem:(XHShareMenuItem *)shareMenuItem atIndex:(NSInteger)index {
+    NSLog(@"title : %@   index:%ld", shareMenuItem.title, (long)index);
+    switch (index) {
+        case 0: {
+            [self.photographyHelper showOnPickerViewControllerSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+            break;
+        }
+        case 1: {
+            [self.photographyHelper showOnPickerViewControllerSourceType:UIImagePickerControllerSourceTypeCamera];
+            break;
+        }
+        default:
+            break;
+    }
+}
+
+#pragma mark - XHEmotionManagerView delegate
+
+- (void)didSelecteEmotion:(XHEmotion *)emotion atIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"indexPath : %@ ", indexPath);
+}
+
+#pragma mark - XHEmotionManagerView DataSource
+
+- (NSInteger)numberOfEmotionManagers {
+    return 0;
+}
+
+- (XHEmotionManager *)emotionManagerForColumn:(NSInteger)column {
+    return nil;
+}
+
+- (NSArray *)emotionManagersAtManager {
+    return nil;
 }
 
 #pragma mark - UIScrollView delegate

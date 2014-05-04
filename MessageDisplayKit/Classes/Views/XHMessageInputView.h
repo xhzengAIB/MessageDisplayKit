@@ -19,9 +19,25 @@ typedef NS_ENUM(NSInteger, XHMessageInputViewStyle) {
 @protocol XHMessageInputViewDelegate <NSObject>
 
 @required
+
+/**
+ *  输入框刚好开始编辑
+ *
+ *  @param messageInputTextView 输入框对象
+ */
 - (void)inputTextViewDidBeginEditing:(XHMessageTextView *)messageInputTextView;
 
+/**
+ *  输入框将要开始编辑
+ *
+ *  @param messageInputTextView 输入框对象
+ */
+- (void)inputTextViewWillBeginEditing:(XHMessageTextView *)messageInputTextView;
+
 @optional
+
+- (void)didChangeSendVoiceMeesgae:(BOOL)changed;
+
 /**
  *  发送文本消息，包括系统的表情
  *
@@ -54,7 +70,7 @@ typedef NS_ENUM(NSInteger, XHMessageInputViewStyle) {
  *
  *  @param facePath 目标表情的本地路径
  */
-- (void)didSendFaceMessageWithFacePath:(NSString *)facePath;
+- (void)didSendFaceMessage:(BOOL)sendFace;
 
 @end
 

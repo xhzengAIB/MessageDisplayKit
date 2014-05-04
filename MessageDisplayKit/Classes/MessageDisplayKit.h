@@ -13,6 +13,7 @@
 
 #import "XHFoundationCommon.h"
 
+#import "UIImage+XHAnimatedFaceGif.h"
 #import "UIImage+XHRounded.h"
 #import "NSString+MessageInputView.h"
 #import "UIScrollView+XHkeyboardControl.h"
@@ -21,9 +22,18 @@
 #import "XHMessageBubbleFactory.h"
 #import "XHMessageVoiceFactory.h"
 
-#import "XHMessage.h"
+#import "XHPhotographyHelper.h"
 
+#import "XHMessage.h"
+#import "XHShareMenuItem.h"
+#import "XHEmotion.h"
+#import "XHEmotionManager.h"
+
+#import "XHMessageTableView.h"
 #import "XHMessageTableViewCell.h"
+#import "XHMessageInputView.h"
+#import "XHShareMenuView.h"
+#import "XHEmotionManagerView.h"
 
 #import "XHMessageTableViewController.h"
 

@@ -24,6 +24,9 @@
 - (NSString *)videoUrl;
 
 - (NSString *)voicePath;
+- (UIImage *)localPositionPhoto;
+
+- (NSString *)emotionPath;
 - (NSString *)voiceUrl;
 
 - (UIImage *)avator;
@@ -37,7 +40,7 @@
 
 - (NSString *)sender;
 
-- (NSDate *)date;
+- (NSDate *)timestamp;
 
 @end
 

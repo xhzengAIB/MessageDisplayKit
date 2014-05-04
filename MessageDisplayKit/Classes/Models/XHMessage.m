@@ -12,13 +12,13 @@
 
 - (instancetype)initWithText:(NSString *)text
                       sender:(NSString *)sender
-                        date:(NSDate *)date {
+                        timestamp:(NSDate *)timestamp {
     self = [super init];
     if (self) {
         self.text = text;
         
         self.sender = sender;
-        self.date = date;
+        self.timestamp = timestamp;
         
         self.messageMediaType = XHBubbleMessageText;
     }
@@ -40,7 +40,7 @@
                  thumbnailUrl:(NSString *)thumbnailUrl
                originPhotoUrl:(NSString *)originPhotoUrl
                        sender:(NSString *)sender
-                         date:(NSDate *)date {
+                         timestamp:(NSDate *)timestamp {
     self = [super init];
     if (self) {
         self.photo = photo;
@@ -48,7 +48,7 @@
         self.originPhotoUrl = originPhotoUrl;
         
         self.sender = sender;
-        self.date = date;
+        self.timestamp = timestamp;
         
         self.messageMediaType = XHBubbleMessagePhoto;
     }
@@ -70,7 +70,7 @@
                                videoPath:(NSString *)videoPath
                                 videoUrl:(NSString *)videoUrl
                                   sender:(NSString *)sender
-                                    date:(NSDate *)date {
+                                    timestamp:(NSDate *)timestamp {
     self = [super init];
     if (self) {
         self.videoConverPhoto = videoConverPhoto;
@@ -78,7 +78,7 @@
         self.videoUrl = videoUrl;
         
         self.sender = sender;
-        self.date = date;
+        self.timestamp = timestamp;
         
         self.messageMediaType = XHBubbleMessageVideo;
     }
@@ -95,19 +95,49 @@
  *
  *  @return 返回Message model 对象
  */
-- (instancetype)initWithvoicePath:(NSString *)voicePath
+- (instancetype)initWithVoicePath:(NSString *)voicePath
                          voiceUrl:(NSString *)voiceUrl
                            sender:(NSString *)sender
-                             date:(NSDate *)date {
+                             timestamp:(NSDate *)timestamp {
     self = [super init];
     if (self) {
         self.voicePath = voicePath;
         self.videoUrl = voiceUrl;
         
         self.sender = sender;
-        self.date = date;
+        self.timestamp = timestamp;
         
-        self.messageMediaType = XHBubbleMessagevoice;
+        self.messageMediaType = XHBubbleMessageVoice;
+    }
+    return self;
+}
+
+- (instancetype)initWithEmotionPath:(NSString *)emotionPath
+                          sender:(NSString *)sender
+                            timestamp:(NSDate *)timestamp {
+    self = [super init];
+    if (self) {
+        self.emotionPath = emotionPath;
+        
+        self.sender = sender;
+        self.timestamp = timestamp;
+        
+        self.messageMediaType = XHBubbleMessageFace;
+    }
+    return self;
+}
+
+- (instancetype)initWithLocalPositionPhoto:(UIImage *)localPositionPhoto
+                                    sender:(NSString *)sender
+                                      timestamp:(NSDate *)timestamp {
+    self = [super init];
+    if (self) {
+        self.localPositionPhoto = localPositionPhoto;
+        
+        self.sender = sender;
+        self.timestamp = timestamp;
+        
+        self.messageMediaType = XHBubbleMessageLocalPosition;
     }
     return self;
 }
@@ -126,12 +156,16 @@
     _voicePath = nil;
     _voiceUrl = nil;
     
+    _emotionPath = nil;
+    
+    _localPositionPhoto = nil;
+    
     _avator = nil;
     _avatorUrl = nil;
     
     _sender = nil;
     
-    _date = nil;
+    _timestamp = nil;
 }
 
 #pragma mark - NSCoding
@@ -152,11 +186,15 @@
         _voicePath = [aDecoder decodeObjectForKey:@"voicePath"];
         _voiceUrl = [aDecoder decodeObjectForKey:@"voiceUrl"];
         
+        _emotionPath = [aDecoder decodeObjectForKey:@"emotionPath"];
+        
+        _localPositionPhoto = [aDecoder decodeObjectForKey:@"localPositionPhoto"];
+        
         _avator = [aDecoder decodeObjectForKey:@"avator"];
         _avatorUrl = [aDecoder decodeObjectForKey:@"avatorUrl"];
         
         _sender = [aDecoder decodeObjectForKey:@"sender"];
-        _date = [aDecoder decodeObjectForKey:@"date"];
+        _timestamp = [aDecoder decodeObjectForKey:@"timestamp"];
     }
     return self;
 }
@@ -175,11 +213,15 @@
     [aCoder encodeObject:self.voicePath forKey:@"voicePath"];
     [aCoder encodeObject:self.voiceUrl forKey:@"voiceUrl"];
     
-    [aCoder encodeObject:self.avator forKey:@"avator"];
-    [aCoder encodeObject:self.avatorUrl forKey:@"avatorUrl"];
+    [aCoder encodeObject:self.voicePath forKey:@"voicePath"];
+    [aCoder encodeObject:self.voiceUrl forKey:@"voiceUrl"];
+    
+    [aCoder encodeObject:self.emotionPath forKey:@"emotionPath"];
+    
+    [aCoder encodeObject:self.localPositionPhoto forKey:@"localPositionPhoto"];
     
     [aCoder encodeObject:self.sender forKey:@"sender"];
-    [aCoder encodeObject:self.date forKey:@"date"];
+    [aCoder encodeObject:self.timestamp forKey:@"timestamp"];
 }
 
 #pragma mark - NSCopying
@@ -189,24 +231,32 @@
         case XHBubbleMessageText:
             return [[[self class] allocWithZone:zone] initWithText:[self.text copy]
                                                             sender:[self.sender copy]
-                                                              date:[self.date copy]];
+                                                              timestamp:[self.timestamp copy]];
         case XHBubbleMessagePhoto:
             return [[[self class] allocWithZone:zone] initWithPhoto:[self.photo copy]
                                                        thumbnailUrl:[self.thumbnailUrl copy]
                                                      originPhotoUrl:[self.originPhotoUrl copy]
                                                              sender:[self.sender copy]
-                                                               date:[self.date copy]];
+                                                               timestamp:[self.timestamp copy]];
         case XHBubbleMessageVideo:
             return [[[self class] allocWithZone:zone] initWithVideoConverPhoto:[self.videoConverPhoto copy]
                                                                      videoPath:[self.videoPath copy]
                                                                       videoUrl:[self.videoUrl copy]
                                                                         sender:[self.sender copy]
-                                                                          date:[self.date copy]];
-        case XHBubbleMessagevoice:
-            return [[[self class] allocWithZone:zone] initWithvoicePath:[self.voicePath copy]
+                                                                          timestamp:[self.timestamp copy]];
+        case XHBubbleMessageVoice:
+            return [[[self class] allocWithZone:zone] initWithVoicePath:[self.voicePath copy]
                                                                      voiceUrl:[self.voiceUrl copy]
                                                                         sender:[self.sender copy]
-                                                                          date:[self.date copy]];
+                                                                          timestamp:[self.timestamp copy]];
+        case XHBubbleMessageFace:
+            return [[[self class] allocWithZone:zone] initWithEmotionPath:[self.emotionPath copy]
+                                                                sender:[self.sender copy]
+                                                                  timestamp:[self.timestamp copy]];
+        case XHBubbleMessageLocalPosition:
+            return [[[self class] allocWithZone:zone] initWithLocalPositionPhoto:[self.localPositionPhoto copy]
+                                                                          sender:[self.sender copy]
+                                                                            timestamp:[self.timestamp copy]];
         default:
             return nil;
     }
