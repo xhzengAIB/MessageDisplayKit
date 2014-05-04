@@ -19,7 +19,7 @@ It's ok if you don't understand how the code works. Most code has comments, whic
 [CocosPods](http://cocosPods.org) is the recommended method to install MessageDisplayKit, just add the following line to `Podfile`
 
 ```
-pod 'MessageDisplayKit', '~> 0.1.3'
+pod 'MessageDisplayKit', '~> 0.1.4'
 ```
 
 and run `pod install`, then you're all done!
