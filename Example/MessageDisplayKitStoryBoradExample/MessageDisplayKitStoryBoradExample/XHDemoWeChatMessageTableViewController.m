@@ -82,7 +82,7 @@
             weakSelf.messages = messages;
             [weakSelf.messageTableView reloadData];
             
-            [weakSelf scrollToBottomAnimated:YES];
+            [weakSelf scrollToBottomAnimated:NO];
         });
     });
 }
