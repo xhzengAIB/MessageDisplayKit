@@ -26,25 +26,25 @@
 		740660A71913552800E1CE95 /* UIImage+XHAnimatedFaceGif.h in Headers */ = {isa = PBXBuildFile; fileRef = 740660A51913552800E1CE95 /* UIImage+XHAnimatedFaceGif.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		740660A81913552800E1CE95 /* UIImage+XHAnimatedFaceGif.m in Sources */ = {isa = PBXBuildFile; fileRef = 740660A61913552800E1CE95 /* UIImage+XHAnimatedFaceGif.m */; };
 		740660A91913552800E1CE95 /* UIImage+XHAnimatedFaceGif.m in Sources */ = {isa = PBXBuildFile; fileRef = 740660A61913552800E1CE95 /* UIImage+XHAnimatedFaceGif.m */; };
-		740660B41914CA0000E1CE95 /* XHPhotographyHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 740660B21914CA0000E1CE95 /* XHPhotographyHelper.h */; };
+		740660B41914CA0000E1CE95 /* XHPhotographyHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 740660B21914CA0000E1CE95 /* XHPhotographyHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		740660B51914CA0000E1CE95 /* XHPhotographyHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 740660B31914CA0000E1CE95 /* XHPhotographyHelper.m */; };
 		740660B61914CA0000E1CE95 /* XHPhotographyHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 740660B31914CA0000E1CE95 /* XHPhotographyHelper.m */; };
-		740660B91914D22A00E1CE95 /* XHEmotionManagerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 740660B71914D22A00E1CE95 /* XHEmotionManagerView.h */; };
+		740660B91914D22A00E1CE95 /* XHEmotionManagerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 740660B71914D22A00E1CE95 /* XHEmotionManagerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		740660BA1914D22A00E1CE95 /* XHEmotionManagerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 740660B81914D22A00E1CE95 /* XHEmotionManagerView.m */; };
 		740660BB1914D22A00E1CE95 /* XHEmotionManagerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 740660B81914D22A00E1CE95 /* XHEmotionManagerView.m */; };
-		740660BE1914D65600E1CE95 /* XHEmotion.h in Headers */ = {isa = PBXBuildFile; fileRef = 740660BC1914D65600E1CE95 /* XHEmotion.h */; };
+		740660BE1914D65600E1CE95 /* XHEmotion.h in Headers */ = {isa = PBXBuildFile; fileRef = 740660BC1914D65600E1CE95 /* XHEmotion.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		740660BF1914D65600E1CE95 /* XHEmotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 740660BD1914D65600E1CE95 /* XHEmotion.m */; };
 		740660C01914D65600E1CE95 /* XHEmotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 740660BD1914D65600E1CE95 /* XHEmotion.m */; };
-		740660C31914DC2300E1CE95 /* XHEmotionCollectionViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 740660C11914DC2300E1CE95 /* XHEmotionCollectionViewCell.h */; };
+		740660C31914DC2300E1CE95 /* XHEmotionCollectionViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 740660C11914DC2300E1CE95 /* XHEmotionCollectionViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		740660C41914DC2300E1CE95 /* XHEmotionCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 740660C21914DC2300E1CE95 /* XHEmotionCollectionViewCell.m */; };
 		740660C51914DC2300E1CE95 /* XHEmotionCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 740660C21914DC2300E1CE95 /* XHEmotionCollectionViewCell.m */; };
-		740660C81914DC4700E1CE95 /* XHEmotionCollectionViewFlowLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 740660C61914DC4700E1CE95 /* XHEmotionCollectionViewFlowLayout.h */; };
+		740660C81914DC4700E1CE95 /* XHEmotionCollectionViewFlowLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 740660C61914DC4700E1CE95 /* XHEmotionCollectionViewFlowLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		740660C91914DC4700E1CE95 /* XHEmotionCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 740660C71914DC4700E1CE95 /* XHEmotionCollectionViewFlowLayout.m */; };
 		740660CA1914DC4700E1CE95 /* XHEmotionCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 740660C71914DC4700E1CE95 /* XHEmotionCollectionViewFlowLayout.m */; };
-		740660CD1914E1F400E1CE95 /* XHEmotionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 740660CB1914E1F400E1CE95 /* XHEmotionManager.h */; };
+		740660CD1914E1F400E1CE95 /* XHEmotionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 740660CB1914E1F400E1CE95 /* XHEmotionManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		740660CE1914E1F400E1CE95 /* XHEmotionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 740660CC1914E1F400E1CE95 /* XHEmotionManager.m */; };
 		740660CF1914E1F400E1CE95 /* XHEmotionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 740660CC1914E1F400E1CE95 /* XHEmotionManager.m */; };
-		740660D2191507F800E1CE95 /* XHEmotionSectionBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 740660D0191507F800E1CE95 /* XHEmotionSectionBar.h */; };
+		740660D2191507F800E1CE95 /* XHEmotionSectionBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 740660D0191507F800E1CE95 /* XHEmotionSectionBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		740660D3191507F800E1CE95 /* XHEmotionSectionBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 740660D1191507F800E1CE95 /* XHEmotionSectionBar.m */; };
 		740660D4191507F800E1CE95 /* XHEmotionSectionBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 740660D1191507F800E1CE95 /* XHEmotionSectionBar.m */; };
 		740660E719151C1200E1CE95 /* section0_emotion0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 740660D719151C1200E1CE95 /* section0_emotion0@2x.png */; };
@@ -102,7 +102,6 @@
 		74180C07190F44AF00A35C82 /* XHMessageDisplayTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74D1C5BE190DE55B003B1BCA /* XHMessageDisplayTextView.m */; };
 		74180C08190F44B100A35C82 /* XHBubblePhotoImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 748FFCE1190D737B00752C8A /* XHBubblePhotoImageView.m */; };
 		74180C09190F44B400A35C82 /* XHMessageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74824553190902DA008EC388 /* XHMessageTableViewController.m */; };
-		74180C0A190F44EA00A35C82 /* MessageDisplayKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 748245341908C753008EC388 /* MessageDisplayKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74180C0B190F44EC00A35C82 /* XHMessageBubbleFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 748245951909F33F008EC388 /* XHMessageBubbleFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74180C0C190F44ED00A35C82 /* XHMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = 7482457919091BBA008EC388 /* XHMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74180C0D190F44F300A35C82 /* XHMessageAvatorFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 748245981909F370008EC388 /* XHMessageAvatorFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -126,6 +125,7 @@
 		74180D7D1910864400A35C82 /* Fav_Cell_Loc@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74180D7C1910864400A35C82 /* Fav_Cell_Loc@2x.png */; };
 		744FBDC81915EE7400FB4A65 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 744FBDC61915EE7400FB4A65 /* Default-568h@2x.png */; };
 		744FBDC91915EE7400FB4A65 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 744FBDC71915EE7400FB4A65 /* Default@2x.png */; };
+		744FBDCD1915FF3A00FB4A65 /* MessageDisplayKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 744FBDCC1915FF3A00FB4A65 /* MessageDisplayKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7475BA33190D4B7B001DD9B1 /* TableViewBackgroundImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7475BA32190D4B7B001DD9B1 /* TableViewBackgroundImage@2x.png */; };
 		748245051908C730008EC388 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748245041908C730008EC388 /* Foundation.framework */; };
 		748245071908C730008EC388 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748245061908C730008EC388 /* CoreGraphics.framework */; };
@@ -267,6 +267,7 @@
 		74180D7C1910864400A35C82 /* Fav_Cell_Loc@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fav_Cell_Loc@2x.png"; sourceTree = "<group>"; };
 		744FBDC61915EE7400FB4A65 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		744FBDC71915EE7400FB4A65 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		744FBDCC1915FF3A00FB4A65 /* MessageDisplayKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageDisplayKit.h; sourceTree = "<group>"; };
 		7475BA32190D4B7B001DD9B1 /* TableViewBackgroundImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TableViewBackgroundImage@2x.png"; sourceTree = "<group>"; };
 		748245011908C730008EC388 /* MessageDisplayExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessageDisplayExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		748245041908C730008EC388 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -283,7 +284,6 @@
 		748245251908C730008EC388 /* MessageDisplayExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MessageDisplayExampleTests-Info.plist"; sourceTree = "<group>"; };
 		748245271908C730008EC388 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		748245291908C730008EC388 /* MessageDisplayExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageDisplayExampleTests.m; sourceTree = "<group>"; };
-		748245341908C753008EC388 /* MessageDisplayKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageDisplayKit.h; sourceTree = "<group>"; };
 		7482454F190902DA008EC388 /* UIScrollView+XHkeyboardControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+XHkeyboardControl.h"; sourceTree = "<group>"; };
 		74824550190902DA008EC388 /* UIScrollView+XHkeyboardControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+XHkeyboardControl.m"; sourceTree = "<group>"; };
 		74824552190902DA008EC388 /* XHMessageTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = XHMessageTableViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -576,7 +576,6 @@
 		748245331908C73B008EC388 /* MessageDisplayKit */ = {
 			isa = PBXGroup;
 			children = (
-				748245341908C753008EC388 /* MessageDisplayKit.h */,
 				7482454D190902DA008EC388 /* Classes */,
 				74FAB0BA190A92CC005623D0 /* Resources */,
 			);
@@ -587,6 +586,7 @@
 		7482454D190902DA008EC388 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				744FBDCC1915FF3A00FB4A65 /* MessageDisplayKit.h */,
 				7482457819091BA2008EC388 /* Macro */,
 				748245941909F1F0008EC388 /* Common */,
 				7482454E190902DA008EC388 /* Categorys */,
@@ -792,10 +792,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74180C0A190F44EA00A35C82 /* MessageDisplayKit.h in Headers */,
 				74180C0E190F44F500A35C82 /* XHMessageVoiceFactory.h in Headers */,
-				740660CD1914E1F400E1CE95 /* XHEmotionManager.h in Headers */,
-				740660B41914CA0000E1CE95 /* XHPhotographyHelper.h in Headers */,
 				74180C0F190F44F600A35C82 /* XHFoundationCommon.h in Headers */,
 				74180C0D190F44F300A35C82 /* XHMessageAvatorFactory.h in Headers */,
 				74180C12190F450000A35C82 /* UIImage+XHRounded.h in Headers */,
@@ -806,12 +803,15 @@
 				74180C1B190F450F00A35C82 /* XHBubblePhotoImageView.h in Headers */,
 				74180C18190F450B00A35C82 /* XHMessageTableViewCell.h in Headers */,
 				74065FB919123E1C00E1CE95 /* XHShareMenuItem.h in Headers */,
-				740660C31914DC2300E1CE95 /* XHEmotionCollectionViewCell.h in Headers */,
-				740660C81914DC4700E1CE95 /* XHEmotionCollectionViewFlowLayout.h in Headers */,
-				740660B91914D22A00E1CE95 /* XHEmotionManagerView.h in Headers */,
 				74180C1C190F451200A35C82 /* XHMessageTableViewController.h in Headers */,
 				74180C19190F450C00A35C82 /* XHMessageBubbleView.h in Headers */,
 				74180C17190F450900A35C82 /* XHMessageTextView.h in Headers */,
+				740660CD1914E1F400E1CE95 /* XHEmotionManager.h in Headers */,
+				740660B41914CA0000E1CE95 /* XHPhotographyHelper.h in Headers */,
+				740660C31914DC2300E1CE95 /* XHEmotionCollectionViewCell.h in Headers */,
+				740660C81914DC4700E1CE95 /* XHEmotionCollectionViewFlowLayout.h in Headers */,
+				740660B91914D22A00E1CE95 /* XHEmotionManagerView.h in Headers */,
+				744FBDCD1915FF3A00FB4A65 /* MessageDisplayKit.h in Headers */,
 				740660D2191507F800E1CE95 /* XHEmotionSectionBar.h in Headers */,
 				740660BE1914D65600E1CE95 /* XHEmotion.h in Headers */,
 				74065FB419123DDB00E1CE95 /* XHShareMenuView.h in Headers */,
