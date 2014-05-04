@@ -142,7 +142,7 @@
     [self finishSendMessageWithBubbleMessageType:XHBubbleMessageVideo];
 }
 
-- (void)didSendvoice:(NSString *)voicePath fromSender:(NSString *)sender onDate:(NSDate *)date {
+- (void)didSendVoice:(NSString *)voicePath fromSender:(NSString *)sender onDate:(NSDate *)date {
     [self finishSendMessageWithBubbleMessageType:XHBubbleMessageVoice];
 }
 

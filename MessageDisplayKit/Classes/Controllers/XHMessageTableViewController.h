@@ -45,7 +45,7 @@
  *  @param sender    发送者的名字
  *  @param date      发送时间
  */
-- (void)didSendvoice:(NSString *)voicePath fromSender:(NSString *)sender onDate:(NSDate *)date;
+- (void)didSendVoice:(NSString *)voicePath fromSender:(NSString *)sender onDate:(NSDate *)date;
 
 /**
  *  发送第三方表情消息的回调方法

@@ -99,7 +99,7 @@
  *
  *  @return 返回Message model 对象
  */
-- (instancetype)initWithvoicePath:(NSString *)voicePath
+- (instancetype)initWithVoicePath:(NSString *)voicePath
                          voiceUrl:(NSString *)voiceUrl
                                   sender:(NSString *)sender
                                     timestamp:(NSDate *)timestamp;

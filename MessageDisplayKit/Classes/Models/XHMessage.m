@@ -95,7 +95,7 @@
  *
  *  @return 返回Message model 对象
  */
-- (instancetype)initWithvoicePath:(NSString *)voicePath
+- (instancetype)initWithVoicePath:(NSString *)voicePath
                          voiceUrl:(NSString *)voiceUrl
                            sender:(NSString *)sender
                              timestamp:(NSDate *)timestamp {
@@ -245,7 +245,7 @@
                                                                         sender:[self.sender copy]
                                                                           timestamp:[self.timestamp copy]];
         case XHBubbleMessageVoice:
-            return [[[self class] allocWithZone:zone] initWithvoicePath:[self.voicePath copy]
+            return [[[self class] allocWithZone:zone] initWithVoicePath:[self.voicePath copy]
                                                                      voiceUrl:[self.voiceUrl copy]
                                                                         sender:[self.sender copy]
                                                                           timestamp:[self.timestamp copy]];

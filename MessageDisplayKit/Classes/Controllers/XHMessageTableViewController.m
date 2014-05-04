@@ -556,8 +556,8 @@
 
 - (void)didSendMessageWithvoice:(NSString *)voicePath {
     DLog(@"send voicePath : %@", voicePath);
-    if ([self.delegate respondsToSelector:@selector(didSendvoice:fromSender:onDate:)]) {
-        [self.delegate didSendvoice:voicePath fromSender:self.messageSender onDate:[NSDate date]];
+    if ([self.delegate respondsToSelector:@selector(didSendVoice:fromSender:onDate:)]) {
+        [self.delegate didSendVoice:voicePath fromSender:self.messageSender onDate:[NSDate date]];
     }
 }
 
