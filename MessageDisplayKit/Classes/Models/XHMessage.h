@@ -24,7 +24,7 @@
 @property (nonatomic, copy) NSString *voicePath;
 @property (nonatomic, copy) NSString *voiceUrl;
 
-@property (nonatomic, copy) NSString *facePath;
+@property (nonatomic, copy) NSString *emotionPath;
 
 @property (nonatomic, strong) UIImage *localPositionPhoto;
 
@@ -104,7 +104,7 @@
                                   sender:(NSString *)sender
                                     timestamp:(NSDate *)timestamp;
 
-- (instancetype)initWithFacePath:(NSString *)facePath
+- (instancetype)initWithEmotionPath:(NSString *)emotionPath
                            sender:(NSString *)sender
                              timestamp:(NSDate *)timestamp;
 

@@ -15,4 +15,6 @@
 
 @property (nonatomic, strong) UIImage *emotionConverPhoto;
 
+@property (nonatomic, copy) NSString *emotionPath;
+
 @end

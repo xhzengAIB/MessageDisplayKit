@@ -562,7 +562,7 @@
 }
 
 - (void)didSendFaceMessageWithFacePath:(NSString *)facePath {
-    XHMessage *message = [[XHMessage alloc] initWithFacePath:facePath sender:@"Jayson" timestamp:[NSDate date]];
+    XHMessage *message = [[XHMessage alloc] initWithEmotionPath:facePath sender:@"Jayson" timestamp:[NSDate date]];
     [self addMessage:message];
 }
 
@@ -667,7 +667,7 @@
             [messageTableViewCell.messageBubbleView.animationVoiceImageView performSelector:@selector(stopAnimating) withObject:nil afterDelay:10];
             break;
         case XHBubbleMessageFace:
-            DLog(@"facePath : %@", message.facePath);
+            DLog(@"facePath : %@", message.emotionPath);
             break;
         case XHBubbleMessageLocalPosition:
             DLog(@"facePath : %@", message.localPositionPhoto);

@@ -112,12 +112,12 @@
     return self;
 }
 
-- (instancetype)initWithFacePath:(NSString *)facePath
+- (instancetype)initWithEmotionPath:(NSString *)emotionPath
                           sender:(NSString *)sender
                             timestamp:(NSDate *)timestamp {
     self = [super init];
     if (self) {
-        self.facePath = facePath;
+        self.emotionPath = emotionPath;
         
         self.sender = sender;
         self.timestamp = timestamp;
@@ -156,7 +156,7 @@
     _voicePath = nil;
     _voiceUrl = nil;
     
-    _facePath = nil;
+    _emotionPath = nil;
     
     _localPositionPhoto = nil;
     
@@ -186,7 +186,7 @@
         _voicePath = [aDecoder decodeObjectForKey:@"voicePath"];
         _voiceUrl = [aDecoder decodeObjectForKey:@"voiceUrl"];
         
-        _facePath = [aDecoder decodeObjectForKey:@"facePath"];
+        _emotionPath = [aDecoder decodeObjectForKey:@"emotionPath"];
         
         _localPositionPhoto = [aDecoder decodeObjectForKey:@"localPositionPhoto"];
         
@@ -216,7 +216,7 @@
     [aCoder encodeObject:self.voicePath forKey:@"voicePath"];
     [aCoder encodeObject:self.voiceUrl forKey:@"voiceUrl"];
     
-    [aCoder encodeObject:self.facePath forKey:@"facePath"];
+    [aCoder encodeObject:self.emotionPath forKey:@"emotionPath"];
     
     [aCoder encodeObject:self.localPositionPhoto forKey:@"localPositionPhoto"];
     
@@ -250,7 +250,7 @@
                                                                         sender:[self.sender copy]
                                                                           timestamp:[self.timestamp copy]];
         case XHBubbleMessageFace:
-            return [[[self class] allocWithZone:zone] initWithFacePath:[self.facePath copy]
+            return [[[self class] allocWithZone:zone] initWithEmotionPath:[self.emotionPath copy]
                                                                 sender:[self.sender copy]
                                                                   timestamp:[self.timestamp copy]];
         case XHBubbleMessageLocalPosition:

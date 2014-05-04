@@ -26,7 +26,7 @@
 - (NSString *)voicePath;
 - (UIImage *)localPositionPhoto;
 
-- (NSString *)facePath;
+- (NSString *)emotionPath;
 - (NSString *)voiceUrl;
 
 - (UIImage *)avator;
