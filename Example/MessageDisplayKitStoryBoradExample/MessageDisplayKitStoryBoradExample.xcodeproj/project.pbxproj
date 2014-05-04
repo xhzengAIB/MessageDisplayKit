@@ -84,6 +84,8 @@
 		74180D39190F561100A35C82 /* TableViewBackgroundImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74180D17190F561100A35C82 /* TableViewBackgroundImage@2x.png */; };
 		74180D76190FF7D700A35C82 /* Demo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 74180D75190FF7D700A35C82 /* Demo.gif */; };
 		74180D801910865B00A35C82 /* Fav_Cell_Loc@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74180D7F1910865B00A35C82 /* Fav_Cell_Loc@2x.png */; };
+		744FBDD01915FFD500FB4A65 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 744FBDCE1915FFD500FB4A65 /* Default-568h@2x.png */; };
+		744FBDD11915FFD500FB4A65 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 744FBDCF1915FFD500FB4A65 /* Default@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -181,6 +183,8 @@
 		74180D18190F561100A35C82 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/MessageDisplayKitString.strings"; sourceTree = "<group>"; };
 		74180D75190FF7D700A35C82 /* Demo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Demo.gif; sourceTree = "<group>"; };
 		74180D7F1910865B00A35C82 /* Fav_Cell_Loc@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fav_Cell_Loc@2x.png"; sourceTree = "<group>"; };
+		744FBDCE1915FFD500FB4A65 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		744FBDCF1915FFD500FB4A65 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -307,6 +311,8 @@
 		74180C7D190F496E00A35C82 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				744FBDCE1915FFD500FB4A65 /* Default-568h@2x.png */,
+				744FBDCF1915FFD500FB4A65 /* Default@2x.png */,
 				74180C7E190F496E00A35C82 /* MessageDisplayKitStoryBoradExample-Info.plist */,
 				74180C7F190F496E00A35C82 /* InfoPlist.strings */,
 				74180C82190F496E00A35C82 /* main.m */,
@@ -567,6 +573,7 @@
 				7406612819151C1B00E1CE95 /* section0_emotion9@2x.png in Resources */,
 				74180D19190F561100A35C82 /* ReceiverVoiceNodePlaying000@2x.png in Resources */,
 				7406612519151C1B00E1CE95 /* section0_emotion6@2x.png in Resources */,
+				744FBDD01915FFD500FB4A65 /* Default-568h@2x.png in Resources */,
 				74065FD01912C02B00E1CE95 /* sharemore_wxtalk@2x.png in Resources */,
 				74180C8A190F496E00A35C82 /* Main_iPhone.storyboard in Resources */,
 				74180C81190F496E00A35C82 /* InfoPlist.strings in Resources */,
@@ -578,6 +585,7 @@
 				74065FCE1912C02B00E1CE95 /* sharemore_voiceinput@2x.png in Resources */,
 				74065FC81912C02B00E1CE95 /* sharemore_location@2x.png in Resources */,
 				7406611D19151C1B00E1CE95 /* section0_emotion13@2x.png in Resources */,
+				744FBDD11915FFD500FB4A65 /* Default@2x.png in Resources */,
 				7406612719151C1B00E1CE95 /* section0_emotion8@2x.png in Resources */,
 				74180D801910865B00A35C82 /* Fav_Cell_Loc@2x.png in Resources */,
 				7406612019151C1B00E1CE95 /* section0_emotion1@2x.png in Resources */,
