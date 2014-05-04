@@ -124,6 +124,8 @@
 		74180CCA190F52C300A35C82 /* MessageDisplayKitString.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74BBB022190B8EAB00093577 /* MessageDisplayKitString.strings */; };
 		74180D74190FF7C600A35C82 /* Demo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 74180D73190FF7C600A35C82 /* Demo.gif */; };
 		74180D7D1910864400A35C82 /* Fav_Cell_Loc@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74180D7C1910864400A35C82 /* Fav_Cell_Loc@2x.png */; };
+		744FBDC81915EE7400FB4A65 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 744FBDC61915EE7400FB4A65 /* Default-568h@2x.png */; };
+		744FBDC91915EE7400FB4A65 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 744FBDC71915EE7400FB4A65 /* Default@2x.png */; };
 		7475BA33190D4B7B001DD9B1 /* TableViewBackgroundImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7475BA32190D4B7B001DD9B1 /* TableViewBackgroundImage@2x.png */; };
 		748245051908C730008EC388 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748245041908C730008EC388 /* Foundation.framework */; };
 		748245071908C730008EC388 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748245061908C730008EC388 /* CoreGraphics.framework */; };
@@ -263,6 +265,8 @@
 		74180CBB190F526100A35C82 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		74180D73190FF7C600A35C82 /* Demo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Demo.gif; sourceTree = "<group>"; };
 		74180D7C1910864400A35C82 /* Fav_Cell_Loc@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fav_Cell_Loc@2x.png"; sourceTree = "<group>"; };
+		744FBDC61915EE7400FB4A65 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		744FBDC71915EE7400FB4A65 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		7475BA32190D4B7B001DD9B1 /* TableViewBackgroundImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TableViewBackgroundImage@2x.png"; sourceTree = "<group>"; };
 		748245011908C730008EC388 /* MessageDisplayExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessageDisplayExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		748245041908C730008EC388 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -541,6 +545,8 @@
 		7482450B1908C730008EC388 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				744FBDC61915EE7400FB4A65 /* Default-568h@2x.png */,
+				744FBDC71915EE7400FB4A65 /* Default@2x.png */,
 				7482450C1908C730008EC388 /* MessageDisplayExample-Info.plist */,
 				7482450D1908C730008EC388 /* InfoPlist.strings */,
 				748245101908C730008EC388 /* main.m */,
@@ -1002,6 +1008,7 @@
 				74D1C5DA190E291E003B1BCA /* ReceiverVoiceNodePlaying000@2x.png in Resources */,
 				740660EB19151C1200E1CE95 /* section0_emotion11@2x.png in Resources */,
 				74065FA919123ABC00E1CE95 /* sharemore_videovoip@2x.png in Resources */,
+				744FBDC81915EE7400FB4A65 /* Default-568h@2x.png in Resources */,
 				74065FAF19123ABC00E1CE95 /* sharemore_openapi@2x.png in Resources */,
 				74FAB0DB190A92CC005623D0 /* keyborad@2x.png in Resources */,
 				7406610319151C1200E1CE95 /* section0_emotion8@2x.png in Resources */,
@@ -1017,6 +1024,7 @@
 				74FAB0D2190A92CC005623D0 /* weChatBubble_Sending_Solid@2x.png in Resources */,
 				740660FF19151C1200E1CE95 /* section0_emotion6@2x.png in Resources */,
 				740660F519151C1200E1CE95 /* section0_emotion1@2x.png in Resources */,
+				744FBDC91915EE7400FB4A65 /* Default@2x.png in Resources */,
 				740660EF19151C1200E1CE95 /* section0_emotion13@2x.png in Resources */,
 				74D1C5DF190E291E003B1BCA /* SenderVoiceNodePlaying000@2x.png in Resources */,
 				74FAB0D6190A92CC005623D0 /* input-bar-flat@2x.png in Resources */,

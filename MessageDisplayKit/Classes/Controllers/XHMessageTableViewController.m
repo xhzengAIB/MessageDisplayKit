@@ -382,7 +382,7 @@
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     // 取消输入框
-    [self.messageInputView resignFirstResponder];
+    [self.messageInputView.inputTextView resignFirstResponder];
     [self setEditing:NO animated:YES];
     
     // remove键盘通知或者手势
@@ -577,6 +577,24 @@
 - (void)inputTextViewDidBeginEditing:(XHMessageTextView *)messageInputTextView {
     if (!self.previousTextViewContentHeight)
 		self.previousTextViewContentHeight = [self getTextViewContentH:messageInputTextView];
+}
+
+- (void)didChangeSendVoiceMeesgae:(BOOL)changed {
+    if (changed) {
+        if (self.textViewInputViewType == XHTextViewNormalInputViewType)
+            return;
+        
+        self.shareMenuView.alpha = 0.0;
+        self.emotionManagerView.alpha = 0.0;
+        [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+            CGRect inputViewFrame = self.messageInputView.frame;
+            inputViewFrame.origin.y = CGRectGetHeight(self.view.bounds) - CGRectGetHeight(inputViewFrame);
+            self.messageInputView.frame = inputViewFrame;
+            
+        } completion:^(BOOL finished) {
+            
+        }];
+    }
 }
 
 - (void)didSendMessageWithText:(NSString *)text {

@@ -50,10 +50,24 @@
                 
             }];
             
+            if ([self.delegate respondsToSelector:@selector(didChangeSendVoiceMeesgae:)]) {
+                [self.delegate didChangeSendVoiceMeesgae:sender.selected];
+            }
+            
             break;
         }
         case 1: {
             sender.selected = !sender.selected;
+            self.voiceChangeButton.selected = !sender.selected;
+            
+            if (!sender.selected) {
+                [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+                    self.holdDownButton.alpha = sender.selected;
+                } completion:^(BOOL finished) {
+                    
+                }];
+            }
+            
             if ([self.delegate respondsToSelector:@selector(didSendFaceMessage:)]) {
                 [self.delegate didSendFaceMessage:sender.selected];
             }
