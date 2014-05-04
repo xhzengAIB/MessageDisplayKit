@@ -33,7 +33,7 @@
 
 @property (nonatomic, copy) NSString *sender;
 
-@property (nonatomic, strong) NSDate *date;
+@property (nonatomic, strong) NSDate *timestamp;
 
 @property (nonatomic, assign) BOOL sended;
 
@@ -53,7 +53,7 @@
  */
 - (instancetype)initWithText:(NSString *)text
                       sender:(NSString *)sender
-                        date:(NSDate *)date;
+                        timestamp:(NSDate *)timestamp;
 
 /**
  *  初始化图片类型的消息
@@ -70,7 +70,7 @@
                  thumbnailUrl:(NSString *)thumbnailUrl
                originPhotoUrl:(NSString *)originPhotoUrl
                        sender:(NSString *)sender
-                         date:(NSDate *)date;
+                         timestamp:(NSDate *)timestamp;
 
 /**
  *  初始化视频类型的消息
@@ -87,7 +87,7 @@
                                videoPath:(NSString *)videoPath
                                 videoUrl:(NSString *)videoUrl
                                   sender:(NSString *)sender
-                                    date:(NSDate *)date;
+                                    timestamp:(NSDate *)timestamp;
 
 /**
  *  初始化语音类型的消息
@@ -102,14 +102,14 @@
 - (instancetype)initWithvoicePath:(NSString *)voicePath
                          voiceUrl:(NSString *)voiceUrl
                                   sender:(NSString *)sender
-                                    date:(NSDate *)date;
+                                    timestamp:(NSDate *)timestamp;
 
 - (instancetype)initWithFacePath:(NSString *)facePath
                            sender:(NSString *)sender
-                             date:(NSDate *)date;
+                             timestamp:(NSDate *)timestamp;
 
 - (instancetype)initWithLocalPositionPhoto:(UIImage *)localPositionPhoto
                           sender:(NSString *)sender
-                            date:(NSDate *)date;
+                            timestamp:(NSDate *)timestamp;
 
 @end

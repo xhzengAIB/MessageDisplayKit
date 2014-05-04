@@ -40,7 +40,7 @@
 
 - (NSString *)sender;
 
-- (NSDate *)date;
+- (NSDate *)timestamp;
 
 @end
 

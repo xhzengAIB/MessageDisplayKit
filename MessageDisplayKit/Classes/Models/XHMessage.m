@@ -12,13 +12,13 @@
 
 - (instancetype)initWithText:(NSString *)text
                       sender:(NSString *)sender
-                        date:(NSDate *)date {
+                        timestamp:(NSDate *)timestamp {
     self = [super init];
     if (self) {
         self.text = text;
         
         self.sender = sender;
-        self.date = date;
+        self.timestamp = timestamp;
         
         self.messageMediaType = XHBubbleMessageText;
     }
@@ -40,7 +40,7 @@
                  thumbnailUrl:(NSString *)thumbnailUrl
                originPhotoUrl:(NSString *)originPhotoUrl
                        sender:(NSString *)sender
-                         date:(NSDate *)date {
+                         timestamp:(NSDate *)timestamp {
     self = [super init];
     if (self) {
         self.photo = photo;
@@ -48,7 +48,7 @@
         self.originPhotoUrl = originPhotoUrl;
         
         self.sender = sender;
-        self.date = date;
+        self.timestamp = timestamp;
         
         self.messageMediaType = XHBubbleMessagePhoto;
     }
@@ -70,7 +70,7 @@
                                videoPath:(NSString *)videoPath
                                 videoUrl:(NSString *)videoUrl
                                   sender:(NSString *)sender
-                                    date:(NSDate *)date {
+                                    timestamp:(NSDate *)timestamp {
     self = [super init];
     if (self) {
         self.videoConverPhoto = videoConverPhoto;
@@ -78,7 +78,7 @@
         self.videoUrl = videoUrl;
         
         self.sender = sender;
-        self.date = date;
+        self.timestamp = timestamp;
         
         self.messageMediaType = XHBubbleMessageVideo;
     }
@@ -98,14 +98,14 @@
 - (instancetype)initWithvoicePath:(NSString *)voicePath
                          voiceUrl:(NSString *)voiceUrl
                            sender:(NSString *)sender
-                             date:(NSDate *)date {
+                             timestamp:(NSDate *)timestamp {
     self = [super init];
     if (self) {
         self.voicePath = voicePath;
         self.videoUrl = voiceUrl;
         
         self.sender = sender;
-        self.date = date;
+        self.timestamp = timestamp;
         
         self.messageMediaType = XHBubbleMessageVoice;
     }
@@ -114,13 +114,13 @@
 
 - (instancetype)initWithFacePath:(NSString *)facePath
                           sender:(NSString *)sender
-                            date:(NSDate *)date {
+                            timestamp:(NSDate *)timestamp {
     self = [super init];
     if (self) {
         self.facePath = facePath;
         
         self.sender = sender;
-        self.date = date;
+        self.timestamp = timestamp;
         
         self.messageMediaType = XHBubbleMessageFace;
     }
@@ -129,13 +129,13 @@
 
 - (instancetype)initWithLocalPositionPhoto:(UIImage *)localPositionPhoto
                                     sender:(NSString *)sender
-                                      date:(NSDate *)date {
+                                      timestamp:(NSDate *)timestamp {
     self = [super init];
     if (self) {
         self.localPositionPhoto = localPositionPhoto;
         
         self.sender = sender;
-        self.date = date;
+        self.timestamp = timestamp;
         
         self.messageMediaType = XHBubbleMessageLocalPosition;
     }
@@ -165,7 +165,7 @@
     
     _sender = nil;
     
-    _date = nil;
+    _timestamp = nil;
 }
 
 #pragma mark - NSCoding
@@ -194,7 +194,7 @@
         _avatorUrl = [aDecoder decodeObjectForKey:@"avatorUrl"];
         
         _sender = [aDecoder decodeObjectForKey:@"sender"];
-        _date = [aDecoder decodeObjectForKey:@"date"];
+        _timestamp = [aDecoder decodeObjectForKey:@"timestamp"];
     }
     return self;
 }
@@ -221,7 +221,7 @@
     [aCoder encodeObject:self.localPositionPhoto forKey:@"localPositionPhoto"];
     
     [aCoder encodeObject:self.sender forKey:@"sender"];
-    [aCoder encodeObject:self.date forKey:@"date"];
+    [aCoder encodeObject:self.timestamp forKey:@"timestamp"];
 }
 
 #pragma mark - NSCopying
@@ -231,32 +231,32 @@
         case XHBubbleMessageText:
             return [[[self class] allocWithZone:zone] initWithText:[self.text copy]
                                                             sender:[self.sender copy]
-                                                              date:[self.date copy]];
+                                                              timestamp:[self.timestamp copy]];
         case XHBubbleMessagePhoto:
             return [[[self class] allocWithZone:zone] initWithPhoto:[self.photo copy]
                                                        thumbnailUrl:[self.thumbnailUrl copy]
                                                      originPhotoUrl:[self.originPhotoUrl copy]
                                                              sender:[self.sender copy]
-                                                               date:[self.date copy]];
+                                                               timestamp:[self.timestamp copy]];
         case XHBubbleMessageVideo:
             return [[[self class] allocWithZone:zone] initWithVideoConverPhoto:[self.videoConverPhoto copy]
                                                                      videoPath:[self.videoPath copy]
                                                                       videoUrl:[self.videoUrl copy]
                                                                         sender:[self.sender copy]
-                                                                          date:[self.date copy]];
+                                                                          timestamp:[self.timestamp copy]];
         case XHBubbleMessageVoice:
             return [[[self class] allocWithZone:zone] initWithvoicePath:[self.voicePath copy]
                                                                      voiceUrl:[self.voiceUrl copy]
                                                                         sender:[self.sender copy]
-                                                                          date:[self.date copy]];
+                                                                          timestamp:[self.timestamp copy]];
         case XHBubbleMessageFace:
             return [[[self class] allocWithZone:zone] initWithFacePath:[self.facePath copy]
                                                                 sender:[self.sender copy]
-                                                                  date:[self.date copy]];
+                                                                  timestamp:[self.timestamp copy]];
         case XHBubbleMessageLocalPosition:
             return [[[self class] allocWithZone:zone] initWithLocalPositionPhoto:[self.localPositionPhoto copy]
                                                                           sender:[self.sender copy]
-                                                                            date:[self.date copy]];
+                                                                            timestamp:[self.timestamp copy]];
         default:
             return nil;
     }

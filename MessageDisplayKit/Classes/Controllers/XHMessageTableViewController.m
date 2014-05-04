@@ -134,7 +134,7 @@
     if (!_photographyHelper) {
         WEAKSELF
         _photographyHelper = [[XHPhotographyHelper alloc] initWithViewController:self didFinishTakeMediaCompledBlock:^(UIImage *image, NSDictionary *editingInfo) {
-            XHMessage *photoMessage = [[XHMessage alloc] initWithPhoto:[editingInfo valueForKey:UIImagePickerControllerOriginalImage] thumbnailUrl:nil originPhotoUrl:nil sender:@"Jayson" date:[NSDate date]];
+            XHMessage *photoMessage = [[XHMessage alloc] initWithPhoto:[editingInfo valueForKey:UIImagePickerControllerOriginalImage] thumbnailUrl:nil originPhotoUrl:nil sender:@"Jayson" timestamp:[NSDate date]];
             [weakSelf addMessage:photoMessage];
         }];
     }
@@ -562,7 +562,7 @@
 }
 
 - (void)didSendFaceMessageWithFacePath:(NSString *)facePath {
-    XHMessage *message = [[XHMessage alloc] initWithFacePath:facePath sender:@"Jayson" date:[NSDate date]];
+    XHMessage *message = [[XHMessage alloc] initWithFacePath:facePath sender:@"Jayson" timestamp:[NSDate date]];
     [self addMessage:message];
 }
 

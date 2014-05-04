@@ -155,7 +155,7 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
     self.displayTimestamp = displayTimestamp;
     self.timestampLabel.hidden = !self.displayTimestamp;
     if (displayTimestamp) {
-        self.timestampLabel.text = [NSDateFormatter localizedStringFromDate:message.date
+        self.timestampLabel.text = [NSDateFormatter localizedStringFromDate:message.timestamp
                                                                   dateStyle:NSDateFormatterMediumStyle
                                                                   timeStyle:NSDateFormatterShortStyle];
     }
