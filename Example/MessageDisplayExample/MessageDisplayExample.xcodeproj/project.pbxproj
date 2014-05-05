@@ -157,16 +157,16 @@
 		746C896F1917F7FE007F9A5E /* XHDisplayTextViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 746C896D1917F7FE007F9A5E /* XHDisplayTextViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		746C89701917F7FE007F9A5E /* XHDisplayTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C896E1917F7FE007F9A5E /* XHDisplayTextViewController.m */; };
 		746C89711917F7FE007F9A5E /* XHDisplayTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C896E1917F7FE007F9A5E /* XHDisplayTextViewController.m */; };
-		746C89781917F8B2007F9A5E /* XHBaseNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 746C89761917F8B2007F9A5E /* XHBaseNavigationController.h */; };
+		746C89781917F8B2007F9A5E /* XHBaseNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 746C89761917F8B2007F9A5E /* XHBaseNavigationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		746C89791917F8B2007F9A5E /* XHBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C89771917F8B2007F9A5E /* XHBaseNavigationController.m */; };
 		746C897A1917F8B2007F9A5E /* XHBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C89771917F8B2007F9A5E /* XHBaseNavigationController.m */; };
-		746C897D1917F8C5007F9A5E /* XHBaseTabBarController.h in Headers */ = {isa = PBXBuildFile; fileRef = 746C897B1917F8C5007F9A5E /* XHBaseTabBarController.h */; };
+		746C897D1917F8C5007F9A5E /* XHBaseTabBarController.h in Headers */ = {isa = PBXBuildFile; fileRef = 746C897B1917F8C5007F9A5E /* XHBaseTabBarController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		746C897E1917F8C5007F9A5E /* XHBaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C897C1917F8C5007F9A5E /* XHBaseTabBarController.m */; };
 		746C897F1917F8C5007F9A5E /* XHBaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C897C1917F8C5007F9A5E /* XHBaseTabBarController.m */; };
-		746C89821917F8D6007F9A5E /* XHBaseViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 746C89801917F8D6007F9A5E /* XHBaseViewController.h */; };
+		746C89821917F8D6007F9A5E /* XHBaseViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 746C89801917F8D6007F9A5E /* XHBaseViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		746C89831917F8D6007F9A5E /* XHBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C89811917F8D6007F9A5E /* XHBaseViewController.m */; };
 		746C89841917F8D6007F9A5E /* XHBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C89811917F8D6007F9A5E /* XHBaseViewController.m */; };
-		746C89871917F8EA007F9A5E /* XHBaseTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 746C89851917F8EA007F9A5E /* XHBaseTableViewController.h */; };
+		746C89871917F8EA007F9A5E /* XHBaseTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 746C89851917F8EA007F9A5E /* XHBaseTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		746C89881917F8EA007F9A5E /* XHBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C89861917F8EA007F9A5E /* XHBaseTableViewController.m */; };
 		746C89891917F8EA007F9A5E /* XHBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C89861917F8EA007F9A5E /* XHBaseTableViewController.m */; };
 		7475BA33190D4B7B001DD9B1 /* TableViewBackgroundImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7475BA32190D4B7B001DD9B1 /* TableViewBackgroundImage@2x.png */; };
@@ -947,7 +947,6 @@
 				74180C11190F44F900A35C82 /* NSString+MessageInputView.h in Headers */,
 				74180C13190F450200A35C82 /* XHMessageModel.h in Headers */,
 				746C892F1917F691007F9A5E /* XHBubblePhotoImageView.h in Headers */,
-				746C89821917F8D6007F9A5E /* XHBaseViewController.h in Headers */,
 				746C89351917F691007F9A5E /* XHMessageDisplayTextView.h in Headers */,
 				746C893E1917F691007F9A5E /* XHMessageInputView.h in Headers */,
 				746C89471917F691007F9A5E /* XHEmotionCollectionViewFlowLayout.h in Headers */,
@@ -955,10 +954,7 @@
 				746C89501917F691007F9A5E /* XHShareMenuView.h in Headers */,
 				746C89381917F691007F9A5E /* XHMessageTableView.h in Headers */,
 				746C89441917F691007F9A5E /* XHEmotionCollectionViewCell.h in Headers */,
-				746C89871917F8EA007F9A5E /* XHBaseTableViewController.h in Headers */,
 				746C894D1917F691007F9A5E /* XHEmotionSectionBar.h in Headers */,
-				746C897D1917F8C5007F9A5E /* XHBaseTabBarController.h in Headers */,
-				746C89781917F8B2007F9A5E /* XHBaseNavigationController.h in Headers */,
 				746C894A1917F691007F9A5E /* XHEmotionManagerView.h in Headers */,
 				746C89411917F691007F9A5E /* XHMessageTextView.h in Headers */,
 				746C893B1917F691007F9A5E /* XHMessageTableViewCell.h in Headers */,
@@ -967,6 +963,10 @@
 				740660B41914CA0000E1CE95 /* XHPhotographyHelper.h in Headers */,
 				746C896F1917F7FE007F9A5E /* XHDisplayTextViewController.h in Headers */,
 				746C89651917F7EA007F9A5E /* XHDisplayLocationViewController.h in Headers */,
+				746C89821917F8D6007F9A5E /* XHBaseViewController.h in Headers */,
+				746C89871917F8EA007F9A5E /* XHBaseTableViewController.h in Headers */,
+				746C897D1917F8C5007F9A5E /* XHBaseTabBarController.h in Headers */,
+				746C89781917F8B2007F9A5E /* XHBaseNavigationController.h in Headers */,
 				746C89601917F7DE007F9A5E /* XHDisplayEmotionViewController.h in Headers */,
 				746C896A1917F7F5007F9A5E /* XHDisplayPhotoViewController.h in Headers */,
 				740660BE1914D65600E1CE95 /* XHEmotion.h in Headers */,
