@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>6F521D90-73BD-4D9B-87CF-F312CEDE533C</string>
+	<string>43A0472F-F85F-4D19-A4CD-89570BC1B7D4</string>
 	<key>IDESourceControlProjectName</key>
 	<string>MessageDisplayKitWorkSpace</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>48E3A689-B44F-429E-9904-4788BE9F5312</key>
-		<string>https://github.com/xhzengAIB/MessageDisplayKit.git</string>
+		<key>7F2716C1-06D3-47D7-A302-8052BF6213D5</key>
+		<string>https://github.com/Aevit/MessageDisplayKit.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Example/MessageDisplayKitWorkSpace.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>48E3A689-B44F-429E-9904-4788BE9F5312</key>
+		<key>7F2716C1-06D3-47D7-A302-8052BF6213D5</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/xhzengAIB/MessageDisplayKit.git</string>
+	<string>https://github.com/Aevit/MessageDisplayKit.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>48E3A689-B44F-429E-9904-4788BE9F5312</string>
+	<string>7F2716C1-06D3-47D7-A302-8052BF6213D5</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>48E3A689-B44F-429E-9904-4788BE9F5312</string>
+			<string>7F2716C1-06D3-47D7-A302-8052BF6213D5</string>
 			<key>IDESourceControlWCCName</key>
 			<string>MessageDisplayKit</string>
 		</dict>
