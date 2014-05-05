@@ -7,26 +7,10 @@
 //
 
 #import "XHMessageInputView.h"
-#import "SCAudioRecordManager.h"
 
 #import "NSString+MessageInputView.h"
 
-
-#define TOUCH_TO_RECORD         @"按住 说话"
-#define TOUCH_TO_FINISH         @"松开 结束"
-#define TOUCH_TO_DELETE         @"松开 删除"
-#define TOUCH_TO_CANCEL         @"松开手指 取消发送"
-
-typedef enum {
-    RecordBtnStateRecord        =   0,
-    RecordBtnStateFinish        =   1,
-    RecordBtnStateDelete        =   2,
-    RecordBtnStateRecordTime    =   3,
-    RecordBtnStateCancel        =   4
-} RecordBtnStateType;
-
-@interface XHMessageInputView () <UITextViewDelegate, SCAudioRecordManagerDelegate>
-
+@interface XHMessageInputView () <UITextViewDelegate>
 
 @property (nonatomic, weak, readwrite) XHMessageTextView *inputTextView;
 
@@ -37,12 +21,6 @@ typedef enum {
 @property (nonatomic, weak, readwrite) UIButton *faceSendButton;
 
 @property (nonatomic, weak, readwrite) UIButton *holdDownButton;
-
-//录音
-@property (nonatomic, assign) BOOL shouldBeginTouch;
-@property (nonatomic, strong) UIButton *recordBtn;
-@property (nonatomic, strong) SCAudioRecordManager *recordManager;
-@property (nonatomic, strong) SCRecordView *recordView;
 
 //data
 @property (nonatomic, copy) NSString *inputedText;
@@ -55,14 +33,10 @@ typedef enum {
 
 - (void)messageStyleButtonClicked:(UIButton *)sender {
     NSInteger index = sender.tag;
-    if (self.inputTextView.alpha != 1) {
-        self.inputTextView.alpha = 1;
-    }
     switch (index) {
         case 0: {
             sender.selected = !sender.selected;
             if (sender.selected) {
-                self.inputTextView.alpha = 0;
                 self.inputedText = self.inputTextView.text;
                 self.inputTextView.text = @"";
                 [self.inputTextView resignFirstResponder];
@@ -266,28 +240,15 @@ typedef enum {
     
     // 如果是可以发送语言的，那就需要一个按钮录音的按钮，事件可以在外部添加
     if (self.allowsSendVoice) {
-        button = [self createButtonWithImage:nil HLImage:nil];
-//        button = [self createButtonWithImage:[UIImage imageNamed:@"holdDownButton"] HLImage:nil];
+        button = [self createButtonWithImage:[UIImage imageNamed:@"holdDownButton"] HLImage:nil];
         buttonFrame = _inputTextView.frame;
         button.frame = buttonFrame;
         button.alpha = self.voiceChangeButton.selected;
-        
-        [button setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
-        [button.titleLabel setFont:[UIFont systemFontOfSize:15]];
-        button.backgroundColor = rgba(230, 230, 230, 1.0000);
-        button.layer.cornerRadius = 3;
-        button.layer.borderWidth = 1;
-        button.layer.borderColor = [rgba(196, 196, 196, 1.0000) CGColor];
-        button.userInteractionEnabled = NO;
-        /*
         [button addTarget:self action:@selector(holdDownButtonTouchDown) forControlEvents:UIControlEventTouchDown];
         [button addTarget:self action:@selector(holdDownButtonTouchUpOutside) forControlEvents:UIControlEventTouchUpOutside];
         [button addTarget:self action:@selector(holdDownButtonTouchUpInside) forControlEvents:UIControlEventTouchUpInside];
-         */
         [self addSubview:button];
         self.holdDownButton = button;
-        
-        [self setRecordBtnWithType:RecordBtnStateRecord];
     }
 }
 
@@ -409,261 +370,5 @@ typedef enum {
     }
     return YES;
 }
-
-#pragma mark - touch event
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    
-    SCDLog(@"began");
-    CGPoint touchPoint = [[touches anyObject] locationInView:self.parentCon.view];
-    touchPoint = [self.parentCon.view convertPoint:touchPoint toView:self.holdDownButton.superview];
-    if (CGRectContainsPoint(self.holdDownButton.frame, touchPoint) == NO) {
-        _shouldBeginTouch = NO;
-        SCDLog(@"不是按到录音按钮");
-        return;
-    }
-    
-    [self handleBeginRecord:self.holdDownButton];
-    
-    _shouldBeginTouch = YES;
-    if ([_audioDelegate respondsToSelector:@selector(XHMessageInputView:began:withEvent:)]) {
-        [_audioDelegate XHMessageInputView:self began:touches withEvent:event];
-    }
-}
-
-- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
-    
-    if (_shouldBeginTouch == NO) {
-        return;
-    }
-    SCDLog(@"moved");
-    
-    
-    if (self.holdDownButton.alpha == 0) {
-        return;
-    }
-    if ([self isMoveUpToCancelRecord:touches]) {
-        [self setRecordBtnWithType:RecordBtnStateCancel];
-    } else {
-        [self setRecordBtnWithType:RecordBtnStateFinish];
-    }
-    
-    if ([_audioDelegate respondsToSelector:@selector(XHMessageInputView:changed:withEvent:)]) {
-        [_audioDelegate XHMessageInputView:self changed:touches withEvent:event];
-    }
-}
-
-- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-    
-    if (_shouldBeginTouch == NO) {
-        return;
-    }
-    SCDLog(@"ended");
-    
-    if (self.holdDownButton.alpha == 0) {
-        return;
-    }
-    [self handleTouchEndOrCancle:touches];
-    
-    if ([_audioDelegate respondsToSelector:@selector(XHMessageInputView:ended:withEvent:)]) {
-        [_audioDelegate XHMessageInputView:self ended:touches withEvent:event];
-    }
-}
-
-- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
-    
-    if (_shouldBeginTouch == NO) {
-        return;
-    }
-    SCDLog(@"cancelled");
-    
-    if (self.holdDownButton.alpha == 0) {
-        return;
-    }
-    [self handleTouchEndOrCancle:touches];
-    
-    if ([_audioDelegate respondsToSelector:@selector(XHMessageInputView:cancelled:withEvent:)]) {
-        [_audioDelegate XHMessageInputView:self cancelled:touches withEvent:event];
-    }
-}
-
-#pragma mark ------------touch for record-------------
-- (void)removeSthAboutRecord {
-    if (_recordView) {
-        [self.recordView removeFromSuperview];
-        self.recordView = nil;
-    }
-    
-    if (_recordManager) {
-        [_recordManager endRecord];
-        self.recordManager = nil;
-    }
-}
-
-- (void)handleTouchEndOrCancle:(NSSet*)touches {
-    if ([self isMoveUpToCancelRecord:touches]) {//取消本次录音
-        [self handleCancelRecord:touches];
-        
-    } else {//录音完毕
-        [self handleEndRecord:self.holdDownButton];//转码
-    }
-}
-
-//是否向上移动了
-- (BOOL)isMoveUpToCancelRecord:(NSSet*)touches {
-    CGPoint touchPoint = [[touches anyObject] locationInView:self.parentCon.view];
-    touchPoint = [self.parentCon.view convertPoint:touchPoint toView:self.holdDownButton.superview];//menuView
-    if (CGRectContainsPoint(self.holdDownButton.frame, touchPoint) == YES) {
-        return NO;
-    }
-    return YES;
-}
-
-//0：按住说话    1：松手结束     2：松手删除      3：松手取消此次录音
-- (void)setRecordBtnWithType:(RecordBtnStateType)type {
-    if (type == RecordBtnStateRecord) {
-        [self.holdDownButton setTitle:TOUCH_TO_RECORD forState:UIControlStateNormal];
-        [self.holdDownButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
-    } else if (type == RecordBtnStateFinish) {
-        [self.holdDownButton setTitle:TOUCH_TO_FINISH forState:UIControlStateNormal];
-        [self.holdDownButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
-    } else if (type == RecordBtnStateDelete) {
-        [self.holdDownButton setTitle:TOUCH_TO_DELETE forState:UIControlStateNormal];
-        [self.holdDownButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-    } else if (type == RecordBtnStateRecordTime) {
-        NSString *str = [NSString stringWithFormat:@"已录音 %.1f''", _recordManager.recordedDuration];
-        [self.holdDownButton setTitle:str forState:UIControlStateNormal];
-        [self.holdDownButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
-    } else if (type == RecordBtnStateCancel) {
-        [self.holdDownButton setTitle:TOUCH_TO_CANCEL forState:UIControlStateNormal];
-        [self.holdDownButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-    }
-}
-
-- (void)handleBeginRecord:(UIButton*)sender {
-    
-    if (sender.selected == YES) {
-        return;
-    }
-    sender.selected = YES;
-    [self setRecordBtnWithType:RecordBtnStateFinish];
-    
-    [self removeSthAboutRecord];
-    [self addRecordView];
-    [_recordView show:YES];
-    
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        [_recordManager beginRecord];
-    });
-}
-
-- (void)handleEndRecord:(UIButton*)sender {
-    
-    if (sender.selected == NO) {
-        return;
-    }
-    sender.selected = NO;
-    if (_recordView) {
-        [_recordView show:NO];
-    }
-    //延时0.5f，防止最后的声音录不进去
-    double delayInSeconds = 0.5f;
-    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
-    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-        if (_recordManager) {
-            [_recordManager endRecord];
-        }
-    });
-}
-
-- (void)handleCancelRecord:(NSSet*)touches {
-    
-    if ([self isMoveUpToCancelRecord:touches] == NO) {
-        return;
-    }
-    [SCAudioRecordManager removeRecordedFileWithOnlyName:_recordManager.wavFileStr block:nil];
-    _recordManager.wavFileStr = @"";
-    
-    
-    _holdDownButton.selected = NO;
-    [self removeSthAboutRecord];
-    
-    [self setRecordBtnWithType:RecordBtnStateRecord];
-    
-    if ([_audioDelegate respondsToSelector:@selector(XHMessageInputView:willCancleRecordWithDict:)]) {
-        [_audioDelegate XHMessageInputView:self willCancleRecordWithDict:nil];
-    }
-}
-
-#pragma mark - recordView
-//正在录音时的界面
-- (void)addRecordView {
-    //    WEAKSELF_SC
-    if (!_recordManager) {
-        SCAudioRecordManager *mgr = [[SCAudioRecordManager alloc] init];
-        mgr.delegate = self;
-        self.recordManager = mgr;
-    }
-    
-    if (!_recordView) {
-        SCRecordView *view = [[SCRecordView alloc] initWithFrame:CGRectMake(0, 0, self.parentCon.view.frame.size.width, self.parentCon.view.frame.size.height - 50) parentView:self.parentCon.view];
-        [self.parentCon.view bringSubviewToFront:self];
-        
-        [view.trashBtn removeFromSuperview];
-        view.trashBtn = nil;
-        self.recordView = view;
-    }
-}
-
-- (void)setRecordBtnTitleForDuration {
-    if (_recordManager.recordedDuration > 0) {
-        [self setRecordBtnWithType:RecordBtnStateRecordTime];
-    } else {
-        [self setRecordBtnWithType:RecordBtnStateRecord];
-    }
-}
-
-#pragma mark - SCAudioRecordManagerDelegate
-- (void)SCAudioRecordManager:(SCAudioRecordManager *)manager updateAudioMeters:(float)avgPower {
-    
-    [manager updateMetersByAvgPower:avgPower recordView:_recordView];
-    
-}
-
-- (void)SCAudioRecordManager:(SCAudioRecordManager *)manager beforeConvertToAmr:(NSString *)filePath recordDuration:(float)duration {
-    
-    if ([self hasAudioFile:filePath soundTime:duration] == NO) {
-        SCDLog(@"没有音频文件");
-        return;
-    }
-    SCDLog(@"录音wav完成");
-    [self removeSthAboutRecord];
-}
-
-- (void)SCAudioRecordManager:(SCAudioRecordManager *)manager didFinishConvertToAmr:(NSString *)filePath fileName:(NSString *)fileName recordDuration:(float)duration {
-    
-    if ([self hasAudioFile:filePath soundTime:duration] == NO) {
-        SCDLog(@"没有音频文件");
-        return;
-    }
-    
-    //设置文字
-    [self setRecordBtnTitleForDuration];
-    
-    //录音完成后的回调
-    if ([_audioDelegate respondsToSelector:@selector(XHMessageInputView:didFinishRecordWithFilePath:fileName:soundTime:otherInfo:)]) {
-        [_audioDelegate XHMessageInputView:self didFinishRecordWithFilePath:filePath fileName:fileName soundTime:duration otherInfo:nil];
-    }
-    [self removeSthAboutRecord];
-    
-    //上传成功后，得到音频id。可在此处调用上传成功的回调方法didUploadAudioWithSoundId，也可在外部上传
-}
-
-- (BOOL)hasAudioFile:(NSString*)amrFilePath soundTime:(float)recordedDuration {
-    if (amrFilePath && ![amrFilePath isEqual:[NSNull null]] && amrFilePath.length > 0 && recordedDuration > 0 && [SCAudioRecordManager fileExistsAtPath:amrFilePath]) {
-        return YES;
-    }
-    return NO;
-}
-
 
 @end
