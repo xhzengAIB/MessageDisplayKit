@@ -37,7 +37,6 @@
 		74180BFF190F44A200A35C82 /* NSString+MessageInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7482458E19092170008EC388 /* NSString+MessageInputView.m */; };
 		74180C00190F44A300A35C82 /* UIImage+XHRounded.m in Sources */ = {isa = PBXBuildFile; fileRef = 74FAB0B8190A81DC005623D0 /* UIImage+XHRounded.m */; };
 		74180C01190F44A600A35C82 /* XHMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7482456A19090C04008EC388 /* XHMessage.m */; };
-		74180C09190F44B400A35C82 /* XHMessageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74824553190902DA008EC388 /* XHMessageTableViewController.m */; };
 		74180C0B190F44EC00A35C82 /* XHMessageBubbleFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 748245951909F33F008EC388 /* XHMessageBubbleFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74180C0C190F44ED00A35C82 /* XHMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = 7482457919091BBA008EC388 /* XHMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74180C0D190F44F300A35C82 /* XHMessageAvatorFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 748245981909F370008EC388 /* XHMessageAvatorFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -48,7 +47,6 @@
 		74180C12190F450000A35C82 /* UIImage+XHRounded.h in Headers */ = {isa = PBXBuildFile; fileRef = 74FAB0B7190A81DC005623D0 /* UIImage+XHRounded.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74180C13190F450200A35C82 /* XHMessageModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 7482457519090D6B008EC388 /* XHMessageModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74180C14190F450400A35C82 /* XHMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 7482456919090C04008EC388 /* XHMessage.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		74180C1C190F451200A35C82 /* XHMessageTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 74824552190902DA008EC388 /* XHMessageTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74180D74190FF7C600A35C82 /* Demo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 74180D73190FF7C600A35C82 /* Demo.gif */; };
 		744FBDC81915EE7400FB4A65 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 744FBDC61915EE7400FB4A65 /* Default-568h@2x.png */; };
 		744FBDC91915EE7400FB4A65 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 744FBDC71915EE7400FB4A65 /* Default@2x.png */; };
@@ -144,6 +142,21 @@
 		746C89501917F691007F9A5E /* XHShareMenuView.h in Headers */ = {isa = PBXBuildFile; fileRef = 746C892D1917F691007F9A5E /* XHShareMenuView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		746C89511917F691007F9A5E /* XHShareMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C892E1917F691007F9A5E /* XHShareMenuView.m */; };
 		746C89521917F691007F9A5E /* XHShareMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C892E1917F691007F9A5E /* XHShareMenuView.m */; };
+		746C895B1917F7B4007F9A5E /* XHMessageTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 746C89591917F7B4007F9A5E /* XHMessageTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		746C895C1917F7B4007F9A5E /* XHMessageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C895A1917F7B4007F9A5E /* XHMessageTableViewController.m */; };
+		746C895D1917F7B4007F9A5E /* XHMessageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C895A1917F7B4007F9A5E /* XHMessageTableViewController.m */; };
+		746C89601917F7DE007F9A5E /* XHDisplayEmotionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 746C895E1917F7DE007F9A5E /* XHDisplayEmotionViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		746C89611917F7DE007F9A5E /* XHDisplayEmotionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C895F1917F7DE007F9A5E /* XHDisplayEmotionViewController.m */; };
+		746C89621917F7DE007F9A5E /* XHDisplayEmotionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C895F1917F7DE007F9A5E /* XHDisplayEmotionViewController.m */; };
+		746C89651917F7EA007F9A5E /* XHDisplayLocationViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 746C89631917F7EA007F9A5E /* XHDisplayLocationViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		746C89661917F7EA007F9A5E /* XHDisplayLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C89641917F7EA007F9A5E /* XHDisplayLocationViewController.m */; };
+		746C89671917F7EA007F9A5E /* XHDisplayLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C89641917F7EA007F9A5E /* XHDisplayLocationViewController.m */; };
+		746C896A1917F7F5007F9A5E /* XHDisplayPhotoViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 746C89681917F7F5007F9A5E /* XHDisplayPhotoViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		746C896B1917F7F5007F9A5E /* XHDisplayPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C89691917F7F5007F9A5E /* XHDisplayPhotoViewController.m */; };
+		746C896C1917F7F5007F9A5E /* XHDisplayPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C89691917F7F5007F9A5E /* XHDisplayPhotoViewController.m */; };
+		746C896F1917F7FE007F9A5E /* XHDisplayTextViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 746C896D1917F7FE007F9A5E /* XHDisplayTextViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		746C89701917F7FE007F9A5E /* XHDisplayTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C896E1917F7FE007F9A5E /* XHDisplayTextViewController.m */; };
+		746C89711917F7FE007F9A5E /* XHDisplayTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C896E1917F7FE007F9A5E /* XHDisplayTextViewController.m */; };
 		7475BA33190D4B7B001DD9B1 /* TableViewBackgroundImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7475BA32190D4B7B001DD9B1 /* TableViewBackgroundImage@2x.png */; };
 		748245051908C730008EC388 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748245041908C730008EC388 /* Foundation.framework */; };
 		748245071908C730008EC388 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748245061908C730008EC388 /* CoreGraphics.framework */; };
@@ -157,7 +170,6 @@
 		748245281908C730008EC388 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 748245261908C730008EC388 /* InfoPlist.strings */; };
 		7482452A1908C730008EC388 /* MessageDisplayExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 748245291908C730008EC388 /* MessageDisplayExampleTests.m */; };
 		7482455C190902DA008EC388 /* UIScrollView+XHkeyboardControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 74824550190902DA008EC388 /* UIScrollView+XHkeyboardControl.m */; };
-		7482455D190902DA008EC388 /* XHMessageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74824553190902DA008EC388 /* XHMessageTableViewController.m */; };
 		7482456B19090C04008EC388 /* XHMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7482456A19090C04008EC388 /* XHMessage.m */; };
 		7482458F19092170008EC388 /* NSString+MessageInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7482458E19092170008EC388 /* NSString+MessageInputView.m */; };
 		748245971909F33F008EC388 /* XHMessageBubbleFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 748245961909F33F008EC388 /* XHMessageBubbleFactory.m */; };
@@ -292,6 +304,16 @@
 		746C892C1917F691007F9A5E /* XHEmotionSectionBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHEmotionSectionBar.m; sourceTree = "<group>"; };
 		746C892D1917F691007F9A5E /* XHShareMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHShareMenuView.h; sourceTree = "<group>"; };
 		746C892E1917F691007F9A5E /* XHShareMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHShareMenuView.m; sourceTree = "<group>"; };
+		746C89591917F7B4007F9A5E /* XHMessageTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMessageTableViewController.h; sourceTree = "<group>"; };
+		746C895A1917F7B4007F9A5E /* XHMessageTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMessageTableViewController.m; sourceTree = "<group>"; };
+		746C895E1917F7DE007F9A5E /* XHDisplayEmotionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHDisplayEmotionViewController.h; sourceTree = "<group>"; };
+		746C895F1917F7DE007F9A5E /* XHDisplayEmotionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHDisplayEmotionViewController.m; sourceTree = "<group>"; };
+		746C89631917F7EA007F9A5E /* XHDisplayLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHDisplayLocationViewController.h; sourceTree = "<group>"; };
+		746C89641917F7EA007F9A5E /* XHDisplayLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHDisplayLocationViewController.m; sourceTree = "<group>"; };
+		746C89681917F7F5007F9A5E /* XHDisplayPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHDisplayPhotoViewController.h; sourceTree = "<group>"; };
+		746C89691917F7F5007F9A5E /* XHDisplayPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHDisplayPhotoViewController.m; sourceTree = "<group>"; };
+		746C896D1917F7FE007F9A5E /* XHDisplayTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHDisplayTextViewController.h; sourceTree = "<group>"; };
+		746C896E1917F7FE007F9A5E /* XHDisplayTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHDisplayTextViewController.m; sourceTree = "<group>"; };
 		7475BA32190D4B7B001DD9B1 /* TableViewBackgroundImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TableViewBackgroundImage@2x.png"; sourceTree = "<group>"; };
 		748245011908C730008EC388 /* MessageDisplayExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessageDisplayExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		748245041908C730008EC388 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -310,8 +332,6 @@
 		748245291908C730008EC388 /* MessageDisplayExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageDisplayExampleTests.m; sourceTree = "<group>"; };
 		7482454F190902DA008EC388 /* UIScrollView+XHkeyboardControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+XHkeyboardControl.h"; sourceTree = "<group>"; };
 		74824550190902DA008EC388 /* UIScrollView+XHkeyboardControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+XHkeyboardControl.m"; sourceTree = "<group>"; };
-		74824552190902DA008EC388 /* XHMessageTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = XHMessageTableViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		74824553190902DA008EC388 /* XHMessageTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = XHMessageTableViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		7482456919090C04008EC388 /* XHMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = XHMessage.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		7482456A19090C04008EC388 /* XHMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = XHMessage.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		7482457519090D6B008EC388 /* XHMessageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = XHMessageModel.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -625,6 +645,63 @@
 			path = MessageMenuViews;
 			sourceTree = "<group>";
 		};
+		746C89531917F7B4007F9A5E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				746C89541917F7B4007F9A5E /* XHDisplayEmotionViewController */,
+				746C89551917F7B4007F9A5E /* XHDisplayLocationViewController */,
+				746C89561917F7B4007F9A5E /* XHDisplayPhotoViewController */,
+				746C89571917F7B4007F9A5E /* XHDisplayTextViewController */,
+				746C89581917F7B4007F9A5E /* XHMessageTableViewController */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		746C89541917F7B4007F9A5E /* XHDisplayEmotionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				746C895E1917F7DE007F9A5E /* XHDisplayEmotionViewController.h */,
+				746C895F1917F7DE007F9A5E /* XHDisplayEmotionViewController.m */,
+			);
+			path = XHDisplayEmotionViewController;
+			sourceTree = "<group>";
+		};
+		746C89551917F7B4007F9A5E /* XHDisplayLocationViewController */ = {
+			isa = PBXGroup;
+			children = (
+				746C89631917F7EA007F9A5E /* XHDisplayLocationViewController.h */,
+				746C89641917F7EA007F9A5E /* XHDisplayLocationViewController.m */,
+			);
+			path = XHDisplayLocationViewController;
+			sourceTree = "<group>";
+		};
+		746C89561917F7B4007F9A5E /* XHDisplayPhotoViewController */ = {
+			isa = PBXGroup;
+			children = (
+				746C89681917F7F5007F9A5E /* XHDisplayPhotoViewController.h */,
+				746C89691917F7F5007F9A5E /* XHDisplayPhotoViewController.m */,
+			);
+			path = XHDisplayPhotoViewController;
+			sourceTree = "<group>";
+		};
+		746C89571917F7B4007F9A5E /* XHDisplayTextViewController */ = {
+			isa = PBXGroup;
+			children = (
+				746C896D1917F7FE007F9A5E /* XHDisplayTextViewController.h */,
+				746C896E1917F7FE007F9A5E /* XHDisplayTextViewController.m */,
+			);
+			path = XHDisplayTextViewController;
+			sourceTree = "<group>";
+		};
+		746C89581917F7B4007F9A5E /* XHMessageTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				746C89591917F7B4007F9A5E /* XHMessageTableViewController.h */,
+				746C895A1917F7B4007F9A5E /* XHMessageTableViewController.m */,
+			);
+			path = XHMessageTableViewController;
+			sourceTree = "<group>";
+		};
 		748244F81908C730008EC388 = {
 			isa = PBXGroup;
 			children = (
@@ -724,7 +801,7 @@
 				7482454E190902DA008EC388 /* Categorys */,
 				74824554190902DA008EC388 /* Models */,
 				746C89131917F691007F9A5E /* Views */,
-				74824551190902DA008EC388 /* Controllers */,
+				746C89531917F7B4007F9A5E /* Controllers */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -742,15 +819,6 @@
 				740660A61913552800E1CE95 /* UIImage+XHAnimatedFaceGif.m */,
 			);
 			path = Categorys;
-			sourceTree = "<group>";
-		};
-		74824551190902DA008EC388 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				74824552190902DA008EC388 /* XHMessageTableViewController.h */,
-				74824553190902DA008EC388 /* XHMessageTableViewController.m */,
-			);
-			path = Controllers;
 			sourceTree = "<group>";
 		};
 		74824554190902DA008EC388 /* Models */ = {
@@ -831,10 +899,14 @@
 				746C89411917F691007F9A5E /* XHMessageTextView.h in Headers */,
 				746C893B1917F691007F9A5E /* XHMessageTableViewCell.h in Headers */,
 				74065FB919123E1C00E1CE95 /* XHShareMenuItem.h in Headers */,
-				74180C1C190F451200A35C82 /* XHMessageTableViewController.h in Headers */,
 				740660CD1914E1F400E1CE95 /* XHEmotionManager.h in Headers */,
 				740660B41914CA0000E1CE95 /* XHPhotographyHelper.h in Headers */,
+				746C896F1917F7FE007F9A5E /* XHDisplayTextViewController.h in Headers */,
+				746C89651917F7EA007F9A5E /* XHDisplayLocationViewController.h in Headers */,
+				746C89601917F7DE007F9A5E /* XHDisplayEmotionViewController.h in Headers */,
+				746C896A1917F7F5007F9A5E /* XHDisplayPhotoViewController.h in Headers */,
 				740660BE1914D65600E1CE95 /* XHEmotion.h in Headers */,
+				746C895B1917F7B4007F9A5E /* XHMessageTableViewController.h in Headers */,
 				74180C14190F450400A35C82 /* XHMessage.h in Headers */,
 				740660A71913552800E1CE95 /* UIImage+XHAnimatedFaceGif.h in Headers */,
 				74180C10190F44F800A35C82 /* UIScrollView+XHkeyboardControl.h in Headers */,
@@ -1083,10 +1155,10 @@
 				74180BFD190F449400A35C82 /* XHFoundationCommon.m in Sources */,
 				746C893D1917F691007F9A5E /* XHMessageTableViewCell.m in Sources */,
 				746C89461917F691007F9A5E /* XHEmotionCollectionViewCell.m in Sources */,
+				746C89671917F7EA007F9A5E /* XHDisplayLocationViewController.m in Sources */,
 				746C89371917F691007F9A5E /* XHMessageDisplayTextView.m in Sources */,
 				746C894F1917F691007F9A5E /* XHEmotionSectionBar.m in Sources */,
 				740660B61914CA0000E1CE95 /* XHPhotographyHelper.m in Sources */,
-				74180C09190F44B400A35C82 /* XHMessageTableViewController.m in Sources */,
 				74065FBB19123E1C00E1CE95 /* XHShareMenuItem.m in Sources */,
 				746C89521917F691007F9A5E /* XHShareMenuView.m in Sources */,
 				74180BFE190F44A000A35C82 /* UIScrollView+XHkeyboardControl.m in Sources */,
@@ -1098,10 +1170,14 @@
 				740660CF1914E1F400E1CE95 /* XHEmotionManager.m in Sources */,
 				740660A91913552800E1CE95 /* UIImage+XHAnimatedFaceGif.m in Sources */,
 				746C89341917F691007F9A5E /* XHMessageBubbleView.m in Sources */,
+				746C89621917F7DE007F9A5E /* XHDisplayEmotionViewController.m in Sources */,
 				74180C00190F44A300A35C82 /* UIImage+XHRounded.m in Sources */,
 				74180BFC190F448E00A35C82 /* XHMessageVoiceFactory.m in Sources */,
+				746C89711917F7FE007F9A5E /* XHDisplayTextViewController.m in Sources */,
 				74180BFB190F448A00A35C82 /* XHMessageAvatorFactory.m in Sources */,
+				746C895D1917F7B4007F9A5E /* XHMessageTableViewController.m in Sources */,
 				746C89401917F691007F9A5E /* XHMessageInputView.m in Sources */,
+				746C896C1917F7F5007F9A5E /* XHDisplayPhotoViewController.m in Sources */,
 				746C89491917F691007F9A5E /* XHEmotionCollectionViewFlowLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1128,7 +1204,9 @@
 				7482458F19092170008EC388 /* NSString+MessageInputView.m in Sources */,
 				746C893F1917F691007F9A5E /* XHMessageInputView.m in Sources */,
 				746C89301917F691007F9A5E /* XHBubblePhotoImageView.m in Sources */,
+				746C89611917F7DE007F9A5E /* XHDisplayEmotionViewController.m in Sources */,
 				74D1C5C6190DFC1D003B1BCA /* XHFoundationCommon.m in Sources */,
+				746C89701917F7FE007F9A5E /* XHDisplayTextViewController.m in Sources */,
 				748245151908C730008EC388 /* AppDelegate.m in Sources */,
 				748245971909F33F008EC388 /* XHMessageBubbleFactory.m in Sources */,
 				740660CE1914E1F400E1CE95 /* XHEmotionManager.m in Sources */,
@@ -1137,16 +1215,18 @@
 				746C89421917F691007F9A5E /* XHMessageTextView.m in Sources */,
 				74065FBA19123E1C00E1CE95 /* XHShareMenuItem.m in Sources */,
 				740660A81913552800E1CE95 /* UIImage+XHAnimatedFaceGif.m in Sources */,
+				746C895C1917F7B4007F9A5E /* XHMessageTableViewController.m in Sources */,
 				74FAB0B9190A81DC005623D0 /* UIImage+XHRounded.m in Sources */,
-				7482455D190902DA008EC388 /* XHMessageTableViewController.m in Sources */,
 				746C89511917F691007F9A5E /* XHShareMenuView.m in Sources */,
 				746C89331917F691007F9A5E /* XHMessageBubbleView.m in Sources */,
 				74BBB02C190BE8C400093577 /* XHMessageRootViewController.m in Sources */,
 				746C894E1917F691007F9A5E /* XHEmotionSectionBar.m in Sources */,
 				746C89451917F691007F9A5E /* XHEmotionCollectionViewCell.m in Sources */,
+				746C896B1917F7F5007F9A5E /* XHDisplayPhotoViewController.m in Sources */,
 				748245111908C730008EC388 /* main.m in Sources */,
 				7482455C190902DA008EC388 /* UIScrollView+XHkeyboardControl.m in Sources */,
 				746C894B1917F691007F9A5E /* XHEmotionManagerView.m in Sources */,
+				746C89661917F7EA007F9A5E /* XHDisplayLocationViewController.m in Sources */,
 				746C89391917F691007F9A5E /* XHMessageTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
