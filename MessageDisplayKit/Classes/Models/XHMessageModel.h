@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "XHMessageBubbleFactory.h"
 
 @class XHMessage;
 

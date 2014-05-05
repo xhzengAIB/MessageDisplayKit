@@ -8,8 +8,24 @@
 
 #import <UIKit/UIKit.h>
 
+// Views
+#import "XHMessageTextView.h"
+#import "XHMessageInputView.h"
 #import "XHMessageDisplayTextView.h"
 #import "XHBubblePhotoImageView.h"
+
+// Macro
+#import "XHMacro.h"
+
+// Model
+#import "XHMessage.h"
+
+// Factorys
+#import "XHMessageAvatorFactory.h"
+#import "XHMessageVoiceFactory.h"
+
+// Categorys
+#import "UIImage+XHAnimatedFaceGif.h"
 
 #define kXHMessageBubbleDisplayMaxLine 200
 

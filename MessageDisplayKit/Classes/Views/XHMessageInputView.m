@@ -8,6 +8,8 @@
 
 #import "XHMessageInputView.h"
 
+#import "NSString+MessageInputView.h"
+
 @interface XHMessageInputView () <UITextViewDelegate>
 
 @property (nonatomic, weak, readwrite) XHMessageTextView *inputTextView;

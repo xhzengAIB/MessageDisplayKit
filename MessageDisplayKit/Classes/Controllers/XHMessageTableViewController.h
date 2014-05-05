@@ -8,6 +8,25 @@
 
 #import <UIKit/UIKit.h>
 
+// Model
+#import "XHMessage.h"
+
+// Views
+#import "XHMessageTableView.h"
+#import "XHMessageTableViewCell.h"
+#import "XHMessageInputView.h"
+#import "XHShareMenuView.h"
+#import "XHEmotionManagerView.h"
+
+// Factory
+#import "XHMessageBubbleFactory.h"
+
+// Helper
+#import "XHPhotographyHelper.h"
+
+// Categorys
+#import "UIScrollView+XHkeyboardControl.h"
+
 @protocol XHMessageTableViewControllerDelegate <NSObject>
 
 @optional

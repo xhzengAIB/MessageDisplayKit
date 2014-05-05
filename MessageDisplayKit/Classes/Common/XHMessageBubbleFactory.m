@@ -7,6 +7,7 @@
 //
 
 #import "XHMessageBubbleFactory.h"
+#import "XHMacro.h"
 
 @implementation XHMessageBubbleFactory
 

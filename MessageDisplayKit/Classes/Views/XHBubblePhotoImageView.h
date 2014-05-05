@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "XHMessageBubbleFactory.h"
 
 @interface XHBubblePhotoImageView : UIView
 

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XHEmotionManager.h"
 
 @protocol XHEmotionSectionBarDelegate <NSObject>
 

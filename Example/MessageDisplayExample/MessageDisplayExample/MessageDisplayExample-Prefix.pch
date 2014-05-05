@@ -14,5 +14,5 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 
-    #import "MessageDisplayKit.h"
+    #import "XHMessageTableViewController.h"
 #endif
