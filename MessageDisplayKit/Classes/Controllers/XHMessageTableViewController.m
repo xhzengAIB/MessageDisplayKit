@@ -7,8 +7,9 @@
 //
 
 #import "XHMessageTableViewController.h"
+#import "SCAudioPlayerManager.h"
 
-@interface XHMessageTableViewController ()
+@interface XHMessageTableViewController () <XHInputTouchAudioEventDelegate, SCAudioPlayerManagerDelegate>
 
 /**
  *  判断是否用户手指滚动
@@ -29,6 +30,9 @@
 @property (nonatomic, weak, readwrite) XHEmotionManagerView *emotionManagerView;
 
 @property (nonatomic, strong) XHPhotographyHelper *photographyHelper;
+
+
+@property (nonatomic, strong) XHMessageTableViewCell *currentSelectedCell;
 
 @end
 
@@ -355,6 +359,8 @@
     inputView.allowsSendVoice = self.allowsSendVoice;
     inputView.allowsSendMultiMedia = self.allowsSendMultiMedia;
     inputView.delegate = self;
+    inputView.parentCon = self;
+    inputView.audioDelegate = self;
     [self.view addSubview:inputView];
     [self.view bringSubviewToFront:inputView];
     
@@ -651,6 +657,19 @@
     DLog(@"didFinishRecoingVoice");
 }
 
+- (void)XHMessageInputView:(XHMessageInputView *)inputView willCancleRecordWithDict:(id)aDict {
+    DLog(@"will cancel recording voice");
+}
+
+- (void)XHMessageInputView:(XHMessageInputView *)inputView didFinishRecordWithFilePath:(NSString *)filePath fileName:(NSString *)amrName soundTime:(float)soundTime otherInfo:(NSMutableDictionary *)aDict {
+    DLog(@"did finish record voice");
+    [self addMessage:[[XHMessage alloc] initWithVoicePath:filePath voiceUrl:amrName sender:@"Aevit" timestamp:[NSDate date]]];
+}
+
+- (void)XHMessageInputView:(XHMessageInputView *)inputView didUploadAudioWithSoundId:(NSString *)soundId soundUrl:(NSString *)soundUrl soundTime:(NSString *)soundTime otherInfo:(NSMutableDictionary *)aDict {
+    DLog(@"did upload voice");
+}
+
 #pragma mark - XHMessageTableViewCell delegate
 
 - (void)multiMediaMessageDidSelectedOnMessage:(id<XHMessageModel>)message atIndexPath:(NSIndexPath *)indexPath onMessageTableViewCell:(XHMessageTableViewCell *)messageTableViewCell {
@@ -663,8 +682,17 @@
             break;
         case XHBubbleMessageVoice:
             DLog(@"message : %@", message.voicePath);
-            [messageTableViewCell.messageBubbleView.animationVoiceImageView startAnimating];
-            [messageTableViewCell.messageBubbleView.animationVoiceImageView performSelector:@selector(stopAnimating) withObject:nil afterDelay:10];
+            [[SCAudioPlayerManager shareInstance] setDelegate:self];
+            if (_currentSelectedCell) {
+                [_currentSelectedCell.messageBubbleView.animationVoiceImageView stopAnimating];
+            }
+            if (_currentSelectedCell == messageTableViewCell) {
+                [[SCAudioPlayerManager shareInstance] stopAudio];
+                self.currentSelectedCell = nil;
+            } else {
+                self.currentSelectedCell = messageTableViewCell;
+                [[SCAudioPlayerManager shareInstance] managerAudioWithFileName:message.voicePath toPlay:YES];
+            }
             break;
         case XHBubbleMessageFace:
             DLog(@"facePath : %@", message.emotionPath);
@@ -687,6 +715,33 @@
 
 - (void)menuDidSelectedAtBubbleMessageMenuSelecteType:(XHBubbleMessageMenuSelecteType)bubbleMessageMenuSelecteType {
     
+}
+
+#pragma mark - play audio delegate
+- (void)didAudioPlayerBeginPlay:(AVAudioPlayer *)audioPlayer {
+    DLog(@"audio player begin");
+    if (!_currentSelectedCell) {
+        return;
+    }
+    [_currentSelectedCell.messageBubbleView.animationVoiceImageView startAnimating];
+}
+
+- (void)didAudioPlayerPausePlay:(AVAudioPlayer *)audioPlayer {
+    DLog(@"audio player pause");
+    if (!_currentSelectedCell) {
+        return;
+    }
+    [_currentSelectedCell.messageBubbleView.animationVoiceImageView stopAnimating];
+    [[SCAudioPlayerManager shareInstance] setDelegate:nil];
+}
+
+- (void)didAudioPlayerStopPlay:(AVAudioPlayer *)audioPlayer {
+    DLog(@"audio player end");
+    if (!_currentSelectedCell) {
+        return;
+    }
+    [_currentSelectedCell.messageBubbleView.animationVoiceImageView stopAnimating];
+    [[SCAudioPlayerManager shareInstance] setDelegate:nil];
 }
 
 #pragma mark - XHShareMenuView delegate

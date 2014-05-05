@@ -16,6 +16,8 @@ typedef NS_ENUM(NSInteger, XHMessageInputViewStyle) {
     XHMessageInputViewStyleFlat
 };
 
+@protocol XHInputTouchAudioEventDelegate;
+
 @protocol XHMessageInputViewDelegate <NSObject>
 
 @required
@@ -123,6 +125,16 @@ typedef NS_ENUM(NSInteger, XHMessageInputViewStyle) {
  */
 @property (nonatomic, weak, readonly) UIButton *holdDownButton;
 
+/**
+ *  录音时的delegate
+ */
+@property (nonatomic, assign) id <XHInputTouchAudioEventDelegate> audioDelegate;
+
+/**
+ *  所在的controller
+ */
+@property (nonatomic, strong) UIViewController *parentCon;
+
 #pragma mark - Message input view
 
 /**
@@ -155,3 +167,43 @@ typedef NS_ENUM(NSInteger, XHMessageInputViewStyle) {
 
 
 @end
+
+
+
+@protocol XHInputTouchAudioEventDelegate <NSObject>
+
+@optional
+- (void)XHMessageInputView:(XHMessageInputView*)inputView began:(NSSet *)touches withEvent:(UIEvent *)event;
+- (void)XHMessageInputView:(XHMessageInputView*)inputView changed:(NSSet *)touches withEvent:(UIEvent *)event;
+- (void)XHMessageInputView:(XHMessageInputView*)inputView ended:(NSSet *)touches withEvent:(UIEvent *)event;
+- (void)XHMessageInputView:(XHMessageInputView*)inputView cancelled:(NSSet *)touches withEvent:(UIEvent *)event;
+
+/**
+ *  将会取消本次录音的回调
+ *
+ *  @param inputView XHMessageInputView
+ *  @param aDict     传值
+ */
+- (void)XHMessageInputView:(XHMessageInputView*)inputView willCancleRecordWithDict:(id)aDict;
+
+/**
+ *  录完音后
+ *
+ *  @param inputView XHMessageInputView
+ *  @param filePath  amr文件所在路径
+ *  @param amrName   amr文件名字
+ *  @param soundTime 音频时长
+ *  @param aDict     传值
+ */
+- (void)XHMessageInputView:(XHMessageInputView*)inputView didFinishRecordWithFilePath:(NSString*)filePath fileName:(NSString*)amrName soundTime:(float)soundTime otherInfo:(NSMutableDictionary*)aDict;
+
+//上传完语音后
+- (void)XHMessageInputView:(XHMessageInputView*)inputView didUploadAudioWithSoundId:(NSString*)soundId soundUrl:(NSString*)soundUrl soundTime:(NSString*)soundTime otherInfo:(NSMutableDictionary*)aDict;
+
+
+
+@end
+
+
+
+
