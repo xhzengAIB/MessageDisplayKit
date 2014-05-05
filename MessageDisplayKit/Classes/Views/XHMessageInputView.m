@@ -347,6 +347,8 @@
     if ([self.delegate respondsToSelector:@selector(inputTextViewWillBeginEditing:)]) {
         [self.delegate inputTextViewWillBeginEditing:self.inputTextView];
     }
+    self.faceSendButton.selected = NO;
+    self.voiceChangeButton.selected = NO;
     return YES;
 }
 

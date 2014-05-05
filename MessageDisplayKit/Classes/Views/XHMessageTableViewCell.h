@@ -46,6 +46,13 @@
  */
 - (void)menuDidSelectedAtBubbleMessageMenuSelecteType:(XHBubbleMessageMenuSelecteType)bubbleMessageMenuSelecteType;
 
+/**
+ *  点击cell的手势回调
+ *
+ *  @param messageTableViewCell 被点击的目标Cell对象
+ */
+- (void)didSelectedOnMeesgaeTableViewCell:(XHMessageTableViewCell *)messageTableViewCell;
+
 @end
 
 @interface XHMessageTableViewCell : UITableViewCell

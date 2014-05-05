@@ -20,8 +20,9 @@
  */
 @property (nonatomic, assign) CGFloat previousTextViewContentHeight;
 
-@property (nonatomic, assign) XHTextViewInputViewType textViewInputViewType;
+@property (nonatomic, assign) CGFloat keyboardViewHeight;
 
+@property (nonatomic, assign) XHTextViewInputViewType textViewInputViewType;
 
 @property (nonatomic, weak, readwrite) XHMessageTableView *messageTableView;
 @property (nonatomic, weak, readwrite) XHMessageInputView *messageInputView;
@@ -102,8 +103,7 @@
 
 - (XHShareMenuView *)shareMenuView {
     if (!_shareMenuView) {
-        CGFloat keyboardViewHeight = 216;
-        XHShareMenuView *shareMenuView = [[XHShareMenuView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.view.bounds) - keyboardViewHeight, CGRectGetWidth(self.view.bounds), keyboardViewHeight)];
+        XHShareMenuView *shareMenuView = [[XHShareMenuView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.view.bounds), CGRectGetWidth(self.view.bounds), self.keyboardViewHeight)];
         shareMenuView.delegate = self;
         shareMenuView.backgroundColor = [UIColor grayColor];
         shareMenuView.alpha = 0.0;
@@ -117,8 +117,7 @@
 
 - (XHEmotionManagerView *)emotionManagerView {
     if (!_emotionManagerView) {
-        CGFloat keyboardViewHeight = 216;
-        XHEmotionManagerView *emotionManagerView = [[XHEmotionManagerView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.view.bounds) - keyboardViewHeight, CGRectGetWidth(self.view.bounds), keyboardViewHeight)];
+        XHEmotionManagerView *emotionManagerView = [[XHEmotionManagerView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.view.bounds), CGRectGetWidth(self.view.bounds), self.keyboardViewHeight)];
         emotionManagerView.delegate = self;
         emotionManagerView.dataSource = self;
         emotionManagerView.backgroundColor = [UIColor grayColor];
@@ -226,6 +225,8 @@
 #pragma mark - Life cycle
 
 - (void)setup {
+    // iPhone or iPad keyboard view height set here.
+    self.keyboardViewHeight = 216;
     _allowsPanToDismissKeyboard = YES;
     _allowsSendVoice = YES;
     _allowsSendMultiMedia = YES;
@@ -291,11 +292,13 @@
         };
         
         self.messageTableView.keyboardDidScrollToPoint = ^(CGPoint point) {
-            AnimationForMessageInputViewAtPoint(point);
+            if (self.textViewInputViewType == XHTextViewTextInputType)
+                AnimationForMessageInputViewAtPoint(point);
         };
         
         self.messageTableView.keyboardWillSnapBackToPoint = ^(CGPoint point) {
-            AnimationForMessageInputViewAtPoint(point);
+            if (self.textViewInputViewType == XHTextViewTextInputType)
+                AnimationForMessageInputViewAtPoint(point);
         };
         
         self.messageTableView.keyboardWillBeDismissed = ^() {
@@ -307,7 +310,7 @@
     
     // block回调键盘通知
     self.messageTableView.keyboardWillChange = ^(CGRect keyboardRect, UIViewAnimationOptions options, double duration, BOOL showKeyborad) {
-        if (weakSelf.textViewInputViewType == XHTextViewNormalInputViewType) {
+        if (weakSelf.textViewInputViewType == XHTextViewTextInputType) {
             [UIView animateWithDuration:duration
                                   delay:0.0
                                 options:options
@@ -339,8 +342,10 @@
     self.messageTableView.keyboardDidChange = ^(BOOL didShowed) {
         if ([weakSelf.messageInputView.inputTextView isFirstResponder]) {
             if (didShowed) {
-                weakSelf.shareMenuView.alpha = 0.0;
-                weakSelf.emotionManagerView.alpha = 0.0;
+                if (self.textViewInputViewType == XHTextViewTextInputType) {
+                    weakSelf.shareMenuView.alpha = 0.0;
+                    weakSelf.emotionManagerView.alpha = 0.0;
+                }
             }
         }
     };
@@ -520,12 +525,9 @@
 - (UIEdgeInsets)tableViewInsetsWithBottomValue:(CGFloat)bottom {
     UIEdgeInsets insets = UIEdgeInsetsZero;
     
-//#warning test for XCode 4.6.1
-//#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 70000
     if ([self respondsToSelector:@selector(topLayoutGuide)]) {
         insets.top = 64;
     }
-//#endif
     
     insets.bottom = bottom;
     
@@ -566,12 +568,84 @@
     [self addMessage:message];
 }
 
+#pragma mark - Other Menu View Frame helper mehtod
+
+- (void)layoutOtherMenuViewHiden:(BOOL)hide {
+    [self.messageInputView.inputTextView resignFirstResponder];
+    [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        __block CGRect inputViewFrame = self.messageInputView.frame;
+        __block CGRect otherMenuViewFrame;
+        
+        void (^InputViewAnimation)(BOOL hide) = ^(BOOL hide) {
+            inputViewFrame.origin.y = (hide ? (CGRectGetHeight(self.view.bounds) - CGRectGetHeight(inputViewFrame)) : (CGRectGetMinY(otherMenuViewFrame) - CGRectGetHeight(inputViewFrame)));
+            self.messageInputView.frame = inputViewFrame;
+        };
+        
+        void (^EmotionManagerViewAnimation)(BOOL hide) = ^(BOOL hide) {
+            otherMenuViewFrame = self.emotionManagerView.frame;
+            otherMenuViewFrame.origin.y = (hide ? CGRectGetHeight(self.view.frame) : (CGRectGetHeight(self.view.frame) - CGRectGetHeight(otherMenuViewFrame)));
+            self.emotionManagerView.alpha = !hide;
+            self.emotionManagerView.frame = otherMenuViewFrame;
+        };
+        
+        void (^ShareMenuViewAnimation)(BOOL hide) = ^(BOOL hide) {
+            otherMenuViewFrame = self.shareMenuView.frame;
+            otherMenuViewFrame.origin.y = (hide ? CGRectGetHeight(self.view.frame) : (CGRectGetHeight(self.view.frame) - CGRectGetHeight(otherMenuViewFrame)));
+            self.shareMenuView.alpha = !hide;
+            self.shareMenuView.frame = otherMenuViewFrame;
+        };
+        
+        if (hide) {
+            switch (self.textViewInputViewType) {
+                case XHTextViewFaceInputType: {
+                    EmotionManagerViewAnimation(hide);
+                    break;
+                }
+                case XHTextViewShareMenuInputType: {
+                    ShareMenuViewAnimation(hide);
+                    break;
+                }
+                default:
+                    break;
+            }
+        } else {
+            
+            // 这里需要注意block的执行顺序，因为otherMenuViewFrame是公用的对象，所以对于被隐藏的Menu的frame的origin的y会是最大值
+            switch (self.textViewInputViewType) {
+                case XHTextViewFaceInputType: {
+                    // 1、先隐藏和自己无关的View
+                    ShareMenuViewAnimation(!hide);
+                    // 2、再显示和自己相关的View
+                    EmotionManagerViewAnimation(hide);
+                    break;
+                }
+                case XHTextViewShareMenuInputType: {
+                    // 1、先隐藏和自己无关的View
+                    EmotionManagerViewAnimation(!hide);
+                    // 2、再显示和自己相关的View
+                    ShareMenuViewAnimation(hide);
+                    break;
+                }
+                default:
+                    break;
+            }
+        }
+        
+        InputViewAnimation(hide);
+        
+        [self setTableViewInsetsWithBottomValue:self.view.frame.size.height
+         - self.messageInputView.frame.origin.y];
+        
+        [self scrollToBottomAnimated:NO];
+    } completion:^(BOOL finished) {
+        
+    }];
+}
+
 #pragma mark - XHMessageInputView Delegate
 
 - (void)inputTextViewWillBeginEditing:(XHMessageTextView *)messageInputTextView {
-    self.textViewInputViewType = XHTextViewNormalInputViewType;
-    self.messageInputView.faceSendButton.selected = NO;
-    self.messageInputView.voiceChangeButton.selected = NO;
+    self.textViewInputViewType = XHTextViewTextInputType;
 }
 
 - (void)inputTextViewDidBeginEditing:(XHMessageTextView *)messageInputTextView {
@@ -581,19 +655,10 @@
 
 - (void)didChangeSendVoiceMeesgae:(BOOL)changed {
     if (changed) {
-        if (self.textViewInputViewType == XHTextViewNormalInputViewType)
+        if (self.textViewInputViewType == XHTextViewTextInputType)
             return;
-        
-        self.shareMenuView.alpha = 0.0;
-        self.emotionManagerView.alpha = 0.0;
-        [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-            CGRect inputViewFrame = self.messageInputView.frame;
-            inputViewFrame.origin.y = CGRectGetHeight(self.view.bounds) - CGRectGetHeight(inputViewFrame);
-            self.messageInputView.frame = inputViewFrame;
-            
-        } completion:^(BOOL finished) {
-            
-        }];
+        // 在这之前，textViewInputViewType已经不是XHTextViewTextInputType
+        [self layoutOtherMenuViewHiden:YES];
     }
 }
 
@@ -606,34 +671,14 @@
 
 - (void)didSelectedMultipleMediaAction {
     DLog(@"didSelectedMultipleMediaAction");
-    self.textViewInputViewType = XHTextViewPlugMenuInputViewType;
-    
-    [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-        CGRect inputViewFrame = self.messageInputView.frame;
-        inputViewFrame.origin.y = CGRectGetMinY(self.shareMenuView.frame) - CGRectGetHeight(inputViewFrame);
-        self.messageInputView.frame = inputViewFrame;
-        
-    } completion:^(BOOL finished) {
-        
-    }];
-    self.shareMenuView.alpha = 1.0;
-    [self.messageInputView.inputTextView resignFirstResponder];
+    self.textViewInputViewType = XHTextViewShareMenuInputType;
+    [self layoutOtherMenuViewHiden:NO];
 }
 
 - (void)didSendFaceMessage:(BOOL)sendFace {
     if (sendFace) {
-        self.textViewInputViewType = XHTextViewFaceInputViewType;
-        
-        [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-            CGRect inputViewFrame = self.messageInputView.frame;
-            inputViewFrame.origin.y = CGRectGetMinY(self.shareMenuView.frame) - CGRectGetHeight(inputViewFrame);
-            self.messageInputView.frame = inputViewFrame;
-            
-        } completion:^(BOOL finished) {
-            
-        }];
-        self.emotionManagerView.alpha = 1.0;
-        [self.messageInputView.inputTextView resignFirstResponder];
+        self.textViewInputViewType = XHTextViewFaceInputType;
+        [self layoutOtherMenuViewHiden:NO];
     } else {
         [self.messageInputView.inputTextView becomeFirstResponder];
     }
@@ -687,6 +732,10 @@
 
 - (void)menuDidSelectedAtBubbleMessageMenuSelecteType:(XHBubbleMessageMenuSelecteType)bubbleMessageMenuSelecteType {
     
+}
+
+- (void)didSelectedOnMeesgaeTableViewCell:(XHMessageTableViewCell *)messageTableViewCell {
+    [self layoutOtherMenuViewHiden:YES];
 }
 
 #pragma mark - XHShareMenuView delegate

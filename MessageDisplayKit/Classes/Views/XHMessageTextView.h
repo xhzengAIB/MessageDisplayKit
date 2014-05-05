@@ -9,9 +9,10 @@
 #import <UIKit/UIKit.h>
 
 typedef NS_ENUM(NSUInteger, XHTextViewInputViewType) {
-    XHTextViewNormalInputViewType = 0,
-    XHTextViewFaceInputViewType,
-    XHTextViewPlugMenuInputViewType,
+    XHTextViewNormalInputType = 0,
+    XHTextViewTextInputType,
+    XHTextViewFaceInputType,
+    XHTextViewShareMenuInputType,
 };
 
 @interface XHMessageTextView : UITextView
