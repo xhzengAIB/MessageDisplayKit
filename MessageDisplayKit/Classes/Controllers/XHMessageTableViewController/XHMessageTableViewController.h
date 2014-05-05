@@ -128,8 +128,6 @@
 /**
  *  第三方接入的功能，也包括系统自身的功能，比如拍照、发送地理位置
  */
-@property (nonatomic, strong) NSArray *plugItems;
-
 @property (nonatomic, strong) NSArray *shareMenuItems;
 
 /**
