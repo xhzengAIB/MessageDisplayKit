@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XHBaseViewController.h"
 
-@interface XHDisplayPhotoViewController : UIViewController
+@interface XHDisplayPhotoViewController : XHBaseViewController
 
 @end

@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XHBaseViewController.h"
 
-@interface XHDisplayEmotionViewController : UIViewController
+@interface XHDisplayEmotionViewController : XHBaseViewController
 
 @end

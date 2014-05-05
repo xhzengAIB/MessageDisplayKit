@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XHBaseViewController.h"
 
-@interface XHDisplayTextViewController : UIViewController
+@interface XHDisplayTextViewController : XHBaseViewController
 
 @end

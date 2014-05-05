@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XHBaseViewController.h"
 
-@interface XHDisplayLocationViewController : UIViewController
+@interface XHDisplayLocationViewController : XHBaseViewController
 
 @end
