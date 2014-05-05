@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		74065FB419123DDB00E1CE95 /* XHShareMenuView.h in Headers */ = {isa = PBXBuildFile; fileRef = 74065FB219123DDB00E1CE95 /* XHShareMenuView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		74065FB519123DDB00E1CE95 /* XHShareMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74065FB319123DDB00E1CE95 /* XHShareMenuView.m */; };
-		74065FB619123DDB00E1CE95 /* XHShareMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74065FB319123DDB00E1CE95 /* XHShareMenuView.m */; };
 		74065FB919123E1C00E1CE95 /* XHShareMenuItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 74065FB719123E1C00E1CE95 /* XHShareMenuItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74065FBA19123E1C00E1CE95 /* XHShareMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 74065FB819123E1C00E1CE95 /* XHShareMenuItem.m */; };
 		74065FBB19123E1C00E1CE95 /* XHShareMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 74065FB819123E1C00E1CE95 /* XHShareMenuItem.m */; };
@@ -19,24 +16,12 @@
 		740660B41914CA0000E1CE95 /* XHPhotographyHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 740660B21914CA0000E1CE95 /* XHPhotographyHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		740660B51914CA0000E1CE95 /* XHPhotographyHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 740660B31914CA0000E1CE95 /* XHPhotographyHelper.m */; };
 		740660B61914CA0000E1CE95 /* XHPhotographyHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 740660B31914CA0000E1CE95 /* XHPhotographyHelper.m */; };
-		740660B91914D22A00E1CE95 /* XHEmotionManagerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 740660B71914D22A00E1CE95 /* XHEmotionManagerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		740660BA1914D22A00E1CE95 /* XHEmotionManagerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 740660B81914D22A00E1CE95 /* XHEmotionManagerView.m */; };
-		740660BB1914D22A00E1CE95 /* XHEmotionManagerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 740660B81914D22A00E1CE95 /* XHEmotionManagerView.m */; };
 		740660BE1914D65600E1CE95 /* XHEmotion.h in Headers */ = {isa = PBXBuildFile; fileRef = 740660BC1914D65600E1CE95 /* XHEmotion.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		740660BF1914D65600E1CE95 /* XHEmotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 740660BD1914D65600E1CE95 /* XHEmotion.m */; };
 		740660C01914D65600E1CE95 /* XHEmotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 740660BD1914D65600E1CE95 /* XHEmotion.m */; };
-		740660C31914DC2300E1CE95 /* XHEmotionCollectionViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 740660C11914DC2300E1CE95 /* XHEmotionCollectionViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		740660C41914DC2300E1CE95 /* XHEmotionCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 740660C21914DC2300E1CE95 /* XHEmotionCollectionViewCell.m */; };
-		740660C51914DC2300E1CE95 /* XHEmotionCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 740660C21914DC2300E1CE95 /* XHEmotionCollectionViewCell.m */; };
-		740660C81914DC4700E1CE95 /* XHEmotionCollectionViewFlowLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 740660C61914DC4700E1CE95 /* XHEmotionCollectionViewFlowLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		740660C91914DC4700E1CE95 /* XHEmotionCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 740660C71914DC4700E1CE95 /* XHEmotionCollectionViewFlowLayout.m */; };
-		740660CA1914DC4700E1CE95 /* XHEmotionCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 740660C71914DC4700E1CE95 /* XHEmotionCollectionViewFlowLayout.m */; };
 		740660CD1914E1F400E1CE95 /* XHEmotionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 740660CB1914E1F400E1CE95 /* XHEmotionManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		740660CE1914E1F400E1CE95 /* XHEmotionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 740660CC1914E1F400E1CE95 /* XHEmotionManager.m */; };
 		740660CF1914E1F400E1CE95 /* XHEmotionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 740660CC1914E1F400E1CE95 /* XHEmotionManager.m */; };
-		740660D2191507F800E1CE95 /* XHEmotionSectionBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 740660D0191507F800E1CE95 /* XHEmotionSectionBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		740660D3191507F800E1CE95 /* XHEmotionSectionBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 740660D1191507F800E1CE95 /* XHEmotionSectionBar.m */; };
-		740660D4191507F800E1CE95 /* XHEmotionSectionBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 740660D1191507F800E1CE95 /* XHEmotionSectionBar.m */; };
 		74180BDC190F447100A35C82 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74180BDA190F447100A35C82 /* InfoPlist.strings */; };
 		74180BE6190F447100A35C82 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7482451D1908C730008EC388 /* XCTest.framework */; };
 		74180BE7190F447100A35C82 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748245041908C730008EC388 /* Foundation.framework */; };
@@ -52,13 +37,6 @@
 		74180BFF190F44A200A35C82 /* NSString+MessageInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7482458E19092170008EC388 /* NSString+MessageInputView.m */; };
 		74180C00190F44A300A35C82 /* UIImage+XHRounded.m in Sources */ = {isa = PBXBuildFile; fileRef = 74FAB0B8190A81DC005623D0 /* UIImage+XHRounded.m */; };
 		74180C01190F44A600A35C82 /* XHMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7482456A19090C04008EC388 /* XHMessage.m */; };
-		74180C02190F44A800A35C82 /* XHMessageTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74824559190902DA008EC388 /* XHMessageTableView.m */; };
-		74180C03190F44AA00A35C82 /* XHMessageInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74824557190902DA008EC388 /* XHMessageInputView.m */; };
-		74180C04190F44AB00A35C82 /* XHMessageTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7482455B190902DA008EC388 /* XHMessageTextView.m */; };
-		74180C05190F44AC00A35C82 /* XHMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 748245621909060E008EC388 /* XHMessageTableViewCell.m */; };
-		74180C06190F44AE00A35C82 /* XHMessageBubbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7482456719090B84008EC388 /* XHMessageBubbleView.m */; };
-		74180C07190F44AF00A35C82 /* XHMessageDisplayTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74D1C5BE190DE55B003B1BCA /* XHMessageDisplayTextView.m */; };
-		74180C08190F44B100A35C82 /* XHBubblePhotoImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 748FFCE1190D737B00752C8A /* XHBubblePhotoImageView.m */; };
 		74180C09190F44B400A35C82 /* XHMessageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74824553190902DA008EC388 /* XHMessageTableViewController.m */; };
 		74180C0B190F44EC00A35C82 /* XHMessageBubbleFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 748245951909F33F008EC388 /* XHMessageBubbleFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74180C0C190F44ED00A35C82 /* XHMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = 7482457919091BBA008EC388 /* XHMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -70,13 +48,6 @@
 		74180C12190F450000A35C82 /* UIImage+XHRounded.h in Headers */ = {isa = PBXBuildFile; fileRef = 74FAB0B7190A81DC005623D0 /* UIImage+XHRounded.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74180C13190F450200A35C82 /* XHMessageModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 7482457519090D6B008EC388 /* XHMessageModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74180C14190F450400A35C82 /* XHMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 7482456919090C04008EC388 /* XHMessage.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		74180C15190F450600A35C82 /* XHMessageTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 74824558190902DA008EC388 /* XHMessageTableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		74180C16190F450800A35C82 /* XHMessageInputView.h in Headers */ = {isa = PBXBuildFile; fileRef = 74824556190902DA008EC388 /* XHMessageInputView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		74180C17190F450900A35C82 /* XHMessageTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7482455A190902DA008EC388 /* XHMessageTextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		74180C18190F450B00A35C82 /* XHMessageTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 748245611909060E008EC388 /* XHMessageTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		74180C19190F450C00A35C82 /* XHMessageBubbleView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7482456619090B84008EC388 /* XHMessageBubbleView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		74180C1A190F450D00A35C82 /* XHMessageDisplayTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 74D1C5BD190DE55B003B1BCA /* XHMessageDisplayTextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		74180C1B190F450F00A35C82 /* XHBubblePhotoImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 748FFCE0190D737B00752C8A /* XHBubblePhotoImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74180C1C190F451200A35C82 /* XHMessageTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 74824552190902DA008EC388 /* XHMessageTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74180D74190FF7C600A35C82 /* Demo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 74180D73190FF7C600A35C82 /* Demo.gif */; };
 		744FBDC81915EE7400FB4A65 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 744FBDC61915EE7400FB4A65 /* Default-568h@2x.png */; };
@@ -137,6 +108,42 @@
 		746C887F1916B62D007F9A5E /* section0_emotion14@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 746C886F1916B62D007F9A5E /* section0_emotion14@2x.png */; };
 		746C88801916B62D007F9A5E /* section0_emotion15@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 746C88701916B62D007F9A5E /* section0_emotion15@2x.png */; };
 		746C88821916B64E007F9A5E /* Fav_Cell_Loc@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 746C88811916B64E007F9A5E /* Fav_Cell_Loc@2x.png */; };
+		746C892F1917F691007F9A5E /* XHBubblePhotoImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 746C89151917F691007F9A5E /* XHBubblePhotoImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		746C89301917F691007F9A5E /* XHBubblePhotoImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C89161917F691007F9A5E /* XHBubblePhotoImageView.m */; };
+		746C89311917F691007F9A5E /* XHBubblePhotoImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C89161917F691007F9A5E /* XHBubblePhotoImageView.m */; };
+		746C89321917F691007F9A5E /* XHMessageBubbleView.h in Headers */ = {isa = PBXBuildFile; fileRef = 746C89171917F691007F9A5E /* XHMessageBubbleView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		746C89331917F691007F9A5E /* XHMessageBubbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C89181917F691007F9A5E /* XHMessageBubbleView.m */; };
+		746C89341917F691007F9A5E /* XHMessageBubbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C89181917F691007F9A5E /* XHMessageBubbleView.m */; };
+		746C89351917F691007F9A5E /* XHMessageDisplayTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 746C89191917F691007F9A5E /* XHMessageDisplayTextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		746C89361917F691007F9A5E /* XHMessageDisplayTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C891A1917F691007F9A5E /* XHMessageDisplayTextView.m */; };
+		746C89371917F691007F9A5E /* XHMessageDisplayTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C891A1917F691007F9A5E /* XHMessageDisplayTextView.m */; };
+		746C89381917F691007F9A5E /* XHMessageTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 746C891B1917F691007F9A5E /* XHMessageTableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		746C89391917F691007F9A5E /* XHMessageTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C891C1917F691007F9A5E /* XHMessageTableView.m */; };
+		746C893A1917F691007F9A5E /* XHMessageTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C891C1917F691007F9A5E /* XHMessageTableView.m */; };
+		746C893B1917F691007F9A5E /* XHMessageTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 746C891D1917F691007F9A5E /* XHMessageTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		746C893C1917F691007F9A5E /* XHMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C891E1917F691007F9A5E /* XHMessageTableViewCell.m */; };
+		746C893D1917F691007F9A5E /* XHMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C891E1917F691007F9A5E /* XHMessageTableViewCell.m */; };
+		746C893E1917F691007F9A5E /* XHMessageInputView.h in Headers */ = {isa = PBXBuildFile; fileRef = 746C89201917F691007F9A5E /* XHMessageInputView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		746C893F1917F691007F9A5E /* XHMessageInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C89211917F691007F9A5E /* XHMessageInputView.m */; };
+		746C89401917F691007F9A5E /* XHMessageInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C89211917F691007F9A5E /* XHMessageInputView.m */; };
+		746C89411917F691007F9A5E /* XHMessageTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 746C89221917F691007F9A5E /* XHMessageTextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		746C89421917F691007F9A5E /* XHMessageTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C89231917F691007F9A5E /* XHMessageTextView.m */; };
+		746C89431917F691007F9A5E /* XHMessageTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C89231917F691007F9A5E /* XHMessageTextView.m */; };
+		746C89441917F691007F9A5E /* XHEmotionCollectionViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 746C89251917F691007F9A5E /* XHEmotionCollectionViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		746C89451917F691007F9A5E /* XHEmotionCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C89261917F691007F9A5E /* XHEmotionCollectionViewCell.m */; };
+		746C89461917F691007F9A5E /* XHEmotionCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C89261917F691007F9A5E /* XHEmotionCollectionViewCell.m */; };
+		746C89471917F691007F9A5E /* XHEmotionCollectionViewFlowLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 746C89271917F691007F9A5E /* XHEmotionCollectionViewFlowLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		746C89481917F691007F9A5E /* XHEmotionCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C89281917F691007F9A5E /* XHEmotionCollectionViewFlowLayout.m */; };
+		746C89491917F691007F9A5E /* XHEmotionCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C89281917F691007F9A5E /* XHEmotionCollectionViewFlowLayout.m */; };
+		746C894A1917F691007F9A5E /* XHEmotionManagerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 746C89291917F691007F9A5E /* XHEmotionManagerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		746C894B1917F691007F9A5E /* XHEmotionManagerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C892A1917F691007F9A5E /* XHEmotionManagerView.m */; };
+		746C894C1917F691007F9A5E /* XHEmotionManagerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C892A1917F691007F9A5E /* XHEmotionManagerView.m */; };
+		746C894D1917F691007F9A5E /* XHEmotionSectionBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 746C892B1917F691007F9A5E /* XHEmotionSectionBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		746C894E1917F691007F9A5E /* XHEmotionSectionBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C892C1917F691007F9A5E /* XHEmotionSectionBar.m */; };
+		746C894F1917F691007F9A5E /* XHEmotionSectionBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C892C1917F691007F9A5E /* XHEmotionSectionBar.m */; };
+		746C89501917F691007F9A5E /* XHShareMenuView.h in Headers */ = {isa = PBXBuildFile; fileRef = 746C892D1917F691007F9A5E /* XHShareMenuView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		746C89511917F691007F9A5E /* XHShareMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C892E1917F691007F9A5E /* XHShareMenuView.m */; };
+		746C89521917F691007F9A5E /* XHShareMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C892E1917F691007F9A5E /* XHShareMenuView.m */; };
 		7475BA33190D4B7B001DD9B1 /* TableViewBackgroundImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7475BA32190D4B7B001DD9B1 /* TableViewBackgroundImage@2x.png */; };
 		748245051908C730008EC388 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748245041908C730008EC388 /* Foundation.framework */; };
 		748245071908C730008EC388 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748245061908C730008EC388 /* CoreGraphics.framework */; };
@@ -151,21 +158,14 @@
 		7482452A1908C730008EC388 /* MessageDisplayExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 748245291908C730008EC388 /* MessageDisplayExampleTests.m */; };
 		7482455C190902DA008EC388 /* UIScrollView+XHkeyboardControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 74824550190902DA008EC388 /* UIScrollView+XHkeyboardControl.m */; };
 		7482455D190902DA008EC388 /* XHMessageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74824553190902DA008EC388 /* XHMessageTableViewController.m */; };
-		7482455E190902DA008EC388 /* XHMessageInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74824557190902DA008EC388 /* XHMessageInputView.m */; };
-		7482455F190902DA008EC388 /* XHMessageTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74824559190902DA008EC388 /* XHMessageTableView.m */; };
-		74824560190902DA008EC388 /* XHMessageTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7482455B190902DA008EC388 /* XHMessageTextView.m */; };
-		748245631909060E008EC388 /* XHMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 748245621909060E008EC388 /* XHMessageTableViewCell.m */; };
-		7482456819090B84008EC388 /* XHMessageBubbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7482456719090B84008EC388 /* XHMessageBubbleView.m */; };
 		7482456B19090C04008EC388 /* XHMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7482456A19090C04008EC388 /* XHMessage.m */; };
 		7482458F19092170008EC388 /* NSString+MessageInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7482458E19092170008EC388 /* NSString+MessageInputView.m */; };
 		748245971909F33F008EC388 /* XHMessageBubbleFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 748245961909F33F008EC388 /* XHMessageBubbleFactory.m */; };
 		7482459A1909F370008EC388 /* XHMessageAvatorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 748245991909F370008EC388 /* XHMessageAvatorFactory.m */; };
-		748FFCE2190D737B00752C8A /* XHBubblePhotoImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 748FFCE1190D737B00752C8A /* XHBubblePhotoImageView.m */; };
 		74BBB020190B8EAB00093577 /* MessageDisplayKitString.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74BBB022190B8EAB00093577 /* MessageDisplayKitString.strings */; };
 		74BBB02C190BE8C400093577 /* XHMessageRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74BBB02B190BE8C400093577 /* XHMessageRootViewController.m */; };
 		74BBB032190C28CD00093577 /* XHDemoWeChatMessageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74BBB031190C28CD00093577 /* XHDemoWeChatMessageTableViewController.m */; };
 		74BBB034190D226300093577 /* JieIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74BBB033190D226300093577 /* JieIcon@2x.png */; };
-		74D1C5BF190DE55B003B1BCA /* XHMessageDisplayTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74D1C5BE190DE55B003B1BCA /* XHMessageDisplayTextView.m */; };
 		74D1C5C6190DFC1D003B1BCA /* XHFoundationCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 74D1C5C5190DFC1D003B1BCA /* XHFoundationCommon.m */; };
 		74D1C5E9190E2BE6003B1BCA /* XHMessageVoiceFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 74D1C5E8190E2BE6003B1BCA /* XHMessageVoiceFactory.m */; };
 		74FAB0B9190A81DC005623D0 /* UIImage+XHRounded.m in Sources */ = {isa = PBXBuildFile; fileRef = 74FAB0B8190A81DC005623D0 /* UIImage+XHRounded.m */; };
@@ -190,26 +190,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		74065FB219123DDB00E1CE95 /* XHShareMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHShareMenuView.h; sourceTree = "<group>"; };
-		74065FB319123DDB00E1CE95 /* XHShareMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHShareMenuView.m; sourceTree = "<group>"; };
 		74065FB719123E1C00E1CE95 /* XHShareMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHShareMenuItem.h; sourceTree = "<group>"; };
 		74065FB819123E1C00E1CE95 /* XHShareMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHShareMenuItem.m; sourceTree = "<group>"; };
 		740660A51913552800E1CE95 /* UIImage+XHAnimatedFaceGif.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+XHAnimatedFaceGif.h"; sourceTree = "<group>"; };
 		740660A61913552800E1CE95 /* UIImage+XHAnimatedFaceGif.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+XHAnimatedFaceGif.m"; sourceTree = "<group>"; };
 		740660B21914CA0000E1CE95 /* XHPhotographyHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHPhotographyHelper.h; sourceTree = "<group>"; };
 		740660B31914CA0000E1CE95 /* XHPhotographyHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHPhotographyHelper.m; sourceTree = "<group>"; };
-		740660B71914D22A00E1CE95 /* XHEmotionManagerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHEmotionManagerView.h; sourceTree = "<group>"; };
-		740660B81914D22A00E1CE95 /* XHEmotionManagerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHEmotionManagerView.m; sourceTree = "<group>"; };
 		740660BC1914D65600E1CE95 /* XHEmotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHEmotion.h; sourceTree = "<group>"; };
 		740660BD1914D65600E1CE95 /* XHEmotion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHEmotion.m; sourceTree = "<group>"; };
-		740660C11914DC2300E1CE95 /* XHEmotionCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHEmotionCollectionViewCell.h; sourceTree = "<group>"; };
-		740660C21914DC2300E1CE95 /* XHEmotionCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHEmotionCollectionViewCell.m; sourceTree = "<group>"; };
-		740660C61914DC4700E1CE95 /* XHEmotionCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHEmotionCollectionViewFlowLayout.h; sourceTree = "<group>"; };
-		740660C71914DC4700E1CE95 /* XHEmotionCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHEmotionCollectionViewFlowLayout.m; sourceTree = "<group>"; };
 		740660CB1914E1F400E1CE95 /* XHEmotionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHEmotionManager.h; sourceTree = "<group>"; };
 		740660CC1914E1F400E1CE95 /* XHEmotionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHEmotionManager.m; sourceTree = "<group>"; };
-		740660D0191507F800E1CE95 /* XHEmotionSectionBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHEmotionSectionBar.h; sourceTree = "<group>"; };
-		740660D1191507F800E1CE95 /* XHEmotionSectionBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHEmotionSectionBar.m; sourceTree = "<group>"; };
 		74180BD6190F447100A35C82 /* MessageDisplayFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MessageDisplayFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		74180BD9190F447100A35C82 /* MessageDisplayFramework-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MessageDisplayFramework-Info.plist"; sourceTree = "<group>"; };
 		74180BDB190F447100A35C82 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -278,6 +268,30 @@
 		746C886F1916B62D007F9A5E /* section0_emotion14@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "section0_emotion14@2x.png"; sourceTree = "<group>"; };
 		746C88701916B62D007F9A5E /* section0_emotion15@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "section0_emotion15@2x.png"; sourceTree = "<group>"; };
 		746C88811916B64E007F9A5E /* Fav_Cell_Loc@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fav_Cell_Loc@2x.png"; sourceTree = "<group>"; };
+		746C89151917F691007F9A5E /* XHBubblePhotoImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHBubblePhotoImageView.h; sourceTree = "<group>"; };
+		746C89161917F691007F9A5E /* XHBubblePhotoImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHBubblePhotoImageView.m; sourceTree = "<group>"; };
+		746C89171917F691007F9A5E /* XHMessageBubbleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMessageBubbleView.h; sourceTree = "<group>"; };
+		746C89181917F691007F9A5E /* XHMessageBubbleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMessageBubbleView.m; sourceTree = "<group>"; };
+		746C89191917F691007F9A5E /* XHMessageDisplayTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMessageDisplayTextView.h; sourceTree = "<group>"; };
+		746C891A1917F691007F9A5E /* XHMessageDisplayTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMessageDisplayTextView.m; sourceTree = "<group>"; };
+		746C891B1917F691007F9A5E /* XHMessageTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMessageTableView.h; sourceTree = "<group>"; };
+		746C891C1917F691007F9A5E /* XHMessageTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMessageTableView.m; sourceTree = "<group>"; };
+		746C891D1917F691007F9A5E /* XHMessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMessageTableViewCell.h; sourceTree = "<group>"; };
+		746C891E1917F691007F9A5E /* XHMessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMessageTableViewCell.m; sourceTree = "<group>"; };
+		746C89201917F691007F9A5E /* XHMessageInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMessageInputView.h; sourceTree = "<group>"; };
+		746C89211917F691007F9A5E /* XHMessageInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMessageInputView.m; sourceTree = "<group>"; };
+		746C89221917F691007F9A5E /* XHMessageTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMessageTextView.h; sourceTree = "<group>"; };
+		746C89231917F691007F9A5E /* XHMessageTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMessageTextView.m; sourceTree = "<group>"; };
+		746C89251917F691007F9A5E /* XHEmotionCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHEmotionCollectionViewCell.h; sourceTree = "<group>"; };
+		746C89261917F691007F9A5E /* XHEmotionCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHEmotionCollectionViewCell.m; sourceTree = "<group>"; };
+		746C89271917F691007F9A5E /* XHEmotionCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHEmotionCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		746C89281917F691007F9A5E /* XHEmotionCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHEmotionCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		746C89291917F691007F9A5E /* XHEmotionManagerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHEmotionManagerView.h; sourceTree = "<group>"; };
+		746C892A1917F691007F9A5E /* XHEmotionManagerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHEmotionManagerView.m; sourceTree = "<group>"; };
+		746C892B1917F691007F9A5E /* XHEmotionSectionBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHEmotionSectionBar.h; sourceTree = "<group>"; };
+		746C892C1917F691007F9A5E /* XHEmotionSectionBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHEmotionSectionBar.m; sourceTree = "<group>"; };
+		746C892D1917F691007F9A5E /* XHShareMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHShareMenuView.h; sourceTree = "<group>"; };
+		746C892E1917F691007F9A5E /* XHShareMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHShareMenuView.m; sourceTree = "<group>"; };
 		7475BA32190D4B7B001DD9B1 /* TableViewBackgroundImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TableViewBackgroundImage@2x.png"; sourceTree = "<group>"; };
 		748245011908C730008EC388 /* MessageDisplayExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessageDisplayExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		748245041908C730008EC388 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -298,16 +312,6 @@
 		74824550190902DA008EC388 /* UIScrollView+XHkeyboardControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+XHkeyboardControl.m"; sourceTree = "<group>"; };
 		74824552190902DA008EC388 /* XHMessageTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = XHMessageTableViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		74824553190902DA008EC388 /* XHMessageTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = XHMessageTableViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		74824556190902DA008EC388 /* XHMessageInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = XHMessageInputView.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		74824557190902DA008EC388 /* XHMessageInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMessageInputView.m; sourceTree = "<group>"; };
-		74824558190902DA008EC388 /* XHMessageTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMessageTableView.h; sourceTree = "<group>"; };
-		74824559190902DA008EC388 /* XHMessageTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMessageTableView.m; sourceTree = "<group>"; };
-		7482455A190902DA008EC388 /* XHMessageTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMessageTextView.h; sourceTree = "<group>"; };
-		7482455B190902DA008EC388 /* XHMessageTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMessageTextView.m; sourceTree = "<group>"; };
-		748245611909060E008EC388 /* XHMessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMessageTableViewCell.h; sourceTree = "<group>"; };
-		748245621909060E008EC388 /* XHMessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMessageTableViewCell.m; sourceTree = "<group>"; };
-		7482456619090B84008EC388 /* XHMessageBubbleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMessageBubbleView.h; sourceTree = "<group>"; };
-		7482456719090B84008EC388 /* XHMessageBubbleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = XHMessageBubbleView.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		7482456919090C04008EC388 /* XHMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = XHMessage.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		7482456A19090C04008EC388 /* XHMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = XHMessage.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		7482457519090D6B008EC388 /* XHMessageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = XHMessageModel.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -318,8 +322,6 @@
 		748245961909F33F008EC388 /* XHMessageBubbleFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = XHMessageBubbleFactory.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		748245981909F370008EC388 /* XHMessageAvatorFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMessageAvatorFactory.h; sourceTree = "<group>"; };
 		748245991909F370008EC388 /* XHMessageAvatorFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMessageAvatorFactory.m; sourceTree = "<group>"; };
-		748FFCE0190D737B00752C8A /* XHBubblePhotoImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHBubblePhotoImageView.h; sourceTree = "<group>"; };
-		748FFCE1190D737B00752C8A /* XHBubblePhotoImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHBubblePhotoImageView.m; sourceTree = "<group>"; };
 		74BBB01E190B8E9500093577 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		74BBB01F190B8E9500093577 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		74BBB021190B8EAB00093577 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MessageDisplayKitString.strings; sourceTree = "<group>"; };
@@ -329,8 +331,6 @@
 		74BBB030190C28CD00093577 /* XHDemoWeChatMessageTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHDemoWeChatMessageTableViewController.h; sourceTree = "<group>"; };
 		74BBB031190C28CD00093577 /* XHDemoWeChatMessageTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = XHDemoWeChatMessageTableViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		74BBB033190D226300093577 /* JieIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "JieIcon@2x.png"; sourceTree = "<group>"; };
-		74D1C5BD190DE55B003B1BCA /* XHMessageDisplayTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMessageDisplayTextView.h; sourceTree = "<group>"; };
-		74D1C5BE190DE55B003B1BCA /* XHMessageDisplayTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMessageDisplayTextView.m; sourceTree = "<group>"; };
 		74D1C5C4190DFC1D003B1BCA /* XHFoundationCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHFoundationCommon.h; sourceTree = "<group>"; };
 		74D1C5C5190DFC1D003B1BCA /* XHFoundationCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHFoundationCommon.m; sourceTree = "<group>"; };
 		74D1C5E7190E2BE6003B1BCA /* XHMessageVoiceFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMessageVoiceFactory.h; sourceTree = "<group>"; };
@@ -570,6 +570,61 @@
 			name = Section0;
 			sourceTree = "<group>";
 		};
+		746C89131917F691007F9A5E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				746C89141917F691007F9A5E /* MessageContentViews */,
+				746C891F1917F691007F9A5E /* MessageInputView */,
+				746C89241917F691007F9A5E /* MessageMenuViews */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		746C89141917F691007F9A5E /* MessageContentViews */ = {
+			isa = PBXGroup;
+			children = (
+				746C891B1917F691007F9A5E /* XHMessageTableView.h */,
+				746C891C1917F691007F9A5E /* XHMessageTableView.m */,
+				746C891D1917F691007F9A5E /* XHMessageTableViewCell.h */,
+				746C891E1917F691007F9A5E /* XHMessageTableViewCell.m */,
+				746C89171917F691007F9A5E /* XHMessageBubbleView.h */,
+				746C89181917F691007F9A5E /* XHMessageBubbleView.m */,
+				746C89151917F691007F9A5E /* XHBubblePhotoImageView.h */,
+				746C89161917F691007F9A5E /* XHBubblePhotoImageView.m */,
+				746C89191917F691007F9A5E /* XHMessageDisplayTextView.h */,
+				746C891A1917F691007F9A5E /* XHMessageDisplayTextView.m */,
+			);
+			path = MessageContentViews;
+			sourceTree = "<group>";
+		};
+		746C891F1917F691007F9A5E /* MessageInputView */ = {
+			isa = PBXGroup;
+			children = (
+				746C89201917F691007F9A5E /* XHMessageInputView.h */,
+				746C89211917F691007F9A5E /* XHMessageInputView.m */,
+				746C89221917F691007F9A5E /* XHMessageTextView.h */,
+				746C89231917F691007F9A5E /* XHMessageTextView.m */,
+			);
+			path = MessageInputView;
+			sourceTree = "<group>";
+		};
+		746C89241917F691007F9A5E /* MessageMenuViews */ = {
+			isa = PBXGroup;
+			children = (
+				746C892D1917F691007F9A5E /* XHShareMenuView.h */,
+				746C892E1917F691007F9A5E /* XHShareMenuView.m */,
+				746C89291917F691007F9A5E /* XHEmotionManagerView.h */,
+				746C892A1917F691007F9A5E /* XHEmotionManagerView.m */,
+				746C892B1917F691007F9A5E /* XHEmotionSectionBar.h */,
+				746C892C1917F691007F9A5E /* XHEmotionSectionBar.m */,
+				746C89251917F691007F9A5E /* XHEmotionCollectionViewCell.h */,
+				746C89261917F691007F9A5E /* XHEmotionCollectionViewCell.m */,
+				746C89271917F691007F9A5E /* XHEmotionCollectionViewFlowLayout.h */,
+				746C89281917F691007F9A5E /* XHEmotionCollectionViewFlowLayout.m */,
+			);
+			path = MessageMenuViews;
+			sourceTree = "<group>";
+		};
 		748244F81908C730008EC388 = {
 			isa = PBXGroup;
 			children = (
@@ -668,7 +723,7 @@
 				748245941909F1F0008EC388 /* Common */,
 				7482454E190902DA008EC388 /* Categorys */,
 				74824554190902DA008EC388 /* Models */,
-				74824555190902DA008EC388 /* Views */,
+				746C89131917F691007F9A5E /* Views */,
 				74824551190902DA008EC388 /* Controllers */,
 			);
 			path = Classes;
@@ -712,37 +767,6 @@
 				740660CC1914E1F400E1CE95 /* XHEmotionManager.m */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		74824555190902DA008EC388 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				74824558190902DA008EC388 /* XHMessageTableView.h */,
-				74824559190902DA008EC388 /* XHMessageTableView.m */,
-				74824556190902DA008EC388 /* XHMessageInputView.h */,
-				74824557190902DA008EC388 /* XHMessageInputView.m */,
-				7482455A190902DA008EC388 /* XHMessageTextView.h */,
-				7482455B190902DA008EC388 /* XHMessageTextView.m */,
-				748245611909060E008EC388 /* XHMessageTableViewCell.h */,
-				748245621909060E008EC388 /* XHMessageTableViewCell.m */,
-				7482456619090B84008EC388 /* XHMessageBubbleView.h */,
-				7482456719090B84008EC388 /* XHMessageBubbleView.m */,
-				74D1C5BD190DE55B003B1BCA /* XHMessageDisplayTextView.h */,
-				74D1C5BE190DE55B003B1BCA /* XHMessageDisplayTextView.m */,
-				748FFCE0190D737B00752C8A /* XHBubblePhotoImageView.h */,
-				748FFCE1190D737B00752C8A /* XHBubblePhotoImageView.m */,
-				74065FB219123DDB00E1CE95 /* XHShareMenuView.h */,
-				74065FB319123DDB00E1CE95 /* XHShareMenuView.m */,
-				740660B71914D22A00E1CE95 /* XHEmotionManagerView.h */,
-				740660B81914D22A00E1CE95 /* XHEmotionManagerView.m */,
-				740660C11914DC2300E1CE95 /* XHEmotionCollectionViewCell.h */,
-				740660C21914DC2300E1CE95 /* XHEmotionCollectionViewCell.m */,
-				740660C61914DC4700E1CE95 /* XHEmotionCollectionViewFlowLayout.h */,
-				740660C71914DC4700E1CE95 /* XHEmotionCollectionViewFlowLayout.m */,
-				740660D0191507F800E1CE95 /* XHEmotionSectionBar.h */,
-				740660D1191507F800E1CE95 /* XHEmotionSectionBar.m */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		7482457819091BA2008EC388 /* Macro */ = {
@@ -794,23 +818,23 @@
 				74180C12190F450000A35C82 /* UIImage+XHRounded.h in Headers */,
 				74180C11190F44F900A35C82 /* NSString+MessageInputView.h in Headers */,
 				74180C13190F450200A35C82 /* XHMessageModel.h in Headers */,
-				74180C1A190F450D00A35C82 /* XHMessageDisplayTextView.h in Headers */,
-				74180C16190F450800A35C82 /* XHMessageInputView.h in Headers */,
-				74180C1B190F450F00A35C82 /* XHBubblePhotoImageView.h in Headers */,
-				74180C18190F450B00A35C82 /* XHMessageTableViewCell.h in Headers */,
+				746C892F1917F691007F9A5E /* XHBubblePhotoImageView.h in Headers */,
+				746C89351917F691007F9A5E /* XHMessageDisplayTextView.h in Headers */,
+				746C893E1917F691007F9A5E /* XHMessageInputView.h in Headers */,
+				746C89471917F691007F9A5E /* XHEmotionCollectionViewFlowLayout.h in Headers */,
+				746C89321917F691007F9A5E /* XHMessageBubbleView.h in Headers */,
+				746C89501917F691007F9A5E /* XHShareMenuView.h in Headers */,
+				746C89381917F691007F9A5E /* XHMessageTableView.h in Headers */,
+				746C89441917F691007F9A5E /* XHEmotionCollectionViewCell.h in Headers */,
+				746C894D1917F691007F9A5E /* XHEmotionSectionBar.h in Headers */,
+				746C894A1917F691007F9A5E /* XHEmotionManagerView.h in Headers */,
+				746C89411917F691007F9A5E /* XHMessageTextView.h in Headers */,
+				746C893B1917F691007F9A5E /* XHMessageTableViewCell.h in Headers */,
 				74065FB919123E1C00E1CE95 /* XHShareMenuItem.h in Headers */,
 				74180C1C190F451200A35C82 /* XHMessageTableViewController.h in Headers */,
-				74180C19190F450C00A35C82 /* XHMessageBubbleView.h in Headers */,
-				74180C17190F450900A35C82 /* XHMessageTextView.h in Headers */,
 				740660CD1914E1F400E1CE95 /* XHEmotionManager.h in Headers */,
 				740660B41914CA0000E1CE95 /* XHPhotographyHelper.h in Headers */,
-				740660C31914DC2300E1CE95 /* XHEmotionCollectionViewCell.h in Headers */,
-				740660C81914DC4700E1CE95 /* XHEmotionCollectionViewFlowLayout.h in Headers */,
-				740660B91914D22A00E1CE95 /* XHEmotionManagerView.h in Headers */,
-				740660D2191507F800E1CE95 /* XHEmotionSectionBar.h in Headers */,
 				740660BE1914D65600E1CE95 /* XHEmotion.h in Headers */,
-				74065FB419123DDB00E1CE95 /* XHShareMenuView.h in Headers */,
-				74180C15190F450600A35C82 /* XHMessageTableView.h in Headers */,
 				74180C14190F450400A35C82 /* XHMessage.h in Headers */,
 				740660A71913552800E1CE95 /* UIImage+XHAnimatedFaceGif.h in Headers */,
 				74180C10190F44F800A35C82 /* UIScrollView+XHkeyboardControl.h in Headers */,
@@ -1053,32 +1077,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74065FB619123DDB00E1CE95 /* XHShareMenuView.m in Sources */,
-				740660D4191507F800E1CE95 /* XHEmotionSectionBar.m in Sources */,
+				746C89431917F691007F9A5E /* XHMessageTextView.m in Sources */,
 				74180BFA190F448800A35C82 /* XHMessageBubbleFactory.m in Sources */,
-				74180C06190F44AE00A35C82 /* XHMessageBubbleView.m in Sources */,
+				746C894C1917F691007F9A5E /* XHEmotionManagerView.m in Sources */,
 				74180BFD190F449400A35C82 /* XHFoundationCommon.m in Sources */,
-				74180C08190F44B100A35C82 /* XHBubblePhotoImageView.m in Sources */,
-				740660BB1914D22A00E1CE95 /* XHEmotionManagerView.m in Sources */,
+				746C893D1917F691007F9A5E /* XHMessageTableViewCell.m in Sources */,
+				746C89461917F691007F9A5E /* XHEmotionCollectionViewCell.m in Sources */,
+				746C89371917F691007F9A5E /* XHMessageDisplayTextView.m in Sources */,
+				746C894F1917F691007F9A5E /* XHEmotionSectionBar.m in Sources */,
 				740660B61914CA0000E1CE95 /* XHPhotographyHelper.m in Sources */,
 				74180C09190F44B400A35C82 /* XHMessageTableViewController.m in Sources */,
-				74180C07190F44AF00A35C82 /* XHMessageDisplayTextView.m in Sources */,
 				74065FBB19123E1C00E1CE95 /* XHShareMenuItem.m in Sources */,
+				746C89521917F691007F9A5E /* XHShareMenuView.m in Sources */,
 				74180BFE190F44A000A35C82 /* UIScrollView+XHkeyboardControl.m in Sources */,
-				74180C04190F44AB00A35C82 /* XHMessageTextView.m in Sources */,
-				74180C03190F44AA00A35C82 /* XHMessageInputView.m in Sources */,
-				74180C05190F44AC00A35C82 /* XHMessageTableViewCell.m in Sources */,
-				740660CA1914DC4700E1CE95 /* XHEmotionCollectionViewFlowLayout.m in Sources */,
+				746C893A1917F691007F9A5E /* XHMessageTableView.m in Sources */,
 				74180BFF190F44A200A35C82 /* NSString+MessageInputView.m in Sources */,
 				740660C01914D65600E1CE95 /* XHEmotion.m in Sources */,
 				74180C01190F44A600A35C82 /* XHMessage.m in Sources */,
+				746C89311917F691007F9A5E /* XHBubblePhotoImageView.m in Sources */,
 				740660CF1914E1F400E1CE95 /* XHEmotionManager.m in Sources */,
 				740660A91913552800E1CE95 /* UIImage+XHAnimatedFaceGif.m in Sources */,
+				746C89341917F691007F9A5E /* XHMessageBubbleView.m in Sources */,
 				74180C00190F44A300A35C82 /* UIImage+XHRounded.m in Sources */,
-				74180C02190F44A800A35C82 /* XHMessageTableView.m in Sources */,
 				74180BFC190F448E00A35C82 /* XHMessageVoiceFactory.m in Sources */,
 				74180BFB190F448A00A35C82 /* XHMessageAvatorFactory.m in Sources */,
-				740660C51914DC2300E1CE95 /* XHEmotionCollectionViewCell.m in Sources */,
+				746C89401917F691007F9A5E /* XHMessageInputView.m in Sources */,
+				746C89491917F691007F9A5E /* XHEmotionCollectionViewFlowLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1095,35 +1119,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				74BBB032190C28CD00093577 /* XHDemoWeChatMessageTableViewController.m in Sources */,
-				740660BA1914D22A00E1CE95 /* XHEmotionManagerView.m in Sources */,
 				74D1C5E9190E2BE6003B1BCA /* XHMessageVoiceFactory.m in Sources */,
 				7482459A1909F370008EC388 /* XHMessageAvatorFactory.m in Sources */,
-				74D1C5BF190DE55B003B1BCA /* XHMessageDisplayTextView.m in Sources */,
-				74824560190902DA008EC388 /* XHMessageTextView.m in Sources */,
 				740660B51914CA0000E1CE95 /* XHPhotographyHelper.m in Sources */,
-				740660D3191507F800E1CE95 /* XHEmotionSectionBar.m in Sources */,
+				746C893C1917F691007F9A5E /* XHMessageTableViewCell.m in Sources */,
+				746C89481917F691007F9A5E /* XHEmotionCollectionViewFlowLayout.m in Sources */,
 				7482456B19090C04008EC388 /* XHMessage.m in Sources */,
 				7482458F19092170008EC388 /* NSString+MessageInputView.m in Sources */,
+				746C893F1917F691007F9A5E /* XHMessageInputView.m in Sources */,
+				746C89301917F691007F9A5E /* XHBubblePhotoImageView.m in Sources */,
 				74D1C5C6190DFC1D003B1BCA /* XHFoundationCommon.m in Sources */,
-				740660C91914DC4700E1CE95 /* XHEmotionCollectionViewFlowLayout.m in Sources */,
 				748245151908C730008EC388 /* AppDelegate.m in Sources */,
 				748245971909F33F008EC388 /* XHMessageBubbleFactory.m in Sources */,
-				7482455F190902DA008EC388 /* XHMessageTableView.m in Sources */,
-				7482456819090B84008EC388 /* XHMessageBubbleView.m in Sources */,
-				748245631909060E008EC388 /* XHMessageTableViewCell.m in Sources */,
 				740660CE1914E1F400E1CE95 /* XHEmotionManager.m in Sources */,
+				746C89361917F691007F9A5E /* XHMessageDisplayTextView.m in Sources */,
 				740660BF1914D65600E1CE95 /* XHEmotion.m in Sources */,
+				746C89421917F691007F9A5E /* XHMessageTextView.m in Sources */,
 				74065FBA19123E1C00E1CE95 /* XHShareMenuItem.m in Sources */,
-				748FFCE2190D737B00752C8A /* XHBubblePhotoImageView.m in Sources */,
 				740660A81913552800E1CE95 /* UIImage+XHAnimatedFaceGif.m in Sources */,
-				74065FB519123DDB00E1CE95 /* XHShareMenuView.m in Sources */,
 				74FAB0B9190A81DC005623D0 /* UIImage+XHRounded.m in Sources */,
 				7482455D190902DA008EC388 /* XHMessageTableViewController.m in Sources */,
+				746C89511917F691007F9A5E /* XHShareMenuView.m in Sources */,
+				746C89331917F691007F9A5E /* XHMessageBubbleView.m in Sources */,
 				74BBB02C190BE8C400093577 /* XHMessageRootViewController.m in Sources */,
+				746C894E1917F691007F9A5E /* XHEmotionSectionBar.m in Sources */,
+				746C89451917F691007F9A5E /* XHEmotionCollectionViewCell.m in Sources */,
 				748245111908C730008EC388 /* main.m in Sources */,
 				7482455C190902DA008EC388 /* UIScrollView+XHkeyboardControl.m in Sources */,
-				740660C41914DC2300E1CE95 /* XHEmotionCollectionViewCell.m in Sources */,
-				7482455E190902DA008EC388 /* XHMessageInputView.m in Sources */,
+				746C894B1917F691007F9A5E /* XHEmotionManagerView.m in Sources */,
+				746C89391917F691007F9A5E /* XHMessageTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
