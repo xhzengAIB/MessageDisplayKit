@@ -785,6 +785,10 @@
     if (menu.isMenuVisible) {
         [menu setMenuVisible:NO animated:YES];
     }
+    
+    if (self.textViewInputViewType != XHTextViewNormalInputType && self.textViewInputViewType != XHTextViewTextInputType) {
+        [self layoutOtherMenuViewHiden:YES];
+    }
 }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
