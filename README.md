@@ -75,7 +75,7 @@ If you use this open source components in your project, please [Email us](mailto
 这里会列出所有使用该开源库的App列表。
 
 ## Thanks Developer
-我家App的主程提供了技术支持，他的[github](https://github.com/Aevit)地址，点击[我家App](https://itunes.apple.com/us/app/wo-jia-jia-ting-quan-si-mi/id538285014?mt=8)下载安装App，如果看到里面有好的效果，可以协商开源。
+我家App的主程提供了技术支持，他的[github](https://github.com/Aevit)地址，点击[我家App](https://itunes.apple.com/us/app/wo-jia-jia-ting-quan-si-mi/id538285014?mt=8)下载安装，如果看到里面有好的效果，可以协商开源。
 
 ## Credits
 Thanks to [jessesquires](https://github.com/jessesquires/MessagesTableViewController) who created JSMessagesViewController on which my work is based.
