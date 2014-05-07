@@ -67,7 +67,7 @@
 
 + (CGSize)neededSizeForPhoto:(UIImage *)photo {
     // 这里需要缩放后的size
-    CGSize photoSize = CGSizeMake(100, 100);
+    CGSize photoSize = CGSizeMake(120, 120);
     return photoSize;
 }
 
@@ -108,7 +108,7 @@
             break;
         case XHBubbleMessageLocalPosition:
             // 固定大小，必须的
-            bubbleSize = CGSizeMake(100, 100);
+            bubbleSize = CGSizeMake(119, 119);
             break;
         default:
             break;

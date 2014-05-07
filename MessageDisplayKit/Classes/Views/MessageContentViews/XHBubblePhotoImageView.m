@@ -35,6 +35,7 @@
     if (!_activityIndicatorView) {
         _activityIndicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
         _activityIndicatorView.hidesWhenStopped = YES;
+        self.activityIndicatorView.center = CGPointMake(50, 50);
     }
     return _activityIndicatorView;
 }
@@ -57,8 +58,10 @@
             if (!connectionError) {
                 UIImage *image = [UIImage imageWithData:data];
                 if (image) {
-                    weakSelf.messagePhoto = image;
-                    [weakSelf.activityIndicatorView stopAnimating];
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        weakSelf.messagePhoto = image;
+                        [weakSelf.activityIndicatorView stopAnimating];
+                    });
                 }
             }
         }];
