@@ -33,7 +33,7 @@
         }
         
         for (NSInteger i = 0; i < 10; i ++) {
-            XHMessage *message = [[XHMessage alloc] initWithPhoto:[UIImage imageNamed:@"JieIcon"] thumbnailUrl:nil originPhotoUrl:nil sender:@"Jack" timestamp:[NSDate date]];
+            XHMessage *message = [[XHMessage alloc] initWithPhoto:[UIImage imageNamed:@"JieIcon"] thumbnailUrl:@"http://a.hiphotos.baidu.com/image/w%3D230/sign=0582a3d541166d223877129776220945/c75c10385343fbf2e268823db27eca8065388f63.jpg" originPhotoUrl:nil sender:@"Jack" timestamp:[NSDate date]];
             message.bubbleMessageType = (i % 2) ? XHBubbleMessageTypeSending : XHBubbleMessageTypeReceiving;
             [messages addObject:message];
             

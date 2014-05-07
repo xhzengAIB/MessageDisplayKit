@@ -213,7 +213,7 @@
             _messageDisplayTextView.text = message.text;
             break;
         case XHBubbleMessagePhoto:
-            [_bubblePhotoImageView configureMessagePhoto:message.photo onBubbleMessageType:self.message.bubbleMessageType];
+            [_bubblePhotoImageView configureMessagePhoto:message.photo thumbnailUrl:message.thumbnailUrl originPhotoUrl:message.originPhotoUrl onBubbleMessageType:self.message.bubbleMessageType];
             break;
         case XHBubbleMessageVideo:
             _bubblePhotoImageView.messagePhoto = message.videoConverPhoto;
@@ -225,7 +225,7 @@
             _bubbleImageView.image = [UIImage animatedImageWithAnimatedGIFURL:[NSURL fileURLWithPath:message.emotionPath]];
             break;
         case XHBubbleMessageLocalPosition:
-            [_bubblePhotoImageView configureMessagePhoto:message.localPositionPhoto onBubbleMessageType:self.message.bubbleMessageType];
+            [_bubblePhotoImageView configureMessagePhoto:message.localPositionPhoto thumbnailUrl:nil originPhotoUrl:nil onBubbleMessageType:self.message.bubbleMessageType];
             break;
         default:
             break;

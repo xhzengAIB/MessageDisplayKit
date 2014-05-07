@@ -219,9 +219,6 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
 
 - (void)updateMenuControllerVisiable {
     [self setupNormalMenuController];
-    if ([self.delegate respondsToSelector:@selector(didSelectedOnMeesgaeTableViewCell:)]) {
-        [self.delegate didSelectedOnMeesgaeTableViewCell:self];
-    }
 }
 
 - (void)longPressGestureRecognizerHandle:(UILongPressGestureRecognizer *)longPressGestureRecognizer {
@@ -452,6 +449,9 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
     self.messageBubbleView.animationVoiceImageView.image = nil;
     self.messageBubbleView.messageDisplayTextView.text = nil;
     self.messageBubbleView.bubblePhotoImageView.messagePhoto = nil;
+    [self.messageBubbleView.bubblePhotoImageView.activityIndicatorView stopAnimating];
+    [self.messageBubbleView.bubblePhotoImageView.activityIndicatorView removeFromSuperview];
+    self.messageBubbleView.bubblePhotoImageView.activityIndicatorView = nil;
     self.timestampLabel.text = nil;
 }
 

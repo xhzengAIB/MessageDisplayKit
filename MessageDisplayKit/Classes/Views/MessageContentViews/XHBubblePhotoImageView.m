@@ -7,6 +7,7 @@
 //
 
 #import "XHBubblePhotoImageView.h"
+#import "XHMacro.h"
 
 @interface XHBubblePhotoImageView ()
 
@@ -16,14 +17,52 @@
 
 @implementation XHBubblePhotoImageView
 
+- (NSOperationQueue *)bubbleNetworkQueue {
+    static NSOperationQueue *currentQueue;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        currentQueue = [[NSOperationQueue alloc] init];
+        currentQueue.maxConcurrentOperationCount = 1;
+    });
+    return currentQueue;
+}
+
+- (XHBubbleMessageType)getBubbleMessageType {
+    return self.bubbleMessageType;
+}
+
+- (UIActivityIndicatorView *)activityIndicatorView {
+    if (!_activityIndicatorView) {
+        _activityIndicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+        _activityIndicatorView.hidesWhenStopped = YES;
+    }
+    return _activityIndicatorView;
+}
+
 - (void)setMessagePhoto:(UIImage *)messagePhoto {
     _messagePhoto = messagePhoto;
     [self setNeedsDisplay];
 }
 
-- (void)configureMessagePhoto:(UIImage *)messagePhoto onBubbleMessageType:(XHBubbleMessageType)bubbleMessageType {
+- (void)configureMessagePhoto:(UIImage *)messagePhoto thumbnailUrl:(NSString *)thumbnailUrl originPhotoUrl:(NSString *)originPhotoUrl onBubbleMessageType:(XHBubbleMessageType)bubbleMessageType {
     self.bubbleMessageType = bubbleMessageType;
     self.messagePhoto = messagePhoto;
+    
+    if (thumbnailUrl) {
+        WEAKSELF
+        [self addSubview:self.activityIndicatorView];
+        [self.activityIndicatorView startAnimating];
+        NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:thumbnailUrl]];
+        [NSURLConnection sendAsynchronousRequest:request queue:[self bubbleNetworkQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+            if (!connectionError) {
+                UIImage *image = [UIImage imageWithData:data];
+                if (image) {
+                    weakSelf.messagePhoto = image;
+                    [weakSelf.activityIndicatorView stopAnimating];
+                }
+            }
+        }];
+    }
 }
 
 - (instancetype)initWithFrame:(CGRect)frame {
@@ -38,6 +77,7 @@
 
 - (void)dealloc {
     _messagePhoto = nil;
+    [self.activityIndicatorView stopAnimating];
 }
 
 // Only override drawRect: if you perform custom drawing.

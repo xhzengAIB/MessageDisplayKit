@@ -16,12 +16,16 @@
  */
 @property (nonatomic, strong) UIImage *messagePhoto;
 
+@property (nonatomic, strong) UIActivityIndicatorView *activityIndicatorView;
+
 /**
  *  根据目标图片配置三角形具体位置
  *
  *  @param messagePhoto      目标图片
  *  @param bubbleMessageType 目标消息类型
  */
-- (void)configureMessagePhoto:(UIImage *)messagePhoto onBubbleMessageType:(XHBubbleMessageType)bubbleMessageType;
+- (void)configureMessagePhoto:(UIImage *)messagePhoto thumbnailUrl:(NSString *)thumbnailUrl originPhotoUrl:(NSString *)originPhotoUrl onBubbleMessageType:(XHBubbleMessageType)bubbleMessageType;
+
+- (XHBubbleMessageType)getBubbleMessageType;
 
 @end
