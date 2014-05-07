@@ -7,6 +7,9 @@
 //
 
 #import "XHMessageTableViewController.h"
+#import <MobileCoreServices/MobileCoreServices.h>
+#import <AVFoundation/AVAsset.h>
+#import <AVFoundation/AVAssetImageGenerator.h>
 
 @interface XHMessageTableViewController ()
 
@@ -133,8 +136,38 @@
     if (!_photographyHelper) {
         WEAKSELF
         _photographyHelper = [[XHPhotographyHelper alloc] initWithViewController:self didFinishTakeMediaCompledBlock:^(UIImage *image, NSDictionary *editingInfo) {
-            XHMessage *photoMessage = [[XHMessage alloc] initWithPhoto:[editingInfo valueForKey:UIImagePickerControllerOriginalImage] thumbnailUrl:nil originPhotoUrl:nil sender:@"Jayson" timestamp:[NSDate date]];
-            [weakSelf addMessage:photoMessage];
+            if (image) {
+                XHMessage *photoMessage = [[XHMessage alloc] initWithPhoto:[editingInfo valueForKey:UIImagePickerControllerOriginalImage] thumbnailUrl:nil originPhotoUrl:nil sender:@"Jayson" timestamp:[NSDate date]];
+                [weakSelf addMessage:photoMessage];
+            } else {
+                NSString *mediaType = [editingInfo objectForKey: UIImagePickerControllerMediaType];
+                NSString *videoPath;
+                NSURL *videoUrl;
+                if (CFStringCompare ((__bridge CFStringRef) mediaType, kUTTypeMovie, 0) == kCFCompareEqualTo) {
+                    videoUrl = (NSURL*)[editingInfo objectForKey:UIImagePickerControllerMediaURL];
+                    videoPath = [videoUrl path];
+                }
+                
+                
+                AVURLAsset *asset = [[AVURLAsset alloc] initWithURL:videoUrl options:nil];
+                NSParameterAssert(asset);
+                AVAssetImageGenerator *assetImageGenerator = [[AVAssetImageGenerator alloc] initWithAsset:asset];
+                assetImageGenerator.appliesPreferredTrackTransform = YES;
+                assetImageGenerator.apertureMode = AVAssetImageGeneratorApertureModeEncodedPixels;
+                
+                CGImageRef thumbnailImageRef = NULL;
+                CFTimeInterval thumbnailImageTime = 0;
+                NSError *thumbnailImageGenerationError = nil;
+                thumbnailImageRef = [assetImageGenerator copyCGImageAtTime:CMTimeMake(thumbnailImageTime, 60) actualTime:NULL error:&thumbnailImageGenerationError];
+                
+                if (!thumbnailImageRef)
+                    NSLog(@"thumbnailImageGenerationError %@", thumbnailImageGenerationError);
+                
+                UIImage *thumbnailImage = thumbnailImageRef ? [[UIImage alloc] initWithCGImage:thumbnailImageRef] : nil;
+                
+                XHMessage *videoMessage = [[XHMessage alloc] initWithVideoConverPhoto:thumbnailImage videoPath:videoPath videoUrl:nil sender:@"Jack" timestamp:[NSDate date]];
+                [weakSelf addMessage:videoMessage];
+            }
         }];
     }
     return _photographyHelper;

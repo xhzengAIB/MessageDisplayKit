@@ -31,6 +31,7 @@
     imagePickerController.editing = NO;
     imagePickerController.delegate = self;
     imagePickerController.sourceType = sourceType;
+    imagePickerController.mediaTypes =  [UIImagePickerController availableMediaTypesForSourceType:UIImagePickerControllerSourceTypeCamera];
     [self.presenViewController presentViewController:imagePickerController animated:YES completion:NULL];
 }
 
