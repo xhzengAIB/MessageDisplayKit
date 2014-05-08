@@ -28,7 +28,7 @@
 
 - (void)showOnPickerViewControllerSourceType:(UIImagePickerControllerSourceType)sourceType {
     UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
-    imagePickerController.editing = NO;
+    imagePickerController.editing = YES;
     imagePickerController.delegate = self;
     imagePickerController.sourceType = sourceType;
     imagePickerController.mediaTypes =  [UIImagePickerController availableMediaTypesForSourceType:UIImagePickerControllerSourceTypeCamera];

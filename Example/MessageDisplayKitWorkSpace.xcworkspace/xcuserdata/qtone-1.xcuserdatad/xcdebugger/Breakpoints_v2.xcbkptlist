@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../MessageDisplayKit/Classes/Controllers/XHMessageTableViewController/XHMessageTableViewController.m"
-            timestampString = "421179476.638599"
+            timestampString = "421205518.79395"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "771"
-            endingLineNumber = "771"
+            startingLineNumber = "778"
+            endingLineNumber = "778"
             landmarkName = "-didSelectedOnMeesgaeTableViewCell:"
             landmarkType = "5">
          </BreakpointContent>
