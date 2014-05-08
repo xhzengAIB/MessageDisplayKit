@@ -26,6 +26,8 @@
 
 @property (nonatomic, weak, readwrite) XHBubblePhotoImageView *bubblePhotoImageView;
 
+@property (nonatomic, weak, readwrite) UIImageView *videoPlayImageView;
+
 @property (nonatomic, strong, readwrite) id <XHMessageModel> message;
 
 @end
@@ -196,6 +198,8 @@
             // 只要是图片和视频消息，必须把尖嘴显示控件显示出来
             _bubblePhotoImageView.hidden = NO;
             
+            _videoPlayImageView.hidden = (currentType != XHBubbleMessageVideo);
+            
             // 那其他的控件都必须隐藏
             _messageDisplayTextView.hidden = YES;
             _bubbleImageView.hidden = YES;
@@ -281,6 +285,12 @@
             XHBubblePhotoImageView *bubblePhotoImageView = [[XHBubblePhotoImageView alloc] initWithFrame:CGRectZero];
             [self addSubview:bubblePhotoImageView];
             _bubblePhotoImageView = bubblePhotoImageView;
+            
+            if (!_videoPlayImageView) {
+                UIImageView *videoPlayImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MessageVideoPlay"]];
+                [bubblePhotoImageView addSubview:videoPlayImageView];
+                _videoPlayImageView = videoPlayImageView;
+            }
         }
     }
     return self;
@@ -330,6 +340,8 @@
         case XHBubbleMessageLocalPosition: {
             CGRect photoImageViewFrame = CGRectMake(bubbleFrame.origin.x - 2, 0, bubbleFrame.size.width, bubbleFrame.size.height);
             self.bubblePhotoImageView.frame = photoImageViewFrame;
+            
+            self.videoPlayImageView.center = CGPointMake(CGRectGetWidth(photoImageViewFrame) / 2.0, CGRectGetHeight(photoImageViewFrame) / 2.0);
             break;
         }
         default:

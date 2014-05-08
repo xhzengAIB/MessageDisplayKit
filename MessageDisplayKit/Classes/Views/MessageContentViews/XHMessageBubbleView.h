@@ -56,6 +56,8 @@
  */
 @property (nonatomic, weak, readonly) XHBubblePhotoImageView *bubblePhotoImageView;
 
+@property (nonatomic, weak, readonly) UIImageView *videoPlayImageView;
+
 /**
  *  设置文本消息的字体
  */
