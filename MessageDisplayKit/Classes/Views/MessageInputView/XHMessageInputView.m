@@ -76,6 +76,7 @@
             break;
         }
         case 2: {
+            self.faceSendButton.selected = NO;
             if ([self.delegate respondsToSelector:@selector(didSelectedMultipleMediaAction)]) {
                 [self.delegate didSelectedMultipleMediaAction];
             }

@@ -110,7 +110,7 @@
     if (!_shareMenuView) {
         XHShareMenuView *shareMenuView = [[XHShareMenuView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.view.bounds), CGRectGetWidth(self.view.bounds), self.keyboardViewHeight)];
         shareMenuView.delegate = self;
-        shareMenuView.backgroundColor = [UIColor grayColor];
+        shareMenuView.backgroundColor = [UIColor colorWithWhite:0.961 alpha:1.000];
         shareMenuView.alpha = 0.0;
         shareMenuView.shareMenuItems = self.shareMenuItems;
         [self.view addSubview:shareMenuView];
@@ -125,7 +125,7 @@
         XHEmotionManagerView *emotionManagerView = [[XHEmotionManagerView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.view.bounds), CGRectGetWidth(self.view.bounds), self.keyboardViewHeight)];
         emotionManagerView.delegate = self;
         emotionManagerView.dataSource = self;
-        emotionManagerView.backgroundColor = [UIColor grayColor];
+        emotionManagerView.backgroundColor = [UIColor colorWithWhite:0.961 alpha:1.000];
         emotionManagerView.alpha = 0.0;
         [self.view addSubview:emotionManagerView];
         _emotionManagerView = emotionManagerView;

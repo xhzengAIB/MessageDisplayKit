@@ -122,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../MessageDisplayKit/Classes/Views/MessageInputView/XHMessageInputView.m"
-            timestampString = "421250977.181138"
+            timestampString = "421254391.576294"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "287"
-            endingLineNumber = "287"
+            startingLineNumber = "288"
+            endingLineNumber = "288"
             landmarkName = "-dealloc"
             landmarkType = "5">
          </BreakpointContent>
