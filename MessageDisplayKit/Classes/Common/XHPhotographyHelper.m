@@ -11,46 +11,51 @@
 @interface XHPhotographyHelper () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
 @property (nonatomic, copy) DidFinishTakeMediaCompledBlock didFinishTakeMediaCompled;
-@property (nonatomic, weak) UIViewController *presenViewController;
 
 @end
 
 @implementation XHPhotographyHelper
 
-- (instancetype)initWithViewController:(UIViewController *)viewController didFinishTakeMediaCompledBlock:(DidFinishTakeMediaCompledBlock)didFinishTakeMediaCompled {
+- (instancetype)init {
     self = [super init];
     if (self) {
-        self.presenViewController = viewController;
-        self.didFinishTakeMediaCompled = didFinishTakeMediaCompled;
     }
     return self;
 }
 
-- (void)showOnPickerViewControllerSourceType:(UIImagePickerControllerSourceType)sourceType {
+- (void)dealloc {
+    self.didFinishTakeMediaCompled = nil;
+}
+
+- (void)showOnPickerViewControllerSourceType:(UIImagePickerControllerSourceType)sourceType onViewController:(UIViewController *)viewController compled:(DidFinishTakeMediaCompledBlock)compled {
+    self.didFinishTakeMediaCompled = [compled copy];
     UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
     imagePickerController.editing = YES;
     imagePickerController.delegate = self;
     imagePickerController.sourceType = sourceType;
     imagePickerController.mediaTypes =  [UIImagePickerController availableMediaTypesForSourceType:UIImagePickerControllerSourceTypeCamera];
-    [self.presenViewController presentViewController:imagePickerController animated:YES completion:NULL];
+    [viewController presentViewController:imagePickerController animated:YES completion:NULL];
 }
 
 - (void)dismissPickerViewController:(UIImagePickerController *)picker {
-    [picker dismissViewControllerAnimated:YES completion:NULL];
+    WEAKSELF
+    [picker dismissViewControllerAnimated:YES completion:^{
+        weakSelf.didFinishTakeMediaCompled = nil;
+    }];
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary *)editingInfo {
-    [self dismissPickerViewController:picker];
     if (self.didFinishTakeMediaCompled) {
         self.didFinishTakeMediaCompled(image, editingInfo);
     }
+    [self dismissPickerViewController:picker];
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-    [self dismissPickerViewController:picker];
     if (self.didFinishTakeMediaCompled) {
         self.didFinishTakeMediaCompled(nil, info);
     }
+    [self dismissPickerViewController:picker];
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {

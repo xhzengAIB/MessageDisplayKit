@@ -99,6 +99,14 @@
     return self;
 }
 
+- (void)dealloc {
+    self.emotionPageControl = nil;
+    self.emotionSectionBar = nil;
+    self.emotionCollectionView.delegate = nil;
+    self.emotionCollectionView.dataSource = nil;
+    self.emotionCollectionView = nil;
+}
+
 - (void)willMoveToSuperview:(UIView *)newSuperview {
     if (newSuperview) {
         [self reloadData];

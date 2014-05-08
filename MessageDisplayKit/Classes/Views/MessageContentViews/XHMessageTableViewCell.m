@@ -438,6 +438,7 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
     _avatorButton = nil;
     _timestampLabel = nil;
     _messageBubbleView = nil;
+    _indexPath = nil;
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 

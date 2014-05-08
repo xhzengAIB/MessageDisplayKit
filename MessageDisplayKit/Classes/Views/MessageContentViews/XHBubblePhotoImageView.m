@@ -81,6 +81,7 @@
 - (void)dealloc {
     _messagePhoto = nil;
     [self.activityIndicatorView stopAnimating];
+    self.activityIndicatorView = nil;
 }
 
 // Only override drawRect: if you perform custom drawing.

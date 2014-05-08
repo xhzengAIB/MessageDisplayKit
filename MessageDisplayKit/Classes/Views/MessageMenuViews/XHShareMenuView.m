@@ -148,6 +148,13 @@
     return self;
 }
 
+- (void)dealloc {
+    self.shareMenuItems = nil;
+    self.shareMenuScrollView.delegate = self;
+    self.shareMenuScrollView = nil;
+    self.shareMenuPageControl = nil;
+}
+
 - (void)willMoveToSuperview:(UIView *)newSuperview {
     if (newSuperview) {
         [self reloadData];

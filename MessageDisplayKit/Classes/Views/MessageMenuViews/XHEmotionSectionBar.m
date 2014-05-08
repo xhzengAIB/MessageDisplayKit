@@ -28,6 +28,10 @@
     return self;
 }
 
+- (void)dealloc {
+    self.emotionManagers = nil;
+}
+
 - (void)willMoveToSuperview:(UIView *)newSuperview {
     if (newSuperview) {
         [self reloadData];

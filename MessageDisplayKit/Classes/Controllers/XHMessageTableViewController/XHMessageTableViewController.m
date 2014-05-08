@@ -136,46 +136,7 @@
 
 - (XHPhotographyHelper *)photographyHelper {
     if (!_photographyHelper) {
-        WEAKSELF
-        _photographyHelper = [[XHPhotographyHelper alloc] initWithViewController:self didFinishTakeMediaCompledBlock:^(UIImage *image, NSDictionary *editingInfo) {
-            void (^AddPhotoMessageBlock)(UIImage *photo) = ^(UIImage *photo) {
-                [weakSelf didSendMessageWithPhoto:photo];
-            };
-            if (image) {
-                /*
-                 [editingInfo valueForKey:UIImagePickerControllerOriginalImage]
-                 */
-                AddPhotoMessageBlock(image);
-            } else {
-                NSString *mediaType = [editingInfo objectForKey: UIImagePickerControllerMediaType];
-                NSString *videoPath;
-                NSURL *videoUrl;
-                if (CFStringCompare ((__bridge CFStringRef) mediaType, kUTTypeMovie, 0) == kCFCompareEqualTo) {
-                    videoUrl = (NSURL*)[editingInfo objectForKey:UIImagePickerControllerMediaURL];
-                    videoPath = [videoUrl path];
-                    
-                    AVURLAsset *asset = [[AVURLAsset alloc] initWithURL:videoUrl options:nil];
-                    NSParameterAssert(asset);
-                    AVAssetImageGenerator *assetImageGenerator = [[AVAssetImageGenerator alloc] initWithAsset:asset];
-                    assetImageGenerator.appliesPreferredTrackTransform = YES;
-                    assetImageGenerator.apertureMode = AVAssetImageGeneratorApertureModeEncodedPixels;
-                    
-                    CGImageRef thumbnailImageRef = NULL;
-                    CFTimeInterval thumbnailImageTime = 0;
-                    NSError *thumbnailImageGenerationError = nil;
-                    thumbnailImageRef = [assetImageGenerator copyCGImageAtTime:CMTimeMake(thumbnailImageTime, 60) actualTime:NULL error:&thumbnailImageGenerationError];
-                    
-                    if (!thumbnailImageRef)
-                        NSLog(@"thumbnailImageGenerationError %@", thumbnailImageGenerationError);
-                    
-                    UIImage *thumbnailImage = thumbnailImageRef ? [[UIImage alloc] initWithCGImage:thumbnailImageRef] : nil;
-                    
-                    [weakSelf didSendMessageWithVideoConverPhoto:thumbnailImage videoPath:videoPath];
-                } else {
-                    AddPhotoMessageBlock([editingInfo valueForKey:UIImagePickerControllerOriginalImage]);
-                }
-            }
-        }];
+        _photographyHelper = [[XHPhotographyHelper alloc] init];
     }
     return _photographyHelper;
 }
@@ -339,12 +300,12 @@
         };
         
         self.messageTableView.keyboardDidScrollToPoint = ^(CGPoint point) {
-            if (self.textViewInputViewType == XHTextViewTextInputType)
+            if (weakSelf.textViewInputViewType == XHTextViewTextInputType)
                 AnimationForMessageInputViewAtPoint(point);
         };
         
         self.messageTableView.keyboardWillSnapBackToPoint = ^(CGPoint point) {
-            if (self.textViewInputViewType == XHTextViewTextInputType)
+            if (weakSelf.textViewInputViewType == XHTextViewTextInputType)
                 AnimationForMessageInputViewAtPoint(point);
         };
         
@@ -389,7 +350,7 @@
     self.messageTableView.keyboardDidChange = ^(BOOL didShowed) {
         if ([weakSelf.messageInputView.inputTextView isFirstResponder]) {
             if (didShowed) {
-                if (self.textViewInputViewType == XHTextViewTextInputType) {
+                if (weakSelf.textViewInputViewType == XHTextViewTextInputType) {
                     weakSelf.shareMenuView.alpha = 0.0;
                     weakSelf.emotionManagerView.alpha = 0.0;
                 }
@@ -468,6 +429,9 @@
     _messageTableView.dataSource = nil;
     _messageTableView = nil;
     _messageInputView = nil;
+    
+    _photographyHelper = nil;
+    _locationHelper = nil;
 }
 
 #pragma mark - View rotation
@@ -801,13 +765,51 @@
 
 - (void)didSelecteShareMenuItem:(XHShareMenuItem *)shareMenuItem atIndex:(NSInteger)index {
     NSLog(@"title : %@   index:%ld", shareMenuItem.title, (long)index);
+    
+    WEAKSELF
+    void (^PickerMediaBlock)(UIImage *image, NSDictionary *editingInfo) = ^(UIImage *image, NSDictionary *editingInfo) {
+        if (image) {
+            /*
+             [editingInfo valueForKey:UIImagePickerControllerOriginalImage]
+             */
+            [weakSelf didSendMessageWithPhoto:image];
+        } else {
+            NSString *mediaType = [editingInfo objectForKey: UIImagePickerControllerMediaType];
+            NSString *videoPath;
+            NSURL *videoUrl;
+            if (CFStringCompare ((__bridge CFStringRef) mediaType, kUTTypeMovie, 0) == kCFCompareEqualTo) {
+                videoUrl = (NSURL*)[editingInfo objectForKey:UIImagePickerControllerMediaURL];
+                videoPath = [videoUrl path];
+                
+                AVURLAsset *asset = [[AVURLAsset alloc] initWithURL:videoUrl options:nil];
+                NSParameterAssert(asset);
+                AVAssetImageGenerator *assetImageGenerator = [[AVAssetImageGenerator alloc] initWithAsset:asset];
+                assetImageGenerator.appliesPreferredTrackTransform = YES;
+                assetImageGenerator.apertureMode = AVAssetImageGeneratorApertureModeEncodedPixels;
+                
+                CGImageRef thumbnailImageRef = NULL;
+                CFTimeInterval thumbnailImageTime = 0;
+                NSError *thumbnailImageGenerationError = nil;
+                thumbnailImageRef = [assetImageGenerator copyCGImageAtTime:CMTimeMake(thumbnailImageTime, 60) actualTime:NULL error:&thumbnailImageGenerationError];
+                
+                if (!thumbnailImageRef)
+                    NSLog(@"thumbnailImageGenerationError %@", thumbnailImageGenerationError);
+                
+                UIImage *thumbnailImage = thumbnailImageRef ? [[UIImage alloc] initWithCGImage:thumbnailImageRef] : nil;
+                
+                [weakSelf didSendMessageWithVideoConverPhoto:thumbnailImage videoPath:videoPath];
+            } else {
+                [weakSelf didSendMessageWithPhoto:[editingInfo valueForKey:UIImagePickerControllerOriginalImage]];
+            }
+        }
+    };
     switch (index) {
         case 0: {
-            [self.photographyHelper showOnPickerViewControllerSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+            [self.photographyHelper showOnPickerViewControllerSourceType:UIImagePickerControllerSourceTypePhotoLibrary onViewController:self compled:PickerMediaBlock];
             break;
         }
         case 1: {
-            [self.photographyHelper showOnPickerViewControllerSourceType:UIImagePickerControllerSourceTypeCamera];
+            [self.photographyHelper showOnPickerViewControllerSourceType:UIImagePickerControllerSourceTypeCamera onViewController:self compled:PickerMediaBlock];
             break;
         }
         case 2: {

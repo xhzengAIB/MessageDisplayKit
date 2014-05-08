@@ -117,6 +117,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)dealloc {
+    self.emotionManagers = nil;
+}
+
 #pragma mark - UITableView delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

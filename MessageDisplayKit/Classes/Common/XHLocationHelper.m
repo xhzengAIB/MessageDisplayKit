@@ -33,6 +33,12 @@
     return self;
 }
 
+- (void)dealloc {
+    self.locationManager.delegate = nil;
+    self.locationManager = nil;
+    self.didGetGeolocationsCompledBlock = nil;
+}
+
 - (void)getCurrentGeolocationsCompled:(DidGetGeolocationsCompledBlock)compled {
     self.didGetGeolocationsCompledBlock = compled;
     [self.locationManager startUpdatingLocation];

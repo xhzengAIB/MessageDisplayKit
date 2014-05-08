@@ -161,6 +161,7 @@
     _emotionPath = nil;
     
     _localPositionPhoto = nil;
+    _geolocations = nil;
     
     _avator = nil;
     _avatorUrl = nil;
@@ -191,6 +192,7 @@
         _emotionPath = [aDecoder decodeObjectForKey:@"emotionPath"];
         
         _localPositionPhoto = [aDecoder decodeObjectForKey:@"localPositionPhoto"];
+        _geolocations = [aDecoder decodeObjectForKey:@"geolocations"];
         
         _avator = [aDecoder decodeObjectForKey:@"avator"];
         _avatorUrl = [aDecoder decodeObjectForKey:@"avatorUrl"];
@@ -221,6 +223,7 @@
     [aCoder encodeObject:self.emotionPath forKey:@"emotionPath"];
     
     [aCoder encodeObject:self.localPositionPhoto forKey:@"localPositionPhoto"];
+    [aCoder encodeObject:self.geolocations forKey:@"geolocations"];
     
     [aCoder encodeObject:self.sender forKey:@"sender"];
     [aCoder encodeObject:self.timestamp forKey:@"timestamp"];

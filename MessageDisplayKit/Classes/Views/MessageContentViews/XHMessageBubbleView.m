@@ -314,11 +314,22 @@
 }
 
 - (void)dealloc {
-    _bubbleImageView = nil;
-    _bubblePhotoImageView = nil;
-    _animationVoiceImageView = nil;
-    _font = nil;
     _message = nil;
+    
+    _messageDisplayTextView = nil;
+    
+    _bubbleImageView = nil;
+    
+    _bubblePhotoImageView = nil;
+    
+    _animationVoiceImageView = nil;
+    
+    _videoPlayImageView = nil;
+    
+    _geolocationsLabel = nil;
+    
+    _font = nil;
+    
 }
 
 - (void)layoutSubviews
