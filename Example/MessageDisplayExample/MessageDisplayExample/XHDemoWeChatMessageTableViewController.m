@@ -92,6 +92,7 @@
         for (NSInteger j = 0; j < 32; j ++) {
             XHEmotion *emotion = [[XHEmotion alloc] init];
             NSString *imageName = [NSString stringWithFormat:@"section%ld_emotion%ld", (long)i , (long)j % 16];
+            emotion.emotionPath = [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"Demo%d.gif", j % 2] ofType:@""];
             emotion.emotionConverPhoto = [UIImage imageNamed:imageName];
             [emotions addObject:emotion];
         }

@@ -799,7 +799,10 @@
 #pragma mark - XHEmotionManagerView delegate
 
 - (void)didSelecteEmotion:(XHEmotion *)emotion atIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"indexPath : %@ ", indexPath);
+    if (emotion.emotionPath) {
+        XHMessage *emotionMessage = [[XHMessage alloc] initWithEmotionPath:emotion.emotionPath sender:@"Jayson" timestamp:[NSDate date]];
+        [self addMessage:emotionMessage];
+    }
 }
 
 #pragma mark - XHEmotionManagerView DataSource
