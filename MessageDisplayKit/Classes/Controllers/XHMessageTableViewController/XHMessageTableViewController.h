@@ -56,7 +56,7 @@
  *  @param sender    发送者的名字
  *  @param date      发送时间
  */
-- (void)didSendVideo:(NSString *)videoPath fromSender:(NSString *)sender onDate:(NSDate *)date;
+- (void)didSendVideoConverPhoto:(UIImage *)videoConverPhoto videoPath:(NSString *)videoPath fromSender:(NSString *)sender onDate:(NSDate *)date;
 
 /**
  *  发送语音消息的回调方法
@@ -74,12 +74,12 @@
  *  @param sender   发送者的名字
  *  @param date     发送时间
  */
-- (void)didSendFace:(NSString *)facePath fromSender:(NSString *)sender onDate:(NSDate *)date;
+- (void)didSendEmotion:(NSString *)emotionPath fromSender:(NSString *)sender onDate:(NSDate *)date;
 
 /**
  *  有些网友说需要发送地理位置，这个我暂时放一放
  */
-- (void)didSendLocalPosition;
+- (void)didSendGeoLocationsPhoto:(UIImage *)geoLocationsPhoto geolocations:(NSString *)geolocations fromSender:(NSString *)sender onDate:(NSDate *)date;
 
 /**
  *  是否显示时间轴Label的回调方法

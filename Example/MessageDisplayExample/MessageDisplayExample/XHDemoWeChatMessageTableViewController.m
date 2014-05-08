@@ -17,6 +17,7 @@
 @implementation XHDemoWeChatMessageTableViewController
 
 - (void)loadDemoDataSource {
+    self.messageSender = @"Jack";
     WEAKSELF
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         
@@ -139,31 +140,81 @@
 
 #pragma mark - XHMessageTableViewController Delegate
 
+/**
+ *  发送文本消息的回调方法
+ *
+ *  @param text   目标文本字符串
+ *  @param sender 发送者的名字
+ *  @param date   发送时间
+ */
 - (void)didSendText:(NSString *)text fromSender:(NSString *)sender onDate:(NSDate *)date {
     [self addMessage:[[XHMessage alloc] initWithText:text sender:sender timestamp:date]];
     [self finishSendMessageWithBubbleMessageType:XHBubbleMessageText];
 }
 
+/**
+ *  发送图片消息的回调方法
+ *
+ *  @param photo  目标图片对象，后续有可能会换
+ *  @param sender 发送者的名字
+ *  @param date   发送时间
+ */
 - (void)didSendPhoto:(UIImage *)photo fromSender:(NSString *)sender onDate:(NSDate *)date {
+    [self addMessage:[[XHMessage alloc] initWithPhoto:photo thumbnailUrl:nil originPhotoUrl:nil sender:sender timestamp:date]];
     [self finishSendMessageWithBubbleMessageType:XHBubbleMessagePhoto];
 }
 
-- (void)didSendVideo:(NSString *)videoPath fromSender:(NSString *)sender onDate:(NSDate *)date {
+/**
+ *  发送视频消息的回调方法
+ *
+ *  @param videoPath 目标视频本地路径
+ *  @param sender    发送者的名字
+ *  @param date      发送时间
+ */
+- (void)didSendVideoConverPhoto:(UIImage *)videoConverPhoto videoPath:(NSString *)videoPath fromSender:(NSString *)sender onDate:(NSDate *)date {
+    [self addMessage:[[XHMessage alloc] initWithVideoConverPhoto:videoConverPhoto videoPath:videoPath videoUrl:nil sender:sender timestamp:date]];
     [self finishSendMessageWithBubbleMessageType:XHBubbleMessageVideo];
 }
 
+/**
+ *  发送语音消息的回调方法
+ *
+ *  @param voicePath 目标语音本地路径
+ *  @param sender    发送者的名字
+ *  @param date      发送时间
+ */
 - (void)didSendVoice:(NSString *)voicePath fromSender:(NSString *)sender onDate:(NSDate *)date {
+    [self addMessage:[[XHMessage alloc] initWithVoicePath:voicePath voiceUrl:nil sender:sender timestamp:date]];
     [self finishSendMessageWithBubbleMessageType:XHBubbleMessageVoice];
 }
 
-- (void)didSendFace:(NSString *)facePath fromSender:(NSString *)sender onDate:(NSDate *)date {
+/**
+ *  发送第三方表情消息的回调方法
+ *
+ *  @param facePath 目标第三方表情的本地路径
+ *  @param sender   发送者的名字
+ *  @param date     发送时间
+ */
+- (void)didSendEmotion:(NSString *)emotionPath fromSender:(NSString *)sender onDate:(NSDate *)date {
+    [self addMessage:[[XHMessage alloc] initWithEmotionPath:emotionPath sender:sender timestamp:date]];
     [self finishSendMessageWithBubbleMessageType:XHBubbleMessageFace];
 }
 
-- (void)didSendLocalPosition {
+/**
+ *  有些网友说需要发送地理位置，这个我暂时放一放
+ */
+- (void)didSendGeoLocationsPhoto:(UIImage *)geoLocationsPhoto geolocations:(NSString *)geolocations fromSender:(NSString *)sender onDate:(NSDate *)date {
+    [self addMessage:[[XHMessage alloc] initWithLocalPositionPhoto:geoLocationsPhoto geolocations:geolocations sender:sender timestamp:date]];
     [self finishSendMessageWithBubbleMessageType:XHBubbleMessageLocalPosition];
 }
 
+/**
+ *  是否显示时间轴Label的回调方法
+ *
+ *  @param indexPath 目标消息的位置IndexPath
+ *
+ *  @return 根据indexPath获取消息的Model的对象，从而判断返回YES or NO来控制是否显示时间轴Label
+ */
 - (BOOL)shouldDisplayTimestampForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row % 2)
         return YES;

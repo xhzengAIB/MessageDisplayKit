@@ -36,14 +36,14 @@ typedef NS_ENUM(NSInteger, XHMessageInputViewStyle) {
 
 @optional
 
-- (void)didChangeSendVoiceMeesgae:(BOOL)changed;
+- (void)didChangeSendVoiceAction:(BOOL)changed;
 
 /**
  *  发送文本消息，包括系统的表情
  *
  *  @param text 目标文本消息
  */
-- (void)didSendMessageWithText:(NSString *)text;
+- (void)didSendTextAction:(NSString *)text;
 
 /**
  *  点击+号按钮Action
@@ -54,15 +54,15 @@ typedef NS_ENUM(NSInteger, XHMessageInputViewStyle) {
 /**
  *  按下录音按钮开始录音
  */
-- (void)didStartRecordingVoice;
+- (void)didStartRecordingVoiceAction;
 /**
  *  手指向上滑动取消录音
  */
-- (void)didCancelRecordingVoice;
+- (void)didCancelRecordingVoiceAction;
 /**
  *  松开手指完成录音
  */
-- (void)didFinishRecoingVoice;
+- (void)didFinishRecoingVoiceAction;
 
 
 /**
@@ -70,7 +70,7 @@ typedef NS_ENUM(NSInteger, XHMessageInputViewStyle) {
  *
  *  @param facePath 目标表情的本地路径
  */
-- (void)didSendFaceMessage:(BOOL)sendFace;
+- (void)didSendFaceAction:(BOOL)sendFace;
 
 @end
 

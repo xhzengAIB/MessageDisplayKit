@@ -52,8 +52,8 @@
                 
             }];
             
-            if ([self.delegate respondsToSelector:@selector(didChangeSendVoiceMeesgae:)]) {
-                [self.delegate didChangeSendVoiceMeesgae:sender.selected];
+            if ([self.delegate respondsToSelector:@selector(didChangeSendVoiceAction:)]) {
+                [self.delegate didChangeSendVoiceAction:sender.selected];
             }
             
             break;
@@ -70,8 +70,8 @@
                 }];
             }
             
-            if ([self.delegate respondsToSelector:@selector(didSendFaceMessage:)]) {
-                [self.delegate didSendFaceMessage:sender.selected];
+            if ([self.delegate respondsToSelector:@selector(didSendFaceAction:)]) {
+                [self.delegate didSendFaceAction:sender.selected];
             }
             break;
         }
@@ -87,20 +87,20 @@
 }
 
 - (void)holdDownButtonTouchDown {
-    if ([self.delegate respondsToSelector:@selector(didStartRecordingVoice)]) {
-        [self.delegate didStartRecordingVoice];
+    if ([self.delegate respondsToSelector:@selector(didStartRecordingVoiceAction)]) {
+        [self.delegate didStartRecordingVoiceAction];
     }
 }
 
 - (void)holdDownButtonTouchUpOutside {
-    if ([self.delegate respondsToSelector:@selector(didCancelRecordingVoice)]) {
-        [self.delegate didCancelRecordingVoice];
+    if ([self.delegate respondsToSelector:@selector(didCancelRecordingVoiceAction)]) {
+        [self.delegate didCancelRecordingVoiceAction];
     }
 }
 
 - (void)holdDownButtonTouchUpInside {
-    if ([self.delegate respondsToSelector:@selector(didFinishRecoingVoice)]) {
-        [self.delegate didFinishRecoingVoice];
+    if ([self.delegate respondsToSelector:@selector(didFinishRecoingVoiceAction)]) {
+        [self.delegate didFinishRecoingVoiceAction];
     }
 }
 
@@ -365,8 +365,8 @@
 
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
     if ([text isEqualToString:@"\n"]) {
-        if ([self.delegate respondsToSelector:@selector(didSendMessageWithText:)]) {
-            [self.delegate didSendMessageWithText:textView.text];
+        if ([self.delegate respondsToSelector:@selector(didSendTextAction:)]) {
+            [self.delegate didSendTextAction:textView.text];
         }
         return NO;
     }

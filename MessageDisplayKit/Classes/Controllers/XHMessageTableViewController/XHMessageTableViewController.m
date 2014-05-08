@@ -139,8 +139,7 @@
         WEAKSELF
         _photographyHelper = [[XHPhotographyHelper alloc] initWithViewController:self didFinishTakeMediaCompledBlock:^(UIImage *image, NSDictionary *editingInfo) {
             void (^AddPhotoMessageBlock)(UIImage *photo) = ^(UIImage *photo) {
-                XHMessage *photoMessage = [[XHMessage alloc] initWithPhoto:photo thumbnailUrl:nil originPhotoUrl:nil sender:@"Jayson" timestamp:[NSDate date]];
-                [weakSelf addMessage:photoMessage];
+                [weakSelf didSendMessageWithPhoto:photo];
             };
             if (image) {
                 /*
@@ -171,8 +170,7 @@
                     
                     UIImage *thumbnailImage = thumbnailImageRef ? [[UIImage alloc] initWithCGImage:thumbnailImageRef] : nil;
                     
-                    XHMessage *videoMessage = [[XHMessage alloc] initWithVideoConverPhoto:thumbnailImage videoPath:videoPath videoUrl:nil sender:@"Jack" timestamp:[NSDate date]];
-                    [weakSelf addMessage:videoMessage];
+                    [weakSelf didSendMessageWithVideoConverPhoto:thumbnailImage videoPath:videoPath];
                 } else {
                     AddPhotoMessageBlock([editingInfo valueForKey:UIImagePickerControllerOriginalImage]);
                 }
@@ -591,6 +589,13 @@
 
 #pragma mark - XHMessage Send helper Method
 
+- (void)didSendMessageWithText:(NSString *)text {
+    DLog(@"send text : %@", text);
+    if ([self.delegate respondsToSelector:@selector(didSendText:fromSender:onDate:)]) {
+        [self.delegate didSendText:text fromSender:self.messageSender onDate:[NSDate date]];
+    }
+}
+
 - (void)didSendMessageWithPhoto:(UIImage *)photo {
     DLog(@"send photo : %@", photo);
     if ([self.delegate respondsToSelector:@selector(didSendPhoto:fromSender:onDate:)]) {
@@ -598,23 +603,32 @@
     }
 }
 
-- (void)didSendMessageWithVideo:(NSString *)videoPath {
-    DLog(@"send videoPath : %@", videoPath);
-    if ([self.delegate respondsToSelector:@selector(didSendVideo:fromSender:onDate:)]) {
-        [self.delegate didSendVideo:videoPath fromSender:self.messageSender onDate:[NSDate date]];
+- (void)didSendMessageWithVideoConverPhoto:(UIImage *)videoConverPhoto videoPath:(NSString *)videoPath  {
+    DLog(@"send videoPath : %@  videoConverPhoto : %@", videoPath, videoConverPhoto);
+    if ([self.delegate respondsToSelector:@selector(didSendVideoConverPhoto:videoPath:fromSender:onDate:)]) {
+        [self.delegate didSendVideoConverPhoto:videoConverPhoto videoPath:videoPath fromSender:self.messageSender onDate:[NSDate date]];
     }
 }
 
-- (void)didSendMessageWithvoice:(NSString *)voicePath {
+- (void)didSendMessageWithVoice:(NSString *)voicePath {
     DLog(@"send voicePath : %@", voicePath);
     if ([self.delegate respondsToSelector:@selector(didSendVoice:fromSender:onDate:)]) {
         [self.delegate didSendVoice:voicePath fromSender:self.messageSender onDate:[NSDate date]];
     }
 }
 
-- (void)didSendFaceMessageWithFacePath:(NSString *)facePath {
-    XHMessage *message = [[XHMessage alloc] initWithEmotionPath:facePath sender:@"Jayson" timestamp:[NSDate date]];
-    [self addMessage:message];
+- (void)didSendEmotionMessageWithEmotionPath:(NSString *)emotionPath {
+    DLog(@"send emotionPath : %@", emotionPath);
+    if ([self.delegate respondsToSelector:@selector(didSendEmotion:fromSender:onDate:)]) {
+        [self.delegate didSendEmotion:emotionPath fromSender:self.messageSender onDate:[NSDate date]];
+    }
+}
+
+- (void)didSendGeolocationsMessageWithGeolocaltions:(NSString *)geolcations {
+    DLog(@"send geolcations : %@", geolcations);
+    if ([self.delegate respondsToSelector:@selector(didSendGeoLocationsPhoto:geolocations:fromSender:onDate:)]) {
+        [self.delegate didSendGeoLocationsPhoto:[UIImage imageNamed:@"Fav_Cell_Loc"] geolocations:geolcations fromSender:self.messageSender onDate:[NSDate date]];
+    }
 }
 
 #pragma mark - Other Menu View Frame helper mehtod
@@ -702,7 +716,7 @@
 		self.previousTextViewContentHeight = [self getTextViewContentH:messageInputTextView];
 }
 
-- (void)didChangeSendVoiceMeesgae:(BOOL)changed {
+- (void)didChangeSendVoiceAction:(BOOL)changed {
     if (changed) {
         if (self.textViewInputViewType == XHTextViewTextInputType)
             return;
@@ -711,7 +725,7 @@
     }
 }
 
-- (void)didSendMessageWithText:(NSString *)text {
+- (void)didSendTextAction:(NSString *)text {
     DLog(@"text : %@", text);
     if ([self.delegate respondsToSelector:@selector(didSendText:fromSender:onDate:)]) {
         [self.delegate didSendText:text fromSender:self.messageSender onDate:[NSDate date]];
@@ -724,7 +738,7 @@
     [self layoutOtherMenuViewHiden:NO];
 }
 
-- (void)didSendFaceMessage:(BOOL)sendFace {
+- (void)didSendFaceAction:(BOOL)sendFace {
     if (sendFace) {
         self.textViewInputViewType = XHTextViewFaceInputType;
         [self layoutOtherMenuViewHiden:NO];
@@ -733,15 +747,15 @@
     }
 }
 
-- (void)didStartRecordingVoice {
+- (void)didStartRecordingVoiceAction {
     DLog(@"didStartRecordingVoice");
 }
 
-- (void)didCancelRecordingVoice {
+- (void)didCancelRecordingVoiceAction {
     DLog(@"didCancelRecordingVoice");
 }
 
-- (void)didFinishRecoingVoice {
+- (void)didFinishRecoingVoiceAction {
     DLog(@"didFinishRecoingVoice");
 }
 
@@ -758,7 +772,7 @@
         case XHBubbleMessageVoice:
             DLog(@"message : %@", message.voicePath);
             [messageTableViewCell.messageBubbleView.animationVoiceImageView startAnimating];
-            [messageTableViewCell.messageBubbleView.animationVoiceImageView performSelector:@selector(stopAnimating) withObject:nil afterDelay:10];
+            [messageTableViewCell.messageBubbleView.animationVoiceImageView performSelector:@selector(stopAnimating) withObject:nil afterDelay:3];
             break;
         case XHBubbleMessageFace:
             DLog(@"facePath : %@", message.emotionPath);
@@ -783,10 +797,6 @@
     
 }
 
-- (void)didSelectedOnMeesgaeTableViewCell:(XHMessageTableViewCell *)messageTableViewCell {
-    [self layoutOtherMenuViewHiden:YES];
-}
-
 #pragma mark - XHShareMenuView delegate
 
 - (void)didSelecteShareMenuItem:(XHShareMenuItem *)shareMenuItem atIndex:(NSInteger)index {
@@ -807,8 +817,10 @@
                 if (placemark) {
                     NSDictionary *addressDictionary = placemark.addressDictionary;
                     NSArray *formattedAddressLines = [addressDictionary valueForKey:@"FormattedAddressLines"];
-                    XHMessage *geolocationsMessage = [[XHMessage alloc] initWithLocalPositionPhoto:[UIImage imageNamed:@"Fav_Cell_Loc"] geolocations:[formattedAddressLines lastObject] sender:self.messageSender timestamp:[NSDate date]];
-                    [weakSelf addMessage:geolocationsMessage];
+                    NSString *geoLocations = [formattedAddressLines lastObject];
+                    if (geoLocations) {
+                        [weakSelf didSendGeolocationsMessageWithGeolocaltions:geoLocations];
+                    }
                 }
             }];
             break;
@@ -822,8 +834,7 @@
 
 - (void)didSelecteEmotion:(XHEmotion *)emotion atIndexPath:(NSIndexPath *)indexPath {
     if (emotion.emotionPath) {
-        XHMessage *emotionMessage = [[XHMessage alloc] initWithEmotionPath:emotion.emotionPath sender:@"Jayson" timestamp:[NSDate date]];
-        [self addMessage:emotionMessage];
+        [self didSendEmotionMessageWithEmotionPath:emotion.emotionPath];
     }
 }
 
