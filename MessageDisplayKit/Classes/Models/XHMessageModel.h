@@ -25,10 +25,12 @@
 - (NSString *)videoUrl;
 
 - (NSString *)voicePath;
+- (NSString *)voiceUrl;
+
 - (UIImage *)localPositionPhoto;
+- (NSString *)geolocations;
 
 - (NSString *)emotionPath;
-- (NSString *)voiceUrl;
 
 - (UIImage *)avator;
 - (NSString *)avatorUrl;

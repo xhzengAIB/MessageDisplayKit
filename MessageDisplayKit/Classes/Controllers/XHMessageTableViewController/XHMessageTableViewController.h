@@ -23,6 +23,7 @@
 
 // Helper
 #import "XHPhotographyHelper.h"
+#import "XHLocationHelper.h"
 
 // Categorys
 #import "UIScrollView+XHkeyboardControl.h"

@@ -52,6 +52,9 @@
 		744FBDC91915EE7400FB4A65 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 744FBDC71915EE7400FB4A65 /* Default@2x.png */; };
 		74585F38191B90CA00F5E8C8 /* Demo1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 74585F37191B90CA00F5E8C8 /* Demo1.gif */; };
 		74585F3B191B939800F5E8C8 /* MessageVideoPlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74585F3A191B939800F5E8C8 /* MessageVideoPlay@2x.png */; };
+		74585F3E191B999B00F5E8C8 /* XHLocationHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 74585F3C191B999B00F5E8C8 /* XHLocationHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		74585F3F191B999B00F5E8C8 /* XHLocationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 74585F3D191B999B00F5E8C8 /* XHLocationHelper.m */; };
+		74585F40191B999B00F5E8C8 /* XHLocationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 74585F3D191B999B00F5E8C8 /* XHLocationHelper.m */; };
 		746C881B1916B5D6007F9A5E /* face_HL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 746C88121916B5D6007F9A5E /* face_HL@2x.png */; };
 		746C881C1916B5D6007F9A5E /* face@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 746C88131916B5D6007F9A5E /* face@2x.png */; };
 		746C881D1916B5D6007F9A5E /* holdDownButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 746C88141916B5D6007F9A5E /* holdDownButton@2x.png */; };
@@ -240,6 +243,8 @@
 		744FBDC71915EE7400FB4A65 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		74585F37191B90CA00F5E8C8 /* Demo1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Demo1.gif; sourceTree = "<group>"; };
 		74585F3A191B939800F5E8C8 /* MessageVideoPlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MessageVideoPlay@2x.png"; sourceTree = "<group>"; };
+		74585F3C191B999B00F5E8C8 /* XHLocationHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLocationHelper.h; sourceTree = "<group>"; };
+		74585F3D191B999B00F5E8C8 /* XHLocationHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHLocationHelper.m; sourceTree = "<group>"; };
 		746C88121916B5D6007F9A5E /* face_HL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "face_HL@2x.png"; sourceTree = "<group>"; };
 		746C88131916B5D6007F9A5E /* face@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "face@2x.png"; sourceTree = "<group>"; };
 		746C88141916B5D6007F9A5E /* holdDownButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "holdDownButton@2x.png"; sourceTree = "<group>"; };
@@ -932,6 +937,8 @@
 				74D1C5C5190DFC1D003B1BCA /* XHFoundationCommon.m */,
 				740660B21914CA0000E1CE95 /* XHPhotographyHelper.h */,
 				740660B31914CA0000E1CE95 /* XHPhotographyHelper.m */,
+				74585F3C191B999B00F5E8C8 /* XHLocationHelper.h */,
+				74585F3D191B999B00F5E8C8 /* XHLocationHelper.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -987,6 +994,7 @@
 				746C895B1917F7B4007F9A5E /* XHMessageTableViewController.h in Headers */,
 				74180C14190F450400A35C82 /* XHMessage.h in Headers */,
 				740660A71913552800E1CE95 /* UIImage+XHAnimatedFaceGif.h in Headers */,
+				74585F3E191B999B00F5E8C8 /* XHLocationHelper.h in Headers */,
 				74180C10190F44F800A35C82 /* UIScrollView+XHkeyboardControl.h in Headers */,
 				74180C0B190F44EC00A35C82 /* XHMessageBubbleFactory.h in Headers */,
 				74180C0C190F44ED00A35C82 /* XHMacro.h in Headers */,
@@ -1252,6 +1260,7 @@
 				746C89311917F691007F9A5E /* XHBubblePhotoImageView.m in Sources */,
 				740660CF1914E1F400E1CE95 /* XHEmotionManager.m in Sources */,
 				740660A91913552800E1CE95 /* UIImage+XHAnimatedFaceGif.m in Sources */,
+				74585F40191B999B00F5E8C8 /* XHLocationHelper.m in Sources */,
 				746C89341917F691007F9A5E /* XHMessageBubbleView.m in Sources */,
 				746C89621917F7DE007F9A5E /* XHDisplayEmotionViewController.m in Sources */,
 				74180C00190F44A300A35C82 /* UIImage+XHRounded.m in Sources */,
@@ -1282,6 +1291,7 @@
 				74D1C5E9190E2BE6003B1BCA /* XHMessageVoiceFactory.m in Sources */,
 				7482459A1909F370008EC388 /* XHMessageAvatorFactory.m in Sources */,
 				740660B51914CA0000E1CE95 /* XHPhotographyHelper.m in Sources */,
+				74585F3F191B999B00F5E8C8 /* XHLocationHelper.m in Sources */,
 				746C893C1917F691007F9A5E /* XHMessageTableViewCell.m in Sources */,
 				746C89481917F691007F9A5E /* XHEmotionCollectionViewFlowLayout.m in Sources */,
 				7482456B19090C04008EC388 /* XHMessage.m in Sources */,

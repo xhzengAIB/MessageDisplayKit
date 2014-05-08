@@ -58,6 +58,8 @@
 
 @property (nonatomic, weak, readonly) UIImageView *videoPlayImageView;
 
+@property (nonatomic, weak, readonly) UILabel *geolocationsLabel;
+
 /**
  *  设置文本消息的字体
  */

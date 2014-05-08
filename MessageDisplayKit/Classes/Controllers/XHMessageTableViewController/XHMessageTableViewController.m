@@ -34,6 +34,8 @@
 
 @property (nonatomic, strong) XHPhotographyHelper *photographyHelper;
 
+@property (nonatomic, strong) XHLocationHelper *locationHelper;
+
 @end
 
 @implementation XHMessageTableViewController
@@ -178,6 +180,13 @@
         }];
     }
     return _photographyHelper;
+}
+
+- (XHLocationHelper *)locationHelper {
+    if (!_locationHelper) {
+        _locationHelper = [[XHLocationHelper alloc] init];
+    }
+    return _locationHelper;
 }
 
 #pragma mark - Messages view controller
@@ -789,6 +798,19 @@
         }
         case 1: {
             [self.photographyHelper showOnPickerViewControllerSourceType:UIImagePickerControllerSourceTypeCamera];
+            break;
+        }
+        case 2: {
+            WEAKSELF
+            [self.locationHelper getCurrentGeolocationsCompled:^(NSArray *placemarks) {
+                CLPlacemark *placemark = [placemarks lastObject];
+                if (placemark) {
+                    NSDictionary *addressDictionary = placemark.addressDictionary;
+                    NSArray *formattedAddressLines = [addressDictionary valueForKey:@"FormattedAddressLines"];
+                    XHMessage *geolocationsMessage = [[XHMessage alloc] initWithLocalPositionPhoto:[UIImage imageNamed:@"Fav_Cell_Loc"] geolocations:[formattedAddressLines lastObject] sender:self.messageSender timestamp:[NSDate date]];
+                    [weakSelf addMessage:geolocationsMessage];
+                }
+            }];
             break;
         }
         default:

@@ -23,7 +23,7 @@
         NSMutableArray *messages = [[NSMutableArray alloc] init];
         
         for (NSInteger i = 0; i < 10; i ++) {
-            XHMessage *localPositionMessage = [[XHMessage alloc] initWithLocalPositionPhoto:[UIImage imageNamed:@"Fav_Cell_Loc"] sender:@"Jack" timestamp:[NSDate date]];
+            XHMessage *localPositionMessage = [[XHMessage alloc] initWithLocalPositionPhoto:[UIImage imageNamed:@"Fav_Cell_Loc"] geolocations:@"中国广东省广州市天河区羊城创意园" sender:@"Jack" timestamp:[NSDate date]];
             localPositionMessage.bubbleMessageType = (i % 2) ? XHBubbleMessageTypeSending : XHBubbleMessageTypeReceiving;
             [messages addObject:localPositionMessage];
             

@@ -27,6 +27,7 @@
 @property (nonatomic, copy) NSString *emotionPath;
 
 @property (nonatomic, strong) UIImage *localPositionPhoto;
+@property (nonatomic, copy) NSString *geolocations;
 
 @property (nonatomic, strong) UIImage *avator;
 @property (nonatomic, copy) NSString *avatorUrl;
@@ -109,6 +110,7 @@
                              timestamp:(NSDate *)timestamp;
 
 - (instancetype)initWithLocalPositionPhoto:(UIImage *)localPositionPhoto
+                              geolocations:(NSString *)geolocations
                           sender:(NSString *)sender
                             timestamp:(NSDate *)timestamp;
 

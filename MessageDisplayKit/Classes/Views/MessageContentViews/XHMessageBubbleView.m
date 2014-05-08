@@ -28,6 +28,8 @@
 
 @property (nonatomic, weak, readwrite) UIImageView *videoPlayImageView;
 
+@property (nonatomic, weak, readwrite) UILabel *geolocationsLabel;
+
 @property (nonatomic, strong, readwrite) id <XHMessageModel> message;
 
 @end
@@ -200,6 +202,8 @@
             
             _videoPlayImageView.hidden = (currentType != XHBubbleMessageVideo);
             
+            _geolocationsLabel.hidden = (currentType != XHBubbleMessageLocalPosition);
+            
             // 那其他的控件都必须隐藏
             _messageDisplayTextView.hidden = YES;
             _bubbleImageView.hidden = YES;
@@ -230,6 +234,8 @@
             break;
         case XHBubbleMessageLocalPosition:
             [_bubblePhotoImageView configureMessagePhoto:message.localPositionPhoto thumbnailUrl:nil originPhotoUrl:nil onBubbleMessageType:self.message.bubbleMessageType];
+            
+            _geolocationsLabel.text = message.geolocations;
             break;
         default:
             break;
@@ -291,6 +297,17 @@
                 [bubblePhotoImageView addSubview:videoPlayImageView];
                 _videoPlayImageView = videoPlayImageView;
             }
+            
+            if (!_geolocationsLabel) {
+                UILabel *geolocationsLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+                geolocationsLabel.numberOfLines = 0;
+                geolocationsLabel.lineBreakMode = NSLineBreakByTruncatingTail;
+                geolocationsLabel.textColor = [UIColor whiteColor];
+                geolocationsLabel.backgroundColor = [UIColor clearColor];
+                geolocationsLabel.font = [UIFont systemFontOfSize:12];
+                [bubblePhotoImageView addSubview:geolocationsLabel];
+                _geolocationsLabel = geolocationsLabel;
+            }
         }
     }
     return self;
@@ -342,6 +359,10 @@
             self.bubblePhotoImageView.frame = photoImageViewFrame;
             
             self.videoPlayImageView.center = CGPointMake(CGRectGetWidth(photoImageViewFrame) / 2.0, CGRectGetHeight(photoImageViewFrame) / 2.0);
+            
+            CGRect geolocationsLabelFrame = CGRectMake(11, CGRectGetHeight(photoImageViewFrame) - 47, CGRectGetWidth(photoImageViewFrame) - 20, 40);
+            self.geolocationsLabel.frame = geolocationsLabelFrame;
+            
             break;
         }
         default:

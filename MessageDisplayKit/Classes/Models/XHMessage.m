@@ -128,11 +128,13 @@
 }
 
 - (instancetype)initWithLocalPositionPhoto:(UIImage *)localPositionPhoto
+                              geolocations:(NSString *)geolocations
                                     sender:(NSString *)sender
-                                      timestamp:(NSDate *)timestamp {
+                                 timestamp:(NSDate *)timestamp {
     self = [super init];
     if (self) {
         self.localPositionPhoto = localPositionPhoto;
+        self.geolocations = geolocations;
         
         self.sender = sender;
         self.timestamp = timestamp;
@@ -255,6 +257,7 @@
                                                                   timestamp:[self.timestamp copy]];
         case XHBubbleMessageLocalPosition:
             return [[[self class] allocWithZone:zone] initWithLocalPositionPhoto:[self.localPositionPhoto copy]
+                                                                    geolocations:self.geolocations
                                                                           sender:[self.sender copy]
                                                                             timestamp:[self.timestamp copy]];
         default:
