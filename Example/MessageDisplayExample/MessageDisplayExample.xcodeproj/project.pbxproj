@@ -56,11 +56,7 @@
 		74585F45191C8B5700F5E8C8 /* UIView+XHNetworkImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 74585F43191C8B5700F5E8C8 /* UIView+XHNetworkImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74585F46191C8B5700F5E8C8 /* UIView+XHNetworkImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 74585F44191C8B5700F5E8C8 /* UIView+XHNetworkImage.m */; };
 		74585F47191C8B5700F5E8C8 /* UIView+XHNetworkImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 74585F44191C8B5700F5E8C8 /* UIView+XHNetworkImage.m */; };
-		74585F53191C96E000F5E8C8 /* placeholderImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74585F52191C96E000F5E8C8 /* placeholderImage@2x.png */; };
-		74585F55191C96F000F5E8C8 /* avator@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74585F54191C96F000F5E8C8 /* avator@2x.png */; };
-		74585F58191C989F00F5E8C8 /* Demo0.gif in Resources */ = {isa = PBXBuildFile; fileRef = 74585F56191C989F00F5E8C8 /* Demo0.gif */; };
-		74585F59191C989F00F5E8C8 /* Demo1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 74585F57191C989F00F5E8C8 /* Demo1.gif */; };
-		74585FFD191D10CC00F5E8C8 /* XHAnnotation.h in Headers */ = {isa = PBXBuildFile; fileRef = 74585FFB191D10CC00F5E8C8 /* XHAnnotation.h */; };
+		74585FFD191D10CC00F5E8C8 /* XHAnnotation.h in Headers */ = {isa = PBXBuildFile; fileRef = 74585FFB191D10CC00F5E8C8 /* XHAnnotation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74585FFE191D10CC00F5E8C8 /* XHAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 74585FFC191D10CC00F5E8C8 /* XHAnnotation.m */; };
 		74585FFF191D10CC00F5E8C8 /* XHAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 74585FFC191D10CC00F5E8C8 /* XHAnnotation.m */; };
 		746C881B1916B5D6007F9A5E /* face_HL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 746C88121916B5D6007F9A5E /* face_HL@2x.png */; };
@@ -164,9 +160,6 @@
 		746C89651917F7EA007F9A5E /* XHDisplayLocationViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 746C89631917F7EA007F9A5E /* XHDisplayLocationViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		746C89661917F7EA007F9A5E /* XHDisplayLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C89641917F7EA007F9A5E /* XHDisplayLocationViewController.m */; };
 		746C89671917F7EA007F9A5E /* XHDisplayLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C89641917F7EA007F9A5E /* XHDisplayLocationViewController.m */; };
-		746C896A1917F7F5007F9A5E /* XHDisplayPhotoViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 746C89681917F7F5007F9A5E /* XHDisplayPhotoViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		746C896B1917F7F5007F9A5E /* XHDisplayPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C89691917F7F5007F9A5E /* XHDisplayPhotoViewController.m */; };
-		746C896C1917F7F5007F9A5E /* XHDisplayPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C89691917F7F5007F9A5E /* XHDisplayPhotoViewController.m */; };
 		746C896F1917F7FE007F9A5E /* XHDisplayTextViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 746C896D1917F7FE007F9A5E /* XHDisplayTextViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		746C89701917F7FE007F9A5E /* XHDisplayTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C896E1917F7FE007F9A5E /* XHDisplayTextViewController.m */; };
 		746C89711917F7FE007F9A5E /* XHDisplayTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C896E1917F7FE007F9A5E /* XHDisplayTextViewController.m */; };
@@ -182,7 +175,6 @@
 		746C89871917F8EA007F9A5E /* XHBaseTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 746C89851917F8EA007F9A5E /* XHBaseTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		746C89881917F8EA007F9A5E /* XHBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C89861917F8EA007F9A5E /* XHBaseTableViewController.m */; };
 		746C89891917F8EA007F9A5E /* XHBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C89861917F8EA007F9A5E /* XHBaseTableViewController.m */; };
-		7475BA33190D4B7B001DD9B1 /* TableViewBackgroundImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7475BA32190D4B7B001DD9B1 /* TableViewBackgroundImage@2x.png */; };
 		748245051908C730008EC388 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748245041908C730008EC388 /* Foundation.framework */; };
 		748245071908C730008EC388 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748245061908C730008EC388 /* CoreGraphics.framework */; };
 		748245091908C730008EC388 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748245081908C730008EC388 /* UIKit.framework */; };
@@ -199,6 +191,18 @@
 		7482458F19092170008EC388 /* NSString+MessageInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7482458E19092170008EC388 /* NSString+MessageInputView.m */; };
 		748245971909F33F008EC388 /* XHMessageBubbleFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 748245961909F33F008EC388 /* XHMessageBubbleFactory.m */; };
 		7482459A1909F370008EC388 /* XHMessageAvatorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 748245991909F370008EC388 /* XHMessageAvatorFactory.m */; };
+		74901989191D2D030049AFF9 /* XHDisplayMediaViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 74901987191D2D030049AFF9 /* XHDisplayMediaViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7490198A191D2D030049AFF9 /* XHDisplayMediaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74901988191D2D030049AFF9 /* XHDisplayMediaViewController.m */; };
+		7490198B191D2D030049AFF9 /* XHDisplayMediaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74901988191D2D030049AFF9 /* XHDisplayMediaViewController.m */; };
+		749019A5191D30190049AFF9 /* avator@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7490199F191D30190049AFF9 /* avator@2x.png */; };
+		749019A7191D30190049AFF9 /* Demo0.gif in Resources */ = {isa = PBXBuildFile; fileRef = 749019A0191D30190049AFF9 /* Demo0.gif */; };
+		749019A9191D30190049AFF9 /* Demo1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 749019A1191D30190049AFF9 /* Demo1.gif */; };
+		749019AB191D30190049AFF9 /* IMG_1555.MOV in Resources */ = {isa = PBXBuildFile; fileRef = 749019A2191D30190049AFF9 /* IMG_1555.MOV */; };
+		749019AD191D30190049AFF9 /* placeholderImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 749019A3191D30190049AFF9 /* placeholderImage@2x.png */; };
+		749019AF191D30190049AFF9 /* TableViewBackgroundImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 749019A4191D30190049AFF9 /* TableViewBackgroundImage@2x.png */; };
+		749019B4191D315A0049AFF9 /* XHMessageVideoConverPhotoFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 749019B2191D315A0049AFF9 /* XHMessageVideoConverPhotoFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		749019B5191D315A0049AFF9 /* XHMessageVideoConverPhotoFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 749019B3191D315A0049AFF9 /* XHMessageVideoConverPhotoFactory.m */; };
+		749019B6191D315A0049AFF9 /* XHMessageVideoConverPhotoFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 749019B3191D315A0049AFF9 /* XHMessageVideoConverPhotoFactory.m */; };
 		74BBB020190B8EAB00093577 /* MessageDisplayKitString.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74BBB022190B8EAB00093577 /* MessageDisplayKitString.strings */; };
 		74BBB02C190BE8C400093577 /* XHMessageRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74BBB02B190BE8C400093577 /* XHMessageRootViewController.m */; };
 		74BBB032190C28CD00093577 /* XHDemoWeChatMessageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74BBB031190C28CD00093577 /* XHDemoWeChatMessageTableViewController.m */; };
@@ -251,10 +255,6 @@
 		74585F3D191B999B00F5E8C8 /* XHLocationHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHLocationHelper.m; sourceTree = "<group>"; };
 		74585F43191C8B5700F5E8C8 /* UIView+XHNetworkImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XHNetworkImage.h"; sourceTree = "<group>"; };
 		74585F44191C8B5700F5E8C8 /* UIView+XHNetworkImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XHNetworkImage.m"; sourceTree = "<group>"; };
-		74585F52191C96E000F5E8C8 /* placeholderImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "placeholderImage@2x.png"; sourceTree = "<group>"; };
-		74585F54191C96F000F5E8C8 /* avator@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avator@2x.png"; sourceTree = "<group>"; };
-		74585F56191C989F00F5E8C8 /* Demo0.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Demo0.gif; sourceTree = "<group>"; };
-		74585F57191C989F00F5E8C8 /* Demo1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Demo1.gif; sourceTree = "<group>"; };
 		74585FFB191D10CC00F5E8C8 /* XHAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHAnnotation.h; sourceTree = "<group>"; };
 		74585FFC191D10CC00F5E8C8 /* XHAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHAnnotation.m; sourceTree = "<group>"; };
 		746C88121916B5D6007F9A5E /* face_HL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "face_HL@2x.png"; sourceTree = "<group>"; };
@@ -343,8 +343,6 @@
 		746C895F1917F7DE007F9A5E /* XHDisplayEmotionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHDisplayEmotionViewController.m; sourceTree = "<group>"; };
 		746C89631917F7EA007F9A5E /* XHDisplayLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHDisplayLocationViewController.h; sourceTree = "<group>"; };
 		746C89641917F7EA007F9A5E /* XHDisplayLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHDisplayLocationViewController.m; sourceTree = "<group>"; };
-		746C89681917F7F5007F9A5E /* XHDisplayPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHDisplayPhotoViewController.h; sourceTree = "<group>"; };
-		746C89691917F7F5007F9A5E /* XHDisplayPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHDisplayPhotoViewController.m; sourceTree = "<group>"; };
 		746C896D1917F7FE007F9A5E /* XHDisplayTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHDisplayTextViewController.h; sourceTree = "<group>"; };
 		746C896E1917F7FE007F9A5E /* XHDisplayTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHDisplayTextViewController.m; sourceTree = "<group>"; };
 		746C89761917F8B2007F9A5E /* XHBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHBaseNavigationController.h; sourceTree = "<group>"; };
@@ -355,7 +353,6 @@
 		746C89811917F8D6007F9A5E /* XHBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHBaseViewController.m; sourceTree = "<group>"; };
 		746C89851917F8EA007F9A5E /* XHBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHBaseTableViewController.h; sourceTree = "<group>"; };
 		746C89861917F8EA007F9A5E /* XHBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHBaseTableViewController.m; sourceTree = "<group>"; };
-		7475BA32190D4B7B001DD9B1 /* TableViewBackgroundImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TableViewBackgroundImage@2x.png"; sourceTree = "<group>"; };
 		748245011908C730008EC388 /* MessageDisplayExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessageDisplayExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		748245041908C730008EC388 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		748245061908C730008EC388 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -383,6 +380,16 @@
 		748245961909F33F008EC388 /* XHMessageBubbleFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = XHMessageBubbleFactory.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		748245981909F370008EC388 /* XHMessageAvatorFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMessageAvatorFactory.h; sourceTree = "<group>"; };
 		748245991909F370008EC388 /* XHMessageAvatorFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMessageAvatorFactory.m; sourceTree = "<group>"; };
+		74901987191D2D030049AFF9 /* XHDisplayMediaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHDisplayMediaViewController.h; sourceTree = "<group>"; };
+		74901988191D2D030049AFF9 /* XHDisplayMediaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHDisplayMediaViewController.m; sourceTree = "<group>"; };
+		7490199F191D30190049AFF9 /* avator@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avator@2x.png"; sourceTree = "<group>"; };
+		749019A0191D30190049AFF9 /* Demo0.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Demo0.gif; sourceTree = "<group>"; };
+		749019A1191D30190049AFF9 /* Demo1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Demo1.gif; sourceTree = "<group>"; };
+		749019A2191D30190049AFF9 /* IMG_1555.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = IMG_1555.MOV; sourceTree = "<group>"; };
+		749019A3191D30190049AFF9 /* placeholderImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "placeholderImage@2x.png"; sourceTree = "<group>"; };
+		749019A4191D30190049AFF9 /* TableViewBackgroundImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TableViewBackgroundImage@2x.png"; sourceTree = "<group>"; };
+		749019B2191D315A0049AFF9 /* XHMessageVideoConverPhotoFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMessageVideoConverPhotoFactory.h; sourceTree = "<group>"; };
+		749019B3191D315A0049AFF9 /* XHMessageVideoConverPhotoFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMessageVideoConverPhotoFactory.m; sourceTree = "<group>"; };
 		74BBB01E190B8E9500093577 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		74BBB01F190B8E9500093577 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		74BBB021190B8EAB00093577 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MessageDisplayKitString.strings; sourceTree = "<group>"; };
@@ -604,18 +611,6 @@
 			name = ToolButtons;
 			sourceTree = "<group>";
 		};
-		746C87FF1916B58F007F9A5E /* DemoImages */ = {
-			isa = PBXGroup;
-			children = (
-				74585F52191C96E000F5E8C8 /* placeholderImage@2x.png */,
-				74585F54191C96F000F5E8C8 /* avator@2x.png */,
-				74585F56191C989F00F5E8C8 /* Demo0.gif */,
-				74585F57191C989F00F5E8C8 /* Demo1.gif */,
-				7475BA32190D4B7B001DD9B1 /* TableViewBackgroundImage@2x.png */,
-			);
-			name = DemoImages;
-			sourceTree = "<group>";
-		};
 		746C88601916B625007F9A5E /* Section0 */ = {
 			isa = PBXGroup;
 			children = (
@@ -702,8 +697,8 @@
 				746C89741917F89A007F9A5E /* XHBaseTableViewController */,
 				746C89751917F89A007F9A5E /* XHBaseViewController */,
 				746C89541917F7B4007F9A5E /* XHDisplayEmotionViewController */,
+				74901986191D2D030049AFF9 /* XHDisplayMediaViewController */,
 				746C89551917F7B4007F9A5E /* XHDisplayLocationViewController */,
-				746C89561917F7B4007F9A5E /* XHDisplayPhotoViewController */,
 				746C89571917F7B4007F9A5E /* XHDisplayTextViewController */,
 				746C89581917F7B4007F9A5E /* XHMessageTableViewController */,
 			);
@@ -726,15 +721,6 @@
 				746C89641917F7EA007F9A5E /* XHDisplayLocationViewController.m */,
 			);
 			path = XHDisplayLocationViewController;
-			sourceTree = "<group>";
-		};
-		746C89561917F7B4007F9A5E /* XHDisplayPhotoViewController */ = {
-			isa = PBXGroup;
-			children = (
-				746C89681917F7F5007F9A5E /* XHDisplayPhotoViewController.h */,
-				746C89691917F7F5007F9A5E /* XHDisplayPhotoViewController.m */,
-			);
-			path = XHDisplayPhotoViewController;
 			sourceTree = "<group>";
 		};
 		746C89571917F7B4007F9A5E /* XHDisplayTextViewController */ = {
@@ -844,6 +830,7 @@
 		7482450B1908C730008EC388 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7490199E191D30190049AFF9 /* ExampleResources */,
 				744FBDC61915EE7400FB4A65 /* Default-568h@2x.png */,
 				744FBDC71915EE7400FB4A65 /* Default@2x.png */,
 				7482450C1908C730008EC388 /* MessageDisplayExample-Info.plist */,
@@ -947,6 +934,8 @@
 				748245991909F370008EC388 /* XHMessageAvatorFactory.m */,
 				74D1C5E7190E2BE6003B1BCA /* XHMessageVoiceFactory.h */,
 				74D1C5E8190E2BE6003B1BCA /* XHMessageVoiceFactory.m */,
+				749019B2191D315A0049AFF9 /* XHMessageVideoConverPhotoFactory.h */,
+				749019B3191D315A0049AFF9 /* XHMessageVideoConverPhotoFactory.m */,
 				74D1C5C4190DFC1D003B1BCA /* XHFoundationCommon.h */,
 				74D1C5C5190DFC1D003B1BCA /* XHFoundationCommon.m */,
 				740660B21914CA0000E1CE95 /* XHPhotographyHelper.h */,
@@ -957,10 +946,31 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		74901986191D2D030049AFF9 /* XHDisplayMediaViewController */ = {
+			isa = PBXGroup;
+			children = (
+				74901987191D2D030049AFF9 /* XHDisplayMediaViewController.h */,
+				74901988191D2D030049AFF9 /* XHDisplayMediaViewController.m */,
+			);
+			path = XHDisplayMediaViewController;
+			sourceTree = "<group>";
+		};
+		7490199E191D30190049AFF9 /* ExampleResources */ = {
+			isa = PBXGroup;
+			children = (
+				7490199F191D30190049AFF9 /* avator@2x.png */,
+				749019A0191D30190049AFF9 /* Demo0.gif */,
+				749019A1191D30190049AFF9 /* Demo1.gif */,
+				749019A2191D30190049AFF9 /* IMG_1555.MOV */,
+				749019A3191D30190049AFF9 /* placeholderImage@2x.png */,
+				749019A4191D30190049AFF9 /* TableViewBackgroundImage@2x.png */,
+			);
+			path = ExampleResources;
+			sourceTree = "<group>";
+		};
 		74FAB0BA190A92CC005623D0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				746C87FF1916B58F007F9A5E /* DemoImages */,
 				746C87FC1916B57D007F9A5E /* InputViewImages */,
 				746C87F41916B511007F9A5E /* BubbleImages */,
 				74BBB022190B8EAB00093577 /* MessageDisplayKitString.strings */,
@@ -990,7 +1000,6 @@
 				746C89381917F691007F9A5E /* XHMessageTableView.h in Headers */,
 				746C89441917F691007F9A5E /* XHEmotionCollectionViewCell.h in Headers */,
 				746C894D1917F691007F9A5E /* XHEmotionSectionBar.h in Headers */,
-				74585FFD191D10CC00F5E8C8 /* XHAnnotation.h in Headers */,
 				746C894A1917F691007F9A5E /* XHEmotionManagerView.h in Headers */,
 				746C89411917F691007F9A5E /* XHMessageTextView.h in Headers */,
 				746C893B1917F691007F9A5E /* XHMessageTableViewCell.h in Headers */,
@@ -1004,13 +1013,15 @@
 				746C897D1917F8C5007F9A5E /* XHBaseTabBarController.h in Headers */,
 				746C89781917F8B2007F9A5E /* XHBaseNavigationController.h in Headers */,
 				746C89601917F7DE007F9A5E /* XHDisplayEmotionViewController.h in Headers */,
-				746C896A1917F7F5007F9A5E /* XHDisplayPhotoViewController.h in Headers */,
 				740660BE1914D65600E1CE95 /* XHEmotion.h in Headers */,
 				746C895B1917F7B4007F9A5E /* XHMessageTableViewController.h in Headers */,
 				74180C14190F450400A35C82 /* XHMessage.h in Headers */,
 				740660A71913552800E1CE95 /* UIImage+XHAnimatedFaceGif.h in Headers */,
 				74585F3E191B999B00F5E8C8 /* XHLocationHelper.h in Headers */,
+				74901989191D2D030049AFF9 /* XHDisplayMediaViewController.h in Headers */,
+				74585FFD191D10CC00F5E8C8 /* XHAnnotation.h in Headers */,
 				74585F45191C8B5700F5E8C8 /* UIView+XHNetworkImage.h in Headers */,
+				749019B4191D315A0049AFF9 /* XHMessageVideoConverPhotoFactory.h in Headers */,
 				74180C10190F44F800A35C82 /* UIScrollView+XHkeyboardControl.h in Headers */,
 				74180C0B190F44EC00A35C82 /* XHMessageBubbleFactory.h in Headers */,
 				74180C0C190F44ED00A35C82 /* XHMacro.h in Headers */,
@@ -1154,10 +1165,7 @@
 			files = (
 				74585F3B191B939800F5E8C8 /* MessageVideoPlay@2x.png in Resources */,
 				746C88431916B607007F9A5E /* ReceiverVoiceNodePlaying000@2x.png in Resources */,
-				74585F55191C96F000F5E8C8 /* avator@2x.png in Resources */,
 				746C885C1916B612007F9A5E /* sharemore_videovoip@2x.png in Resources */,
-				74585F53191C96E000F5E8C8 /* placeholderImage@2x.png in Resources */,
-				74585F59191C989F00F5E8C8 /* Demo1.gif in Resources */,
 				746C882B1916B5EE007F9A5E /* input-bar-background@2x.png in Resources */,
 				746C88711916B62D007F9A5E /* section0_emotion0@2x.png in Resources */,
 				746C88581916B612007F9A5E /* sharemore_myfav@2x.png in Resources */,
@@ -1166,6 +1174,7 @@
 				746C881F1916B5D6007F9A5E /* keyborad@2x.png in Resources */,
 				746C882C1916B5EE007F9A5E /* input-bar-flat.png in Resources */,
 				746C887C1916B62D007F9A5E /* section0_emotion11@2x.png in Resources */,
+				749019A5191D30190049AFF9 /* avator@2x.png in Resources */,
 				746C88771916B62D007F9A5E /* section0_emotion6@2x.png in Resources */,
 				7482450F1908C730008EC388 /* InfoPlist.strings in Resources */,
 				746C88441916B607007F9A5E /* ReceiverVoiceNodePlaying001@2x.png in Resources */,
@@ -1174,6 +1183,7 @@
 				746C887E1916B62D007F9A5E /* section0_emotion13@2x.png in Resources */,
 				746C88211916B5D6007F9A5E /* multiMedia@2x.png in Resources */,
 				746C88221916B5D6007F9A5E /* voice_HL@2x.png in Resources */,
+				749019AD191D30190049AFF9 /* placeholderImage@2x.png in Resources */,
 				746C882E1916B5EE007F9A5E /* input-field-cover.png in Resources */,
 				746C88341916B5FE007F9A5E /* weChatBubble_Receiving_Cavern@2x.png in Resources */,
 				746C887F1916B62D007F9A5E /* section0_emotion14@2x.png in Resources */,
@@ -1186,10 +1196,11 @@
 				746C88481916B607007F9A5E /* SenderVoiceNodePlaying000@2x.png in Resources */,
 				746C881C1916B5D6007F9A5E /* face@2x.png in Resources */,
 				746C887B1916B62D007F9A5E /* section0_emotion10@2x.png in Resources */,
+				749019A7191D30190049AFF9 /* Demo0.gif in Resources */,
 				746C88361916B5FE007F9A5E /* weChatBubble_Sending_Cavern@2x.png in Resources */,
 				746C884B1916B607007F9A5E /* SenderVoiceNodePlaying003@2x.png in Resources */,
+				749019A9191D30190049AFF9 /* Demo1.gif in Resources */,
 				746C88781916B62D007F9A5E /* section0_emotion7@2x.png in Resources */,
-				7475BA33190D4B7B001DD9B1 /* TableViewBackgroundImage@2x.png in Resources */,
 				746C88801916B62D007F9A5E /* section0_emotion15@2x.png in Resources */,
 				746C88461916B607007F9A5E /* ReceiverVoiceNodePlaying003@2x.png in Resources */,
 				744FBDC81915EE7400FB4A65 /* Default-568h@2x.png in Resources */,
@@ -1200,13 +1211,14 @@
 				746C885A1916B612007F9A5E /* sharemore_pic@2x.png in Resources */,
 				746C885F1916B612007F9A5E /* sharemore_wxtalk@2x.png in Resources */,
 				746C88201916B5D6007F9A5E /* multiMedia_HL@2x.png in Resources */,
-				74585F58191C989F00F5E8C8 /* Demo0.gif in Resources */,
 				746C882A1916B5EE007F9A5E /* input-bar-background.png in Resources */,
 				746C88761916B62D007F9A5E /* section0_emotion5@2x.png in Resources */,
 				746C885E1916B612007F9A5E /* sharemore_voipvoice@2x.png in Resources */,
+				749019AF191D30190049AFF9 /* TableViewBackgroundImage@2x.png in Resources */,
 				746C881B1916B5D6007F9A5E /* face_HL@2x.png in Resources */,
 				746C88591916B612007F9A5E /* sharemore_openapi@2x.png in Resources */,
 				746C88791916B62D007F9A5E /* section0_emotion8@2x.png in Resources */,
+				749019AB191D30190049AFF9 /* IMG_1555.MOV in Resources */,
 				746C881D1916B5D6007F9A5E /* holdDownButton@2x.png in Resources */,
 				746C885D1916B612007F9A5E /* sharemore_voiceinput@2x.png in Resources */,
 				746C88231916B5D6007F9A5E /* voice@2x.png in Resources */,
@@ -1261,6 +1273,7 @@
 				74180BFD190F449400A35C82 /* XHFoundationCommon.m in Sources */,
 				746C893D1917F691007F9A5E /* XHMessageTableViewCell.m in Sources */,
 				746C89461917F691007F9A5E /* XHEmotionCollectionViewCell.m in Sources */,
+				7490198B191D2D030049AFF9 /* XHDisplayMediaViewController.m in Sources */,
 				746C89671917F7EA007F9A5E /* XHDisplayLocationViewController.m in Sources */,
 				746C89371917F691007F9A5E /* XHMessageDisplayTextView.m in Sources */,
 				746C89891917F8EA007F9A5E /* XHBaseTableViewController.m in Sources */,
@@ -1272,6 +1285,7 @@
 				746C89521917F691007F9A5E /* XHShareMenuView.m in Sources */,
 				74180BFE190F44A000A35C82 /* UIScrollView+XHkeyboardControl.m in Sources */,
 				746C893A1917F691007F9A5E /* XHMessageTableView.m in Sources */,
+				749019B6191D315A0049AFF9 /* XHMessageVideoConverPhotoFactory.m in Sources */,
 				74180BFF190F44A200A35C82 /* NSString+MessageInputView.m in Sources */,
 				740660C01914D65600E1CE95 /* XHEmotion.m in Sources */,
 				74180C01190F44A600A35C82 /* XHMessage.m in Sources */,
@@ -1287,7 +1301,6 @@
 				74180BFB190F448A00A35C82 /* XHMessageAvatorFactory.m in Sources */,
 				746C895D1917F7B4007F9A5E /* XHMessageTableViewController.m in Sources */,
 				746C89401917F691007F9A5E /* XHMessageInputView.m in Sources */,
-				746C896C1917F7F5007F9A5E /* XHDisplayPhotoViewController.m in Sources */,
 				746C897F1917F8C5007F9A5E /* XHBaseTabBarController.m in Sources */,
 				746C89491917F691007F9A5E /* XHEmotionCollectionViewFlowLayout.m in Sources */,
 			);
@@ -1315,10 +1328,12 @@
 				7482456B19090C04008EC388 /* XHMessage.m in Sources */,
 				7482458F19092170008EC388 /* NSString+MessageInputView.m in Sources */,
 				746C893F1917F691007F9A5E /* XHMessageInputView.m in Sources */,
+				749019B5191D315A0049AFF9 /* XHMessageVideoConverPhotoFactory.m in Sources */,
 				746C89301917F691007F9A5E /* XHBubblePhotoImageView.m in Sources */,
 				746C89881917F8EA007F9A5E /* XHBaseTableViewController.m in Sources */,
 				746C897E1917F8C5007F9A5E /* XHBaseTabBarController.m in Sources */,
 				746C89611917F7DE007F9A5E /* XHDisplayEmotionViewController.m in Sources */,
+				7490198A191D2D030049AFF9 /* XHDisplayMediaViewController.m in Sources */,
 				74D1C5C6190DFC1D003B1BCA /* XHFoundationCommon.m in Sources */,
 				746C89701917F7FE007F9A5E /* XHDisplayTextViewController.m in Sources */,
 				748245151908C730008EC388 /* AppDelegate.m in Sources */,
@@ -1340,7 +1355,6 @@
 				746C894E1917F691007F9A5E /* XHEmotionSectionBar.m in Sources */,
 				746C89831917F8D6007F9A5E /* XHBaseViewController.m in Sources */,
 				746C89451917F691007F9A5E /* XHEmotionCollectionViewCell.m in Sources */,
-				746C896B1917F7F5007F9A5E /* XHDisplayPhotoViewController.m in Sources */,
 				748245111908C730008EC388 /* main.m in Sources */,
 				7482455C190902DA008EC388 /* UIScrollView+XHkeyboardControl.m in Sources */,
 				746C894B1917F691007F9A5E /* XHEmotionManagerView.m in Sources */,

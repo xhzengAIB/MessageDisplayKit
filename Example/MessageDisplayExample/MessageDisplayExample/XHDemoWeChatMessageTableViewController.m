@@ -9,7 +9,7 @@
 #import "XHDemoWeChatMessageTableViewController.h"
 
 #import "XHDisplayTextViewController.h"
-#import "XHDisplayPhotoViewController.h"
+#import "XHDisplayMediaViewController.h"
 #import "XHDisplayLocationViewController.h"
 
 @interface XHDemoWeChatMessageTableViewController ()
@@ -39,7 +39,8 @@
 }
 
 - (XHMessage *)getVideoMessageWithBubbleMessageType:(XHBubbleMessageType)bubbleMessageType {
-    XHMessage *videoMessage = [[XHMessage alloc] initWithVideoConverPhoto:[UIImage imageNamed:@"placeholderImage"] videoPath:@"http://www.pailixiu.com/jack/networkPhoto.png" videoUrl:nil sender:@"Jayson" timestamp:[NSDate date]];
+    NSString *videoPath = [[NSBundle mainBundle] pathForResource:@"IMG_1555.MOV" ofType:@""];
+    XHMessage *videoMessage = [[XHMessage alloc] initWithVideoConverPhoto:[XHMessageVideoConverPhotoFactory videoConverPhotoWithVideoPath:videoPath] videoPath:videoPath videoUrl:nil sender:@"Jayson" timestamp:[NSDate date]];
     videoMessage.avator = [UIImage imageNamed:@"avator"];
     videoMessage.avatorUrl = @"http://www.pailixiu.com/jack/JieIcon@2x.png";
     videoMessage.bubbleMessageType = bubbleMessageType;
@@ -185,15 +186,15 @@
 - (void)multiMediaMessageDidSelectedOnMessage:(id<XHMessageModel>)message atIndexPath:(NSIndexPath *)indexPath onMessageTableViewCell:(XHMessageTableViewCell *)messageTableViewCell {
     UIViewController *disPlayViewController;
     switch (message.messageMediaType) {
+        case XHBubbleMessageVideo:
         case XHBubbleMessagePhoto: {
             DLog(@"message : %@", message.photo);
-            XHDisplayPhotoViewController *displayPhotoViewController = [[XHDisplayPhotoViewController alloc] init];
-            displayPhotoViewController.message = message;
-            disPlayViewController = displayPhotoViewController;
+            DLog(@"message : %@", message.videoConverPhoto);
+            XHDisplayMediaViewController *messageDisplayTextView = [[XHDisplayMediaViewController alloc] init];
+            messageDisplayTextView.message = message;
+            disPlayViewController = messageDisplayTextView;
             break;
         }
-        case XHBubbleMessageVideo:
-            DLog(@"message : %@", message.videoConverPhoto);
             break;
         case XHBubbleMessageVoice:
             DLog(@"message : %@", message.voicePath);

@@ -1,5 +1,5 @@
 //
-//  XHDisplayPhotoViewController.h
+//  XHDisplayMediaViewController.h
 //  MessageDisplayExample
 //
 //  Created by qtone-1 on 14-5-6.
@@ -10,7 +10,7 @@
 #import "XHBaseViewController.h"
 #import "XHMessageModel.h"
 
-@interface XHDisplayPhotoViewController : XHBaseViewController
+@interface XHDisplayMediaViewController : XHBaseViewController
 
 @property (nonatomic, strong) id <XHMessageModel> message;
 

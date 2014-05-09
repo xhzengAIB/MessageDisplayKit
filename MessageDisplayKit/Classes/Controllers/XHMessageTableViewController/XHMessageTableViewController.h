@@ -20,6 +20,7 @@
 
 // Factory
 #import "XHMessageBubbleFactory.h"
+#import "XHMessageVideoConverPhotoFactory.h"
 
 // Helper
 #import "XHPhotographyHelper.h"

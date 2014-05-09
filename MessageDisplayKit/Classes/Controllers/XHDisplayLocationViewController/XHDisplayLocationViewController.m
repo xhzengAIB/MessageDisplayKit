@@ -58,6 +58,10 @@
     [self.view addSubview:self.mapView];
 }
 
+- (void)dealloc {
+    self.mapView = nil;
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

@@ -8,8 +8,6 @@
 
 #import "XHMessageTableViewController.h"
 #import <MobileCoreServices/MobileCoreServices.h>
-#import <AVFoundation/AVAsset.h>
-#import <AVFoundation/AVAssetImageGenerator.h>
 
 @interface XHMessageTableViewController ()
 
@@ -388,10 +386,6 @@
                                      forKeyPath:@"contentSize"
                                         options:NSKeyValueObservingOptionNew
                                         context:nil];
-    if (!self.messages.count) {
-        // 滚动到底部
-        [self scrollToBottomAnimated:NO];
-    }
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -745,21 +739,7 @@
                 videoUrl = (NSURL*)[editingInfo objectForKey:UIImagePickerControllerMediaURL];
                 videoPath = [videoUrl path];
                 
-                AVURLAsset *asset = [[AVURLAsset alloc] initWithURL:videoUrl options:nil];
-                NSParameterAssert(asset);
-                AVAssetImageGenerator *assetImageGenerator = [[AVAssetImageGenerator alloc] initWithAsset:asset];
-                assetImageGenerator.appliesPreferredTrackTransform = YES;
-                assetImageGenerator.apertureMode = AVAssetImageGeneratorApertureModeEncodedPixels;
-                
-                CGImageRef thumbnailImageRef = NULL;
-                CFTimeInterval thumbnailImageTime = 0;
-                NSError *thumbnailImageGenerationError = nil;
-                thumbnailImageRef = [assetImageGenerator copyCGImageAtTime:CMTimeMake(thumbnailImageTime, 60) actualTime:NULL error:&thumbnailImageGenerationError];
-                
-                if (!thumbnailImageRef)
-                    NSLog(@"thumbnailImageGenerationError %@", thumbnailImageGenerationError);
-                
-                UIImage *thumbnailImage = thumbnailImageRef ? [[UIImage alloc] initWithCGImage:thumbnailImageRef] : nil;
+                UIImage *thumbnailImage = [XHMessageVideoConverPhotoFactory videoConverPhotoWithVideoPath:videoPath];
                 
                 [weakSelf didSendMessageWithVideoConverPhoto:thumbnailImage videoPath:videoPath];
             } else {

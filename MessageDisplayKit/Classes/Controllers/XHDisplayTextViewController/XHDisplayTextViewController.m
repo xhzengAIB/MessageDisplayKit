@@ -45,6 +45,10 @@
     self.title = NSLocalizedString(@"TextDetail", @"文本消息");
 }
 
+- (void)dealloc {
+    self.displayTextView = nil;
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
