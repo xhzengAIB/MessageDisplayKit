@@ -388,8 +388,10 @@
                                      forKeyPath:@"contentSize"
                                         options:NSKeyValueObservingOptionNew
                                         context:nil];
-    // 滚动到底部
-    [self scrollToBottomAnimated:NO];
+    if (!self.messages.count) {
+        // 滚动到底部
+        [self scrollToBottomAnimated:NO];
+    }
 }
 
 - (void)viewWillDisappear:(BOOL)animated {

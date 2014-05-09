@@ -8,16 +8,40 @@
 
 #import "XHDisplayPhotoViewController.h"
 
+#import "UIView+XHNetworkImage.h"
+
 @interface XHDisplayPhotoViewController ()
+
+@property (nonatomic, weak) UIImageView *photoImageView;
 
 @end
 
 @implementation XHDisplayPhotoViewController
 
+- (UIImageView *)photoImageView {
+    if (!_photoImageView) {
+        UIImageView *photoImageView = [[UIImageView alloc] initWithFrame:self.view.frame];
+        [self.view addSubview:photoImageView];
+        _photoImageView = photoImageView;
+    }
+    return _photoImageView;
+}
+
+- (void)setMessage:(id<XHMessageModel>)message {
+    _message = message;
+    self.photoImageView.image = message.photo;
+    if (message.thumbnailUrl) {
+        [self.photoImageView setImageUrl:[message thumbnailUrl]];
+    }
+}
+
+#pragma mark - Left cycle
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.title = NSLocalizedString(@"Photo", @"详细照片");
 }
 
 - (void)didReceiveMemoryWarning

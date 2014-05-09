@@ -8,6 +8,7 @@
 
 #import "XHDemoWeChatMessageTableViewController.h"
 
+#import "XHDisplayPhotoViewController.h"
 #import "XHDisplayLocationViewController.h"
 
 @interface XHDemoWeChatMessageTableViewController ()
@@ -181,10 +182,15 @@
 #pragma mark - XHMessageTableViewCell delegate
 
 - (void)multiMediaMessageDidSelectedOnMessage:(id<XHMessageModel>)message atIndexPath:(NSIndexPath *)indexPath onMessageTableViewCell:(XHMessageTableViewCell *)messageTableViewCell {
+    UIViewController *disPlayViewController;
     switch (message.messageMediaType) {
-        case XHBubbleMessagePhoto:
+        case XHBubbleMessagePhoto: {
             DLog(@"message : %@", message.photo);
+            XHDisplayPhotoViewController *displayPhotoViewController = [[XHDisplayPhotoViewController alloc] init];
+            displayPhotoViewController.message = message;
+            disPlayViewController = displayPhotoViewController;
             break;
+        }
         case XHBubbleMessageVideo:
             DLog(@"message : %@", message.videoConverPhoto);
             break;
@@ -200,11 +206,14 @@
             DLog(@"facePath : %@", message.localPositionPhoto);
             XHDisplayLocationViewController *displayLocationViewController = [[XHDisplayLocationViewController alloc] init];
             displayLocationViewController.message = message;
-            [self.navigationController pushViewController:displayLocationViewController animated:YES];
+            disPlayViewController = displayLocationViewController;
             break;
         }
         default:
             break;
+    }
+    if (disPlayViewController) {
+        [self.navigationController pushViewController:disPlayViewController animated:YES];
     }
 }
 

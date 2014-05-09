@@ -54,7 +54,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = NSLocalizedString(@"Location", @"地理位置");
-    self.view.backgroundColor = [UIColor whiteColor];
     
     [self.view addSubview:self.mapView];
 }
