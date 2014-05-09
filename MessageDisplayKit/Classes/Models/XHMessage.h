@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
 #import "XHMessageModel.h"
 
 @interface XHMessage : NSObject <XHMessageModel, NSCoding, NSCopying>
@@ -28,6 +29,7 @@
 
 @property (nonatomic, strong) UIImage *localPositionPhoto;
 @property (nonatomic, copy) NSString *geolocations;
+@property (nonatomic, strong) CLLocation *location;
 
 @property (nonatomic, strong) UIImage *avator;
 @property (nonatomic, copy) NSString *avatorUrl;
@@ -111,6 +113,7 @@
 
 - (instancetype)initWithLocalPositionPhoto:(UIImage *)localPositionPhoto
                               geolocations:(NSString *)geolocations
+                                  location:(CLLocation *)location
                           sender:(NSString *)sender
                             timestamp:(NSDate *)timestamp;
 

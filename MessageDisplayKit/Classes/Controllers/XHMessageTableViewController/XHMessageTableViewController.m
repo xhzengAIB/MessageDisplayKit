@@ -588,10 +588,10 @@
     }
 }
 
-- (void)didSendGeolocationsMessageWithGeolocaltions:(NSString *)geolcations {
+- (void)didSendGeolocationsMessageWithGeolocaltions:(NSString *)geolcations location:(CLLocation *)location {
     DLog(@"send geolcations : %@", geolcations);
-    if ([self.delegate respondsToSelector:@selector(didSendGeoLocationsPhoto:geolocations:fromSender:onDate:)]) {
-        [self.delegate didSendGeoLocationsPhoto:[UIImage imageNamed:@"Fav_Cell_Loc"] geolocations:geolcations fromSender:self.messageSender onDate:[NSDate date]];
+    if ([self.delegate respondsToSelector:@selector(didSendGeoLocationsPhoto:geolocations:location:fromSender:onDate:)]) {
+        [self.delegate didSendGeoLocationsPhoto:[UIImage imageNamed:@"Fav_Cell_Loc"] geolocations:geolcations location:location fromSender:self.messageSender onDate:[NSDate date]];
     }
 }
 
@@ -821,7 +821,7 @@
                     NSArray *formattedAddressLines = [addressDictionary valueForKey:@"FormattedAddressLines"];
                     NSString *geoLocations = [formattedAddressLines lastObject];
                     if (geoLocations) {
-                        [weakSelf didSendGeolocationsMessageWithGeolocaltions:geoLocations];
+                        [weakSelf didSendGeolocationsMessageWithGeolocaltions:geoLocations location:location];
                     }
                 }
             }];

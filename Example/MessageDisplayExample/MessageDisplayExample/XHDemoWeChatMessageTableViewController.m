@@ -257,8 +257,8 @@
 /**
  *  有些网友说需要发送地理位置，这个我暂时放一放
  */
-- (void)didSendGeoLocationsPhoto:(UIImage *)geoLocationsPhoto geolocations:(NSString *)geolocations fromSender:(NSString *)sender onDate:(NSDate *)date {
-    [self addMessage:[[XHMessage alloc] initWithLocalPositionPhoto:geoLocationsPhoto geolocations:geolocations sender:sender timestamp:date]];
+- (void)didSendGeoLocationsPhoto:(UIImage *)geoLocationsPhoto geolocations:(NSString *)geolocations location:(CLLocation *)location fromSender:(NSString *)sender onDate:(NSDate *)date {
+    [self addMessage:[[XHMessage alloc] initWithLocalPositionPhoto:geoLocationsPhoto geolocations:geolocations location:location sender:sender timestamp:date]];
     [self finishSendMessageWithBubbleMessageType:XHBubbleMessageLocalPosition];
 }
 
