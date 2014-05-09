@@ -7,6 +7,7 @@
 //
 
 #import "XHPhotographyHelper.h"
+#import "XHMacro.h"
 
 @interface XHPhotographyHelper () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
