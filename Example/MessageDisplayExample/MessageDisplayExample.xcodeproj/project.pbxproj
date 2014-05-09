@@ -60,6 +60,9 @@
 		74585F55191C96F000F5E8C8 /* avator@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74585F54191C96F000F5E8C8 /* avator@2x.png */; };
 		74585F58191C989F00F5E8C8 /* Demo0.gif in Resources */ = {isa = PBXBuildFile; fileRef = 74585F56191C989F00F5E8C8 /* Demo0.gif */; };
 		74585F59191C989F00F5E8C8 /* Demo1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 74585F57191C989F00F5E8C8 /* Demo1.gif */; };
+		74585FFD191D10CC00F5E8C8 /* XHAnnotation.h in Headers */ = {isa = PBXBuildFile; fileRef = 74585FFB191D10CC00F5E8C8 /* XHAnnotation.h */; };
+		74585FFE191D10CC00F5E8C8 /* XHAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 74585FFC191D10CC00F5E8C8 /* XHAnnotation.m */; };
+		74585FFF191D10CC00F5E8C8 /* XHAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 74585FFC191D10CC00F5E8C8 /* XHAnnotation.m */; };
 		746C881B1916B5D6007F9A5E /* face_HL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 746C88121916B5D6007F9A5E /* face_HL@2x.png */; };
 		746C881C1916B5D6007F9A5E /* face@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 746C88131916B5D6007F9A5E /* face@2x.png */; };
 		746C881D1916B5D6007F9A5E /* holdDownButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 746C88141916B5D6007F9A5E /* holdDownButton@2x.png */; };
@@ -252,6 +255,8 @@
 		74585F54191C96F000F5E8C8 /* avator@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avator@2x.png"; sourceTree = "<group>"; };
 		74585F56191C989F00F5E8C8 /* Demo0.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Demo0.gif; sourceTree = "<group>"; };
 		74585F57191C989F00F5E8C8 /* Demo1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Demo1.gif; sourceTree = "<group>"; };
+		74585FFB191D10CC00F5E8C8 /* XHAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHAnnotation.h; sourceTree = "<group>"; };
+		74585FFC191D10CC00F5E8C8 /* XHAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHAnnotation.m; sourceTree = "<group>"; };
 		746C88121916B5D6007F9A5E /* face_HL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "face_HL@2x.png"; sourceTree = "<group>"; };
 		746C88131916B5D6007F9A5E /* face@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "face@2x.png"; sourceTree = "<group>"; };
 		746C88141916B5D6007F9A5E /* holdDownButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "holdDownButton@2x.png"; sourceTree = "<group>"; };
@@ -919,6 +924,8 @@
 				740660BD1914D65600E1CE95 /* XHEmotion.m */,
 				740660CB1914E1F400E1CE95 /* XHEmotionManager.h */,
 				740660CC1914E1F400E1CE95 /* XHEmotionManager.m */,
+				74585FFB191D10CC00F5E8C8 /* XHAnnotation.h */,
+				74585FFC191D10CC00F5E8C8 /* XHAnnotation.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -983,6 +990,7 @@
 				746C89381917F691007F9A5E /* XHMessageTableView.h in Headers */,
 				746C89441917F691007F9A5E /* XHEmotionCollectionViewCell.h in Headers */,
 				746C894D1917F691007F9A5E /* XHEmotionSectionBar.h in Headers */,
+				74585FFD191D10CC00F5E8C8 /* XHAnnotation.h in Headers */,
 				746C894A1917F691007F9A5E /* XHEmotionManagerView.h in Headers */,
 				746C89411917F691007F9A5E /* XHMessageTextView.h in Headers */,
 				746C893B1917F691007F9A5E /* XHMessageTableViewCell.h in Headers */,
@@ -1249,6 +1257,7 @@
 				74180BFA190F448800A35C82 /* XHMessageBubbleFactory.m in Sources */,
 				746C894C1917F691007F9A5E /* XHEmotionManagerView.m in Sources */,
 				74585F47191C8B5700F5E8C8 /* UIView+XHNetworkImage.m in Sources */,
+				74585FFF191D10CC00F5E8C8 /* XHAnnotation.m in Sources */,
 				74180BFD190F449400A35C82 /* XHFoundationCommon.m in Sources */,
 				746C893D1917F691007F9A5E /* XHMessageTableViewCell.m in Sources */,
 				746C89461917F691007F9A5E /* XHEmotionCollectionViewCell.m in Sources */,
@@ -1316,6 +1325,7 @@
 				748245971909F33F008EC388 /* XHMessageBubbleFactory.m in Sources */,
 				740660CE1914E1F400E1CE95 /* XHEmotionManager.m in Sources */,
 				74585F46191C8B5700F5E8C8 /* UIView+XHNetworkImage.m in Sources */,
+				74585FFE191D10CC00F5E8C8 /* XHAnnotation.m in Sources */,
 				746C89361917F691007F9A5E /* XHMessageDisplayTextView.m in Sources */,
 				740660BF1914D65600E1CE95 /* XHEmotion.m in Sources */,
 				746C89791917F8B2007F9A5E /* XHBaseNavigationController.m in Sources */,

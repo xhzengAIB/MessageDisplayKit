@@ -8,6 +8,8 @@
 
 #import "XHDemoWeChatMessageTableViewController.h"
 
+#import "XHDisplayLocationViewController.h"
+
 @interface XHDemoWeChatMessageTableViewController ()
 
 @property (nonatomic, strong) NSArray *emotionManagers;
@@ -62,7 +64,7 @@
 }
 
 - (XHMessage *)getGeolocationsMessageWithBubbleMessageType:(XHBubbleMessageType)bubbleMessageType {
-    XHMessage *localPositionMessage = [[XHMessage alloc] initWithLocalPositionPhoto:[UIImage imageNamed:@"Fav_Cell_Loc"] geolocations:@"中国广东省广州市天河区东圃二马路121号" location:[[CLLocation alloc] initWithLatitude:23.110099 longitude:113.401329] sender:@"Jack" timestamp:[NSDate date]];
+    XHMessage *localPositionMessage = [[XHMessage alloc] initWithLocalPositionPhoto:[UIImage imageNamed:@"Fav_Cell_Loc"] geolocations:@"中国广东省广州市天河区东圃二马路121号" location:[[CLLocation alloc] initWithLatitude:23.110387 longitude:113.399444] sender:@"Jack" timestamp:[NSDate date]];
     localPositionMessage.avator = [UIImage imageNamed:@"avator"];
     localPositionMessage.avatorUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
     localPositionMessage.bubbleMessageType = bubbleMessageType;
@@ -143,7 +145,7 @@
         for (NSInteger j = 0; j < 32; j ++) {
             XHEmotion *emotion = [[XHEmotion alloc] init];
             NSString *imageName = [NSString stringWithFormat:@"section%ld_emotion%ld", (long)i , (long)j % 16];
-            emotion.emotionPath = [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"Demo%ld.gif", j % 2] ofType:@""];
+            emotion.emotionPath = [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"Demo%ld.gif", (long)j % 2] ofType:@""];
             emotion.emotionConverPhoto = [UIImage imageNamed:imageName];
             [emotions addObject:emotion];
         }
@@ -171,11 +173,51 @@
     self.emotionManagers = nil;
 }
 
-#pragma mark - UITableView delegate
+/*
+ [self removeMessageAtIndexPath:indexPath];
+ [self insertOldMessages:self.messages];
+ */
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//    [self removeMessageAtIndexPath:indexPath];
-//    [self insertOldMessages:self.messages];
+#pragma mark - XHMessageTableViewCell delegate
+
+- (void)multiMediaMessageDidSelectedOnMessage:(id<XHMessageModel>)message atIndexPath:(NSIndexPath *)indexPath onMessageTableViewCell:(XHMessageTableViewCell *)messageTableViewCell {
+    switch (message.messageMediaType) {
+        case XHBubbleMessagePhoto:
+            DLog(@"message : %@", message.photo);
+            break;
+        case XHBubbleMessageVideo:
+            DLog(@"message : %@", message.videoConverPhoto);
+            break;
+        case XHBubbleMessageVoice:
+            DLog(@"message : %@", message.voicePath);
+            [messageTableViewCell.messageBubbleView.animationVoiceImageView startAnimating];
+            [messageTableViewCell.messageBubbleView.animationVoiceImageView performSelector:@selector(stopAnimating) withObject:nil afterDelay:3];
+            break;
+        case XHBubbleMessageFace:
+            DLog(@"facePath : %@", message.emotionPath);
+            break;
+        case XHBubbleMessageLocalPosition: {
+            DLog(@"facePath : %@", message.localPositionPhoto);
+            XHDisplayLocationViewController *displayLocationViewController = [[XHDisplayLocationViewController alloc] init];
+            displayLocationViewController.message = message;
+            [self.navigationController pushViewController:displayLocationViewController animated:YES];
+            break;
+        }
+        default:
+            break;
+    }
+}
+
+- (void)didDoubleSelectedOnTextMessage:(id<XHMessageModel>)message atIndexPath:(NSIndexPath *)indexPath {
+    DLog(@"text : %@", message.text);
+}
+
+- (void)didSelectedAvatorAtIndexPath:(NSIndexPath *)indexPath {
+    DLog(@"indexPath : %@", indexPath);
+}
+
+- (void)menuDidSelectedAtBubbleMessageMenuSelecteType:(XHBubbleMessageMenuSelecteType)bubbleMessageMenuSelecteType {
+    
 }
 
 #pragma mark - XHEmotionManagerView DataSource

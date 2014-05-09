@@ -7,17 +7,56 @@
 //
 
 #import "XHDisplayLocationViewController.h"
+#import "XHAnnotation.h"
 
-@interface XHDisplayLocationViewController ()
+@interface XHDisplayLocationViewController () <MKMapViewDelegate>
+
+@property (nonatomic, strong) MKMapView *mapView;
 
 @end
 
 @implementation XHDisplayLocationViewController
 
+- (MKMapView *)mapView {
+    if (!_mapView) {
+        _mapView = [[MKMapView alloc] initWithFrame:self.view.frame];
+    }
+    return _mapView;
+}
+
+- (void)loadLocations {
+    CLLocationCoordinate2D coord = [self.message.location coordinate];
+    CLRegion *newRegion = [[CLRegion alloc] initCircularRegionWithCenter:coord
+                                                                  radius:10.0
+                                                              identifier:[NSString stringWithFormat:@"%f, %f", coord.latitude, coord.longitude]];
+    
+    // Create an annotation to show where the region is located on the map.
+    XHAnnotation *myRegionAnnotation = [[XHAnnotation alloc] initWithCLRegion:newRegion title:@"消息的位置" subtitle:self.message.geolocations];
+    myRegionAnnotation.coordinate = newRegion.center;
+    myRegionAnnotation.radius = newRegion.radius;
+    
+    [self.mapView addAnnotation:myRegionAnnotation];
+
+    //放大到标注的位置
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(coord, 150, 150);
+    [self.mapView setRegion:region animated:YES];
+}
+
+#pragma mark - lefy cycle
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self loadLocations];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.title = NSLocalizedString(@"Location", @"地理位置");
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    [self.view addSubview:self.mapView];
 }
 
 - (void)didReceiveMemoryWarning
@@ -25,16 +64,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

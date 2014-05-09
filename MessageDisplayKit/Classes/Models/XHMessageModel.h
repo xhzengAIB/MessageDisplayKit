@@ -29,6 +29,7 @@
 
 - (UIImage *)localPositionPhoto;
 - (NSString *)geolocations;
+- (CLLocation *)location;
 
 - (NSString *)emotionPath;
 

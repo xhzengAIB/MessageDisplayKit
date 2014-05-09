@@ -723,44 +723,6 @@
     DLog(@"didFinishRecoingVoice");
 }
 
-#pragma mark - XHMessageTableViewCell delegate
-
-- (void)multiMediaMessageDidSelectedOnMessage:(id<XHMessageModel>)message atIndexPath:(NSIndexPath *)indexPath onMessageTableViewCell:(XHMessageTableViewCell *)messageTableViewCell {
-    switch (message.messageMediaType) {
-        case XHBubbleMessagePhoto:
-            DLog(@"message : %@", message.photo);
-            break;
-        case XHBubbleMessageVideo:
-            DLog(@"message : %@", message.videoConverPhoto);
-            break;
-        case XHBubbleMessageVoice:
-            DLog(@"message : %@", message.voicePath);
-            [messageTableViewCell.messageBubbleView.animationVoiceImageView startAnimating];
-            [messageTableViewCell.messageBubbleView.animationVoiceImageView performSelector:@selector(stopAnimating) withObject:nil afterDelay:3];
-            break;
-        case XHBubbleMessageFace:
-            DLog(@"facePath : %@", message.emotionPath);
-            break;
-        case XHBubbleMessageLocalPosition:
-            DLog(@"facePath : %@", message.localPositionPhoto);
-            break;
-        default:
-            break;
-    }
-}
-
-- (void)didDoubleSelectedOnTextMessage:(id<XHMessageModel>)message atIndexPath:(NSIndexPath *)indexPath {
-    DLog(@"text : %@", message.text);
-}
-
-- (void)didSelectedAvatorAtIndexPath:(NSIndexPath *)indexPath {
-    DLog(@"indexPath : %@", indexPath);
-}
-
-- (void)menuDidSelectedAtBubbleMessageMenuSelecteType:(XHBubbleMessageMenuSelecteType)bubbleMessageMenuSelecteType {
-    
-}
-
 #pragma mark - XHShareMenuView delegate
 
 - (void)didSelecteShareMenuItem:(XHShareMenuItem *)shareMenuItem atIndex:(NSInteger)index {
