@@ -35,7 +35,6 @@
     if (!_activityIndicatorView) {
         _activityIndicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
         _activityIndicatorView.hidesWhenStopped = YES;
-        self.activityIndicatorView.center = CGPointMake(50, 50);
     }
     return _activityIndicatorView;
 }
@@ -66,6 +65,11 @@
             }
         }];
     }
+}
+
+- (void)setFrame:(CGRect)frame {
+    [super setFrame:frame];
+    _activityIndicatorView.center = CGPointMake(CGRectGetWidth(self.bounds) / 2.0, CGRectGetHeight(self.bounds) / 2.0);
 }
 
 - (instancetype)initWithFrame:(CGRect)frame {

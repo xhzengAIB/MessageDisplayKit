@@ -47,14 +47,19 @@
 		74180C12190F450000A35C82 /* UIImage+XHRounded.h in Headers */ = {isa = PBXBuildFile; fileRef = 74FAB0B7190A81DC005623D0 /* UIImage+XHRounded.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74180C13190F450200A35C82 /* XHMessageModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 7482457519090D6B008EC388 /* XHMessageModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74180C14190F450400A35C82 /* XHMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 7482456919090C04008EC388 /* XHMessage.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		74180D74190FF7C600A35C82 /* Demo0.gif in Resources */ = {isa = PBXBuildFile; fileRef = 74180D73190FF7C600A35C82 /* Demo0.gif */; };
 		744FBDC81915EE7400FB4A65 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 744FBDC61915EE7400FB4A65 /* Default-568h@2x.png */; };
 		744FBDC91915EE7400FB4A65 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 744FBDC71915EE7400FB4A65 /* Default@2x.png */; };
-		74585F38191B90CA00F5E8C8 /* Demo1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 74585F37191B90CA00F5E8C8 /* Demo1.gif */; };
 		74585F3B191B939800F5E8C8 /* MessageVideoPlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74585F3A191B939800F5E8C8 /* MessageVideoPlay@2x.png */; };
 		74585F3E191B999B00F5E8C8 /* XHLocationHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 74585F3C191B999B00F5E8C8 /* XHLocationHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74585F3F191B999B00F5E8C8 /* XHLocationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 74585F3D191B999B00F5E8C8 /* XHLocationHelper.m */; };
 		74585F40191B999B00F5E8C8 /* XHLocationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 74585F3D191B999B00F5E8C8 /* XHLocationHelper.m */; };
+		74585F45191C8B5700F5E8C8 /* UIView+XHNetworkImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 74585F43191C8B5700F5E8C8 /* UIView+XHNetworkImage.h */; };
+		74585F46191C8B5700F5E8C8 /* UIView+XHNetworkImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 74585F44191C8B5700F5E8C8 /* UIView+XHNetworkImage.m */; };
+		74585F47191C8B5700F5E8C8 /* UIView+XHNetworkImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 74585F44191C8B5700F5E8C8 /* UIView+XHNetworkImage.m */; };
+		74585F53191C96E000F5E8C8 /* placeholderImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74585F52191C96E000F5E8C8 /* placeholderImage@2x.png */; };
+		74585F55191C96F000F5E8C8 /* avator@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74585F54191C96F000F5E8C8 /* avator@2x.png */; };
+		74585F58191C989F00F5E8C8 /* Demo0.gif in Resources */ = {isa = PBXBuildFile; fileRef = 74585F56191C989F00F5E8C8 /* Demo0.gif */; };
+		74585F59191C989F00F5E8C8 /* Demo1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 74585F57191C989F00F5E8C8 /* Demo1.gif */; };
 		746C881B1916B5D6007F9A5E /* face_HL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 746C88121916B5D6007F9A5E /* face_HL@2x.png */; };
 		746C881C1916B5D6007F9A5E /* face@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 746C88131916B5D6007F9A5E /* face@2x.png */; };
 		746C881D1916B5D6007F9A5E /* holdDownButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 746C88141916B5D6007F9A5E /* holdDownButton@2x.png */; };
@@ -194,11 +199,9 @@
 		74BBB020190B8EAB00093577 /* MessageDisplayKitString.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74BBB022190B8EAB00093577 /* MessageDisplayKitString.strings */; };
 		74BBB02C190BE8C400093577 /* XHMessageRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74BBB02B190BE8C400093577 /* XHMessageRootViewController.m */; };
 		74BBB032190C28CD00093577 /* XHDemoWeChatMessageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74BBB031190C28CD00093577 /* XHDemoWeChatMessageTableViewController.m */; };
-		74BBB034190D226300093577 /* JieIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74BBB033190D226300093577 /* JieIcon@2x.png */; };
 		74D1C5C6190DFC1D003B1BCA /* XHFoundationCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 74D1C5C5190DFC1D003B1BCA /* XHFoundationCommon.m */; };
 		74D1C5E9190E2BE6003B1BCA /* XHMessageVoiceFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 74D1C5E8190E2BE6003B1BCA /* XHMessageVoiceFactory.m */; };
 		74FAB0B9190A81DC005623D0 /* UIImage+XHRounded.m in Sources */ = {isa = PBXBuildFile; fileRef = 74FAB0B8190A81DC005623D0 /* UIImage+XHRounded.m */; };
-		74FAB0E4190A9E13005623D0 /* meIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74FAB0E3190A9E13005623D0 /* meIcon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -238,13 +241,17 @@
 		74180BF0190F447100A35C82 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		74180BF2190F447100A35C82 /* MessageDisplayFrameworkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageDisplayFrameworkTests.m; sourceTree = "<group>"; };
 		74180CBB190F526100A35C82 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
-		74180D73190FF7C600A35C82 /* Demo0.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Demo0.gif; sourceTree = "<group>"; };
 		744FBDC61915EE7400FB4A65 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		744FBDC71915EE7400FB4A65 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		74585F37191B90CA00F5E8C8 /* Demo1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Demo1.gif; sourceTree = "<group>"; };
 		74585F3A191B939800F5E8C8 /* MessageVideoPlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MessageVideoPlay@2x.png"; sourceTree = "<group>"; };
 		74585F3C191B999B00F5E8C8 /* XHLocationHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLocationHelper.h; sourceTree = "<group>"; };
 		74585F3D191B999B00F5E8C8 /* XHLocationHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHLocationHelper.m; sourceTree = "<group>"; };
+		74585F43191C8B5700F5E8C8 /* UIView+XHNetworkImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XHNetworkImage.h"; sourceTree = "<group>"; };
+		74585F44191C8B5700F5E8C8 /* UIView+XHNetworkImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XHNetworkImage.m"; sourceTree = "<group>"; };
+		74585F52191C96E000F5E8C8 /* placeholderImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "placeholderImage@2x.png"; sourceTree = "<group>"; };
+		74585F54191C96F000F5E8C8 /* avator@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avator@2x.png"; sourceTree = "<group>"; };
+		74585F56191C989F00F5E8C8 /* Demo0.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Demo0.gif; sourceTree = "<group>"; };
+		74585F57191C989F00F5E8C8 /* Demo1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Demo1.gif; sourceTree = "<group>"; };
 		746C88121916B5D6007F9A5E /* face_HL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "face_HL@2x.png"; sourceTree = "<group>"; };
 		746C88131916B5D6007F9A5E /* face@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "face@2x.png"; sourceTree = "<group>"; };
 		746C88141916B5D6007F9A5E /* holdDownButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "holdDownButton@2x.png"; sourceTree = "<group>"; };
@@ -379,14 +386,12 @@
 		74BBB02B190BE8C400093577 /* XHMessageRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMessageRootViewController.m; sourceTree = "<group>"; };
 		74BBB030190C28CD00093577 /* XHDemoWeChatMessageTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHDemoWeChatMessageTableViewController.h; sourceTree = "<group>"; };
 		74BBB031190C28CD00093577 /* XHDemoWeChatMessageTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = XHDemoWeChatMessageTableViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		74BBB033190D226300093577 /* JieIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "JieIcon@2x.png"; sourceTree = "<group>"; };
 		74D1C5C4190DFC1D003B1BCA /* XHFoundationCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHFoundationCommon.h; sourceTree = "<group>"; };
 		74D1C5C5190DFC1D003B1BCA /* XHFoundationCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHFoundationCommon.m; sourceTree = "<group>"; };
 		74D1C5E7190E2BE6003B1BCA /* XHMessageVoiceFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMessageVoiceFactory.h; sourceTree = "<group>"; };
 		74D1C5E8190E2BE6003B1BCA /* XHMessageVoiceFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMessageVoiceFactory.m; sourceTree = "<group>"; };
 		74FAB0B7190A81DC005623D0 /* UIImage+XHRounded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+XHRounded.h"; sourceTree = "<group>"; };
 		74FAB0B8190A81DC005623D0 /* UIImage+XHRounded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+XHRounded.m"; sourceTree = "<group>"; };
-		74FAB0E3190A9E13005623D0 /* meIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "meIcon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -597,10 +602,10 @@
 		746C87FF1916B58F007F9A5E /* DemoImages */ = {
 			isa = PBXGroup;
 			children = (
-				74180D73190FF7C600A35C82 /* Demo0.gif */,
-				74585F37191B90CA00F5E8C8 /* Demo1.gif */,
-				74BBB033190D226300093577 /* JieIcon@2x.png */,
-				74FAB0E3190A9E13005623D0 /* meIcon@2x.png */,
+				74585F52191C96E000F5E8C8 /* placeholderImage@2x.png */,
+				74585F54191C96F000F5E8C8 /* avator@2x.png */,
+				74585F56191C989F00F5E8C8 /* Demo0.gif */,
+				74585F57191C989F00F5E8C8 /* Demo1.gif */,
 				7475BA32190D4B7B001DD9B1 /* TableViewBackgroundImage@2x.png */,
 			);
 			name = DemoImages;
@@ -896,6 +901,8 @@
 				74FAB0B8190A81DC005623D0 /* UIImage+XHRounded.m */,
 				740660A51913552800E1CE95 /* UIImage+XHAnimatedFaceGif.h */,
 				740660A61913552800E1CE95 /* UIImage+XHAnimatedFaceGif.m */,
+				74585F43191C8B5700F5E8C8 /* UIView+XHNetworkImage.h */,
+				74585F44191C8B5700F5E8C8 /* UIView+XHNetworkImage.m */,
 			);
 			path = Categorys;
 			sourceTree = "<group>";
@@ -971,6 +978,7 @@
 				746C89351917F691007F9A5E /* XHMessageDisplayTextView.h in Headers */,
 				746C893E1917F691007F9A5E /* XHMessageInputView.h in Headers */,
 				746C89471917F691007F9A5E /* XHEmotionCollectionViewFlowLayout.h in Headers */,
+				74585F45191C8B5700F5E8C8 /* UIView+XHNetworkImage.h in Headers */,
 				746C89321917F691007F9A5E /* XHMessageBubbleView.h in Headers */,
 				746C89501917F691007F9A5E /* XHShareMenuView.h in Headers */,
 				746C89381917F691007F9A5E /* XHMessageTableView.h in Headers */,
@@ -1137,11 +1145,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				74585F3B191B939800F5E8C8 /* MessageVideoPlay@2x.png in Resources */,
-				74585F38191B90CA00F5E8C8 /* Demo1.gif in Resources */,
 				746C88431916B607007F9A5E /* ReceiverVoiceNodePlaying000@2x.png in Resources */,
+				74585F55191C96F000F5E8C8 /* avator@2x.png in Resources */,
 				746C885C1916B612007F9A5E /* sharemore_videovoip@2x.png in Resources */,
+				74585F53191C96E000F5E8C8 /* placeholderImage@2x.png in Resources */,
+				74585F59191C989F00F5E8C8 /* Demo1.gif in Resources */,
 				746C882B1916B5EE007F9A5E /* input-bar-background@2x.png in Resources */,
-				74BBB034190D226300093577 /* JieIcon@2x.png in Resources */,
 				746C88711916B62D007F9A5E /* section0_emotion0@2x.png in Resources */,
 				746C88581916B612007F9A5E /* sharemore_myfav@2x.png in Resources */,
 				746C88731916B62D007F9A5E /* section0_emotion2@2x.png in Resources */,
@@ -1153,7 +1162,6 @@
 				7482450F1908C730008EC388 /* InfoPlist.strings in Resources */,
 				746C88441916B607007F9A5E /* ReceiverVoiceNodePlaying001@2x.png in Resources */,
 				746C88721916B62D007F9A5E /* section0_emotion1@2x.png in Resources */,
-				74FAB0E4190A9E13005623D0 /* meIcon@2x.png in Resources */,
 				746C882D1916B5EE007F9A5E /* input-bar-flat@2x.png in Resources */,
 				746C887E1916B62D007F9A5E /* section0_emotion13@2x.png in Resources */,
 				746C88211916B5D6007F9A5E /* multiMedia@2x.png in Resources */,
@@ -1184,6 +1192,7 @@
 				746C885A1916B612007F9A5E /* sharemore_pic@2x.png in Resources */,
 				746C885F1916B612007F9A5E /* sharemore_wxtalk@2x.png in Resources */,
 				746C88201916B5D6007F9A5E /* multiMedia_HL@2x.png in Resources */,
+				74585F58191C989F00F5E8C8 /* Demo0.gif in Resources */,
 				746C882A1916B5EE007F9A5E /* input-bar-background.png in Resources */,
 				746C88761916B62D007F9A5E /* section0_emotion5@2x.png in Resources */,
 				746C885E1916B612007F9A5E /* sharemore_voipvoice@2x.png in Resources */,
@@ -1201,7 +1210,6 @@
 				746C882F1916B5EE007F9A5E /* input-field-cover@2x.png in Resources */,
 				746C88421916B607007F9A5E /* ReceiverVoiceNodePlaying@2x.png in Resources */,
 				744FBDC91915EE7400FB4A65 /* Default@2x.png in Resources */,
-				74180D74190FF7C600A35C82 /* Demo0.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1240,6 +1248,7 @@
 				746C89431917F691007F9A5E /* XHMessageTextView.m in Sources */,
 				74180BFA190F448800A35C82 /* XHMessageBubbleFactory.m in Sources */,
 				746C894C1917F691007F9A5E /* XHEmotionManagerView.m in Sources */,
+				74585F47191C8B5700F5E8C8 /* UIView+XHNetworkImage.m in Sources */,
 				74180BFD190F449400A35C82 /* XHFoundationCommon.m in Sources */,
 				746C893D1917F691007F9A5E /* XHMessageTableViewCell.m in Sources */,
 				746C89461917F691007F9A5E /* XHEmotionCollectionViewCell.m in Sources */,
@@ -1306,6 +1315,7 @@
 				748245151908C730008EC388 /* AppDelegate.m in Sources */,
 				748245971909F33F008EC388 /* XHMessageBubbleFactory.m in Sources */,
 				740660CE1914E1F400E1CE95 /* XHEmotionManager.m in Sources */,
+				74585F46191C8B5700F5E8C8 /* UIView+XHNetworkImage.m in Sources */,
 				746C89361917F691007F9A5E /* XHMessageDisplayTextView.m in Sources */,
 				740660BF1914D65600E1CE95 /* XHEmotion.m in Sources */,
 				746C89791917F8B2007F9A5E /* XHBaseNavigationController.m in Sources */,

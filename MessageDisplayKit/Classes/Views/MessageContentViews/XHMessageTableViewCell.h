@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 #import "XHMessageBubbleView.h"
+#import "UIView+XHNetworkImage.h"
 
 @class XHMessageTableViewCell;
 

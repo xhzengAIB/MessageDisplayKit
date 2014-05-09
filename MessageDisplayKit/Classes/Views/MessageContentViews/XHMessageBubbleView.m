@@ -224,13 +224,15 @@
             [_bubblePhotoImageView configureMessagePhoto:message.photo thumbnailUrl:message.thumbnailUrl originPhotoUrl:message.originPhotoUrl onBubbleMessageType:self.message.bubbleMessageType];
             break;
         case XHBubbleMessageVideo:
-            _bubblePhotoImageView.messagePhoto = message.videoConverPhoto;
+            [_bubblePhotoImageView configureMessagePhoto:message.videoConverPhoto thumbnailUrl:message.thumbnailUrl originPhotoUrl:message.originPhotoUrl onBubbleMessageType:self.message.bubbleMessageType];
             break;
         case XHBubbleMessageVoice:
             break;
         case XHBubbleMessageFace:
             // 直接设置GIF
-            _bubbleImageView.image = [UIImage animatedImageWithAnimatedGIFURL:[NSURL fileURLWithPath:message.emotionPath]];
+            if (message.emotionPath) {
+                _bubbleImageView.image = [UIImage animatedImageWithAnimatedGIFURL:[NSURL fileURLWithPath:message.emotionPath]];
+            }
             break;
         case XHBubbleMessageLocalPosition:
             [_bubblePhotoImageView configureMessagePhoto:message.localPositionPhoto thumbnailUrl:nil originPhotoUrl:nil onBubbleMessageType:self.message.bubbleMessageType];
