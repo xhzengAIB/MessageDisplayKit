@@ -10,14 +10,39 @@
 
 @interface XHDisplayTextViewController ()
 
+@property (nonatomic, weak) UITextView *displayTextView;
+
 @end
 
 @implementation XHDisplayTextViewController
+
+- (UITextView *)displayTextView {
+    if (!_displayTextView) {
+        UITextView *displayTextView = [[UITextView alloc] initWithFrame:self.view.frame];
+        displayTextView.font = [UIFont systemFontOfSize:16.0f];
+        displayTextView.textColor = [UIColor blackColor];
+        displayTextView.userInteractionEnabled = YES;
+        displayTextView.editable = NO;
+        displayTextView.backgroundColor = [UIColor clearColor];
+        displayTextView.dataDetectorTypes = UIDataDetectorTypeAll;
+        [self.view addSubview:displayTextView];
+        _displayTextView = displayTextView;
+    }
+    return _displayTextView;
+}
+
+- (void)setMessage:(id<XHMessageModel>)message {
+    _message = message;
+    self.displayTextView.text = [message text];
+}
+
+#pragma mark - life cycle
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.title = NSLocalizedString(@"TextDetail", @"文本消息");
 }
 
 - (void)didReceiveMemoryWarning

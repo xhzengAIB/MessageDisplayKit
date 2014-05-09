@@ -8,6 +8,7 @@
 
 #import "XHDemoWeChatMessageTableViewController.h"
 
+#import "XHDisplayTextViewController.h"
 #import "XHDisplayPhotoViewController.h"
 #import "XHDisplayLocationViewController.h"
 
@@ -219,6 +220,9 @@
 
 - (void)didDoubleSelectedOnTextMessage:(id<XHMessageModel>)message atIndexPath:(NSIndexPath *)indexPath {
     DLog(@"text : %@", message.text);
+    XHDisplayTextViewController *displayTextViewController = [[XHDisplayTextViewController alloc] init];
+    displayTextViewController.message = message;
+    [self.navigationController pushViewController:displayTextViewController animated:YES];
 }
 
 - (void)didSelectedAvatorAtIndexPath:(NSIndexPath *)indexPath {
