@@ -821,7 +821,7 @@
                     NSArray *formattedAddressLines = [addressDictionary valueForKey:@"FormattedAddressLines"];
                     NSString *geoLocations = [formattedAddressLines lastObject];
                     if (geoLocations) {
-                        [weakSelf didSendGeolocationsMessageWithGeolocaltions:geoLocations location:location];
+                        [weakSelf didSendGeolocationsMessageWithGeolocaltions:geoLocations location:placemark.location];
                     }
                 }
             }];

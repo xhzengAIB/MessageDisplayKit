@@ -62,7 +62,7 @@
 }
 
 - (XHMessage *)getGeolocationsMessageWithBubbleMessageType:(XHBubbleMessageType)bubbleMessageType {
-    XHMessage *localPositionMessage = [[XHMessage alloc] initWithLocalPositionPhoto:[UIImage imageNamed:@"Fav_Cell_Loc"] geolocations:@"中国广东省广州市天河区羊城创意园" sender:@"Jack" timestamp:[NSDate date]];
+    XHMessage *localPositionMessage = [[XHMessage alloc] initWithLocalPositionPhoto:[UIImage imageNamed:@"Fav_Cell_Loc"] geolocations:@"中国广东省广州市天河区东圃二马路121号" location:[[CLLocation alloc] initWithLatitude:23.110099 longitude:113.401329] sender:@"Jack" timestamp:[NSDate date]];
     localPositionMessage.avator = [UIImage imageNamed:@"avator"];
     localPositionMessage.avatorUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
     localPositionMessage.bubbleMessageType = bubbleMessageType;
@@ -257,8 +257,8 @@
 /**
  *  有些网友说需要发送地理位置，这个我暂时放一放
  */
-- (void)didSendGeoLocationsPhoto:(UIImage *)geoLocationsPhoto geolocations:(NSString *)geolocations fromSender:(NSString *)sender onDate:(NSDate *)date {
-    [self addMessage:[[XHMessage alloc] initWithLocalPositionPhoto:geoLocationsPhoto geolocations:geolocations sender:sender timestamp:date]];
+- (void)didSendGeoLocationsPhoto:(UIImage *)geoLocationsPhoto geolocations:(NSString *)geolocations location:(CLLocation *)location fromSender:(NSString *)sender onDate:(NSDate *)date {
+    [self addMessage:[[XHMessage alloc] initWithLocalPositionPhoto:geoLocationsPhoto geolocations:geolocations location:location sender:sender timestamp:date]];
     [self finishSendMessageWithBubbleMessageType:XHBubbleMessageLocalPosition];
 }
 
