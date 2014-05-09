@@ -53,7 +53,7 @@
 		74585F3E191B999B00F5E8C8 /* XHLocationHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 74585F3C191B999B00F5E8C8 /* XHLocationHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74585F3F191B999B00F5E8C8 /* XHLocationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 74585F3D191B999B00F5E8C8 /* XHLocationHelper.m */; };
 		74585F40191B999B00F5E8C8 /* XHLocationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 74585F3D191B999B00F5E8C8 /* XHLocationHelper.m */; };
-		74585F45191C8B5700F5E8C8 /* UIView+XHNetworkImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 74585F43191C8B5700F5E8C8 /* UIView+XHNetworkImage.h */; };
+		74585F45191C8B5700F5E8C8 /* UIView+XHNetworkImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 74585F43191C8B5700F5E8C8 /* UIView+XHNetworkImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74585F46191C8B5700F5E8C8 /* UIView+XHNetworkImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 74585F44191C8B5700F5E8C8 /* UIView+XHNetworkImage.m */; };
 		74585F47191C8B5700F5E8C8 /* UIView+XHNetworkImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 74585F44191C8B5700F5E8C8 /* UIView+XHNetworkImage.m */; };
 		74585F53191C96E000F5E8C8 /* placeholderImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74585F52191C96E000F5E8C8 /* placeholderImage@2x.png */; };
@@ -978,7 +978,6 @@
 				746C89351917F691007F9A5E /* XHMessageDisplayTextView.h in Headers */,
 				746C893E1917F691007F9A5E /* XHMessageInputView.h in Headers */,
 				746C89471917F691007F9A5E /* XHEmotionCollectionViewFlowLayout.h in Headers */,
-				74585F45191C8B5700F5E8C8 /* UIView+XHNetworkImage.h in Headers */,
 				746C89321917F691007F9A5E /* XHMessageBubbleView.h in Headers */,
 				746C89501917F691007F9A5E /* XHShareMenuView.h in Headers */,
 				746C89381917F691007F9A5E /* XHMessageTableView.h in Headers */,
@@ -1003,6 +1002,7 @@
 				74180C14190F450400A35C82 /* XHMessage.h in Headers */,
 				740660A71913552800E1CE95 /* UIImage+XHAnimatedFaceGif.h in Headers */,
 				74585F3E191B999B00F5E8C8 /* XHLocationHelper.h in Headers */,
+				74585F45191C8B5700F5E8C8 /* UIView+XHNetworkImage.h in Headers */,
 				74180C10190F44F800A35C82 /* UIScrollView+XHkeyboardControl.h in Headers */,
 				74180C0B190F44EC00A35C82 /* XHMessageBubbleFactory.h in Headers */,
 				74180C0C190F44ED00A35C82 /* XHMacro.h in Headers */,
