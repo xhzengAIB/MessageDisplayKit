@@ -56,7 +56,7 @@
     }
 }
 
-#pragma mark - Left cycle
+#pragma mark - Life cycle
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];

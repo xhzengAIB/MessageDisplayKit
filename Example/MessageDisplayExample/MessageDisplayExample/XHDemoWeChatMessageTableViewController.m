@@ -12,6 +12,8 @@
 #import "XHDisplayMediaViewController.h"
 #import "XHDisplayLocationViewController.h"
 
+#import "XHProfileTableViewController.h"
+
 @interface XHDemoWeChatMessageTableViewController ()
 
 @property (nonatomic, strong) NSArray *emotionManagers;
@@ -228,6 +230,8 @@
 
 - (void)didSelectedAvatorAtIndexPath:(NSIndexPath *)indexPath {
     DLog(@"indexPath : %@", indexPath);
+    XHProfileTableViewController *profileTableViewController = [[XHProfileTableViewController alloc] init];
+    [self.navigationController pushViewController:profileTableViewController animated:YES];
 }
 
 - (void)menuDidSelectedAtBubbleMessageMenuSelecteType:(XHBubbleMessageMenuSelecteType)bubbleMessageMenuSelecteType {

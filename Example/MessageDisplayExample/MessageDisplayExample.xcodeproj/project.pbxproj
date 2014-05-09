@@ -203,6 +203,9 @@
 		749019B4191D315A0049AFF9 /* XHMessageVideoConverPhotoFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 749019B2191D315A0049AFF9 /* XHMessageVideoConverPhotoFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		749019B5191D315A0049AFF9 /* XHMessageVideoConverPhotoFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 749019B3191D315A0049AFF9 /* XHMessageVideoConverPhotoFactory.m */; };
 		749019B6191D315A0049AFF9 /* XHMessageVideoConverPhotoFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 749019B3191D315A0049AFF9 /* XHMessageVideoConverPhotoFactory.m */; };
+		74901A3F191D3B1C0049AFF9 /* XHProfileTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 74901A3D191D3B1C0049AFF9 /* XHProfileTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		74901A40191D3B1C0049AFF9 /* XHProfileTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74901A3E191D3B1C0049AFF9 /* XHProfileTableViewController.m */; };
+		74901A41191D3B1C0049AFF9 /* XHProfileTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74901A3E191D3B1C0049AFF9 /* XHProfileTableViewController.m */; };
 		74BBB020190B8EAB00093577 /* MessageDisplayKitString.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74BBB022190B8EAB00093577 /* MessageDisplayKitString.strings */; };
 		74BBB02C190BE8C400093577 /* XHMessageRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74BBB02B190BE8C400093577 /* XHMessageRootViewController.m */; };
 		74BBB032190C28CD00093577 /* XHDemoWeChatMessageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74BBB031190C28CD00093577 /* XHDemoWeChatMessageTableViewController.m */; };
@@ -390,6 +393,8 @@
 		749019A4191D30190049AFF9 /* TableViewBackgroundImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TableViewBackgroundImage@2x.png"; sourceTree = "<group>"; };
 		749019B2191D315A0049AFF9 /* XHMessageVideoConverPhotoFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMessageVideoConverPhotoFactory.h; sourceTree = "<group>"; };
 		749019B3191D315A0049AFF9 /* XHMessageVideoConverPhotoFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMessageVideoConverPhotoFactory.m; sourceTree = "<group>"; };
+		74901A3D191D3B1C0049AFF9 /* XHProfileTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHProfileTableViewController.h; sourceTree = "<group>"; };
+		74901A3E191D3B1C0049AFF9 /* XHProfileTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHProfileTableViewController.m; sourceTree = "<group>"; };
 		74BBB01E190B8E9500093577 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		74BBB01F190B8E9500093577 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		74BBB021190B8EAB00093577 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MessageDisplayKitString.strings; sourceTree = "<group>"; };
@@ -696,6 +701,7 @@
 				746C89731917F89A007F9A5E /* XHBaseTabBarController */,
 				746C89741917F89A007F9A5E /* XHBaseTableViewController */,
 				746C89751917F89A007F9A5E /* XHBaseViewController */,
+				74901A3C191D3B090049AFF9 /* XHProfileTableViewController */,
 				746C89541917F7B4007F9A5E /* XHDisplayEmotionViewController */,
 				74901986191D2D030049AFF9 /* XHDisplayMediaViewController */,
 				746C89551917F7B4007F9A5E /* XHDisplayLocationViewController */,
@@ -968,6 +974,15 @@
 			path = ExampleResources;
 			sourceTree = "<group>";
 		};
+		74901A3C191D3B090049AFF9 /* XHProfileTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				74901A3D191D3B1C0049AFF9 /* XHProfileTableViewController.h */,
+				74901A3E191D3B1C0049AFF9 /* XHProfileTableViewController.m */,
+			);
+			path = XHProfileTableViewController;
+			sourceTree = "<group>";
+		};
 		74FAB0BA190A92CC005623D0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -1015,6 +1030,7 @@
 				746C89601917F7DE007F9A5E /* XHDisplayEmotionViewController.h in Headers */,
 				740660BE1914D65600E1CE95 /* XHEmotion.h in Headers */,
 				746C895B1917F7B4007F9A5E /* XHMessageTableViewController.h in Headers */,
+				74901A3F191D3B1C0049AFF9 /* XHProfileTableViewController.h in Headers */,
 				74180C14190F450400A35C82 /* XHMessage.h in Headers */,
 				740660A71913552800E1CE95 /* UIImage+XHAnimatedFaceGif.h in Headers */,
 				74585F3E191B999B00F5E8C8 /* XHLocationHelper.h in Headers */,
@@ -1288,6 +1304,7 @@
 				749019B6191D315A0049AFF9 /* XHMessageVideoConverPhotoFactory.m in Sources */,
 				74180BFF190F44A200A35C82 /* NSString+MessageInputView.m in Sources */,
 				740660C01914D65600E1CE95 /* XHEmotion.m in Sources */,
+				74901A41191D3B1C0049AFF9 /* XHProfileTableViewController.m in Sources */,
 				74180C01190F44A600A35C82 /* XHMessage.m in Sources */,
 				746C89311917F691007F9A5E /* XHBubblePhotoImageView.m in Sources */,
 				740660CF1914E1F400E1CE95 /* XHEmotionManager.m in Sources */,
@@ -1327,6 +1344,7 @@
 				746C89481917F691007F9A5E /* XHEmotionCollectionViewFlowLayout.m in Sources */,
 				7482456B19090C04008EC388 /* XHMessage.m in Sources */,
 				7482458F19092170008EC388 /* NSString+MessageInputView.m in Sources */,
+				74901A40191D3B1C0049AFF9 /* XHProfileTableViewController.m in Sources */,
 				746C893F1917F691007F9A5E /* XHMessageInputView.m in Sources */,
 				749019B5191D315A0049AFF9 /* XHMessageVideoConverPhotoFactory.m in Sources */,
 				746C89301917F691007F9A5E /* XHBubblePhotoImageView.m in Sources */,

@@ -36,7 +36,7 @@
     self.displayTextView.text = [message text];
 }
 
-#pragma mark - life cycle
+#pragma mark - Life cycle
 
 - (void)viewDidLoad
 {

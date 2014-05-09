@@ -14,6 +14,8 @@
 
 @implementation XHDisplayEmotionViewController
 
+#pragma mark - Life cycle
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
