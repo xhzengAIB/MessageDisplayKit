@@ -58,6 +58,8 @@ Send geolocations.
 Send third party gif message.                           
 * 16、通用于iPhone和iPad。                               
 Support both iPhone and iPad.   
+* 17、支持StoryBorad。
+Support the StoryBorad to user.
 
 ## License
 
