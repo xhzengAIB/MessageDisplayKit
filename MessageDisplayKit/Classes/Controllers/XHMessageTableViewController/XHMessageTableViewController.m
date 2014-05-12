@@ -232,7 +232,7 @@
 
 - (void)setup {
     // iPhone or iPad keyboard view height set here.
-    self.keyboardViewHeight = 216;
+    self.keyboardViewHeight = (kIsiPad ? 264 : 216);
     _allowsPanToDismissKeyboard = YES;
     _allowsSendVoice = YES;
     _allowsSendMultiMedia = YES;
