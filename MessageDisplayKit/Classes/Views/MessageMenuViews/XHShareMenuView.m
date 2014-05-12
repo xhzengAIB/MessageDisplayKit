@@ -7,9 +7,10 @@
 //
 
 #import "XHShareMenuView.h"
+#import "XHMacro.h"
 
 // 每行有4个
-#define kXHShareMenuPerRowItemCount 4
+#define kXHShareMenuPerRowItemCount (kIsiPad ? 10 : 4)
 #define kXHShareMenuPerColum 2
 
 @interface XHShareMenuItemView : UIView
