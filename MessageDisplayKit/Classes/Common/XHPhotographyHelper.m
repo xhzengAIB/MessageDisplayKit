@@ -29,12 +29,18 @@
 }
 
 - (void)showOnPickerViewControllerSourceType:(UIImagePickerControllerSourceType)sourceType onViewController:(UIViewController *)viewController compled:(DidFinishTakeMediaCompledBlock)compled {
+    if (![UIImagePickerController isSourceTypeAvailable:sourceType]) {
+        compled(nil, nil);
+        return;
+    }
     self.didFinishTakeMediaCompled = [compled copy];
     UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
     imagePickerController.editing = YES;
     imagePickerController.delegate = self;
     imagePickerController.sourceType = sourceType;
-    imagePickerController.mediaTypes =  [UIImagePickerController availableMediaTypesForSourceType:UIImagePickerControllerSourceTypeCamera];
+    if (sourceType == UIImagePickerControllerSourceTypeCamera) {
+        imagePickerController.mediaTypes =  [UIImagePickerController availableMediaTypesForSourceType:UIImagePickerControllerSourceTypeCamera];
+    }
     [viewController presentViewController:imagePickerController animated:YES completion:NULL];
 }
 

@@ -732,6 +732,8 @@
              */
             [weakSelf didSendMessageWithPhoto:image];
         } else {
+            if (!editingInfo)
+                return ;
             NSString *mediaType = [editingInfo objectForKey: UIImagePickerControllerMediaType];
             NSString *videoPath;
             NSURL *videoUrl;
