@@ -90,7 +90,7 @@
 /**
  *  动态改变textView的高度
  *
- *  @param changeInHeight <#changeInHeight description#>
+ *  @param changeInHeight 动态的高度
  */
 - (void)adjustTextViewHeightBy:(CGFloat)changeInHeight;
 
@@ -136,6 +136,13 @@
                 [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
                     self.holdDownButton.alpha = sender.selected;
                     self.inputTextView.alpha = !sender.selected;
+                } completion:^(BOOL finished) {
+                    
+                }];
+            } else {
+                [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+                    self.holdDownButton.alpha = !sender.selected;
+                    self.inputTextView.alpha = sender.selected;
                 } completion:^(BOOL finished) {
                     
                 }];
