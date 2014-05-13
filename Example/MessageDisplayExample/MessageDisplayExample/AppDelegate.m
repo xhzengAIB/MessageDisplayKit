@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "XHBaseNavigationController.h"
 #import "XHMessageRootViewController.h"
 
 @implementation AppDelegate
@@ -17,7 +18,7 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     
-    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[XHMessageRootViewController alloc] init]];
+    self.window.rootViewController = [[XHBaseNavigationController alloc] initWithRootViewController:[[XHMessageRootViewController alloc] init]];
     
     [self.window makeKeyAndVisible];
     return YES;

@@ -66,6 +66,7 @@
 #pragma mark - Life cycle
 
 - (void)setup {
+    self.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     self.backgroundColor = [UIColor colorWithWhite:0.961 alpha:1.000];
     self.isShowEmotionStoreButton = YES;
     
@@ -97,6 +98,7 @@
     
     if (!_emotionSectionBar) {
         XHEmotionSectionBar *emotionSectionBar = [[XHEmotionSectionBar alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.emotionPageControl.frame), CGRectGetWidth(self.bounds), kXHEmotionSectionBarHeight)];
+        emotionSectionBar.autoresizingMask = UIViewAutoresizingFlexibleWidth;
         emotionSectionBar.backgroundColor = [UIColor colorWithWhite:0.886 alpha:1.000];
         [self addSubview:emotionSectionBar];
         self.emotionSectionBar = emotionSectionBar;
@@ -128,6 +130,10 @@
     if (newSuperview) {
         [self reloadData];
     }
+}
+
+- (void)updateConstraints {
+    
 }
 
 #pragma mark - UIScrollView delegate

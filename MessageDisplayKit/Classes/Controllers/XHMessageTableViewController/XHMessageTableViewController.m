@@ -481,10 +481,8 @@
     return UIInterfaceOrientationMaskPortrait;
 }
 
-- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
-    [super willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
-    [self.messageTableView reloadData];
-    [self.messageTableView setNeedsLayout];
+- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation {
+    return UIInterfaceOrientationPortrait;
 }
 
 #pragma mark - RecorderPath helper method

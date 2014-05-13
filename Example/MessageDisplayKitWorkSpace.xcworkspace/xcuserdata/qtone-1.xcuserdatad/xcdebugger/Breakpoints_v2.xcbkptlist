@@ -106,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../MessageDisplayKit/Classes/Views/MessageInputView/XHMessageInputView.m"
-            timestampString = "421668975.52892"
+            timestampString = "421683160.072687"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "385"
-            endingLineNumber = "385"
+            startingLineNumber = "387"
+            endingLineNumber = "387"
             landmarkName = "-dealloc"
             landmarkType = "5">
          </BreakpointContent>
@@ -169,22 +169,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../MessageDisplayKit/Classes/Views/MessageMenuViews/XHEmotionManagerView.m"
-            timestampString = "421668373.104228"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "120"
-            endingLineNumber = "120"
-            landmarkName = "-dealloc"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "../MessageDisplayKit/Classes/Views/MessageInputView/XHMessageTextView.m"
             timestampString = "421252111.14827"
             startingColumnNumber = "9223372036854775807"
@@ -218,11 +202,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../MessageDisplayKit/Classes/Views/MessageContentViews/XHMessageTableViewCell.m"
-            timestampString = "421301544.919327"
+            timestampString = "421683308.944367"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "441"
-            endingLineNumber = "441"
+            startingLineNumber = "442"
+            endingLineNumber = "442"
             landmarkName = "-dealloc"
             landmarkType = "5">
          </BreakpointContent>

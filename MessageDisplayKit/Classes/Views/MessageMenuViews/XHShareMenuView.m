@@ -134,6 +134,8 @@
 #pragma mark - Life cycle
 
 - (void)setup {
+    self.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+    
     if (!_shareMenuScrollView) {
         UIScrollView *shareMenuScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds) - kXHShareMenuPageControlHeight)];
         shareMenuScrollView.delegate = self;

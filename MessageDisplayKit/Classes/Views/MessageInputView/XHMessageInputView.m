@@ -247,6 +247,7 @@
     // 允许发送多媒体消息，为什么不是先放表情按钮呢？因为布局的需要！
     if (self.allowsSendMultiMedia) {
         button = [self createButtonWithImage:[UIImage imageNamed:@"multiMedia"] HLImage:[UIImage imageNamed:@"multiMedia_HL"]];
+        button.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;
         [button addTarget:self action:@selector(messageStyleButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
         button.tag = 2;
         buttonFrame = button.frame;
@@ -261,6 +262,7 @@
     // 允许发送表情
     if (self.allowsSendFace) {
         button = [self createButtonWithImage:[UIImage imageNamed:@"face"] HLImage:[UIImage imageNamed:@"face_HL"]];
+        button.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;
         [button setImage:[UIImage imageNamed:@"keyborad"] forState:UIControlStateSelected];
         [button addTarget:self action:@selector(messageStyleButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
         button.tag = 1;
