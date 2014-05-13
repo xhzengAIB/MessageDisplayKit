@@ -8,6 +8,12 @@
 
 #import "XHDemoWeChatMessageTableViewController.h"
 
+#import <MessageDisplayFramework/XHDisplayTextViewController.h>
+#import <MessageDisplayFramework/XHDisplayMediaViewController.h>
+#import <MessageDisplayFramework/XHDisplayLocationViewController.h>
+
+#import <MessageDisplayFramework/XHProfileTableViewController.h>
+
 @interface XHDemoWeChatMessageTableViewController ()
 
 @property (nonatomic, strong) NSArray *emotionManagers;
@@ -35,7 +41,8 @@
 }
 
 - (XHMessage *)getVideoMessageWithBubbleMessageType:(XHBubbleMessageType)bubbleMessageType {
-    XHMessage *videoMessage = [[XHMessage alloc] initWithVideoConverPhoto:[UIImage imageNamed:@"placeholderImage"] videoPath:@"http://www.pailixiu.com/jack/networkPhoto.png" videoUrl:nil sender:@"Jayson" timestamp:[NSDate date]];
+    NSString *videoPath = [[NSBundle mainBundle] pathForResource:@"IMG_1555.MOV" ofType:@""];
+    XHMessage *videoMessage = [[XHMessage alloc] initWithVideoConverPhoto:[XHMessageVideoConverPhotoFactory videoConverPhotoWithVideoPath:videoPath] videoPath:videoPath videoUrl:nil sender:@"Jayson" timestamp:[NSDate date]];
     videoMessage.avator = [UIImage imageNamed:@"avator"];
     videoMessage.avatorUrl = @"http://www.pailixiu.com/jack/JieIcon@2x.png";
     videoMessage.bubbleMessageType = bubbleMessageType;
@@ -62,7 +69,7 @@
 }
 
 - (XHMessage *)getGeolocationsMessageWithBubbleMessageType:(XHBubbleMessageType)bubbleMessageType {
-    XHMessage *localPositionMessage = [[XHMessage alloc] initWithLocalPositionPhoto:[UIImage imageNamed:@"Fav_Cell_Loc"] geolocations:@"中国广东省广州市天河区东圃二马路121号" location:[[CLLocation alloc] initWithLatitude:23.110099 longitude:113.401329] sender:@"Jack" timestamp:[NSDate date]];
+    XHMessage *localPositionMessage = [[XHMessage alloc] initWithLocalPositionPhoto:[UIImage imageNamed:@"Fav_Cell_Loc"] geolocations:@"中国广东省广州市天河区东圃二马路121号" location:[[CLLocation alloc] initWithLatitude:23.110387 longitude:113.399444] sender:@"Jack" timestamp:[NSDate date]];
     localPositionMessage.avator = [UIImage imageNamed:@"avator"];
     localPositionMessage.avatorUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
     localPositionMessage.bubbleMessageType = bubbleMessageType;
@@ -128,10 +135,10 @@
     
     // 添加第三方接入数据
     NSMutableArray *shareMenuItems = [NSMutableArray array];
-    NSArray *plugIcons = @[@"sharemore_pic", @"sharemore_video", @"sharemore_location", @"sharemore_friendcard", @"sharemore_myfav", @"sharemore_wxtalk", @"sharemore_videovoip", @"sharemore_voiceinput", @"sharemore_openapi", @"sharemore_openapi"];
-    NSArray *plugTitle = @[@"照片", @"拍摄", @"位置", @"名片", @"我的收藏", @"实时对讲机", @"视频聊天", @"语音输入", @"大众点评", @"应用"];
-    for (NSInteger i = 0; i < 10; i ++) {
-        XHShareMenuItem *shareMenuItem = [[XHShareMenuItem alloc] initWithNormalIconImage:[UIImage imageNamed:[plugIcons objectAtIndex:i]] title:[plugTitle objectAtIndex:i]];
+    NSArray *plugIcons = @[@"sharemore_pic", @"sharemore_video", @"sharemore_location", @"sharemore_friendcard", @"sharemore_myfav", @"sharemore_wxtalk", @"sharemore_videovoip", @"sharemore_voiceinput", @"sharemore_openapi", @"sharemore_openapi", @"avator"];
+    NSArray *plugTitle = @[@"照片", @"拍摄", @"位置", @"名片", @"我的收藏", @"实时对讲机", @"视频聊天", @"语音输入", @"大众点评", @"应用", @"曾宪华"];
+    for (NSString *plugIcon in plugIcons) {
+        XHShareMenuItem *shareMenuItem = [[XHShareMenuItem alloc] initWithNormalIconImage:[UIImage imageNamed:plugIcon] title:[plugTitle objectAtIndex:[plugIcons indexOfObject:plugIcon]]];
         [shareMenuItems addObject:shareMenuItem];
     }
     
@@ -143,7 +150,7 @@
         for (NSInteger j = 0; j < 32; j ++) {
             XHEmotion *emotion = [[XHEmotion alloc] init];
             NSString *imageName = [NSString stringWithFormat:@"section%ld_emotion%ld", (long)i , (long)j % 16];
-            emotion.emotionPath = [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"Demo%d.gif", j % 2] ofType:@""];
+            emotion.emotionPath = [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"Demo%ld.gif", (long)j % 2] ofType:@""];
             emotion.emotionConverPhoto = [UIImage imageNamed:imageName];
             [emotions addObject:emotion];
         }
@@ -171,11 +178,64 @@
     self.emotionManagers = nil;
 }
 
-#pragma mark - UITableView delegate
+/*
+ [self removeMessageAtIndexPath:indexPath];
+ [self insertOldMessages:self.messages];
+ */
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    //    [self removeMessageAtIndexPath:indexPath];
-    //    [self insertOldMessages:self.messages];
+#pragma mark - XHMessageTableViewCell delegate
+
+- (void)multiMediaMessageDidSelectedOnMessage:(id<XHMessageModel>)message atIndexPath:(NSIndexPath *)indexPath onMessageTableViewCell:(XHMessageTableViewCell *)messageTableViewCell {
+    UIViewController *disPlayViewController;
+    switch (message.messageMediaType) {
+        case XHBubbleMessageVideo:
+        case XHBubbleMessagePhoto: {
+            DLog(@"message : %@", message.photo);
+            DLog(@"message : %@", message.videoConverPhoto);
+            XHDisplayMediaViewController *messageDisplayTextView = [[XHDisplayMediaViewController alloc] init];
+            messageDisplayTextView.message = message;
+            disPlayViewController = messageDisplayTextView;
+            break;
+        }
+            break;
+        case XHBubbleMessageVoice:
+            DLog(@"message : %@", message.voicePath);
+            [messageTableViewCell.messageBubbleView.animationVoiceImageView startAnimating];
+            [messageTableViewCell.messageBubbleView.animationVoiceImageView performSelector:@selector(stopAnimating) withObject:nil afterDelay:3];
+            break;
+        case XHBubbleMessageFace:
+            DLog(@"facePath : %@", message.emotionPath);
+            break;
+        case XHBubbleMessageLocalPosition: {
+            DLog(@"facePath : %@", message.localPositionPhoto);
+            XHDisplayLocationViewController *displayLocationViewController = [[XHDisplayLocationViewController alloc] init];
+            displayLocationViewController.message = message;
+            disPlayViewController = displayLocationViewController;
+            break;
+        }
+        default:
+            break;
+    }
+    if (disPlayViewController) {
+        [self.navigationController pushViewController:disPlayViewController animated:YES];
+    }
+}
+
+- (void)didDoubleSelectedOnTextMessage:(id<XHMessageModel>)message atIndexPath:(NSIndexPath *)indexPath {
+    DLog(@"text : %@", message.text);
+    XHDisplayTextViewController *displayTextViewController = [[XHDisplayTextViewController alloc] init];
+    displayTextViewController.message = message;
+    [self.navigationController pushViewController:displayTextViewController animated:YES];
+}
+
+- (void)didSelectedAvatorAtIndexPath:(NSIndexPath *)indexPath {
+    DLog(@"indexPath : %@", indexPath);
+    XHProfileTableViewController *profileTableViewController = [[XHProfileTableViewController alloc] init];
+    [self.navigationController pushViewController:profileTableViewController animated:YES];
+}
+
+- (void)menuDidSelectedAtBubbleMessageMenuSelecteType:(XHBubbleMessageMenuSelecteType)bubbleMessageMenuSelecteType {
+    
 }
 
 #pragma mark - XHEmotionManagerView DataSource
@@ -202,7 +262,10 @@
  *  @param date   发送时间
  */
 - (void)didSendText:(NSString *)text fromSender:(NSString *)sender onDate:(NSDate *)date {
-    [self addMessage:[[XHMessage alloc] initWithText:text sender:sender timestamp:date]];
+    XHMessage *textMessage = [[XHMessage alloc] initWithText:text sender:sender timestamp:date];
+    textMessage.avator = [UIImage imageNamed:@"avator"];
+    textMessage.avatorUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
+    [self addMessage:textMessage];
     [self finishSendMessageWithBubbleMessageType:XHBubbleMessageText];
 }
 
@@ -214,7 +277,10 @@
  *  @param date   发送时间
  */
 - (void)didSendPhoto:(UIImage *)photo fromSender:(NSString *)sender onDate:(NSDate *)date {
-    [self addMessage:[[XHMessage alloc] initWithPhoto:photo thumbnailUrl:nil originPhotoUrl:nil sender:sender timestamp:date]];
+    XHMessage *photoMessage = [[XHMessage alloc] initWithPhoto:photo thumbnailUrl:nil originPhotoUrl:nil sender:sender timestamp:date];
+    photoMessage.avator = [UIImage imageNamed:@"avator"];
+    photoMessage.avatorUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
+    [self addMessage:photoMessage];
     [self finishSendMessageWithBubbleMessageType:XHBubbleMessagePhoto];
 }
 
@@ -226,7 +292,10 @@
  *  @param date      发送时间
  */
 - (void)didSendVideoConverPhoto:(UIImage *)videoConverPhoto videoPath:(NSString *)videoPath fromSender:(NSString *)sender onDate:(NSDate *)date {
-    [self addMessage:[[XHMessage alloc] initWithVideoConverPhoto:videoConverPhoto videoPath:videoPath videoUrl:nil sender:sender timestamp:date]];
+    XHMessage *videoMessage = [[XHMessage alloc] initWithVideoConverPhoto:videoConverPhoto videoPath:videoPath videoUrl:nil sender:sender timestamp:date];
+    videoMessage.avator = [UIImage imageNamed:@"avator"];
+    videoMessage.avatorUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
+    [self addMessage:videoMessage];
     [self finishSendMessageWithBubbleMessageType:XHBubbleMessageVideo];
 }
 
@@ -238,7 +307,10 @@
  *  @param date      发送时间
  */
 - (void)didSendVoice:(NSString *)voicePath fromSender:(NSString *)sender onDate:(NSDate *)date {
-    [self addMessage:[[XHMessage alloc] initWithVoicePath:voicePath voiceUrl:nil sender:sender timestamp:date]];
+    XHMessage *voiceMessage = [[XHMessage alloc] initWithVoicePath:voicePath voiceUrl:nil sender:sender timestamp:date];
+    voiceMessage.avator = [UIImage imageNamed:@"avator"];
+    voiceMessage.avatorUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
+    [self addMessage:voiceMessage];
     [self finishSendMessageWithBubbleMessageType:XHBubbleMessageVoice];
 }
 
@@ -250,7 +322,10 @@
  *  @param date     发送时间
  */
 - (void)didSendEmotion:(NSString *)emotionPath fromSender:(NSString *)sender onDate:(NSDate *)date {
-    [self addMessage:[[XHMessage alloc] initWithEmotionPath:emotionPath sender:sender timestamp:date]];
+    XHMessage *emotionMessage = [[XHMessage alloc] initWithEmotionPath:emotionPath sender:sender timestamp:date];
+    emotionMessage.avator = [UIImage imageNamed:@"avator"];
+    emotionMessage.avatorUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
+    [self addMessage:emotionMessage];
     [self finishSendMessageWithBubbleMessageType:XHBubbleMessageFace];
 }
 
@@ -258,7 +333,10 @@
  *  有些网友说需要发送地理位置，这个我暂时放一放
  */
 - (void)didSendGeoLocationsPhoto:(UIImage *)geoLocationsPhoto geolocations:(NSString *)geolocations location:(CLLocation *)location fromSender:(NSString *)sender onDate:(NSDate *)date {
-    [self addMessage:[[XHMessage alloc] initWithLocalPositionPhoto:geoLocationsPhoto geolocations:geolocations location:location sender:sender timestamp:date]];
+    XHMessage *geoLocationsMessage = [[XHMessage alloc] initWithLocalPositionPhoto:geoLocationsPhoto geolocations:geolocations location:location sender:sender timestamp:date];
+    geoLocationsMessage.avator = [UIImage imageNamed:@"avator"];
+    geoLocationsMessage.avatorUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
+    [self addMessage:geoLocationsMessage];
     [self finishSendMessageWithBubbleMessageType:XHBubbleMessageLocalPosition];
 }
 
