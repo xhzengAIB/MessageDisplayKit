@@ -9,6 +9,7 @@
 #import "XHMessageVideoConverPhotoFactory.h"
 #import <AVFoundation/AVAsset.h>
 #import <AVFoundation/AVAssetImageGenerator.h>
+#import "XHMacro.h"
 
 @implementation XHMessageVideoConverPhotoFactory
 
@@ -27,7 +28,7 @@
     thumbnailImageRef = [assetImageGenerator copyCGImageAtTime:CMTimeMake(thumbnailImageTime, 60) actualTime:NULL error:&thumbnailImageGenerationError];
     
     if (!thumbnailImageRef)
-        NSLog(@"thumbnailImageGenerationError %@", thumbnailImageGenerationError);
+        DLog(@"thumbnailImageGenerationError %@", thumbnailImageGenerationError);
     
     UIImage *thumbnailImage = thumbnailImageRef ? [[UIImage alloc] initWithCGImage:thumbnailImageRef] : nil;
     

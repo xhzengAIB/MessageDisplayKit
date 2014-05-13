@@ -49,6 +49,153 @@
  */
 @property (nonatomic, strong) XHVoiceRecordHelper *voiceRecordHelper;
 
+#pragma mark - DataSource Change
+/**
+ *  改变数据源需要的子线程
+ *
+ *  @param queue 子线程执行完成的回调block
+ */
+- (void)exChangeMessageDataSourceQueue:(void (^)())queue;
+
+/**
+ *  执行块代码在主线程
+ *
+ *  @param queue 主线程执行完成回调block
+ */
+- (void)exMainQueue:(void (^)())queue;
+
+#pragma mark - Previte Method
+/**
+ *  判断是否允许滚动
+ *
+ *  @return 返回判断结果
+ */
+- (BOOL)shouldAllowScroll;
+
+#pragma mark - Life Cycle
+/**
+ *  配置默认参数
+ */
+- (void)setup;
+
+/**
+ *  初始化显示控件
+ */
+- (void)initilzer;
+
+#pragma mark - RecorderPath Helper Method
+/**
+ *  获取录音的路径
+ *
+ *  @return 返回录音的路径
+ */
+- (NSString *)getRecorderPath;
+
+#pragma mark - UITextView Helper Method
+/**
+ *  获取某个UITextView对象的content高度
+ *
+ *  @param textView 被获取的textView对象
+ *
+ *  @return 返回高度
+ */
+- (CGFloat)getTextViewContentH:(UITextView *)textView;
+
+#pragma mark - Layout Message Input View Helper Method
+/**
+ *  动态改变TextView的高度
+ *
+ *  @param textView 被改变的textView对象
+ */
+- (void)layoutAndAnimateMessageInputTextView:(UITextView *)textView;
+
+#pragma mark - Scroll Message TableView Helper Method
+/**
+ *  根据bottom的数值配置消息列表的内部布局变化
+ *
+ *  @param bottom 底部的空缺高度
+ */
+- (void)setTableViewInsetsWithBottomValue:(CGFloat)bottom;
+
+/**
+ *  根据底部高度获取UIEdgeInsets常量
+ *
+ *  @param bottom 底部高度
+ *
+ *  @return 返回UIEdgeInsets常量
+ */
+- (UIEdgeInsets)tableViewInsetsWithBottomValue:(CGFloat)bottom;
+
+#pragma mark - Message Send helper Method
+/**
+ *  根据文本开始发送文本消息
+ *
+ *  @param text 目标文本
+ */
+- (void)didSendMessageWithText:(NSString *)text;
+/**
+ *  根据图片开始发送图片消息
+ *
+ *  @param photo 目标图片
+ */
+- (void)didSendMessageWithPhoto:(UIImage *)photo;
+/**
+ *  根据视频的封面和视频的路径开始发送视频消息
+ *
+ *  @param videoConverPhoto 目标视频的封面图
+ *  @param videoPath        目标视频的路径
+ */
+- (void)didSendMessageWithVideoConverPhoto:(UIImage *)videoConverPhoto videoPath:(NSString *)videoPath;
+/**
+ *  根据录音路径开始发送语音消息
+ *
+ *  @param voicePath 目标语音路径
+ */
+- (void)didSendMessageWithVoice:(NSString *)voicePath;
+/**
+ *  根据第三方gif表情路径开始发送表情消息
+ *
+ *  @param emotionPath 目标gif表情路径
+ */
+- (void)didSendEmotionMessageWithEmotionPath:(NSString *)emotionPath;
+/**
+ *  根据地理位置信息和地理经纬度开始发送地理位置消息
+ *
+ *  @param geolcations 目标地理信息
+ *  @param location    目标地理经纬度
+ */
+- (void)didSendGeolocationsMessageWithGeolocaltions:(NSString *)geolcations location:(CLLocation *)location;
+
+#pragma mark - Other Menu View Frame Helper Mehtod
+/**
+ *  根据显示或隐藏的需求对所有第三方Menu进行管理
+ *
+ *  @param hide 需求条件
+ */
+- (void)layoutOtherMenuViewHiden:(BOOL)hide;
+
+#pragma mark - Voice Recording Helper Method
+/**
+ *  开始录音
+ */
+- (void)startRecord;
+/**
+ *  完成录音
+ */
+- (void)finishRecorded;
+/**
+ *  想停止录音
+ */
+- (void)pauseRecord;
+/**
+ *  继续录音
+ */
+- (void)resumeRecord;
+/**
+ *  取消录音
+ */
+- (void)cancelRecord;
+
 @end
 
 @implementation XHMessageTableViewController
@@ -174,10 +321,7 @@
         _voiceRecordHelper = [[XHVoiceRecordHelper alloc] init];
         _voiceRecordHelper.maxTimeStopRecorderCompletion = ^{
             DLog(@"已经达到最大限制时间了，进入下一步的提示");
-            [weakSelf didFinishRecoingVoiceAction];
-        };
-        _voiceRecordHelper.recordProgress = ^(float progress) {
-//            DLog(@"progress : %f", progress);
+            [weakSelf finishRecorded];
         };
         _voiceRecordHelper.peakPowerForChannel = ^(float peakPowerForChannel) {
             weakSelf.voiceRecordHUD.peakPower = peakPowerForChannel;
@@ -187,7 +331,7 @@
     return _voiceRecordHelper;
 }
 
-#pragma mark - Messages view controller
+#pragma mark - Messages View Controller
 
 - (void)finishSendMessageWithBubbleMessageType:(XHBubbleMessageMediaType)mediaType {
     switch (mediaType) {
@@ -269,7 +413,7 @@
     return YES;
 }
 
-#pragma mark - Life cycle
+#pragma mark - Life Cycle
 
 - (void)setup {
     // iPhone or iPad keyboard view height set here.
@@ -471,7 +615,7 @@
     _locationHelper = nil;
 }
 
-#pragma mark - View rotation
+#pragma mark - View Rotation
 
 - (BOOL)shouldAutorotate {
     return NO;
@@ -485,7 +629,7 @@
     return UIInterfaceOrientationPortrait;
 }
 
-#pragma mark - RecorderPath helper method
+#pragma mark - RecorderPath Helper Method
 
 - (NSString *)getRecorderPath {
     NSString *recorderPath = nil;
@@ -498,7 +642,7 @@
     return recorderPath;
 }
 
-#pragma mark - UITextView Helper method
+#pragma mark - UITextView Helper Method
 
 - (CGFloat)getTextViewContentH:(UITextView *)textView {
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
@@ -508,7 +652,7 @@
     }
 }
 
-#pragma mark - Layout message input view
+#pragma mark - Layout Message Input View Helper Method
 
 - (void)layoutAndAnimateMessageInputTextView:(UITextView *)textView {
     CGFloat maxHeight = [XHMessageInputView maxHeight];
@@ -593,7 +737,7 @@
     return insets;
 }
 
-#pragma mark - XHMessage Send helper Method
+#pragma mark - Message Send helper Method
 
 - (void)didSendMessageWithText:(NSString *)text {
     DLog(@"send text : %@", text);
@@ -637,7 +781,7 @@
     }
 }
 
-#pragma mark - Other Menu View Frame helper mehtod
+#pragma mark - Other Menu View Frame Helper Mehtod
 
 - (void)layoutOtherMenuViewHiden:(BOOL)hide {
     [self.messageInputView.inputTextView resignFirstResponder];
@@ -711,6 +855,43 @@
     }];
 }
 
+#pragma mark - Voice Recording Helper Method
+
+- (void)startRecord {
+    [self.voiceRecordHUD startRecordingHUDAtView:self.view];
+    [self.voiceRecordHelper startRecordingWithPath:[self getRecorderPath] StartRecorderCompletion:^{
+        
+    }];
+}
+
+- (void)finishRecorded {
+    WEAKSELF
+    [self.voiceRecordHUD stopRecordCompled:^(BOOL fnished) {
+        weakSelf.voiceRecordHUD = nil;
+    }];
+    [self.voiceRecordHelper stopRecordingWithStopRecorderCompletion:^{
+        [weakSelf didSendMessageWithVoice:weakSelf.voiceRecordHelper.recordPath];
+    }];
+}
+
+- (void)pauseRecord {
+    [self.voiceRecordHUD pauseRecord];
+}
+
+- (void)resumeRecord {
+    [self.voiceRecordHUD resaueRecord];
+}
+
+- (void)cancelRecord {
+    WEAKSELF
+    [self.voiceRecordHUD cancelRecordCompled:^(BOOL fnished) {
+        weakSelf.voiceRecordHUD = nil;
+    }];
+    [self.voiceRecordHelper cancelledDeleteWithCompletion:^{
+        
+    }];
+}
+
 #pragma mark - XHMessageInputView Delegate
 
 - (void)inputTextViewWillBeginEditing:(XHMessageTextView *)messageInputTextView {
@@ -755,48 +936,33 @@
 
 - (void)didStartRecordingVoiceAction {
     DLog(@"didStartRecordingVoice");
-    [self.voiceRecordHUD startRecordingHUDAtView:self.view];
-    [self.voiceRecordHelper startRecordingWithPath:[self getRecorderPath] StartRecorderCompletion:^{
-        
-    }];
+    [self startRecord];
 }
 
 - (void)didCancelRecordingVoiceAction {
     DLog(@"didCancelRecordingVoice");
-    WEAKSELF
-    [self.voiceRecordHUD cancelRecordCompled:^(BOOL fnished) {
-        weakSelf.voiceRecordHUD = nil;
-    }];
-    [self.voiceRecordHelper cancelledDeleteWithCompletion:^{
-        
-    }];
+    [self cancelRecord];
 }
 
 - (void)didFinishRecoingVoiceAction {
     DLog(@"didFinishRecoingVoice");
-    WEAKSELF
-    [self.voiceRecordHUD stopRecordCompled:^(BOOL fnished) {
-        weakSelf.voiceRecordHUD = nil;
-    }];
-    [self.voiceRecordHelper stopRecordingWithStopRecorderCompletion:^{
-        [weakSelf didSendMessageWithVoice:weakSelf.voiceRecordHelper.recordPath];
-    }];
+    [self finishRecorded];
 }
 
 - (void)didDragOutsideAction {
     DLog(@"didDragOutsideAction");
-    [self.voiceRecordHUD resaueRecord];
+    [self resumeRecord];
 }
 
 - (void)didDragInsideAction {
     DLog(@"didDragInsideAction");
-    [self.voiceRecordHUD pauseRecord];
+    [self pauseRecord];
 }
 
-#pragma mark - XHShareMenuView delegate
+#pragma mark - XHShareMenuView Delegate
 
 - (void)didSelecteShareMenuItem:(XHShareMenuItem *)shareMenuItem atIndex:(NSInteger)index {
-    NSLog(@"title : %@   index:%ld", shareMenuItem.title, (long)index);
+    DLog(@"title : %@   index:%ld", shareMenuItem.title, (long)index);
     
     WEAKSELF
     void (^PickerMediaBlock)(UIImage *image, NSDictionary *editingInfo) = ^(UIImage *image, NSDictionary *editingInfo) {
@@ -849,7 +1015,7 @@
     }
 }
 
-#pragma mark - XHEmotionManagerView delegate
+#pragma mark - XHEmotionManagerView Delegate
 
 - (void)didSelecteEmotion:(XHEmotion *)emotion atIndexPath:(NSIndexPath *)indexPath {
     if (emotion.emotionPath) {
@@ -871,7 +1037,7 @@
     return nil;
 }
 
-#pragma mark - UIScrollView delegate
+#pragma mark - UIScrollView Delegate
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
 	self.isUserScrolling = YES;
@@ -890,7 +1056,7 @@
     self.isUserScrolling = NO;
 }
 
-#pragma mark - XHMessageTableViewController delegate
+#pragma mark - XHMessageTableViewController Delegate
 
 - (BOOL)shouldPreventScrollToBottomWhileUserScrolling {
     return YES;
@@ -902,7 +1068,7 @@
     return self.messages[indexPath.row];
 }
 
-#pragma mark - Table view data source
+#pragma mark - Table View Data Source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
@@ -940,7 +1106,7 @@
     return messageTableViewCell;
 }
 
-#pragma mark - Table view delegate
+#pragma mark - Table View Delegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     id <XHMessageModel> message = [self.dataSource messageForRowAtIndexPath:indexPath];
@@ -953,7 +1119,7 @@
     return [XHMessageTableViewCell calculateCellHeightWithMessage:message displaysTimestamp:displayTimestamp];
 }
 
-#pragma mark - Key-value observing
+#pragma mark - Key-value Observing
 
 - (void)observeValueForKeyPath:(NSString *)keyPath
                       ofObject:(id)object
