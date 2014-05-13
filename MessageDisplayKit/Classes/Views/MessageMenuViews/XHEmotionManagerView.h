@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "XHEmotionManager.h"
+#import "XHMacro.h"
 
 #define kXHEmotionPerRowItemCount (kIsiPad ? 10 : 4)
 #define kXHEmotionPageControlHeight 38

@@ -17,6 +17,7 @@
 #import "XHMessageInputView.h"
 #import "XHShareMenuView.h"
 #import "XHEmotionManagerView.h"
+#import "XHVoiceRecordHUD.h"
 
 // Factory
 #import "XHMessageBubbleFactory.h"
@@ -25,6 +26,7 @@
 // Helper
 #import "XHPhotographyHelper.h"
 #import "XHLocationHelper.h"
+#import "XHVoiceRecordHelper.h"
 
 // Categorys
 #import "UIScrollView+XHkeyboardControl.h"

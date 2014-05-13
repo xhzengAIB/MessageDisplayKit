@@ -63,7 +63,14 @@ typedef NS_ENUM(NSInteger, XHMessageInputViewStyle) {
  *  松开手指完成录音
  */
 - (void)didFinishRecoingVoiceAction;
-
+/**
+ *  当手指离开按钮的范围内时，主要为了通知外部的HUD
+ */
+- (void)didDragOutsideAction;
+/**
+ *  当手指再次进入按钮的范围内时，主要也是为了通知外部的HUD
+ */
+- (void)didDragInsideAction;
 
 /**
  *  发送第三方表情

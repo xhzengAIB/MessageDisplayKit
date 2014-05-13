@@ -61,7 +61,6 @@
 		74585FFF191D10CC00F5E8C8 /* XHAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 74585FFC191D10CC00F5E8C8 /* XHAnnotation.m */; };
 		746C881B1916B5D6007F9A5E /* face_HL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 746C88121916B5D6007F9A5E /* face_HL@2x.png */; };
 		746C881C1916B5D6007F9A5E /* face@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 746C88131916B5D6007F9A5E /* face@2x.png */; };
-		746C881D1916B5D6007F9A5E /* holdDownButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 746C88141916B5D6007F9A5E /* holdDownButton@2x.png */; };
 		746C881E1916B5D6007F9A5E /* keyborad_HL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 746C88151916B5D6007F9A5E /* keyborad_HL@2x.png */; };
 		746C881F1916B5D6007F9A5E /* keyborad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 746C88161916B5D6007F9A5E /* keyborad@2x.png */; };
 		746C88201916B5D6007F9A5E /* multiMedia_HL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 746C88171916B5D6007F9A5E /* multiMedia_HL@2x.png */; };
@@ -211,6 +210,24 @@
 		74BBB032190C28CD00093577 /* XHDemoWeChatMessageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74BBB031190C28CD00093577 /* XHDemoWeChatMessageTableViewController.m */; };
 		74D1C5C6190DFC1D003B1BCA /* XHFoundationCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 74D1C5C5190DFC1D003B1BCA /* XHFoundationCommon.m */; };
 		74D1C5E9190E2BE6003B1BCA /* XHMessageVoiceFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 74D1C5E8190E2BE6003B1BCA /* XHMessageVoiceFactory.m */; };
+		74E5E9891921317B0084BCFA /* XHVoiceRecordHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 74E5E9871921317B0084BCFA /* XHVoiceRecordHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		74E5E98A1921317B0084BCFA /* XHVoiceRecordHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E5E9881921317B0084BCFA /* XHVoiceRecordHelper.m */; };
+		74E5E98B1921317B0084BCFA /* XHVoiceRecordHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E5E9881921317B0084BCFA /* XHVoiceRecordHelper.m */; };
+		74E5E9951921E90A0084BCFA /* XHVoiceRecordHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 74E5E9931921E90A0084BCFA /* XHVoiceRecordHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		74E5E9961921E90A0084BCFA /* XHVoiceRecordHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E5E9941921E90A0084BCFA /* XHVoiceRecordHUD.m */; };
+		74E5E9971921E90A0084BCFA /* XHVoiceRecordHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E5E9941921E90A0084BCFA /* XHVoiceRecordHUD.m */; };
+		74E5E99A1921EC8C0084BCFA /* VoiceBtn_Black@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74E5E9981921EC8C0084BCFA /* VoiceBtn_Black@2x.png */; };
+		74E5E99B1921EC8C0084BCFA /* VoiceBtn_BlackHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74E5E9991921EC8C0084BCFA /* VoiceBtn_BlackHL@2x.png */; };
+		74E5E9A91921F7710084BCFA /* RecordingSignal001@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74E5E99F1921F7710084BCFA /* RecordingSignal001@2x.png */; };
+		74E5E9AA1921F7710084BCFA /* RecordingSignal002@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74E5E9A01921F7710084BCFA /* RecordingSignal002@2x.png */; };
+		74E5E9AB1921F7710084BCFA /* RecordingSignal003@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74E5E9A11921F7710084BCFA /* RecordingSignal003@2x.png */; };
+		74E5E9AC1921F7710084BCFA /* RecordingSignal004@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74E5E9A21921F7710084BCFA /* RecordingSignal004@2x.png */; };
+		74E5E9AD1921F7710084BCFA /* RecordingSignal005@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74E5E9A31921F7710084BCFA /* RecordingSignal005@2x.png */; };
+		74E5E9AE1921F7710084BCFA /* RecordingSignal006@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74E5E9A41921F7710084BCFA /* RecordingSignal006@2x.png */; };
+		74E5E9AF1921F7710084BCFA /* RecordingSignal007@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74E5E9A51921F7710084BCFA /* RecordingSignal007@2x.png */; };
+		74E5E9B01921F7710084BCFA /* RecordingSignal008@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74E5E9A61921F7710084BCFA /* RecordingSignal008@2x.png */; };
+		74E5E9B11921F7710084BCFA /* RecordingBkg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74E5E9A71921F7710084BCFA /* RecordingBkg@2x.png */; };
+		74E5E9B21921F7710084BCFA /* RecordCancel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74E5E9A81921F7710084BCFA /* RecordCancel@2x.png */; };
 		74FAB0B9190A81DC005623D0 /* UIImage+XHRounded.m in Sources */ = {isa = PBXBuildFile; fileRef = 74FAB0B8190A81DC005623D0 /* UIImage+XHRounded.m */; };
 /* End PBXBuildFile section */
 
@@ -262,7 +279,6 @@
 		74585FFC191D10CC00F5E8C8 /* XHAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHAnnotation.m; sourceTree = "<group>"; };
 		746C88121916B5D6007F9A5E /* face_HL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "face_HL@2x.png"; sourceTree = "<group>"; };
 		746C88131916B5D6007F9A5E /* face@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "face@2x.png"; sourceTree = "<group>"; };
-		746C88141916B5D6007F9A5E /* holdDownButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "holdDownButton@2x.png"; sourceTree = "<group>"; };
 		746C88151916B5D6007F9A5E /* keyborad_HL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "keyborad_HL@2x.png"; sourceTree = "<group>"; };
 		746C88161916B5D6007F9A5E /* keyborad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "keyborad@2x.png"; sourceTree = "<group>"; };
 		746C88171916B5D6007F9A5E /* multiMedia_HL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "multiMedia_HL@2x.png"; sourceTree = "<group>"; };
@@ -407,6 +423,22 @@
 		74D1C5C5190DFC1D003B1BCA /* XHFoundationCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHFoundationCommon.m; sourceTree = "<group>"; };
 		74D1C5E7190E2BE6003B1BCA /* XHMessageVoiceFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMessageVoiceFactory.h; sourceTree = "<group>"; };
 		74D1C5E8190E2BE6003B1BCA /* XHMessageVoiceFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMessageVoiceFactory.m; sourceTree = "<group>"; };
+		74E5E9871921317B0084BCFA /* XHVoiceRecordHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHVoiceRecordHelper.h; sourceTree = "<group>"; };
+		74E5E9881921317B0084BCFA /* XHVoiceRecordHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHVoiceRecordHelper.m; sourceTree = "<group>"; };
+		74E5E9931921E90A0084BCFA /* XHVoiceRecordHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHVoiceRecordHUD.h; sourceTree = "<group>"; };
+		74E5E9941921E90A0084BCFA /* XHVoiceRecordHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHVoiceRecordHUD.m; sourceTree = "<group>"; };
+		74E5E9981921EC8C0084BCFA /* VoiceBtn_Black@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VoiceBtn_Black@2x.png"; sourceTree = "<group>"; };
+		74E5E9991921EC8C0084BCFA /* VoiceBtn_BlackHL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VoiceBtn_BlackHL@2x.png"; sourceTree = "<group>"; };
+		74E5E99F1921F7710084BCFA /* RecordingSignal001@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RecordingSignal001@2x.png"; sourceTree = "<group>"; };
+		74E5E9A01921F7710084BCFA /* RecordingSignal002@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RecordingSignal002@2x.png"; sourceTree = "<group>"; };
+		74E5E9A11921F7710084BCFA /* RecordingSignal003@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RecordingSignal003@2x.png"; sourceTree = "<group>"; };
+		74E5E9A21921F7710084BCFA /* RecordingSignal004@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RecordingSignal004@2x.png"; sourceTree = "<group>"; };
+		74E5E9A31921F7710084BCFA /* RecordingSignal005@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RecordingSignal005@2x.png"; sourceTree = "<group>"; };
+		74E5E9A41921F7710084BCFA /* RecordingSignal006@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RecordingSignal006@2x.png"; sourceTree = "<group>"; };
+		74E5E9A51921F7710084BCFA /* RecordingSignal007@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RecordingSignal007@2x.png"; sourceTree = "<group>"; };
+		74E5E9A61921F7710084BCFA /* RecordingSignal008@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RecordingSignal008@2x.png"; sourceTree = "<group>"; };
+		74E5E9A71921F7710084BCFA /* RecordingBkg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RecordingBkg@2x.png"; sourceTree = "<group>"; };
+		74E5E9A81921F7710084BCFA /* RecordCancel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RecordCancel@2x.png"; sourceTree = "<group>"; };
 		74FAB0B7190A81DC005623D0 /* UIImage+XHRounded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+XHRounded.h"; sourceTree = "<group>"; };
 		74FAB0B8190A81DC005623D0 /* UIImage+XHRounded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+XHRounded.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -603,9 +635,10 @@
 		746C87FE1916B58B007F9A5E /* ToolButtons */ = {
 			isa = PBXGroup;
 			children = (
+				74E5E9981921EC8C0084BCFA /* VoiceBtn_Black@2x.png */,
+				74E5E9991921EC8C0084BCFA /* VoiceBtn_BlackHL@2x.png */,
 				746C88121916B5D6007F9A5E /* face_HL@2x.png */,
 				746C88131916B5D6007F9A5E /* face@2x.png */,
-				746C88141916B5D6007F9A5E /* holdDownButton@2x.png */,
 				746C88151916B5D6007F9A5E /* keyborad_HL@2x.png */,
 				746C88161916B5D6007F9A5E /* keyborad@2x.png */,
 				746C88171916B5D6007F9A5E /* multiMedia_HL@2x.png */,
@@ -673,6 +706,8 @@
 				746C89211917F691007F9A5E /* XHMessageInputView.m */,
 				746C89221917F691007F9A5E /* XHMessageTextView.h */,
 				746C89231917F691007F9A5E /* XHMessageTextView.m */,
+				74E5E9931921E90A0084BCFA /* XHVoiceRecordHUD.h */,
+				74E5E9941921E90A0084BCFA /* XHVoiceRecordHUD.m */,
 			);
 			path = MessageInputView;
 			sourceTree = "<group>";
@@ -939,6 +974,8 @@
 				740660B31914CA0000E1CE95 /* XHPhotographyHelper.m */,
 				74585F3C191B999B00F5E8C8 /* XHLocationHelper.h */,
 				74585F3D191B999B00F5E8C8 /* XHLocationHelper.m */,
+				74E5E9871921317B0084BCFA /* XHVoiceRecordHelper.h */,
+				74E5E9881921317B0084BCFA /* XHVoiceRecordHelper.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -983,9 +1020,27 @@
 			path = XHBaseViewController;
 			sourceTree = "<group>";
 		};
+		74E5E99E1921F7580084BCFA /* VoiceRecordHUDImages */ = {
+			isa = PBXGroup;
+			children = (
+				74E5E99F1921F7710084BCFA /* RecordingSignal001@2x.png */,
+				74E5E9A01921F7710084BCFA /* RecordingSignal002@2x.png */,
+				74E5E9A11921F7710084BCFA /* RecordingSignal003@2x.png */,
+				74E5E9A21921F7710084BCFA /* RecordingSignal004@2x.png */,
+				74E5E9A31921F7710084BCFA /* RecordingSignal005@2x.png */,
+				74E5E9A41921F7710084BCFA /* RecordingSignal006@2x.png */,
+				74E5E9A51921F7710084BCFA /* RecordingSignal007@2x.png */,
+				74E5E9A61921F7710084BCFA /* RecordingSignal008@2x.png */,
+				74E5E9A71921F7710084BCFA /* RecordingBkg@2x.png */,
+				74E5E9A81921F7710084BCFA /* RecordCancel@2x.png */,
+			);
+			name = VoiceRecordHUDImages;
+			sourceTree = "<group>";
+		};
 		74FAB0BA190A92CC005623D0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				74E5E99E1921F7580084BCFA /* VoiceRecordHUDImages */,
 				746C87FC1916B57D007F9A5E /* InputViewImages */,
 				746C87F41916B511007F9A5E /* BubbleImages */,
 				74BBB022190B8EAB00093577 /* MessageDisplayKitString.strings */,
@@ -1028,6 +1083,7 @@
 				746C89781917F8B2007F9A5E /* XHBaseNavigationController.h in Headers */,
 				746C89601917F7DE007F9A5E /* XHDisplayEmotionViewController.h in Headers */,
 				740660BE1914D65600E1CE95 /* XHEmotion.h in Headers */,
+				74E5E9891921317B0084BCFA /* XHVoiceRecordHelper.h in Headers */,
 				746C895B1917F7B4007F9A5E /* XHMessageTableViewController.h in Headers */,
 				74901A3F191D3B1C0049AFF9 /* XHProfileTableViewController.h in Headers */,
 				74180C14190F450400A35C82 /* XHMessage.h in Headers */,
@@ -1039,6 +1095,7 @@
 				749019B4191D315A0049AFF9 /* XHMessageVideoConverPhotoFactory.h in Headers */,
 				74901A45191D4CD30049AFF9 /* XHBaseViewController.h in Headers */,
 				74180C10190F44F800A35C82 /* UIScrollView+XHkeyboardControl.h in Headers */,
+				74E5E9951921E90A0084BCFA /* XHVoiceRecordHUD.h in Headers */,
 				74180C0B190F44EC00A35C82 /* XHMessageBubbleFactory.h in Headers */,
 				74180C0C190F44ED00A35C82 /* XHMacro.h in Headers */,
 			);
@@ -1179,6 +1236,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74E5E9A91921F7710084BCFA /* RecordingSignal001@2x.png in Resources */,
 				74585F3B191B939800F5E8C8 /* MessageVideoPlay@2x.png in Resources */,
 				746C88431916B607007F9A5E /* ReceiverVoiceNodePlaying000@2x.png in Resources */,
 				746C885C1916B612007F9A5E /* sharemore_videovoip@2x.png in Resources */,
@@ -1192,7 +1250,10 @@
 				746C887C1916B62D007F9A5E /* section0_emotion11@2x.png in Resources */,
 				749019A5191D30190049AFF9 /* avator@2x.png in Resources */,
 				746C88771916B62D007F9A5E /* section0_emotion6@2x.png in Resources */,
+				74E5E9AA1921F7710084BCFA /* RecordingSignal002@2x.png in Resources */,
+				74E5E9AD1921F7710084BCFA /* RecordingSignal005@2x.png in Resources */,
 				7482450F1908C730008EC388 /* InfoPlist.strings in Resources */,
+				74E5E9B21921F7710084BCFA /* RecordCancel@2x.png in Resources */,
 				746C88441916B607007F9A5E /* ReceiverVoiceNodePlaying001@2x.png in Resources */,
 				746C88721916B62D007F9A5E /* section0_emotion1@2x.png in Resources */,
 				746C882D1916B5EE007F9A5E /* input-bar-flat@2x.png in Resources */,
@@ -1206,6 +1267,7 @@
 				746C88351916B5FE007F9A5E /* weChatBubble_Receiving_Solid@2x.png in Resources */,
 				746C88751916B62D007F9A5E /* section0_emotion4@2x.png in Resources */,
 				746C88561916B612007F9A5E /* sharemore_friendcard@2x.png in Resources */,
+				74E5E9B01921F7710084BCFA /* RecordingSignal008@2x.png in Resources */,
 				746C881E1916B5D6007F9A5E /* keyborad_HL@2x.png in Resources */,
 				746C88741916B62D007F9A5E /* section0_emotion3@2x.png in Resources */,
 				746C884A1916B607007F9A5E /* SenderVoiceNodePlaying002@2x.png in Resources */,
@@ -1213,6 +1275,7 @@
 				746C881C1916B5D6007F9A5E /* face@2x.png in Resources */,
 				746C887B1916B62D007F9A5E /* section0_emotion10@2x.png in Resources */,
 				749019A7191D30190049AFF9 /* Demo0.gif in Resources */,
+				74E5E99B1921EC8C0084BCFA /* VoiceBtn_BlackHL@2x.png in Resources */,
 				746C88361916B5FE007F9A5E /* weChatBubble_Sending_Cavern@2x.png in Resources */,
 				746C884B1916B607007F9A5E /* SenderVoiceNodePlaying003@2x.png in Resources */,
 				749019A9191D30190049AFF9 /* Demo1.gif in Resources */,
@@ -1226,22 +1289,27 @@
 				746C887A1916B62D007F9A5E /* section0_emotion9@2x.png in Resources */,
 				746C885A1916B612007F9A5E /* sharemore_pic@2x.png in Resources */,
 				746C885F1916B612007F9A5E /* sharemore_wxtalk@2x.png in Resources */,
+				74E5E9AF1921F7710084BCFA /* RecordingSignal007@2x.png in Resources */,
 				746C88201916B5D6007F9A5E /* multiMedia_HL@2x.png in Resources */,
+				74E5E9AB1921F7710084BCFA /* RecordingSignal003@2x.png in Resources */,
 				746C882A1916B5EE007F9A5E /* input-bar-background.png in Resources */,
 				746C88761916B62D007F9A5E /* section0_emotion5@2x.png in Resources */,
 				746C885E1916B612007F9A5E /* sharemore_voipvoice@2x.png in Resources */,
 				749019AF191D30190049AFF9 /* TableViewBackgroundImage@2x.png in Resources */,
 				746C881B1916B5D6007F9A5E /* face_HL@2x.png in Resources */,
 				746C88591916B612007F9A5E /* sharemore_openapi@2x.png in Resources */,
+				74E5E9AC1921F7710084BCFA /* RecordingSignal004@2x.png in Resources */,
 				746C88791916B62D007F9A5E /* section0_emotion8@2x.png in Resources */,
 				749019AB191D30190049AFF9 /* IMG_1555.MOV in Resources */,
-				746C881D1916B5D6007F9A5E /* holdDownButton@2x.png in Resources */,
 				746C885D1916B612007F9A5E /* sharemore_voiceinput@2x.png in Resources */,
 				746C88231916B5D6007F9A5E /* voice@2x.png in Resources */,
 				746C88451916B607007F9A5E /* ReceiverVoiceNodePlaying002@2x.png in Resources */,
 				746C887D1916B62D007F9A5E /* section0_emotion12@2x.png in Resources */,
+				74E5E99A1921EC8C0084BCFA /* VoiceBtn_Black@2x.png in Resources */,
 				746C88571916B612007F9A5E /* sharemore_location@2x.png in Resources */,
+				74E5E9AE1921F7710084BCFA /* RecordingSignal006@2x.png in Resources */,
 				746C88491916B607007F9A5E /* SenderVoiceNodePlaying001@2x.png in Resources */,
+				74E5E9B11921F7710084BCFA /* RecordingBkg@2x.png in Resources */,
 				746C885B1916B612007F9A5E /* sharemore_video@2x.png in Resources */,
 				746C882F1916B5EE007F9A5E /* input-field-cover@2x.png in Resources */,
 				746C88421916B607007F9A5E /* ReceiverVoiceNodePlaying@2x.png in Resources */,
@@ -1283,9 +1351,11 @@
 			files = (
 				746C89431917F691007F9A5E /* XHMessageTextView.m in Sources */,
 				74180BFA190F448800A35C82 /* XHMessageBubbleFactory.m in Sources */,
+				74E5E9971921E90A0084BCFA /* XHVoiceRecordHUD.m in Sources */,
 				746C894C1917F691007F9A5E /* XHEmotionManagerView.m in Sources */,
 				74585F47191C8B5700F5E8C8 /* UIView+XHNetworkImage.m in Sources */,
 				74585FFF191D10CC00F5E8C8 /* XHAnnotation.m in Sources */,
+				74E5E98B1921317B0084BCFA /* XHVoiceRecordHelper.m in Sources */,
 				74180BFD190F449400A35C82 /* XHFoundationCommon.m in Sources */,
 				74901A47191D4CD30049AFF9 /* XHBaseViewController.m in Sources */,
 				746C893D1917F691007F9A5E /* XHMessageTableViewCell.m in Sources */,
@@ -1350,6 +1420,7 @@
 				749019B5191D315A0049AFF9 /* XHMessageVideoConverPhotoFactory.m in Sources */,
 				746C89301917F691007F9A5E /* XHBubblePhotoImageView.m in Sources */,
 				746C89881917F8EA007F9A5E /* XHBaseTableViewController.m in Sources */,
+				74E5E9961921E90A0084BCFA /* XHVoiceRecordHUD.m in Sources */,
 				746C897E1917F8C5007F9A5E /* XHBaseTabBarController.m in Sources */,
 				746C89611917F7DE007F9A5E /* XHDisplayEmotionViewController.m in Sources */,
 				7490198A191D2D030049AFF9 /* XHDisplayMediaViewController.m in Sources */,
@@ -1376,6 +1447,7 @@
 				748245111908C730008EC388 /* main.m in Sources */,
 				7482455C190902DA008EC388 /* UIScrollView+XHkeyboardControl.m in Sources */,
 				746C894B1917F691007F9A5E /* XHEmotionManagerView.m in Sources */,
+				74E5E98A1921317B0084BCFA /* XHVoiceRecordHelper.m in Sources */,
 				746C89661917F7EA007F9A5E /* XHDisplayLocationViewController.m in Sources */,
 				746C89391917F691007F9A5E /* XHMessageTableView.m in Sources */,
 			);

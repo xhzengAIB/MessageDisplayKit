@@ -29,10 +29,13 @@
 @property (nonatomic, weak, readwrite) XHMessageInputView *messageInputView;
 @property (nonatomic, weak, readwrite) XHShareMenuView *shareMenuView;
 @property (nonatomic, weak, readwrite) XHEmotionManagerView *emotionManagerView;
+@property (nonatomic, strong, readwrite) XHVoiceRecordHUD *voiceRecordHUD;
 
 @property (nonatomic, strong) XHPhotographyHelper *photographyHelper;
 
 @property (nonatomic, strong) XHLocationHelper *locationHelper;
+
+@property (nonatomic, strong) XHVoiceRecordHelper *voiceRecordHelper;
 
 @end
 
@@ -132,6 +135,13 @@
     return _emotionManagerView;
 }
 
+- (XHVoiceRecordHUD *)voiceRecordHUD {
+    if (!_voiceRecordHUD) {
+        _voiceRecordHUD = [[XHVoiceRecordHUD alloc] initWithFrame:CGRectMake(0, 0, 140, 140)];
+    }
+    return _voiceRecordHUD;
+}
+
 - (XHPhotographyHelper *)photographyHelper {
     if (!_photographyHelper) {
         _photographyHelper = [[XHPhotographyHelper alloc] init];
@@ -144,6 +154,25 @@
         _locationHelper = [[XHLocationHelper alloc] init];
     }
     return _locationHelper;
+}
+
+- (XHVoiceRecordHelper *)voiceRecordHelper {
+    if (!_voiceRecordHelper) {
+        WEAKSELF
+        _voiceRecordHelper = [[XHVoiceRecordHelper alloc] init];
+        _voiceRecordHelper.maxTimeStopRecorderCompletion = ^{
+            DLog(@"已经达到最大限制时间了，进入下一步的提示");
+            [weakSelf didFinishRecoingVoiceAction];
+        };
+        _voiceRecordHelper.recordProgress = ^(float progress) {
+//            DLog(@"progress : %f", progress);
+        };
+        _voiceRecordHelper.peakPowerForChannel = ^(float peakPowerForChannel) {
+            weakSelf.voiceRecordHUD.peakPower = peakPowerForChannel;
+        };
+        _voiceRecordHelper.maxRecordTime = kVoiceRecorderTotalTime;
+    }
+    return _voiceRecordHelper;
 }
 
 #pragma mark - Messages view controller
@@ -446,6 +475,19 @@
     [self.messageTableView setNeedsLayout];
 }
 
+#pragma mark - RecorderPath helper method
+
+- (NSString *)getRecorderPath {
+    NSString *recorderPath = nil;
+    NSDate *now = [NSDate date];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.dateFormat = @"yy-MMMM-dd";
+    recorderPath = [[NSString alloc] initWithFormat:@"%@/Documents/", NSHomeDirectory()];
+    dateFormatter.dateFormat = @"hh-mm-ss";
+    recorderPath = [recorderPath stringByAppendingFormat:@"%@-MySound.caf", [dateFormatter stringFromDate:now]];
+    return recorderPath;
+}
+
 #pragma mark - UITextView Helper method
 
 - (CGFloat)getTextViewContentH:(UITextView *)textView {
@@ -539,12 +581,6 @@
     insets.bottom = bottom;
     
     return insets;
-}
-
-#pragma mark - XHMessageTableViewController delegate
-
-- (BOOL)shouldPreventScrollToBottomWhileUserScrolling {
-    return YES;
 }
 
 #pragma mark - XHMessage Send helper Method
@@ -709,14 +745,42 @@
 
 - (void)didStartRecordingVoiceAction {
     DLog(@"didStartRecordingVoice");
+    [self.voiceRecordHUD startRecordingHUDAtView:self.view];
+    [self.voiceRecordHelper startRecordingWithPath:[self getRecorderPath] StartRecorderCompletion:^{
+        
+    }];
 }
 
 - (void)didCancelRecordingVoiceAction {
     DLog(@"didCancelRecordingVoice");
+    WEAKSELF
+    [self.voiceRecordHUD cancelRecordCompled:^(BOOL fnished) {
+        weakSelf.voiceRecordHUD = nil;
+    }];
+    [self.voiceRecordHelper cancelledDeleteWithCompletion:^{
+        
+    }];
 }
 
 - (void)didFinishRecoingVoiceAction {
     DLog(@"didFinishRecoingVoice");
+    WEAKSELF
+    [self.voiceRecordHUD stopRecordCompled:^(BOOL fnished) {
+        weakSelf.voiceRecordHUD = nil;
+    }];
+    [self.voiceRecordHelper stopRecordingWithStopRecorderCompletion:^{
+        
+    }];
+}
+
+- (void)didDragOutsideAction {
+    DLog(@"didDragOutsideAction");
+    [self.voiceRecordHUD resaueRecord];
+}
+
+- (void)didDragInsideAction {
+    DLog(@"didDragInsideAction");
+    [self.voiceRecordHUD pauseRecord];
 }
 
 #pragma mark - XHShareMenuView delegate
@@ -817,6 +881,12 @@
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
     self.isUserScrolling = NO;
+}
+
+#pragma mark - XHMessageTableViewController delegate
+
+- (BOOL)shouldPreventScrollToBottomWhileUserScrolling {
+    return YES;
 }
 
 #pragma mark - XHMessageTableViewController DataSource

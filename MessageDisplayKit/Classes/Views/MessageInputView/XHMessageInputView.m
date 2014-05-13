@@ -9,6 +9,10 @@
 #import "XHMessageInputView.h"
 
 #import "NSString+MessageInputView.h"
+#import "XHMacro.h"
+
+#define kXHTouchToRecord         @"按住 说话"
+#define kXHTouchToFinish         @"松开 结束"
 
 @interface XHMessageInputView () <UITextViewDelegate>
 
@@ -48,6 +52,7 @@
             
             [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
                 self.holdDownButton.alpha = sender.selected;
+                self.inputTextView.alpha = !sender.selected;
             } completion:^(BOOL finished) {
                 
             }];
@@ -65,6 +70,7 @@
             if (!sender.selected) {
                 [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
                     self.holdDownButton.alpha = sender.selected;
+                    self.inputTextView.alpha = !sender.selected;
                 } completion:^(BOOL finished) {
                     
                 }];
@@ -102,6 +108,18 @@
 - (void)holdDownButtonTouchUpInside {
     if ([self.delegate respondsToSelector:@selector(didFinishRecoingVoiceAction)]) {
         [self.delegate didFinishRecoingVoiceAction];
+    }
+}
+
+- (void)holdDownDragOutside {
+    if ([self.delegate respondsToSelector:@selector(didDragOutsideAction)]) {
+        [self.delegate didDragOutsideAction];
+    }
+}
+
+- (void)holdDownDragInside {
+    if ([self.delegate respondsToSelector:@selector(didDragInsideAction)]) {
+        [self.delegate didDragInsideAction];
     }
 }
 
@@ -241,13 +259,19 @@
     
     // 如果是可以发送语言的，那就需要一个按钮录音的按钮，事件可以在外部添加
     if (self.allowsSendVoice) {
-        button = [self createButtonWithImage:[UIImage imageNamed:@"holdDownButton"] HLImage:nil];
+        UIEdgeInsets edgeInsets = UIEdgeInsetsMake(9, 9, 9, 9);
+        button = [self createButtonWithImage:XH_STRETCH_IMAGE([UIImage imageNamed:@"VoiceBtn_Black"], edgeInsets) HLImage:XH_STRETCH_IMAGE([UIImage imageNamed:@"VoiceBtn_BlackHL"], edgeInsets)];
+        [button setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+        [button setTitle:kXHTouchToRecord forState:UIControlStateNormal];
+        [button setTitle:kXHTouchToFinish forState:UIControlStateHighlighted];
         buttonFrame = _inputTextView.frame;
         button.frame = buttonFrame;
         button.alpha = self.voiceChangeButton.selected;
         [button addTarget:self action:@selector(holdDownButtonTouchDown) forControlEvents:UIControlEventTouchDown];
         [button addTarget:self action:@selector(holdDownButtonTouchUpOutside) forControlEvents:UIControlEventTouchUpOutside];
         [button addTarget:self action:@selector(holdDownButtonTouchUpInside) forControlEvents:UIControlEventTouchUpInside];
+        [button addTarget:self action:@selector(holdDownDragOutside) forControlEvents:UIControlEventTouchDragExit];
+        [button addTarget:self action:@selector(holdDownDragInside) forControlEvents:UIControlEventTouchDragEnter];
         [self addSubview:button];
         self.holdDownButton = button;
     }
