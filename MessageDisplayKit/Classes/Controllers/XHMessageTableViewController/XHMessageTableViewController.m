@@ -769,7 +769,7 @@
         weakSelf.voiceRecordHUD = nil;
     }];
     [self.voiceRecordHelper stopRecordingWithStopRecorderCompletion:^{
-        
+        [weakSelf didSendMessageWithVoice:weakSelf.voiceRecordHelper.recordPath];
     }];
 }
 

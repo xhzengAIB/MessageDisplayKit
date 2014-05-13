@@ -262,7 +262,10 @@
  *  @param date   发送时间
  */
 - (void)didSendText:(NSString *)text fromSender:(NSString *)sender onDate:(NSDate *)date {
-    [self addMessage:[[XHMessage alloc] initWithText:text sender:sender timestamp:date]];
+    XHMessage *textMessage = [[XHMessage alloc] initWithText:text sender:sender timestamp:date];
+    textMessage.avator = [UIImage imageNamed:@"avator"];
+    textMessage.avatorUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
+    [self addMessage:textMessage];
     [self finishSendMessageWithBubbleMessageType:XHBubbleMessageText];
 }
 
@@ -274,7 +277,10 @@
  *  @param date   发送时间
  */
 - (void)didSendPhoto:(UIImage *)photo fromSender:(NSString *)sender onDate:(NSDate *)date {
-    [self addMessage:[[XHMessage alloc] initWithPhoto:photo thumbnailUrl:nil originPhotoUrl:nil sender:sender timestamp:date]];
+    XHMessage *photoMessage = [[XHMessage alloc] initWithPhoto:photo thumbnailUrl:nil originPhotoUrl:nil sender:sender timestamp:date];
+    photoMessage.avator = [UIImage imageNamed:@"avator"];
+    photoMessage.avatorUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
+    [self addMessage:photoMessage];
     [self finishSendMessageWithBubbleMessageType:XHBubbleMessagePhoto];
 }
 
@@ -286,7 +292,10 @@
  *  @param date      发送时间
  */
 - (void)didSendVideoConverPhoto:(UIImage *)videoConverPhoto videoPath:(NSString *)videoPath fromSender:(NSString *)sender onDate:(NSDate *)date {
-    [self addMessage:[[XHMessage alloc] initWithVideoConverPhoto:videoConverPhoto videoPath:videoPath videoUrl:nil sender:sender timestamp:date]];
+    XHMessage *videoMessage = [[XHMessage alloc] initWithVideoConverPhoto:videoConverPhoto videoPath:videoPath videoUrl:nil sender:sender timestamp:date];
+    videoMessage.avator = [UIImage imageNamed:@"avator"];
+    videoMessage.avatorUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
+    [self addMessage:videoMessage];
     [self finishSendMessageWithBubbleMessageType:XHBubbleMessageVideo];
 }
 
@@ -298,7 +307,10 @@
  *  @param date      发送时间
  */
 - (void)didSendVoice:(NSString *)voicePath fromSender:(NSString *)sender onDate:(NSDate *)date {
-    [self addMessage:[[XHMessage alloc] initWithVoicePath:voicePath voiceUrl:nil sender:sender timestamp:date]];
+    XHMessage *voiceMessage = [[XHMessage alloc] initWithVoicePath:voicePath voiceUrl:nil sender:sender timestamp:date];
+    voiceMessage.avator = [UIImage imageNamed:@"avator"];
+    voiceMessage.avatorUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
+    [self addMessage:voiceMessage];
     [self finishSendMessageWithBubbleMessageType:XHBubbleMessageVoice];
 }
 
@@ -310,7 +322,10 @@
  *  @param date     发送时间
  */
 - (void)didSendEmotion:(NSString *)emotionPath fromSender:(NSString *)sender onDate:(NSDate *)date {
-    [self addMessage:[[XHMessage alloc] initWithEmotionPath:emotionPath sender:sender timestamp:date]];
+    XHMessage *emotionMessage = [[XHMessage alloc] initWithEmotionPath:emotionPath sender:sender timestamp:date];
+    emotionMessage.avator = [UIImage imageNamed:@"avator"];
+    emotionMessage.avatorUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
+    [self addMessage:emotionMessage];
     [self finishSendMessageWithBubbleMessageType:XHBubbleMessageFace];
 }
 
@@ -318,7 +333,10 @@
  *  有些网友说需要发送地理位置，这个我暂时放一放
  */
 - (void)didSendGeoLocationsPhoto:(UIImage *)geoLocationsPhoto geolocations:(NSString *)geolocations location:(CLLocation *)location fromSender:(NSString *)sender onDate:(NSDate *)date {
-    [self addMessage:[[XHMessage alloc] initWithLocalPositionPhoto:geoLocationsPhoto geolocations:geolocations location:location sender:sender timestamp:date]];
+    XHMessage *geoLocationsMessage = [[XHMessage alloc] initWithLocalPositionPhoto:geoLocationsPhoto geolocations:geolocations location:location sender:sender timestamp:date];
+    geoLocationsMessage.avator = [UIImage imageNamed:@"avator"];
+    geoLocationsMessage.avatorUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
+    [self addMessage:geoLocationsMessage];
     [self finishSendMessageWithBubbleMessageType:XHBubbleMessageLocalPosition];
 }
 
