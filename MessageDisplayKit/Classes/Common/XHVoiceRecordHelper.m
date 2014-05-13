@@ -160,7 +160,6 @@
             dispatch_async(dispatch_get_main_queue(), resumeRecorderCompletion);
         }
     }
-    
 }
 
 - (void)pauseRecordingWithPauseRecorderCompletion:(XHPauseRecorderCompletion)pauseRecorderCompletion {

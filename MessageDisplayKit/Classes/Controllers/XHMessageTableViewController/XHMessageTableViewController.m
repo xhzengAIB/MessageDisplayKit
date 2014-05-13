@@ -801,9 +801,6 @@
     WEAKSELF
     void (^PickerMediaBlock)(UIImage *image, NSDictionary *editingInfo) = ^(UIImage *image, NSDictionary *editingInfo) {
         if (image) {
-            /*
-             [editingInfo valueForKey:UIImagePickerControllerOriginalImage]
-             */
             [weakSelf didSendMessageWithPhoto:image];
         } else {
             if (!editingInfo)
