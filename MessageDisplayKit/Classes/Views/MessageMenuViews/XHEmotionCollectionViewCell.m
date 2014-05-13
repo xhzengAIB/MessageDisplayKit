@@ -10,11 +10,20 @@
 
 @interface XHEmotionCollectionViewCell ()
 
+/**
+ *  显示表情封面的控件
+ */
 @property (nonatomic, weak) UIImageView *emotionImageView;
 
+/**
+ *  配置默认控件和参数
+ */
+- (void)setup;
 @end
 
 @implementation XHEmotionCollectionViewCell
+
+#pragma setter method
 
 - (void)setEmotion:(XHEmotion *)emotion {
     _emotion = emotion;

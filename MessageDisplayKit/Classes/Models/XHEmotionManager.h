@@ -11,6 +11,9 @@
 
 @interface XHEmotionManager : NSObject
 
+/**
+ *  某一类表情的数据源
+ */
 @property (nonatomic, strong) NSMutableArray *emotions;
 
 @end

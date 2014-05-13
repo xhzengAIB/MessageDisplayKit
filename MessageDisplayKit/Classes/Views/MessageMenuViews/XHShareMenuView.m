@@ -15,9 +15,19 @@
 
 @interface XHShareMenuItemView : UIView
 
+/**
+ *  第三方按钮
+ */
 @property (nonatomic, weak) UIButton *shareMenuItemButton;
+/**
+ *  第三方按钮的标题
+ */
 @property (nonatomic, weak) UILabel *shareMenuItemTitleLabel;
 
+/**
+ *  配置默认控件的方法
+ */
+- (void)setup;
 @end
 
 @implementation XHShareMenuItemView
@@ -64,8 +74,23 @@
  *  这是背景滚动视图
  */
 @property (nonatomic, weak) UIScrollView *shareMenuScrollView;
+
+/**
+ *  显示页码的视图
+ */
 @property (nonatomic, weak) UIPageControl *shareMenuPageControl;
 
+/**
+ *  第三方按钮点击的事件
+ *
+ *  @param sender 第三方按钮对象
+ */
+- (void)shareMenuItemButtonClicked:(UIButton *)sender;
+
+/**
+ *  配置默认控件
+ */
+- (void)setup;
 
 @end
 

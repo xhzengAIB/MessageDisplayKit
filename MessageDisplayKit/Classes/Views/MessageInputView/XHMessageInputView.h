@@ -36,6 +36,11 @@ typedef NS_ENUM(NSInteger, XHMessageInputViewStyle) {
 
 @optional
 
+/**
+ *  在发送文本和语音之间发送改变时，会触发这个回调函数
+ *
+ *  @param changed 是否改为发送语音状态
+ */
 - (void)didChangeSendVoiceAction:(BOOL)changed;
 
 /**
@@ -49,7 +54,6 @@ typedef NS_ENUM(NSInteger, XHMessageInputViewStyle) {
  *  点击+号按钮Action
  */
 - (void)didSelectedMultipleMediaAction;
-
 
 /**
  *  按下录音按钮开始录音

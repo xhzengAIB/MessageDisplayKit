@@ -26,8 +26,73 @@
 
 @property (nonatomic, weak, readwrite) UIButton *holdDownButton;
 
-//data
+/**
+ *  在切换语音和文本消息的时候，需要保存原本已经输入的文本，这样达到一个好的UE
+ */
 @property (nonatomic, copy) NSString *inputedText;
+
+/**
+ *  输入框内的所有按钮，点击事件所触发的方法
+ *
+ *  @param sender 被点击的按钮对象
+ */
+- (void)messageStyleButtonClicked:(UIButton *)sender;
+
+/**
+ *  当录音按钮被按下所触发的事件，这时候是开始录音
+ */
+- (void)holdDownButtonTouchDown;
+
+/**
+ *  当手指在录音按钮范围之外离开屏幕所触发的事件，这时候是取消录音
+ */
+- (void)holdDownButtonTouchUpOutside;
+
+/**
+ *  当手指在录音按钮范围之内离开屏幕所触发的事件，这时候是完成录音
+ */
+- (void)holdDownButtonTouchUpInside;
+
+/**
+ *  当手指滑动到录音按钮的范围之外所触发的事件
+ */
+- (void)holdDownDragOutside;
+
+/**
+ *  当手指滑动到录音按钮的范围之内所触发的时间
+ */
+- (void)holdDownDragInside;
+
+#pragma mark - layout subViews UI
+/**
+ *  根据正常显示和高亮状态创建一个按钮对象
+ *
+ *  @param image   正常显示图
+ *  @param hlImage 高亮显示图
+ *
+ *  @return 返回按钮对象
+ */
+- (UIButton *)createButtonWithImage:(UIImage *)image HLImage:(UIImage *)hlImage ;
+
+/**
+ *  根据输入框的样式类型配置输入框的样式和UI布局
+ *
+ *  @param style 输入框样式类型
+ */
+- (void)setupMessageInputViewBarWithStyle:(XHMessageInputViewStyle)style ;
+
+/**
+ *  配置默认参数
+ */
+- (void)setup ;
+
+#pragma mark - Message input view
+/**
+ *  动态改变textView的高度
+ *
+ *  @param changeInHeight <#changeInHeight description#>
+ */
+- (void)adjustTextViewHeightBy:(CGFloat)changeInHeight;
 
 @end
 
@@ -308,6 +373,7 @@
 }
 
 - (void)dealloc {
+    self.inputedText = nil;
     _inputTextView.delegate = nil;
     _inputTextView = nil;
     

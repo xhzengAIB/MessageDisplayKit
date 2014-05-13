@@ -16,13 +16,30 @@
 
 @interface XHEmotionManagerView () <UICollectionViewDelegate, UICollectionViewDataSource>
 
+/**
+ *  显示表情的collectView控件
+ */
 @property (nonatomic, weak) UICollectionView *emotionCollectionView;
 
+/**
+ *  显示页码的控件
+ */
 @property (nonatomic, weak) UIPageControl *emotionPageControl;
 
+/**
+ *  管理多种类别gif表情的滚动试图
+ */
 @property (nonatomic, weak) XHEmotionSectionBar *emotionSectionBar;
 
+/**
+ *  当前选择了哪类gif表情标识
+ */
 @property (nonatomic, assign) NSInteger selectedIndex;
+
+/**
+ *  配置默认控件
+ */
+- (void)setup;
 
 @end
 

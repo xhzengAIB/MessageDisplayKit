@@ -18,6 +18,32 @@
 @property (nonatomic, weak) UIImageView *cancelRecordImageView;
 @property (nonatomic, weak) UIImageView *recordingHUDImageView;
 
+/**
+ *  逐渐消失自身
+ *
+ *  @param compled 消失完成的回调block
+ */
+- (void)dismissCompled:(void(^)(BOOL fnished))compled;
+
+/**
+ *  配置是否正在录音，需要隐藏和显示某些特殊的控件
+ *
+ *  @param recording 是否录音中
+ */
+- (void)configRecoding:(BOOL)recording;
+
+/**
+ *  根据语音输入的大小来配置需要显示的HUD图片
+ *
+ *  @param peakPower 输入音频的声音大小
+ */
+- (void)configRecordingHUDImageWithPeakPower:(CGFloat)peakPower;
+
+/**
+ *  配置默认参数
+ */
+- (void)setup;
+
 @end
 
 @implementation XHVoiceRecordHUD

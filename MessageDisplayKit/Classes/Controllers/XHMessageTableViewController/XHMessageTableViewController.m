@@ -21,6 +21,9 @@
  */
 @property (nonatomic, assign) CGFloat previousTextViewContentHeight;
 
+/**
+ *  记录键盘的高度，为了适配iPad和iPhone
+ */
 @property (nonatomic, assign) CGFloat keyboardViewHeight;
 
 @property (nonatomic, assign) XHTextViewInputViewType textViewInputViewType;
@@ -31,10 +34,19 @@
 @property (nonatomic, weak, readwrite) XHEmotionManagerView *emotionManagerView;
 @property (nonatomic, strong, readwrite) XHVoiceRecordHUD *voiceRecordHUD;
 
+/**
+ *  管理本机的摄像和图片库的工具对象
+ */
 @property (nonatomic, strong) XHPhotographyHelper *photographyHelper;
 
+/**
+ *  管理地理位置的工具对象
+ */
 @property (nonatomic, strong) XHLocationHelper *locationHelper;
 
+/**
+ *  管理录音工具对象
+ */
 @property (nonatomic, strong) XHVoiceRecordHelper *voiceRecordHelper;
 
 @end

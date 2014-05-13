@@ -107,10 +107,30 @@
                                   sender:(NSString *)sender
                                     timestamp:(NSDate *)timestamp;
 
+/**
+ *  初始化gif表情类型的消息
+ *
+ *  @param emotionPath 表情的路径
+ *  @param sender      发送者
+ *  @param timestamp   发送时间
+ *
+ *  @return 返回Message model 对象
+ */
 - (instancetype)initWithEmotionPath:(NSString *)emotionPath
                            sender:(NSString *)sender
                              timestamp:(NSDate *)timestamp;
 
+/**
+ *  初始化地理位置的消息
+ *
+ *  @param localPositionPhoto 地理位置默认显示的图
+ *  @param geolocations       地理位置的信息
+ *  @param location           地理位置的经纬度
+ *  @param sender             发送者
+ *  @param timestamp          发送时间
+ *
+ *  @return 返回Message model 对象
+ */
 - (instancetype)initWithLocalPositionPhoto:(UIImage *)localPositionPhoto
                               geolocations:(NSString *)geolocations
                                   location:(CLLocation *)location

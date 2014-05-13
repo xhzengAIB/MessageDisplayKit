@@ -11,6 +11,9 @@
 
 @interface XHBubblePhotoImageView ()
 
+/**
+ *  消息类型
+ */
 @property (nonatomic, assign) XHBubbleMessageType bubbleMessageType;
 
 @end

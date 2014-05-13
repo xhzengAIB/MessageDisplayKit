@@ -55,9 +55,10 @@
 /**
  *  发送视频消息的回调方法
  *
- *  @param videoPath 目标视频本地路径
- *  @param sender    发送者的名字
- *  @param date      发送时间
+ *  @param videoConverPhoto 目标视频的封面图
+ *  @param videoPath        目标视频本地路径
+ *  @param sender           发送者的名字
+ *  @param date             发送时间
  */
 - (void)didSendVideoConverPhoto:(UIImage *)videoConverPhoto videoPath:(NSString *)videoPath fromSender:(NSString *)sender onDate:(NSDate *)date;
 
@@ -80,7 +81,13 @@
 - (void)didSendEmotion:(NSString *)emotionPath fromSender:(NSString *)sender onDate:(NSDate *)date;
 
 /**
- *  有些网友说需要发送地理位置，这个我暂时放一放
+ *  发送地理位置的回调方法
+ *
+ *  @param geoLocationsPhoto 目标显示默认图
+ *  @param geolocations      目标地理信息
+ *  @param location          目标地理经纬度
+ *  @param sender            发送者
+ *  @param date              发送时间
  */
 - (void)didSendGeoLocationsPhoto:(UIImage *)geoLocationsPhoto geolocations:(NSString *)geolocations location:(CLLocation *)location fromSender:(NSString *)sender onDate:(NSDate *)date;
 
@@ -155,7 +162,9 @@
 @property (nonatomic, weak, readonly) XHShareMenuView *shareMenuView;
 
 
-
+/**
+ *  管理第三方gif表情的控件
+ */
 @property (nonatomic, weak, readonly) XHEmotionManagerView *emotionManagerView;
 
 #pragma mark - Message View Controller Default stup

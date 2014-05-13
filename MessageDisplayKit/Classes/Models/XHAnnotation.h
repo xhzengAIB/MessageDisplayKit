@@ -21,6 +21,9 @@
  */
 @property (nonatomic, copy) NSString *title;
 
+/**
+ *  子标题
+ */
 @property (nonatomic, copy) NSString *subtitle;
 
 @property (nonatomic, strong) CLRegion *region;

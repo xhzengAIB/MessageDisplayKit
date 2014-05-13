@@ -56,8 +56,14 @@
  */
 @property (nonatomic, weak, readonly) XHBubblePhotoImageView *bubblePhotoImageView;
 
+/**
+ *  显示语音播放的图片控件
+ */
 @property (nonatomic, weak, readonly) UIImageView *videoPlayImageView;
 
+/**
+ *  显示地理位置的文本控件
+ */
 @property (nonatomic, weak, readonly) UILabel *geolocationsLabel;
 
 /**
