@@ -132,10 +132,6 @@
     }
 }
 
-- (void)updateConstraints {
-    
-}
-
 #pragma mark - UIScrollView delegate
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
