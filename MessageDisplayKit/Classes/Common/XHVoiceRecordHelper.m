@@ -221,7 +221,9 @@
         if (!_isPause) {
             float progress = self.currentTimeInterval / self.maxRecordTime * 1.0;
             dispatch_async(dispatch_get_main_queue(), ^{
-                _recordProgress(progress);
+                if (_recordProgress) {
+                    _recordProgress(progress);
+                }
             });
         }
         
