@@ -80,6 +80,10 @@ If you use this open source components in your project, please [Email us](mailto
 ## Thanks Developer
 [我家App](https://itunes.apple.com/us/app/wo-jia-jia-ting-quan-si-mi/id538285014?mt=8)的主程Aevit提供了技术支持，他的[github](https://github.com/Aevit)地址，点击[我家App](https://itunes.apple.com/us/app/wo-jia-jia-ting-quan-si-mi/id538285014?mt=8)下载安装，如果看到里面有好的效果，可以协商开源。
 
+
+谢谢kishikawakatsumi(https://github.com/kishikawakatsumi)提供[富文本]((https://github.com/kishikawakatsumi/SECoreTextView))组件。
+Thanks you [kishikawakatsumi](https://github.com/kishikawakatsumi) provide [SECoreTextView](https://github.com/kishikawakatsumi/SECoreTextView).
+
 ## Credits
 Thanks to [jessesquires](https://github.com/jessesquires/MessagesTableViewController) who created JSMessagesViewController on which my work is based.
 
