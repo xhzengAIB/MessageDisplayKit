@@ -362,9 +362,9 @@
  */
 - (void)configureCell:(XHMessageTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row % 4) {
-        cell.messageBubbleView.messageDisplayTextView.textColor = [UIColor colorWithRed:0.106 green:0.586 blue:1.000 alpha:1.000];
+        cell.messageBubbleView.displayTextView.textColor = [UIColor colorWithRed:0.106 green:0.586 blue:1.000 alpha:1.000];
     } else {
-        cell.messageBubbleView.messageDisplayTextView.textColor = [UIColor blackColor];
+        cell.messageBubbleView.displayTextView.textColor = [UIColor blackColor];
     }
 }
 

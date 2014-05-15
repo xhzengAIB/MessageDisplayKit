@@ -228,52 +228,52 @@
 		74E5E9B01921F7710084BCFA /* RecordingSignal008@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74E5E9A61921F7710084BCFA /* RecordingSignal008@2x.png */; };
 		74E5E9B11921F7710084BCFA /* RecordingBkg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74E5E9A71921F7710084BCFA /* RecordingBkg@2x.png */; };
 		74E5E9B21921F7710084BCFA /* RecordCancel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74E5E9A81921F7710084BCFA /* RecordCancel@2x.png */; };
-		74E5EAC71924FFBE0084BCFA /* NSMutableAttributedString+Helper.h in Headers */ = {isa = PBXBuildFile; fileRef = 74E5EAA71924FFBE0084BCFA /* NSMutableAttributedString+Helper.h */; };
+		74E5EAC71924FFBE0084BCFA /* NSMutableAttributedString+Helper.h in Headers */ = {isa = PBXBuildFile; fileRef = 74E5EAA71924FFBE0084BCFA /* NSMutableAttributedString+Helper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74E5EAC81924FFBE0084BCFA /* NSMutableAttributedString+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E5EAA81924FFBE0084BCFA /* NSMutableAttributedString+Helper.m */; };
 		74E5EAC91924FFBE0084BCFA /* NSMutableAttributedString+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E5EAA81924FFBE0084BCFA /* NSMutableAttributedString+Helper.m */; };
-		74E5EACA1924FFBE0084BCFA /* SECompatibility.h in Headers */ = {isa = PBXBuildFile; fileRef = 74E5EAA91924FFBE0084BCFA /* SECompatibility.h */; };
+		74E5EACA1924FFBE0084BCFA /* SECompatibility.h in Headers */ = {isa = PBXBuildFile; fileRef = 74E5EAA91924FFBE0084BCFA /* SECompatibility.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74E5EACB1924FFBE0084BCFA /* SECompatibility.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E5EAAA1924FFBE0084BCFA /* SECompatibility.m */; };
 		74E5EACC1924FFBE0084BCFA /* SECompatibility.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E5EAAA1924FFBE0084BCFA /* SECompatibility.m */; };
-		74E5EACD1924FFBE0084BCFA /* SEConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 74E5EAAB1924FFBE0084BCFA /* SEConstants.h */; };
+		74E5EACD1924FFBE0084BCFA /* SEConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 74E5EAAB1924FFBE0084BCFA /* SEConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74E5EACE1924FFBE0084BCFA /* SEConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E5EAAC1924FFBE0084BCFA /* SEConstants.m */; };
 		74E5EACF1924FFBE0084BCFA /* SEConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E5EAAC1924FFBE0084BCFA /* SEConstants.m */; };
-		74E5EAD01924FFBE0084BCFA /* SELineLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 74E5EAAD1924FFBE0084BCFA /* SELineLayout.h */; };
+		74E5EAD01924FFBE0084BCFA /* SELineLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 74E5EAAD1924FFBE0084BCFA /* SELineLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74E5EAD11924FFBE0084BCFA /* SELineLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E5EAAE1924FFBE0084BCFA /* SELineLayout.m */; };
 		74E5EAD21924FFBE0084BCFA /* SELineLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E5EAAE1924FFBE0084BCFA /* SELineLayout.m */; };
-		74E5EAD31924FFBE0084BCFA /* SELinkText.h in Headers */ = {isa = PBXBuildFile; fileRef = 74E5EAAF1924FFBE0084BCFA /* SELinkText.h */; };
+		74E5EAD31924FFBE0084BCFA /* SELinkText.h in Headers */ = {isa = PBXBuildFile; fileRef = 74E5EAAF1924FFBE0084BCFA /* SELinkText.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74E5EAD41924FFBE0084BCFA /* SELinkText.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E5EAB01924FFBE0084BCFA /* SELinkText.m */; };
 		74E5EAD51924FFBE0084BCFA /* SELinkText.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E5EAB01924FFBE0084BCFA /* SELinkText.m */; };
-		74E5EAD61924FFBE0084BCFA /* SESelectionGrabber.h in Headers */ = {isa = PBXBuildFile; fileRef = 74E5EAB11924FFBE0084BCFA /* SESelectionGrabber.h */; };
+		74E5EAD61924FFBE0084BCFA /* SESelectionGrabber.h in Headers */ = {isa = PBXBuildFile; fileRef = 74E5EAB11924FFBE0084BCFA /* SESelectionGrabber.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74E5EAD71924FFBE0084BCFA /* SESelectionGrabber.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E5EAB21924FFBE0084BCFA /* SESelectionGrabber.m */; };
 		74E5EAD81924FFBE0084BCFA /* SESelectionGrabber.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E5EAB21924FFBE0084BCFA /* SESelectionGrabber.m */; };
-		74E5EAD91924FFBE0084BCFA /* SETextAttachment.h in Headers */ = {isa = PBXBuildFile; fileRef = 74E5EAB31924FFBE0084BCFA /* SETextAttachment.h */; };
+		74E5EAD91924FFBE0084BCFA /* SETextAttachment.h in Headers */ = {isa = PBXBuildFile; fileRef = 74E5EAB31924FFBE0084BCFA /* SETextAttachment.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74E5EADA1924FFBE0084BCFA /* SETextAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E5EAB41924FFBE0084BCFA /* SETextAttachment.m */; };
 		74E5EADB1924FFBE0084BCFA /* SETextAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E5EAB41924FFBE0084BCFA /* SETextAttachment.m */; };
-		74E5EADC1924FFBE0084BCFA /* SETextEditingCaret.h in Headers */ = {isa = PBXBuildFile; fileRef = 74E5EAB51924FFBE0084BCFA /* SETextEditingCaret.h */; };
+		74E5EADC1924FFBE0084BCFA /* SETextEditingCaret.h in Headers */ = {isa = PBXBuildFile; fileRef = 74E5EAB51924FFBE0084BCFA /* SETextEditingCaret.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74E5EADD1924FFBE0084BCFA /* SETextEditingCaret.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E5EAB61924FFBE0084BCFA /* SETextEditingCaret.m */; };
 		74E5EADE1924FFBE0084BCFA /* SETextEditingCaret.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E5EAB61924FFBE0084BCFA /* SETextEditingCaret.m */; };
-		74E5EADF1924FFBE0084BCFA /* SETextGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 74E5EAB71924FFBE0084BCFA /* SETextGeometry.h */; };
+		74E5EADF1924FFBE0084BCFA /* SETextGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 74E5EAB71924FFBE0084BCFA /* SETextGeometry.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74E5EAE01924FFBE0084BCFA /* SETextGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E5EAB81924FFBE0084BCFA /* SETextGeometry.m */; };
 		74E5EAE11924FFBE0084BCFA /* SETextGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E5EAB81924FFBE0084BCFA /* SETextGeometry.m */; };
-		74E5EAE21924FFBE0084BCFA /* SETextInput.h in Headers */ = {isa = PBXBuildFile; fileRef = 74E5EAB91924FFBE0084BCFA /* SETextInput.h */; };
+		74E5EAE21924FFBE0084BCFA /* SETextInput.h in Headers */ = {isa = PBXBuildFile; fileRef = 74E5EAB91924FFBE0084BCFA /* SETextInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74E5EAE31924FFBE0084BCFA /* SETextInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E5EABA1924FFBE0084BCFA /* SETextInput.m */; };
 		74E5EAE41924FFBE0084BCFA /* SETextInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E5EABA1924FFBE0084BCFA /* SETextInput.m */; };
-		74E5EAE51924FFBE0084BCFA /* SETextLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 74E5EABB1924FFBE0084BCFA /* SETextLayout.h */; };
+		74E5EAE51924FFBE0084BCFA /* SETextLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 74E5EABB1924FFBE0084BCFA /* SETextLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74E5EAE61924FFBE0084BCFA /* SETextLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E5EABC1924FFBE0084BCFA /* SETextLayout.m */; };
 		74E5EAE71924FFBE0084BCFA /* SETextLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E5EABC1924FFBE0084BCFA /* SETextLayout.m */; };
-		74E5EAE81924FFBE0084BCFA /* SETextMagnifierCaret.h in Headers */ = {isa = PBXBuildFile; fileRef = 74E5EABD1924FFBE0084BCFA /* SETextMagnifierCaret.h */; };
+		74E5EAE81924FFBE0084BCFA /* SETextMagnifierCaret.h in Headers */ = {isa = PBXBuildFile; fileRef = 74E5EABD1924FFBE0084BCFA /* SETextMagnifierCaret.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74E5EAE91924FFBE0084BCFA /* SETextMagnifierCaret.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E5EABE1924FFBE0084BCFA /* SETextMagnifierCaret.m */; };
 		74E5EAEA1924FFBE0084BCFA /* SETextMagnifierCaret.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E5EABE1924FFBE0084BCFA /* SETextMagnifierCaret.m */; };
-		74E5EAEB1924FFBE0084BCFA /* SETextMagnifierRanged.h in Headers */ = {isa = PBXBuildFile; fileRef = 74E5EABF1924FFBE0084BCFA /* SETextMagnifierRanged.h */; };
+		74E5EAEB1924FFBE0084BCFA /* SETextMagnifierRanged.h in Headers */ = {isa = PBXBuildFile; fileRef = 74E5EABF1924FFBE0084BCFA /* SETextMagnifierRanged.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74E5EAEC1924FFBE0084BCFA /* SETextMagnifierRanged.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E5EAC01924FFBE0084BCFA /* SETextMagnifierRanged.m */; };
 		74E5EAED1924FFBE0084BCFA /* SETextMagnifierRanged.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E5EAC01924FFBE0084BCFA /* SETextMagnifierRanged.m */; };
-		74E5EAEE1924FFBE0084BCFA /* SETextSelection.h in Headers */ = {isa = PBXBuildFile; fileRef = 74E5EAC11924FFBE0084BCFA /* SETextSelection.h */; };
+		74E5EAEE1924FFBE0084BCFA /* SETextSelection.h in Headers */ = {isa = PBXBuildFile; fileRef = 74E5EAC11924FFBE0084BCFA /* SETextSelection.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74E5EAEF1924FFBE0084BCFA /* SETextSelection.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E5EAC21924FFBE0084BCFA /* SETextSelection.m */; };
 		74E5EAF01924FFBE0084BCFA /* SETextSelection.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E5EAC21924FFBE0084BCFA /* SETextSelection.m */; };
-		74E5EAF11924FFBE0084BCFA /* SETextSelectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = 74E5EAC31924FFBE0084BCFA /* SETextSelectionView.h */; };
+		74E5EAF11924FFBE0084BCFA /* SETextSelectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = 74E5EAC31924FFBE0084BCFA /* SETextSelectionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74E5EAF21924FFBE0084BCFA /* SETextSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E5EAC41924FFBE0084BCFA /* SETextSelectionView.m */; };
 		74E5EAF31924FFBE0084BCFA /* SETextSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E5EAC41924FFBE0084BCFA /* SETextSelectionView.m */; };
-		74E5EAF41924FFBE0084BCFA /* SETextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 74E5EAC51924FFBE0084BCFA /* SETextView.h */; };
+		74E5EAF41924FFBE0084BCFA /* SETextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 74E5EAC51924FFBE0084BCFA /* SETextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74E5EAF51924FFBE0084BCFA /* SETextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E5EAC61924FFBE0084BCFA /* SETextView.m */; };
 		74E5EAF61924FFBE0084BCFA /* SETextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E5EAC61924FFBE0084BCFA /* SETextView.m */; };
 		74FAB0B9190A81DC005623D0 /* UIImage+XHRounded.m in Sources */ = {isa = PBXBuildFile; fileRef = 74FAB0B8190A81DC005623D0 /* UIImage+XHRounded.m */; };
@@ -1183,63 +1183,63 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74E5EAD61924FFBE0084BCFA /* SESelectionGrabber.h in Headers */,
-				74E5EAEE1924FFBE0084BCFA /* SETextSelection.h in Headers */,
 				74180C0E190F44F500A35C82 /* XHMessageVoiceFactory.h in Headers */,
 				74180C0F190F44F600A35C82 /* XHFoundationCommon.h in Headers */,
 				74180C0D190F44F300A35C82 /* XHMessageAvatorFactory.h in Headers */,
 				74180C12190F450000A35C82 /* UIImage+XHRounded.h in Headers */,
 				74180C11190F44F900A35C82 /* NSString+MessageInputView.h in Headers */,
-				74E5EAF11924FFBE0084BCFA /* SETextSelectionView.h in Headers */,
 				74180C13190F450200A35C82 /* XHMessageModel.h in Headers */,
 				746C892F1917F691007F9A5E /* XHBubblePhotoImageView.h in Headers */,
 				746C89351917F691007F9A5E /* XHMessageDisplayTextView.h in Headers */,
 				746C893E1917F691007F9A5E /* XHMessageInputView.h in Headers */,
 				746C89471917F691007F9A5E /* XHEmotionCollectionViewFlowLayout.h in Headers */,
-				74E5EAE51924FFBE0084BCFA /* SETextLayout.h in Headers */,
-				74E5EACD1924FFBE0084BCFA /* SEConstants.h in Headers */,
 				746C89321917F691007F9A5E /* XHMessageBubbleView.h in Headers */,
-				74E5EAE21924FFBE0084BCFA /* SETextInput.h in Headers */,
 				746C89501917F691007F9A5E /* XHShareMenuView.h in Headers */,
-				74E5EAD31924FFBE0084BCFA /* SELinkText.h in Headers */,
 				746C89381917F691007F9A5E /* XHMessageTableView.h in Headers */,
 				746C89441917F691007F9A5E /* XHEmotionCollectionViewCell.h in Headers */,
 				746C894D1917F691007F9A5E /* XHEmotionSectionBar.h in Headers */,
 				746C894A1917F691007F9A5E /* XHEmotionManagerView.h in Headers */,
 				746C89411917F691007F9A5E /* XHMessageTextView.h in Headers */,
 				746C893B1917F691007F9A5E /* XHMessageTableViewCell.h in Headers */,
-				74E5EAF41924FFBE0084BCFA /* SETextView.h in Headers */,
 				74065FB919123E1C00E1CE95 /* XHShareMenuItem.h in Headers */,
 				740660CD1914E1F400E1CE95 /* XHEmotionManager.h in Headers */,
-				74E5EAD01924FFBE0084BCFA /* SELineLayout.h in Headers */,
 				740660B41914CA0000E1CE95 /* XHPhotographyHelper.h in Headers */,
 				746C896F1917F7FE007F9A5E /* XHDisplayTextViewController.h in Headers */,
 				746C89651917F7EA007F9A5E /* XHDisplayLocationViewController.h in Headers */,
-				74E5EAEB1924FFBE0084BCFA /* SETextMagnifierRanged.h in Headers */,
 				746C89871917F8EA007F9A5E /* XHBaseTableViewController.h in Headers */,
 				746C897D1917F8C5007F9A5E /* XHBaseTabBarController.h in Headers */,
 				746C89781917F8B2007F9A5E /* XHBaseNavigationController.h in Headers */,
-				74E5EAD91924FFBE0084BCFA /* SETextAttachment.h in Headers */,
 				746C89601917F7DE007F9A5E /* XHDisplayEmotionViewController.h in Headers */,
 				740660BE1914D65600E1CE95 /* XHEmotion.h in Headers */,
 				74E5E9891921317B0084BCFA /* XHVoiceRecordHelper.h in Headers */,
 				746C895B1917F7B4007F9A5E /* XHMessageTableViewController.h in Headers */,
+				74E5EAD61924FFBE0084BCFA /* SESelectionGrabber.h in Headers */,
+				74E5EAEE1924FFBE0084BCFA /* SETextSelection.h in Headers */,
+				74E5EAF11924FFBE0084BCFA /* SETextSelectionView.h in Headers */,
+				74E5EAE51924FFBE0084BCFA /* SETextLayout.h in Headers */,
+				74E5EACD1924FFBE0084BCFA /* SEConstants.h in Headers */,
+				74E5EAE21924FFBE0084BCFA /* SETextInput.h in Headers */,
+				74E5EAD31924FFBE0084BCFA /* SELinkText.h in Headers */,
+				74E5EAF41924FFBE0084BCFA /* SETextView.h in Headers */,
+				74E5EAD01924FFBE0084BCFA /* SELineLayout.h in Headers */,
+				74E5EAEB1924FFBE0084BCFA /* SETextMagnifierRanged.h in Headers */,
+				74E5EAD91924FFBE0084BCFA /* SETextAttachment.h in Headers */,
+				74E5EACA1924FFBE0084BCFA /* SECompatibility.h in Headers */,
+				74E5EAE81924FFBE0084BCFA /* SETextMagnifierCaret.h in Headers */,
+				74E5EADF1924FFBE0084BCFA /* SETextGeometry.h in Headers */,
+				74E5EADC1924FFBE0084BCFA /* SETextEditingCaret.h in Headers */,
+				74E5EAC71924FFBE0084BCFA /* NSMutableAttributedString+Helper.h in Headers */,
 				74901A3F191D3B1C0049AFF9 /* XHProfileTableViewController.h in Headers */,
 				74180C14190F450400A35C82 /* XHMessage.h in Headers */,
 				740660A71913552800E1CE95 /* UIImage+XHAnimatedFaceGif.h in Headers */,
-				74E5EACA1924FFBE0084BCFA /* SECompatibility.h in Headers */,
-				74E5EAE81924FFBE0084BCFA /* SETextMagnifierCaret.h in Headers */,
 				74585F3E191B999B00F5E8C8 /* XHLocationHelper.h in Headers */,
 				74901989191D2D030049AFF9 /* XHDisplayMediaViewController.h in Headers */,
 				74585FFD191D10CC00F5E8C8 /* XHAnnotation.h in Headers */,
 				74585F45191C8B5700F5E8C8 /* UIView+XHNetworkImage.h in Headers */,
-				74E5EADF1924FFBE0084BCFA /* SETextGeometry.h in Headers */,
 				749019B4191D315A0049AFF9 /* XHMessageVideoConverPhotoFactory.h in Headers */,
 				74901A45191D4CD30049AFF9 /* XHBaseViewController.h in Headers */,
-				74E5EADC1924FFBE0084BCFA /* SETextEditingCaret.h in Headers */,
 				74180C10190F44F800A35C82 /* UIScrollView+XHkeyboardControl.h in Headers */,
 				74E5E9951921E90A0084BCFA /* XHVoiceRecordHUD.h in Headers */,
-				74E5EAC71924FFBE0084BCFA /* NSMutableAttributedString+Helper.h in Headers */,
 				74180C0B190F44EC00A35C82 /* XHMessageBubbleFactory.h in Headers */,
 				74180C0C190F44ED00A35C82 /* XHMacro.h in Headers */,
 			);
