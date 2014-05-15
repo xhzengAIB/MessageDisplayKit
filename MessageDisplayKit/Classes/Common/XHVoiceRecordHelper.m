@@ -46,7 +46,7 @@
     [self stopBackgroundTask];
 }
 
-- (void) startBackgroundTask {
+- (void)startBackgroundTask {
 	[self stopBackgroundTask];
 	
 #if TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE
@@ -56,7 +56,7 @@
 #endif
 }
 
-- (void) stopBackgroundTask {
+- (void)stopBackgroundTask {
 #if TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE
 	if (_backgroundIdentifier != UIBackgroundTaskInvalid) {
 		[[UIApplication sharedApplication] endBackgroundTask:_backgroundIdentifier];
@@ -65,7 +65,7 @@
 #endif
 }
 
--(void) resetTimer
+-(void)resetTimer
 {
     if (!_timer)
         return;
@@ -77,7 +77,7 @@
     
 }
 
-- (void) cancelRecording
+- (void)cancelRecording
 {
     if (!_recorder)
         return;
@@ -101,7 +101,7 @@
     AVAudioSession *audioSession = [AVAudioSession sharedInstance];
     [audioSession setCategory :AVAudioSessionCategoryPlayAndRecord error:&error];
     
-    if(error){
+    if(error) {
         DLog(@"audioSession: %@ %ld %@", [error domain], (long)[error code], [[error userInfo] description]);
         return;
     }
@@ -109,7 +109,7 @@
     [audioSession setActive:YES error:&error];
     
     error = nil;
-    if(error){
+    if(error) {
         DLog(@"audioSession: %@ %ld %@", [error domain], (long)[error code], [[error userInfo] description]);
         return;
     }
@@ -145,7 +145,7 @@
     
     if ([_recorder record]) {
         [self resetTimer];
-        _timer = [NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(_updateMeters) userInfo:nil repeats:YES];
+        _timer = [NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(updateMeters) userInfo:nil repeats:YES];
         if (startRecorderCompletion)
             dispatch_async(dispatch_get_main_queue(), ^{
                 startRecorderCompletion();
@@ -209,7 +209,7 @@
     }
 }
 
-- (void)_updateMeters {
+- (void)updateMeters {
     if (!_recorder)
         return;
     
