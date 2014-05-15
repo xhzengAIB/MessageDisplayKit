@@ -6,6 +6,8 @@
 # Xcode
 #
 build/
+*.xcuserstate
+*.xcbkptlist
 *.pbxuser
 !default.pbxuser
 *.mode1v3

@@ -120,7 +120,7 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
 #pragma mark - Menu Actions
 
 - (void)copyed:(id)sender {
-    [[UIPasteboard generalPasteboard] setString:self.messageBubbleView.messageDisplayTextView.text];
+    [[UIPasteboard generalPasteboard] setString:self.messageBubbleView.displayTextView.text];
     [self resignFirstResponder];
     DLog(@"Cell was copy");
 }
@@ -452,7 +452,8 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
     // 这里做清除工作
     [super prepareForReuse];
     self.messageBubbleView.animationVoiceImageView.image = nil;
-    self.messageBubbleView.messageDisplayTextView.text = nil;
+    self.messageBubbleView.displayTextView.text = nil;
+    self.messageBubbleView.displayTextView.attributedText = nil;
     self.messageBubbleView.bubblePhotoImageView.messagePhoto = nil;
     self.timestampLabel.text = nil;
 }
