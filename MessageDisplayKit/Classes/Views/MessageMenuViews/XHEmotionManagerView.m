@@ -14,7 +14,7 @@
 #import "XHEmotionCollectionViewFlowLayout.h"
 
 
-@interface XHEmotionManagerView () <UICollectionViewDelegate, UICollectionViewDataSource>
+@interface XHEmotionManagerView () <UICollectionViewDelegate, UICollectionViewDataSource, XHEmotionSectionBarDelegate>
 
 /**
  *  显示表情的collectView控件
@@ -97,7 +97,8 @@
     }
     
     if (!_emotionSectionBar) {
-        XHEmotionSectionBar *emotionSectionBar = [[XHEmotionSectionBar alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.emotionPageControl.frame), CGRectGetWidth(self.bounds), kXHEmotionSectionBarHeight)];
+        XHEmotionSectionBar *emotionSectionBar = [[XHEmotionSectionBar alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.emotionPageControl.frame), CGRectGetWidth(self.bounds), kXHEmotionSectionBarHeight) showEmotionStoreButton:self.isShowEmotionStoreButton];
+        emotionSectionBar.delegate = self;
         emotionSectionBar.autoresizingMask = UIViewAutoresizingFlexibleWidth;
         emotionSectionBar.backgroundColor = [UIColor colorWithWhite:0.886 alpha:1.000];
         [self addSubview:emotionSectionBar];
@@ -130,6 +131,14 @@
     if (newSuperview) {
         [self reloadData];
     }
+}
+
+#pragma mark - XHEmotionSectionBar Delegate
+
+- (void)didSelecteEmotionManager:(XHEmotionManager *)emotionManager atSection:(NSInteger)section {
+    self.selectedIndex = section;
+    self.emotionPageControl.currentPage = 0;
+    [self reloadData];
 }
 
 #pragma mark - UIScrollView delegate

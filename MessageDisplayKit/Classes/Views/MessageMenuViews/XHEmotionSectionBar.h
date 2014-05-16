@@ -30,6 +30,9 @@
  */
 @property (nonatomic, strong) NSArray *emotionManagers;
 
+- (instancetype)initWithFrame:(CGRect)frame showEmotionStoreButton:(BOOL)isShowEmotionStoreButtoned;
+
+
 /**
  *  根据数据源刷新UI布局和数据
  */

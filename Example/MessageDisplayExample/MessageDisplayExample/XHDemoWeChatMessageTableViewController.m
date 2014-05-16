@@ -145,7 +145,7 @@
     NSMutableArray *emotionManagers = [NSMutableArray array];
     for (NSInteger i = 0; i < 10; i ++) {
         XHEmotionManager *emotionManager = [[XHEmotionManager alloc] init];
-        
+        emotionManager.emotionName = [NSString stringWithFormat:@"表情%ld", (long)i];
         NSMutableArray *emotions = [NSMutableArray array];
         for (NSInteger j = 0; j < 32; j ++) {
             XHEmotion *emotion = [[XHEmotion alloc] init];
