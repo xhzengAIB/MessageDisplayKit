@@ -25,21 +25,22 @@
     self.window.backgroundColor = [UIColor whiteColor];
     
     XHMessageRootViewController *messageRootViewController = [[XHMessageRootViewController alloc] init];
+    messageRootViewController.title = NSLocalizedStringFromTable(@"HUAJIEWeChat", @"MessageDisplayKitString", @"华捷微信");
     messageRootViewController.tabBarItem.image = [UIImage imageNamed:@"WeChat"];
     XHBaseNavigationController *messageNavigationController = [[XHBaseNavigationController alloc] initWithRootViewController:messageRootViewController];
     
     XHContactTableViewController *contactTableViewController = [[XHContactTableViewController alloc] init];
-    contactTableViewController.title = NSLocalizedString(@"Contact", @"联系人");
+    contactTableViewController.title = NSLocalizedStringFromTable(@"Contact", @"MessageDisplayKitString", @"联系人");
     contactTableViewController.tabBarItem.image = [UIImage imageNamed:@"Contact"];
     XHBaseNavigationController *contactNavigationController = [[XHBaseNavigationController alloc] initWithRootViewController:contactTableViewController];
     
     XHDiscoverTableViewController *discoverTableViewController = [[XHDiscoverTableViewController alloc] init];
-    discoverTableViewController.title = NSLocalizedString(@"News", @"发现");
+    discoverTableViewController.title = NSLocalizedStringFromTable(@"News", @"MessageDisplayKitString", @"发现");
     discoverTableViewController.tabBarItem.image = [UIImage imageNamed:@"SNS"];
     XHBaseNavigationController *discoverNavigationController = [[XHBaseNavigationController alloc] initWithRootViewController:discoverTableViewController];
     
     XHProfileTableViewController *profileTableViewController = [[XHProfileTableViewController alloc] init];
-    profileTableViewController.title = NSLocalizedString(@"Profile", @"个人信息");
+    profileTableViewController.title = NSLocalizedStringFromTable(@"Profile", @"MessageDisplayKitString", @"个人信息");
     profileTableViewController.tabBarItem.image = [UIImage imageNamed:@"Profile"];
     XHBaseNavigationController *profileNavigationController = [[XHBaseNavigationController alloc] initWithRootViewController:profileTableViewController];
     

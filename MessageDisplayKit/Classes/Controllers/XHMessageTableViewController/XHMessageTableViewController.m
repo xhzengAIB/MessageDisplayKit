@@ -641,9 +641,7 @@ static CGPoint  delayOffset = {0.0};
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    self.title = @"华捷微信";
-    
+    // Do any additional setup after loading the view.    
     // 初始化消息页面布局
     [self initilzer];
     [[XHMessageBubbleView appearance] setFont:[UIFont systemFontOfSize:16.0f]];

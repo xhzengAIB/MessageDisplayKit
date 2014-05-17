@@ -14,6 +14,10 @@
 
 @implementation XHBaseViewController
 
+- (void)pushNewViewController:(UIViewController *)newViewController {
+    [self.navigationController pushViewController:newViewController animated:YES];
+}
+
 #pragma mark - Life cycle
 
 - (void)viewDidLoad

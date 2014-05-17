@@ -11,6 +11,10 @@
 @interface XHBaseTableViewController : XHBaseViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, assign) UITableViewStyle tableViewStyle;
+
 @property (nonatomic, strong) NSMutableArray *dataSource;
+
+- (void)configuraTableViewnNormalSeparatorInset;
 
 @end

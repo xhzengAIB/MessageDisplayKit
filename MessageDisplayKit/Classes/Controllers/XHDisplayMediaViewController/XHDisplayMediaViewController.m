@@ -44,11 +44,11 @@
 - (void)setMessage:(id<XHMessageModel>)message {
     _message = message;
     if ([message messageMediaType] == XHBubbleMessageVideo) {
-        self.title = NSLocalizedString(@"Video", @"详细视频");
+        self.title = NSLocalizedStringFromTable(@"Video", @"MessageDisplayKitString", @"详细视频");
         self.moviePlayerController.contentURL = [NSURL fileURLWithPath:[message videoPath]];
         [self.moviePlayerController play];
     } else if ([message messageMediaType] == XHBubbleMessagePhoto) {
-        self.title = NSLocalizedString(@"Photo", @"详细照片");
+        self.title = NSLocalizedStringFromTable(@"Photo", @"MessageDisplayKitString", @"详细照片");
         self.photoImageView.image = message.photo;
         if (message.thumbnailUrl) {
             [self.photoImageView setImageUrl:[message thumbnailUrl]];

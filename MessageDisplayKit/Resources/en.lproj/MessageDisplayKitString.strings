@@ -14,6 +14,13 @@
 "TextDetail" = "TextDetail";
 "Video" = "Video";
 "Profile" = "Profile";
-"WeChat" = "WeChat";
 "News" = "News";
 "Contact" = "Contact";
+"Chat" = "Chat";
+"HUAJIEWeChat" = "HUAJIEWeChat";
+"Emotion" = "Emotion";
+"Album" = "Album";
+"Bottle" = "Bottle";
+"NearbyPeople" = "NearbyPeople";
+"Shake" = "Shake";
+"Scanning" = "Scanning";

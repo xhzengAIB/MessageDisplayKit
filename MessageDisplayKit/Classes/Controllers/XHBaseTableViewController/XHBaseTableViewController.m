@@ -14,11 +14,17 @@
 
 @implementation XHBaseTableViewController
 
+- (void)configuraTableViewnNormalSeparatorInset {
+    if ([_tableView respondsToSelector:@selector(setSeparatorInset:)]) {
+        [_tableView setSeparatorInset:UIEdgeInsetsZero];
+    }
+}
+
 #pragma mark - Propertys
 
 - (UITableView *)tableView {
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
+        _tableView = [[UITableView alloc] initWithFrame:self.view.frame style:self.tableViewStyle];
         _tableView.delegate = self;
         _tableView.dataSource = self;
     }

@@ -10,4 +10,6 @@
 
 @interface XHBaseViewController : UIViewController
 
+- (void)pushNewViewController:(UIViewController *)newViewController;
+
 @end
