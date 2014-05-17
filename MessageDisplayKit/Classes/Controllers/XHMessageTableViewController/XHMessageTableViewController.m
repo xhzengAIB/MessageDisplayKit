@@ -447,9 +447,9 @@
     // iPhone or iPad keyboard view height set here.
     self.keyboardViewHeight = (kIsiPad ? 264 : 216);
     _allowsPanToDismissKeyboard = YES;
-    _allowsSendVoice = NO;
-    _allowsSendMultiMedia = NO;
-    _allowsSendFace = NO;
+    _allowsSendVoice = YES;
+    _allowsSendMultiMedia = YES;
+    _allowsSendFace = YES;
     _inputViewStyle = XHMessageInputViewStyleFlat;
     
     self.delegate = self;
