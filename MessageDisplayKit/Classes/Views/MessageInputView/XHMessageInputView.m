@@ -281,7 +281,7 @@
     }
     
     // 输入框的高度和宽度
-    CGFloat width = CGRectGetWidth(self.bounds) - allButtonWidth;
+    CGFloat width = CGRectGetWidth(self.bounds) - (allButtonWidth ? allButtonWidth : (textViewLeftMargin * 2));
     CGFloat height = [XHMessageInputView textViewLineHeight];
     
     // 初始化输入框
