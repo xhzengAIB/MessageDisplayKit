@@ -143,13 +143,14 @@
     }
     
     // buttons
-    CGFloat paddingX = 23;
     CGFloat buttonWidth = 76;
     CGFloat buttonHeight = 86;
+    CGFloat insets = 23;
+    CGFloat paddingX = CGRectGetMidX(self.view.frame) - insets - buttonWidth * 1.5;
     CGFloat paddingY = CGRectGetHeight(self.view.frame) - buttonHeight;
     for (int i = 0; i < 3; i ++) {
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-        button.frame = CGRectMake(paddingX + i * (buttonWidth + paddingX), paddingY, buttonWidth, buttonHeight);
+        button.frame = CGRectMake(paddingX + i * (buttonWidth + insets), paddingY, buttonWidth, buttonHeight);
         
         [button addTarget:self action:@selector(boardButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
         NSString *imageName;
