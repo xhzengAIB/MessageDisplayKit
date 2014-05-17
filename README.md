@@ -1,3 +1,4 @@
+![image](https://github.com/xhzengAIB/LearnEnglish/raw/master/Screenshots/SWeChatApp.gif)
 ![image](https://github.com/xhzengAIB/LearnEnglish/raw/master/Screenshots/HUAJIEiPhone5.gif)
 ![image](https://github.com/xhzengAIB/LearnEnglish/raw/master/Screenshots/MessageDisplayKitExample.gif)
 
