@@ -54,20 +54,20 @@
     rootTabBarController.viewControllers = [NSArray arrayWithObjects:messageNavigationController, contactNavigationController, discoverNavigationController, profileNavigationController, nil];
     
     // setup UI Image
-    UIColor *color = [UIColor colorWithRed:0.310 green:0.773 blue:0.059 alpha:1.000];
+    UIColor *color = [UIColor colorWithRed:0.176 green:0.576 blue:0.980 alpha:1.000];
     [rootTabBarController.tabBar setBackgroundImage:[UIImage imageNamed:@"tabbarBkg"]];
     [rootTabBarController.tabBar setSelectedImageTintColor:color];
     
     if (CURRENT_SYS_VERSION >= 7.0) {
         [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:0.071 green:0.060 blue:0.086 alpha:1.000]];
-        [[UINavigationBar appearance] setTintColor:color];
+        [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     } else {
         [[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:0.071 green:0.060 blue:0.086 alpha:1.000]];
     }
     
     
     [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
-                                                           color, NSForegroundColorAttributeName, [UIFont boldSystemFontOfSize:20], NSFontAttributeName, nil]];
+                                                           [UIColor whiteColor], NSForegroundColorAttributeName, [UIFont boldSystemFontOfSize:17], NSFontAttributeName, nil]];
     
     self.window.rootViewController = rootTabBarController;
     
