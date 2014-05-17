@@ -242,6 +242,26 @@
 
 #pragma mark - XHMessageTableViewController Delegate
 
+- (BOOL)shouldLoadMoreMessagesScrollToTop {
+    return YES;
+}
+
+- (void)loadMoreMessagesScrollTotop {
+    if (!self.loadMoreMessage) {
+        self.loadMoreMessage = YES;
+        
+        WEAKSELF
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            NSMutableArray *messages = [weakSelf getTestMessages];
+            sleep(3);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [weakSelf insertOldMessages:messages];
+                weakSelf.loadMoreMessage = NO;
+            });
+        });
+    }
+}
+
 /**
  *  发送文本消息的回调方法
  *

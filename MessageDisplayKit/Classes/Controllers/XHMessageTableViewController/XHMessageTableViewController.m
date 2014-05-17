@@ -34,6 +34,10 @@
 @property (nonatomic, weak, readwrite) XHEmotionManagerView *emotionManagerView;
 @property (nonatomic, strong, readwrite) XHVoiceRecordHUD *voiceRecordHUD;
 
+
+@property (nonatomic, strong) UIView *headerContainerView;
+@property (nonatomic, strong) UIActivityIndicatorView *loadMoreActivityIndicatorView;
+
 /**
  *  管理本机的摄像和图片库的工具对象
  */
@@ -266,6 +270,30 @@
     return _messages;
 }
 
+- (UIView *)headerContainerView {
+    if (!_headerContainerView) {
+        _headerContainerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 44)];
+        _headerContainerView.backgroundColor = self.messageTableView.backgroundColor;
+        [_headerContainerView addSubview:self.loadMoreActivityIndicatorView];
+    }
+    return _headerContainerView;
+}
+- (UIActivityIndicatorView *)loadMoreActivityIndicatorView {
+    if (!_loadMoreActivityIndicatorView) {
+        _loadMoreActivityIndicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+        _loadMoreActivityIndicatorView.center = CGPointMake(CGRectGetWidth(_headerContainerView.bounds) / 2.0, CGRectGetHeight(_headerContainerView.bounds) / 2.0);
+    }
+    return _loadMoreActivityIndicatorView;
+}
+- (void)setLoadMoreMessage:(BOOL)loadMoreMessage {
+    _loadMoreMessage = loadMoreMessage;
+    if (loadMoreMessage) {
+        [self.loadMoreActivityIndicatorView startAnimating];
+    } else {
+        [self.loadMoreActivityIndicatorView stopAnimating];
+    }
+}
+
 - (XHShareMenuView *)shareMenuView {
     if (!_shareMenuView) {
         XHShareMenuView *shareMenuView = [[XHShareMenuView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.view.bounds), CGRectGetWidth(self.view.bounds), self.keyboardViewHeight)];
@@ -454,6 +482,7 @@
 	messageTableView.delegate = self;
     messageTableView.separatorColor = [UIColor clearColor];
     messageTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    messageTableView.tableHeaderView = self.headerContainerView;
     [messageTableView addObserver:self forKeyPath:@"frame" options:NSKeyValueObservingOptionNew context:NULL];
 	[self.view addSubview:messageTableView];
     [self.view sendSubviewToBack:messageTableView];
@@ -1038,6 +1067,21 @@
 }
 
 #pragma mark - UIScrollView Delegate
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    if ([self.delegate respondsToSelector:@selector(shouldLoadMoreMessagesScrollToTop)]) {
+        BOOL shouldLoadMoreMessages = [self.delegate shouldLoadMoreMessagesScrollToTop];
+        if (shouldLoadMoreMessages) {
+            if (scrollView.contentOffset.y >=0 && scrollView.contentOffset.y <= 44) {
+                if (!self.loadMoreMessage) {
+                    if ([self.delegate respondsToSelector:@selector(loadMoreMessagesScrollTotop)]) {
+                        [self.delegate loadMoreMessagesScrollTotop];
+                    }
+                }
+            }
+        }
+    }
+}
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
 	self.isUserScrolling = YES;

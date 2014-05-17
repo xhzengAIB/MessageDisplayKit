@@ -115,6 +115,18 @@
  */
 - (BOOL)shouldPreventScrollToBottomWhileUserScrolling;
 
+/**
+ *  判断是否支持下拉加载更多消息
+ *
+ *  @return 返回BOOL值，判定是否拥有这个功能
+ */
+- (BOOL)shouldLoadMoreMessagesScrollToTop;
+
+/**
+ *  下拉加载更多消息，只有在支持下拉加载更多消息的情况下才会调用。
+ */
+- (void)loadMoreMessagesScrollTotop;
+
 @end
 
 @protocol XHMessageTableViewControllerDataSource <NSObject>
@@ -166,6 +178,8 @@
  *  管理第三方gif表情的控件
  */
 @property (nonatomic, weak, readonly) XHEmotionManagerView *emotionManagerView;
+
+@property (nonatomic, assign) BOOL loadMoreMessage;
 
 #pragma mark - Message View Controller Default stup
 /**
