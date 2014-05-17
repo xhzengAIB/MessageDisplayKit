@@ -9,6 +9,7 @@
 #import "XHMessageRootViewController.h"
 
 #import "XHDemoWeChatMessageTableViewController.h"
+#import "XHFoundationCommon.h"
 
 @interface XHMessageRootViewController ()
 
@@ -29,7 +30,8 @@
     self.dataSource = dataSource;
     
     CGRect tableViewFrame = self.tableView.frame;
-    tableViewFrame.size.height -= CGRectGetHeight(self.tabBarController.tabBar.bounds);
+    tableViewFrame.origin = CGPointZero;
+    tableViewFrame.size.height -= CGRectGetHeight(self.tabBarController.tabBar.bounds) + [XHFoundationCommon getAdapterHeight];
     self.tableView.frame = tableViewFrame;
     [self.view addSubview:self.tableView];
 }

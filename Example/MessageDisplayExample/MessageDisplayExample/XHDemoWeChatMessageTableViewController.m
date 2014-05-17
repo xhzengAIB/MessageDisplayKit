@@ -117,8 +117,8 @@
     self.title = NSLocalizedStringFromTable(@"Chat", @"MessageDisplayKitString", @"聊天");
     
     // Custom UI
-    [self setBackgroundColor:[UIColor clearColor]];
-    [self setBackgroundImage:[UIImage imageNamed:@"TableViewBackgroundImage"]];
+//    [self setBackgroundColor:[UIColor clearColor]];
+//    [self setBackgroundImage:[UIImage imageNamed:@"TableViewBackgroundImage"]];
     
     // 设置自身用户名
     self.messageSender = @"Jack";
