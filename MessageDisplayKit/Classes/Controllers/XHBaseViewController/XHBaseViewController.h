@@ -10,6 +10,8 @@
 
 @interface XHBaseViewController : UIViewController
 
+- (void)setupBackgroundImage:(UIImage *)backgroundImage;
+
 - (void)pushNewViewController:(UIViewController *)newViewController;
 
 @end

@@ -14,6 +14,12 @@
 
 @implementation XHBaseViewController
 
+- (void)setupBackgroundImage:(UIImage *)backgroundImage {
+    UIImageView *backgroundImageView = [[UIImageView alloc] initWithFrame:self.view.frame];
+    backgroundImageView.image = backgroundImage;
+    [self.view insertSubview:backgroundImageView atIndex:0];
+}
+
 - (void)pushNewViewController:(UIViewController *)newViewController {
     [self.navigationController pushViewController:newViewController animated:YES];
 }

@@ -311,6 +311,19 @@
 		74E900901927A12100D37C81 /* XHShakeViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 74E9008E1927A12100D37C81 /* XHShakeViewController.h */; };
 		74E900911927A12100D37C81 /* XHShakeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E9008F1927A12100D37C81 /* XHShakeViewController.m */; };
 		74E900921927A12100D37C81 /* XHShakeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E9008F1927A12100D37C81 /* XHShakeViewController.m */; };
+		74E900981927A81500D37C81 /* bottleButtonFish@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74E900941927A81500D37C81 /* bottleButtonFish@2x.png */; };
+		74E900991927A81500D37C81 /* bottleButtonMine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74E900951927A81500D37C81 /* bottleButtonMine@2x.png */; };
+		74E9009A1927A81500D37C81 /* bottleButtonThrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74E900961927A81500D37C81 /* bottleButtonThrow@2x.png */; };
+		74E9009B1927A81500D37C81 /* bottleNightBkg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74E900971927A81500D37C81 /* bottleNightBkg@2x.png */; };
+		74E9009F1927A9C900D37C81 /* bottleBkg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74E9009C1927A9C900D37C81 /* bottleBkg@2x.png */; };
+		74E900A01927A9C900D37C81 /* bottleBkgSpotLight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74E9009D1927A9C900D37C81 /* bottleBkgSpotLight@2x.png */; };
+		74E900A11927A9C900D37C81 /* bottleBoard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74E9009E1927A9C900D37C81 /* bottleBoard@2x.png */; };
+		74E900A51927A9C900D37C81 /* bottleRecord@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74E900A21927A9C900D37C81 /* bottleRecord@2x.png */; };
+		74E900A61927A9C900D37C81 /* bottleWriting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74E900A31927A9C900D37C81 /* bottleWriting@2x.png */; };
+		74E900A71927A9C900D37C81 /* bottleStarfish@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74E900A41927A9C900D37C81 /* bottleStarfish@2x.png */; };
+		74E900AB1927ABF800D37C81 /* fishwater@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74E900A81927ABF800D37C81 /* fishwater@2x.png */; };
+		74E900AC1927ABF800D37C81 /* fishwater2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74E900A91927ABF800D37C81 /* fishwater2@2x.png */; };
+		74E900AD1927ABF800D37C81 /* fishwater3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74E900AA1927ABF800D37C81 /* fishwater3@2x.png */; };
 		74FAB0B9190A81DC005623D0 /* UIImage+XHRounded.m in Sources */ = {isa = PBXBuildFile; fileRef = 74FAB0B8190A81DC005623D0 /* UIImage+XHRounded.m */; };
 /* End PBXBuildFile section */
 
@@ -581,6 +594,19 @@
 		74E9008A1927A11800D37C81 /* XHQRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHQRCodeViewController.m; sourceTree = "<group>"; };
 		74E9008E1927A12100D37C81 /* XHShakeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHShakeViewController.h; sourceTree = "<group>"; };
 		74E9008F1927A12100D37C81 /* XHShakeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHShakeViewController.m; sourceTree = "<group>"; };
+		74E900941927A81500D37C81 /* bottleButtonFish@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bottleButtonFish@2x.png"; sourceTree = "<group>"; };
+		74E900951927A81500D37C81 /* bottleButtonMine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bottleButtonMine@2x.png"; sourceTree = "<group>"; };
+		74E900961927A81500D37C81 /* bottleButtonThrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bottleButtonThrow@2x.png"; sourceTree = "<group>"; };
+		74E900971927A81500D37C81 /* bottleNightBkg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bottleNightBkg@2x.png"; sourceTree = "<group>"; };
+		74E9009C1927A9C900D37C81 /* bottleBkg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bottleBkg@2x.png"; sourceTree = "<group>"; };
+		74E9009D1927A9C900D37C81 /* bottleBkgSpotLight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bottleBkgSpotLight@2x.png"; sourceTree = "<group>"; };
+		74E9009E1927A9C900D37C81 /* bottleBoard@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bottleBoard@2x.png"; sourceTree = "<group>"; };
+		74E900A21927A9C900D37C81 /* bottleRecord@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bottleRecord@2x.png"; sourceTree = "<group>"; };
+		74E900A31927A9C900D37C81 /* bottleWriting@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bottleWriting@2x.png"; sourceTree = "<group>"; };
+		74E900A41927A9C900D37C81 /* bottleStarfish@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bottleStarfish@2x.png"; sourceTree = "<group>"; };
+		74E900A81927ABF800D37C81 /* fishwater@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fishwater@2x.png"; sourceTree = "<group>"; };
+		74E900A91927ABF800D37C81 /* fishwater2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fishwater2@2x.png"; sourceTree = "<group>"; };
+		74E900AA1927ABF800D37C81 /* fishwater3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fishwater3@2x.png"; sourceTree = "<group>"; };
 		74FAB0B7190A81DC005623D0 /* UIImage+XHRounded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+XHRounded.h"; sourceTree = "<group>"; };
 		74FAB0B8190A81DC005623D0 /* UIImage+XHRounded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+XHRounded.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1263,6 +1289,7 @@
 				74E900521927940000D37C81 /* ff_IconShake@2x.png */,
 				74E900501927940000D37C81 /* ff_IconLocationService@2x.png */,
 				74E9004F1927940000D37C81 /* ff_IconBottle@2x.png */,
+				74E900931927A81500D37C81 /* BottleImages */,
 				74E900541927940000D37C81 /* MoreGame@2x.png */,
 			);
 			path = DisconverImages;
@@ -1332,6 +1359,26 @@
 				74E9008F1927A12100D37C81 /* XHShakeViewController.m */,
 			);
 			path = XHShakeViewController;
+			sourceTree = "<group>";
+		};
+		74E900931927A81500D37C81 /* BottleImages */ = {
+			isa = PBXGroup;
+			children = (
+				74E900A81927ABF800D37C81 /* fishwater@2x.png */,
+				74E900A91927ABF800D37C81 /* fishwater2@2x.png */,
+				74E900AA1927ABF800D37C81 /* fishwater3@2x.png */,
+				74E9009E1927A9C900D37C81 /* bottleBoard@2x.png */,
+				74E900A21927A9C900D37C81 /* bottleRecord@2x.png */,
+				74E900A31927A9C900D37C81 /* bottleWriting@2x.png */,
+				74E900A41927A9C900D37C81 /* bottleStarfish@2x.png */,
+				74E900941927A81500D37C81 /* bottleButtonFish@2x.png */,
+				74E900951927A81500D37C81 /* bottleButtonMine@2x.png */,
+				74E900961927A81500D37C81 /* bottleButtonThrow@2x.png */,
+				74E9009C1927A9C900D37C81 /* bottleBkg@2x.png */,
+				74E900971927A81500D37C81 /* bottleNightBkg@2x.png */,
+				74E9009D1927A9C900D37C81 /* bottleBkgSpotLight@2x.png */,
+			);
+			path = BottleImages;
 			sourceTree = "<group>";
 		};
 		74FAB0BA190A92CC005623D0 /* Resources */ = {
@@ -1558,12 +1605,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				74E5E9A91921F7710084BCFA /* RecordingSignal001@2x.png in Resources */,
+				74E900A71927A9C900D37C81 /* bottleStarfish@2x.png in Resources */,
+				74E900A11927A9C900D37C81 /* bottleBoard@2x.png in Resources */,
 				74585F3B191B939800F5E8C8 /* MessageVideoPlay@2x.png in Resources */,
 				74E900621927940000D37C81 /* ff_IconLocationService@2x.png in Resources */,
 				74E9006C1927940000D37C81 /* tabbarBkg@2x.png in Resources */,
 				746C88431916B607007F9A5E /* ReceiverVoiceNodePlaying000@2x.png in Resources */,
+				74E9009F1927A9C900D37C81 /* bottleBkg@2x.png in Resources */,
 				746C885C1916B612007F9A5E /* sharemore_videovoip@2x.png in Resources */,
 				746C882B1916B5EE007F9A5E /* input-bar-background@2x.png in Resources */,
+				74E9009B1927A81500D37C81 /* bottleNightBkg@2x.png in Resources */,
 				74E900601927940000D37C81 /* Demo1.gif in Resources */,
 				746C88711916B62D007F9A5E /* section0_emotion0@2x.png in Resources */,
 				746C88581916B612007F9A5E /* sharemore_myfav@2x.png in Resources */,
@@ -1573,12 +1624,14 @@
 				746C881F1916B5D6007F9A5E /* keyborad@2x.png in Resources */,
 				746C882C1916B5EE007F9A5E /* input-bar-flat.png in Resources */,
 				746C887C1916B62D007F9A5E /* section0_emotion11@2x.png in Resources */,
+				74E900AC1927ABF800D37C81 /* fishwater2@2x.png in Resources */,
 				746C88771916B62D007F9A5E /* section0_emotion6@2x.png in Resources */,
 				74E900631927940000D37C81 /* ff_IconQRCode@2x.png in Resources */,
 				74E5E9AA1921F7710084BCFA /* RecordingSignal002@2x.png in Resources */,
 				74E5E9AD1921F7710084BCFA /* RecordingSignal005@2x.png in Resources */,
 				7482450F1908C730008EC388 /* InfoPlist.strings in Resources */,
 				74E9005F1927940000D37C81 /* Demo0.gif in Resources */,
+				74E900A01927A9C900D37C81 /* bottleBkgSpotLight@2x.png in Resources */,
 				74E5E9B21921F7710084BCFA /* RecordCancel@2x.png in Resources */,
 				746C88441916B607007F9A5E /* ReceiverVoiceNodePlaying001@2x.png in Resources */,
 				746C88721916B62D007F9A5E /* section0_emotion1@2x.png in Resources */,
@@ -1590,6 +1643,7 @@
 				746C882E1916B5EE007F9A5E /* input-field-cover.png in Resources */,
 				746C88341916B5FE007F9A5E /* weChatBubble_Receiving_Cavern@2x.png in Resources */,
 				746C887F1916B62D007F9A5E /* section0_emotion14@2x.png in Resources */,
+				74E900AB1927ABF800D37C81 /* fishwater@2x.png in Resources */,
 				746C88351916B5FE007F9A5E /* weChatBubble_Receiving_Solid@2x.png in Resources */,
 				746C88751916B62D007F9A5E /* section0_emotion4@2x.png in Resources */,
 				746C88561916B612007F9A5E /* sharemore_friendcard@2x.png in Resources */,
@@ -1610,8 +1664,10 @@
 				746C88461916B607007F9A5E /* ReceiverVoiceNodePlaying003@2x.png in Resources */,
 				744FBDC81915EE7400FB4A65 /* Default-568h@2x.png in Resources */,
 				74BBB020190B8EAB00093577 /* MessageDisplayKitString.strings in Resources */,
+				74E900A51927A9C900D37C81 /* bottleRecord@2x.png in Resources */,
 				74E900661927940000D37C81 /* MoreGame@2x.png in Resources */,
 				74E900611927940000D37C81 /* ff_IconBottle@2x.png in Resources */,
+				74E9009A1927A81500D37C81 /* bottleButtonThrow@2x.png in Resources */,
 				746C88471916B607007F9A5E /* SenderVoiceNodePlaying@2x.png in Resources */,
 				74E9006A1927940000D37C81 /* Profile@2x.png in Resources */,
 				746C88821916B64E007F9A5E /* Fav_Cell_Loc@2x.png in Resources */,
@@ -1633,11 +1689,15 @@
 				74E5E9AC1921F7710084BCFA /* RecordingSignal004@2x.png in Resources */,
 				746C88791916B62D007F9A5E /* section0_emotion8@2x.png in Resources */,
 				746C885D1916B612007F9A5E /* sharemore_voiceinput@2x.png in Resources */,
+				74E900991927A81500D37C81 /* bottleButtonMine@2x.png in Resources */,
 				746C88231916B5D6007F9A5E /* voice@2x.png in Resources */,
 				746C88451916B607007F9A5E /* ReceiverVoiceNodePlaying002@2x.png in Resources */,
 				746C887D1916B62D007F9A5E /* section0_emotion12@2x.png in Resources */,
 				74E5E99A1921EC8C0084BCFA /* VoiceBtn_Black@2x.png in Resources */,
+				74E900AD1927ABF800D37C81 /* fishwater3@2x.png in Resources */,
+				74E900981927A81500D37C81 /* bottleButtonFish@2x.png in Resources */,
 				746C88571916B612007F9A5E /* sharemore_location@2x.png in Resources */,
+				74E900A61927A9C900D37C81 /* bottleWriting@2x.png in Resources */,
 				74E5E9AE1921F7710084BCFA /* RecordingSignal006@2x.png in Resources */,
 				746C88491916B607007F9A5E /* SenderVoiceNodePlaying001@2x.png in Resources */,
 				74E5E9B11921F7710084BCFA /* RecordingBkg@2x.png in Resources */,
