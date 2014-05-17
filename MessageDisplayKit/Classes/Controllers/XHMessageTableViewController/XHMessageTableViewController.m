@@ -130,6 +130,17 @@
  */
 - (UIEdgeInsets)tableViewInsetsWithBottomValue:(CGFloat)bottom;
 
+#pragma mark - Message Calculate Cell Height
+/**
+ *  统一计算Cell的高度方法
+ *
+ *  @param message   被计算目标消息对象
+ *  @param indexPath 被计算目标消息所在的位置
+ *
+ *  @return 返回计算的高度
+ */
+- (CGFloat)calculateCellHeightWithMessage:(id <XHMessageModel>)message atIndexPath:(NSIndexPath *)indexPath;
+
 #pragma mark - Message Send helper Method
 /**
  *  根据文本开始发送文本消息
@@ -256,11 +267,7 @@ static CGPoint  delayOffset = {0.0};
             NSIndexPath *indexPath = [NSIndexPath indexPathForRow:idx inSection:0];
             [indexPaths addObject:indexPath];
             
-            BOOL displayTimestamp = YES;
-            if ([weakSelf.delegate respondsToSelector:@selector(shouldDisplayTimestampForRowAtIndexPath:)]) {
-                displayTimestamp = [weakSelf.delegate shouldDisplayTimestampForRowAtIndexPath:indexPath];
-            }
-            delayOffset.y += [XHMessageTableViewCell calculateCellHeightWithMessage:[messages objectAtIndex:idx] displaysTimestamp:displayTimestamp];
+            delayOffset.y += [weakSelf calculateCellHeightWithMessage:[messages objectAtIndex:idx] atIndexPath:indexPath];
         }];
         
         [weakSelf exMainQueue:^{
@@ -782,6 +789,21 @@ static CGPoint  delayOffset = {0.0};
     return insets;
 }
 
+#pragma mark - Message Calculate Cell Height
+
+- (CGFloat)calculateCellHeightWithMessage:(id <XHMessageModel>)message atIndexPath:(NSIndexPath *)indexPath {
+    CGFloat cellHeight = 0;
+    
+    BOOL displayTimestamp = YES;
+    if ([self.delegate respondsToSelector:@selector(shouldDisplayTimestampForRowAtIndexPath:)]) {
+        displayTimestamp = [self.delegate shouldDisplayTimestampForRowAtIndexPath:indexPath];
+    }
+    
+    cellHeight = [XHMessageTableViewCell calculateCellHeightWithMessage:message displaysTimestamp:displayTimestamp];
+    
+    return cellHeight;
+}
+
 #pragma mark - Message Send helper Method
 
 - (void)didSendMessageWithText:(NSString *)text {
@@ -1171,12 +1193,7 @@ static CGPoint  delayOffset = {0.0};
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     id <XHMessageModel> message = [self.dataSource messageForRowAtIndexPath:indexPath];
     
-    BOOL displayTimestamp = YES;
-    if ([self.delegate respondsToSelector:@selector(shouldDisplayTimestampForRowAtIndexPath:)]) {
-        displayTimestamp = [self.delegate shouldDisplayTimestampForRowAtIndexPath:indexPath];
-    }
-    
-    return [XHMessageTableViewCell calculateCellHeightWithMessage:message displaysTimestamp:displayTimestamp];
+    return [self calculateCellHeightWithMessage:message atIndexPath:indexPath];
 }
 
 #pragma mark - Key-value Observing
