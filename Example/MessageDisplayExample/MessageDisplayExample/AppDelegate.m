@@ -7,8 +7,14 @@
 //
 
 #import "AppDelegate.h"
+#import "XHBaseTabBarController.h"
 #import "XHBaseNavigationController.h"
+
 #import "XHMessageRootViewController.h"
+#import "XHContactTableViewController.h"
+#import "XHDiscoverTableViewController.h"
+#import "XHProfileTableViewController.h"
+
 
 @implementation AppDelegate
 
@@ -18,7 +24,30 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     
-    self.window.rootViewController = [[XHBaseNavigationController alloc] initWithRootViewController:[[XHMessageRootViewController alloc] init]];
+    XHMessageRootViewController *messageRootViewController = [[XHMessageRootViewController alloc] init];
+    messageRootViewController.tabBarItem.image = [UIImage imageNamed:@"WeChat"];
+    XHBaseNavigationController *messageNavigationController = [[XHBaseNavigationController alloc] initWithRootViewController:messageRootViewController];
+    
+    XHContactTableViewController *contactTableViewController = [[XHContactTableViewController alloc] init];
+    contactTableViewController.title = NSLocalizedString(@"Contact", @"联系人");
+    contactTableViewController.tabBarItem.image = [UIImage imageNamed:@"Contact"];
+    XHBaseNavigationController *contactNavigationController = [[XHBaseNavigationController alloc] initWithRootViewController:contactTableViewController];
+    
+    XHDiscoverTableViewController *discoverTableViewController = [[XHDiscoverTableViewController alloc] init];
+    discoverTableViewController.title = NSLocalizedString(@"News", @"发现");
+    discoverTableViewController.tabBarItem.image = [UIImage imageNamed:@"SNS"];
+    XHBaseNavigationController *discoverNavigationController = [[XHBaseNavigationController alloc] initWithRootViewController:discoverTableViewController];
+    
+    XHProfileTableViewController *profileTableViewController = [[XHProfileTableViewController alloc] init];
+    profileTableViewController.title = NSLocalizedString(@"Profile", @"个人信息");
+    profileTableViewController.tabBarItem.image = [UIImage imageNamed:@"Profile"];
+    XHBaseNavigationController *profileNavigationController = [[XHBaseNavigationController alloc] initWithRootViewController:profileTableViewController];
+    
+    XHBaseTabBarController *rootTabBarController = [[XHBaseTabBarController alloc] init];
+    rootTabBarController.viewControllers = [NSArray arrayWithObjects:messageNavigationController, contactNavigationController, discoverNavigationController, profileNavigationController, nil];
+    [rootTabBarController.tabBar setBackgroundImage:[UIImage imageNamed:@"tabbarBkg"]];
+    
+    self.window.rootViewController = rootTabBarController;
     
     [self.window makeKeyAndVisible];
     return YES;

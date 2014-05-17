@@ -276,6 +276,20 @@
 		74E5EAF41924FFBE0084BCFA /* SETextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 74E5EAC51924FFBE0084BCFA /* SETextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74E5EAF51924FFBE0084BCFA /* SETextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E5EAC61924FFBE0084BCFA /* SETextView.m */; };
 		74E5EAF61924FFBE0084BCFA /* SETextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E5EAC61924FFBE0084BCFA /* SETextView.m */; };
+		74E9003319278F5C00D37C81 /* XHContactTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 74E9003119278F5C00D37C81 /* XHContactTableViewController.h */; };
+		74E9003419278F5C00D37C81 /* XHContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E9003219278F5C00D37C81 /* XHContactTableViewController.m */; };
+		74E9003519278F5C00D37C81 /* XHContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E9003219278F5C00D37C81 /* XHContactTableViewController.m */; };
+		74E9003819278F6700D37C81 /* XHDiscoverTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 74E9003619278F6700D37C81 /* XHDiscoverTableViewController.h */; };
+		74E9003919278F6700D37C81 /* XHDiscoverTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E9003719278F6700D37C81 /* XHDiscoverTableViewController.m */; };
+		74E9003A19278F6700D37C81 /* XHDiscoverTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E9003719278F6700D37C81 /* XHDiscoverTableViewController.m */; };
+		74F15C9519278A4400C24707 /* tabbarBkg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74F15C9419278A4400C24707 /* tabbarBkg@2x.png */; };
+		74F15C9B19278ACC00C24707 /* WeChat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74F15C9A19278ACC00C24707 /* WeChat@2x.png */; };
+		74F15C9F19278B8D00C24707 /* Profile@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74F15C9E19278B8D00C24707 /* Profile@2x.png */; };
+		74F15CA119278CA400C24707 /* SNS@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74F15CA019278CA400C24707 /* SNS@2x.png */; };
+		74F15CA519278CFF00C24707 /* XHFriendsWeiBoTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 74F15CA319278CFF00C24707 /* XHFriendsWeiBoTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		74F15CA619278CFF00C24707 /* XHFriendsWeiBoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F15CA419278CFF00C24707 /* XHFriendsWeiBoTableViewController.m */; };
+		74F15CA719278CFF00C24707 /* XHFriendsWeiBoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F15CA419278CFF00C24707 /* XHFriendsWeiBoTableViewController.m */; };
+		74F15CAB19278EEC00C24707 /* Contact@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74F15CAA19278EEC00C24707 /* Contact@2x.png */; };
 		74FAB0B9190A81DC005623D0 /* UIImage+XHRounded.m in Sources */ = {isa = PBXBuildFile; fileRef = 74FAB0B8190A81DC005623D0 /* UIImage+XHRounded.m */; };
 /* End PBXBuildFile section */
 
@@ -519,6 +533,17 @@
 		74E5EAC41924FFBE0084BCFA /* SETextSelectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SETextSelectionView.m; sourceTree = "<group>"; };
 		74E5EAC51924FFBE0084BCFA /* SETextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SETextView.h; sourceTree = "<group>"; };
 		74E5EAC61924FFBE0084BCFA /* SETextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SETextView.m; sourceTree = "<group>"; };
+		74E9003119278F5C00D37C81 /* XHContactTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHContactTableViewController.h; sourceTree = "<group>"; };
+		74E9003219278F5C00D37C81 /* XHContactTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHContactTableViewController.m; sourceTree = "<group>"; };
+		74E9003619278F6700D37C81 /* XHDiscoverTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHDiscoverTableViewController.h; sourceTree = "<group>"; };
+		74E9003719278F6700D37C81 /* XHDiscoverTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHDiscoverTableViewController.m; sourceTree = "<group>"; };
+		74F15C9419278A4400C24707 /* tabbarBkg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbarBkg@2x.png"; sourceTree = "<group>"; };
+		74F15C9A19278ACC00C24707 /* WeChat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WeChat@2x.png"; sourceTree = "<group>"; };
+		74F15C9E19278B8D00C24707 /* Profile@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Profile@2x.png"; sourceTree = "<group>"; };
+		74F15CA019278CA400C24707 /* SNS@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SNS@2x.png"; sourceTree = "<group>"; };
+		74F15CA319278CFF00C24707 /* XHFriendsWeiBoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHFriendsWeiBoTableViewController.h; sourceTree = "<group>"; };
+		74F15CA419278CFF00C24707 /* XHFriendsWeiBoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHFriendsWeiBoTableViewController.m; sourceTree = "<group>"; };
+		74F15CAA19278EEC00C24707 /* Contact@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Contact@2x.png"; sourceTree = "<group>"; };
 		74FAB0B7190A81DC005623D0 /* UIImage+XHRounded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+XHRounded.h"; sourceTree = "<group>"; };
 		74FAB0B8190A81DC005623D0 /* UIImage+XHRounded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+XHRounded.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -816,6 +841,9 @@
 				746C89731917F89A007F9A5E /* XHBaseTabBarController */,
 				746C89741917F89A007F9A5E /* XHBaseTableViewController */,
 				74901A42191D4CD30049AFF9 /* XHBaseViewController */,
+				74E9002F19278F5200D37C81 /* XHContactTableViewController */,
+				74E9003019278F5200D37C81 /* XHDiscoverTableViewController */,
+				74F15CA219278CEE00C24707 /* XHFriendsWeiBoTableViewController */,
 				74901A3C191D3B090049AFF9 /* XHProfileTableViewController */,
 				746C89541917F7B4007F9A5E /* XHDisplayEmotionViewController */,
 				74901986191D2D030049AFF9 /* XHDisplayMediaViewController */,
@@ -1073,6 +1101,11 @@
 		7490199E191D30190049AFF9 /* ExampleResources */ = {
 			isa = PBXGroup;
 			children = (
+				74F15CAA19278EEC00C24707 /* Contact@2x.png */,
+				74F15CA019278CA400C24707 /* SNS@2x.png */,
+				74F15C9E19278B8D00C24707 /* Profile@2x.png */,
+				74F15C9A19278ACC00C24707 /* WeChat@2x.png */,
+				74F15C9419278A4400C24707 /* tabbarBkg@2x.png */,
 				7490199F191D30190049AFF9 /* avator@2x.png */,
 				749019A0191D30190049AFF9 /* Demo0.gif */,
 				749019A1191D30190049AFF9 /* Demo1.gif */,
@@ -1165,6 +1198,33 @@
 			path = SECoreTextView;
 			sourceTree = "<group>";
 		};
+		74E9002F19278F5200D37C81 /* XHContactTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				74E9003119278F5C00D37C81 /* XHContactTableViewController.h */,
+				74E9003219278F5C00D37C81 /* XHContactTableViewController.m */,
+			);
+			path = XHContactTableViewController;
+			sourceTree = "<group>";
+		};
+		74E9003019278F5200D37C81 /* XHDiscoverTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				74E9003619278F6700D37C81 /* XHDiscoverTableViewController.h */,
+				74E9003719278F6700D37C81 /* XHDiscoverTableViewController.m */,
+			);
+			path = XHDiscoverTableViewController;
+			sourceTree = "<group>";
+		};
+		74F15CA219278CEE00C24707 /* XHFriendsWeiBoTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				74F15CA319278CFF00C24707 /* XHFriendsWeiBoTableViewController.h */,
+				74F15CA419278CFF00C24707 /* XHFriendsWeiBoTableViewController.m */,
+			);
+			path = XHFriendsWeiBoTableViewController;
+			sourceTree = "<group>";
+		};
 		74FAB0BA190A92CC005623D0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -1186,11 +1246,13 @@
 				74180C0E190F44F500A35C82 /* XHMessageVoiceFactory.h in Headers */,
 				74180C0F190F44F600A35C82 /* XHFoundationCommon.h in Headers */,
 				74180C0D190F44F300A35C82 /* XHMessageAvatorFactory.h in Headers */,
+				74E9003819278F6700D37C81 /* XHDiscoverTableViewController.h in Headers */,
 				74180C12190F450000A35C82 /* UIImage+XHRounded.h in Headers */,
 				74180C11190F44F900A35C82 /* NSString+MessageInputView.h in Headers */,
 				74180C13190F450200A35C82 /* XHMessageModel.h in Headers */,
 				746C892F1917F691007F9A5E /* XHBubblePhotoImageView.h in Headers */,
 				746C89351917F691007F9A5E /* XHMessageDisplayTextView.h in Headers */,
+				74E9003319278F5C00D37C81 /* XHContactTableViewController.h in Headers */,
 				746C893E1917F691007F9A5E /* XHMessageInputView.h in Headers */,
 				746C89471917F691007F9A5E /* XHEmotionCollectionViewFlowLayout.h in Headers */,
 				746C89321917F691007F9A5E /* XHMessageBubbleView.h in Headers */,
@@ -1238,6 +1300,7 @@
 				74585F45191C8B5700F5E8C8 /* UIView+XHNetworkImage.h in Headers */,
 				749019B4191D315A0049AFF9 /* XHMessageVideoConverPhotoFactory.h in Headers */,
 				74901A45191D4CD30049AFF9 /* XHBaseViewController.h in Headers */,
+				74F15CA519278CFF00C24707 /* XHFriendsWeiBoTableViewController.h in Headers */,
 				74180C10190F44F800A35C82 /* UIScrollView+XHkeyboardControl.h in Headers */,
 				74E5E9951921E90A0084BCFA /* XHVoiceRecordHUD.h in Headers */,
 				74180C0B190F44EC00A35C82 /* XHMessageBubbleFactory.h in Headers */,
@@ -1391,8 +1454,10 @@
 				746C88371916B5FE007F9A5E /* weChatBubble_Sending_Solid@2x.png in Resources */,
 				746C881F1916B5D6007F9A5E /* keyborad@2x.png in Resources */,
 				746C882C1916B5EE007F9A5E /* input-bar-flat.png in Resources */,
+				74F15CA119278CA400C24707 /* SNS@2x.png in Resources */,
 				746C887C1916B62D007F9A5E /* section0_emotion11@2x.png in Resources */,
 				749019A5191D30190049AFF9 /* avator@2x.png in Resources */,
+				74F15CAB19278EEC00C24707 /* Contact@2x.png in Resources */,
 				746C88771916B62D007F9A5E /* section0_emotion6@2x.png in Resources */,
 				74E5E9AA1921F7710084BCFA /* RecordingSignal002@2x.png in Resources */,
 				74E5E9AD1921F7710084BCFA /* RecordingSignal005@2x.png in Resources */,
@@ -1421,6 +1486,7 @@
 				749019A7191D30190049AFF9 /* Demo0.gif in Resources */,
 				74E5E99B1921EC8C0084BCFA /* VoiceBtn_BlackHL@2x.png in Resources */,
 				746C88361916B5FE007F9A5E /* weChatBubble_Sending_Cavern@2x.png in Resources */,
+				74F15C9B19278ACC00C24707 /* WeChat@2x.png in Resources */,
 				746C884B1916B607007F9A5E /* SenderVoiceNodePlaying003@2x.png in Resources */,
 				749019A9191D30190049AFF9 /* Demo1.gif in Resources */,
 				746C88781916B62D007F9A5E /* section0_emotion7@2x.png in Resources */,
@@ -1451,11 +1517,13 @@
 				746C887D1916B62D007F9A5E /* section0_emotion12@2x.png in Resources */,
 				74E5E99A1921EC8C0084BCFA /* VoiceBtn_Black@2x.png in Resources */,
 				746C88571916B612007F9A5E /* sharemore_location@2x.png in Resources */,
+				74F15C9F19278B8D00C24707 /* Profile@2x.png in Resources */,
 				74E5E9AE1921F7710084BCFA /* RecordingSignal006@2x.png in Resources */,
 				746C88491916B607007F9A5E /* SenderVoiceNodePlaying001@2x.png in Resources */,
 				74E5E9B11921F7710084BCFA /* RecordingBkg@2x.png in Resources */,
 				746C885B1916B612007F9A5E /* sharemore_video@2x.png in Resources */,
 				746C882F1916B5EE007F9A5E /* input-field-cover@2x.png in Resources */,
+				74F15C9519278A4400C24707 /* tabbarBkg@2x.png in Resources */,
 				746C88421916B607007F9A5E /* ReceiverVoiceNodePlaying@2x.png in Resources */,
 				744FBDC91915EE7400FB4A65 /* Default@2x.png in Resources */,
 			);
@@ -1495,6 +1563,8 @@
 			files = (
 				74E5EAED1924FFBE0084BCFA /* SETextMagnifierRanged.m in Sources */,
 				74E5EAE71924FFBE0084BCFA /* SETextLayout.m in Sources */,
+				74F15CA719278CFF00C24707 /* XHFriendsWeiBoTableViewController.m in Sources */,
+				74E9003519278F5C00D37C81 /* XHContactTableViewController.m in Sources */,
 				746C89431917F691007F9A5E /* XHMessageTextView.m in Sources */,
 				74180BFA190F448800A35C82 /* XHMessageBubbleFactory.m in Sources */,
 				74E5E9971921E90A0084BCFA /* XHVoiceRecordHUD.m in Sources */,
@@ -1535,6 +1605,7 @@
 				74E5EADE1924FFBE0084BCFA /* SETextEditingCaret.m in Sources */,
 				74E5EAF61924FFBE0084BCFA /* SETextView.m in Sources */,
 				740660CF1914E1F400E1CE95 /* XHEmotionManager.m in Sources */,
+				74E9003A19278F6700D37C81 /* XHDiscoverTableViewController.m in Sources */,
 				740660A91913552800E1CE95 /* UIImage+XHAnimatedFaceGif.m in Sources */,
 				74585F40191B999B00F5E8C8 /* XHLocationHelper.m in Sources */,
 				74E5EAD51924FFBE0084BCFA /* SELinkText.m in Sources */,
@@ -1565,6 +1636,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74E9003919278F6700D37C81 /* XHDiscoverTableViewController.m in Sources */,
 				74BBB032190C28CD00093577 /* XHDemoWeChatMessageTableViewController.m in Sources */,
 				74901A46191D4CD30049AFF9 /* XHBaseViewController.m in Sources */,
 				74D1C5E9190E2BE6003B1BCA /* XHMessageVoiceFactory.m in Sources */,
@@ -1610,6 +1682,7 @@
 				740660A81913552800E1CE95 /* UIImage+XHAnimatedFaceGif.m in Sources */,
 				746C895C1917F7B4007F9A5E /* XHMessageTableViewController.m in Sources */,
 				74FAB0B9190A81DC005623D0 /* UIImage+XHRounded.m in Sources */,
+				74E9003419278F5C00D37C81 /* XHContactTableViewController.m in Sources */,
 				74E5EAD11924FFBE0084BCFA /* SELineLayout.m in Sources */,
 				746C89511917F691007F9A5E /* XHShareMenuView.m in Sources */,
 				746C89331917F691007F9A5E /* XHMessageBubbleView.m in Sources */,
@@ -1625,6 +1698,7 @@
 				746C894B1917F691007F9A5E /* XHEmotionManagerView.m in Sources */,
 				74E5E98A1921317B0084BCFA /* XHVoiceRecordHelper.m in Sources */,
 				746C89661917F7EA007F9A5E /* XHDisplayLocationViewController.m in Sources */,
+				74F15CA619278CFF00C24707 /* XHFriendsWeiBoTableViewController.m in Sources */,
 				746C89391917F691007F9A5E /* XHMessageTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

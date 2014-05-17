@@ -8,6 +8,9 @@
 
 #import "XHBaseViewController.h"
 
-@interface XHBaseTableViewController : XHBaseViewController
+@interface XHBaseTableViewController : XHBaseViewController <UITableViewDelegate, UITableViewDataSource>
+
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) NSMutableArray *dataSource;
 
 @end
