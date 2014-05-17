@@ -74,6 +74,7 @@
             scrollWidth -= kXHStoreManagerItemWidth;
         }
         UIScrollView *sectionBarScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, scrollWidth, CGRectGetHeight(self.bounds))];
+        [sectionBarScrollView setScrollsToTop:NO];
         sectionBarScrollView.showsVerticalScrollIndicator = NO;
         sectionBarScrollView.showsHorizontalScrollIndicator = NO;
         sectionBarScrollView.pagingEnabled = NO;
