@@ -1,25 +1,26 @@
 //
-//  XHFriendsWeiBoTableViewController.m
+//  XHBottleViewController.m
 //  MessageDisplayExample
 //
 //  Created by qtone-1 on 14-5-17.
 //  Copyright (c) 2014年 曾宪华 开发团队(http://iyilunba.com ) 本人QQ:543413507 本人QQ群（142557668）. All rights reserved.
 //
 
-#import "XHFriendsWeiBoTableViewController.h"
+#import "XHBottleViewController.h"
 
-@interface XHFriendsWeiBoTableViewController ()
+@interface XHBottleViewController ()
 
 @end
 
-@implementation XHFriendsWeiBoTableViewController
+@implementation XHBottleViewController
 
-#pragma mark - Life Cycle
+#pragma Life Cycle
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.title = NSLocalizedStringFromTable(@"Bottle", @"MessageDisplayKitString", @"个人信息");
 }
 
 - (void)didReceiveMemoryWarning
