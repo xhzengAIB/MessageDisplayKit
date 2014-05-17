@@ -77,44 +77,29 @@
     return localPositionMessage;
 }
 
-
+- (NSMutableArray *)getTestMessages {
+    NSMutableArray *messages = [[NSMutableArray alloc] init];
+    
+    for (NSInteger i = 0; i < 2; i ++) {
+        [messages addObject:[self getPhotoMessageWithBubbleMessageType:(i % 5) ? XHBubbleMessageTypeSending : XHBubbleMessageTypeReceiving]];
+        
+        [messages addObject:[self getVideoMessageWithBubbleMessageType:(i % 6) ? XHBubbleMessageTypeSending : XHBubbleMessageTypeReceiving]];
+        
+        [messages addObject:[self getVoiceMessageWithBubbleMessageType:(i % 4) ? XHBubbleMessageTypeSending : XHBubbleMessageTypeReceiving]];
+        
+        [messages addObject:[self getEmotionMessageWithBubbleMessageType:(i % 2) ? XHBubbleMessageTypeSending : XHBubbleMessageTypeReceiving]];
+        
+        [messages addObject:[self getGeolocationsMessageWithBubbleMessageType:(i % 7) ? XHBubbleMessageTypeSending : XHBubbleMessageTypeReceiving]];
+        
+        [messages addObject:[self getTextMessageWithBubbleMessageType:(i % 2) ? XHBubbleMessageTypeSending : XHBubbleMessageTypeReceiving]];
+    }
+    return messages;
+}
 
 - (void)loadDemoDataSource {
-    self.messageSender = @"Jack";
     WEAKSELF
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        
-        NSMutableArray *messages = [[NSMutableArray alloc] init];
-        
-        for (NSInteger i = 0; i < 10; i ++) {
-            [messages addObject:[self getTextMessageWithBubbleMessageType:(i % 2) ? XHBubbleMessageTypeSending : XHBubbleMessageTypeReceiving]];
-            [messages addObject:[self getTextMessageWithBubbleMessageType:(i % 2) ? XHBubbleMessageTypeSending : XHBubbleMessageTypeReceiving]];
-            [messages addObject:[self getTextMessageWithBubbleMessageType:(i % 2) ? XHBubbleMessageTypeSending : XHBubbleMessageTypeReceiving]];
-            [messages addObject:[self getTextMessageWithBubbleMessageType:(i % 2) ? XHBubbleMessageTypeSending : XHBubbleMessageTypeReceiving]];
-            [messages addObject:[self getTextMessageWithBubbleMessageType:(i % 2) ? XHBubbleMessageTypeSending : XHBubbleMessageTypeReceiving]];
-            [messages addObject:[self getTextMessageWithBubbleMessageType:(i % 2) ? XHBubbleMessageTypeSending : XHBubbleMessageTypeReceiving]];
-            [messages addObject:[self getTextMessageWithBubbleMessageType:(i % 2) ? XHBubbleMessageTypeSending : XHBubbleMessageTypeReceiving]];
-            [messages addObject:[self getTextMessageWithBubbleMessageType:(i % 2) ? XHBubbleMessageTypeSending : XHBubbleMessageTypeReceiving]];
-            [messages addObject:[self getTextMessageWithBubbleMessageType:(i % 2) ? XHBubbleMessageTypeSending : XHBubbleMessageTypeReceiving]];
-            [messages addObject:[self getTextMessageWithBubbleMessageType:(i % 2) ? XHBubbleMessageTypeSending : XHBubbleMessageTypeReceiving]];
-            [messages addObject:[self getTextMessageWithBubbleMessageType:(i % 2) ? XHBubbleMessageTypeSending : XHBubbleMessageTypeReceiving]];
-            
-            [messages addObject:[self getPhotoMessageWithBubbleMessageType:(i % 5) ? XHBubbleMessageTypeSending : XHBubbleMessageTypeReceiving]];
-            
-            [messages addObject:[self getVideoMessageWithBubbleMessageType:(i % 6) ? XHBubbleMessageTypeSending : XHBubbleMessageTypeReceiving]];
-            
-            [messages addObject:[self getVoiceMessageWithBubbleMessageType:(i % 4) ? XHBubbleMessageTypeSending : XHBubbleMessageTypeReceiving]];
-            
-            [messages addObject:[self getEmotionMessageWithBubbleMessageType:(i % 2) ? XHBubbleMessageTypeSending : XHBubbleMessageTypeReceiving]];
-            
-            [messages addObject:[self getGeolocationsMessageWithBubbleMessageType:(i % 7) ? XHBubbleMessageTypeSending : XHBubbleMessageTypeReceiving]];
-        }
-        
-        for (NSUInteger i = 0; i < 3; i++) {
-            [messages addObjectsFromArray:messages];
-        }
-        
-        [messages addObject:[self getTextMessageWithBubbleMessageType:XHBubbleMessageTypeSending]];
+        NSMutableArray *messages = [weakSelf getTestMessages];
         
         dispatch_async(dispatch_get_main_queue(), ^{
             weakSelf.messages = messages;
@@ -132,6 +117,9 @@
     // Custom UI
 //    [self setBackgroundColor:[UIColor clearColor]];
 //    [self setBackgroundImage:[UIImage imageNamed:@"TableViewBackgroundImage"]];
+    
+    // 设置自身用户名
+    self.messageSender = @"Jack";
     
     // 添加第三方接入数据
     NSMutableArray *shareMenuItems = [NSMutableArray array];
