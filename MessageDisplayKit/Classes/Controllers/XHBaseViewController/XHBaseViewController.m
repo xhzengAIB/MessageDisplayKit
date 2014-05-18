@@ -14,6 +14,8 @@
 
 @implementation XHBaseViewController
 
+#pragma mark - Public Method
+
 - (void)setupBackgroundImage:(UIImage *)backgroundImage {
     UIImageView *backgroundImageView = [[UIImageView alloc] initWithFrame:self.view.frame];
     backgroundImageView.image = backgroundImage;
