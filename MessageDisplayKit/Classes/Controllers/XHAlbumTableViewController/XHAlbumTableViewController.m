@@ -8,11 +8,39 @@
 
 #import "XHAlbumTableViewController.h"
 
+#import "XHAlbumHeaderContainerView.h"
+#import "XHAlbumTableViewCell.h"
+
 @interface XHAlbumTableViewController ()
+
+@property (nonatomic, strong) XHAlbumHeaderContainerView *albumHeaderContainerView;
 
 @end
 
 @implementation XHAlbumTableViewController
+
+#pragma mark - Propertys
+
+- (XHAlbumHeaderContainerView *)albumHeaderContainerView {
+    if (!_albumHeaderContainerView) {
+        _albumHeaderContainerView = [[XHAlbumHeaderContainerView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 200)];
+    }
+    return _albumHeaderContainerView;
+}
+
+#pragma mark - DataSource Manager
+
+- (void)loadDataSource {
+    WEAKSELF
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSMutableArray *dataSource = [[XHStoreManager shareStoreManager] getAlbumConfigureArray];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            weakSelf.dataSource = dataSource;
+            [weakSelf.tableView reloadData];
+        });
+    });
+}
 
 #pragma Life Cycle
 
@@ -22,7 +50,11 @@
     // Do any additional setup after loading the view.
     self.title = NSLocalizedStringFromTable(@"Album", @"MessageDisplayKitString", @"个人信息");
     
+    self.tableView.tableHeaderView = self.albumHeaderContainerView;
     [self.view addSubview:self.tableView];
+    [self configuraTableViewnNormalSeparatorInset];
+    
+    [self loadDataSource];
 }
 
 - (void)didReceiveMemoryWarning
@@ -31,15 +63,27 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark - UITableView DataSource
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *cellIdentifier = @"albumTableViewCellIdentifier";
+    
+    XHAlbumTableViewCell *albumTableViewCell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    if (!albumTableViewCell) {
+        albumTableViewCell = [[XHAlbumTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+    }
+    
+    if (indexPath.row < self.dataSource.count) {
+        albumTableViewCell.currentAlbum = self.dataSource[indexPath.row];
+    }
+    
+    return albumTableViewCell;
 }
-*/
+
+#pragma mark - UITableView Delegate
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 100;
+}
 
 @end

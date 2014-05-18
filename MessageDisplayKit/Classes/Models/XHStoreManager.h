@@ -14,4 +14,6 @@
 
 - (NSMutableArray *)getDiscoverConfigureArray;
 
+- (NSMutableArray *)getAlbumConfigureArray;
+
 @end

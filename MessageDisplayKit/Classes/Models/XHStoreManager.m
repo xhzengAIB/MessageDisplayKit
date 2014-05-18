@@ -8,6 +8,8 @@
 
 #import "XHStoreManager.h"
 
+#import "XHAlbum.h"
+
 @implementation XHStoreManager
 
 + (instancetype)shareStoreManager {
@@ -38,4 +40,14 @@
     return discoverConfigureArray;
 }
 
+- (NSMutableArray *)getAlbumConfigureArray {
+    NSMutableArray *albumConfigureArray = [[NSMutableArray alloc] init];
+    
+    for (int i = 0; i < 20; i ++) {
+        XHAlbum *currnetAlbum = [[XHAlbum alloc] init];
+        [albumConfigureArray addObject:currnetAlbum];
+    }
+    
+    return albumConfigureArray;
+}
 @end
