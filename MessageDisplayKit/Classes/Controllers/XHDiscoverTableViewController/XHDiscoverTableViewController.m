@@ -24,22 +24,7 @@
 #pragma mark - DataSource
 
 - (void)loadDataSource {
-    NSMutableArray *dataSource = [[NSMutableArray alloc] initWithCapacity:3];
-    
-    NSDictionary *AlbumDictionary = @{@"title": @"朋友圈", @"image" : @"ff_IconShowAlbum"};
-    [dataSource addObject:@[AlbumDictionary]];
-    
-    NSDictionary *QRCodeDictionary = @{@"title": @"扫一扫", @"image" : @"ff_IconQRCode"};
-    NSDictionary *ShakeDictionary = @{@"title": @"摇一摇", @"image" : @"ff_IconShake"};
-    [dataSource addObject:@[QRCodeDictionary, ShakeDictionary]];
-    
-    NSDictionary *LocationServiceDictionary = @{@"title": @"附近的人", @"image" : @"ff_IconLocationService"};
-    NSDictionary *BottleDictionary = @{@"title": @"漂流瓶", @"image" : @"ff_IconBottle"};
-    [dataSource addObject:@[LocationServiceDictionary, BottleDictionary]];
-    
-    NSDictionary *MoreGameDictionary = @{@"title": @"扫一扫", @"image" : @"MoreGame"};
-    [dataSource addObject:@[MoreGameDictionary]];
-    self.dataSource = dataSource;
+    self.dataSource = [[XHStoreManager shareStoreManager] getDiscoverConfigureArray];
     
     [self.view addSubview:self.tableView];
     [self configuraTableViewnNormalSeparatorInset];

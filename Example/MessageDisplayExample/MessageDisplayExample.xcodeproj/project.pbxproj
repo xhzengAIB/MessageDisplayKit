@@ -324,6 +324,9 @@
 		74E900AB1927ABF800D37C81 /* fishwater@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74E900A81927ABF800D37C81 /* fishwater@2x.png */; };
 		74E900AC1927ABF800D37C81 /* fishwater2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74E900A91927ABF800D37C81 /* fishwater2@2x.png */; };
 		74E900AD1927ABF800D37C81 /* fishwater3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74E900AA1927ABF800D37C81 /* fishwater3@2x.png */; };
+		74E900B31928F3D100D37C81 /* XHStoreManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 74E900B11928F3D100D37C81 /* XHStoreManager.h */; };
+		74E900B41928F3D100D37C81 /* XHStoreManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E900B21928F3D100D37C81 /* XHStoreManager.m */; };
+		74E900B51928F3D100D37C81 /* XHStoreManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E900B21928F3D100D37C81 /* XHStoreManager.m */; };
 		74FAB0B9190A81DC005623D0 /* UIImage+XHRounded.m in Sources */ = {isa = PBXBuildFile; fileRef = 74FAB0B8190A81DC005623D0 /* UIImage+XHRounded.m */; };
 /* End PBXBuildFile section */
 
@@ -607,6 +610,8 @@
 		74E900A81927ABF800D37C81 /* fishwater@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fishwater@2x.png"; sourceTree = "<group>"; };
 		74E900A91927ABF800D37C81 /* fishwater2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fishwater2@2x.png"; sourceTree = "<group>"; };
 		74E900AA1927ABF800D37C81 /* fishwater3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fishwater3@2x.png"; sourceTree = "<group>"; };
+		74E900B11928F3D100D37C81 /* XHStoreManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHStoreManager.h; sourceTree = "<group>"; };
+		74E900B21928F3D100D37C81 /* XHStoreManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHStoreManager.m; sourceTree = "<group>"; };
 		74FAB0B7190A81DC005623D0 /* UIImage+XHRounded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+XHRounded.h"; sourceTree = "<group>"; };
 		74FAB0B8190A81DC005623D0 /* UIImage+XHRounded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+XHRounded.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1122,6 +1127,8 @@
 				740660CC1914E1F400E1CE95 /* XHEmotionManager.m */,
 				74585FFB191D10CC00F5E8C8 /* XHAnnotation.h */,
 				74585FFC191D10CC00F5E8C8 /* XHAnnotation.m */,
+				74E900B11928F3D100D37C81 /* XHStoreManager.h */,
+				74E900B21928F3D100D37C81 /* XHStoreManager.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1437,6 +1444,7 @@
 				74E5E9891921317B0084BCFA /* XHVoiceRecordHelper.h in Headers */,
 				746C895B1917F7B4007F9A5E /* XHMessageTableViewController.h in Headers */,
 				74E5EAD61924FFBE0084BCFA /* SESelectionGrabber.h in Headers */,
+				74E900B31928F3D100D37C81 /* XHStoreManager.h in Headers */,
 				74E5EAEE1924FFBE0084BCFA /* SETextSelection.h in Headers */,
 				74E5EAF11924FFBE0084BCFA /* SETextSelectionView.h in Headers */,
 				74E5EAE51924FFBE0084BCFA /* SETextLayout.h in Headers */,
@@ -1806,6 +1814,7 @@
 				746C89401917F691007F9A5E /* XHMessageInputView.m in Sources */,
 				746C897F1917F8C5007F9A5E /* XHBaseTabBarController.m in Sources */,
 				746C89491917F691007F9A5E /* XHEmotionCollectionViewFlowLayout.m in Sources */,
+				74E900B51928F3D100D37C81 /* XHStoreManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1888,6 +1897,7 @@
 				7482455C190902DA008EC388 /* UIScrollView+XHkeyboardControl.m in Sources */,
 				746C894B1917F691007F9A5E /* XHEmotionManagerView.m in Sources */,
 				74E5E98A1921317B0084BCFA /* XHVoiceRecordHelper.m in Sources */,
+				74E900B41928F3D100D37C81 /* XHStoreManager.m in Sources */,
 				746C89661917F7EA007F9A5E /* XHDisplayLocationViewController.m in Sources */,
 				746C89391917F691007F9A5E /* XHMessageTableView.m in Sources */,
 			);

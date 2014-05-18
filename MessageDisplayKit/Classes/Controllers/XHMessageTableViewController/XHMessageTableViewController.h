@@ -10,6 +10,7 @@
 
 // Model
 #import "XHMessage.h"
+#import "XHStoreManager.h"
 
 // Views
 #import "XHMessageTableView.h"
