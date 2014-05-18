@@ -10,11 +10,36 @@
 
 @implementation XHAlbumRichTextView
 
+#pragma mark - Propertys
+
+- (SETextView *)richTextView {
+    if (!_richTextView) {
+        _richTextView = [[SETextView alloc] initWithFrame:self.bounds];
+        _richTextView.font = self.font;
+        _richTextView.textColor = self.textColor;
+        _richTextView.textAlignment = self.textAlignment;
+        _richTextView.lineSpacing = self.lineSpacing;
+    }
+    return _richTextView;
+}
+
+#pragma mark - Life Cycle
+
+- (void)setup {
+    self.font = [UIFont systemFontOfSize:17];
+    self.textColor = [UIColor blackColor];
+    self.textAlignment = NSTextAlignmentLeft;
+    self.lineSpacing = 5;
+    
+    [self addSubview:self.richTextView];
+}
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
+        [self setup];
     }
     return self;
 }

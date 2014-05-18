@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+#import "SETextView.h"
+
 @interface XHAlbumRichTextView : UIView
+
+@property (nonatomic, strong) NSFont *font;
+@property (nonatomic, strong) NSColor *textColor;
+@property (nonatomic, assign) NSTextAlignment textAlignment;
+@property (nonatomic, assign) CGFloat lineSpacing;
+
+@property (nonatomic, strong) SETextView *richTextView;
 
 @end
