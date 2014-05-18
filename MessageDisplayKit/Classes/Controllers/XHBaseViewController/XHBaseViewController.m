@@ -26,6 +26,24 @@
     [self.navigationController pushViewController:newViewController animated:YES];
 }
 
+- (void)showLoading {
+    
+}
+- (void)showLoadingWithText:(NSString *)text {
+    
+}
+
+- (void)showSuccess {
+    
+}
+- (void)showError {
+    
+}
+
+- (void)hideLoading {
+    
+}
+
 #pragma mark - Life cycle
 
 - (void)viewDidLoad
