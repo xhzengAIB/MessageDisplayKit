@@ -117,22 +117,32 @@
     CGContextMoveToPoint(context, radius + margin, margin);
     // 绘制第1条线和第1个1/4圆弧
     CGContextAddLineToPoint(context, width - radius - margin, margin);
-    CGContextAddArc(context, width - radius-margin, radius+margin, radius, -0.5 * M_PI, 0.0, 0);
+    CGContextAddArc(context, width - radius - margin, radius + margin, radius, -0.5 * M_PI, 0.0, 0);
     CGContextAddLineToPoint(context, width, margin + radius);
     CGContextAddLineToPoint(context, width, 0);
     CGContextAddLineToPoint(context, radius + margin,0);
     // 闭合路径
     CGContextClosePath(context);
     // 绘制第2条线和第2个1/4圆弧
-    CGContextMoveToPoint(context, width-margin, margin+radius);
-    CGContextAddLineToPoint(context, width, margin+radius);
-    CGContextAddLineToPoint(context, width, height-margin-radius);
-    CGContextAddLineToPoint(context, width-margin, height-margin-radius);
+    CGContextMoveToPoint(context, width - margin, margin + radius);
+    CGContextAddLineToPoint(context, width, margin + radius);
+    CGContextAddLineToPoint(context, width, height - margin - radius);
+    CGContextAddLineToPoint(context, width - margin, height - margin - radius);
+    
+    float arcSize = 3;//角度的大小
+    
     if (self.bubbleMessageType == XHBubbleMessageTypeSending) {
+        float arcStartY = margin + radius + triangleMarginTop + triangleSize - (triangleSize - arcSize / margin * triangleSize) / 2;//圆弧起始Y值
+        float arcStartX = width - arcSize;//圆弧起始X值
+        float centerOfCycleX = width - arcSize - pow(arcSize / margin * triangleSize / 2, 2) / arcSize;//圆心的X值
+        float centerOfCycleY = margin + radius + triangleMarginTop + triangleSize / 2;//圆心的Y值
+        float radiusOfCycle = hypotf(arcSize / margin * triangleSize / 2, pow(arcSize / margin * triangleSize / 2, 2) / arcSize);//半径
+        float angelOfCycle = asinf(0.5 * (arcSize / margin * triangleSize) / radiusOfCycle) * 2;//角度
         //绘制右边三角形
-        CGContextAddLineToPoint(context,width-margin , margin+radius+triangleMarginTop+triangleSize);
-        CGContextAddLineToPoint(context,width , margin+radius+triangleMarginTop+triangleSize*0.5);
-        CGContextAddLineToPoint(context,width-margin , margin+radius+triangleMarginTop);
+        CGContextAddLineToPoint(context, width - margin , margin + radius + triangleMarginTop + triangleSize);
+        CGContextAddLineToPoint(context, arcStartX , arcStartY);
+        CGContextAddArc(context, centerOfCycleX, centerOfCycleY, radiusOfCycle, angelOfCycle / 2, 0.0 - angelOfCycle / 2, 1);
+        CGContextAddLineToPoint(context, width - margin , margin + radius + triangleMarginTop);
     }
     
     
@@ -151,7 +161,7 @@
     
     
     CGContextMoveToPoint(context, margin, height-margin);
-    CGContextAddArc(context, radius+margin, height - radius - margin, radius, 0.5 * M_PI, M_PI, 0);
+    CGContextAddArc(context, radius + margin, height - radius - margin, radius, 0.5 * M_PI, M_PI, 0);
     CGContextAddLineToPoint(context, 0, height - margin - radius);
     CGContextAddLineToPoint(context, 0, height);
     CGContextAddLineToPoint(context, margin, height);
@@ -164,9 +174,16 @@
     CGContextAddLineToPoint(context, margin, radius + margin);
     
     if (!self.bubbleMessageType == XHBubbleMessageTypeSending) {
+        float arcStartY = margin + radius + triangleMarginTop + (triangleSize - arcSize / margin * triangleSize) / 2;//圆弧起始Y值
+        float arcStartX = arcSize;//圆弧起始X值
+        float centerOfCycleX = arcSize + pow(arcSize / margin * triangleSize / 2, 2) / arcSize;//圆心的X值
+        float centerOfCycleY = margin + radius + triangleMarginTop + triangleSize / 2;//圆心的Y值
+        float radiusOfCycle = hypotf(arcSize / margin * triangleSize / 2, pow(arcSize / margin * triangleSize / 2, 2) / arcSize);//半径
+        float angelOfCycle = asinf(0.5 * (arcSize / margin * triangleSize) / radiusOfCycle) * 2;//角度
         //绘制左边三角形
         CGContextAddLineToPoint(context, margin , margin + radius + triangleMarginTop);
-        CGContextAddLineToPoint(context,0 , margin + radius + triangleMarginTop + triangleSize * 0.5);
+        CGContextAddLineToPoint(context, arcStartX , arcStartY);
+        CGContextAddArc(context, centerOfCycleX, centerOfCycleY, radiusOfCycle, M_PI + angelOfCycle / 2, M_PI - angelOfCycle / 2, 1);
         CGContextAddLineToPoint(context, margin , margin + radius + triangleMarginTop + triangleSize);
     }
     CGContextMoveToPoint(context, margin, radius + margin);
