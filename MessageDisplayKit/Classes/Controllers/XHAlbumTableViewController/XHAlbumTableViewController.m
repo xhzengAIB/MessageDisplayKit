@@ -11,6 +11,8 @@
 #import "XHAlbumHeaderContainerView.h"
 #import "XHAlbumTableViewCell.h"
 
+#import "XHStoreManager.h"
+
 @interface XHAlbumTableViewController ()
 
 @property (nonatomic, strong) XHAlbumHeaderContainerView *albumHeaderContainerView;

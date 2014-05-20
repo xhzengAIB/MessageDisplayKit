@@ -15,6 +15,8 @@
 #import "XHBottleViewController.h"
 #import "XHMoreGameTableViewController.h"
 
+#import "XHStoreManager.h"
+
 @interface XHDiscoverTableViewController ()
 
 @end

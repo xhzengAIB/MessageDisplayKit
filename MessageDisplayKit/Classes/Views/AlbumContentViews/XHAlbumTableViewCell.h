@@ -13,4 +13,7 @@
 
 @property (nonatomic, strong) XHAlbum *currentAlbum;
 
+
++ (CGFloat)calculateCellHeightWithAlbum:(XHAlbum *)currentAlbum;
+
 @end

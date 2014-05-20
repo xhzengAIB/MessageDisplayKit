@@ -7,10 +7,29 @@
 //
 
 #import "XHAlbumRichTextView.h"
+#import "XHMessageAvatorFactory.h"
 
 @implementation XHAlbumRichTextView
 
++ (CGFloat)calculateRichTextHeightWithAlbum:(XHAlbum *)currentAlbum {
+    __block CGFloat richTextHeight = kXHAlbumAvatorSpacing * 2;
+    
+    richTextHeight += [SETextView frameRectWithAttributtedString:[[NSAttributedString alloc] initWithString:currentAlbum.shareContent] constraintSize:CGSizeMake(CGRectGetWidth([[UIScreen mainScreen] bounds]) - kXHAvatarImageSize - (kXHAlbumAvatorSpacing * 3), CGFLOAT_MAX) lineSpacing:kXHAlbumContentLineSpacing font:kXHAlbumContentFont].size.height;
+    
+    [currentAlbum.shareImages enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        richTextHeight += (kXHAlbumPhotoSize + kXHAlbumPhotoInsets);
+    }];
+    
+    return richTextHeight;
+}
+
 #pragma mark - Propertys
+
+- (void)setDisplayAlbum:(XHAlbum *)displayAlbum {
+    _displayAlbum = displayAlbum;
+    
+    
+}
 
 - (SETextView *)richTextView {
     if (!_richTextView) {

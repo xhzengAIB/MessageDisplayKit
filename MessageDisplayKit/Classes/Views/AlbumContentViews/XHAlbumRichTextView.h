@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import "XHAlbum.h"
+
 #import "SETextView.h"
 
 @interface XHAlbumRichTextView : UIView
@@ -18,5 +20,9 @@
 @property (nonatomic, assign) CGFloat lineSpacing;
 
 @property (nonatomic, strong) SETextView *richTextView;
+
+@property (nonatomic, strong) XHAlbum *displayAlbum;
+
++ (CGFloat)calculateRichTextHeightWithAlbum:(XHAlbum *)currentAlbum;
 
 @end
