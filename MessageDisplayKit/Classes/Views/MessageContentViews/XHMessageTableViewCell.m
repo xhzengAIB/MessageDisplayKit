@@ -313,13 +313,6 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
     self.accessoryType = UITableViewCellAccessoryNone;
     self.accessoryView = nil;
     
-    self.imageView.image = nil;
-    self.imageView.hidden = YES;
-    self.textLabel.text = nil;
-    self.textLabel.hidden = YES;
-    self.detailTextLabel.text = nil;
-    self.detailTextLabel.hidden = YES;
-    
     UILongPressGestureRecognizer *recognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressGestureRecognizerHandle:)];
     [recognizer setMinimumPressDuration:0.4f];
     [self addGestureRecognizer:recognizer];

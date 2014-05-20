@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import "XHBaseTableViewCell.h"
+
 #import "XHMessageBubbleView.h"
 #import "UIView+XHNetworkImage.h"
 
@@ -49,7 +51,7 @@
 
 @end
 
-@interface XHMessageTableViewCell : UITableViewCell
+@interface XHMessageTableViewCell : XHBaseTableViewCell
 
 @property (nonatomic, weak) id <XHMessageTableViewCellDelegate> delegate;
 

@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+
+#import "XHBaseTableViewCell.h"
+
 #import "XHAlbum.h"
 
-@interface XHAlbumTableViewCell : UITableViewCell
+@interface XHAlbumTableViewCell : XHBaseTableViewCell
 
 @property (nonatomic, strong) XHAlbum *currentAlbum;
 

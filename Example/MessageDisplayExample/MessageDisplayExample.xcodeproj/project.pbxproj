@@ -341,6 +341,9 @@
 		74E900B41928F3D100D37C81 /* XHStoreManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E900B21928F3D100D37C81 /* XHStoreManager.m */; };
 		74E900B51928F3D100D37C81 /* XHStoreManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E900B21928F3D100D37C81 /* XHStoreManager.m */; };
 		74FAB0B9190A81DC005623D0 /* UIImage+XHRounded.m in Sources */ = {isa = PBXBuildFile; fileRef = 74FAB0B8190A81DC005623D0 /* UIImage+XHRounded.m */; };
+		7D06CA71192B3D9B00DF8C04 /* XHBaseTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D06CA6F192B3D9B00DF8C04 /* XHBaseTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7D06CA72192B3D9B00DF8C04 /* XHBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D06CA70192B3D9B00DF8C04 /* XHBaseTableViewCell.m */; };
+		7D06CA73192B3D9B00DF8C04 /* XHBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D06CA70192B3D9B00DF8C04 /* XHBaseTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -636,6 +639,8 @@
 		74E900B21928F3D100D37C81 /* XHStoreManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHStoreManager.m; sourceTree = "<group>"; };
 		74FAB0B7190A81DC005623D0 /* UIImage+XHRounded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+XHRounded.h"; sourceTree = "<group>"; };
 		74FAB0B8190A81DC005623D0 /* UIImage+XHRounded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+XHRounded.m"; sourceTree = "<group>"; };
+		7D06CA6F192B3D9B00DF8C04 /* XHBaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHBaseTableViewCell.h; sourceTree = "<group>"; };
+		7D06CA70192B3D9B00DF8C04 /* XHBaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHBaseTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -870,6 +875,7 @@
 		746C89131917F691007F9A5E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7D06CA6E192B3D8A00DF8C04 /* BaseTableViewCell */,
 				746C89141917F691007F9A5E /* MessageContentViews */,
 				746C891F1917F691007F9A5E /* MessageInputView */,
 				746C89241917F691007F9A5E /* MessageMenuViews */,
@@ -1446,6 +1452,15 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		7D06CA6E192B3D8A00DF8C04 /* BaseTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				7D06CA6F192B3D9B00DF8C04 /* XHBaseTableViewCell.h */,
+				7D06CA70192B3D9B00DF8C04 /* XHBaseTableViewCell.m */,
+			);
+			path = BaseTableViewCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1518,6 +1533,7 @@
 				74585F3E191B999B00F5E8C8 /* XHLocationHelper.h in Headers */,
 				74901989191D2D030049AFF9 /* XHDisplayMediaViewController.h in Headers */,
 				74585FFD191D10CC00F5E8C8 /* XHAnnotation.h in Headers */,
+				7D06CA71192B3D9B00DF8C04 /* XHBaseTableViewCell.h in Headers */,
 				74585F45191C8B5700F5E8C8 /* UIView+XHNetworkImage.h in Headers */,
 				749019B4191D315A0049AFF9 /* XHMessageVideoConverPhotoFactory.h in Headers */,
 				74901A45191D4CD30049AFF9 /* XHBaseViewController.h in Headers */,
@@ -1837,6 +1853,7 @@
 				74E900831927A10200D37C81 /* XHLocationServiceTableViewController.m in Sources */,
 				746C893A1917F691007F9A5E /* XHMessageTableView.m in Sources */,
 				749019B6191D315A0049AFF9 /* XHMessageVideoConverPhotoFactory.m in Sources */,
+				7D06CA73192B3D9B00DF8C04 /* XHBaseTableViewCell.m in Sources */,
 				74E5EAEA1924FFBE0084BCFA /* SETextMagnifierCaret.m in Sources */,
 				74180BFF190F44A200A35C82 /* NSString+MessageInputView.m in Sources */,
 				740660C01914D65600E1CE95 /* XHEmotion.m in Sources */,
@@ -1956,6 +1973,7 @@
 				7482455C190902DA008EC388 /* UIScrollView+XHkeyboardControl.m in Sources */,
 				746C894B1917F691007F9A5E /* XHEmotionManagerView.m in Sources */,
 				74E5E98A1921317B0084BCFA /* XHVoiceRecordHelper.m in Sources */,
+				7D06CA72192B3D9B00DF8C04 /* XHBaseTableViewCell.m in Sources */,
 				74E900B41928F3D100D37C81 /* XHStoreManager.m in Sources */,
 				74C3E7DC19291A1A0053F4E1 /* XHAlbum.m in Sources */,
 				746C89661917F7EA007F9A5E /* XHDisplayLocationViewController.m in Sources */,
