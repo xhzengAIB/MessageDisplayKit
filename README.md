@@ -24,6 +24,17 @@ pod 'MessageDisplayKit', '~> 0.1.9'
 
 and run `pod install`, then you're all done!
 
+## TODO
+* 核心网络层。
+* 核心缓存层。
+* 核心数据层。
+* 优化TableView性能
+* 强化gif播放机制
+* 尽量去除绘制代码，由于现在引起性能下降的原因之一。
+* 语音转换处理，适应多平台可用语音、视频等数据。
+* 服务器搭建。
+* 模仿微信全部功能。
+
 ## 特性 Features 
 
 * 1、高度可定制。                                     
