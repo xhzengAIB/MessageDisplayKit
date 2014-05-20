@@ -344,6 +344,17 @@
 		7D06CA71192B3D9B00DF8C04 /* XHBaseTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D06CA6F192B3D9B00DF8C04 /* XHBaseTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7D06CA72192B3D9B00DF8C04 /* XHBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D06CA70192B3D9B00DF8C04 /* XHBaseTableViewCell.m */; };
 		7D06CA73192B3D9B00DF8C04 /* XHBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D06CA70192B3D9B00DF8C04 /* XHBaseTableViewCell.m */; };
+		AB79A20D192C0A6400A9B951 /* XHPathCover.h in Headers */ = {isa = PBXBuildFile; fileRef = AB79A207192C0A6400A9B951 /* XHPathCover.h */; };
+		AB79A20E192C0A6400A9B951 /* XHPathCover.m in Sources */ = {isa = PBXBuildFile; fileRef = AB79A208192C0A6400A9B951 /* XHPathCover.m */; };
+		AB79A20F192C0A6400A9B951 /* XHPathCover.m in Sources */ = {isa = PBXBuildFile; fileRef = AB79A208192C0A6400A9B951 /* XHPathCover.m */; };
+		AB79A210192C0A6400A9B951 /* XHSoundManager.h in Headers */ = {isa = PBXBuildFile; fileRef = AB79A209192C0A6400A9B951 /* XHSoundManager.h */; };
+		AB79A211192C0A6400A9B951 /* XHSoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AB79A20A192C0A6400A9B951 /* XHSoundManager.m */; };
+		AB79A212192C0A6400A9B951 /* XHSoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AB79A20A192C0A6400A9B951 /* XHSoundManager.m */; };
+		AB79A213192C0A6400A9B951 /* XHWaterDropRefresh.h in Headers */ = {isa = PBXBuildFile; fileRef = AB79A20B192C0A6400A9B951 /* XHWaterDropRefresh.h */; };
+		AB79A214192C0A6400A9B951 /* XHWaterDropRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = AB79A20C192C0A6400A9B951 /* XHWaterDropRefresh.m */; };
+		AB79A215192C0A6400A9B951 /* XHWaterDropRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = AB79A20C192C0A6400A9B951 /* XHWaterDropRefresh.m */; };
+		AB79A218192C0B1500A9B951 /* circle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB79A216192C0B1500A9B951 /* circle@2x.png */; };
+		AB79A219192C0B1500A9B951 /* pullrefresh.aif in Resources */ = {isa = PBXBuildFile; fileRef = AB79A217192C0B1500A9B951 /* pullrefresh.aif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -641,6 +652,14 @@
 		74FAB0B8190A81DC005623D0 /* UIImage+XHRounded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+XHRounded.m"; sourceTree = "<group>"; };
 		7D06CA6F192B3D9B00DF8C04 /* XHBaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHBaseTableViewCell.h; sourceTree = "<group>"; };
 		7D06CA70192B3D9B00DF8C04 /* XHBaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHBaseTableViewCell.m; sourceTree = "<group>"; };
+		AB79A207192C0A6400A9B951 /* XHPathCover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHPathCover.h; sourceTree = "<group>"; };
+		AB79A208192C0A6400A9B951 /* XHPathCover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHPathCover.m; sourceTree = "<group>"; };
+		AB79A209192C0A6400A9B951 /* XHSoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHSoundManager.h; sourceTree = "<group>"; };
+		AB79A20A192C0A6400A9B951 /* XHSoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHSoundManager.m; sourceTree = "<group>"; };
+		AB79A20B192C0A6400A9B951 /* XHWaterDropRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHWaterDropRefresh.h; sourceTree = "<group>"; };
+		AB79A20C192C0A6400A9B951 /* XHWaterDropRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHWaterDropRefresh.m; sourceTree = "<group>"; };
+		AB79A216192C0B1500A9B951 /* circle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circle@2x.png"; sourceTree = "<group>"; };
+		AB79A217192C0B1500A9B951 /* pullrefresh.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = pullrefresh.aif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1238,6 +1257,8 @@
 		74C3E7E319291F1B0053F4E1 /* AlbumImages */ = {
 			isa = PBXGroup;
 			children = (
+				AB79A216192C0B1500A9B951 /* circle@2x.png */,
+				AB79A217192C0B1500A9B951 /* pullrefresh.aif */,
 				74C3E7E419291F1B0053F4E1 /* AlbumHeaderBackgrounImage@2x.png */,
 			);
 			path = AlbumImages;
@@ -1263,6 +1284,7 @@
 		74E5EAA51924FFBE0084BCFA /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				AB79A206192C0A6400A9B951 /* XHPathCover */,
 				74E5EAA61924FFBE0084BCFA /* SECoreTextView */,
 			);
 			path = Vendor;
@@ -1461,6 +1483,19 @@
 			path = BaseTableViewCell;
 			sourceTree = "<group>";
 		};
+		AB79A206192C0A6400A9B951 /* XHPathCover */ = {
+			isa = PBXGroup;
+			children = (
+				AB79A207192C0A6400A9B951 /* XHPathCover.h */,
+				AB79A208192C0A6400A9B951 /* XHPathCover.m */,
+				AB79A209192C0A6400A9B951 /* XHSoundManager.h */,
+				AB79A20A192C0A6400A9B951 /* XHSoundManager.m */,
+				AB79A20B192C0A6400A9B951 /* XHWaterDropRefresh.h */,
+				AB79A20C192C0A6400A9B951 /* XHWaterDropRefresh.m */,
+			);
+			path = XHPathCover;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1477,6 +1512,7 @@
 				746C892F1917F691007F9A5E /* XHBubblePhotoImageView.h in Headers */,
 				746C89351917F691007F9A5E /* XHMessageDisplayTextView.h in Headers */,
 				746C893E1917F691007F9A5E /* XHMessageInputView.h in Headers */,
+				AB79A213192C0A6400A9B951 /* XHWaterDropRefresh.h in Headers */,
 				746C89471917F691007F9A5E /* XHEmotionCollectionViewFlowLayout.h in Headers */,
 				746C89321917F691007F9A5E /* XHMessageBubbleView.h in Headers */,
 				746C89501917F691007F9A5E /* XHShareMenuView.h in Headers */,
@@ -1501,6 +1537,7 @@
 				74E5EAD61924FFBE0084BCFA /* SESelectionGrabber.h in Headers */,
 				74E5EAEE1924FFBE0084BCFA /* SETextSelection.h in Headers */,
 				74E5EAF11924FFBE0084BCFA /* SETextSelectionView.h in Headers */,
+				AB79A20D192C0A6400A9B951 /* XHPathCover.h in Headers */,
 				74E5EAE51924FFBE0084BCFA /* SETextLayout.h in Headers */,
 				74E5EACD1924FFBE0084BCFA /* SEConstants.h in Headers */,
 				74E5EAE21924FFBE0084BCFA /* SETextInput.h in Headers */,
@@ -1524,6 +1561,7 @@
 				74C3E7DB19291A1A0053F4E1 /* XHAlbum.h in Headers */,
 				74E9008B1927A11800D37C81 /* XHQRCodeViewController.h in Headers */,
 				74E900901927A12100D37C81 /* XHShakeViewController.h in Headers */,
+				AB79A210192C0A6400A9B951 /* XHSoundManager.h in Headers */,
 				74E900861927A10C00D37C81 /* XHMoreGameTableViewController.h in Headers */,
 				74E900B31928F3D100D37C81 /* XHStoreManager.h in Headers */,
 				74C3E7E019291DC60053F4E1 /* XHAlbumHeaderContainerView.h in Headers */,
@@ -1709,6 +1747,7 @@
 				74E900A01927A9C900D37C81 /* bottleBkgSpotLight@2x.png in Resources */,
 				74E5E9B21921F7710084BCFA /* RecordCancel@2x.png in Resources */,
 				746C88441916B607007F9A5E /* ReceiverVoiceNodePlaying001@2x.png in Resources */,
+				AB79A219192C0B1500A9B951 /* pullrefresh.aif in Resources */,
 				746C88721916B62D007F9A5E /* section0_emotion1@2x.png in Resources */,
 				746C882D1916B5EE007F9A5E /* input-bar-flat@2x.png in Resources */,
 				74E9005E1927940000D37C81 /* avator@2x.png in Resources */,
@@ -1755,6 +1794,7 @@
 				74E9006E1927940000D37C81 /* TableViewBackgroundImage@2x.png in Resources */,
 				74E5E9AB1921F7710084BCFA /* RecordingSignal003@2x.png in Resources */,
 				74E900671927940000D37C81 /* IMG_1555.MOV in Resources */,
+				AB79A218192C0B1500A9B951 /* circle@2x.png in Resources */,
 				746C882A1916B5EE007F9A5E /* input-bar-background.png in Resources */,
 				746C88761916B62D007F9A5E /* section0_emotion5@2x.png in Resources */,
 				746C885E1916B612007F9A5E /* sharemore_voipvoice@2x.png in Resources */,
@@ -1829,6 +1869,8 @@
 				746C894C1917F691007F9A5E /* XHEmotionManagerView.m in Sources */,
 				74E900921927A12100D37C81 /* XHShakeViewController.m in Sources */,
 				74585F47191C8B5700F5E8C8 /* UIView+XHNetworkImage.m in Sources */,
+				AB79A20F192C0A6400A9B951 /* XHPathCover.m in Sources */,
+				AB79A212192C0A6400A9B951 /* XHSoundManager.m in Sources */,
 				74585FFF191D10CC00F5E8C8 /* XHAnnotation.m in Sources */,
 				74E5E98B1921317B0084BCFA /* XHVoiceRecordHelper.m in Sources */,
 				74180BFD190F449400A35C82 /* XHFoundationCommon.m in Sources */,
@@ -1883,6 +1925,7 @@
 				74E9007E1927A0F500D37C81 /* XHBottleViewController.m in Sources */,
 				74E900791927A0E900D37C81 /* XHAlbumTableViewController.m in Sources */,
 				746C895D1917F7B4007F9A5E /* XHMessageTableViewController.m in Sources */,
+				AB79A215192C0A6400A9B951 /* XHWaterDropRefresh.m in Sources */,
 				74C3E7DD19291A1A0053F4E1 /* XHAlbum.m in Sources */,
 				746C89401917F691007F9A5E /* XHMessageInputView.m in Sources */,
 				746C897F1917F8C5007F9A5E /* XHBaseTabBarController.m in Sources */,
@@ -1905,6 +1948,7 @@
 			files = (
 				74E9003919278F6700D37C81 /* XHDiscoverTableViewController.m in Sources */,
 				74BBB032190C28CD00093577 /* XHDemoWeChatMessageTableViewController.m in Sources */,
+				AB79A211192C0A6400A9B951 /* XHSoundManager.m in Sources */,
 				74901A46191D4CD30049AFF9 /* XHBaseViewController.m in Sources */,
 				74D1C5E9190E2BE6003B1BCA /* XHMessageVoiceFactory.m in Sources */,
 				7482459A1909F370008EC388 /* XHMessageAvatorFactory.m in Sources */,
@@ -1951,6 +1995,7 @@
 				74E9007D1927A0F500D37C81 /* XHBottleViewController.m in Sources */,
 				746C89421917F691007F9A5E /* XHMessageTextView.m in Sources */,
 				74065FBA19123E1C00E1CE95 /* XHShareMenuItem.m in Sources */,
+				AB79A20E192C0A6400A9B951 /* XHPathCover.m in Sources */,
 				74E5EAE31924FFBE0084BCFA /* SETextInput.m in Sources */,
 				740660A81913552800E1CE95 /* UIImage+XHAnimatedFaceGif.m in Sources */,
 				74E900911927A12100D37C81 /* XHShakeViewController.m in Sources */,
@@ -1959,6 +2004,7 @@
 				74FAB0B9190A81DC005623D0 /* UIImage+XHRounded.m in Sources */,
 				74E9003419278F5C00D37C81 /* XHContactTableViewController.m in Sources */,
 				74E900781927A0E900D37C81 /* XHAlbumTableViewController.m in Sources */,
+				AB79A214192C0A6400A9B951 /* XHWaterDropRefresh.m in Sources */,
 				74E5EAD11924FFBE0084BCFA /* SELineLayout.m in Sources */,
 				746C89511917F691007F9A5E /* XHShareMenuView.m in Sources */,
 				746C89331917F691007F9A5E /* XHMessageBubbleView.m in Sources */,
