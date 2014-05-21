@@ -32,7 +32,7 @@
 
 - (XHAlbumRichTextView *)albumRichTextView {
     if (!_albumRichTextView) {
-        _albumRichTextView = [[XHAlbumRichTextView alloc] initWithFrame:CGRectZero];
+        _albumRichTextView = [[XHAlbumRichTextView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth([[UIScreen mainScreen] bounds]), 40)];
     }
     return _albumRichTextView;
 }

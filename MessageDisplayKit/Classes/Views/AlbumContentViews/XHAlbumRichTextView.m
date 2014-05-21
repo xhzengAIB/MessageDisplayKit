@@ -12,6 +12,8 @@
 #import "XHAlbumPhotoCollectionViewCell.h"
 #import "XHAlbumCollectionViewFlowLayout.h"
 
+#import "XHImageViewer.h"
+
 #define kXHPhotoCollectionViewCellIdentifier @"XHPhotoCollectionViewCellIdentifier"
 
 @interface XHAlbumRichTextView () <UICollectionViewDelegate, UICollectionViewDataSource>
@@ -32,8 +34,9 @@
 }
 
 + (CGFloat)getSharePhotoCollectionViewHeightWithPhotos:(NSArray *)photos {
+    // 上下间隔已经在frame上做了
     NSInteger row = (photos.count / 3 + (photos.count % 3 ? 1 : 0));
-    return (row * (kXHAlbumPhotoSize + kXHAlbumPhotoInsets));
+    return (row * (kXHAlbumPhotoSize) + ((row - 1) * kXHAlbumPhotoInsets));
 }
 
 + (CGFloat)calculateRichTextHeightWithAlbum:(XHAlbum *)currentAlbum {
@@ -59,6 +62,8 @@
     
     self.richTextView.attributedText = [[NSAttributedString alloc] initWithString:displayAlbum.albumShareContent];
     
+    [self.sharePhotoCollectionView reloadData];
+    
     [self setNeedsLayout];
 }
 
@@ -76,6 +81,7 @@
         _userNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(userNameLabelX, CGRectGetMinY(self.avatorImageView.frame), CGRectGetWidth([[UIScreen mainScreen] bounds]) - userNameLabelX - kXHAlbumAvatorSpacing, kXHAlbumUserNameHeigth)];
         _userNameLabel.backgroundColor = [UIColor clearColor];
         _userNameLabel.textColor = [UIColor colorWithRed:0.294 green:0.595 blue:1.000 alpha:1.000];
+    
     }
     return _userNameLabel;
 }
@@ -96,9 +102,10 @@
     if (!_sharePhotoCollectionView) {
         _sharePhotoCollectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:[[XHAlbumCollectionViewFlowLayout alloc] init]];
         _sharePhotoCollectionView.backgroundColor = self.richTextView.backgroundColor;
+        [_sharePhotoCollectionView registerClass:[XHAlbumPhotoCollectionViewCell class] forCellWithReuseIdentifier:kXHPhotoCollectionViewCellIdentifier];
+        [_sharePhotoCollectionView setScrollsToTop:NO];
         _sharePhotoCollectionView.delegate = self;
         _sharePhotoCollectionView.dataSource = self;
-        [_sharePhotoCollectionView registerClass:[XHAlbumPhotoCollectionViewCell class] forCellWithReuseIdentifier:kXHPhotoCollectionViewCellIdentifier];
     }
     return _sharePhotoCollectionView;
 }
@@ -137,6 +144,10 @@
     
     CGRect sharePhotoCollectionViewFrame = CGRectMake(richTextViewX, CGRectGetMaxY(richTextViewFrame) + kXHAlbumPhotoInsets, kXHAlbumPhotoInsets * 4 + kXHAlbumPhotoSize * 3, [XHAlbumRichTextView getSharePhotoCollectionViewHeightWithPhotos:self.displayAlbum.albumSharePhotos]);
     self.sharePhotoCollectionView.frame = sharePhotoCollectionViewFrame;
+    
+    CGRect frame = self.frame;
+    frame.size.height = CGRectGetMaxY(sharePhotoCollectionViewFrame);
+    self.frame = frame;
 }
 
 #pragma mark - UICollectionView DataSource
@@ -148,6 +159,7 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     XHAlbumPhotoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kXHPhotoCollectionViewCellIdentifier forIndexPath:indexPath];
     
+    cell.indexPath = indexPath;
     
     return cell;
 }
@@ -155,7 +167,26 @@
 #pragma mark - UICollectionView Delegate
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    [self showImageViewerAtIndexPath:indexPath];
+}
+
+- (void)showImageViewerAtIndexPath:(NSIndexPath *)indexPath {
+    XHAlbumPhotoCollectionViewCell *cell = (XHAlbumPhotoCollectionViewCell *)[self.sharePhotoCollectionView cellForItemAtIndexPath:indexPath];
     
+    NSMutableArray *imageViews = [NSMutableArray array];
+    
+    NSArray *visibleCell = [self.sharePhotoCollectionView visibleCells];
+    
+    NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"indexPath" ascending:YES];
+    
+    visibleCell = [visibleCell sortedArrayUsingDescriptors:[NSArray arrayWithObject:sort]];
+    
+    [visibleCell enumerateObjectsUsingBlock:^(XHAlbumPhotoCollectionViewCell *cell, NSUInteger idx, BOOL *stop) {
+        [imageViews addObject:cell.photoImageView];
+    }];
+    
+    XHImageViewer *imageViewer = [[XHImageViewer alloc] init];
+    [imageViewer showWithImageViews:imageViews selectedView:cell.photoImageView];
 }
 
 @end

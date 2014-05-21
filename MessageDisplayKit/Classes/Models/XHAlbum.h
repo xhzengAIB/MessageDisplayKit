@@ -16,7 +16,7 @@
 #define kXHAlbumPhotoInsets 5
 
 // 朋友圈分享内容字体和间隔
-#define kXHAlbumContentFont [UIFont systemFontOfSize:14]
+#define kXHAlbumContentFont [UIFont systemFontOfSize:13]
 #define kXHAlbumContentLineSpacing 4
 
 // 朋友圈评论按钮大小

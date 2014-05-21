@@ -27,7 +27,7 @@
     if (!_albumHeaderContainerViewPathCover) {
         _albumHeaderContainerViewPathCover = [[XHPathCover alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 200)];
         [_albumHeaderContainerViewPathCover setBackgroundImage:[UIImage imageNamed:@"AlbumHeaderBackgrounImage"]];
-        [_albumHeaderContainerViewPathCover setAvatarImage:[UIImage imageNamed:@"avator"]];
+        [_albumHeaderContainerViewPathCover setAvatarImage:[UIImage imageNamed:@"MeIcon"]];
         [_albumHeaderContainerViewPathCover setInfo:[NSDictionary dictionaryWithObjectsAndKeys:@"Jack xhzengAIB", XHUserNameKey, @"1990-10-19", XHBirthdayKey, nil]];
         _albumHeaderContainerViewPathCover.isZoomingEffect = YES;
         
@@ -45,7 +45,7 @@
     WEAKSELF
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSMutableArray *dataSource = [[XHStoreManager shareStoreManager] getAlbumConfigureArray];
-        sleep(1);
+        sleep(3);
         
         dispatch_async(dispatch_get_main_queue(), ^{
             [weakSelf.albumHeaderContainerViewPathCover stopRefresh];
@@ -57,12 +57,15 @@
 
 #pragma Life Cycle
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = NSLocalizedStringFromTable(@"Album", @"MessageDisplayKitString", @"个人信息");
-    
     
     self.tableView.tableHeaderView = self.albumHeaderContainerViewPathCover;
     [self.view addSubview:self.tableView];

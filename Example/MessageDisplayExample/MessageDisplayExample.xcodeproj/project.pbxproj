@@ -341,6 +341,37 @@
 		7D06CA71192B3D9B00DF8C04 /* XHBaseTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D06CA6F192B3D9B00DF8C04 /* XHBaseTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7D06CA72192B3D9B00DF8C04 /* XHBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D06CA70192B3D9B00DF8C04 /* XHBaseTableViewCell.m */; };
 		7D06CA73192B3D9B00DF8C04 /* XHBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D06CA70192B3D9B00DF8C04 /* XHBaseTableViewCell.m */; };
+		7D08C21E192C7A5E00B26D93 /* MeIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D08C21D192C7A5E00B26D93 /* MeIcon@2x.png */; };
+		7D13FC49192C4F4000A23413 /* NSString+XHMD5.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D13FC39192C4F4000A23413 /* NSString+XHMD5.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7D13FC4A192C4F4000A23413 /* NSString+XHMD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D13FC3A192C4F4000A23413 /* NSString+XHMD5.m */; };
+		7D13FC4B192C4F4000A23413 /* NSString+XHMD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D13FC3A192C4F4000A23413 /* NSString+XHMD5.m */; };
+		7D13FC4C192C4F4000A23413 /* UIImage+Utility.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D13FC3B192C4F4000A23413 /* UIImage+Utility.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7D13FC4D192C4F4000A23413 /* UIImage+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D13FC3C192C4F4000A23413 /* UIImage+Utility.m */; };
+		7D13FC4E192C4F4000A23413 /* UIImage+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D13FC3C192C4F4000A23413 /* UIImage+Utility.m */; };
+		7D13FC4F192C4F4000A23413 /* UIImageView+XHURLDownload.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D13FC3D192C4F4000A23413 /* UIImageView+XHURLDownload.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7D13FC50192C4F4000A23413 /* UIImageView+XHURLDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D13FC3E192C4F4000A23413 /* UIImageView+XHURLDownload.m */; };
+		7D13FC51192C4F4000A23413 /* UIImageView+XHURLDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D13FC3E192C4F4000A23413 /* UIImageView+XHURLDownload.m */; };
+		7D13FC52192C4F4000A23413 /* XHCacheManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D13FC3F192C4F4000A23413 /* XHCacheManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7D13FC53192C4F4000A23413 /* XHCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D13FC40192C4F4000A23413 /* XHCacheManager.m */; };
+		7D13FC54192C4F4000A23413 /* XHCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D13FC40192C4F4000A23413 /* XHCacheManager.m */; };
+		7D13FC55192C4F4000A23413 /* XHFileAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D13FC41192C4F4000A23413 /* XHFileAttribute.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7D13FC56192C4F4000A23413 /* XHFileAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D13FC42192C4F4000A23413 /* XHFileAttribute.m */; };
+		7D13FC57192C4F4000A23413 /* XHFileAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D13FC42192C4F4000A23413 /* XHFileAttribute.m */; };
+		7D13FC58192C4F4000A23413 /* XHImageViewer.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D13FC43192C4F4000A23413 /* XHImageViewer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7D13FC59192C4F4000A23413 /* XHImageViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D13FC44192C4F4000A23413 /* XHImageViewer.m */; };
+		7D13FC5A192C4F4000A23413 /* XHImageViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D13FC44192C4F4000A23413 /* XHImageViewer.m */; };
+		7D13FC5B192C4F4000A23413 /* XHViewState.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D13FC45192C4F4000A23413 /* XHViewState.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7D13FC5C192C4F4000A23413 /* XHViewState.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D13FC46192C4F4000A23413 /* XHViewState.m */; };
+		7D13FC5D192C4F4000A23413 /* XHViewState.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D13FC46192C4F4000A23413 /* XHViewState.m */; };
+		7D13FC5E192C4F4000A23413 /* XHZoomingImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D13FC47192C4F4000A23413 /* XHZoomingImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7D13FC5F192C4F4000A23413 /* XHZoomingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D13FC48192C4F4000A23413 /* XHZoomingImageView.m */; };
+		7D13FC60192C4F4000A23413 /* XHZoomingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D13FC48192C4F4000A23413 /* XHZoomingImageView.m */; };
+		7D23E40E192C58E300B717B7 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D23E40D192C58E300B717B7 /* MediaPlayer.framework */; };
+		7D23E410192C58F000B717B7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D23E40F192C58F000B717B7 /* AudioToolbox.framework */; };
+		7D23E412192C590900B717B7 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D23E411192C590900B717B7 /* MobileCoreServices.framework */; };
+		7D23E414192C590F00B717B7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D23E413192C590F00B717B7 /* AVFoundation.framework */; };
+		7D23E416192C591600B717B7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D23E415192C591600B717B7 /* CoreLocation.framework */; };
+		7D23E418192C594800B717B7 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D23E417192C594800B717B7 /* CoreText.framework */; };
 		AB439973192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = AB439971192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB439974192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = AB439972192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.m */; };
 		AB439975192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = AB439972192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.m */; };
@@ -656,6 +687,29 @@
 		74FAB0B8190A81DC005623D0 /* UIImage+XHRounded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+XHRounded.m"; sourceTree = "<group>"; };
 		7D06CA6F192B3D9B00DF8C04 /* XHBaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHBaseTableViewCell.h; sourceTree = "<group>"; };
 		7D06CA70192B3D9B00DF8C04 /* XHBaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHBaseTableViewCell.m; sourceTree = "<group>"; };
+		7D08C21D192C7A5E00B26D93 /* MeIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MeIcon@2x.png"; sourceTree = "<group>"; };
+		7D13FC39192C4F4000A23413 /* NSString+XHMD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+XHMD5.h"; sourceTree = "<group>"; };
+		7D13FC3A192C4F4000A23413 /* NSString+XHMD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+XHMD5.m"; sourceTree = "<group>"; };
+		7D13FC3B192C4F4000A23413 /* UIImage+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Utility.h"; sourceTree = "<group>"; };
+		7D13FC3C192C4F4000A23413 /* UIImage+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Utility.m"; sourceTree = "<group>"; };
+		7D13FC3D192C4F4000A23413 /* UIImageView+XHURLDownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+XHURLDownload.h"; sourceTree = "<group>"; };
+		7D13FC3E192C4F4000A23413 /* UIImageView+XHURLDownload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+XHURLDownload.m"; sourceTree = "<group>"; };
+		7D13FC3F192C4F4000A23413 /* XHCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHCacheManager.h; sourceTree = "<group>"; };
+		7D13FC40192C4F4000A23413 /* XHCacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHCacheManager.m; sourceTree = "<group>"; };
+		7D13FC41192C4F4000A23413 /* XHFileAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHFileAttribute.h; sourceTree = "<group>"; };
+		7D13FC42192C4F4000A23413 /* XHFileAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHFileAttribute.m; sourceTree = "<group>"; };
+		7D13FC43192C4F4000A23413 /* XHImageViewer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHImageViewer.h; sourceTree = "<group>"; };
+		7D13FC44192C4F4000A23413 /* XHImageViewer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHImageViewer.m; sourceTree = "<group>"; };
+		7D13FC45192C4F4000A23413 /* XHViewState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHViewState.h; sourceTree = "<group>"; };
+		7D13FC46192C4F4000A23413 /* XHViewState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHViewState.m; sourceTree = "<group>"; };
+		7D13FC47192C4F4000A23413 /* XHZoomingImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHZoomingImageView.h; sourceTree = "<group>"; };
+		7D13FC48192C4F4000A23413 /* XHZoomingImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHZoomingImageView.m; sourceTree = "<group>"; };
+		7D23E40D192C58E300B717B7 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		7D23E40F192C58F000B717B7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		7D23E411192C590900B717B7 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		7D23E413192C590F00B717B7 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		7D23E415192C591600B717B7 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		7D23E417192C594800B717B7 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		AB439971192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHAlbumCollectionViewFlowLayout.h; sourceTree = "<group>"; };
 		AB439972192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHAlbumCollectionViewFlowLayout.m; sourceTree = "<group>"; };
 		AB79A207192C0A6400A9B951 /* XHPathCover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHPathCover.h; sourceTree = "<group>"; };
@@ -694,6 +748,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D23E418192C594800B717B7 /* CoreText.framework in Frameworks */,
+				7D23E416192C591600B717B7 /* CoreLocation.framework in Frameworks */,
+				7D23E414192C590F00B717B7 /* AVFoundation.framework in Frameworks */,
+				7D23E412192C590900B717B7 /* MobileCoreServices.framework in Frameworks */,
+				7D23E410192C58F000B717B7 /* AudioToolbox.framework in Frameworks */,
+				7D23E40E192C58E300B717B7 /* MediaPlayer.framework in Frameworks */,
 				748245071908C730008EC388 /* CoreGraphics.framework in Frameworks */,
 				748245091908C730008EC388 /* UIKit.framework in Frameworks */,
 				748245051908C730008EC388 /* Foundation.framework in Frameworks */,
@@ -1076,6 +1136,12 @@
 		748245031908C730008EC388 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7D23E417192C594800B717B7 /* CoreText.framework */,
+				7D23E415192C591600B717B7 /* CoreLocation.framework */,
+				7D23E413192C590F00B717B7 /* AVFoundation.framework */,
+				7D23E411192C590900B717B7 /* MobileCoreServices.framework */,
+				7D23E40F192C58F000B717B7 /* AudioToolbox.framework */,
+				7D23E40D192C58E300B717B7 /* MediaPlayer.framework */,
 				748245041908C730008EC388 /* Foundation.framework */,
 				748245061908C730008EC388 /* CoreGraphics.framework */,
 				748245081908C730008EC388 /* UIKit.framework */,
@@ -1297,6 +1363,7 @@
 		74E5EAA51924FFBE0084BCFA /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				7D13FC38192C4F4000A23413 /* XHImageViewer */,
 				AB79A206192C0A6400A9B951 /* XHPathCover */,
 				74E5EAA61924FFBE0084BCFA /* SECoreTextView */,
 			);
@@ -1363,6 +1430,7 @@
 		74E9004A1927940000D37C81 /* ExampleResources */ = {
 			isa = PBXGroup;
 			children = (
+				7D08C21D192C7A5E00B26D93 /* MeIcon@2x.png */,
 				74E9004B1927940000D37C81 /* avator@2x.png */,
 				74E9004C1927940000D37C81 /* Demo0.gif */,
 				74E9004D1927940000D37C81 /* Demo1.gif */,
@@ -1496,6 +1564,29 @@
 			path = BaseTableViewCell;
 			sourceTree = "<group>";
 		};
+		7D13FC38192C4F4000A23413 /* XHImageViewer */ = {
+			isa = PBXGroup;
+			children = (
+				7D13FC39192C4F4000A23413 /* NSString+XHMD5.h */,
+				7D13FC3A192C4F4000A23413 /* NSString+XHMD5.m */,
+				7D13FC3B192C4F4000A23413 /* UIImage+Utility.h */,
+				7D13FC3C192C4F4000A23413 /* UIImage+Utility.m */,
+				7D13FC3D192C4F4000A23413 /* UIImageView+XHURLDownload.h */,
+				7D13FC3E192C4F4000A23413 /* UIImageView+XHURLDownload.m */,
+				7D13FC3F192C4F4000A23413 /* XHCacheManager.h */,
+				7D13FC40192C4F4000A23413 /* XHCacheManager.m */,
+				7D13FC41192C4F4000A23413 /* XHFileAttribute.h */,
+				7D13FC42192C4F4000A23413 /* XHFileAttribute.m */,
+				7D13FC43192C4F4000A23413 /* XHImageViewer.h */,
+				7D13FC44192C4F4000A23413 /* XHImageViewer.m */,
+				7D13FC45192C4F4000A23413 /* XHViewState.h */,
+				7D13FC46192C4F4000A23413 /* XHViewState.m */,
+				7D13FC47192C4F4000A23413 /* XHZoomingImageView.h */,
+				7D13FC48192C4F4000A23413 /* XHZoomingImageView.m */,
+			);
+			path = XHImageViewer;
+			sourceTree = "<group>";
+		};
 		AB79A206192C0A6400A9B951 /* XHPathCover */ = {
 			isa = PBXGroup;
 			children = (
@@ -1595,6 +1686,14 @@
 				AB79A222192C231C00A9B951 /* XHAlbumPhotoCollectionViewCell.h in Headers */,
 				AB79A213192C0A6400A9B951 /* XHWaterDropRefresh.h in Headers */,
 				AB79A20D192C0A6400A9B951 /* XHPathCover.h in Headers */,
+				7D13FC5E192C4F4000A23413 /* XHZoomingImageView.h in Headers */,
+				7D13FC4C192C4F4000A23413 /* UIImage+Utility.h in Headers */,
+				7D13FC5B192C4F4000A23413 /* XHViewState.h in Headers */,
+				7D13FC55192C4F4000A23413 /* XHFileAttribute.h in Headers */,
+				7D13FC49192C4F4000A23413 /* NSString+XHMD5.h in Headers */,
+				7D13FC52192C4F4000A23413 /* XHCacheManager.h in Headers */,
+				7D13FC58192C4F4000A23413 /* XHImageViewer.h in Headers */,
+				7D13FC4F192C4F4000A23413 /* UIImageView+XHURLDownload.h in Headers */,
 				AB439973192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.h in Headers */,
 				AB79A210192C0A6400A9B951 /* XHSoundManager.h in Headers */,
 				749019B4191D315A0049AFF9 /* XHMessageVideoConverPhotoFactory.h in Headers */,
@@ -1836,6 +1935,7 @@
 				74E5E99A1921EC8C0084BCFA /* VoiceBtn_Black@2x.png in Resources */,
 				74E900AD1927ABF800D37C81 /* fishwater3@2x.png in Resources */,
 				74E900981927A81500D37C81 /* bottleButtonFish@2x.png in Resources */,
+				7D08C21E192C7A5E00B26D93 /* MeIcon@2x.png in Resources */,
 				746C88571916B612007F9A5E /* sharemore_location@2x.png in Resources */,
 				74E900A61927A9C900D37C81 /* bottleWriting@2x.png in Resources */,
 				74E5E9AE1921F7710084BCFA /* RecordingSignal006@2x.png in Resources */,
@@ -1891,17 +1991,21 @@
 				74E5E9971921E90A0084BCFA /* XHVoiceRecordHUD.m in Sources */,
 				74C3E7D8192919930053F4E1 /* XHAlbumRichTextView.m in Sources */,
 				74E5EADB1924FFBE0084BCFA /* SETextAttachment.m in Sources */,
+				7D13FC54192C4F4000A23413 /* XHCacheManager.m in Sources */,
 				746C894C1917F691007F9A5E /* XHEmotionManagerView.m in Sources */,
+				7D13FC60192C4F4000A23413 /* XHZoomingImageView.m in Sources */,
 				74E900921927A12100D37C81 /* XHShakeViewController.m in Sources */,
 				74585F47191C8B5700F5E8C8 /* UIView+XHNetworkImage.m in Sources */,
 				AB79A20F192C0A6400A9B951 /* XHPathCover.m in Sources */,
 				AB79A212192C0A6400A9B951 /* XHSoundManager.m in Sources */,
 				74585FFF191D10CC00F5E8C8 /* XHAnnotation.m in Sources */,
 				74E5E98B1921317B0084BCFA /* XHVoiceRecordHelper.m in Sources */,
+				7D13FC5D192C4F4000A23413 /* XHViewState.m in Sources */,
 				74180BFD190F449400A35C82 /* XHFoundationCommon.m in Sources */,
 				74901A47191D4CD30049AFF9 /* XHBaseViewController.m in Sources */,
 				746C893D1917F691007F9A5E /* XHMessageTableViewCell.m in Sources */,
 				746C89461917F691007F9A5E /* XHEmotionCollectionViewCell.m in Sources */,
+				7D13FC57192C4F4000A23413 /* XHFileAttribute.m in Sources */,
 				7490198B191D2D030049AFF9 /* XHDisplayMediaViewController.m in Sources */,
 				746C89671917F7EA007F9A5E /* XHDisplayLocationViewController.m in Sources */,
 				746C89371917F691007F9A5E /* XHMessageDisplayTextView.m in Sources */,
@@ -1915,9 +2019,12 @@
 				74E5EAD81924FFBE0084BCFA /* SESelectionGrabber.m in Sources */,
 				74E900881927A10C00D37C81 /* XHMoreGameTableViewController.m in Sources */,
 				74E5EACF1924FFBE0084BCFA /* SEConstants.m in Sources */,
+				7D13FC4E192C4F4000A23413 /* UIImage+Utility.m in Sources */,
 				74180BFE190F44A000A35C82 /* UIScrollView+XHkeyboardControl.m in Sources */,
+				7D13FC51192C4F4000A23413 /* UIImageView+XHURLDownload.m in Sources */,
 				74E900831927A10200D37C81 /* XHLocationServiceTableViewController.m in Sources */,
 				746C893A1917F691007F9A5E /* XHMessageTableView.m in Sources */,
+				7D13FC5A192C4F4000A23413 /* XHImageViewer.m in Sources */,
 				749019B6191D315A0049AFF9 /* XHMessageVideoConverPhotoFactory.m in Sources */,
 				7D06CA73192B3D9B00DF8C04 /* XHBaseTableViewCell.m in Sources */,
 				74E5EAEA1924FFBE0084BCFA /* SETextMagnifierCaret.m in Sources */,
@@ -1937,6 +2044,7 @@
 				740660A91913552800E1CE95 /* UIImage+XHAnimatedFaceGif.m in Sources */,
 				74585F40191B999B00F5E8C8 /* XHLocationHelper.m in Sources */,
 				74E9008D1927A11800D37C81 /* XHQRCodeViewController.m in Sources */,
+				7D13FC4B192C4F4000A23413 /* NSString+XHMD5.m in Sources */,
 				74E5EAD51924FFBE0084BCFA /* SELinkText.m in Sources */,
 				746C89341917F691007F9A5E /* XHMessageBubbleView.m in Sources */,
 				746C89621917F7DE007F9A5E /* XHDisplayEmotionViewController.m in Sources */,
@@ -1996,11 +2104,13 @@
 				746C89301917F691007F9A5E /* XHBubblePhotoImageView.m in Sources */,
 				746C89881917F8EA007F9A5E /* XHBaseTableViewController.m in Sources */,
 				74E5E9961921E90A0084BCFA /* XHVoiceRecordHUD.m in Sources */,
+				7D13FC5F192C4F4000A23413 /* XHZoomingImageView.m in Sources */,
 				74E5EAEF1924FFBE0084BCFA /* SETextSelection.m in Sources */,
 				74E5EAE91924FFBE0084BCFA /* SETextMagnifierCaret.m in Sources */,
 				746C897E1917F8C5007F9A5E /* XHBaseTabBarController.m in Sources */,
 				746C89611917F7DE007F9A5E /* XHDisplayEmotionViewController.m in Sources */,
 				74E5EAE61924FFBE0084BCFA /* SETextLayout.m in Sources */,
+				7D13FC5C192C4F4000A23413 /* XHViewState.m in Sources */,
 				7490198A191D2D030049AFF9 /* XHDisplayMediaViewController.m in Sources */,
 				74D1C5C6190DFC1D003B1BCA /* XHFoundationCommon.m in Sources */,
 				74C3E7D2192919360053F4E1 /* XHAlbumTableViewCell.m in Sources */,
@@ -2010,6 +2120,7 @@
 				74E900821927A10200D37C81 /* XHLocationServiceTableViewController.m in Sources */,
 				740660CE1914E1F400E1CE95 /* XHEmotionManager.m in Sources */,
 				74585F46191C8B5700F5E8C8 /* UIView+XHNetworkImage.m in Sources */,
+				7D13FC53192C4F4000A23413 /* XHCacheManager.m in Sources */,
 				74585FFE191D10CC00F5E8C8 /* XHAnnotation.m in Sources */,
 				746C89361917F691007F9A5E /* XHMessageDisplayTextView.m in Sources */,
 				74E5EADD1924FFBE0084BCFA /* SETextEditingCaret.m in Sources */,
@@ -2028,15 +2139,19 @@
 				74E900911927A12100D37C81 /* XHShakeViewController.m in Sources */,
 				746C895C1917F7B4007F9A5E /* XHMessageTableViewController.m in Sources */,
 				74E900871927A10C00D37C81 /* XHMoreGameTableViewController.m in Sources */,
+				7D13FC4A192C4F4000A23413 /* NSString+XHMD5.m in Sources */,
 				74FAB0B9190A81DC005623D0 /* UIImage+XHRounded.m in Sources */,
 				AB79A21E192C22F500A9B951 /* XHBaseCollectionViewCell.m in Sources */,
 				74E9003419278F5C00D37C81 /* XHContactTableViewController.m in Sources */,
 				74E900781927A0E900D37C81 /* XHAlbumTableViewController.m in Sources */,
+				7D13FC56192C4F4000A23413 /* XHFileAttribute.m in Sources */,
 				AB79A214192C0A6400A9B951 /* XHWaterDropRefresh.m in Sources */,
 				74E5EAD11924FFBE0084BCFA /* SELineLayout.m in Sources */,
+				7D13FC59192C4F4000A23413 /* XHImageViewer.m in Sources */,
 				746C89511917F691007F9A5E /* XHShareMenuView.m in Sources */,
 				746C89331917F691007F9A5E /* XHMessageBubbleView.m in Sources */,
 				74BBB02C190BE8C400093577 /* XHMessageRootViewController.m in Sources */,
+				7D13FC4D192C4F4000A23413 /* UIImage+Utility.m in Sources */,
 				746C894E1917F691007F9A5E /* XHEmotionSectionBar.m in Sources */,
 				74E5EADA1924FFBE0084BCFA /* SETextAttachment.m in Sources */,
 				74E5EAD41924FFBE0084BCFA /* SELinkText.m in Sources */,
@@ -2048,6 +2163,7 @@
 				746C894B1917F691007F9A5E /* XHEmotionManagerView.m in Sources */,
 				74E5E98A1921317B0084BCFA /* XHVoiceRecordHelper.m in Sources */,
 				7D06CA72192B3D9B00DF8C04 /* XHBaseTableViewCell.m in Sources */,
+				7D13FC50192C4F4000A23413 /* UIImageView+XHURLDownload.m in Sources */,
 				74E900B41928F3D100D37C81 /* XHStoreManager.m in Sources */,
 				74C3E7DC19291A1A0053F4E1 /* XHAlbum.m in Sources */,
 				746C89661917F7EA007F9A5E /* XHDisplayLocationViewController.m in Sources */,

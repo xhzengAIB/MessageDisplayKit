@@ -12,7 +12,7 @@
 
 #import "XHAlbum.h"
 
-@interface XHAlbumTableViewCell : XHBaseTableViewCell
+@interface XHAlbumTableViewCell : UITableViewCell
 
 @property (nonatomic, strong) XHAlbum *currentAlbum;
 

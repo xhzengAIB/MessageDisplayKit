@@ -12,4 +12,6 @@
 
 @property (nonatomic, strong) UIImageView *photoImageView;
 
+@property (nonatomic, strong) NSIndexPath *indexPath;
+
 @end

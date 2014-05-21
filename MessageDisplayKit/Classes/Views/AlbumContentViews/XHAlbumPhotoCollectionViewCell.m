@@ -15,7 +15,7 @@
 - (UIImageView *)photoImageView {
     if (!_photoImageView) {
         _photoImageView = [[UIImageView alloc] initWithFrame:self.bounds];
-        _photoImageView.image = [UIImage imageNamed:@"placeholderImage"];
+        _photoImageView.image = [UIImage imageNamed:@"MeIcon"];
     }
     return _photoImageView;
 }
