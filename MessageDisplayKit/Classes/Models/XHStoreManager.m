@@ -44,7 +44,7 @@
 - (NSMutableArray *)getAlbumConfigureArray {
     NSMutableArray *albumConfigureArray = [[NSMutableArray alloc] init];
     
-    for (int i = 0; i < 20; i ++) {
+    for (int i = 0; i < 60; i ++) {
         XHAlbum *currnetAlbum = [[XHAlbum alloc] init];
         currnetAlbum.userName = @"Jack";
         currnetAlbum.profileAvatorUrlString = @"http://www.pailixiu.com/jack/meIcon@2x.png";

@@ -56,6 +56,8 @@
 #pragma mark - Propertys
 
 - (void)setDisplayAlbum:(XHAlbum *)displayAlbum {
+    if (!displayAlbum)
+        return;
     _displayAlbum = displayAlbum;
     
     self.userNameLabel.text = displayAlbum.userName;
@@ -133,6 +135,19 @@
         [self setup];
     }
     return self;
+}
+
+- (void)dealloc {
+    self.font = nil;
+    self.textColor = nil;
+    self.richTextView = nil;
+    _displayAlbum = nil;
+    
+    self.avatorImageView = nil;
+    self.userNameLabel = nil;
+    self.sharePhotoCollectionView.delegate = nil;
+    self.sharePhotoCollectionView.dataSource = nil;
+    self.sharePhotoCollectionView = nil;
 }
 
 - (void)layoutSubviews {

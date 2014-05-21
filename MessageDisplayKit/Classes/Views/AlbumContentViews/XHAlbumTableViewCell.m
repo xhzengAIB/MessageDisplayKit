@@ -25,6 +25,8 @@
 #pragma mark - Propertys
 
 - (void)setCurrentAlbum:(XHAlbum *)currentAlbum {
+    if (!currentAlbum)
+        return;
     _currentAlbum = currentAlbum;
     
     self.albumRichTextView.displayAlbum = currentAlbum;
@@ -53,6 +55,11 @@
         [self setup];
     }
     return self;
+}
+
+- (void)dealloc {
+    _currentAlbum = nil;
+    self.albumRichTextView = nil;
 }
 
 - (void)awakeFromNib

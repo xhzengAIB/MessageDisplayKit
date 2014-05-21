@@ -46,6 +46,13 @@
     // Do any additional setup after loading the view.
 }
 
+- (void)dealloc {
+    self.dataSource = nil;
+    self.tableView.delegate = nil;
+    self.tableView.dataSource = nil;
+    self.tableView = nil;
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

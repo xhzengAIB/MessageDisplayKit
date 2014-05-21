@@ -82,7 +82,7 @@
 }
 
 - (void)dealloc {
-    
+    self.albumHeaderContainerViewPathCover = nil;
 }
 
 #pragma mark- UIScrollView Delegate
