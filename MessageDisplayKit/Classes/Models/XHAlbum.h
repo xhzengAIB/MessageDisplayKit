@@ -8,12 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+// 朋友圈分享人的名称高度
+#define kXHAlbumUserNameHeigth 18
+
 // 朋友圈分享的图片以及图片之间的间隔
 #define kXHAlbumPhotoSize 60
 #define kXHAlbumPhotoInsets 5
 
 // 朋友圈分享内容字体和间隔
-#define kXHAlbumContentFont [UIFont systemFontOfSize:17]
+#define kXHAlbumContentFont [UIFont systemFontOfSize:14]
 #define kXHAlbumContentLineSpacing 4
 
 // 朋友圈评论按钮大小
