@@ -20,7 +20,7 @@ It's ok if you don't understand how the code works. Most code has comments, whic
 [CocosPods](http://cocosPods.org) is the recommended method to install MessageDisplayKit, just add the following line to `Podfile`
 
 ```
-pod 'MessageDisplayKit', '~> 0.1.9'
+pod 'MessageDisplayKit', '~> 0.2'
 ```
 
 and run `pod install`, then you're all done!
@@ -74,6 +74,9 @@ Support both iPhone and iPad.
 Support the StoryBorad to user.                              
 * 18、支持下拉加载更多旧消息，处理了保持可见cell不滚动的效果。
 Support pull down load more old message, keep visible cells static when inserting old message at top.
+* 19、支持朋友圈
+* 20、支持漂流瓶
+
 ## License
 
 中文: MessageDisplayKit 是在MIT协议下使用的，可以在LICENSE文件里面找到相关的使用协议信息。
