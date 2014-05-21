@@ -1,4 +1,5 @@
 ![image](https://github.com/xhzengAIB/LearnEnglish/raw/master/Screenshots/SWeChatApp.gif)
+![image](https://github.com/xhzengAIB/LearnEnglish/raw/master/Screenshots/Album.gif)
 
 MessageDisplayKit
 =================
