@@ -342,6 +342,7 @@
 		7D06CA72192B3D9B00DF8C04 /* XHBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D06CA70192B3D9B00DF8C04 /* XHBaseTableViewCell.m */; };
 		7D06CA73192B3D9B00DF8C04 /* XHBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D06CA70192B3D9B00DF8C04 /* XHBaseTableViewCell.m */; };
 		7D08C21E192C7A5E00B26D93 /* MeIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D08C21D192C7A5E00B26D93 /* MeIcon@2x.png */; };
+		7D08C220192CA06B00B26D93 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D08C21F192CA06B00B26D93 /* CoreMedia.framework */; };
 		7D13FC49192C4F4000A23413 /* NSString+XHMD5.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D13FC39192C4F4000A23413 /* NSString+XHMD5.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7D13FC4A192C4F4000A23413 /* NSString+XHMD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D13FC3A192C4F4000A23413 /* NSString+XHMD5.m */; };
 		7D13FC4B192C4F4000A23413 /* NSString+XHMD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D13FC3A192C4F4000A23413 /* NSString+XHMD5.m */; };
@@ -688,6 +689,7 @@
 		7D06CA6F192B3D9B00DF8C04 /* XHBaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHBaseTableViewCell.h; sourceTree = "<group>"; };
 		7D06CA70192B3D9B00DF8C04 /* XHBaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHBaseTableViewCell.m; sourceTree = "<group>"; };
 		7D08C21D192C7A5E00B26D93 /* MeIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MeIcon@2x.png"; sourceTree = "<group>"; };
+		7D08C21F192CA06B00B26D93 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		7D13FC39192C4F4000A23413 /* NSString+XHMD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+XHMD5.h"; sourceTree = "<group>"; };
 		7D13FC3A192C4F4000A23413 /* NSString+XHMD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+XHMD5.m"; sourceTree = "<group>"; };
 		7D13FC3B192C4F4000A23413 /* UIImage+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Utility.h"; sourceTree = "<group>"; };
@@ -748,6 +750,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D08C220192CA06B00B26D93 /* CoreMedia.framework in Frameworks */,
 				7D23E418192C594800B717B7 /* CoreText.framework in Frameworks */,
 				7D23E416192C591600B717B7 /* CoreLocation.framework in Frameworks */,
 				7D23E414192C590F00B717B7 /* AVFoundation.framework in Frameworks */,
@@ -1136,6 +1139,7 @@
 		748245031908C730008EC388 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7D08C21F192CA06B00B26D93 /* CoreMedia.framework */,
 				7D23E417192C594800B717B7 /* CoreText.framework */,
 				7D23E415192C591600B717B7 /* CoreLocation.framework */,
 				7D23E413192C590F00B717B7 /* AVFoundation.framework */,
