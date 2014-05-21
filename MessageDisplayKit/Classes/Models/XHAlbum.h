@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 // 朋友圈分享的图片以及图片之间的间隔
-#define kXHAlbumPhotoSize 80
+#define kXHAlbumPhotoSize 60
 #define kXHAlbumPhotoInsets 5
 
 // 朋友圈分享内容字体和间隔
@@ -25,12 +25,12 @@
 @property (nonatomic, copy) NSString *userName;
 @property (nonatomic, copy) NSString *profileAvatorUrlString;
 
-@property (nonatomic, copy) NSString *shareContent;
+@property (nonatomic, copy) NSString *albumShareContent;
 
-@property (nonatomic, strong) NSArray *shareImages;
+@property (nonatomic, strong) NSArray *albumSharePhotos;
 
-@property (nonatomic, strong) NSArray *shareComments;
+@property (nonatomic, strong) NSArray *albumShareComments;
 
-@property (nonatomic, strong) NSArray *shareLikes;
+@property (nonatomic, strong) NSArray *albumShareLikes;
 
 @end

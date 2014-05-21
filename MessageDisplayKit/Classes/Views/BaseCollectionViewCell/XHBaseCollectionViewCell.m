@@ -1,23 +1,20 @@
 //
-//  XHAlbumHeaderContainerView.m
+//  XHBaseCollectionViewCell.m
 //  MessageDisplayExample
 //
-//  Created by qtone-1 on 14-5-19.
+//  Created by 曾 宪华 on 14-5-20.
 //  Copyright (c) 2014年 曾宪华 开发团队(http://iyilunba.com ) 本人QQ:543413507 本人QQ群（142557668）. All rights reserved.
 //
 
-#import "XHAlbumHeaderContainerView.h"
+#import "XHBaseCollectionViewCell.h"
 
-@implementation XHAlbumHeaderContainerView
+@implementation XHBaseCollectionViewCell
 
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        UIImageView *backgroundImageView = [[UIImageView alloc] initWithFrame:self.bounds];
-        backgroundImageView.image = [UIImage imageNamed:@"AlbumHeaderBackgrounImage"];
-        [self addSubview:backgroundImageView];
     }
     return self;
 }

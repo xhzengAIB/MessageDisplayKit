@@ -7,18 +7,42 @@
 //
 
 #import "XHAlbumRichTextView.h"
+
+
 #import "XHMessageAvatorFactory.h"
+#import "XHAlbumPhotoCollectionViewCell.h"
+#import "XHAlbumCollectionViewFlowLayout.h"
+
+#define kXHPhotoCollectionViewCellIdentifier @"XHPhotoCollectionViewCellIdentifier"
+
+@interface XHAlbumRichTextView () <UICollectionViewDelegate, UICollectionViewDataSource>
+
+@property (nonatomic, strong) UIImageView *avatorImageView;
+@property (nonatomic, strong) UILabel *userNameLabel;
+
+@property (nonatomic, strong) UICollectionView *sharePhotoCollectionView;
+
+@end
 
 @implementation XHAlbumRichTextView
 
++ (CGFloat)getRichTextHeightWithText:(NSString *)text {
+    if (!text || !text.length)
+        return 0;
+    return [SETextView frameRectWithAttributtedString:[[NSAttributedString alloc] initWithString:text] constraintSize:CGSizeMake(CGRectGetWidth([[UIScreen mainScreen] bounds]) - kXHAvatarImageSize - (kXHAlbumAvatorSpacing * 3), CGFLOAT_MAX) lineSpacing:kXHAlbumContentLineSpacing font:kXHAlbumContentFont].size.height;
+}
+
++ (CGFloat)getSharePhotoCollectionViewHeightWithPhotos:(NSArray *)photos {
+    return (photos.count / 3 + (photos.count % 3 ? 1 : 0)) * (kXHAlbumPhotoSize + kXHAlbumPhotoInsets);
+}
+
 + (CGFloat)calculateRichTextHeightWithAlbum:(XHAlbum *)currentAlbum {
-    __block CGFloat richTextHeight = kXHAlbumAvatorSpacing * 2;
+    CGFloat richTextHeight = kXHAlbumAvatorSpacing * 2;
     
-    richTextHeight += [SETextView frameRectWithAttributtedString:[[NSAttributedString alloc] initWithString:currentAlbum.shareContent] constraintSize:CGSizeMake(CGRectGetWidth([[UIScreen mainScreen] bounds]) - kXHAvatarImageSize - (kXHAlbumAvatorSpacing * 3), CGFLOAT_MAX) lineSpacing:kXHAlbumContentLineSpacing font:kXHAlbumContentFont].size.height;
+    richTextHeight += [self getRichTextHeightWithText:currentAlbum.albumShareContent];
     
-    [currentAlbum.shareImages enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        richTextHeight += (kXHAlbumPhotoSize + kXHAlbumPhotoInsets);
-    }];
+    
+    richTextHeight += [self getSharePhotoCollectionViewHeightWithPhotos:currentAlbum.albumSharePhotos];
     
     return richTextHeight;
 }
@@ -28,12 +52,33 @@
 - (void)setDisplayAlbum:(XHAlbum *)displayAlbum {
     _displayAlbum = displayAlbum;
     
+    self.userNameLabel.text = displayAlbum.userName;
     
+    self.richTextView.attributedText = [[NSAttributedString alloc] initWithString:displayAlbum.albumShareContent];
+    
+    [self setNeedsLayout];
+}
+
+- (UIImageView *)avatorImageView {
+    if (!_avatorImageView) {
+        _avatorImageView = [[UIImageView alloc] initWithFrame:CGRectMake(kXHAlbumAvatorSpacing, kXHAlbumAvatorSpacing, kXHAvatarImageSize, kXHAvatarImageSize)];
+        _avatorImageView.image = [UIImage imageNamed:@"avator"];
+    }
+    return _avatorImageView;
+}
+
+- (UILabel *)userNameLabel {
+    if (!_userNameLabel) {
+        CGFloat userNameLabelX = CGRectGetMaxX(self.avatorImageView.frame) + kXHAlbumAvatorSpacing;
+        _userNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(userNameLabelX, CGRectGetMinY(self.avatorImageView.frame), CGRectGetWidth([[UIScreen mainScreen] bounds]) - userNameLabelX - kXHAlbumAvatorSpacing, 30)];
+    }
+    return _userNameLabel;
 }
 
 - (SETextView *)richTextView {
     if (!_richTextView) {
         _richTextView = [[SETextView alloc] initWithFrame:self.bounds];
+        _richTextView.backgroundColor = [UIColor clearColor];
         _richTextView.font = self.font;
         _richTextView.textColor = self.textColor;
         _richTextView.textAlignment = self.textAlignment;
@@ -42,15 +87,30 @@
     return _richTextView;
 }
 
+- (UICollectionView *)sharePhotoCollectionView {
+    if (!_sharePhotoCollectionView) {
+        _sharePhotoCollectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:[[XHAlbumCollectionViewFlowLayout alloc] init]];
+        _sharePhotoCollectionView.backgroundColor = self.richTextView.backgroundColor;
+        _sharePhotoCollectionView.delegate = self;
+        _sharePhotoCollectionView.dataSource = self;
+        [_sharePhotoCollectionView registerClass:[XHAlbumPhotoCollectionViewCell class] forCellWithReuseIdentifier:kXHPhotoCollectionViewCellIdentifier];
+    }
+    return _sharePhotoCollectionView;
+}
+
 #pragma mark - Life Cycle
 
 - (void)setup {
-    self.font = [UIFont systemFontOfSize:17];
+    self.font = kXHAlbumContentFont;
     self.textColor = [UIColor blackColor];
     self.textAlignment = NSTextAlignmentLeft;
-    self.lineSpacing = 5;
+    self.lineSpacing = kXHAlbumContentLineSpacing;
+    
+    [self addSubview:self.avatorImageView];
+    [self addSubview:self.userNameLabel];
     
     [self addSubview:self.richTextView];
+    [self addSubview:self.sharePhotoCollectionView];
 }
 
 - (id)initWithFrame:(CGRect)frame
@@ -63,13 +123,34 @@
     return self;
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    
+    CGFloat richTextViewX = CGRectGetMinX(self.userNameLabel.frame);
+    CGRect richTextViewFrame = CGRectMake(richTextViewX, CGRectGetMaxY(self.userNameLabel.frame), CGRectGetWidth([[UIScreen mainScreen] bounds]) - richTextViewX - kXHAlbumAvatorSpacing, [XHAlbumRichTextView getRichTextHeightWithText:self.displayAlbum.albumShareContent]);
+    self.richTextView.frame = richTextViewFrame;
+    
+    CGRect sharePhotoCollectionViewFrame = CGRectMake(richTextViewX, CGRectGetMaxY(richTextViewFrame) + kXHAlbumPhotoInsets, CGRectGetWidth(richTextViewFrame), [XHAlbumRichTextView getSharePhotoCollectionViewHeightWithPhotos:self.displayAlbum.albumSharePhotos]);
+    self.sharePhotoCollectionView.frame = sharePhotoCollectionViewFrame;
 }
-*/
+
+#pragma mark - UICollectionView DataSource
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return self.displayAlbum.albumSharePhotos.count;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    XHAlbumPhotoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kXHPhotoCollectionViewCellIdentifier forIndexPath:indexPath];
+    
+    
+    return cell;
+}
+
+#pragma mark - UICollectionView Delegate
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+}
 
 @end

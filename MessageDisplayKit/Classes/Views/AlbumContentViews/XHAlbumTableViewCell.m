@@ -27,7 +27,7 @@
 - (void)setCurrentAlbum:(XHAlbum *)currentAlbum {
     _currentAlbum = currentAlbum;
     
-    self.textLabel.text = @"这是一个朋友圈的Cell哦！富文本的即将开始！";
+    self.albumRichTextView.displayAlbum = currentAlbum;
 }
 
 - (XHAlbumRichTextView *)albumRichTextView {

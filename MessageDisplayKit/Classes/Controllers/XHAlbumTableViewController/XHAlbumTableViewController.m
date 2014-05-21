@@ -9,15 +9,13 @@
 #import "XHAlbumTableViewController.h"
 
 #import "XHPathCover.h"
-#import "XHAlbumHeaderContainerView.h"
 #import "XHAlbumTableViewCell.h"
 
 #import "XHStoreManager.h"
 
 @interface XHAlbumTableViewController ()
 
-@property (nonatomic, strong) XHPathCover *pathCover;
-@property (nonatomic, strong) XHAlbumHeaderContainerView *albumHeaderContainerView;
+@property (nonatomic, strong) XHPathCover *albumHeaderContainerViewPathCover;
 
 @end
 
@@ -25,27 +23,20 @@
 
 #pragma mark - Propertys
 
-- (XHAlbumHeaderContainerView *)albumHeaderContainerView {
-    if (!_albumHeaderContainerView) {
-        _albumHeaderContainerView = [[XHAlbumHeaderContainerView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 200)];
-    }
-    return _albumHeaderContainerView;
-}
-
-- (XHPathCover *)pathCover {
-    if (!_pathCover) {
-        _pathCover = [[XHPathCover alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 250)];
-        [_pathCover setBackgroundImage:[UIImage imageNamed:@"AlbumHeaderBackgrounImage"]];
-        [_pathCover setAvatarImage:[UIImage imageNamed:@"avator"]];
-        [_pathCover setInfo:[NSDictionary dictionaryWithObjectsAndKeys:@"Jack xhzengAIB", XHUserNameKey, @"1990-10-19", XHBirthdayKey, nil]];
-        _pathCover.isZoomingEffect = YES;
+- (XHPathCover *)albumHeaderContainerViewPathCover {
+    if (!_albumHeaderContainerViewPathCover) {
+        _albumHeaderContainerViewPathCover = [[XHPathCover alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 200)];
+        [_albumHeaderContainerViewPathCover setBackgroundImage:[UIImage imageNamed:@"AlbumHeaderBackgrounImage"]];
+        [_albumHeaderContainerViewPathCover setAvatarImage:[UIImage imageNamed:@"avator"]];
+        [_albumHeaderContainerViewPathCover setInfo:[NSDictionary dictionaryWithObjectsAndKeys:@"Jack xhzengAIB", XHUserNameKey, @"1990-10-19", XHBirthdayKey, nil]];
+        _albumHeaderContainerViewPathCover.isZoomingEffect = YES;
         
         WEAKSELF
-        [_pathCover setHandleRefreshEvent:^{
+        [_albumHeaderContainerViewPathCover setHandleRefreshEvent:^{
             [weakSelf loadDataSource];
         }];
     }
-    return _pathCover;
+    return _albumHeaderContainerViewPathCover;
 }
 
 #pragma mark - DataSource Manager
@@ -54,10 +45,10 @@
     WEAKSELF
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSMutableArray *dataSource = [[XHStoreManager shareStoreManager] getAlbumConfigureArray];
-        sleep(3);
+        sleep(1);
         
         dispatch_async(dispatch_get_main_queue(), ^{
-            [weakSelf.pathCover stopRefresh];
+            [weakSelf.albumHeaderContainerViewPathCover stopRefresh];
             weakSelf.dataSource = dataSource;
             [weakSelf.tableView reloadData];
         });
@@ -73,7 +64,7 @@
     self.title = NSLocalizedStringFromTable(@"Album", @"MessageDisplayKitString", @"个人信息");
     
     
-    self.tableView.tableHeaderView = self.pathCover;
+    self.tableView.tableHeaderView = self.albumHeaderContainerViewPathCover;
     [self.view addSubview:self.tableView];
     
     [self configuraTableViewnNormalSeparatorInset];
@@ -94,19 +85,19 @@
 #pragma mark- UIScrollView Delegate
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    [_pathCover scrollViewDidScroll:scrollView];
+    [_albumHeaderContainerViewPathCover scrollViewDidScroll:scrollView];
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    [_pathCover scrollViewDidEndDecelerating:scrollView];
+    [_albumHeaderContainerViewPathCover scrollViewDidEndDecelerating:scrollView];
 }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
-    [_pathCover scrollViewDidEndDragging:scrollView willDecelerate:decelerate];
+    [_albumHeaderContainerViewPathCover scrollViewDidEndDragging:scrollView willDecelerate:decelerate];
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
-    [_pathCover scrollViewWillBeginDragging:scrollView];
+    [_albumHeaderContainerViewPathCover scrollViewWillBeginDragging:scrollView];
 }
 
 #pragma mark - UITableView DataSource
@@ -129,7 +120,7 @@
 #pragma mark - UITableView Delegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 100;
+    return [XHAlbumTableViewCell calculateCellHeightWithAlbum:self.dataSource[indexPath.row]];
 }
 
 @end
