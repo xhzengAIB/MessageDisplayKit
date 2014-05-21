@@ -23,6 +23,9 @@
 
 @property (nonatomic, strong) UICollectionView *sharePhotoCollectionView;
 
+@property (nonatomic, strong) UILabel *timestampLabel;
+@property (nonatomic, strong) UIButton *commentButton;
+
 @end
 
 @implementation XHAlbumRichTextView
@@ -50,6 +53,9 @@
     richTextHeight += kXHAlbumPhotoInsets;
     richTextHeight += [self getSharePhotoCollectionViewHeightWithPhotos:currentAlbum.albumSharePhotos];
     
+    richTextHeight += kXHAlbumContentLineSpacing;
+    richTextHeight += kXHAlbumCommentButtonHeight;
+    
     return richTextHeight;
 }
 
@@ -63,6 +69,8 @@
     self.userNameLabel.text = displayAlbum.userName;
     
     self.richTextView.attributedText = [[NSAttributedString alloc] initWithString:displayAlbum.albumShareContent];
+    
+    self.timestampLabel.text = @"3小时前";
     
     [self.sharePhotoCollectionView reloadData];
     
@@ -112,6 +120,25 @@
     return _sharePhotoCollectionView;
 }
 
+- (UILabel *)timestampLabel {
+    if (!_timestampLabel) {
+        _timestampLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+        _timestampLabel.backgroundColor = [UIColor clearColor];
+        _timestampLabel.font = [UIFont systemFontOfSize:11];
+        _timestampLabel.textColor = [UIColor grayColor];
+    }
+    return _timestampLabel;
+}
+
+- (UIButton *)commentButton {
+    if (!_commentButton) {
+        _commentButton = [[UIButton alloc] initWithFrame:CGRectZero];
+        [_commentButton setImage:[UIImage imageNamed:@"AlbumOperateMore"] forState:UIControlStateNormal];
+        [_commentButton setImage:[UIImage imageNamed:@"AlbumOperateMoreHL"] forState:UIControlStateHighlighted];
+    }
+    return _commentButton;
+}
+
 #pragma mark - Life Cycle
 
 - (void)setup {
@@ -125,6 +152,9 @@
     
     [self addSubview:self.richTextView];
     [self addSubview:self.sharePhotoCollectionView];
+    
+    [self addSubview:self.timestampLabel];
+    [self addSubview:self.commentButton];
 }
 
 - (id)initWithFrame:(CGRect)frame
@@ -160,8 +190,18 @@
     CGRect sharePhotoCollectionViewFrame = CGRectMake(richTextViewX, CGRectGetMaxY(richTextViewFrame) + kXHAlbumPhotoInsets, kXHAlbumPhotoInsets * 4 + kXHAlbumPhotoSize * 3, [XHAlbumRichTextView getSharePhotoCollectionViewHeightWithPhotos:self.displayAlbum.albumSharePhotos]);
     self.sharePhotoCollectionView.frame = sharePhotoCollectionViewFrame;
     
+    CGRect commentButtonFrame = self.commentButton.frame;
+    commentButtonFrame.origin = CGPointMake(CGRectGetWidth(self.bounds) - kXHAlbumAvatorSpacing - kXHAlbumCommentButtonWidth, CGRectGetMaxY(sharePhotoCollectionViewFrame) + kXHAlbumContentLineSpacing);
+    commentButtonFrame.size = CGSizeMake(kXHAlbumCommentButtonWidth, kXHAlbumCommentButtonHeight);
+    self.commentButton.frame = commentButtonFrame;
+    
+    CGRect timestampLabelFrame = self.timestampLabel.frame;
+    timestampLabelFrame.origin = CGPointMake(CGRectGetMinX(richTextViewFrame), CGRectGetMinY(commentButtonFrame));
+    timestampLabelFrame.size = CGSizeMake(CGRectGetWidth(self.bounds) - kXHAlbumAvatorSpacing * 3 - kXHAvatarImageSize - kXHAlbumCommentButtonWidth, CGRectGetHeight(commentButtonFrame));
+    self.timestampLabel.frame = timestampLabelFrame;
+    
     CGRect frame = self.frame;
-    frame.size.height = CGRectGetMaxY(sharePhotoCollectionViewFrame);
+    frame.size.height = CGRectGetMaxY(commentButtonFrame);
     self.frame = frame;
 }
 

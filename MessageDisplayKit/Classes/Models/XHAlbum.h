@@ -20,8 +20,8 @@
 #define kXHAlbumContentLineSpacing 4
 
 // 朋友圈评论按钮大小
-#define kXHAlbumCommentButtonWidth 30
-#define kXHAlbumCommentButtonHeight 20
+#define kXHAlbumCommentButtonWidth 25
+#define kXHAlbumCommentButtonHeight 25
 
 @interface XHAlbum : NSObject
 
@@ -35,5 +35,7 @@
 @property (nonatomic, strong) NSArray *albumShareComments;
 
 @property (nonatomic, strong) NSArray *albumShareLikes;
+
+@property (nonatomic, strong) NSDate *timestamp;
 
 @end

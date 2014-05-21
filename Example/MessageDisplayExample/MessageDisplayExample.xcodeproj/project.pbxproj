@@ -393,6 +393,8 @@
 		AB79A222192C231C00A9B951 /* XHAlbumPhotoCollectionViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = AB79A220192C231C00A9B951 /* XHAlbumPhotoCollectionViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB79A223192C231C00A9B951 /* XHAlbumPhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB79A221192C231C00A9B951 /* XHAlbumPhotoCollectionViewCell.m */; };
 		AB79A224192C231C00A9B951 /* XHAlbumPhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB79A221192C231C00A9B951 /* XHAlbumPhotoCollectionViewCell.m */; };
+		ABE87CD4192D6D7F00EC1E49 /* AlbumOperateMore@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABE87CD2192D6D7F00EC1E49 /* AlbumOperateMore@2x.png */; };
+		ABE87CD5192D6D7F00EC1E49 /* AlbumOperateMoreHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABE87CD3192D6D7F00EC1E49 /* AlbumOperateMoreHL@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -726,6 +728,8 @@
 		AB79A21C192C22F500A9B951 /* XHBaseCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHBaseCollectionViewCell.m; sourceTree = "<group>"; };
 		AB79A220192C231C00A9B951 /* XHAlbumPhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHAlbumPhotoCollectionViewCell.h; sourceTree = "<group>"; };
 		AB79A221192C231C00A9B951 /* XHAlbumPhotoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHAlbumPhotoCollectionViewCell.m; sourceTree = "<group>"; };
+		ABE87CD2192D6D7F00EC1E49 /* AlbumOperateMore@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AlbumOperateMore@2x.png"; sourceTree = "<group>"; };
+		ABE87CD3192D6D7F00EC1E49 /* AlbumOperateMoreHL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AlbumOperateMoreHL@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1340,6 +1344,8 @@
 		74C3E7E319291F1B0053F4E1 /* AlbumImages */ = {
 			isa = PBXGroup;
 			children = (
+				ABE87CD2192D6D7F00EC1E49 /* AlbumOperateMore@2x.png */,
+				ABE87CD3192D6D7F00EC1E49 /* AlbumOperateMoreHL@2x.png */,
 				AB79A216192C0B1500A9B951 /* circle@2x.png */,
 				AB79A217192C0B1500A9B951 /* pullrefresh.aif */,
 				74C3E7E419291F1B0053F4E1 /* AlbumHeaderBackgrounImage@2x.png */,
@@ -1894,9 +1900,11 @@
 				746C884A1916B607007F9A5E /* SenderVoiceNodePlaying002@2x.png in Resources */,
 				746C88481916B607007F9A5E /* SenderVoiceNodePlaying000@2x.png in Resources */,
 				746C881C1916B5D6007F9A5E /* face@2x.png in Resources */,
+				ABE87CD5192D6D7F00EC1E49 /* AlbumOperateMoreHL@2x.png in Resources */,
 				746C887B1916B62D007F9A5E /* section0_emotion10@2x.png in Resources */,
 				74E5E99B1921EC8C0084BCFA /* VoiceBtn_BlackHL@2x.png in Resources */,
 				74E900651927940000D37C81 /* ff_IconShowAlbum@2x.png in Resources */,
+				ABE87CD4192D6D7F00EC1E49 /* AlbumOperateMore@2x.png in Resources */,
 				746C88361916B5FE007F9A5E /* weChatBubble_Sending_Cavern@2x.png in Resources */,
 				746C884B1916B607007F9A5E /* SenderVoiceNodePlaying003@2x.png in Resources */,
 				746C88781916B62D007F9A5E /* section0_emotion7@2x.png in Resources */,
