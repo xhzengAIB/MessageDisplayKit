@@ -16,8 +16,15 @@
 
 @implementation XHBaseTableViewController
 
-- (void)configuraTableViewnNormalSeparatorInset {
+- (BOOL)validateSeparatorInset {
     if ([_tableView respondsToSelector:@selector(setSeparatorInset:)]) {
+        return YES;
+    }
+    return NO;
+}
+
+- (void)configuraTableViewnNormalSeparatorInset {
+    if ([self validateSeparatorInset]) {
         [_tableView setSeparatorInset:UIEdgeInsetsZero];
     }
 }
@@ -31,14 +38,13 @@
         _tableView = [[UITableView alloc] initWithFrame:tableViewFrame style:self.tableViewStyle];
         _tableView.delegate = self;
         _tableView.dataSource = self;
-        if (![_tableView respondsToSelector:@selector(setSeparatorInset:)]) {
+        if ([self validateSeparatorInset]) {
             if (self.tableViewStyle == UITableViewStyleGrouped) {
                 UIView *backgroundView = [[UIView alloc] initWithFrame:_tableView.bounds];
                 backgroundView.backgroundColor = _tableView.backgroundColor;
                 _tableView.backgroundView = backgroundView;
             }
         }
-        
     }
     return _tableView;
 }
