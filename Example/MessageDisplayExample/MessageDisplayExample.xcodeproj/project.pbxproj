@@ -376,6 +376,9 @@
 		AB439973192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = AB439971192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB439974192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = AB439972192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.m */; };
 		AB439975192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = AB439972192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.m */; };
+		AB44D41B192D8BB50069A210 /* XHContact.h in Headers */ = {isa = PBXBuildFile; fileRef = AB44D419192D8BB50069A210 /* XHContact.h */; };
+		AB44D41C192D8BB50069A210 /* XHContact.m in Sources */ = {isa = PBXBuildFile; fileRef = AB44D41A192D8BB50069A210 /* XHContact.m */; };
+		AB44D41D192D8BB50069A210 /* XHContact.m in Sources */ = {isa = PBXBuildFile; fileRef = AB44D41A192D8BB50069A210 /* XHContact.m */; };
 		AB79A20D192C0A6400A9B951 /* XHPathCover.h in Headers */ = {isa = PBXBuildFile; fileRef = AB79A207192C0A6400A9B951 /* XHPathCover.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB79A20E192C0A6400A9B951 /* XHPathCover.m in Sources */ = {isa = PBXBuildFile; fileRef = AB79A208192C0A6400A9B951 /* XHPathCover.m */; };
 		AB79A20F192C0A6400A9B951 /* XHPathCover.m in Sources */ = {isa = PBXBuildFile; fileRef = AB79A208192C0A6400A9B951 /* XHPathCover.m */; };
@@ -716,6 +719,8 @@
 		7D23E417192C594800B717B7 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		AB439971192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHAlbumCollectionViewFlowLayout.h; sourceTree = "<group>"; };
 		AB439972192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHAlbumCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		AB44D419192D8BB50069A210 /* XHContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHContact.h; sourceTree = "<group>"; };
+		AB44D41A192D8BB50069A210 /* XHContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHContact.m; sourceTree = "<group>"; };
 		AB79A207192C0A6400A9B951 /* XHPathCover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHPathCover.h; sourceTree = "<group>"; };
 		AB79A208192C0A6400A9B951 /* XHPathCover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHPathCover.m; sourceTree = "<group>"; };
 		AB79A209192C0A6400A9B951 /* XHSoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHSoundManager.h; sourceTree = "<group>"; };
@@ -1260,10 +1265,12 @@
 				740660CC1914E1F400E1CE95 /* XHEmotionManager.m */,
 				74585FFB191D10CC00F5E8C8 /* XHAnnotation.h */,
 				74585FFC191D10CC00F5E8C8 /* XHAnnotation.m */,
-				74E900B11928F3D100D37C81 /* XHStoreManager.h */,
-				74E900B21928F3D100D37C81 /* XHStoreManager.m */,
+				AB44D419192D8BB50069A210 /* XHContact.h */,
+				AB44D41A192D8BB50069A210 /* XHContact.m */,
 				74C3E7D919291A1A0053F4E1 /* XHAlbum.h */,
 				74C3E7DA19291A1A0053F4E1 /* XHAlbum.m */,
+				74E900B11928F3D100D37C81 /* XHStoreManager.h */,
+				74E900B21928F3D100D37C81 /* XHStoreManager.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1674,6 +1681,7 @@
 				74E5EAC71924FFBE0084BCFA /* NSMutableAttributedString+Helper.h in Headers */,
 				74901A3F191D3B1C0049AFF9 /* XHProfileTableViewController.h in Headers */,
 				74180C14190F450400A35C82 /* XHMessage.h in Headers */,
+				AB44D41B192D8BB50069A210 /* XHContact.h in Headers */,
 				74E9003819278F6700D37C81 /* XHDiscoverTableViewController.h in Headers */,
 				74E900771927A0E900D37C81 /* XHAlbumTableViewController.h in Headers */,
 				74C3E7D1192919360053F4E1 /* XHAlbumTableViewCell.h in Headers */,
@@ -2055,6 +2063,7 @@
 				74E9003A19278F6700D37C81 /* XHDiscoverTableViewController.m in Sources */,
 				740660A91913552800E1CE95 /* UIImage+XHAnimatedFaceGif.m in Sources */,
 				74585F40191B999B00F5E8C8 /* XHLocationHelper.m in Sources */,
+				AB44D41D192D8BB50069A210 /* XHContact.m in Sources */,
 				74E9008D1927A11800D37C81 /* XHQRCodeViewController.m in Sources */,
 				7D13FC4B192C4F4000A23413 /* NSString+XHMD5.m in Sources */,
 				74E5EAD51924FFBE0084BCFA /* SELinkText.m in Sources */,
@@ -2128,6 +2137,7 @@
 				74C3E7D2192919360053F4E1 /* XHAlbumTableViewCell.m in Sources */,
 				746C89701917F7FE007F9A5E /* XHDisplayTextViewController.m in Sources */,
 				748245151908C730008EC388 /* AppDelegate.m in Sources */,
+				AB44D41C192D8BB50069A210 /* XHContact.m in Sources */,
 				748245971909F33F008EC388 /* XHMessageBubbleFactory.m in Sources */,
 				74E900821927A10200D37C81 /* XHLocationServiceTableViewController.m in Sources */,
 				740660CE1914E1F400E1CE95 /* XHEmotionManager.m in Sources */,
