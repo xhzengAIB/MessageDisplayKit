@@ -153,15 +153,6 @@
 		746C895B1917F7B4007F9A5E /* XHMessageTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 746C89591917F7B4007F9A5E /* XHMessageTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		746C895C1917F7B4007F9A5E /* XHMessageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C895A1917F7B4007F9A5E /* XHMessageTableViewController.m */; };
 		746C895D1917F7B4007F9A5E /* XHMessageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C895A1917F7B4007F9A5E /* XHMessageTableViewController.m */; };
-		746C89601917F7DE007F9A5E /* XHDisplayEmotionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 746C895E1917F7DE007F9A5E /* XHDisplayEmotionViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		746C89611917F7DE007F9A5E /* XHDisplayEmotionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C895F1917F7DE007F9A5E /* XHDisplayEmotionViewController.m */; };
-		746C89621917F7DE007F9A5E /* XHDisplayEmotionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C895F1917F7DE007F9A5E /* XHDisplayEmotionViewController.m */; };
-		746C89651917F7EA007F9A5E /* XHDisplayLocationViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 746C89631917F7EA007F9A5E /* XHDisplayLocationViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		746C89661917F7EA007F9A5E /* XHDisplayLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C89641917F7EA007F9A5E /* XHDisplayLocationViewController.m */; };
-		746C89671917F7EA007F9A5E /* XHDisplayLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C89641917F7EA007F9A5E /* XHDisplayLocationViewController.m */; };
-		746C896F1917F7FE007F9A5E /* XHDisplayTextViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 746C896D1917F7FE007F9A5E /* XHDisplayTextViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		746C89701917F7FE007F9A5E /* XHDisplayTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C896E1917F7FE007F9A5E /* XHDisplayTextViewController.m */; };
-		746C89711917F7FE007F9A5E /* XHDisplayTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C896E1917F7FE007F9A5E /* XHDisplayTextViewController.m */; };
 		746C89781917F8B2007F9A5E /* XHBaseNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 746C89761917F8B2007F9A5E /* XHBaseNavigationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		746C89791917F8B2007F9A5E /* XHBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C89771917F8B2007F9A5E /* XHBaseNavigationController.m */; };
 		746C897A1917F8B2007F9A5E /* XHBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C89771917F8B2007F9A5E /* XHBaseNavigationController.m */; };
@@ -187,9 +178,6 @@
 		7482458F19092170008EC388 /* NSString+MessageInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7482458E19092170008EC388 /* NSString+MessageInputView.m */; };
 		748245971909F33F008EC388 /* XHMessageBubbleFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 748245961909F33F008EC388 /* XHMessageBubbleFactory.m */; };
 		7482459A1909F370008EC388 /* XHMessageAvatorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 748245991909F370008EC388 /* XHMessageAvatorFactory.m */; };
-		74901989191D2D030049AFF9 /* XHDisplayMediaViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 74901987191D2D030049AFF9 /* XHDisplayMediaViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7490198A191D2D030049AFF9 /* XHDisplayMediaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74901988191D2D030049AFF9 /* XHDisplayMediaViewController.m */; };
-		7490198B191D2D030049AFF9 /* XHDisplayMediaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74901988191D2D030049AFF9 /* XHDisplayMediaViewController.m */; };
 		749019B4191D315A0049AFF9 /* XHMessageVideoConverPhotoFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 749019B2191D315A0049AFF9 /* XHMessageVideoConverPhotoFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		749019B5191D315A0049AFF9 /* XHMessageVideoConverPhotoFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 749019B3191D315A0049AFF9 /* XHMessageVideoConverPhotoFactory.m */; };
 		749019B6191D315A0049AFF9 /* XHMessageVideoConverPhotoFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 749019B3191D315A0049AFF9 /* XHMessageVideoConverPhotoFactory.m */; };
@@ -381,6 +369,18 @@
 		AB372911192EC62C0084D7B5 /* XHShakeViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = AB372900192EC62C0084D7B5 /* XHShakeViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB372912192EC62C0084D7B5 /* XHShakeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB372901192EC62C0084D7B5 /* XHShakeViewController.m */; };
 		AB372913192EC62C0084D7B5 /* XHShakeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB372901192EC62C0084D7B5 /* XHShakeViewController.m */; };
+		AB372920192EC6800084D7B5 /* XHDisplayEmotionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = AB372915192EC6800084D7B5 /* XHDisplayEmotionViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB372921192EC6800084D7B5 /* XHDisplayEmotionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB372916192EC6800084D7B5 /* XHDisplayEmotionViewController.m */; };
+		AB372922192EC6800084D7B5 /* XHDisplayEmotionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB372916192EC6800084D7B5 /* XHDisplayEmotionViewController.m */; };
+		AB372923192EC6800084D7B5 /* XHDisplayLocationViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = AB372918192EC6800084D7B5 /* XHDisplayLocationViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB372924192EC6800084D7B5 /* XHDisplayLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB372919192EC6800084D7B5 /* XHDisplayLocationViewController.m */; };
+		AB372925192EC6800084D7B5 /* XHDisplayLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB372919192EC6800084D7B5 /* XHDisplayLocationViewController.m */; };
+		AB372926192EC6800084D7B5 /* XHDisplayMediaViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = AB37291B192EC6800084D7B5 /* XHDisplayMediaViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB372927192EC6800084D7B5 /* XHDisplayMediaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB37291C192EC6800084D7B5 /* XHDisplayMediaViewController.m */; };
+		AB372928192EC6800084D7B5 /* XHDisplayMediaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB37291C192EC6800084D7B5 /* XHDisplayMediaViewController.m */; };
+		AB372929192EC6800084D7B5 /* XHDisplayTextViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = AB37291E192EC6800084D7B5 /* XHDisplayTextViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB37292A192EC6800084D7B5 /* XHDisplayTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB37291F192EC6800084D7B5 /* XHDisplayTextViewController.m */; };
+		AB37292B192EC6800084D7B5 /* XHDisplayTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB37291F192EC6800084D7B5 /* XHDisplayTextViewController.m */; };
 		AB439973192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = AB439971192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB439974192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = AB439972192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.m */; };
 		AB439975192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = AB439972192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.m */; };
@@ -561,12 +561,6 @@
 		746C892E1917F691007F9A5E /* XHShareMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHShareMenuView.m; sourceTree = "<group>"; };
 		746C89591917F7B4007F9A5E /* XHMessageTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMessageTableViewController.h; sourceTree = "<group>"; };
 		746C895A1917F7B4007F9A5E /* XHMessageTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMessageTableViewController.m; sourceTree = "<group>"; };
-		746C895E1917F7DE007F9A5E /* XHDisplayEmotionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHDisplayEmotionViewController.h; sourceTree = "<group>"; };
-		746C895F1917F7DE007F9A5E /* XHDisplayEmotionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHDisplayEmotionViewController.m; sourceTree = "<group>"; };
-		746C89631917F7EA007F9A5E /* XHDisplayLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHDisplayLocationViewController.h; sourceTree = "<group>"; };
-		746C89641917F7EA007F9A5E /* XHDisplayLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHDisplayLocationViewController.m; sourceTree = "<group>"; };
-		746C896D1917F7FE007F9A5E /* XHDisplayTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHDisplayTextViewController.h; sourceTree = "<group>"; };
-		746C896E1917F7FE007F9A5E /* XHDisplayTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHDisplayTextViewController.m; sourceTree = "<group>"; };
 		746C89761917F8B2007F9A5E /* XHBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHBaseNavigationController.h; sourceTree = "<group>"; };
 		746C89771917F8B2007F9A5E /* XHBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHBaseNavigationController.m; sourceTree = "<group>"; };
 		746C897B1917F8C5007F9A5E /* XHBaseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHBaseTabBarController.h; sourceTree = "<group>"; };
@@ -600,8 +594,6 @@
 		748245961909F33F008EC388 /* XHMessageBubbleFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = XHMessageBubbleFactory.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		748245981909F370008EC388 /* XHMessageAvatorFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMessageAvatorFactory.h; sourceTree = "<group>"; };
 		748245991909F370008EC388 /* XHMessageAvatorFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMessageAvatorFactory.m; sourceTree = "<group>"; };
-		74901987191D2D030049AFF9 /* XHDisplayMediaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHDisplayMediaViewController.h; sourceTree = "<group>"; };
-		74901988191D2D030049AFF9 /* XHDisplayMediaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHDisplayMediaViewController.m; sourceTree = "<group>"; };
 		749019B2191D315A0049AFF9 /* XHMessageVideoConverPhotoFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMessageVideoConverPhotoFactory.h; sourceTree = "<group>"; };
 		749019B3191D315A0049AFF9 /* XHMessageVideoConverPhotoFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMessageVideoConverPhotoFactory.m; sourceTree = "<group>"; };
 		74901A3D191D3B1C0049AFF9 /* XHProfileTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHProfileTableViewController.h; sourceTree = "<group>"; };
@@ -757,6 +749,14 @@
 		AB3728FE192EC62C0084D7B5 /* XHQRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHQRCodeViewController.m; sourceTree = "<group>"; };
 		AB372900192EC62C0084D7B5 /* XHShakeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHShakeViewController.h; sourceTree = "<group>"; };
 		AB372901192EC62C0084D7B5 /* XHShakeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHShakeViewController.m; sourceTree = "<group>"; };
+		AB372915192EC6800084D7B5 /* XHDisplayEmotionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHDisplayEmotionViewController.h; sourceTree = "<group>"; };
+		AB372916192EC6800084D7B5 /* XHDisplayEmotionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHDisplayEmotionViewController.m; sourceTree = "<group>"; };
+		AB372918192EC6800084D7B5 /* XHDisplayLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHDisplayLocationViewController.h; sourceTree = "<group>"; };
+		AB372919192EC6800084D7B5 /* XHDisplayLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHDisplayLocationViewController.m; sourceTree = "<group>"; };
+		AB37291B192EC6800084D7B5 /* XHDisplayMediaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHDisplayMediaViewController.h; sourceTree = "<group>"; };
+		AB37291C192EC6800084D7B5 /* XHDisplayMediaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHDisplayMediaViewController.m; sourceTree = "<group>"; };
+		AB37291E192EC6800084D7B5 /* XHDisplayTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHDisplayTextViewController.h; sourceTree = "<group>"; };
+		AB37291F192EC6800084D7B5 /* XHDisplayTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHDisplayTextViewController.m; sourceTree = "<group>"; };
 		AB439971192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHAlbumCollectionViewFlowLayout.h; sourceTree = "<group>"; };
 		AB439972192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHAlbumCollectionViewFlowLayout.m; sourceTree = "<group>"; };
 		AB44D419192D8BB50069A210 /* XHContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHContact.h; sourceTree = "<group>"; };
@@ -1106,39 +1106,8 @@
 				74E9003019278F5200D37C81 /* XHDiscoverTableViewController */,
 				74901A3C191D3B090049AFF9 /* XHProfileTableViewController */,
 				746C89581917F7B4007F9A5E /* XHMessageTableViewController */,
-				746C89541917F7B4007F9A5E /* XHDisplayEmotionViewController */,
-				74901986191D2D030049AFF9 /* XHDisplayMediaViewController */,
-				746C89551917F7B4007F9A5E /* XHDisplayLocationViewController */,
-				746C89571917F7B4007F9A5E /* XHDisplayTextViewController */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		746C89541917F7B4007F9A5E /* XHDisplayEmotionViewController */ = {
-			isa = PBXGroup;
-			children = (
-				746C895E1917F7DE007F9A5E /* XHDisplayEmotionViewController.h */,
-				746C895F1917F7DE007F9A5E /* XHDisplayEmotionViewController.m */,
-			);
-			path = XHDisplayEmotionViewController;
-			sourceTree = "<group>";
-		};
-		746C89551917F7B4007F9A5E /* XHDisplayLocationViewController */ = {
-			isa = PBXGroup;
-			children = (
-				746C89631917F7EA007F9A5E /* XHDisplayLocationViewController.h */,
-				746C89641917F7EA007F9A5E /* XHDisplayLocationViewController.m */,
-			);
-			path = XHDisplayLocationViewController;
-			sourceTree = "<group>";
-		};
-		746C89571917F7B4007F9A5E /* XHDisplayTextViewController */ = {
-			isa = PBXGroup;
-			children = (
-				746C896D1917F7FE007F9A5E /* XHDisplayTextViewController.h */,
-				746C896E1917F7FE007F9A5E /* XHDisplayTextViewController.m */,
-			);
-			path = XHDisplayTextViewController;
 			sourceTree = "<group>";
 		};
 		746C89581917F7B4007F9A5E /* XHMessageTableViewController */ = {
@@ -1146,6 +1115,10 @@
 			children = (
 				746C89591917F7B4007F9A5E /* XHMessageTableViewController.h */,
 				746C895A1917F7B4007F9A5E /* XHMessageTableViewController.m */,
+				AB372914192EC6800084D7B5 /* XHDisplayEmotionViewController */,
+				AB372917192EC6800084D7B5 /* XHDisplayLocationViewController */,
+				AB37291A192EC6800084D7B5 /* XHDisplayMediaViewController */,
+				AB37291D192EC6800084D7B5 /* XHDisplayTextViewController */,
 			);
 			path = XHMessageTableViewController;
 			sourceTree = "<group>";
@@ -1362,15 +1335,6 @@
 				74E5E9881921317B0084BCFA /* XHVoiceRecordHelper.m */,
 			);
 			path = Common;
-			sourceTree = "<group>";
-		};
-		74901986191D2D030049AFF9 /* XHDisplayMediaViewController */ = {
-			isa = PBXGroup;
-			children = (
-				74901987191D2D030049AFF9 /* XHDisplayMediaViewController.h */,
-				74901988191D2D030049AFF9 /* XHDisplayMediaViewController.m */,
-			);
-			path = XHDisplayMediaViewController;
 			sourceTree = "<group>";
 		};
 		74901A3C191D3B090049AFF9 /* XHProfileTableViewController */ = {
@@ -1693,6 +1657,42 @@
 			path = XHShakeViewController;
 			sourceTree = "<group>";
 		};
+		AB372914192EC6800084D7B5 /* XHDisplayEmotionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AB372915192EC6800084D7B5 /* XHDisplayEmotionViewController.h */,
+				AB372916192EC6800084D7B5 /* XHDisplayEmotionViewController.m */,
+			);
+			path = XHDisplayEmotionViewController;
+			sourceTree = "<group>";
+		};
+		AB372917192EC6800084D7B5 /* XHDisplayLocationViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AB372918192EC6800084D7B5 /* XHDisplayLocationViewController.h */,
+				AB372919192EC6800084D7B5 /* XHDisplayLocationViewController.m */,
+			);
+			path = XHDisplayLocationViewController;
+			sourceTree = "<group>";
+		};
+		AB37291A192EC6800084D7B5 /* XHDisplayMediaViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AB37291B192EC6800084D7B5 /* XHDisplayMediaViewController.h */,
+				AB37291C192EC6800084D7B5 /* XHDisplayMediaViewController.m */,
+			);
+			path = XHDisplayMediaViewController;
+			sourceTree = "<group>";
+		};
+		AB37291D192EC6800084D7B5 /* XHDisplayTextViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AB37291E192EC6800084D7B5 /* XHDisplayTextViewController.h */,
+				AB37291F192EC6800084D7B5 /* XHDisplayTextViewController.m */,
+			);
+			path = XHDisplayTextViewController;
+			sourceTree = "<group>";
+		};
 		AB79A206192C0A6400A9B951 /* XHPathCover */ = {
 			isa = PBXGroup;
 			children = (
@@ -1818,12 +1818,9 @@
 				74065FB919123E1C00E1CE95 /* XHShareMenuItem.h in Headers */,
 				740660CD1914E1F400E1CE95 /* XHEmotionManager.h in Headers */,
 				740660B41914CA0000E1CE95 /* XHPhotographyHelper.h in Headers */,
-				746C896F1917F7FE007F9A5E /* XHDisplayTextViewController.h in Headers */,
-				746C89651917F7EA007F9A5E /* XHDisplayLocationViewController.h in Headers */,
 				746C89871917F8EA007F9A5E /* XHBaseTableViewController.h in Headers */,
 				746C897D1917F8C5007F9A5E /* XHBaseTabBarController.h in Headers */,
 				746C89781917F8B2007F9A5E /* XHBaseNavigationController.h in Headers */,
-				746C89601917F7DE007F9A5E /* XHDisplayEmotionViewController.h in Headers */,
 				740660BE1914D65600E1CE95 /* XHEmotion.h in Headers */,
 				74E5E9891921317B0084BCFA /* XHVoiceRecordHelper.h in Headers */,
 				746C895B1917F7B4007F9A5E /* XHMessageTableViewController.h in Headers */,
@@ -1853,7 +1850,6 @@
 				74C3E7D6192919930053F4E1 /* XHAlbumRichTextView.h in Headers */,
 				740660A71913552800E1CE95 /* UIImage+XHAnimatedFaceGif.h in Headers */,
 				74585F3E191B999B00F5E8C8 /* XHLocationHelper.h in Headers */,
-				74901989191D2D030049AFF9 /* XHDisplayMediaViewController.h in Headers */,
 				74585FFD191D10CC00F5E8C8 /* XHAnnotation.h in Headers */,
 				7D06CA71192B3D9B00DF8C04 /* XHBaseTableViewCell.h in Headers */,
 				74585F45191C8B5700F5E8C8 /* UIView+XHNetworkImage.h in Headers */,
@@ -1888,6 +1884,10 @@
 				AB372902192EC62C0084D7B5 /* XHAlbumTableViewController.h in Headers */,
 				AB8ACCE7192EB0A400FA1C80 /* XHMultipleSectionTableViewController.h in Headers */,
 				7D14A000192DF30C004B4D3B /* XHUIKitMacro.h in Headers */,
+				AB372923192EC6800084D7B5 /* XHDisplayLocationViewController.h in Headers */,
+				AB372929192EC6800084D7B5 /* XHDisplayTextViewController.h in Headers */,
+				AB372926192EC6800084D7B5 /* XHDisplayMediaViewController.h in Headers */,
+				AB372920192EC6800084D7B5 /* XHDisplayEmotionViewController.h in Headers */,
 				7D149FFE192DF2CA004B4D3B /* XHFoundationMacro.h in Headers */,
 				749019B4191D315A0049AFF9 /* XHMessageVideoConverPhotoFactory.h in Headers */,
 				74901A45191D4CD30049AFF9 /* XHBaseViewController.h in Headers */,
@@ -2185,6 +2185,7 @@
 				74C3E7D3192919360053F4E1 /* XHAlbumTableViewCell.m in Sources */,
 				AB439975192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.m in Sources */,
 				74E5EAE71924FFBE0084BCFA /* SETextLayout.m in Sources */,
+				AB372922192EC6800084D7B5 /* XHDisplayEmotionViewController.m in Sources */,
 				74E9003519278F5C00D37C81 /* XHContactTableViewController.m in Sources */,
 				746C89431917F691007F9A5E /* XHMessageTextView.m in Sources */,
 				74180BFA190F448800A35C82 /* XHMessageBubbleFactory.m in Sources */,
@@ -2207,12 +2208,12 @@
 				746C893D1917F691007F9A5E /* XHMessageTableViewCell.m in Sources */,
 				746C89461917F691007F9A5E /* XHEmotionCollectionViewCell.m in Sources */,
 				7D13FC57192C4F4000A23413 /* XHFileAttribute.m in Sources */,
-				7490198B191D2D030049AFF9 /* XHDisplayMediaViewController.m in Sources */,
-				746C89671917F7EA007F9A5E /* XHDisplayLocationViewController.m in Sources */,
 				746C89371917F691007F9A5E /* XHMessageDisplayTextView.m in Sources */,
 				AB02A9F7192D8DC5004AA23D /* XHBaseSearchTableViewController.m in Sources */,
+				AB372928192EC6800084D7B5 /* XHDisplayMediaViewController.m in Sources */,
 				746C89891917F8EA007F9A5E /* XHBaseTableViewController.m in Sources */,
 				746C897A1917F8B2007F9A5E /* XHBaseNavigationController.m in Sources */,
+				AB37292B192EC6800084D7B5 /* XHDisplayTextViewController.m in Sources */,
 				746C894F1917F691007F9A5E /* XHEmotionSectionBar.m in Sources */,
 				740660B61914CA0000E1CE95 /* XHPhotographyHelper.m in Sources */,
 				74E5EAC91924FFBE0084BCFA /* NSMutableAttributedString+Helper.m in Sources */,
@@ -2252,15 +2253,14 @@
 				74585F40191B999B00F5E8C8 /* XHLocationHelper.m in Sources */,
 				AB44D41D192D8BB50069A210 /* XHContact.m in Sources */,
 				7D13FC4B192C4F4000A23413 /* NSString+XHMD5.m in Sources */,
+				AB372925192EC6800084D7B5 /* XHDisplayLocationViewController.m in Sources */,
 				AB37290D192EC62C0084D7B5 /* XHMoreGameTableViewController.m in Sources */,
 				74E5EAD51924FFBE0084BCFA /* SELinkText.m in Sources */,
 				746C89341917F691007F9A5E /* XHMessageBubbleView.m in Sources */,
-				746C89621917F7DE007F9A5E /* XHDisplayEmotionViewController.m in Sources */,
 				AB372904192EC62C0084D7B5 /* XHAlbumTableViewController.m in Sources */,
 				74E5EAF31924FFBE0084BCFA /* SETextSelectionView.m in Sources */,
 				74180C00190F44A300A35C82 /* UIImage+XHRounded.m in Sources */,
 				74180BFC190F448E00A35C82 /* XHMessageVoiceFactory.m in Sources */,
-				746C89711917F7FE007F9A5E /* XHDisplayTextViewController.m in Sources */,
 				74E5EACC1924FFBE0084BCFA /* SECompatibility.m in Sources */,
 				74180BFB190F448A00A35C82 /* XHMessageAvatorFactory.m in Sources */,
 				746C895D1917F7B4007F9A5E /* XHMessageTableViewController.m in Sources */,
@@ -2301,6 +2301,7 @@
 				74585F3F191B999B00F5E8C8 /* XHLocationHelper.m in Sources */,
 				74E5EAC81924FFBE0084BCFA /* NSMutableAttributedString+Helper.m in Sources */,
 				AB8ACD07192EBF3600FA1C80 /* XHMoreMyProfileDetailTableViewController.m in Sources */,
+				AB372927192EC6800084D7B5 /* XHDisplayMediaViewController.m in Sources */,
 				746C893C1917F691007F9A5E /* XHMessageTableViewCell.m in Sources */,
 				74E5EAEC1924FFBE0084BCFA /* SETextMagnifierRanged.m in Sources */,
 				AB8ACCF8192EBF1700FA1C80 /* XHMoreMyAlbumTableViewController.m in Sources */,
@@ -2320,14 +2321,13 @@
 				AB8ACCFD192EBF2100FA1C80 /* XHMoreMyBankCardTableViewController.m in Sources */,
 				74E5EAEF1924FFBE0084BCFA /* SETextSelection.m in Sources */,
 				74E5EAE91924FFBE0084BCFA /* SETextMagnifierCaret.m in Sources */,
+				AB372924192EC6800084D7B5 /* XHDisplayLocationViewController.m in Sources */,
+				AB37292A192EC6800084D7B5 /* XHDisplayTextViewController.m in Sources */,
 				746C897E1917F8C5007F9A5E /* XHBaseTabBarController.m in Sources */,
-				746C89611917F7DE007F9A5E /* XHDisplayEmotionViewController.m in Sources */,
 				74E5EAE61924FFBE0084BCFA /* SETextLayout.m in Sources */,
 				7D13FC5C192C4F4000A23413 /* XHViewState.m in Sources */,
-				7490198A191D2D030049AFF9 /* XHDisplayMediaViewController.m in Sources */,
 				74D1C5C6190DFC1D003B1BCA /* XHFoundationCommon.m in Sources */,
 				74C3E7D2192919360053F4E1 /* XHAlbumTableViewCell.m in Sources */,
-				746C89701917F7FE007F9A5E /* XHDisplayTextViewController.m in Sources */,
 				748245151908C730008EC388 /* AppDelegate.m in Sources */,
 				AB44D41C192D8BB50069A210 /* XHContact.m in Sources */,
 				748245971909F33F008EC388 /* XHMessageBubbleFactory.m in Sources */,
@@ -2359,6 +2359,7 @@
 				74FAB0B9190A81DC005623D0 /* UIImage+XHRounded.m in Sources */,
 				AB79A21E192C22F500A9B951 /* XHBaseCollectionViewCell.m in Sources */,
 				74E9003419278F5C00D37C81 /* XHContactTableViewController.m in Sources */,
+				AB372921192EC6800084D7B5 /* XHDisplayEmotionViewController.m in Sources */,
 				7D13FC56192C4F4000A23413 /* XHFileAttribute.m in Sources */,
 				AB02A9F6192D8DC5004AA23D /* XHBaseSearchTableViewController.m in Sources */,
 				AB79A214192C0A6400A9B951 /* XHWaterDropRefresh.m in Sources */,
@@ -2386,7 +2387,6 @@
 				AB372909192EC62C0084D7B5 /* XHLocationServiceTableViewController.m in Sources */,
 				74E900B41928F3D100D37C81 /* XHStoreManager.m in Sources */,
 				74C3E7DC19291A1A0053F4E1 /* XHAlbum.m in Sources */,
-				746C89661917F7EA007F9A5E /* XHDisplayLocationViewController.m in Sources */,
 				746C89391917F691007F9A5E /* XHMessageTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
