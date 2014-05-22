@@ -100,7 +100,7 @@ If you use this open source components in your project, please [Email us](mailto
 谢谢[微信App](https://itunes.apple.com/cn/app/wei-xin/id414478124?mt=8)给予我鼓励，我参考了很多框架设计问题、也提供了许多素材，但是请网友不要直接使用素材，我不知道是否会引起侵权的问题，所以请自重，我这里只是模仿微信，而不是攻击。使用该开源库所导致的所有侵权关系与我无关，我只是提供学习机会。                                         
 
 ## 警告
-请不要拿该工程的所有资源文件用于商业使用，如果不遵守规则，而产生的法律责任，一律与我无关。
+请不要拿该工程的所有资源文件用于商业使用，如果不遵守规则，而产生的法律责任，一律与我无关。代码按照License 和 Notes来使用。
 
 谢谢[kishikawakatsumi](https://github.com/kishikawakatsumi)提供[富文本](https://github.com/kishikawakatsumi/SECoreTextView)组件。      
 
