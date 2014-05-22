@@ -8,6 +8,7 @@
 
 #import "XHStoreManager.h"
 
+#import "XHContact.h"
 #import "XHAlbum.h"
 
 @implementation XHStoreManager
@@ -41,6 +42,107 @@
     return discoverConfigureArray;
 }
 
+- (NSMutableArray *)getContactConfigureArray {
+    NSMutableArray *contacts = [[NSMutableArray alloc] init];
+    
+    for (int i = 0; i <= 26; i ++) {
+        XHContact *contact = [[XHContact alloc] init];
+        
+        NSString *contactName;
+        switch (i) {
+            case 0:
+                contactName = @"apple";
+                break;
+            case 1:
+                contactName = @"bpple";
+                break;
+            case 2:
+                contactName = @"cpple";
+                break;
+            case 3:
+                contactName = @"dpple";
+                break;
+            case 4:
+                contactName = @"epple";
+                break;
+            case 5:
+                contactName = @"fpple";
+                break;
+            case 6:
+                contactName = @"gpple";
+                break;
+            case 7:
+                contactName = @"hpple";
+                break;
+            case 8:
+                contactName = @"ipple";
+                break;
+            case 9:
+                contactName = @"jpple";
+                break;
+            case 10:
+                contactName = @"kpple";
+                break;
+            case 11:
+                contactName = @"rpple";
+                break;
+            case 12:
+                contactName = @"mpple";
+                break;
+            case 13:
+                contactName = @"npple";
+                break;
+            case 14:
+                contactName = @"opple";
+                break;
+            case 15:
+                contactName = @"ppple";
+                break;
+            case 16:
+                contactName = @"qpple";
+                break;
+            case 17:
+                contactName = @"rpple";
+                break;
+            case 18:
+                contactName = @"spple";
+                break;
+            case 19:
+                contactName = @"tpple";
+                break;
+            case 20:
+                contactName = @"upple";
+                break;
+            case 21:
+                contactName = @"vpple";
+                break;
+            case 22:
+                contactName = @"wpple";
+                break;
+            case 23:
+                contactName = @"xpple";
+                break;
+            case 24:
+                contactName = @"ypple";
+                break;
+            case 25:
+                contactName = @"zpple";
+                break;
+            case 26:
+                contactName = @"#pple";
+                break;
+            default:
+                break;
+        }
+        
+        contact.contactName = contactName;
+        
+        [contacts addObject:@[contact, contact]];
+    }
+    
+    return contacts;
+}
+
 - (NSMutableArray *)getAlbumConfigureArray {
     NSMutableArray *albumConfigureArray = [[NSMutableArray alloc] init];
     
@@ -56,4 +158,5 @@
     
     return albumConfigureArray;
 }
+
 @end

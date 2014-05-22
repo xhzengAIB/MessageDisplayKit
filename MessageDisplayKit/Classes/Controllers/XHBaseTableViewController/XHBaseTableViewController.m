@@ -23,9 +23,15 @@
     return NO;
 }
 
-- (void)configuraTableViewnNormalSeparatorInset {
+- (void)configuraTableViewNormalSeparatorInset {
     if ([self validateSeparatorInset]) {
         [_tableView setSeparatorInset:UIEdgeInsetsZero];
+    }
+}
+
+- (void)configuraSectionIndexBackgroundColorWithTableView:(UITableView *)tableView {
+    if ([tableView respondsToSelector:@selector(setSectionIndexBackgroundColor:)]) {
+        tableView.sectionIndexBackgroundColor = [UIColor clearColor];
     }
 }
 

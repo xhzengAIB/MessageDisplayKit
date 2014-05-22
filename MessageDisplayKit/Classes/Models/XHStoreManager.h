@@ -14,6 +14,8 @@
 
 - (NSMutableArray *)getDiscoverConfigureArray;
 
+- (NSMutableArray *)getContactConfigureArray;
+
 - (NSMutableArray *)getAlbumConfigureArray;
 
 @end

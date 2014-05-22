@@ -8,6 +8,9 @@
 
 #import "XHContactTableViewController.h"
 
+#import "XHStoreManager.h"
+#import "XHContact.h"
+
 @interface XHContactTableViewController ()
 
 @end
@@ -21,39 +24,19 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.sectionIndexTitles = [UILocalizedIndexedCollation.currentCollation sectionIndexTitles];
-    self.dataSource = [[NSMutableArray alloc] initWithObjects:@[@"apple"],
-                       @[@"bpple"],
-                       @[@"cpple"],
-                       @[@"dpple"],
-                       @[@"epple"],
-                       @[@"fpple"],
-                       @[@"gpple"],
-                       @[@"hpple"],
-                       @[@"ipple"],
-                       @[@"jpple"],
-                       @[@"kpple"],
-                       @[@"rpple"],
-                       @[@"mpple"],
-                       @[@"npple"],
-                       @[@"opple"],
-                       @[@"ppple"],
-                       @[@"qpple"],
-                       @[@"rpple"],
-                       @[@"spple"],
-                       @[@"tpple"],
-                       @[@"upple"],
-                       @[@"vpple"],
-                       @[@"wpple"],
-                       @[@"xpple"],
-                       @[@"ypple"],
-                       @[@"zpple"],
-                       @[@"#pple"], nil];
+    self.dataSource = [[XHStoreManager shareStoreManager] getContactConfigureArray];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Helper Method
+
+- (BOOL)validataWithContact:(XHContact *)contact {
+    return (contact && [contact isKindOfClass:[XHContact class]] && contact.contactName);
 }
 
 #pragma mark - UITableView DataSource
@@ -64,7 +47,43 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
-    cell.textLabel.text = self.dataSource[indexPath.section][indexPath.row];
+    NSInteger section = indexPath.section;
+    NSInteger row = indexPath.row;
+    
+    NSArray *contacts;
+    
+    XHContact *contact;
+    
+    // 判断是否是搜索tableView
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        contacts = self.filteredDataSource;
+        
+        if (row < contacts.count) {
+            contact = contacts[row];
+            
+            if ([self validataWithContact:contact]) {
+                NSMutableAttributedString *attributedTitle = [[NSMutableAttributedString alloc] initWithString:contact.contactName attributes:@{NSForegroundColorAttributeName: [UIColor colorWithWhite:0.785 alpha:1.000], NSFontAttributeName:[UIFont preferredFontForTextStyle:UIFontTextStyleBody]}];
+                [attributedTitle addAttribute:NSForegroundColorAttributeName
+                                        value:[UIColor colorWithRed:0.122 green:0.475 blue:0.992 alpha:1.000]
+                                        range:[attributedTitle.string.lowercaseString rangeOfString:self.searchDisplayController.searchBar.text.lowercaseString]];
+                
+                cell.textLabel.attributedText = attributedTitle;
+            }
+        }
+    } else {
+        // 默认通信录的tableView
+        if (section < self.dataSource.count) {
+            contacts = self.dataSource[section];
+            
+            if (row < [contacts count]) {
+                contact = contacts[row];
+                if ([self validataWithContact:contact]) {
+                    cell.textLabel.text = contact.contactName;
+                }
+            }
+        }
+    }
+    
     
     return cell;
 }

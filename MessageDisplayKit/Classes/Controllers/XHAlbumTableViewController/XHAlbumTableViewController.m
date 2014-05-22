@@ -70,7 +70,7 @@
     self.tableView.tableHeaderView = self.albumHeaderContainerViewPathCover;
     [self.view addSubview:self.tableView];
     
-    [self configuraTableViewnNormalSeparatorInset];
+    [self configuraTableViewNormalSeparatorInset];
     
     [self loadDataSource];
 }

@@ -10,4 +10,8 @@
 
 @implementation XHContact
 
+- (NSString *)description {
+    return self.contactName;
+}
+
 @end

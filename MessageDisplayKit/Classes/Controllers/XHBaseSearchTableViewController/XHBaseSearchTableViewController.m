@@ -26,6 +26,13 @@
 
 #pragma mark - Propertys
 
+- (NSMutableArray *)filteredDataSource {
+    if (!_filteredDataSource) {
+        _filteredDataSource = [[NSMutableArray alloc] initWithCapacity:1];
+    }
+    return _filteredDataSource;
+}
+
 - (UISearchBar *)aSearchBar {
     if (!_aSearchBar) {
         _aSearchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 44)];
@@ -46,9 +53,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    if ([self.tableView respondsToSelector:@selector(setSectionIndexBackgroundColor:)]) {
-        self.tableView.sectionIndexBackgroundColor = [UIColor clearColor];
-    }
+    [self configuraSectionIndexBackgroundColorWithTableView:self.tableView];
     
     self.tableView.tableHeaderView = self.aSearchBar;
     [self.view addSubview:self.tableView];
@@ -60,7 +65,49 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark Content Filtering
+
+- (void)filterContentForSearchText:(NSString *)searchText scope:(NSString*)scope
+{
+	[self.filteredDataSource removeAllObjects];
+    
+    for (NSArray *contacts in self.dataSource) {
+        for (id contact in contacts) {
+            NSString *contactName = [contact valueForKey:@"contactName"];
+            NSComparisonResult result = [contactName compare:searchText options:(NSCaseInsensitiveSearch|NSDiacriticInsensitiveSearch) range:NSMakeRange(0, [searchText length])];
+            if (result == NSOrderedSame) {
+                [self.filteredDataSource addObject:contact];
+            }
+        }
+    }
+}
+
+#pragma mark - UISearchDisplayController Delegate Methods
+
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString {
+    [self filterContentForSearchText:searchString scope:
+     [self.searchDisplayController.searchBar scopeButtonTitles][[self.searchDisplayController.searchBar selectedScopeButtonIndex]]];
+    
+    return YES;
+}
+
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchScope:(NSInteger)searchOption {
+    [self filterContentForSearchText:[self.searchDisplayController.searchBar text] scope:
+     [self.searchDisplayController.searchBar scopeButtonTitles][searchOption]];
+    
+    return YES;
+}
+#pragma mark - searchBar delegate
+
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar{
+    
+}
+
 #pragma mark - UITableView DataSource
+
+- (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index {
+    return [[UILocalizedIndexedCollation currentCollation] sectionForSectionIndexTitleAtIndex:index];
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     if ([self enableForSearchTableView:tableView]) {
