@@ -65,8 +65,7 @@
 #endif
 }
 
--(void)resetTimer
-{
+- (void)resetTimer {
     if (!_timer)
         return;
     
@@ -77,8 +76,7 @@
     
 }
 
-- (void)cancelRecording
-{
+- (void)cancelRecording {
     if (!_recorder)
         return;
     
@@ -179,7 +177,7 @@
     dispatch_async(dispatch_get_main_queue(), stopRecorderCompletion);
 }
 
--(void)cancelledDeleteWithCompletion:(XHCancellRecorderDeleteFileCompletion)cancelledDeleteCompletion {
+- (void)cancelledDeleteWithCompletion:(XHCancellRecorderDeleteFileCompletion)cancelledDeleteCompletion {
     
     _isPause = NO;
     [self stopBackgroundTask];
