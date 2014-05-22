@@ -16,6 +16,8 @@
 
 @implementation XHBaseTableViewController
 
+#pragma mark - TableView Helper Method
+
 - (BOOL)validateSeparatorInset {
     if ([_tableView respondsToSelector:@selector(setSeparatorInset:)]) {
         return YES;

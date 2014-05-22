@@ -17,6 +17,8 @@
 
 @implementation XHBaseSearchTableViewController
 
+#pragma mark - Filter Helper Method
+
 - (BOOL)enableForSearchTableView:(UITableView *)tableView {
     if (tableView == self.searchDisplayController.searchResultsTableView) {
         return YES;
@@ -67,8 +69,7 @@
 
 #pragma mark Content Filtering
 
-- (void)filterContentForSearchText:(NSString *)searchText scope:(NSString*)scope
-{
+- (void)filterContentForSearchText:(NSString *)searchText scope:(NSString *)scope {
 	[self.filteredDataSource removeAllObjects];
     
     for (NSArray *contacts in self.dataSource) {
@@ -97,7 +98,7 @@
     
     return YES;
 }
-#pragma mark - searchBar delegate
+#pragma mark - SearchBar Delegate
 
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar{
     
