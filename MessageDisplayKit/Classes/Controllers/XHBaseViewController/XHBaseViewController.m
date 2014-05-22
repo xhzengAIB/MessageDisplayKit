@@ -26,10 +26,17 @@
     [self.navigationController pushViewController:newViewController animated:YES];
 }
 
+#pragma mark - Loading
+
 - (void)showLoading {
-    
+    [self showLoadingWithText:nil];
 }
+
 - (void)showLoadingWithText:(NSString *)text {
+    [self showLoadingWithText:text onView:self.view];
+}
+
+- (void)showLoadingWithText:(NSString *)text onView:(UIView *)view {
     
 }
 

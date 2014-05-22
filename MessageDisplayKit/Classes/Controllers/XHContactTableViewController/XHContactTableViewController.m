@@ -13,6 +13,15 @@
 
 @interface XHContactTableViewController ()
 
+/**
+ *  二次确认联系人是否相应的类，并且需要判断联系人的名称是否存在
+ *
+ *  @param contact 目标联系人对象
+ *
+ *  @return 返回预想的结果
+ */
+- (BOOL)validataWithContact:(XHContact *)contact;
+
 @end
 
 @implementation XHContactTableViewController

@@ -10,8 +10,32 @@
 
 @interface XHBaseSearchTableViewController () <UISearchDisplayDelegate, UISearchBarDelegate>
 
+/**
+ *  搜索框
+ */
 @property (nonatomic, strong) UISearchBar *aSearchBar;
+
+/**
+ *  搜索框绑定的控制器
+ */
 @property (nonatomic) UISearchDisplayController *searchController;
+
+/**
+ *  判断TableView是否为搜索控制器的TableView
+ *
+ *  @param tableView 被判断的目标TableView对象
+ *
+ *  @return 返回是否为预想结果
+ */
+- (BOOL)enableForSearchTableView:(UITableView *)tableView;
+
+/**
+ *  查找搜索框目前文本是否为搜索目标文本
+ *
+ *  @param searchText 搜索框的文本
+ *  @param scope      搜索范围
+ */
+- (void)filterContentForSearchText:(NSString *)searchText scope:(NSString *)scope;
 
 @end
 

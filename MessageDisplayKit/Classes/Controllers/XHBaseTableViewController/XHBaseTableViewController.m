@@ -12,6 +12,13 @@
 
 @interface XHBaseTableViewController ()
 
+/**
+ *  判断tableView是否支持iOS7的api方法
+ *
+ *  @return 返回预想结果
+ */
+- (BOOL)validateSeparatorInset;
+
 @end
 
 @implementation XHBaseTableViewController
@@ -24,6 +31,8 @@
     }
     return NO;
 }
+
+#pragma mark - Publish Method
 
 - (void)configuraTableViewNormalSeparatorInset {
     if ([self validateSeparatorInset]) {

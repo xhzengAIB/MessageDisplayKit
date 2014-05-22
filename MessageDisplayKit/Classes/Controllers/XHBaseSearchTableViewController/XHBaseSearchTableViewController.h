@@ -10,8 +10,14 @@
 
 @interface XHBaseSearchTableViewController : XHBaseTableViewController
 
+/**
+ *  搜索结果数据源
+ */
 @property (nonatomic, strong) NSMutableArray *filteredDataSource;
 
+/**
+ *  TableView右边的IndexTitles数据源
+ */
 @property (nonatomic, strong) NSArray *sectionIndexTitles;
 
 @end

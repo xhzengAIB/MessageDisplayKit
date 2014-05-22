@@ -15,6 +15,9 @@
 
 @interface XHAlbumTableViewController ()
 
+/**
+ *  视觉差的TableViewHeaderView
+ */
 @property (nonatomic, strong) XHPathCover *albumHeaderContainerViewPathCover;
 
 @end

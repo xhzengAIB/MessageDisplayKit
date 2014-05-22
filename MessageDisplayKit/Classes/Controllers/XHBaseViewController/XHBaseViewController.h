@@ -35,6 +35,8 @@
  */
 - (void)showLoadingWithText:(NSString *)text;
 
+- (void)showLoadingWithText:(NSString *)text onView:(UIView *)view;
+
 /**
  *  显示成功的HUD
  */
