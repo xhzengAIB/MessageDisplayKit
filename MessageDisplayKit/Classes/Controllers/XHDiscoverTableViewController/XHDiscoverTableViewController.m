@@ -92,22 +92,6 @@
 
 #pragma markr - UITableView Delegate
 
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    switch (section) {
-        case 0:
-            return 14;
-            break;
-        case 1:
-        case 2:
-        case 3:
-            return 4;
-            break;
-        default:
-            break;
-    }
-    return 0;
-}
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     switch (indexPath.section) {

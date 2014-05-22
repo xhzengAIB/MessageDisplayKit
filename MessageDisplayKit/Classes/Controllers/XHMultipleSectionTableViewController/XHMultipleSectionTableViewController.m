@@ -1,0 +1,46 @@
+//
+//  XHMultipleSectionTableViewController.m
+//  MessageDisplayExample
+//
+//  Created by 曾 宪华 on 14-5-22.
+//  Copyright (c) 2014年 曾宪华 开发团队(http://iyilunba.com ) 本人QQ:543413507 本人QQ群（142557668）. All rights reserved.
+//
+
+#import "XHMultipleSectionTableViewController.h"
+
+@interface XHMultipleSectionTableViewController ()
+
+@end
+
+@implementation XHMultipleSectionTableViewController
+
+#pragma mark - Life Cycle
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+#pragma markr - UITableView Delegate
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    switch (section) {
+        case 0:
+            return 14;
+            break;
+        default: {
+            return 4;
+            break;
+        }
+    }
+    return 0;
+}
+
+@end

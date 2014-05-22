@@ -404,6 +404,14 @@
 		AB79A222192C231C00A9B951 /* XHAlbumPhotoCollectionViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = AB79A220192C231C00A9B951 /* XHAlbumPhotoCollectionViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB79A223192C231C00A9B951 /* XHAlbumPhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB79A221192C231C00A9B951 /* XHAlbumPhotoCollectionViewCell.m */; };
 		AB79A224192C231C00A9B951 /* XHAlbumPhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB79A221192C231C00A9B951 /* XHAlbumPhotoCollectionViewCell.m */; };
+		AB8ACCDF192EB04400FA1C80 /* MoreExpressionShops@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB8ACCDA192EB04400FA1C80 /* MoreExpressionShops@2x.png */; };
+		AB8ACCE0192EB04400FA1C80 /* MoreMyAlbum@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB8ACCDB192EB04400FA1C80 /* MoreMyAlbum@2x.png */; };
+		AB8ACCE1192EB04400FA1C80 /* MoreMyBankCard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB8ACCDC192EB04400FA1C80 /* MoreMyBankCard@2x.png */; };
+		AB8ACCE2192EB04400FA1C80 /* MoreMyFavorites@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB8ACCDD192EB04400FA1C80 /* MoreMyFavorites@2x.png */; };
+		AB8ACCE3192EB04400FA1C80 /* MoreSetting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB8ACCDE192EB04400FA1C80 /* MoreSetting@2x.png */; };
+		AB8ACCE7192EB0A400FA1C80 /* XHMultipleSectionTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = AB8ACCE5192EB0A400FA1C80 /* XHMultipleSectionTableViewController.h */; };
+		AB8ACCE8192EB0A400FA1C80 /* XHMultipleSectionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8ACCE6192EB0A400FA1C80 /* XHMultipleSectionTableViewController.m */; };
+		AB8ACCE9192EB0A400FA1C80 /* XHMultipleSectionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8ACCE6192EB0A400FA1C80 /* XHMultipleSectionTableViewController.m */; };
 		ABE87CD4192D6D7F00EC1E49 /* AlbumOperateMore@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABE87CD2192D6D7F00EC1E49 /* AlbumOperateMore@2x.png */; };
 		ABE87CD5192D6D7F00EC1E49 /* AlbumOperateMoreHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABE87CD3192D6D7F00EC1E49 /* AlbumOperateMoreHL@2x.png */; };
 /* End PBXBuildFile section */
@@ -747,6 +755,13 @@
 		AB79A21C192C22F500A9B951 /* XHBaseCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHBaseCollectionViewCell.m; sourceTree = "<group>"; };
 		AB79A220192C231C00A9B951 /* XHAlbumPhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHAlbumPhotoCollectionViewCell.h; sourceTree = "<group>"; };
 		AB79A221192C231C00A9B951 /* XHAlbumPhotoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHAlbumPhotoCollectionViewCell.m; sourceTree = "<group>"; };
+		AB8ACCDA192EB04400FA1C80 /* MoreExpressionShops@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MoreExpressionShops@2x.png"; sourceTree = "<group>"; };
+		AB8ACCDB192EB04400FA1C80 /* MoreMyAlbum@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MoreMyAlbum@2x.png"; sourceTree = "<group>"; };
+		AB8ACCDC192EB04400FA1C80 /* MoreMyBankCard@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MoreMyBankCard@2x.png"; sourceTree = "<group>"; };
+		AB8ACCDD192EB04400FA1C80 /* MoreMyFavorites@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MoreMyFavorites@2x.png"; sourceTree = "<group>"; };
+		AB8ACCDE192EB04400FA1C80 /* MoreSetting@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MoreSetting@2x.png"; sourceTree = "<group>"; };
+		AB8ACCE5192EB0A400FA1C80 /* XHMultipleSectionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMultipleSectionTableViewController.h; sourceTree = "<group>"; };
+		AB8ACCE6192EB0A400FA1C80 /* XHMultipleSectionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMultipleSectionTableViewController.m; sourceTree = "<group>"; };
 		ABE87CD2192D6D7F00EC1E49 /* AlbumOperateMore@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AlbumOperateMore@2x.png"; sourceTree = "<group>"; };
 		ABE87CD3192D6D7F00EC1E49 /* AlbumOperateMoreHL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AlbumOperateMoreHL@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1056,6 +1071,7 @@
 				74901A42191D4CD30049AFF9 /* XHBaseViewController */,
 				746C89741917F89A007F9A5E /* XHBaseTableViewController */,
 				AB02A9F2192D8DA9004AA23D /* XHBaseSearchTableViewController */,
+				AB8ACCE4192EB09700FA1C80 /* XHMultipleSectionTableViewController */,
 				74E9002F19278F5200D37C81 /* XHContactTableViewController */,
 				74E9003019278F5200D37C81 /* XHDiscoverTableViewController */,
 				74E9006F1927A0DE00D37C81 /* XHAlbumTableViewController */,
@@ -1470,6 +1486,7 @@
 				74E9004C1927940000D37C81 /* Demo0.gif */,
 				74E9004D1927940000D37C81 /* Demo1.gif */,
 				74E9004E1927940000D37C81 /* DisconverImages */,
+				AB8ACCD9192EB04400FA1C80 /* ProfileImages */,
 				74E900551927940000D37C81 /* IMG_1555.MOV */,
 				74E900561927940000D37C81 /* placeholderImage@2x.png */,
 				74E900571927940000D37C81 /* TabbarImages */,
@@ -1662,6 +1679,27 @@
 			path = BaseCollectionViewCell;
 			sourceTree = "<group>";
 		};
+		AB8ACCD9192EB04400FA1C80 /* ProfileImages */ = {
+			isa = PBXGroup;
+			children = (
+				AB8ACCDA192EB04400FA1C80 /* MoreExpressionShops@2x.png */,
+				AB8ACCDB192EB04400FA1C80 /* MoreMyAlbum@2x.png */,
+				AB8ACCDC192EB04400FA1C80 /* MoreMyBankCard@2x.png */,
+				AB8ACCDD192EB04400FA1C80 /* MoreMyFavorites@2x.png */,
+				AB8ACCDE192EB04400FA1C80 /* MoreSetting@2x.png */,
+			);
+			path = ProfileImages;
+			sourceTree = "<group>";
+		};
+		AB8ACCE4192EB09700FA1C80 /* XHMultipleSectionTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AB8ACCE5192EB0A400FA1C80 /* XHMultipleSectionTableViewController.h */,
+				AB8ACCE6192EB0A400FA1C80 /* XHMultipleSectionTableViewController.m */,
+			);
+			path = XHMultipleSectionTableViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1753,6 +1791,7 @@
 				AB439973192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.h in Headers */,
 				AB79A210192C0A6400A9B951 /* XHSoundManager.h in Headers */,
 				7D14A000192DF30C004B4D3B /* XHUIKitMacro.h in Headers */,
+				AB8ACCE7192EB0A400FA1C80 /* XHMultipleSectionTableViewController.h in Headers */,
 				7D149FFE192DF2CA004B4D3B /* XHFoundationMacro.h in Headers */,
 				749019B4191D315A0049AFF9 /* XHMessageVideoConverPhotoFactory.h in Headers */,
 				74901A45191D4CD30049AFF9 /* XHBaseViewController.h in Headers */,
@@ -1914,6 +1953,7 @@
 				746C88581916B612007F9A5E /* sharemore_myfav@2x.png in Resources */,
 				74E9006B1927940000D37C81 /* SNS@2x.png in Resources */,
 				746C88731916B62D007F9A5E /* section0_emotion2@2x.png in Resources */,
+				AB8ACCE1192EB04400FA1C80 /* MoreMyBankCard@2x.png in Resources */,
 				746C88371916B5FE007F9A5E /* weChatBubble_Sending_Solid@2x.png in Resources */,
 				746C881F1916B5D6007F9A5E /* keyborad@2x.png in Resources */,
 				746C882C1916B5EE007F9A5E /* input-bar-flat.png in Resources */,
@@ -1930,6 +1970,7 @@
 				746C88441916B607007F9A5E /* ReceiverVoiceNodePlaying001@2x.png in Resources */,
 				AB79A219192C0B1500A9B951 /* pullrefresh.aif in Resources */,
 				746C88721916B62D007F9A5E /* section0_emotion1@2x.png in Resources */,
+				AB8ACCDF192EB04400FA1C80 /* MoreExpressionShops@2x.png in Resources */,
 				746C882D1916B5EE007F9A5E /* input-bar-flat@2x.png in Resources */,
 				74E9005E1927940000D37C81 /* avator@2x.png in Resources */,
 				746C887E1916B62D007F9A5E /* section0_emotion13@2x.png in Resources */,
@@ -1988,6 +2029,7 @@
 				746C88791916B62D007F9A5E /* section0_emotion8@2x.png in Resources */,
 				746C885D1916B612007F9A5E /* sharemore_voiceinput@2x.png in Resources */,
 				74C3E7E519291F1B0053F4E1 /* AlbumHeaderBackgrounImage@2x.png in Resources */,
+				AB8ACCE0192EB04400FA1C80 /* MoreMyAlbum@2x.png in Resources */,
 				74E900991927A81500D37C81 /* bottleButtonMine@2x.png in Resources */,
 				746C88231916B5D6007F9A5E /* voice@2x.png in Resources */,
 				746C88451916B607007F9A5E /* ReceiverVoiceNodePlaying002@2x.png in Resources */,
@@ -2003,9 +2045,11 @@
 				74E5E9B11921F7710084BCFA /* RecordingBkg@2x.png in Resources */,
 				74E900641927940000D37C81 /* ff_IconShake@2x.png in Resources */,
 				746C885B1916B612007F9A5E /* sharemore_video@2x.png in Resources */,
+				AB8ACCE3192EB04400FA1C80 /* MoreSetting@2x.png in Resources */,
 				746C882F1916B5EE007F9A5E /* input-field-cover@2x.png in Resources */,
 				746C88421916B607007F9A5E /* ReceiverVoiceNodePlaying@2x.png in Resources */,
 				744FBDC91915EE7400FB4A65 /* Default@2x.png in Resources */,
+				AB8ACCE2192EB04400FA1C80 /* MoreMyFavorites@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2122,6 +2166,7 @@
 				746C895D1917F7B4007F9A5E /* XHMessageTableViewController.m in Sources */,
 				AB79A215192C0A6400A9B951 /* XHWaterDropRefresh.m in Sources */,
 				AB79A224192C231C00A9B951 /* XHAlbumPhotoCollectionViewCell.m in Sources */,
+				AB8ACCE9192EB0A400FA1C80 /* XHMultipleSectionTableViewController.m in Sources */,
 				74C3E7DD19291A1A0053F4E1 /* XHAlbum.m in Sources */,
 				AB79A21F192C22F500A9B951 /* XHBaseCollectionViewCell.m in Sources */,
 				746C89401917F691007F9A5E /* XHMessageInputView.m in Sources */,
@@ -2184,6 +2229,7 @@
 				74E900821927A10200D37C81 /* XHLocationServiceTableViewController.m in Sources */,
 				740660CE1914E1F400E1CE95 /* XHEmotionManager.m in Sources */,
 				74585F46191C8B5700F5E8C8 /* UIView+XHNetworkImage.m in Sources */,
+				AB8ACCE8192EB0A400FA1C80 /* XHMultipleSectionTableViewController.m in Sources */,
 				7D149FFB192DEB5D004B4D3B /* XHContactTableViewCell.m in Sources */,
 				7D13FC53192C4F4000A23413 /* XHCacheManager.m in Sources */,
 				74585FFE191D10CC00F5E8C8 /* XHAnnotation.m in Sources */,
