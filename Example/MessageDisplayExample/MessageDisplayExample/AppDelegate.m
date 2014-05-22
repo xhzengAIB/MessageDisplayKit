@@ -45,7 +45,7 @@
     
     // profile
     XHProfileTableViewController *profileTableViewController = [[XHProfileTableViewController alloc] init];
-    profileTableViewController.title = NSLocalizedStringFromTable(@"Profile", @"MessageDisplayKitString", @"个人信息");
+    profileTableViewController.title = NSLocalizedStringFromTable(@"Profile", @"MessageDisplayKitString", @"");
     profileTableViewController.tabBarItem.image = [UIImage imageNamed:@"Profile"];
     XHBaseNavigationController *profileNavigationController = [[XHBaseNavigationController alloc] initWithRootViewController:profileTableViewController];
     

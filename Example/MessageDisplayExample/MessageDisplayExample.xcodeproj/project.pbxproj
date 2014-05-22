@@ -412,6 +412,24 @@
 		AB8ACCE7192EB0A400FA1C80 /* XHMultipleSectionTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = AB8ACCE5192EB0A400FA1C80 /* XHMultipleSectionTableViewController.h */; };
 		AB8ACCE8192EB0A400FA1C80 /* XHMultipleSectionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8ACCE6192EB0A400FA1C80 /* XHMultipleSectionTableViewController.m */; };
 		AB8ACCE9192EB0A400FA1C80 /* XHMultipleSectionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8ACCE6192EB0A400FA1C80 /* XHMultipleSectionTableViewController.m */; };
+		AB8ACCF2192EBF0C00FA1C80 /* XHMoreExpressionShopsTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = AB8ACCF0192EBF0C00FA1C80 /* XHMoreExpressionShopsTableViewController.h */; };
+		AB8ACCF3192EBF0C00FA1C80 /* XHMoreExpressionShopsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8ACCF1192EBF0C00FA1C80 /* XHMoreExpressionShopsTableViewController.m */; };
+		AB8ACCF4192EBF0C00FA1C80 /* XHMoreExpressionShopsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8ACCF1192EBF0C00FA1C80 /* XHMoreExpressionShopsTableViewController.m */; };
+		AB8ACCF7192EBF1700FA1C80 /* XHMoreMyAlbumTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = AB8ACCF5192EBF1700FA1C80 /* XHMoreMyAlbumTableViewController.h */; };
+		AB8ACCF8192EBF1700FA1C80 /* XHMoreMyAlbumTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8ACCF6192EBF1700FA1C80 /* XHMoreMyAlbumTableViewController.m */; };
+		AB8ACCF9192EBF1700FA1C80 /* XHMoreMyAlbumTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8ACCF6192EBF1700FA1C80 /* XHMoreMyAlbumTableViewController.m */; };
+		AB8ACCFC192EBF2100FA1C80 /* XHMoreMyBankCardTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = AB8ACCFA192EBF2100FA1C80 /* XHMoreMyBankCardTableViewController.h */; };
+		AB8ACCFD192EBF2100FA1C80 /* XHMoreMyBankCardTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8ACCFB192EBF2100FA1C80 /* XHMoreMyBankCardTableViewController.m */; };
+		AB8ACCFE192EBF2100FA1C80 /* XHMoreMyBankCardTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8ACCFB192EBF2100FA1C80 /* XHMoreMyBankCardTableViewController.m */; };
+		AB8ACD01192EBF2C00FA1C80 /* XHMoreMyFavoritesTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = AB8ACCFF192EBF2C00FA1C80 /* XHMoreMyFavoritesTableViewController.h */; };
+		AB8ACD02192EBF2C00FA1C80 /* XHMoreMyFavoritesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8ACD00192EBF2C00FA1C80 /* XHMoreMyFavoritesTableViewController.m */; };
+		AB8ACD03192EBF2C00FA1C80 /* XHMoreMyFavoritesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8ACD00192EBF2C00FA1C80 /* XHMoreMyFavoritesTableViewController.m */; };
+		AB8ACD06192EBF3600FA1C80 /* XHMoreMyProfileDetailTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = AB8ACD04192EBF3600FA1C80 /* XHMoreMyProfileDetailTableViewController.h */; };
+		AB8ACD07192EBF3600FA1C80 /* XHMoreMyProfileDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8ACD05192EBF3600FA1C80 /* XHMoreMyProfileDetailTableViewController.m */; };
+		AB8ACD08192EBF3600FA1C80 /* XHMoreMyProfileDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8ACD05192EBF3600FA1C80 /* XHMoreMyProfileDetailTableViewController.m */; };
+		AB8ACD0B192EBF3F00FA1C80 /* XHMoreSettingTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = AB8ACD09192EBF3F00FA1C80 /* XHMoreSettingTableViewController.h */; };
+		AB8ACD0C192EBF3F00FA1C80 /* XHMoreSettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8ACD0A192EBF3F00FA1C80 /* XHMoreSettingTableViewController.m */; };
+		AB8ACD0D192EBF3F00FA1C80 /* XHMoreSettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8ACD0A192EBF3F00FA1C80 /* XHMoreSettingTableViewController.m */; };
 		ABE87CD4192D6D7F00EC1E49 /* AlbumOperateMore@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABE87CD2192D6D7F00EC1E49 /* AlbumOperateMore@2x.png */; };
 		ABE87CD5192D6D7F00EC1E49 /* AlbumOperateMoreHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABE87CD3192D6D7F00EC1E49 /* AlbumOperateMoreHL@2x.png */; };
 /* End PBXBuildFile section */
@@ -762,6 +780,18 @@
 		AB8ACCDE192EB04400FA1C80 /* MoreSetting@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MoreSetting@2x.png"; sourceTree = "<group>"; };
 		AB8ACCE5192EB0A400FA1C80 /* XHMultipleSectionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMultipleSectionTableViewController.h; sourceTree = "<group>"; };
 		AB8ACCE6192EB0A400FA1C80 /* XHMultipleSectionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMultipleSectionTableViewController.m; sourceTree = "<group>"; };
+		AB8ACCF0192EBF0C00FA1C80 /* XHMoreExpressionShopsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMoreExpressionShopsTableViewController.h; sourceTree = "<group>"; };
+		AB8ACCF1192EBF0C00FA1C80 /* XHMoreExpressionShopsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMoreExpressionShopsTableViewController.m; sourceTree = "<group>"; };
+		AB8ACCF5192EBF1700FA1C80 /* XHMoreMyAlbumTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMoreMyAlbumTableViewController.h; sourceTree = "<group>"; };
+		AB8ACCF6192EBF1700FA1C80 /* XHMoreMyAlbumTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMoreMyAlbumTableViewController.m; sourceTree = "<group>"; };
+		AB8ACCFA192EBF2100FA1C80 /* XHMoreMyBankCardTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMoreMyBankCardTableViewController.h; sourceTree = "<group>"; };
+		AB8ACCFB192EBF2100FA1C80 /* XHMoreMyBankCardTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMoreMyBankCardTableViewController.m; sourceTree = "<group>"; };
+		AB8ACCFF192EBF2C00FA1C80 /* XHMoreMyFavoritesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMoreMyFavoritesTableViewController.h; sourceTree = "<group>"; };
+		AB8ACD00192EBF2C00FA1C80 /* XHMoreMyFavoritesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMoreMyFavoritesTableViewController.m; sourceTree = "<group>"; };
+		AB8ACD04192EBF3600FA1C80 /* XHMoreMyProfileDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMoreMyProfileDetailTableViewController.h; sourceTree = "<group>"; };
+		AB8ACD05192EBF3600FA1C80 /* XHMoreMyProfileDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMoreMyProfileDetailTableViewController.m; sourceTree = "<group>"; };
+		AB8ACD09192EBF3F00FA1C80 /* XHMoreSettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMoreSettingTableViewController.h; sourceTree = "<group>"; };
+		AB8ACD0A192EBF3F00FA1C80 /* XHMoreSettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMoreSettingTableViewController.m; sourceTree = "<group>"; };
 		ABE87CD2192D6D7F00EC1E49 /* AlbumOperateMore@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AlbumOperateMore@2x.png"; sourceTree = "<group>"; };
 		ABE87CD3192D6D7F00EC1E49 /* AlbumOperateMoreHL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AlbumOperateMoreHL@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1354,6 +1384,12 @@
 			children = (
 				74901A3D191D3B1C0049AFF9 /* XHProfileTableViewController.h */,
 				74901A3E191D3B1C0049AFF9 /* XHProfileTableViewController.m */,
+				AB8ACCEA192EBEF200FA1C80 /* XHMoreExpressionShopsTableViewController */,
+				AB8ACCEB192EBEF200FA1C80 /* XHMoreMyAlbumTableViewController */,
+				AB8ACCEC192EBEF200FA1C80 /* XHMoreMyBankCardTableViewController */,
+				AB8ACCED192EBEF200FA1C80 /* XHMoreMyFavoritesTableViewController */,
+				AB8ACCEE192EBEF200FA1C80 /* XHMoreMyProfileDetailTableViewController */,
+				AB8ACCEF192EBEF200FA1C80 /* XHMoreSettingTableViewController */,
 			);
 			path = XHProfileTableViewController;
 			sourceTree = "<group>";
@@ -1700,6 +1736,60 @@
 			path = XHMultipleSectionTableViewController;
 			sourceTree = "<group>";
 		};
+		AB8ACCEA192EBEF200FA1C80 /* XHMoreExpressionShopsTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AB8ACCF0192EBF0C00FA1C80 /* XHMoreExpressionShopsTableViewController.h */,
+				AB8ACCF1192EBF0C00FA1C80 /* XHMoreExpressionShopsTableViewController.m */,
+			);
+			path = XHMoreExpressionShopsTableViewController;
+			sourceTree = "<group>";
+		};
+		AB8ACCEB192EBEF200FA1C80 /* XHMoreMyAlbumTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AB8ACCF5192EBF1700FA1C80 /* XHMoreMyAlbumTableViewController.h */,
+				AB8ACCF6192EBF1700FA1C80 /* XHMoreMyAlbumTableViewController.m */,
+			);
+			path = XHMoreMyAlbumTableViewController;
+			sourceTree = "<group>";
+		};
+		AB8ACCEC192EBEF200FA1C80 /* XHMoreMyBankCardTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AB8ACCFA192EBF2100FA1C80 /* XHMoreMyBankCardTableViewController.h */,
+				AB8ACCFB192EBF2100FA1C80 /* XHMoreMyBankCardTableViewController.m */,
+			);
+			path = XHMoreMyBankCardTableViewController;
+			sourceTree = "<group>";
+		};
+		AB8ACCED192EBEF200FA1C80 /* XHMoreMyFavoritesTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AB8ACCFF192EBF2C00FA1C80 /* XHMoreMyFavoritesTableViewController.h */,
+				AB8ACD00192EBF2C00FA1C80 /* XHMoreMyFavoritesTableViewController.m */,
+			);
+			path = XHMoreMyFavoritesTableViewController;
+			sourceTree = "<group>";
+		};
+		AB8ACCEE192EBEF200FA1C80 /* XHMoreMyProfileDetailTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AB8ACD04192EBF3600FA1C80 /* XHMoreMyProfileDetailTableViewController.h */,
+				AB8ACD05192EBF3600FA1C80 /* XHMoreMyProfileDetailTableViewController.m */,
+			);
+			path = XHMoreMyProfileDetailTableViewController;
+			sourceTree = "<group>";
+		};
+		AB8ACCEF192EBEF200FA1C80 /* XHMoreSettingTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AB8ACD09192EBF3F00FA1C80 /* XHMoreSettingTableViewController.h */,
+				AB8ACD0A192EBF3F00FA1C80 /* XHMoreSettingTableViewController.m */,
+			);
+			path = XHMoreSettingTableViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1729,10 +1819,12 @@
 				740660CD1914E1F400E1CE95 /* XHEmotionManager.h in Headers */,
 				740660B41914CA0000E1CE95 /* XHPhotographyHelper.h in Headers */,
 				746C896F1917F7FE007F9A5E /* XHDisplayTextViewController.h in Headers */,
+				AB8ACD0B192EBF3F00FA1C80 /* XHMoreSettingTableViewController.h in Headers */,
 				746C89651917F7EA007F9A5E /* XHDisplayLocationViewController.h in Headers */,
 				746C89871917F8EA007F9A5E /* XHBaseTableViewController.h in Headers */,
 				746C897D1917F8C5007F9A5E /* XHBaseTabBarController.h in Headers */,
 				746C89781917F8B2007F9A5E /* XHBaseNavigationController.h in Headers */,
+				AB8ACD06192EBF3600FA1C80 /* XHMoreMyProfileDetailTableViewController.h in Headers */,
 				746C89601917F7DE007F9A5E /* XHDisplayEmotionViewController.h in Headers */,
 				740660BE1914D65600E1CE95 /* XHEmotion.h in Headers */,
 				74E5E9891921317B0084BCFA /* XHVoiceRecordHelper.h in Headers */,
@@ -1754,10 +1846,12 @@
 				74E5EADC1924FFBE0084BCFA /* SETextEditingCaret.h in Headers */,
 				74E5EAC71924FFBE0084BCFA /* NSMutableAttributedString+Helper.h in Headers */,
 				74901A3F191D3B1C0049AFF9 /* XHProfileTableViewController.h in Headers */,
+				AB8ACD01192EBF2C00FA1C80 /* XHMoreMyFavoritesTableViewController.h in Headers */,
 				74180C14190F450400A35C82 /* XHMessage.h in Headers */,
 				74E9003819278F6700D37C81 /* XHDiscoverTableViewController.h in Headers */,
 				74E900771927A0E900D37C81 /* XHAlbumTableViewController.h in Headers */,
 				74C3E7D1192919360053F4E1 /* XHAlbumTableViewCell.h in Headers */,
+				AB8ACCFC192EBF2100FA1C80 /* XHMoreMyBankCardTableViewController.h in Headers */,
 				74E9003319278F5C00D37C81 /* XHContactTableViewController.h in Headers */,
 				74E900811927A10200D37C81 /* XHLocationServiceTableViewController.h in Headers */,
 				74C3E7DB19291A1A0053F4E1 /* XHAlbum.h in Headers */,
@@ -1772,6 +1866,7 @@
 				74901989191D2D030049AFF9 /* XHDisplayMediaViewController.h in Headers */,
 				74585FFD191D10CC00F5E8C8 /* XHAnnotation.h in Headers */,
 				7D06CA71192B3D9B00DF8C04 /* XHBaseTableViewCell.h in Headers */,
+				AB8ACCF2192EBF0C00FA1C80 /* XHMoreExpressionShopsTableViewController.h in Headers */,
 				74585F45191C8B5700F5E8C8 /* UIView+XHNetworkImage.h in Headers */,
 				AB79A21D192C22F500A9B951 /* XHBaseCollectionViewCell.h in Headers */,
 				AB79A222192C231C00A9B951 /* XHAlbumPhotoCollectionViewCell.h in Headers */,
@@ -1787,6 +1882,7 @@
 				7D13FC4F192C4F4000A23413 /* UIImageView+XHURLDownload.h in Headers */,
 				7D149FFA192DEB5D004B4D3B /* XHContactTableViewCell.h in Headers */,
 				AB44D41B192D8BB50069A210 /* XHContact.h in Headers */,
+				AB8ACCF7192EBF1700FA1C80 /* XHMoreMyAlbumTableViewController.h in Headers */,
 				AB02A9F5192D8DC5004AA23D /* XHBaseSearchTableViewController.h in Headers */,
 				AB439973192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.h in Headers */,
 				AB79A210192C0A6400A9B951 /* XHSoundManager.h in Headers */,
@@ -2099,6 +2195,7 @@
 				746C894C1917F691007F9A5E /* XHEmotionManagerView.m in Sources */,
 				7D13FC60192C4F4000A23413 /* XHZoomingImageView.m in Sources */,
 				74E900921927A12100D37C81 /* XHShakeViewController.m in Sources */,
+				AB8ACCF4192EBF0C00FA1C80 /* XHMoreExpressionShopsTableViewController.m in Sources */,
 				74585F47191C8B5700F5E8C8 /* UIView+XHNetworkImage.m in Sources */,
 				AB79A20F192C0A6400A9B951 /* XHPathCover.m in Sources */,
 				AB79A212192C0A6400A9B951 /* XHSoundManager.m in Sources */,
@@ -2121,6 +2218,7 @@
 				74E5EAC91924FFBE0084BCFA /* NSMutableAttributedString+Helper.m in Sources */,
 				74065FBB19123E1C00E1CE95 /* XHShareMenuItem.m in Sources */,
 				746C89521917F691007F9A5E /* XHShareMenuView.m in Sources */,
+				AB8ACD0D192EBF3F00FA1C80 /* XHMoreSettingTableViewController.m in Sources */,
 				74E5EAD81924FFBE0084BCFA /* SESelectionGrabber.m in Sources */,
 				74E900881927A10C00D37C81 /* XHMoreGameTableViewController.m in Sources */,
 				74E5EACF1924FFBE0084BCFA /* SEConstants.m in Sources */,
@@ -2138,14 +2236,18 @@
 				74901A41191D3B1C0049AFF9 /* XHProfileTableViewController.m in Sources */,
 				74E5EAE11924FFBE0084BCFA /* SETextGeometry.m in Sources */,
 				74180C01190F44A600A35C82 /* XHMessage.m in Sources */,
+				AB8ACD08192EBF3600FA1C80 /* XHMoreMyProfileDetailTableViewController.m in Sources */,
 				74E5EAF01924FFBE0084BCFA /* SETextSelection.m in Sources */,
 				746C89311917F691007F9A5E /* XHBubblePhotoImageView.m in Sources */,
 				74E5EAD21924FFBE0084BCFA /* SELineLayout.m in Sources */,
 				74E5EAE41924FFBE0084BCFA /* SETextInput.m in Sources */,
+				AB8ACCF9192EBF1700FA1C80 /* XHMoreMyAlbumTableViewController.m in Sources */,
 				74E5EADE1924FFBE0084BCFA /* SETextEditingCaret.m in Sources */,
 				74E5EAF61924FFBE0084BCFA /* SETextView.m in Sources */,
+				AB8ACCFE192EBF2100FA1C80 /* XHMoreMyBankCardTableViewController.m in Sources */,
 				740660CF1914E1F400E1CE95 /* XHEmotionManager.m in Sources */,
 				74E9003A19278F6700D37C81 /* XHDiscoverTableViewController.m in Sources */,
+				AB8ACD03192EBF2C00FA1C80 /* XHMoreMyFavoritesTableViewController.m in Sources */,
 				7D149FFC192DEB5D004B4D3B /* XHContactTableViewCell.m in Sources */,
 				740660A91913552800E1CE95 /* UIImage+XHAnimatedFaceGif.m in Sources */,
 				74585F40191B999B00F5E8C8 /* XHLocationHelper.m in Sources */,
@@ -2198,8 +2300,10 @@
 				740660B51914CA0000E1CE95 /* XHPhotographyHelper.m in Sources */,
 				74585F3F191B999B00F5E8C8 /* XHLocationHelper.m in Sources */,
 				74E5EAC81924FFBE0084BCFA /* NSMutableAttributedString+Helper.m in Sources */,
+				AB8ACD07192EBF3600FA1C80 /* XHMoreMyProfileDetailTableViewController.m in Sources */,
 				746C893C1917F691007F9A5E /* XHMessageTableViewCell.m in Sources */,
 				74E5EAEC1924FFBE0084BCFA /* SETextMagnifierRanged.m in Sources */,
+				AB8ACCF8192EBF1700FA1C80 /* XHMoreMyAlbumTableViewController.m in Sources */,
 				746C89481917F691007F9A5E /* XHEmotionCollectionViewFlowLayout.m in Sources */,
 				7482456B19090C04008EC388 /* XHMessage.m in Sources */,
 				AB439974192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.m in Sources */,
@@ -2213,6 +2317,7 @@
 				746C89881917F8EA007F9A5E /* XHBaseTableViewController.m in Sources */,
 				74E5E9961921E90A0084BCFA /* XHVoiceRecordHUD.m in Sources */,
 				7D13FC5F192C4F4000A23413 /* XHZoomingImageView.m in Sources */,
+				AB8ACCFD192EBF2100FA1C80 /* XHMoreMyBankCardTableViewController.m in Sources */,
 				74E5EAEF1924FFBE0084BCFA /* SETextSelection.m in Sources */,
 				74E5EAE91924FFBE0084BCFA /* SETextMagnifierCaret.m in Sources */,
 				746C897E1917F8C5007F9A5E /* XHBaseTabBarController.m in Sources */,
@@ -2232,6 +2337,7 @@
 				AB8ACCE8192EB0A400FA1C80 /* XHMultipleSectionTableViewController.m in Sources */,
 				7D149FFB192DEB5D004B4D3B /* XHContactTableViewCell.m in Sources */,
 				7D13FC53192C4F4000A23413 /* XHCacheManager.m in Sources */,
+				AB8ACD0C192EBF3F00FA1C80 /* XHMoreSettingTableViewController.m in Sources */,
 				74585FFE191D10CC00F5E8C8 /* XHAnnotation.m in Sources */,
 				746C89361917F691007F9A5E /* XHMessageDisplayTextView.m in Sources */,
 				74E5EADD1924FFBE0084BCFA /* SETextEditingCaret.m in Sources */,
@@ -2263,12 +2369,14 @@
 				746C89511917F691007F9A5E /* XHShareMenuView.m in Sources */,
 				746C89331917F691007F9A5E /* XHMessageBubbleView.m in Sources */,
 				74BBB02C190BE8C400093577 /* XHMessageRootViewController.m in Sources */,
+				AB8ACCF3192EBF0C00FA1C80 /* XHMoreExpressionShopsTableViewController.m in Sources */,
 				7D13FC4D192C4F4000A23413 /* UIImage+Utility.m in Sources */,
 				746C894E1917F691007F9A5E /* XHEmotionSectionBar.m in Sources */,
 				74E5EADA1924FFBE0084BCFA /* SETextAttachment.m in Sources */,
 				74E5EAD41924FFBE0084BCFA /* SELinkText.m in Sources */,
 				746C89451917F691007F9A5E /* XHEmotionCollectionViewCell.m in Sources */,
 				74E5EAF51924FFBE0084BCFA /* SETextView.m in Sources */,
+				AB8ACD02192EBF2C00FA1C80 /* XHMoreMyFavoritesTableViewController.m in Sources */,
 				748245111908C730008EC388 /* main.m in Sources */,
 				74E5EAE01924FFBE0084BCFA /* SETextGeometry.m in Sources */,
 				7482455C190902DA008EC388 /* UIScrollView+XHkeyboardControl.m in Sources */,

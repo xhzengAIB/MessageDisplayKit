@@ -10,6 +10,13 @@
 
 #import "XHStoreManager.h"
 
+#import "XHMoreMyProfileDetailTableViewController.h"
+#import "XHMoreMyAlbumTableViewController.h"
+#import "XHMoreMyFavoritesTableViewController.h"
+#import "XHMoreMyBankCardTableViewController.h"
+#import "XHMoreExpressionShopsTableViewController.h"
+#import "XHMoreSettingTableViewController.h"
+
 @interface XHProfileTableViewController ()
 
 @end
@@ -27,7 +34,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = NSLocalizedStringFromTable(@"Profile", @"MessageDisplayKitString", @"个人信息");
+    self.title = NSLocalizedStringFromTable(@"Profile", @"MessageDisplayKitString", @"");
     
     [self.view addSubview:self.tableView];
 }
@@ -94,6 +101,56 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    UIViewController *viewController;
+    NSInteger row = indexPath.row;
+    NSInteger section = indexPath.section;
+    switch (section) {
+        case 0: {
+            XHMoreMyProfileDetailTableViewController *myProfileDetailTableViewController = [[XHMoreMyProfileDetailTableViewController alloc] init];
+            viewController = myProfileDetailTableViewController;
+            break;
+        }
+        case 1: {
+            switch (row) {
+                case 0: {
+                    XHMoreMyAlbumTableViewController *myAlbumTableViewController = [[XHMoreMyAlbumTableViewController alloc] init];
+                    viewController = myAlbumTableViewController;
+                    
+                    break;
+                }
+                case 1: {
+                    XHMoreMyFavoritesTableViewController *myFavoritesTableViewController = [[XHMoreMyFavoritesTableViewController alloc] init];
+                    viewController = myFavoritesTableViewController;
+                    break;
+                }
+                case 2: {
+                    XHMoreMyBankCardTableViewController *myBankCardTableViewController = [[XHMoreMyBankCardTableViewController alloc] init];
+                    viewController = myBankCardTableViewController;
+                    
+                    break;
+                }
+                default:
+                    break;
+            }
+            break;
+        }
+        case 2: {
+            XHMoreExpressionShopsTableViewController *expressionShopsTableViewController = [[XHMoreExpressionShopsTableViewController alloc] init];
+            viewController = expressionShopsTableViewController;
+            break;
+        }
+        case 3: {
+            XHMoreSettingTableViewController *settingTableViewController = [[XHMoreSettingTableViewController alloc] init];
+            viewController = settingTableViewController;
+            
+            break;
+        }
+        default:
+            break;
+    }
+    if (viewController) {
+        [self pushNewViewController:viewController];
+    }
 }
 
 @end
