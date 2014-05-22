@@ -28,16 +28,16 @@
 
 #pragma mark - Life Cycle
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.tableView.sectionIndexColor = [UIColor colorWithRed:0.122 green:0.475 blue:0.992 alpha:1.000];
+    
     self.sectionIndexTitles = [UILocalizedIndexedCollation.currentCollation sectionIndexTitles];
     self.dataSource = [[XHStoreManager shareStoreManager] getContactConfigureArray];
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }

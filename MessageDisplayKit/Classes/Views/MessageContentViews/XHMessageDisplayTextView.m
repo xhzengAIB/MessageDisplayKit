@@ -10,8 +10,7 @@
 
 @implementation XHMessageDisplayTextView
 
-- (id)initWithFrame:(CGRect)frame
-{
+- (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
@@ -30,14 +29,5 @@
 - (BOOL)canPerformAction:(SEL)action withSender:(id)sender {
     return NO;
 }
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
 
 @end

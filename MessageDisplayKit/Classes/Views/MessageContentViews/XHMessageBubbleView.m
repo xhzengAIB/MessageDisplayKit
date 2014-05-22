@@ -324,8 +324,7 @@
     
 }
 
-- (void)layoutSubviews
-{
+- (void)layoutSubviews {
     [super layoutSubviews];
     
     XHBubbleMessageMediaType currentType = self.message.messageMediaType;
@@ -372,14 +371,5 @@
             break;
     }
 }
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
 
 @end

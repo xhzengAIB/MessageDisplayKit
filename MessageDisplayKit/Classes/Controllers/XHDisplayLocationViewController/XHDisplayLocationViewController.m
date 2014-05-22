@@ -49,8 +49,7 @@
     [self loadLocations];
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = NSLocalizedStringFromTable(@"Location", @"MessageDisplayKitString", @"地理位置");
@@ -58,14 +57,13 @@
     [self.view addSubview:self.mapView];
 }
 
-- (void)dealloc {
-    self.mapView = nil;
-}
-
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)dealloc {
+    self.mapView = nil;
 }
 
 @end

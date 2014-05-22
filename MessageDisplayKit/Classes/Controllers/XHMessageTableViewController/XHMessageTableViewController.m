@@ -638,8 +638,7 @@ static CGPoint  delayOffset = {0.0};
     [self.messageInputView.inputTextView removeObserver:self forKeyPath:@"contentSize"];
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.    
     // 初始化消息页面布局
