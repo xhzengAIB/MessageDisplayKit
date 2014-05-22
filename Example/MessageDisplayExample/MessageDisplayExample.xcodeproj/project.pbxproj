@@ -370,6 +370,8 @@
 		7D149FFA192DEB5D004B4D3B /* XHContactTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D149FF8192DEB5D004B4D3B /* XHContactTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7D149FFB192DEB5D004B4D3B /* XHContactTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D149FF9192DEB5D004B4D3B /* XHContactTableViewCell.m */; };
 		7D149FFC192DEB5D004B4D3B /* XHContactTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D149FF9192DEB5D004B4D3B /* XHContactTableViewCell.m */; };
+		7D149FFE192DF2CA004B4D3B /* XHFoundationMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D149FFD192DF2CA004B4D3B /* XHFoundationMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7D14A000192DF30C004B4D3B /* XHUIKitMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D149FFF192DF30C004B4D3B /* XHUIKitMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7D23E40E192C58E300B717B7 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D23E40D192C58E300B717B7 /* MediaPlayer.framework */; };
 		7D23E410192C58F000B717B7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D23E40F192C58F000B717B7 /* AudioToolbox.framework */; };
 		7D23E412192C590900B717B7 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D23E411192C590900B717B7 /* MobileCoreServices.framework */; };
@@ -719,6 +721,8 @@
 		7D13FC48192C4F4000A23413 /* XHZoomingImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHZoomingImageView.m; sourceTree = "<group>"; };
 		7D149FF8192DEB5D004B4D3B /* XHContactTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHContactTableViewCell.h; sourceTree = "<group>"; };
 		7D149FF9192DEB5D004B4D3B /* XHContactTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHContactTableViewCell.m; sourceTree = "<group>"; };
+		7D149FFD192DF2CA004B4D3B /* XHFoundationMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHFoundationMacro.h; sourceTree = "<group>"; };
+		7D149FFF192DF30C004B4D3B /* XHUIKitMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHUIKitMacro.h; sourceTree = "<group>"; };
 		7D23E40D192C58E300B717B7 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		7D23E40F192C58F000B717B7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		7D23E411192C590900B717B7 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
@@ -1291,6 +1295,8 @@
 			isa = PBXGroup;
 			children = (
 				7482457919091BBA008EC388 /* XHMacro.h */,
+				7D149FFF192DF30C004B4D3B /* XHUIKitMacro.h */,
+				7D149FFD192DF2CA004B4D3B /* XHFoundationMacro.h */,
 			);
 			path = Macro;
 			sourceTree = "<group>";
@@ -1746,6 +1752,8 @@
 				AB02A9F5192D8DC5004AA23D /* XHBaseSearchTableViewController.h in Headers */,
 				AB439973192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.h in Headers */,
 				AB79A210192C0A6400A9B951 /* XHSoundManager.h in Headers */,
+				7D14A000192DF30C004B4D3B /* XHUIKitMacro.h in Headers */,
+				7D149FFE192DF2CA004B4D3B /* XHFoundationMacro.h in Headers */,
 				749019B4191D315A0049AFF9 /* XHMessageVideoConverPhotoFactory.h in Headers */,
 				74901A45191D4CD30049AFF9 /* XHBaseViewController.h in Headers */,
 				74180C10190F44F800A35C82 /* UIScrollView+XHkeyboardControl.h in Headers */,
