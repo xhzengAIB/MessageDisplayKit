@@ -14,8 +14,7 @@ It's ok if you don't understand how the code works. Most code has comments, whic
 
 * iOS 6.0+ 
 * ARC
-* frameworks                             
-* 'Foundation', 'CoreGraphics', 'UIKit', 'MobileCoreServices', 'AVFoundation', 'CoreLocation', 'MediaPlayer', 'CoreMedia', 'CoreText', 'AudioTollbox'
+* frameworks : 'Foundation', 'CoreGraphics', 'UIKit', 'MobileCoreServices', 'AVFoundation', 'CoreLocation', 'MediaPlayer', 'CoreMedia', 'CoreText', 'AudioTollbox'.
 
 ## Podfile
 
