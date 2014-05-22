@@ -20,4 +20,11 @@
  */
 @property (nonatomic, strong) NSArray *sectionIndexTitles;
 
+/**
+ *  获取搜索框的文本
+ *
+ *  @return 返回文本对象
+ */
+- (NSString *)getSearchBarText;
+
 @end

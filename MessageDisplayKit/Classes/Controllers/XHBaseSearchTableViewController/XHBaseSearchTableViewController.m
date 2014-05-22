@@ -72,6 +72,10 @@
     return _aSearchBar;
 }
 
+- (NSString *)getSearchBarText {
+    return self.searchDisplayController.searchBar.text.lowercaseString;
+}
+
 #pragma mark - Life Cycle
 
 - (void)viewDidLoad

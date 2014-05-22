@@ -367,19 +367,22 @@
 		7D13FC5E192C4F4000A23413 /* XHZoomingImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D13FC47192C4F4000A23413 /* XHZoomingImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7D13FC5F192C4F4000A23413 /* XHZoomingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D13FC48192C4F4000A23413 /* XHZoomingImageView.m */; };
 		7D13FC60192C4F4000A23413 /* XHZoomingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D13FC48192C4F4000A23413 /* XHZoomingImageView.m */; };
+		7D149FFA192DEB5D004B4D3B /* XHContactTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D149FF8192DEB5D004B4D3B /* XHContactTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7D149FFB192DEB5D004B4D3B /* XHContactTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D149FF9192DEB5D004B4D3B /* XHContactTableViewCell.m */; };
+		7D149FFC192DEB5D004B4D3B /* XHContactTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D149FF9192DEB5D004B4D3B /* XHContactTableViewCell.m */; };
 		7D23E40E192C58E300B717B7 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D23E40D192C58E300B717B7 /* MediaPlayer.framework */; };
 		7D23E410192C58F000B717B7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D23E40F192C58F000B717B7 /* AudioToolbox.framework */; };
 		7D23E412192C590900B717B7 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D23E411192C590900B717B7 /* MobileCoreServices.framework */; };
 		7D23E414192C590F00B717B7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D23E413192C590F00B717B7 /* AVFoundation.framework */; };
 		7D23E416192C591600B717B7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D23E415192C591600B717B7 /* CoreLocation.framework */; };
 		7D23E418192C594800B717B7 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D23E417192C594800B717B7 /* CoreText.framework */; };
-		AB02A9F5192D8DC5004AA23D /* XHBaseSearchTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = AB02A9F3192D8DC5004AA23D /* XHBaseSearchTableViewController.h */; };
+		AB02A9F5192D8DC5004AA23D /* XHBaseSearchTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = AB02A9F3192D8DC5004AA23D /* XHBaseSearchTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB02A9F6192D8DC5004AA23D /* XHBaseSearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB02A9F4192D8DC5004AA23D /* XHBaseSearchTableViewController.m */; };
 		AB02A9F7192D8DC5004AA23D /* XHBaseSearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB02A9F4192D8DC5004AA23D /* XHBaseSearchTableViewController.m */; };
 		AB439973192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = AB439971192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB439974192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = AB439972192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.m */; };
 		AB439975192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = AB439972192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.m */; };
-		AB44D41B192D8BB50069A210 /* XHContact.h in Headers */ = {isa = PBXBuildFile; fileRef = AB44D419192D8BB50069A210 /* XHContact.h */; };
+		AB44D41B192D8BB50069A210 /* XHContact.h in Headers */ = {isa = PBXBuildFile; fileRef = AB44D419192D8BB50069A210 /* XHContact.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB44D41C192D8BB50069A210 /* XHContact.m in Sources */ = {isa = PBXBuildFile; fileRef = AB44D41A192D8BB50069A210 /* XHContact.m */; };
 		AB44D41D192D8BB50069A210 /* XHContact.m in Sources */ = {isa = PBXBuildFile; fileRef = AB44D41A192D8BB50069A210 /* XHContact.m */; };
 		AB79A20D192C0A6400A9B951 /* XHPathCover.h in Headers */ = {isa = PBXBuildFile; fileRef = AB79A207192C0A6400A9B951 /* XHPathCover.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -714,6 +717,8 @@
 		7D13FC46192C4F4000A23413 /* XHViewState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHViewState.m; sourceTree = "<group>"; };
 		7D13FC47192C4F4000A23413 /* XHZoomingImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHZoomingImageView.h; sourceTree = "<group>"; };
 		7D13FC48192C4F4000A23413 /* XHZoomingImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHZoomingImageView.m; sourceTree = "<group>"; };
+		7D149FF8192DEB5D004B4D3B /* XHContactTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHContactTableViewCell.h; sourceTree = "<group>"; };
+		7D149FF9192DEB5D004B4D3B /* XHContactTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHContactTableViewCell.m; sourceTree = "<group>"; };
 		7D23E40D192C58E300B717B7 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		7D23E40F192C58F000B717B7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		7D23E411192C590900B717B7 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
@@ -986,6 +991,7 @@
 				746C89141917F691007F9A5E /* MessageContentViews */,
 				746C891F1917F691007F9A5E /* MessageInputView */,
 				746C89241917F691007F9A5E /* MessageMenuViews */,
+				7D149FF7192DEB49004B4D3B /* ContactViews */,
 				74C3E7CE1929191E0053F4E1 /* AlbumContentViews */,
 			);
 			path = Views;
@@ -1610,6 +1616,15 @@
 			path = XHImageViewer;
 			sourceTree = "<group>";
 		};
+		7D149FF7192DEB49004B4D3B /* ContactViews */ = {
+			isa = PBXGroup;
+			children = (
+				7D149FF8192DEB5D004B4D3B /* XHContactTableViewCell.h */,
+				7D149FF9192DEB5D004B4D3B /* XHContactTableViewCell.m */,
+			);
+			path = ContactViews;
+			sourceTree = "<group>";
+		};
 		AB02A9F2192D8DA9004AA23D /* XHBaseSearchTableViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -1696,12 +1711,10 @@
 				74E5EAC71924FFBE0084BCFA /* NSMutableAttributedString+Helper.h in Headers */,
 				74901A3F191D3B1C0049AFF9 /* XHProfileTableViewController.h in Headers */,
 				74180C14190F450400A35C82 /* XHMessage.h in Headers */,
-				AB44D41B192D8BB50069A210 /* XHContact.h in Headers */,
 				74E9003819278F6700D37C81 /* XHDiscoverTableViewController.h in Headers */,
 				74E900771927A0E900D37C81 /* XHAlbumTableViewController.h in Headers */,
 				74C3E7D1192919360053F4E1 /* XHAlbumTableViewCell.h in Headers */,
 				74E9003319278F5C00D37C81 /* XHContactTableViewController.h in Headers */,
-				AB02A9F5192D8DC5004AA23D /* XHBaseSearchTableViewController.h in Headers */,
 				74E900811927A10200D37C81 /* XHLocationServiceTableViewController.h in Headers */,
 				74C3E7DB19291A1A0053F4E1 /* XHAlbum.h in Headers */,
 				74E9008B1927A11800D37C81 /* XHQRCodeViewController.h in Headers */,
@@ -1728,6 +1741,9 @@
 				7D13FC52192C4F4000A23413 /* XHCacheManager.h in Headers */,
 				7D13FC58192C4F4000A23413 /* XHImageViewer.h in Headers */,
 				7D13FC4F192C4F4000A23413 /* UIImageView+XHURLDownload.h in Headers */,
+				7D149FFA192DEB5D004B4D3B /* XHContactTableViewCell.h in Headers */,
+				AB44D41B192D8BB50069A210 /* XHContact.h in Headers */,
+				AB02A9F5192D8DC5004AA23D /* XHBaseSearchTableViewController.h in Headers */,
 				AB439973192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.h in Headers */,
 				AB79A210192C0A6400A9B951 /* XHSoundManager.h in Headers */,
 				749019B4191D315A0049AFF9 /* XHMessageVideoConverPhotoFactory.h in Headers */,
@@ -2078,6 +2094,7 @@
 				74E5EAF61924FFBE0084BCFA /* SETextView.m in Sources */,
 				740660CF1914E1F400E1CE95 /* XHEmotionManager.m in Sources */,
 				74E9003A19278F6700D37C81 /* XHDiscoverTableViewController.m in Sources */,
+				7D149FFC192DEB5D004B4D3B /* XHContactTableViewCell.m in Sources */,
 				740660A91913552800E1CE95 /* UIImage+XHAnimatedFaceGif.m in Sources */,
 				74585F40191B999B00F5E8C8 /* XHLocationHelper.m in Sources */,
 				AB44D41D192D8BB50069A210 /* XHContact.m in Sources */,
@@ -2159,6 +2176,7 @@
 				74E900821927A10200D37C81 /* XHLocationServiceTableViewController.m in Sources */,
 				740660CE1914E1F400E1CE95 /* XHEmotionManager.m in Sources */,
 				74585F46191C8B5700F5E8C8 /* UIView+XHNetworkImage.m in Sources */,
+				7D149FFB192DEB5D004B4D3B /* XHContactTableViewCell.m in Sources */,
 				7D13FC53192C4F4000A23413 /* XHCacheManager.m in Sources */,
 				74585FFE191D10CC00F5E8C8 /* XHAnnotation.m in Sources */,
 				746C89361917F691007F9A5E /* XHMessageDisplayTextView.m in Sources */,

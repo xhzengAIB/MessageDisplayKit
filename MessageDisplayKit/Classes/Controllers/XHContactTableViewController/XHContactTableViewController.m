@@ -9,7 +9,7 @@
 #import "XHContactTableViewController.h"
 
 #import "XHStoreManager.h"
-#import "XHContact.h"
+#import "XHContactTableViewCell.h"
 
 @interface XHContactTableViewController ()
 
@@ -51,10 +51,10 @@
 #pragma mark - UITableView DataSource
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *cellIdentifier = @"cellIdentifier";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    static NSString *cellIdentifier = @"contactTableViewCellIdentifier";
+    XHContactTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        cell = [[XHContactTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     NSInteger section = indexPath.section;
     NSInteger row = indexPath.row;
@@ -65,29 +65,29 @@
     
     // 判断是否是搜索tableView
     if (tableView == self.searchDisplayController.searchResultsTableView) {
+        // 获取联系人数组
         contacts = self.filteredDataSource;
         
+        // 判断数组越界问题
         if (row < contacts.count) {
             contact = contacts[row];
             
             if ([self validataWithContact:contact]) {
-                NSMutableAttributedString *attributedTitle = [[NSMutableAttributedString alloc] initWithString:contact.contactName attributes:@{NSForegroundColorAttributeName: [UIColor colorWithWhite:0.785 alpha:1.000], NSFontAttributeName:[UIFont preferredFontForTextStyle:UIFontTextStyleBody]}];
-                [attributedTitle addAttribute:NSForegroundColorAttributeName
-                                        value:[UIColor colorWithRed:0.122 green:0.475 blue:0.992 alpha:1.000]
-                                        range:[attributedTitle.string.lowercaseString rangeOfString:self.searchDisplayController.searchBar.text.lowercaseString]];
-                
-                cell.textLabel.attributedText = attributedTitle;
+                [cell configureContact:contact inContactType:kXHFilterType searchBarText:[self getSearchBarText]];
             }
         }
     } else {
+        
         // 默认通信录的tableView
         if (section < self.dataSource.count) {
+            // 获取联系人数组
             contacts = self.dataSource[section];
             
+            // 判断数组越界问题
             if (row < [contacts count]) {
                 contact = contacts[row];
                 if ([self validataWithContact:contact]) {
-                    cell.textLabel.text = contact.contactName;
+                    [cell configureContact:contact inContactType:kXHNormalType searchBarText:nil];
                 }
             }
         }
