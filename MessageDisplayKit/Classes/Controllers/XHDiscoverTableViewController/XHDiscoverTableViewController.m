@@ -133,6 +133,9 @@
             }
             break;
         }
+        case 3:
+            [self pushNewViewController:[[XHMoreGameTableViewController alloc] init]];
+            break;
         default:
             break;
     }
