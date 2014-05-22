@@ -8,11 +8,19 @@
 
 #import "XHProfileTableViewController.h"
 
+#import "XHStoreManager.h"
+
 @interface XHProfileTableViewController ()
 
 @end
 
 @implementation XHProfileTableViewController
+
+#pragma mark - DataSource
+
+- (void)loadDataSource {
+    self.dataSource = [[XHStoreManager shareStoreManager] getProfileConfigureArray];
+}
 
 #pragma Life Cycle
 
@@ -27,6 +35,65 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - UITableView DataSource
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *cellIdentifier = @"cellIdentifier";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    
+    NSInteger row = indexPath.row;
+    NSInteger section = indexPath.section;
+    
+    UITableViewCellStyle currentStyle;
+    
+    NSString *subtitle;
+    
+    NSMutableDictionary *sectionDictionary = self.dataSource[section][row];
+    if (!section && !row) {
+        currentStyle = UITableViewCellStyleSubtitle;
+        subtitle = [sectionDictionary valueForKey:@"WeChatNumber"];
+    } else {
+        currentStyle = UITableViewCellStyleDefault;
+        
+    }
+    
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:currentStyle reuseIdentifier:cellIdentifier];
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }
+    
+    NSString *title = [sectionDictionary valueForKey:@"title"];
+    NSString *imageName = [sectionDictionary valueForKey:@"image"];
+    
+    if (title) {
+        cell.textLabel.text = title;
+    }
+    
+    if (subtitle) {
+        cell.detailTextLabel.text = subtitle;
+    }
+    
+    if (imageName) {
+        cell.imageView.image = [UIImage imageNamed:imageName];
+    }
+    
+    return cell;
+}
+
+#pragma mark - UITableView Delegate
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (!indexPath.section && !indexPath.row) {
+        return 100;
+    } else {
+        return 44;
+    }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end

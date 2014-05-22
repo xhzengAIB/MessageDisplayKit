@@ -18,4 +18,6 @@
 
 - (NSMutableArray *)getAlbumConfigureArray;
 
+- (NSMutableArray *)getProfileConfigureArray;
+
 @end

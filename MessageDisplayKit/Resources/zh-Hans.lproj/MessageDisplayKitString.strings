@@ -14,7 +14,6 @@
 "Photo" = "图片";
 "TextDetail" = "文本消息";
 "Video" = "视频";
-"Profile" = "个人信息";
 "News" = "发现";
 "Contact" = "联系人";
 "Chat" = "聊天";
@@ -26,3 +25,5 @@
 "Shake" = "摇一摇";
 "Scanning" = "扫一扫";
 "Gamge" = "游戏";
+"Profile" = "我";
+"Profile" = "Profile";

@@ -36,4 +36,9 @@
  */
 - (void)configuraSectionIndexBackgroundColorWithTableView:(UITableView *)tableView;
 
+/**
+ *  加载本地或者网络数据源
+ */
+- (void)loadDataSource;
+
 @end

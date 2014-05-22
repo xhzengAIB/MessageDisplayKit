@@ -26,15 +26,24 @@
 
 @implementation XHContactTableViewController
 
+#pragma mark - DataSource
+
+- (void)loadDataSource {
+    self.sectionIndexTitles = [UILocalizedIndexedCollation.currentCollation sectionIndexTitles];
+    self.dataSource = [[XHStoreManager shareStoreManager] getContactConfigureArray];
+}
+
 #pragma mark - Life Cycle
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self loadDataSource];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.tableView.sectionIndexColor = [UIColor colorWithRed:0.122 green:0.475 blue:0.992 alpha:1.000];
-    
-    self.sectionIndexTitles = [UILocalizedIndexedCollation.currentCollation sectionIndexTitles];
-    self.dataSource = [[XHStoreManager shareStoreManager] getContactConfigureArray];
 }
 
 - (void)didReceiveMemoryWarning {

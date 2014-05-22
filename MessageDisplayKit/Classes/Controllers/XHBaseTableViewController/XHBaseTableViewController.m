@@ -46,6 +46,10 @@
     }
 }
 
+- (void)loadDataSource {
+    // subClasse
+}
+
 #pragma mark - Propertys
 
 - (UITableView *)tableView {

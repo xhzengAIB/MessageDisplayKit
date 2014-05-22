@@ -27,29 +27,9 @@
 
 - (void)loadDataSource {
     self.dataSource = [[XHStoreManager shareStoreManager] getDiscoverConfigureArray];
-    
-    
 }
 
 #pragma mark - Life Cycle
-
-- (id)init {
-    self = [super init];
-    if (self) {
-        self.tableViewStyle = UITableViewStyleGrouped;
-    }
-    return self;
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    if (!self.dataSource.count)
-        [self loadDataSource];
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -64,14 +44,6 @@
 }
 
 #pragma mark - UITableView DataSource
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return self.dataSource.count;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.dataSource[section] count];
-}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *cellIdentifier = @"cellIdentifier";

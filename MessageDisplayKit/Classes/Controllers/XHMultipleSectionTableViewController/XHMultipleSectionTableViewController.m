@@ -16,6 +16,20 @@
 
 #pragma mark - Life Cycle
 
+- (id)init {
+    self = [super init];
+    if (self) {
+        self.tableViewStyle = UITableViewStyleGrouped;
+    }
+    return self;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    if (!self.dataSource.count)
+        [self loadDataSource];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -26,6 +40,16 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - UITableView DataSource
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return self.dataSource.count;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [self.dataSource[section] count];
 }
 
 #pragma markr - UITableView Delegate

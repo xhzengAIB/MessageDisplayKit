@@ -159,4 +159,46 @@
     return albumConfigureArray;
 }
 
+- (NSMutableArray *)getProfileConfigureArray {
+    NSMutableArray *profiles = [[NSMutableArray alloc] initWithCapacity:1];
+    
+    NSString *titleKey = @"title";
+    NSString *imageKey = @"image";
+    
+    NSMutableDictionary *userInfoDictionary = [[NSMutableDictionary alloc] initWithObjectsAndKeys:@"Jack", titleKey, @"15915895880", @"WeChatNumber", @"MeIcon", imageKey, nil];
+    [profiles addObject:@[userInfoDictionary]];
+    
+    NSMutableArray *rows = [[NSMutableArray alloc] initWithCapacity:1];
+    for (int i = 0; i < 3; i ++) {
+        NSString *title;
+        NSString *imageName;
+        switch (i) {
+            case 0:
+                title = @"我的相册";
+                imageName = @"MoreMyAlbum";
+                break;
+            case 1:
+                title = @"我的收藏";
+                imageName = @"MoreMyFavorites";
+                break;
+            case 2:
+                title = @"我的银行卡";
+                imageName = @"MoreMyBankCard";
+                break;
+            default:
+                break;
+        }
+        
+        NSMutableDictionary *sectionDictionary = [[NSMutableDictionary alloc] initWithObjectsAndKeys:title, titleKey, imageName, imageKey, nil];
+        [rows addObject:sectionDictionary];
+    }
+    [profiles addObject:rows];
+    
+    [profiles addObject:@[[[NSMutableDictionary alloc] initWithObjectsAndKeys:@"表情", titleKey, @"MoreExpressionShops", imageKey, nil]]];
+    
+    [profiles addObject:@[[[NSMutableDictionary alloc] initWithObjectsAndKeys:@"设置", titleKey, @"MoreSetting", imageKey, nil]]];
+    
+    return profiles;
+}
+
 @end
