@@ -303,24 +303,6 @@
 		74E9006C1927940000D37C81 /* tabbarBkg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74E9005B1927940000D37C81 /* tabbarBkg@2x.png */; };
 		74E9006D1927940000D37C81 /* WeChat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74E9005C1927940000D37C81 /* WeChat@2x.png */; };
 		74E9006E1927940000D37C81 /* TableViewBackgroundImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74E9005D1927940000D37C81 /* TableViewBackgroundImage@2x.png */; };
-		74E900771927A0E900D37C81 /* XHAlbumTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 74E900751927A0E900D37C81 /* XHAlbumTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		74E900781927A0E900D37C81 /* XHAlbumTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E900761927A0E900D37C81 /* XHAlbumTableViewController.m */; };
-		74E900791927A0E900D37C81 /* XHAlbumTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E900761927A0E900D37C81 /* XHAlbumTableViewController.m */; };
-		74E9007C1927A0F500D37C81 /* XHBottleViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 74E9007A1927A0F500D37C81 /* XHBottleViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		74E9007D1927A0F500D37C81 /* XHBottleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E9007B1927A0F500D37C81 /* XHBottleViewController.m */; };
-		74E9007E1927A0F500D37C81 /* XHBottleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E9007B1927A0F500D37C81 /* XHBottleViewController.m */; };
-		74E900811927A10200D37C81 /* XHLocationServiceTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 74E9007F1927A10200D37C81 /* XHLocationServiceTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		74E900821927A10200D37C81 /* XHLocationServiceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E900801927A10200D37C81 /* XHLocationServiceTableViewController.m */; };
-		74E900831927A10200D37C81 /* XHLocationServiceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E900801927A10200D37C81 /* XHLocationServiceTableViewController.m */; };
-		74E900861927A10C00D37C81 /* XHMoreGameTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 74E900841927A10C00D37C81 /* XHMoreGameTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		74E900871927A10C00D37C81 /* XHMoreGameTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E900851927A10C00D37C81 /* XHMoreGameTableViewController.m */; };
-		74E900881927A10C00D37C81 /* XHMoreGameTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E900851927A10C00D37C81 /* XHMoreGameTableViewController.m */; };
-		74E9008B1927A11800D37C81 /* XHQRCodeViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 74E900891927A11800D37C81 /* XHQRCodeViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		74E9008C1927A11800D37C81 /* XHQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E9008A1927A11800D37C81 /* XHQRCodeViewController.m */; };
-		74E9008D1927A11800D37C81 /* XHQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E9008A1927A11800D37C81 /* XHQRCodeViewController.m */; };
-		74E900901927A12100D37C81 /* XHShakeViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 74E9008E1927A12100D37C81 /* XHShakeViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		74E900911927A12100D37C81 /* XHShakeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E9008F1927A12100D37C81 /* XHShakeViewController.m */; };
-		74E900921927A12100D37C81 /* XHShakeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E9008F1927A12100D37C81 /* XHShakeViewController.m */; };
 		74E900981927A81500D37C81 /* bottleButtonFish@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74E900941927A81500D37C81 /* bottleButtonFish@2x.png */; };
 		74E900991927A81500D37C81 /* bottleButtonMine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74E900951927A81500D37C81 /* bottleButtonMine@2x.png */; };
 		74E9009A1927A81500D37C81 /* bottleButtonThrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74E900961927A81500D37C81 /* bottleButtonThrow@2x.png */; };
@@ -381,6 +363,24 @@
 		AB02A9F5192D8DC5004AA23D /* XHBaseSearchTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = AB02A9F3192D8DC5004AA23D /* XHBaseSearchTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB02A9F6192D8DC5004AA23D /* XHBaseSearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB02A9F4192D8DC5004AA23D /* XHBaseSearchTableViewController.m */; };
 		AB02A9F7192D8DC5004AA23D /* XHBaseSearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB02A9F4192D8DC5004AA23D /* XHBaseSearchTableViewController.m */; };
+		AB372902192EC62C0084D7B5 /* XHAlbumTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = AB3728F1192EC62C0084D7B5 /* XHAlbumTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB372903192EC62C0084D7B5 /* XHAlbumTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3728F2192EC62C0084D7B5 /* XHAlbumTableViewController.m */; };
+		AB372904192EC62C0084D7B5 /* XHAlbumTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3728F2192EC62C0084D7B5 /* XHAlbumTableViewController.m */; };
+		AB372905192EC62C0084D7B5 /* XHBottleViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = AB3728F4192EC62C0084D7B5 /* XHBottleViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB372906192EC62C0084D7B5 /* XHBottleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3728F5192EC62C0084D7B5 /* XHBottleViewController.m */; };
+		AB372907192EC62C0084D7B5 /* XHBottleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3728F5192EC62C0084D7B5 /* XHBottleViewController.m */; };
+		AB372908192EC62C0084D7B5 /* XHLocationServiceTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = AB3728F7192EC62C0084D7B5 /* XHLocationServiceTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB372909192EC62C0084D7B5 /* XHLocationServiceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3728F8192EC62C0084D7B5 /* XHLocationServiceTableViewController.m */; };
+		AB37290A192EC62C0084D7B5 /* XHLocationServiceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3728F8192EC62C0084D7B5 /* XHLocationServiceTableViewController.m */; };
+		AB37290B192EC62C0084D7B5 /* XHMoreGameTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = AB3728FA192EC62C0084D7B5 /* XHMoreGameTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB37290C192EC62C0084D7B5 /* XHMoreGameTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3728FB192EC62C0084D7B5 /* XHMoreGameTableViewController.m */; };
+		AB37290D192EC62C0084D7B5 /* XHMoreGameTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3728FB192EC62C0084D7B5 /* XHMoreGameTableViewController.m */; };
+		AB37290E192EC62C0084D7B5 /* XHQRCodeViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = AB3728FD192EC62C0084D7B5 /* XHQRCodeViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB37290F192EC62C0084D7B5 /* XHQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3728FE192EC62C0084D7B5 /* XHQRCodeViewController.m */; };
+		AB372910192EC62C0084D7B5 /* XHQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3728FE192EC62C0084D7B5 /* XHQRCodeViewController.m */; };
+		AB372911192EC62C0084D7B5 /* XHShakeViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = AB372900192EC62C0084D7B5 /* XHShakeViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB372912192EC62C0084D7B5 /* XHShakeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB372901192EC62C0084D7B5 /* XHShakeViewController.m */; };
+		AB372913192EC62C0084D7B5 /* XHShakeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB372901192EC62C0084D7B5 /* XHShakeViewController.m */; };
 		AB439973192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = AB439971192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB439974192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = AB439972192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.m */; };
 		AB439975192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = AB439972192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.m */; };
@@ -696,18 +696,6 @@
 		74E9005B1927940000D37C81 /* tabbarBkg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbarBkg@2x.png"; sourceTree = "<group>"; };
 		74E9005C1927940000D37C81 /* WeChat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WeChat@2x.png"; sourceTree = "<group>"; };
 		74E9005D1927940000D37C81 /* TableViewBackgroundImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TableViewBackgroundImage@2x.png"; sourceTree = "<group>"; };
-		74E900751927A0E900D37C81 /* XHAlbumTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHAlbumTableViewController.h; sourceTree = "<group>"; };
-		74E900761927A0E900D37C81 /* XHAlbumTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHAlbumTableViewController.m; sourceTree = "<group>"; };
-		74E9007A1927A0F500D37C81 /* XHBottleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHBottleViewController.h; sourceTree = "<group>"; };
-		74E9007B1927A0F500D37C81 /* XHBottleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHBottleViewController.m; sourceTree = "<group>"; };
-		74E9007F1927A10200D37C81 /* XHLocationServiceTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLocationServiceTableViewController.h; sourceTree = "<group>"; };
-		74E900801927A10200D37C81 /* XHLocationServiceTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHLocationServiceTableViewController.m; sourceTree = "<group>"; };
-		74E900841927A10C00D37C81 /* XHMoreGameTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMoreGameTableViewController.h; sourceTree = "<group>"; };
-		74E900851927A10C00D37C81 /* XHMoreGameTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMoreGameTableViewController.m; sourceTree = "<group>"; };
-		74E900891927A11800D37C81 /* XHQRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHQRCodeViewController.h; sourceTree = "<group>"; };
-		74E9008A1927A11800D37C81 /* XHQRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHQRCodeViewController.m; sourceTree = "<group>"; };
-		74E9008E1927A12100D37C81 /* XHShakeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHShakeViewController.h; sourceTree = "<group>"; };
-		74E9008F1927A12100D37C81 /* XHShakeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHShakeViewController.m; sourceTree = "<group>"; };
 		74E900941927A81500D37C81 /* bottleButtonFish@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bottleButtonFish@2x.png"; sourceTree = "<group>"; };
 		74E900951927A81500D37C81 /* bottleButtonMine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bottleButtonMine@2x.png"; sourceTree = "<group>"; };
 		74E900961927A81500D37C81 /* bottleButtonThrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bottleButtonThrow@2x.png"; sourceTree = "<group>"; };
@@ -757,6 +745,18 @@
 		7D23E417192C594800B717B7 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		AB02A9F3192D8DC5004AA23D /* XHBaseSearchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHBaseSearchTableViewController.h; sourceTree = "<group>"; };
 		AB02A9F4192D8DC5004AA23D /* XHBaseSearchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHBaseSearchTableViewController.m; sourceTree = "<group>"; };
+		AB3728F1192EC62C0084D7B5 /* XHAlbumTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHAlbumTableViewController.h; sourceTree = "<group>"; };
+		AB3728F2192EC62C0084D7B5 /* XHAlbumTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHAlbumTableViewController.m; sourceTree = "<group>"; };
+		AB3728F4192EC62C0084D7B5 /* XHBottleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHBottleViewController.h; sourceTree = "<group>"; };
+		AB3728F5192EC62C0084D7B5 /* XHBottleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHBottleViewController.m; sourceTree = "<group>"; };
+		AB3728F7192EC62C0084D7B5 /* XHLocationServiceTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLocationServiceTableViewController.h; sourceTree = "<group>"; };
+		AB3728F8192EC62C0084D7B5 /* XHLocationServiceTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHLocationServiceTableViewController.m; sourceTree = "<group>"; };
+		AB3728FA192EC62C0084D7B5 /* XHMoreGameTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMoreGameTableViewController.h; sourceTree = "<group>"; };
+		AB3728FB192EC62C0084D7B5 /* XHMoreGameTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMoreGameTableViewController.m; sourceTree = "<group>"; };
+		AB3728FD192EC62C0084D7B5 /* XHQRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHQRCodeViewController.h; sourceTree = "<group>"; };
+		AB3728FE192EC62C0084D7B5 /* XHQRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHQRCodeViewController.m; sourceTree = "<group>"; };
+		AB372900192EC62C0084D7B5 /* XHShakeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHShakeViewController.h; sourceTree = "<group>"; };
+		AB372901192EC62C0084D7B5 /* XHShakeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHShakeViewController.m; sourceTree = "<group>"; };
 		AB439971192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHAlbumCollectionViewFlowLayout.h; sourceTree = "<group>"; };
 		AB439972192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHAlbumCollectionViewFlowLayout.m; sourceTree = "<group>"; };
 		AB44D419192D8BB50069A210 /* XHContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHContact.h; sourceTree = "<group>"; };
@@ -1104,12 +1104,6 @@
 				AB8ACCE4192EB09700FA1C80 /* XHMultipleSectionTableViewController */,
 				74E9002F19278F5200D37C81 /* XHContactTableViewController */,
 				74E9003019278F5200D37C81 /* XHDiscoverTableViewController */,
-				74E9006F1927A0DE00D37C81 /* XHAlbumTableViewController */,
-				74E900731927A0DE00D37C81 /* XHQRCodeViewController */,
-				74E900741927A0DE00D37C81 /* XHShakeViewController */,
-				74E900711927A0DE00D37C81 /* XHLocationServiceTableViewController */,
-				74E900701927A0DE00D37C81 /* XHBottleViewController */,
-				74E900721927A0DE00D37C81 /* XHMoreGameTableViewController */,
 				74901A3C191D3B090049AFF9 /* XHProfileTableViewController */,
 				746C89581917F7B4007F9A5E /* XHMessageTableViewController */,
 				746C89541917F7B4007F9A5E /* XHDisplayEmotionViewController */,
@@ -1510,6 +1504,12 @@
 			children = (
 				74E9003619278F6700D37C81 /* XHDiscoverTableViewController.h */,
 				74E9003719278F6700D37C81 /* XHDiscoverTableViewController.m */,
+				AB3728F0192EC62C0084D7B5 /* XHAlbumTableViewController */,
+				AB3728F3192EC62C0084D7B5 /* XHBottleViewController */,
+				AB3728F6192EC62C0084D7B5 /* XHLocationServiceTableViewController */,
+				AB3728F9192EC62C0084D7B5 /* XHMoreGameTableViewController */,
+				AB3728FC192EC62C0084D7B5 /* XHQRCodeViewController */,
+				AB3728FF192EC62C0084D7B5 /* XHShakeViewController */,
 			);
 			path = XHDiscoverTableViewController;
 			sourceTree = "<group>";
@@ -1556,60 +1556,6 @@
 				74E9005C1927940000D37C81 /* WeChat@2x.png */,
 			);
 			path = TabbarImages;
-			sourceTree = "<group>";
-		};
-		74E9006F1927A0DE00D37C81 /* XHAlbumTableViewController */ = {
-			isa = PBXGroup;
-			children = (
-				74E900751927A0E900D37C81 /* XHAlbumTableViewController.h */,
-				74E900761927A0E900D37C81 /* XHAlbumTableViewController.m */,
-			);
-			path = XHAlbumTableViewController;
-			sourceTree = "<group>";
-		};
-		74E900701927A0DE00D37C81 /* XHBottleViewController */ = {
-			isa = PBXGroup;
-			children = (
-				74E9007A1927A0F500D37C81 /* XHBottleViewController.h */,
-				74E9007B1927A0F500D37C81 /* XHBottleViewController.m */,
-			);
-			path = XHBottleViewController;
-			sourceTree = "<group>";
-		};
-		74E900711927A0DE00D37C81 /* XHLocationServiceTableViewController */ = {
-			isa = PBXGroup;
-			children = (
-				74E9007F1927A10200D37C81 /* XHLocationServiceTableViewController.h */,
-				74E900801927A10200D37C81 /* XHLocationServiceTableViewController.m */,
-			);
-			path = XHLocationServiceTableViewController;
-			sourceTree = "<group>";
-		};
-		74E900721927A0DE00D37C81 /* XHMoreGameTableViewController */ = {
-			isa = PBXGroup;
-			children = (
-				74E900841927A10C00D37C81 /* XHMoreGameTableViewController.h */,
-				74E900851927A10C00D37C81 /* XHMoreGameTableViewController.m */,
-			);
-			path = XHMoreGameTableViewController;
-			sourceTree = "<group>";
-		};
-		74E900731927A0DE00D37C81 /* XHQRCodeViewController */ = {
-			isa = PBXGroup;
-			children = (
-				74E900891927A11800D37C81 /* XHQRCodeViewController.h */,
-				74E9008A1927A11800D37C81 /* XHQRCodeViewController.m */,
-			);
-			path = XHQRCodeViewController;
-			sourceTree = "<group>";
-		};
-		74E900741927A0DE00D37C81 /* XHShakeViewController */ = {
-			isa = PBXGroup;
-			children = (
-				74E9008E1927A12100D37C81 /* XHShakeViewController.h */,
-				74E9008F1927A12100D37C81 /* XHShakeViewController.m */,
-			);
-			path = XHShakeViewController;
 			sourceTree = "<group>";
 		};
 		74E900931927A81500D37C81 /* BottleImages */ = {
@@ -1691,6 +1637,60 @@
 				AB02A9F4192D8DC5004AA23D /* XHBaseSearchTableViewController.m */,
 			);
 			path = XHBaseSearchTableViewController;
+			sourceTree = "<group>";
+		};
+		AB3728F0192EC62C0084D7B5 /* XHAlbumTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AB3728F1192EC62C0084D7B5 /* XHAlbumTableViewController.h */,
+				AB3728F2192EC62C0084D7B5 /* XHAlbumTableViewController.m */,
+			);
+			path = XHAlbumTableViewController;
+			sourceTree = "<group>";
+		};
+		AB3728F3192EC62C0084D7B5 /* XHBottleViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AB3728F4192EC62C0084D7B5 /* XHBottleViewController.h */,
+				AB3728F5192EC62C0084D7B5 /* XHBottleViewController.m */,
+			);
+			path = XHBottleViewController;
+			sourceTree = "<group>";
+		};
+		AB3728F6192EC62C0084D7B5 /* XHLocationServiceTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AB3728F7192EC62C0084D7B5 /* XHLocationServiceTableViewController.h */,
+				AB3728F8192EC62C0084D7B5 /* XHLocationServiceTableViewController.m */,
+			);
+			path = XHLocationServiceTableViewController;
+			sourceTree = "<group>";
+		};
+		AB3728F9192EC62C0084D7B5 /* XHMoreGameTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AB3728FA192EC62C0084D7B5 /* XHMoreGameTableViewController.h */,
+				AB3728FB192EC62C0084D7B5 /* XHMoreGameTableViewController.m */,
+			);
+			path = XHMoreGameTableViewController;
+			sourceTree = "<group>";
+		};
+		AB3728FC192EC62C0084D7B5 /* XHQRCodeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AB3728FD192EC62C0084D7B5 /* XHQRCodeViewController.h */,
+				AB3728FE192EC62C0084D7B5 /* XHQRCodeViewController.m */,
+			);
+			path = XHQRCodeViewController;
+			sourceTree = "<group>";
+		};
+		AB3728FF192EC62C0084D7B5 /* XHShakeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AB372900192EC62C0084D7B5 /* XHShakeViewController.h */,
+				AB372901192EC62C0084D7B5 /* XHShakeViewController.m */,
+			);
+			path = XHShakeViewController;
 			sourceTree = "<group>";
 		};
 		AB79A206192C0A6400A9B951 /* XHPathCover */ = {
@@ -1846,16 +1846,10 @@
 				74901A3F191D3B1C0049AFF9 /* XHProfileTableViewController.h in Headers */,
 				74180C14190F450400A35C82 /* XHMessage.h in Headers */,
 				74E9003819278F6700D37C81 /* XHDiscoverTableViewController.h in Headers */,
-				74E900771927A0E900D37C81 /* XHAlbumTableViewController.h in Headers */,
 				74C3E7D1192919360053F4E1 /* XHAlbumTableViewCell.h in Headers */,
 				74E9003319278F5C00D37C81 /* XHContactTableViewController.h in Headers */,
-				74E900811927A10200D37C81 /* XHLocationServiceTableViewController.h in Headers */,
 				74C3E7DB19291A1A0053F4E1 /* XHAlbum.h in Headers */,
-				74E9008B1927A11800D37C81 /* XHQRCodeViewController.h in Headers */,
-				74E900901927A12100D37C81 /* XHShakeViewController.h in Headers */,
-				74E900861927A10C00D37C81 /* XHMoreGameTableViewController.h in Headers */,
 				74E900B31928F3D100D37C81 /* XHStoreManager.h in Headers */,
-				74E9007C1927A0F500D37C81 /* XHBottleViewController.h in Headers */,
 				74C3E7D6192919930053F4E1 /* XHAlbumRichTextView.h in Headers */,
 				740660A71913552800E1CE95 /* UIImage+XHAnimatedFaceGif.h in Headers */,
 				74585F3E191B999B00F5E8C8 /* XHLocationHelper.h in Headers */,
@@ -1886,6 +1880,12 @@
 				AB8ACCFC192EBF2100FA1C80 /* XHMoreMyBankCardTableViewController.h in Headers */,
 				AB8ACCF2192EBF0C00FA1C80 /* XHMoreExpressionShopsTableViewController.h in Headers */,
 				AB8ACCF7192EBF1700FA1C80 /* XHMoreMyAlbumTableViewController.h in Headers */,
+				AB372905192EC62C0084D7B5 /* XHBottleViewController.h in Headers */,
+				AB37290B192EC62C0084D7B5 /* XHMoreGameTableViewController.h in Headers */,
+				AB37290E192EC62C0084D7B5 /* XHQRCodeViewController.h in Headers */,
+				AB372908192EC62C0084D7B5 /* XHLocationServiceTableViewController.h in Headers */,
+				AB372911192EC62C0084D7B5 /* XHShakeViewController.h in Headers */,
+				AB372902192EC62C0084D7B5 /* XHAlbumTableViewController.h in Headers */,
 				AB8ACCE7192EB0A400FA1C80 /* XHMultipleSectionTableViewController.h in Headers */,
 				7D14A000192DF30C004B4D3B /* XHUIKitMacro.h in Headers */,
 				7D149FFE192DF2CA004B4D3B /* XHFoundationMacro.h in Headers */,
@@ -2191,10 +2191,10 @@
 				74E5E9971921E90A0084BCFA /* XHVoiceRecordHUD.m in Sources */,
 				74C3E7D8192919930053F4E1 /* XHAlbumRichTextView.m in Sources */,
 				74E5EADB1924FFBE0084BCFA /* SETextAttachment.m in Sources */,
+				AB372907192EC62C0084D7B5 /* XHBottleViewController.m in Sources */,
 				7D13FC54192C4F4000A23413 /* XHCacheManager.m in Sources */,
 				746C894C1917F691007F9A5E /* XHEmotionManagerView.m in Sources */,
 				7D13FC60192C4F4000A23413 /* XHZoomingImageView.m in Sources */,
-				74E900921927A12100D37C81 /* XHShakeViewController.m in Sources */,
 				AB8ACCF4192EBF0C00FA1C80 /* XHMoreExpressionShopsTableViewController.m in Sources */,
 				74585F47191C8B5700F5E8C8 /* UIView+XHNetworkImage.m in Sources */,
 				AB79A20F192C0A6400A9B951 /* XHPathCover.m in Sources */,
@@ -2220,12 +2220,10 @@
 				746C89521917F691007F9A5E /* XHShareMenuView.m in Sources */,
 				AB8ACD0D192EBF3F00FA1C80 /* XHMoreSettingTableViewController.m in Sources */,
 				74E5EAD81924FFBE0084BCFA /* SESelectionGrabber.m in Sources */,
-				74E900881927A10C00D37C81 /* XHMoreGameTableViewController.m in Sources */,
 				74E5EACF1924FFBE0084BCFA /* SEConstants.m in Sources */,
 				7D13FC4E192C4F4000A23413 /* UIImage+Utility.m in Sources */,
 				74180BFE190F44A000A35C82 /* UIScrollView+XHkeyboardControl.m in Sources */,
 				7D13FC51192C4F4000A23413 /* UIImageView+XHURLDownload.m in Sources */,
-				74E900831927A10200D37C81 /* XHLocationServiceTableViewController.m in Sources */,
 				746C893A1917F691007F9A5E /* XHMessageTableView.m in Sources */,
 				7D13FC5A192C4F4000A23413 /* XHImageViewer.m in Sources */,
 				749019B6191D315A0049AFF9 /* XHMessageVideoConverPhotoFactory.m in Sources */,
@@ -2247,26 +2245,28 @@
 				AB8ACCFE192EBF2100FA1C80 /* XHMoreMyBankCardTableViewController.m in Sources */,
 				740660CF1914E1F400E1CE95 /* XHEmotionManager.m in Sources */,
 				74E9003A19278F6700D37C81 /* XHDiscoverTableViewController.m in Sources */,
+				AB372910192EC62C0084D7B5 /* XHQRCodeViewController.m in Sources */,
 				AB8ACD03192EBF2C00FA1C80 /* XHMoreMyFavoritesTableViewController.m in Sources */,
 				7D149FFC192DEB5D004B4D3B /* XHContactTableViewCell.m in Sources */,
 				740660A91913552800E1CE95 /* UIImage+XHAnimatedFaceGif.m in Sources */,
 				74585F40191B999B00F5E8C8 /* XHLocationHelper.m in Sources */,
 				AB44D41D192D8BB50069A210 /* XHContact.m in Sources */,
-				74E9008D1927A11800D37C81 /* XHQRCodeViewController.m in Sources */,
 				7D13FC4B192C4F4000A23413 /* NSString+XHMD5.m in Sources */,
+				AB37290D192EC62C0084D7B5 /* XHMoreGameTableViewController.m in Sources */,
 				74E5EAD51924FFBE0084BCFA /* SELinkText.m in Sources */,
 				746C89341917F691007F9A5E /* XHMessageBubbleView.m in Sources */,
 				746C89621917F7DE007F9A5E /* XHDisplayEmotionViewController.m in Sources */,
+				AB372904192EC62C0084D7B5 /* XHAlbumTableViewController.m in Sources */,
 				74E5EAF31924FFBE0084BCFA /* SETextSelectionView.m in Sources */,
 				74180C00190F44A300A35C82 /* UIImage+XHRounded.m in Sources */,
 				74180BFC190F448E00A35C82 /* XHMessageVoiceFactory.m in Sources */,
 				746C89711917F7FE007F9A5E /* XHDisplayTextViewController.m in Sources */,
 				74E5EACC1924FFBE0084BCFA /* SECompatibility.m in Sources */,
 				74180BFB190F448A00A35C82 /* XHMessageAvatorFactory.m in Sources */,
-				74E9007E1927A0F500D37C81 /* XHBottleViewController.m in Sources */,
-				74E900791927A0E900D37C81 /* XHAlbumTableViewController.m in Sources */,
 				746C895D1917F7B4007F9A5E /* XHMessageTableViewController.m in Sources */,
 				AB79A215192C0A6400A9B951 /* XHWaterDropRefresh.m in Sources */,
+				AB37290A192EC62C0084D7B5 /* XHLocationServiceTableViewController.m in Sources */,
+				AB372913192EC62C0084D7B5 /* XHShakeViewController.m in Sources */,
 				AB79A224192C231C00A9B951 /* XHAlbumPhotoCollectionViewCell.m in Sources */,
 				AB8ACCE9192EB0A400FA1C80 /* XHMultipleSectionTableViewController.m in Sources */,
 				74C3E7DD19291A1A0053F4E1 /* XHAlbum.m in Sources */,
@@ -2304,10 +2304,10 @@
 				746C893C1917F691007F9A5E /* XHMessageTableViewCell.m in Sources */,
 				74E5EAEC1924FFBE0084BCFA /* SETextMagnifierRanged.m in Sources */,
 				AB8ACCF8192EBF1700FA1C80 /* XHMoreMyAlbumTableViewController.m in Sources */,
+				AB37290C192EC62C0084D7B5 /* XHMoreGameTableViewController.m in Sources */,
 				746C89481917F691007F9A5E /* XHEmotionCollectionViewFlowLayout.m in Sources */,
 				7482456B19090C04008EC388 /* XHMessage.m in Sources */,
 				AB439974192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.m in Sources */,
-				74E9008C1927A11800D37C81 /* XHQRCodeViewController.m in Sources */,
 				7482458F19092170008EC388 /* NSString+MessageInputView.m in Sources */,
 				74901A40191D3B1C0049AFF9 /* XHProfileTableViewController.m in Sources */,
 				746C893F1917F691007F9A5E /* XHMessageInputView.m in Sources */,
@@ -2331,36 +2331,34 @@
 				748245151908C730008EC388 /* AppDelegate.m in Sources */,
 				AB44D41C192D8BB50069A210 /* XHContact.m in Sources */,
 				748245971909F33F008EC388 /* XHMessageBubbleFactory.m in Sources */,
-				74E900821927A10200D37C81 /* XHLocationServiceTableViewController.m in Sources */,
 				740660CE1914E1F400E1CE95 /* XHEmotionManager.m in Sources */,
 				74585F46191C8B5700F5E8C8 /* UIView+XHNetworkImage.m in Sources */,
 				AB8ACCE8192EB0A400FA1C80 /* XHMultipleSectionTableViewController.m in Sources */,
 				7D149FFB192DEB5D004B4D3B /* XHContactTableViewCell.m in Sources */,
 				7D13FC53192C4F4000A23413 /* XHCacheManager.m in Sources */,
 				AB8ACD0C192EBF3F00FA1C80 /* XHMoreSettingTableViewController.m in Sources */,
+				AB37290F192EC62C0084D7B5 /* XHQRCodeViewController.m in Sources */,
 				74585FFE191D10CC00F5E8C8 /* XHAnnotation.m in Sources */,
 				746C89361917F691007F9A5E /* XHMessageDisplayTextView.m in Sources */,
+				AB372906192EC62C0084D7B5 /* XHBottleViewController.m in Sources */,
 				74E5EADD1924FFBE0084BCFA /* SETextEditingCaret.m in Sources */,
+				AB372903192EC62C0084D7B5 /* XHAlbumTableViewController.m in Sources */,
 				74E5EACB1924FFBE0084BCFA /* SECompatibility.m in Sources */,
 				74C3E7D7192919930053F4E1 /* XHAlbumRichTextView.m in Sources */,
 				740660BF1914D65600E1CE95 /* XHEmotion.m in Sources */,
 				746C89791917F8B2007F9A5E /* XHBaseNavigationController.m in Sources */,
 				74E5EAD71924FFBE0084BCFA /* SESelectionGrabber.m in Sources */,
 				74E5EAF21924FFBE0084BCFA /* SETextSelectionView.m in Sources */,
-				74E9007D1927A0F500D37C81 /* XHBottleViewController.m in Sources */,
 				746C89421917F691007F9A5E /* XHMessageTextView.m in Sources */,
 				74065FBA19123E1C00E1CE95 /* XHShareMenuItem.m in Sources */,
 				AB79A20E192C0A6400A9B951 /* XHPathCover.m in Sources */,
 				74E5EAE31924FFBE0084BCFA /* SETextInput.m in Sources */,
 				740660A81913552800E1CE95 /* UIImage+XHAnimatedFaceGif.m in Sources */,
-				74E900911927A12100D37C81 /* XHShakeViewController.m in Sources */,
 				746C895C1917F7B4007F9A5E /* XHMessageTableViewController.m in Sources */,
-				74E900871927A10C00D37C81 /* XHMoreGameTableViewController.m in Sources */,
 				7D13FC4A192C4F4000A23413 /* NSString+XHMD5.m in Sources */,
 				74FAB0B9190A81DC005623D0 /* UIImage+XHRounded.m in Sources */,
 				AB79A21E192C22F500A9B951 /* XHBaseCollectionViewCell.m in Sources */,
 				74E9003419278F5C00D37C81 /* XHContactTableViewController.m in Sources */,
-				74E900781927A0E900D37C81 /* XHAlbumTableViewController.m in Sources */,
 				7D13FC56192C4F4000A23413 /* XHFileAttribute.m in Sources */,
 				AB02A9F6192D8DC5004AA23D /* XHBaseSearchTableViewController.m in Sources */,
 				AB79A214192C0A6400A9B951 /* XHWaterDropRefresh.m in Sources */,
@@ -2379,11 +2377,13 @@
 				AB8ACD02192EBF2C00FA1C80 /* XHMoreMyFavoritesTableViewController.m in Sources */,
 				748245111908C730008EC388 /* main.m in Sources */,
 				74E5EAE01924FFBE0084BCFA /* SETextGeometry.m in Sources */,
+				AB372912192EC62C0084D7B5 /* XHShakeViewController.m in Sources */,
 				7482455C190902DA008EC388 /* UIScrollView+XHkeyboardControl.m in Sources */,
 				746C894B1917F691007F9A5E /* XHEmotionManagerView.m in Sources */,
 				74E5E98A1921317B0084BCFA /* XHVoiceRecordHelper.m in Sources */,
 				7D06CA72192B3D9B00DF8C04 /* XHBaseTableViewCell.m in Sources */,
 				7D13FC50192C4F4000A23413 /* UIImageView+XHURLDownload.m in Sources */,
+				AB372909192EC62C0084D7B5 /* XHLocationServiceTableViewController.m in Sources */,
 				74E900B41928F3D100D37C81 /* XHStoreManager.m in Sources */,
 				74C3E7DC19291A1A0053F4E1 /* XHAlbum.m in Sources */,
 				746C89661917F7EA007F9A5E /* XHDisplayLocationViewController.m in Sources */,
