@@ -12,4 +12,6 @@
 
 @property (nonatomic, strong) NSMutableArray *filteredDataSource;
 
+@property (nonatomic, strong) NSArray *sectionIndexTitles;
+
 @end

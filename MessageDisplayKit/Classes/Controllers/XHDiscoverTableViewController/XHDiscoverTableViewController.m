@@ -28,8 +28,7 @@
 - (void)loadDataSource {
     self.dataSource = [[XHStoreManager shareStoreManager] getDiscoverConfigureArray];
     
-    [self.view addSubview:self.tableView];
-    [self configuraTableViewnNormalSeparatorInset];
+    
 }
 
 #pragma mark - Life Cycle
@@ -56,6 +55,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self.view addSubview:self.tableView];
+    [self configuraTableViewnNormalSeparatorInset];
 }
 
 - (void)didReceiveMemoryWarning
