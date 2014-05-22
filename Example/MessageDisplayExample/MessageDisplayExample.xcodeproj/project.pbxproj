@@ -1102,10 +1102,10 @@
 				746C89741917F89A007F9A5E /* XHBaseTableViewController */,
 				AB02A9F2192D8DA9004AA23D /* XHBaseSearchTableViewController */,
 				AB8ACCE4192EB09700FA1C80 /* XHMultipleSectionTableViewController */,
+				746C89581917F7B4007F9A5E /* XHMessageTableViewController */,
 				74E9002F19278F5200D37C81 /* XHContactTableViewController */,
 				74E9003019278F5200D37C81 /* XHDiscoverTableViewController */,
 				74901A3C191D3B090049AFF9 /* XHProfileTableViewController */,
-				746C89581917F7B4007F9A5E /* XHMessageTableViewController */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
