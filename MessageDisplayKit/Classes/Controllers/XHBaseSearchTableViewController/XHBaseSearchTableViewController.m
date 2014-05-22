@@ -17,6 +17,13 @@
 
 @implementation XHBaseSearchTableViewController
 
+- (BOOL)enableForSearchTableView:(UITableView *)tableView {
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        return YES;
+    }
+    return NO;
+}
+
 #pragma mark - Propertys
 
 - (UISearchBar *)aSearchBar {
@@ -55,8 +62,34 @@
 
 #pragma mark - UITableView DataSource
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    if ([self enableForSearchTableView:tableView]) {
+        return 1;
+    }
+    return self.dataSource.count;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    if ([self enableForSearchTableView:tableView]) {
+        return self.filteredDataSource.count;
+    }
+    return [self.dataSource[section] count];
+}
+
 - (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
     return self.sectionIndexTitles;
+}
+
+#pragma mark - UITableView Delegate
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    if ([self enableForSearchTableView:tableView]) {
+        return nil;
+    }
+    BOOL showSection = [[self.dataSource objectAtIndex:section] count] != 0;
+    //only show the section title if there are rows in the section
+    return (showSection) ? [[UILocalizedIndexedCollation.currentCollation sectionTitles] objectAtIndex:section] : nil;
+    
 }
 
 @end
