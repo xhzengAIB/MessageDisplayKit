@@ -409,25 +409,25 @@
 		AB8ACCE1192EB04400FA1C80 /* MoreMyBankCard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB8ACCDC192EB04400FA1C80 /* MoreMyBankCard@2x.png */; };
 		AB8ACCE2192EB04400FA1C80 /* MoreMyFavorites@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB8ACCDD192EB04400FA1C80 /* MoreMyFavorites@2x.png */; };
 		AB8ACCE3192EB04400FA1C80 /* MoreSetting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB8ACCDE192EB04400FA1C80 /* MoreSetting@2x.png */; };
-		AB8ACCE7192EB0A400FA1C80 /* XHMultipleSectionTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = AB8ACCE5192EB0A400FA1C80 /* XHMultipleSectionTableViewController.h */; };
+		AB8ACCE7192EB0A400FA1C80 /* XHMultipleSectionTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = AB8ACCE5192EB0A400FA1C80 /* XHMultipleSectionTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB8ACCE8192EB0A400FA1C80 /* XHMultipleSectionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8ACCE6192EB0A400FA1C80 /* XHMultipleSectionTableViewController.m */; };
 		AB8ACCE9192EB0A400FA1C80 /* XHMultipleSectionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8ACCE6192EB0A400FA1C80 /* XHMultipleSectionTableViewController.m */; };
-		AB8ACCF2192EBF0C00FA1C80 /* XHMoreExpressionShopsTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = AB8ACCF0192EBF0C00FA1C80 /* XHMoreExpressionShopsTableViewController.h */; };
+		AB8ACCF2192EBF0C00FA1C80 /* XHMoreExpressionShopsTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = AB8ACCF0192EBF0C00FA1C80 /* XHMoreExpressionShopsTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB8ACCF3192EBF0C00FA1C80 /* XHMoreExpressionShopsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8ACCF1192EBF0C00FA1C80 /* XHMoreExpressionShopsTableViewController.m */; };
 		AB8ACCF4192EBF0C00FA1C80 /* XHMoreExpressionShopsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8ACCF1192EBF0C00FA1C80 /* XHMoreExpressionShopsTableViewController.m */; };
-		AB8ACCF7192EBF1700FA1C80 /* XHMoreMyAlbumTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = AB8ACCF5192EBF1700FA1C80 /* XHMoreMyAlbumTableViewController.h */; };
+		AB8ACCF7192EBF1700FA1C80 /* XHMoreMyAlbumTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = AB8ACCF5192EBF1700FA1C80 /* XHMoreMyAlbumTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB8ACCF8192EBF1700FA1C80 /* XHMoreMyAlbumTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8ACCF6192EBF1700FA1C80 /* XHMoreMyAlbumTableViewController.m */; };
 		AB8ACCF9192EBF1700FA1C80 /* XHMoreMyAlbumTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8ACCF6192EBF1700FA1C80 /* XHMoreMyAlbumTableViewController.m */; };
-		AB8ACCFC192EBF2100FA1C80 /* XHMoreMyBankCardTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = AB8ACCFA192EBF2100FA1C80 /* XHMoreMyBankCardTableViewController.h */; };
+		AB8ACCFC192EBF2100FA1C80 /* XHMoreMyBankCardTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = AB8ACCFA192EBF2100FA1C80 /* XHMoreMyBankCardTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB8ACCFD192EBF2100FA1C80 /* XHMoreMyBankCardTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8ACCFB192EBF2100FA1C80 /* XHMoreMyBankCardTableViewController.m */; };
 		AB8ACCFE192EBF2100FA1C80 /* XHMoreMyBankCardTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8ACCFB192EBF2100FA1C80 /* XHMoreMyBankCardTableViewController.m */; };
-		AB8ACD01192EBF2C00FA1C80 /* XHMoreMyFavoritesTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = AB8ACCFF192EBF2C00FA1C80 /* XHMoreMyFavoritesTableViewController.h */; };
+		AB8ACD01192EBF2C00FA1C80 /* XHMoreMyFavoritesTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = AB8ACCFF192EBF2C00FA1C80 /* XHMoreMyFavoritesTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB8ACD02192EBF2C00FA1C80 /* XHMoreMyFavoritesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8ACD00192EBF2C00FA1C80 /* XHMoreMyFavoritesTableViewController.m */; };
 		AB8ACD03192EBF2C00FA1C80 /* XHMoreMyFavoritesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8ACD00192EBF2C00FA1C80 /* XHMoreMyFavoritesTableViewController.m */; };
-		AB8ACD06192EBF3600FA1C80 /* XHMoreMyProfileDetailTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = AB8ACD04192EBF3600FA1C80 /* XHMoreMyProfileDetailTableViewController.h */; };
+		AB8ACD06192EBF3600FA1C80 /* XHMoreMyProfileDetailTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = AB8ACD04192EBF3600FA1C80 /* XHMoreMyProfileDetailTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB8ACD07192EBF3600FA1C80 /* XHMoreMyProfileDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8ACD05192EBF3600FA1C80 /* XHMoreMyProfileDetailTableViewController.m */; };
 		AB8ACD08192EBF3600FA1C80 /* XHMoreMyProfileDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8ACD05192EBF3600FA1C80 /* XHMoreMyProfileDetailTableViewController.m */; };
-		AB8ACD0B192EBF3F00FA1C80 /* XHMoreSettingTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = AB8ACD09192EBF3F00FA1C80 /* XHMoreSettingTableViewController.h */; };
+		AB8ACD0B192EBF3F00FA1C80 /* XHMoreSettingTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = AB8ACD09192EBF3F00FA1C80 /* XHMoreSettingTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB8ACD0C192EBF3F00FA1C80 /* XHMoreSettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8ACD0A192EBF3F00FA1C80 /* XHMoreSettingTableViewController.m */; };
 		AB8ACD0D192EBF3F00FA1C80 /* XHMoreSettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8ACD0A192EBF3F00FA1C80 /* XHMoreSettingTableViewController.m */; };
 		ABE87CD4192D6D7F00EC1E49 /* AlbumOperateMore@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABE87CD2192D6D7F00EC1E49 /* AlbumOperateMore@2x.png */; };
@@ -1819,12 +1819,10 @@
 				740660CD1914E1F400E1CE95 /* XHEmotionManager.h in Headers */,
 				740660B41914CA0000E1CE95 /* XHPhotographyHelper.h in Headers */,
 				746C896F1917F7FE007F9A5E /* XHDisplayTextViewController.h in Headers */,
-				AB8ACD0B192EBF3F00FA1C80 /* XHMoreSettingTableViewController.h in Headers */,
 				746C89651917F7EA007F9A5E /* XHDisplayLocationViewController.h in Headers */,
 				746C89871917F8EA007F9A5E /* XHBaseTableViewController.h in Headers */,
 				746C897D1917F8C5007F9A5E /* XHBaseTabBarController.h in Headers */,
 				746C89781917F8B2007F9A5E /* XHBaseNavigationController.h in Headers */,
-				AB8ACD06192EBF3600FA1C80 /* XHMoreMyProfileDetailTableViewController.h in Headers */,
 				746C89601917F7DE007F9A5E /* XHDisplayEmotionViewController.h in Headers */,
 				740660BE1914D65600E1CE95 /* XHEmotion.h in Headers */,
 				74E5E9891921317B0084BCFA /* XHVoiceRecordHelper.h in Headers */,
@@ -1846,12 +1844,10 @@
 				74E5EADC1924FFBE0084BCFA /* SETextEditingCaret.h in Headers */,
 				74E5EAC71924FFBE0084BCFA /* NSMutableAttributedString+Helper.h in Headers */,
 				74901A3F191D3B1C0049AFF9 /* XHProfileTableViewController.h in Headers */,
-				AB8ACD01192EBF2C00FA1C80 /* XHMoreMyFavoritesTableViewController.h in Headers */,
 				74180C14190F450400A35C82 /* XHMessage.h in Headers */,
 				74E9003819278F6700D37C81 /* XHDiscoverTableViewController.h in Headers */,
 				74E900771927A0E900D37C81 /* XHAlbumTableViewController.h in Headers */,
 				74C3E7D1192919360053F4E1 /* XHAlbumTableViewCell.h in Headers */,
-				AB8ACCFC192EBF2100FA1C80 /* XHMoreMyBankCardTableViewController.h in Headers */,
 				74E9003319278F5C00D37C81 /* XHContactTableViewController.h in Headers */,
 				74E900811927A10200D37C81 /* XHLocationServiceTableViewController.h in Headers */,
 				74C3E7DB19291A1A0053F4E1 /* XHAlbum.h in Headers */,
@@ -1866,7 +1862,6 @@
 				74901989191D2D030049AFF9 /* XHDisplayMediaViewController.h in Headers */,
 				74585FFD191D10CC00F5E8C8 /* XHAnnotation.h in Headers */,
 				7D06CA71192B3D9B00DF8C04 /* XHBaseTableViewCell.h in Headers */,
-				AB8ACCF2192EBF0C00FA1C80 /* XHMoreExpressionShopsTableViewController.h in Headers */,
 				74585F45191C8B5700F5E8C8 /* UIView+XHNetworkImage.h in Headers */,
 				AB79A21D192C22F500A9B951 /* XHBaseCollectionViewCell.h in Headers */,
 				AB79A222192C231C00A9B951 /* XHAlbumPhotoCollectionViewCell.h in Headers */,
@@ -1882,12 +1877,17 @@
 				7D13FC4F192C4F4000A23413 /* UIImageView+XHURLDownload.h in Headers */,
 				7D149FFA192DEB5D004B4D3B /* XHContactTableViewCell.h in Headers */,
 				AB44D41B192D8BB50069A210 /* XHContact.h in Headers */,
-				AB8ACCF7192EBF1700FA1C80 /* XHMoreMyAlbumTableViewController.h in Headers */,
 				AB02A9F5192D8DC5004AA23D /* XHBaseSearchTableViewController.h in Headers */,
 				AB439973192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.h in Headers */,
 				AB79A210192C0A6400A9B951 /* XHSoundManager.h in Headers */,
-				7D14A000192DF30C004B4D3B /* XHUIKitMacro.h in Headers */,
+				AB8ACD0B192EBF3F00FA1C80 /* XHMoreSettingTableViewController.h in Headers */,
+				AB8ACD06192EBF3600FA1C80 /* XHMoreMyProfileDetailTableViewController.h in Headers */,
+				AB8ACD01192EBF2C00FA1C80 /* XHMoreMyFavoritesTableViewController.h in Headers */,
+				AB8ACCFC192EBF2100FA1C80 /* XHMoreMyBankCardTableViewController.h in Headers */,
+				AB8ACCF2192EBF0C00FA1C80 /* XHMoreExpressionShopsTableViewController.h in Headers */,
+				AB8ACCF7192EBF1700FA1C80 /* XHMoreMyAlbumTableViewController.h in Headers */,
 				AB8ACCE7192EB0A400FA1C80 /* XHMultipleSectionTableViewController.h in Headers */,
+				7D14A000192DF30C004B4D3B /* XHUIKitMacro.h in Headers */,
 				7D149FFE192DF2CA004B4D3B /* XHFoundationMacro.h in Headers */,
 				749019B4191D315A0049AFF9 /* XHMessageVideoConverPhotoFactory.h in Headers */,
 				74901A45191D4CD30049AFF9 /* XHBaseViewController.h in Headers */,
