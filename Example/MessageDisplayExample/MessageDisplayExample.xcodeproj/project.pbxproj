@@ -373,6 +373,9 @@
 		7D23E414192C590F00B717B7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D23E413192C590F00B717B7 /* AVFoundation.framework */; };
 		7D23E416192C591600B717B7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D23E415192C591600B717B7 /* CoreLocation.framework */; };
 		7D23E418192C594800B717B7 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D23E417192C594800B717B7 /* CoreText.framework */; };
+		AB02A9F5192D8DC5004AA23D /* XHBaseSearchTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = AB02A9F3192D8DC5004AA23D /* XHBaseSearchTableViewController.h */; };
+		AB02A9F6192D8DC5004AA23D /* XHBaseSearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB02A9F4192D8DC5004AA23D /* XHBaseSearchTableViewController.m */; };
+		AB02A9F7192D8DC5004AA23D /* XHBaseSearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB02A9F4192D8DC5004AA23D /* XHBaseSearchTableViewController.m */; };
 		AB439973192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = AB439971192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB439974192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = AB439972192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.m */; };
 		AB439975192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = AB439972192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.m */; };
@@ -717,6 +720,8 @@
 		7D23E413192C590F00B717B7 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		7D23E415192C591600B717B7 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		7D23E417192C594800B717B7 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		AB02A9F3192D8DC5004AA23D /* XHBaseSearchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHBaseSearchTableViewController.h; sourceTree = "<group>"; };
+		AB02A9F4192D8DC5004AA23D /* XHBaseSearchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHBaseSearchTableViewController.m; sourceTree = "<group>"; };
 		AB439971192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHAlbumCollectionViewFlowLayout.h; sourceTree = "<group>"; };
 		AB439972192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHAlbumCollectionViewFlowLayout.m; sourceTree = "<group>"; };
 		AB44D419192D8BB50069A210 /* XHContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHContact.h; sourceTree = "<group>"; };
@@ -1040,6 +1045,7 @@
 				746C89731917F89A007F9A5E /* XHBaseTabBarController */,
 				74901A42191D4CD30049AFF9 /* XHBaseViewController */,
 				746C89741917F89A007F9A5E /* XHBaseTableViewController */,
+				AB02A9F2192D8DA9004AA23D /* XHBaseSearchTableViewController */,
 				74E9002F19278F5200D37C81 /* XHContactTableViewController */,
 				74E9003019278F5200D37C81 /* XHDiscoverTableViewController */,
 				74E9006F1927A0DE00D37C81 /* XHAlbumTableViewController */,
@@ -1604,6 +1610,15 @@
 			path = XHImageViewer;
 			sourceTree = "<group>";
 		};
+		AB02A9F2192D8DA9004AA23D /* XHBaseSearchTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AB02A9F3192D8DC5004AA23D /* XHBaseSearchTableViewController.h */,
+				AB02A9F4192D8DC5004AA23D /* XHBaseSearchTableViewController.m */,
+			);
+			path = XHBaseSearchTableViewController;
+			sourceTree = "<group>";
+		};
 		AB79A206192C0A6400A9B951 /* XHPathCover */ = {
 			isa = PBXGroup;
 			children = (
@@ -1686,6 +1701,7 @@
 				74E900771927A0E900D37C81 /* XHAlbumTableViewController.h in Headers */,
 				74C3E7D1192919360053F4E1 /* XHAlbumTableViewCell.h in Headers */,
 				74E9003319278F5C00D37C81 /* XHContactTableViewController.h in Headers */,
+				AB02A9F5192D8DC5004AA23D /* XHBaseSearchTableViewController.h in Headers */,
 				74E900811927A10200D37C81 /* XHLocationServiceTableViewController.h in Headers */,
 				74C3E7DB19291A1A0053F4E1 /* XHAlbum.h in Headers */,
 				74E9008B1927A11800D37C81 /* XHQRCodeViewController.h in Headers */,
@@ -2029,6 +2045,7 @@
 				7490198B191D2D030049AFF9 /* XHDisplayMediaViewController.m in Sources */,
 				746C89671917F7EA007F9A5E /* XHDisplayLocationViewController.m in Sources */,
 				746C89371917F691007F9A5E /* XHMessageDisplayTextView.m in Sources */,
+				AB02A9F7192D8DC5004AA23D /* XHBaseSearchTableViewController.m in Sources */,
 				746C89891917F8EA007F9A5E /* XHBaseTableViewController.m in Sources */,
 				746C897A1917F8B2007F9A5E /* XHBaseNavigationController.m in Sources */,
 				746C894F1917F691007F9A5E /* XHEmotionSectionBar.m in Sources */,
@@ -2167,6 +2184,7 @@
 				74E9003419278F5C00D37C81 /* XHContactTableViewController.m in Sources */,
 				74E900781927A0E900D37C81 /* XHAlbumTableViewController.m in Sources */,
 				7D13FC56192C4F4000A23413 /* XHFileAttribute.m in Sources */,
+				AB02A9F6192D8DC5004AA23D /* XHBaseSearchTableViewController.m in Sources */,
 				AB79A214192C0A6400A9B951 /* XHWaterDropRefresh.m in Sources */,
 				74E5EAD11924FFBE0084BCFA /* SELineLayout.m in Sources */,
 				7D13FC59192C4F4000A23413 /* XHImageViewer.m in Sources */,
