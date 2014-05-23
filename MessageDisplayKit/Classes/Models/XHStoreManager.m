@@ -201,4 +201,20 @@
     return profiles;
 }
 
+- (NSMutableArray *)getSettingConfigureArray {
+    NSMutableArray *settings = [[NSMutableArray alloc] initWithCapacity:1];
+    
+    NSString *titleKey = @"title";
+    
+    [settings addObject:@[@{titleKey: @"帐号与安全"}]];
+    
+    [settings addObject:@[@{titleKey: @"新消息通知"}, @{titleKey: @"隐私"}, @{titleKey: @"通用"}]];
+    
+    [settings addObject:@[@{titleKey: @"关于微信"}]];
+    
+    [settings addObject:@[@{titleKey: @"退出登录"}]];
+    
+    return settings;
+}
+
 @end

@@ -20,4 +20,6 @@
 
 - (NSMutableArray *)getProfileConfigureArray;
 
+- (NSMutableArray *)getSettingConfigureArray;
+
 @end
