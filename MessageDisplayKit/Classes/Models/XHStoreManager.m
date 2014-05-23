@@ -136,6 +136,7 @@
         }
         
         contact.contactName = contactName;
+        contact.userId = @"15915895880";
         
         [contacts addObject:@[contact, contact]];
     }

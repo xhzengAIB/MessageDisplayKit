@@ -8,8 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+#define kXHContactAvatorSize 80
+#define kXHContactNameLabelHeight 30
+
 @interface XHContact : NSObject
 
 @property (nonatomic, copy) NSString *contactName;
+
+@property (nonatomic, copy) NSString *userId;
 
 @end
