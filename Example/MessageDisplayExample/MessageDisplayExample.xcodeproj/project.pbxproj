@@ -342,6 +342,9 @@
 		7D149FFC192DEB5D004B4D3B /* XHContactTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D149FF9192DEB5D004B4D3B /* XHContactTableViewCell.m */; };
 		7D149FFE192DF2CA004B4D3B /* XHFoundationMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D149FFD192DF2CA004B4D3B /* XHFoundationMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7D14A000192DF30C004B4D3B /* XHUIKitMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D149FFF192DF30C004B4D3B /* XHUIKitMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7D14A004192EF8FD004B4D3B /* XHContactDetailTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D14A002192EF8FD004B4D3B /* XHContactDetailTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7D14A005192EF8FD004B4D3B /* XHContactDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D14A003192EF8FD004B4D3B /* XHContactDetailTableViewController.m */; };
+		7D14A006192EF8FD004B4D3B /* XHContactDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D14A003192EF8FD004B4D3B /* XHContactDetailTableViewController.m */; };
 		7D23E40E192C58E300B717B7 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D23E40D192C58E300B717B7 /* MediaPlayer.framework */; };
 		7D23E410192C58F000B717B7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D23E40F192C58F000B717B7 /* AudioToolbox.framework */; };
 		7D23E412192C590900B717B7 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D23E411192C590900B717B7 /* MobileCoreServices.framework */; };
@@ -729,6 +732,8 @@
 		7D149FF9192DEB5D004B4D3B /* XHContactTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHContactTableViewCell.m; sourceTree = "<group>"; };
 		7D149FFD192DF2CA004B4D3B /* XHFoundationMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHFoundationMacro.h; sourceTree = "<group>"; };
 		7D149FFF192DF30C004B4D3B /* XHUIKitMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHUIKitMacro.h; sourceTree = "<group>"; };
+		7D14A002192EF8FD004B4D3B /* XHContactDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHContactDetailTableViewController.h; sourceTree = "<group>"; };
+		7D14A003192EF8FD004B4D3B /* XHContactDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHContactDetailTableViewController.m; sourceTree = "<group>"; };
 		7D23E40D192C58E300B717B7 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		7D23E40F192C58F000B717B7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		7D23E411192C590900B717B7 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
@@ -1459,6 +1464,7 @@
 			children = (
 				74E9003119278F5C00D37C81 /* XHContactTableViewController.h */,
 				74E9003219278F5C00D37C81 /* XHContactTableViewController.m */,
+				7D14A001192EF8DE004B4D3B /* XHContactDetailTableViewController */,
 			);
 			path = XHContactTableViewController;
 			sourceTree = "<group>";
@@ -1592,6 +1598,15 @@
 				7D149FF9192DEB5D004B4D3B /* XHContactTableViewCell.m */,
 			);
 			path = ContactViews;
+			sourceTree = "<group>";
+		};
+		7D14A001192EF8DE004B4D3B /* XHContactDetailTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7D14A002192EF8FD004B4D3B /* XHContactDetailTableViewController.h */,
+				7D14A003192EF8FD004B4D3B /* XHContactDetailTableViewController.m */,
+			);
+			path = XHContactDetailTableViewController;
 			sourceTree = "<group>";
 		};
 		AB02A9F2192D8DA9004AA23D /* XHBaseSearchTableViewController */ = {
@@ -1889,6 +1904,7 @@
 				AB372926192EC6800084D7B5 /* XHDisplayMediaViewController.h in Headers */,
 				AB372920192EC6800084D7B5 /* XHDisplayEmotionViewController.h in Headers */,
 				7D149FFE192DF2CA004B4D3B /* XHFoundationMacro.h in Headers */,
+				7D14A004192EF8FD004B4D3B /* XHContactDetailTableViewController.h in Headers */,
 				749019B4191D315A0049AFF9 /* XHMessageVideoConverPhotoFactory.h in Headers */,
 				74901A45191D4CD30049AFF9 /* XHBaseViewController.h in Headers */,
 				74180C10190F44F800A35C82 /* UIScrollView+XHkeyboardControl.h in Headers */,
@@ -2202,6 +2218,7 @@
 				AB79A212192C0A6400A9B951 /* XHSoundManager.m in Sources */,
 				74585FFF191D10CC00F5E8C8 /* XHAnnotation.m in Sources */,
 				74E5E98B1921317B0084BCFA /* XHVoiceRecordHelper.m in Sources */,
+				7D14A006192EF8FD004B4D3B /* XHContactDetailTableViewController.m in Sources */,
 				7D13FC5D192C4F4000A23413 /* XHViewState.m in Sources */,
 				74180BFD190F449400A35C82 /* XHFoundationCommon.m in Sources */,
 				74901A47191D4CD30049AFF9 /* XHBaseViewController.m in Sources */,
@@ -2371,6 +2388,7 @@
 				AB8ACCF3192EBF0C00FA1C80 /* XHMoreExpressionShopsTableViewController.m in Sources */,
 				7D13FC4D192C4F4000A23413 /* UIImage+Utility.m in Sources */,
 				746C894E1917F691007F9A5E /* XHEmotionSectionBar.m in Sources */,
+				7D14A005192EF8FD004B4D3B /* XHContactDetailTableViewController.m in Sources */,
 				74E5EADA1924FFBE0084BCFA /* SETextAttachment.m in Sources */,
 				74E5EAD41924FFBE0084BCFA /* SELinkText.m in Sources */,
 				746C89451917F691007F9A5E /* XHEmotionCollectionViewCell.m in Sources */,

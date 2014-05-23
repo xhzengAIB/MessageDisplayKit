@@ -11,6 +11,8 @@
 #import "XHStoreManager.h"
 #import "XHContactTableViewCell.h"
 
+#import "XHContactDetailTableViewController.h"
+
 @interface XHContactTableViewController ()
 
 /**
@@ -110,6 +112,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [self pushNewViewController:[[XHContactDetailTableViewController alloc] initWithContact:self.dataSource[indexPath.section][indexPath.row]]];
 }
 
 @end
