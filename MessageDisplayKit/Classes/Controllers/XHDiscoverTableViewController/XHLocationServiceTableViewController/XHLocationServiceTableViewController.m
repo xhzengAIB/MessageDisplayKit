@@ -20,8 +20,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = NSLocalizedStringFromTable(@"NearbyPeople", @"MessageDisplayKitString", @"个人信息");
-    
-    [self.view addSubview:self.tableView];
 }
 
 - (void)didReceiveMemoryWarning {

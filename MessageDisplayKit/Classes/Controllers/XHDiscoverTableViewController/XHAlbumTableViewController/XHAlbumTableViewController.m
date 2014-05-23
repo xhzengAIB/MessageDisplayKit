@@ -70,7 +70,6 @@
     self.title = NSLocalizedStringFromTable(@"Album", @"MessageDisplayKitString", @"个人信息");
     
     self.tableView.tableHeaderView = self.albumHeaderContainerViewPathCover;
-    [self.view addSubview:self.tableView];
     
     [self configuraTableViewNormalSeparatorInset];
     

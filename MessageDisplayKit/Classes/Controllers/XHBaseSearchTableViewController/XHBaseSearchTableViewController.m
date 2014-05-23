@@ -85,7 +85,6 @@
     [self configuraSectionIndexBackgroundColorWithTableView:self.tableView];
     
     self.tableView.tableHeaderView = self.aSearchBar;
-    [self.view addSubview:self.tableView];
 }
 
 - (void)didReceiveMemoryWarning {
