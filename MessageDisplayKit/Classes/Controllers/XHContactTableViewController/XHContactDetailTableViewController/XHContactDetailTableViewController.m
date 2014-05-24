@@ -9,7 +9,7 @@
 #import "XHContactDetailTableViewController.h"
 
 #import "XHContactView.h"
-
+#import "XHContactPhotosTableViewCell.h"
 #import "XHContactCommunicationView.h"
 
 @interface XHContactDetailTableViewController ()
@@ -96,43 +96,13 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *cellIdentifier = @"cellIdentifier";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    XHContactPhotosTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellIdentifier];
+        cell = [[XHContactPhotosTableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellIdentifier];
     }
-    [self configureCell:cell atIndexPath:indexPath];
+    [cell configureCellWithContactInfo:self.dataSource[indexPath.row] atIndexPath:indexPath];
     
     return cell;
-}
-
-- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
-    NSString *placeholder;
-    NSString *detailText;
-    
-    cell.accessoryType = UITableViewCellAccessoryNone;
-    switch (indexPath.row) {
-        case 0:
-            placeholder = @"地区";
-            detailText = @"广州";
-            break;
-        case 1:
-            placeholder = @"个人签名";
-            detailText = @"目标：哈哈客户多久啊上课";
-            break;
-        case 2:
-            placeholder = @"腾讯微博";
-            detailText = @"@xhzengAIB@gmail.com";
-            break;
-        case 3: {
-            placeholder = @"个人相册";
-            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-            break;
-        }
-        default:
-            break;
-    }
-    cell.textLabel.text = placeholder;
-    cell.detailTextLabel.text = detailText;
 }
 
 #pragma mark - UITableView Delegate

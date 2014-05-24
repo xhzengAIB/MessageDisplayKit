@@ -345,7 +345,7 @@
 		7D14A004192EF8FD004B4D3B /* XHContactDetailTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D14A002192EF8FD004B4D3B /* XHContactDetailTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7D14A005192EF8FD004B4D3B /* XHContactDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D14A003192EF8FD004B4D3B /* XHContactDetailTableViewController.m */; };
 		7D14A006192EF8FD004B4D3B /* XHContactDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D14A003192EF8FD004B4D3B /* XHContactDetailTableViewController.m */; };
-		7D14A009192EFD33004B4D3B /* XHContactView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D14A007192EFD33004B4D3B /* XHContactView.h */; };
+		7D14A009192EFD33004B4D3B /* XHContactView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D14A007192EFD33004B4D3B /* XHContactView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7D14A00A192EFD33004B4D3B /* XHContactView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D14A008192EFD33004B4D3B /* XHContactView.m */; };
 		7D14A00B192EFD33004B4D3B /* XHContactView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D14A008192EFD33004B4D3B /* XHContactView.m */; };
 		7D23E40E192C58E300B717B7 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D23E40D192C58E300B717B7 /* MediaPlayer.framework */; };
@@ -393,6 +393,12 @@
 		AB44D41B192D8BB50069A210 /* XHContact.h in Headers */ = {isa = PBXBuildFile; fileRef = AB44D419192D8BB50069A210 /* XHContact.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB44D41C192D8BB50069A210 /* XHContact.m in Sources */ = {isa = PBXBuildFile; fileRef = AB44D41A192D8BB50069A210 /* XHContact.m */; };
 		AB44D41D192D8BB50069A210 /* XHContact.m in Sources */ = {isa = PBXBuildFile; fileRef = AB44D41A192D8BB50069A210 /* XHContact.m */; };
+		AB5493961931102E001F2FCC /* XHContactPhotosTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = AB5493941931102E001F2FCC /* XHContactPhotosTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB5493971931102E001F2FCC /* XHContactPhotosTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB5493951931102E001F2FCC /* XHContactPhotosTableViewCell.m */; };
+		AB5493981931102E001F2FCC /* XHContactPhotosTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB5493951931102E001F2FCC /* XHContactPhotosTableViewCell.m */; };
+		AB54939B193110BD001F2FCC /* XHContactPhotosView.h in Headers */ = {isa = PBXBuildFile; fileRef = AB549399193110BD001F2FCC /* XHContactPhotosView.h */; };
+		AB54939C193110BD001F2FCC /* XHContactPhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB54939A193110BD001F2FCC /* XHContactPhotosView.m */; };
+		AB54939D193110BD001F2FCC /* XHContactPhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB54939A193110BD001F2FCC /* XHContactPhotosView.m */; };
 		AB79A20D192C0A6400A9B951 /* XHPathCover.h in Headers */ = {isa = PBXBuildFile; fileRef = AB79A207192C0A6400A9B951 /* XHPathCover.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB79A20E192C0A6400A9B951 /* XHPathCover.m in Sources */ = {isa = PBXBuildFile; fileRef = AB79A208192C0A6400A9B951 /* XHPathCover.m */; };
 		AB79A20F192C0A6400A9B951 /* XHPathCover.m in Sources */ = {isa = PBXBuildFile; fileRef = AB79A208192C0A6400A9B951 /* XHPathCover.m */; };
@@ -436,7 +442,7 @@
 		AB8ACD0B192EBF3F00FA1C80 /* XHMoreSettingTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = AB8ACD09192EBF3F00FA1C80 /* XHMoreSettingTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB8ACD0C192EBF3F00FA1C80 /* XHMoreSettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8ACD0A192EBF3F00FA1C80 /* XHMoreSettingTableViewController.m */; };
 		AB8ACD0D192EBF3F00FA1C80 /* XHMoreSettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8ACD0A192EBF3F00FA1C80 /* XHMoreSettingTableViewController.m */; };
-		ABB494041930086C000A2680 /* XHContactCommunicationView.h in Headers */ = {isa = PBXBuildFile; fileRef = ABB494021930086C000A2680 /* XHContactCommunicationView.h */; };
+		ABB494041930086C000A2680 /* XHContactCommunicationView.h in Headers */ = {isa = PBXBuildFile; fileRef = ABB494021930086C000A2680 /* XHContactCommunicationView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ABB494051930086C000A2680 /* XHContactCommunicationView.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB494031930086C000A2680 /* XHContactCommunicationView.m */; };
 		ABB494061930086C000A2680 /* XHContactCommunicationView.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB494031930086C000A2680 /* XHContactCommunicationView.m */; };
 		ABE87CD4192D6D7F00EC1E49 /* AlbumOperateMore@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABE87CD2192D6D7F00EC1E49 /* AlbumOperateMore@2x.png */; };
@@ -774,6 +780,10 @@
 		AB439972192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHAlbumCollectionViewFlowLayout.m; sourceTree = "<group>"; };
 		AB44D419192D8BB50069A210 /* XHContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHContact.h; sourceTree = "<group>"; };
 		AB44D41A192D8BB50069A210 /* XHContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHContact.m; sourceTree = "<group>"; };
+		AB5493941931102E001F2FCC /* XHContactPhotosTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHContactPhotosTableViewCell.h; sourceTree = "<group>"; };
+		AB5493951931102E001F2FCC /* XHContactPhotosTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHContactPhotosTableViewCell.m; sourceTree = "<group>"; };
+		AB549399193110BD001F2FCC /* XHContactPhotosView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHContactPhotosView.h; sourceTree = "<group>"; };
+		AB54939A193110BD001F2FCC /* XHContactPhotosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHContactPhotosView.m; sourceTree = "<group>"; };
 		AB79A207192C0A6400A9B951 /* XHPathCover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHPathCover.h; sourceTree = "<group>"; };
 		AB79A208192C0A6400A9B951 /* XHPathCover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHPathCover.m; sourceTree = "<group>"; };
 		AB79A209192C0A6400A9B951 /* XHSoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHSoundManager.h; sourceTree = "<group>"; };
@@ -1608,6 +1618,10 @@
 				7D149FF9192DEB5D004B4D3B /* XHContactTableViewCell.m */,
 				7D14A007192EFD33004B4D3B /* XHContactView.h */,
 				7D14A008192EFD33004B4D3B /* XHContactView.m */,
+				AB5493941931102E001F2FCC /* XHContactPhotosTableViewCell.h */,
+				AB5493951931102E001F2FCC /* XHContactPhotosTableViewCell.m */,
+				AB549399193110BD001F2FCC /* XHContactPhotosView.h */,
+				AB54939A193110BD001F2FCC /* XHContactPhotosView.m */,
 				ABB494021930086C000A2680 /* XHContactCommunicationView.h */,
 				ABB494031930086C000A2680 /* XHContactCommunicationView.m */,
 			);
@@ -1828,7 +1842,6 @@
 			files = (
 				74180C0E190F44F500A35C82 /* XHMessageVoiceFactory.h in Headers */,
 				74180C0F190F44F600A35C82 /* XHFoundationCommon.h in Headers */,
-				ABB494041930086C000A2680 /* XHContactCommunicationView.h in Headers */,
 				74180C0D190F44F300A35C82 /* XHMessageAvatorFactory.h in Headers */,
 				74180C12190F450000A35C82 /* UIImage+XHRounded.h in Headers */,
 				74180C11190F44F900A35C82 /* NSString+MessageInputView.h in Headers */,
@@ -1883,7 +1896,6 @@
 				74585FFD191D10CC00F5E8C8 /* XHAnnotation.h in Headers */,
 				7D06CA71192B3D9B00DF8C04 /* XHBaseTableViewCell.h in Headers */,
 				74585F45191C8B5700F5E8C8 /* UIView+XHNetworkImage.h in Headers */,
-				7D14A009192EFD33004B4D3B /* XHContactView.h in Headers */,
 				AB79A21D192C22F500A9B951 /* XHBaseCollectionViewCell.h in Headers */,
 				AB79A222192C231C00A9B951 /* XHAlbumPhotoCollectionViewCell.h in Headers */,
 				AB79A213192C0A6400A9B951 /* XHWaterDropRefresh.h in Headers */,
@@ -1919,6 +1931,9 @@
 				AB372929192EC6800084D7B5 /* XHDisplayTextViewController.h in Headers */,
 				AB372926192EC6800084D7B5 /* XHDisplayMediaViewController.h in Headers */,
 				AB372920192EC6800084D7B5 /* XHDisplayEmotionViewController.h in Headers */,
+				ABB494041930086C000A2680 /* XHContactCommunicationView.h in Headers */,
+				AB5493961931102E001F2FCC /* XHContactPhotosTableViewCell.h in Headers */,
+				7D14A009192EFD33004B4D3B /* XHContactView.h in Headers */,
 				7D149FFE192DF2CA004B4D3B /* XHFoundationMacro.h in Headers */,
 				7D14A004192EF8FD004B4D3B /* XHContactDetailTableViewController.h in Headers */,
 				749019B4191D315A0049AFF9 /* XHMessageVideoConverPhotoFactory.h in Headers */,
@@ -1927,6 +1942,7 @@
 				74E5E9951921E90A0084BCFA /* XHVoiceRecordHUD.h in Headers */,
 				74180C0B190F44EC00A35C82 /* XHMessageBubbleFactory.h in Headers */,
 				74180C0C190F44ED00A35C82 /* XHMacro.h in Headers */,
+				AB54939B193110BD001F2FCC /* XHContactPhotosView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2255,6 +2271,7 @@
 				74065FBB19123E1C00E1CE95 /* XHShareMenuItem.m in Sources */,
 				746C89521917F691007F9A5E /* XHShareMenuView.m in Sources */,
 				AB8ACD0D192EBF3F00FA1C80 /* XHMoreSettingTableViewController.m in Sources */,
+				AB54939D193110BD001F2FCC /* XHContactPhotosView.m in Sources */,
 				74E5EAD81924FFBE0084BCFA /* SESelectionGrabber.m in Sources */,
 				74E5EACF1924FFBE0084BCFA /* SEConstants.m in Sources */,
 				7D13FC4E192C4F4000A23413 /* UIImage+Utility.m in Sources */,
@@ -2310,6 +2327,7 @@
 				746C897F1917F8C5007F9A5E /* XHBaseTabBarController.m in Sources */,
 				746C89491917F691007F9A5E /* XHEmotionCollectionViewFlowLayout.m in Sources */,
 				74E900B51928F3D100D37C81 /* XHStoreManager.m in Sources */,
+				AB5493981931102E001F2FCC /* XHContactPhotosTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2380,6 +2398,7 @@
 				AB372906192EC62C0084D7B5 /* XHBottleViewController.m in Sources */,
 				74E5EADD1924FFBE0084BCFA /* SETextEditingCaret.m in Sources */,
 				AB372903192EC62C0084D7B5 /* XHAlbumTableViewController.m in Sources */,
+				AB54939C193110BD001F2FCC /* XHContactPhotosView.m in Sources */,
 				74E5EACB1924FFBE0084BCFA /* SECompatibility.m in Sources */,
 				74C3E7D7192919930053F4E1 /* XHAlbumRichTextView.m in Sources */,
 				740660BF1914D65600E1CE95 /* XHEmotion.m in Sources */,
@@ -2390,6 +2409,7 @@
 				74065FBA19123E1C00E1CE95 /* XHShareMenuItem.m in Sources */,
 				AB79A20E192C0A6400A9B951 /* XHPathCover.m in Sources */,
 				74E5EAE31924FFBE0084BCFA /* SETextInput.m in Sources */,
+				AB5493971931102E001F2FCC /* XHContactPhotosTableViewCell.m in Sources */,
 				740660A81913552800E1CE95 /* UIImage+XHAnimatedFaceGif.m in Sources */,
 				746C895C1917F7B4007F9A5E /* XHMessageTableViewController.m in Sources */,
 				7D13FC4A192C4F4000A23413 /* NSString+XHMD5.m in Sources */,
