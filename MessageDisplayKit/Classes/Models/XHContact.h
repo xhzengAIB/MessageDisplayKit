@@ -18,12 +18,12 @@
 
 @property (nonatomic, copy) NSString *contactName;
 
-@property (nonatomic, copy) NSString *userId;
+@property (nonatomic, copy) NSString *contactUserId;
 
-@property (nonatomic, copy) NSString *local;
+@property (nonatomic, copy) NSString *contactRegion;
 
-@property (nonatomic, copy) NSString *descrition;
+@property (nonatomic, copy) NSString *contactIntroduction;
 
-@property (nonatomic, copy) NSArray *myAlbums;
+@property (nonatomic, copy) NSArray *contactMyAlbums;
 
 @end

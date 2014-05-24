@@ -30,7 +30,7 @@
     _displayContact = displayContact;
     
     self.userNameLabel.text = displayContact.contactName;
-    self.weChatNumberLabel.text = displayContact.userId;
+    self.weChatNumberLabel.text = displayContact.contactUserId;
 }
 
 - (UIImageView *)avatorImageView {

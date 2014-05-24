@@ -57,7 +57,7 @@
 #pragma mark - DataSource
 
 - (void)loadDataSource {
-    self.dataSource = (NSMutableArray *)@[self.contact.local, self.contact.description, self.contact.userId, self.contact.myAlbums];
+    self.dataSource = (NSMutableArray *)@[self.contact.contactRegion, self.contact.contactIntroduction, self.contact.contactUserId, self.contact.contactMyAlbums];
 }
 
 #pragma mark - Life Cycle
