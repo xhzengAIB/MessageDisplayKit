@@ -17,4 +17,10 @@
 
 @property (nonatomic, copy) NSString *userId;
 
+@property (nonatomic, copy) NSString *local;
+
+@property (nonatomic, copy) NSString *descrition;
+
+@property (nonatomic, copy) NSArray *myAlbums;
+
 @end

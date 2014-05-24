@@ -44,7 +44,7 @@
         CGFloat userNameLabelX = CGRectGetMaxX(self.avatorImageView.frame) + kXHAlbumAvatorSpacing;
         _userNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(userNameLabelX, CGRectGetMinY(self.avatorImageView.frame), CGRectGetWidth(self.bounds) - userNameLabelX - kXHAlbumAvatorSpacing, kXHContactNameLabelHeight)];
         _userNameLabel.backgroundColor = [UIColor clearColor];
-        _userNameLabel.textColor = [UIColor grayColor];
+        _userNameLabel.textColor = [UIColor blackColor];
         _userNameLabel.font = [UIFont boldSystemFontOfSize:17];
         
     }

@@ -10,15 +10,29 @@
 
 #import "XHContactView.h"
 
+#import "XHContactCommunicationView.h"
+
 @interface XHContactDetailTableViewController ()
 
 @property (nonatomic, strong) XHContact *contact;
 
 @property (nonatomic, strong) XHContactView *contactUserInfoView;
 
+@property (nonatomic, strong) XHContactCommunicationView *contactCommunicationView;
+
 @end
 
 @implementation XHContactDetailTableViewController
+
+#pragma mark - Action
+
+- (void)videoCommunicationButtonClicked:(UIButton *)sender {
+    
+}
+
+- (void)messageCommunicationButtonClicked:(UIButton *)sender {
+    
+}
 
 #pragma mark - Propertys
 
@@ -30,11 +44,28 @@
     return _contactUserInfoView;
 }
 
+- (XHContactCommunicationView *)contactCommunicationView {
+    if (!_contactCommunicationView) {
+        _contactCommunicationView = [[XHContactCommunicationView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 100)];
+        _contactCommunicationView.backgroundColor = [UIColor clearColor];
+        [_contactCommunicationView.videoCommunicationButton addTarget:self action:@selector(videoCommunicationButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+        [_contactCommunicationView.messageCommunicationButton addTarget:self action:@selector(messageCommunicationButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _contactCommunicationView;
+}
+
+#pragma mark - DataSource
+
+- (void)loadDataSource {
+    self.dataSource = (NSMutableArray *)@[self.contact.local, self.contact.description, self.contact.userId, self.contact.myAlbums];
+}
+
 #pragma mark - Life Cycle
 
 - (instancetype)initWithContact:(XHContact *)contact {
     self = [super init];
     if (self) {
+        self.tableViewStyle = UITableViewStyleGrouped;
         self.contact = contact;
     }
     return self;
@@ -46,6 +77,10 @@
     self.title = self.contact.contactName;
     
     self.tableView.tableHeaderView = self.contactUserInfoView;
+    
+    self.tableView.tableFooterView = self.contactCommunicationView;
+    
+    [self loadDataSource];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -53,9 +88,28 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)configureCellWithIndexPath:(NSIndexPath *)indexPath onTableViewCell:(UITableViewCell *)cell {
+#pragma mark - UITableView DataSource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.dataSource.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *cellIdentifier = @"cellIdentifier";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellIdentifier];
+    }
+    [self configureCell:cell atIndexPath:indexPath];
+    
+    return cell;
+}
+
+- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     NSString *placeholder;
     NSString *detailText;
+    
+    cell.accessoryType = UITableViewCellAccessoryNone;
     switch (indexPath.row) {
         case 0:
             placeholder = @"地区";
@@ -69,9 +123,11 @@
             placeholder = @"腾讯微博";
             detailText = @"@xhzengAIB@gmail.com";
             break;
-        case 3:
+        case 3: {
             placeholder = @"个人相册";
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             break;
+        }
         default:
             break;
     }
@@ -79,18 +135,18 @@
     cell.detailTextLabel.text = detailText;
 }
 
-#pragma mark - UITableView DataSource
+#pragma mark - UITableView Delegate
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *cellIdentifier = @"cellIdentifier";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:cellIdentifier];
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row == 3) {
+        return 80;
+    } else {
+        return 44;
     }
-    cell.textLabel.text = self.contact.contactName;
-    cell.detailTextLabel.text = self.contact.userId;
-    
-    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end

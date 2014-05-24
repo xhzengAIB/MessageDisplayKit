@@ -436,6 +436,9 @@
 		AB8ACD0B192EBF3F00FA1C80 /* XHMoreSettingTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = AB8ACD09192EBF3F00FA1C80 /* XHMoreSettingTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB8ACD0C192EBF3F00FA1C80 /* XHMoreSettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8ACD0A192EBF3F00FA1C80 /* XHMoreSettingTableViewController.m */; };
 		AB8ACD0D192EBF3F00FA1C80 /* XHMoreSettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8ACD0A192EBF3F00FA1C80 /* XHMoreSettingTableViewController.m */; };
+		ABB494041930086C000A2680 /* XHContactCommunicationView.h in Headers */ = {isa = PBXBuildFile; fileRef = ABB494021930086C000A2680 /* XHContactCommunicationView.h */; };
+		ABB494051930086C000A2680 /* XHContactCommunicationView.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB494031930086C000A2680 /* XHContactCommunicationView.m */; };
+		ABB494061930086C000A2680 /* XHContactCommunicationView.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB494031930086C000A2680 /* XHContactCommunicationView.m */; };
 		ABE87CD4192D6D7F00EC1E49 /* AlbumOperateMore@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABE87CD2192D6D7F00EC1E49 /* AlbumOperateMore@2x.png */; };
 		ABE87CD5192D6D7F00EC1E49 /* AlbumOperateMoreHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABE87CD3192D6D7F00EC1E49 /* AlbumOperateMoreHL@2x.png */; };
 /* End PBXBuildFile section */
@@ -802,6 +805,8 @@
 		AB8ACD05192EBF3600FA1C80 /* XHMoreMyProfileDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMoreMyProfileDetailTableViewController.m; sourceTree = "<group>"; };
 		AB8ACD09192EBF3F00FA1C80 /* XHMoreSettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMoreSettingTableViewController.h; sourceTree = "<group>"; };
 		AB8ACD0A192EBF3F00FA1C80 /* XHMoreSettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMoreSettingTableViewController.m; sourceTree = "<group>"; };
+		ABB494021930086C000A2680 /* XHContactCommunicationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHContactCommunicationView.h; sourceTree = "<group>"; };
+		ABB494031930086C000A2680 /* XHContactCommunicationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHContactCommunicationView.m; sourceTree = "<group>"; };
 		ABE87CD2192D6D7F00EC1E49 /* AlbumOperateMore@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AlbumOperateMore@2x.png"; sourceTree = "<group>"; };
 		ABE87CD3192D6D7F00EC1E49 /* AlbumOperateMoreHL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AlbumOperateMoreHL@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1603,6 +1608,8 @@
 				7D149FF9192DEB5D004B4D3B /* XHContactTableViewCell.m */,
 				7D14A007192EFD33004B4D3B /* XHContactView.h */,
 				7D14A008192EFD33004B4D3B /* XHContactView.m */,
+				ABB494021930086C000A2680 /* XHContactCommunicationView.h */,
+				ABB494031930086C000A2680 /* XHContactCommunicationView.m */,
 			);
 			path = ContactViews;
 			sourceTree = "<group>";
@@ -1821,6 +1828,7 @@
 			files = (
 				74180C0E190F44F500A35C82 /* XHMessageVoiceFactory.h in Headers */,
 				74180C0F190F44F600A35C82 /* XHFoundationCommon.h in Headers */,
+				ABB494041930086C000A2680 /* XHContactCommunicationView.h in Headers */,
 				74180C0D190F44F300A35C82 /* XHMessageAvatorFactory.h in Headers */,
 				74180C12190F450000A35C82 /* UIImage+XHRounded.h in Headers */,
 				74180C11190F44F900A35C82 /* NSString+MessageInputView.h in Headers */,
@@ -2232,6 +2240,7 @@
 				74180BFD190F449400A35C82 /* XHFoundationCommon.m in Sources */,
 				74901A47191D4CD30049AFF9 /* XHBaseViewController.m in Sources */,
 				746C893D1917F691007F9A5E /* XHMessageTableViewCell.m in Sources */,
+				ABB494061930086C000A2680 /* XHContactCommunicationView.m in Sources */,
 				746C89461917F691007F9A5E /* XHEmotionCollectionViewCell.m in Sources */,
 				7D13FC57192C4F4000A23413 /* XHFileAttribute.m in Sources */,
 				746C89371917F691007F9A5E /* XHMessageDisplayTextView.m in Sources */,
@@ -2319,6 +2328,7 @@
 				74E9003919278F6700D37C81 /* XHDiscoverTableViewController.m in Sources */,
 				7D14A00A192EFD33004B4D3B /* XHContactView.m in Sources */,
 				74BBB032190C28CD00093577 /* XHDemoWeChatMessageTableViewController.m in Sources */,
+				ABB494051930086C000A2680 /* XHContactCommunicationView.m in Sources */,
 				AB79A211192C0A6400A9B951 /* XHSoundManager.m in Sources */,
 				74901A46191D4CD30049AFF9 /* XHBaseViewController.m in Sources */,
 				AB79A223192C231C00A9B951 /* XHAlbumPhotoCollectionViewCell.m in Sources */,

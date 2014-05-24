@@ -137,6 +137,9 @@
         
         contact.contactName = contactName;
         contact.userId = @"15915895880";
+        contact.local = @"广州市天河区";
+        contact.descrition = @"我是一名iOS开发者，热衷于简洁的UI";
+        contact.myAlbums = [[NSArray alloc] init];
         
         [contacts addObject:@[contact, contact]];
     }
