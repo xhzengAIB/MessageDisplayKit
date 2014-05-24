@@ -38,7 +38,7 @@
 
 - (XHContactView *)contactUserInfoView {
     if (!_contactUserInfoView) {
-        _contactUserInfoView = [[XHContactView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 100)];
+        _contactUserInfoView = [[XHContactView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), kXHAlbumAvatorSpacing * 2 + kXHContactAvatorSize)];
     }
     _contactUserInfoView.displayContact = self.contact;
     return _contactUserInfoView;
@@ -46,7 +46,7 @@
 
 - (XHContactCommunicationView *)contactCommunicationView {
     if (!_contactCommunicationView) {
-        _contactCommunicationView = [[XHContactCommunicationView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 100)];
+        _contactCommunicationView = [[XHContactCommunicationView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), (kXHContactButtonHeight + kXHContactButtonSpacing) * 2)];
         _contactCommunicationView.backgroundColor = [UIColor clearColor];
         [_contactCommunicationView.videoCommunicationButton addTarget:self action:@selector(videoCommunicationButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
         [_contactCommunicationView.messageCommunicationButton addTarget:self action:@selector(messageCommunicationButtonClicked:) forControlEvents:UIControlEventTouchUpInside];

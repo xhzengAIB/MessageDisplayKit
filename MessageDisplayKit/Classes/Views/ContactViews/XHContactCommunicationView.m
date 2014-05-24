@@ -8,13 +8,15 @@
 
 #import "XHContactCommunicationView.h"
 
+#import "XHContact.h"
+
 @implementation XHContactCommunicationView
 
 #pragma mark - Propertys
 
 - (UIButton *)videoCommunicationButton {
     if (!_videoCommunicationButton) {
-        _videoCommunicationButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.bounds), 44)];
+        _videoCommunicationButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.bounds), kXHContactButtonHeight)];
         _videoCommunicationButton.backgroundColor = [UIColor colorWithRed:0.263 green:0.717 blue:0.031 alpha:1.000];
         [_videoCommunicationButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [_videoCommunicationButton setTitle:@"视频聊天" forState:UIControlStateNormal];
@@ -25,7 +27,7 @@
 
 - (UIButton *)messageCommunicationButton {
     if (!_messageCommunicationButton) {
-        _messageCommunicationButton = [[UIButton alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.videoCommunicationButton.frame) + 20, CGRectGetWidth(self.bounds), CGRectGetHeight(self.videoCommunicationButton.bounds))];
+        _messageCommunicationButton = [[UIButton alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.videoCommunicationButton.frame) + kXHContactButtonSpacing, CGRectGetWidth(self.bounds), CGRectGetHeight(self.videoCommunicationButton.bounds))];
         _messageCommunicationButton.backgroundColor = [UIColor whiteColor];
         [_messageCommunicationButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [_messageCommunicationButton setTitle:@"发送消息" forState:UIControlStateNormal];

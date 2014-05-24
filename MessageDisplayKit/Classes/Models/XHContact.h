@@ -11,6 +11,9 @@
 #define kXHContactAvatorSize 80
 #define kXHContactNameLabelHeight 30
 
+#define kXHContactButtonHeight 44
+#define kXHContactButtonSpacing 20
+
 @interface XHContact : NSObject
 
 @property (nonatomic, copy) NSString *contactName;
