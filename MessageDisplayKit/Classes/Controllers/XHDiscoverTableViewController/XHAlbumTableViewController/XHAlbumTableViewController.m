@@ -13,12 +13,16 @@
 
 #import "XHStoreManager.h"
 
+#import "XHPhotographyHelper.h"
+
 @interface XHAlbumTableViewController ()
 
 /**
  *  视觉差的TableViewHeaderView
  */
 @property (nonatomic, strong) XHPathCover *albumHeaderContainerViewPathCover;
+
+@property (nonatomic, strong) XHPhotographyHelper *photographyHelper;
 
 @end
 
@@ -38,8 +42,28 @@
         [_albumHeaderContainerViewPathCover setHandleRefreshEvent:^{
             [weakSelf loadDataSource];
         }];
+        
+        [_albumHeaderContainerViewPathCover setHandleTapBackgroundImageEvent:^{
+            [weakSelf.photographyHelper showOnPickerViewControllerSourceType:UIImagePickerControllerSourceTypePhotoLibrary onViewController:weakSelf compled:^(UIImage *image, NSDictionary *editingInfo) {
+                if (image) {
+                    [weakSelf.albumHeaderContainerViewPathCover setBackgroundImage:image];
+                } else {
+                    if (!editingInfo)
+                        return ;
+                    [weakSelf.albumHeaderContainerViewPathCover setBackgroundImage:[editingInfo valueForKey:UIImagePickerControllerOriginalImage]];
+                }
+            }];
+        }];
+        
     }
     return _albumHeaderContainerViewPathCover;
+}
+
+- (XHPhotographyHelper *)photographyHelper {
+    if (!_photographyHelper) {
+        _photographyHelper = [[XHPhotographyHelper alloc] init];
+    }
+    return _photographyHelper;
 }
 
 #pragma mark - DataSource Manager

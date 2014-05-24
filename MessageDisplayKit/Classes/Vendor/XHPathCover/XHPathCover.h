@@ -38,6 +38,8 @@ extern NSString *const XHBirthdayKey;
 
 @property (nonatomic, copy) void(^handleRefreshEvent)(void);
 
+@property (nonatomic, copy) void(^handleTapBackgroundImageEvent)(void);
+
 // stop Refresh
 - (void)stopRefresh;
 
