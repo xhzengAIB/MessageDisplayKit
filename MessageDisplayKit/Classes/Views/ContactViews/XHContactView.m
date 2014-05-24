@@ -8,6 +8,8 @@
 
 #import "XHContactView.h"
 
+#import "XHMessageAvatorFactory.h"
+
 @interface XHContactView ()
 
 @property (nonatomic, strong) UIImageView *avatorImageView;
