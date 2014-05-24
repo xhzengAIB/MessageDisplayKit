@@ -115,5 +115,5 @@ Thanks you [kishikawakatsumi](https://github.com/kishikawakatsumi) provide [SECo
 该工程里面任何一个效果组件都不能擅自使用，如需使用，请告之于我。
 
 ## Credits
-Thanks to [jessesquires](https://github.com/jessesquires/MessagesTableViewController) who created JSMessagesViewController on which my work is based.
+Thanks to [jessesquires](https://github.com/jessesquires/MessagesTableViewController) who created JSMessagesViewController on which my chat list UI work is based.
 
