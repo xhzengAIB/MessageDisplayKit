@@ -8,6 +8,8 @@
 
 #import "XHAlbumTableViewController.h"
 
+#import "XHMacro.h"
+
 #import "XHPathCover.h"
 #import "XHAlbumTableViewCell.h"
 
