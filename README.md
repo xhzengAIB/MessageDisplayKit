@@ -2,8 +2,8 @@
 
 MessageDisplayKit
 =================
-用于显示iPhone和iPad的消息页面，你可以发送文本、声音、图片、视频、gif表情等消息。模仿微信App。                        
-A messages UI for iPhone and iPad. You can send texts, voice messages, images, videos, and emotions, etc. It's similar to the Wechat app.                                 
+一个类似微信App的IM应用，拥有发送文字、图片、语音、视频、地理位置消息，管理本地通信录、分享朋友圈、漂流交友、摇一摇乐趣和更多有趣的功能。                                
+An IM APP like WeChat App has to send text, pictures, audio, video, location messaging, managing local address book, share a circle of friends, drifting friends, shake a fun and more interesting features.                                 
 
 代码都有注释，如果看完注释还是不懂的话，那你只能在githu开issue，[点击这里](https://github.com/xhzengAIB/MessageDisplayKit/issues?state=open)移步新建一个issue，写上你不明白的地方，我会在github给予帮助。                        
 
