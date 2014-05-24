@@ -2,8 +2,8 @@
 
 MessageDisplayKit
 =================
-用于显示iPhone和iPad的消息页面，你可以发送文本、声音、图片、视频、gif表情等消息。模仿微信App。                        
-A messages UI for iPhone and iPad. You can send texts, voice messages, images, videos, and emotions, etc. It's similar to the Wechat app.                                 
+一个类似微信App的IM应用，拥有发送文字、图片、语音、视频、地理位置消息，管理本地通信录、分享朋友圈、漂流交友、摇一摇乐趣和更多有趣的功能。                                
+An IM APP like WeChat App has to send text, pictures, audio, video, location messaging, managing local address book, share a circle of friends, drifting friends, shake a fun and more interesting features.                                 
 
 代码都有注释，如果看完注释还是不懂的话，那你只能在githu开issue，[点击这里](https://github.com/xhzengAIB/MessageDisplayKit/issues?state=open)移步新建一个issue，写上你不明白的地方，我会在github给予帮助。                        
 
@@ -26,14 +26,22 @@ pod 'MessageDisplayKit'
 and run `pod install`, then you're all done!
 
 ## TODO
-* 核心网络层。
-* 核心缓存层。
-* 核心数据层。
-* 优化TableView性能
-* 强化gif播放机制
-* 尽量去除绘制代码，由于现在引起性能下降的原因之一。
-* 语音转换处理，适应多平台可用语音、视频等数据。
-* 服务器搭建。
+* 核心网络层。                                 
+Core Network Layer.                                    
+* 核心缓存层。                                    
+Core Cache Layer.                              
+* 核心数据层。                              
+Core Model Layer.
+* 优化TableView性能                                 
+Majorization tableView performance.  
+* 强化gif播放机制                                 
+Keep FPS due wih gif play.
+* 尽量去除绘制代码，由于现在引起性能下降的原因之一。                            
+Delete drawRect code, because of lead to lower FPS. 
+* 语音转换处理，适应多平台可用语音、视频等数据。                             
+Convert audio format.
+* 搭建服务器。                                
+Build server 
 * 模仿微信全部功能。
 
 ## 特性 Features 
@@ -107,5 +115,5 @@ Thanks you [kishikawakatsumi](https://github.com/kishikawakatsumi) provide [SECo
 该工程里面任何一个效果组件都不能擅自使用，如需使用，请告之于我。
 
 ## Credits
-Thanks to [jessesquires](https://github.com/jessesquires/MessagesTableViewController) who created JSMessagesViewController on which my work is based.
+Thanks to [jessesquires](https://github.com/jessesquires/MessagesTableViewController) who created JSMessagesViewController on which my chat list UI work is based.
 
