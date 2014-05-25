@@ -399,6 +399,20 @@
 		AB54939B193110BD001F2FCC /* XHContactPhotosView.h in Headers */ = {isa = PBXBuildFile; fileRef = AB549399193110BD001F2FCC /* XHContactPhotosView.h */; };
 		AB54939C193110BD001F2FCC /* XHContactPhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB54939A193110BD001F2FCC /* XHContactPhotosView.m */; };
 		AB54939D193110BD001F2FCC /* XHContactPhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB54939A193110BD001F2FCC /* XHContactPhotosView.m */; };
+		AB569AAF193179CC0007DB0B /* Shake_icon_music@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB569AA5193179CC0007DB0B /* Shake_icon_music@2x.png */; };
+		AB569AB0193179CC0007DB0B /* Shake_icon_musicHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB569AA6193179CC0007DB0B /* Shake_icon_musicHL@2x.png */; };
+		AB569AB1193179CC0007DB0B /* Shake_icon_people@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB569AA7193179CC0007DB0B /* Shake_icon_people@2x.png */; };
+		AB569AB2193179CC0007DB0B /* Shake_icon_peopleHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB569AA8193179CC0007DB0B /* Shake_icon_peopleHL@2x.png */; };
+		AB569AB3193179CC0007DB0B /* Shake_Line_Down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB569AA9193179CC0007DB0B /* Shake_Line_Down@2x.png */; };
+		AB569AB4193179CC0007DB0B /* Shake_Line_Up@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB569AAA193179CC0007DB0B /* Shake_Line_Up@2x.png */; };
+		AB569AB5193179CC0007DB0B /* Shake_Logo_Down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB569AAB193179CC0007DB0B /* Shake_Logo_Down@2x.png */; };
+		AB569AB6193179CC0007DB0B /* Shake_Logo_Up@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB569AAC193179CC0007DB0B /* Shake_Logo_Up@2x.png */; };
+		AB71383C193193A6009792B5 /* UIButton+XHButtonTitlePosition.h in Headers */ = {isa = PBXBuildFile; fileRef = AB71383A193193A6009792B5 /* UIButton+XHButtonTitlePosition.h */; };
+		AB71383D193193A6009792B5 /* UIButton+XHButtonTitlePosition.m in Sources */ = {isa = PBXBuildFile; fileRef = AB71383B193193A6009792B5 /* UIButton+XHButtonTitlePosition.m */; };
+		AB71383E193193A6009792B5 /* UIButton+XHButtonTitlePosition.m in Sources */ = {isa = PBXBuildFile; fileRef = AB71383B193193A6009792B5 /* UIButton+XHButtonTitlePosition.m */; };
+		AB713842193195A3009792B5 /* shake_match.wav in Resources */ = {isa = PBXBuildFile; fileRef = AB71383F193195A3009792B5 /* shake_match.wav */; };
+		AB713843193195A3009792B5 /* shake_nomatch.wav in Resources */ = {isa = PBXBuildFile; fileRef = AB713840193195A3009792B5 /* shake_nomatch.wav */; };
+		AB713844193195A3009792B5 /* shake_sound_male.wav in Resources */ = {isa = PBXBuildFile; fileRef = AB713841193195A3009792B5 /* shake_sound_male.wav */; };
 		AB79A20D192C0A6400A9B951 /* XHPathCover.h in Headers */ = {isa = PBXBuildFile; fileRef = AB79A207192C0A6400A9B951 /* XHPathCover.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB79A20E192C0A6400A9B951 /* XHPathCover.m in Sources */ = {isa = PBXBuildFile; fileRef = AB79A208192C0A6400A9B951 /* XHPathCover.m */; };
 		AB79A20F192C0A6400A9B951 /* XHPathCover.m in Sources */ = {isa = PBXBuildFile; fileRef = AB79A208192C0A6400A9B951 /* XHPathCover.m */; };
@@ -784,6 +798,19 @@
 		AB5493951931102E001F2FCC /* XHContactPhotosTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHContactPhotosTableViewCell.m; sourceTree = "<group>"; };
 		AB549399193110BD001F2FCC /* XHContactPhotosView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHContactPhotosView.h; sourceTree = "<group>"; };
 		AB54939A193110BD001F2FCC /* XHContactPhotosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHContactPhotosView.m; sourceTree = "<group>"; };
+		AB569AA5193179CC0007DB0B /* Shake_icon_music@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shake_icon_music@2x.png"; sourceTree = "<group>"; };
+		AB569AA6193179CC0007DB0B /* Shake_icon_musicHL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shake_icon_musicHL@2x.png"; sourceTree = "<group>"; };
+		AB569AA7193179CC0007DB0B /* Shake_icon_people@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shake_icon_people@2x.png"; sourceTree = "<group>"; };
+		AB569AA8193179CC0007DB0B /* Shake_icon_peopleHL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shake_icon_peopleHL@2x.png"; sourceTree = "<group>"; };
+		AB569AA9193179CC0007DB0B /* Shake_Line_Down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shake_Line_Down@2x.png"; sourceTree = "<group>"; };
+		AB569AAA193179CC0007DB0B /* Shake_Line_Up@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shake_Line_Up@2x.png"; sourceTree = "<group>"; };
+		AB569AAB193179CC0007DB0B /* Shake_Logo_Down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shake_Logo_Down@2x.png"; sourceTree = "<group>"; };
+		AB569AAC193179CC0007DB0B /* Shake_Logo_Up@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shake_Logo_Up@2x.png"; sourceTree = "<group>"; };
+		AB71383A193193A6009792B5 /* UIButton+XHButtonTitlePosition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+XHButtonTitlePosition.h"; sourceTree = "<group>"; };
+		AB71383B193193A6009792B5 /* UIButton+XHButtonTitlePosition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+XHButtonTitlePosition.m"; sourceTree = "<group>"; };
+		AB71383F193195A3009792B5 /* shake_match.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = shake_match.wav; sourceTree = "<group>"; };
+		AB713840193195A3009792B5 /* shake_nomatch.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = shake_nomatch.wav; sourceTree = "<group>"; };
+		AB713841193195A3009792B5 /* shake_sound_male.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = shake_sound_male.wav; sourceTree = "<group>"; };
 		AB79A207192C0A6400A9B951 /* XHPathCover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHPathCover.h; sourceTree = "<group>"; };
 		AB79A208192C0A6400A9B951 /* XHPathCover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHPathCover.m; sourceTree = "<group>"; };
 		AB79A209192C0A6400A9B951 /* XHSoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHSoundManager.h; sourceTree = "<group>"; };
@@ -1301,6 +1328,8 @@
 				740660A61913552800E1CE95 /* UIImage+XHAnimatedFaceGif.m */,
 				74585F43191C8B5700F5E8C8 /* UIView+XHNetworkImage.h */,
 				74585F44191C8B5700F5E8C8 /* UIView+XHNetworkImage.m */,
+				AB71383A193193A6009792B5 /* UIButton+XHButtonTitlePosition.h */,
+				AB71383B193193A6009792B5 /* UIButton+XHButtonTitlePosition.m */,
 			);
 			path = Categorys;
 			sourceTree = "<group>";
@@ -1530,6 +1559,7 @@
 				74E900501927940000D37C81 /* ff_IconLocationService@2x.png */,
 				74E9004F1927940000D37C81 /* ff_IconBottle@2x.png */,
 				74C3E7E319291F1B0053F4E1 /* AlbumImages */,
+				AB569AA4193179CC0007DB0B /* ShakeImages */,
 				74E900931927A81500D37C81 /* BottleImages */,
 				74E900541927940000D37C81 /* MoreGame@2x.png */,
 			);
@@ -1736,6 +1766,24 @@
 			path = XHDisplayTextViewController;
 			sourceTree = "<group>";
 		};
+		AB569AA4193179CC0007DB0B /* ShakeImages */ = {
+			isa = PBXGroup;
+			children = (
+				AB569AA5193179CC0007DB0B /* Shake_icon_music@2x.png */,
+				AB569AA6193179CC0007DB0B /* Shake_icon_musicHL@2x.png */,
+				AB569AA7193179CC0007DB0B /* Shake_icon_people@2x.png */,
+				AB569AA8193179CC0007DB0B /* Shake_icon_peopleHL@2x.png */,
+				AB569AA9193179CC0007DB0B /* Shake_Line_Down@2x.png */,
+				AB569AAA193179CC0007DB0B /* Shake_Line_Up@2x.png */,
+				AB569AAB193179CC0007DB0B /* Shake_Logo_Down@2x.png */,
+				AB569AAC193179CC0007DB0B /* Shake_Logo_Up@2x.png */,
+				AB71383F193195A3009792B5 /* shake_match.wav */,
+				AB713840193195A3009792B5 /* shake_nomatch.wav */,
+				AB713841193195A3009792B5 /* shake_sound_male.wav */,
+			);
+			path = ShakeImages;
+			sourceTree = "<group>";
+		};
 		AB79A206192C0A6400A9B951 /* XHPathCover */ = {
 			isa = PBXGroup;
 			children = (
@@ -1932,6 +1980,7 @@
 				AB372926192EC6800084D7B5 /* XHDisplayMediaViewController.h in Headers */,
 				AB372920192EC6800084D7B5 /* XHDisplayEmotionViewController.h in Headers */,
 				ABB494041930086C000A2680 /* XHContactCommunicationView.h in Headers */,
+				AB71383C193193A6009792B5 /* UIButton+XHButtonTitlePosition.h in Headers */,
 				AB5493961931102E001F2FCC /* XHContactPhotosTableViewCell.h in Headers */,
 				7D14A009192EFD33004B4D3B /* XHContactView.h in Headers */,
 				7D149FFE192DF2CA004B4D3B /* XHFoundationMacro.h in Headers */,
@@ -2092,11 +2141,13 @@
 				746C885C1916B612007F9A5E /* sharemore_videovoip@2x.png in Resources */,
 				746C882B1916B5EE007F9A5E /* input-bar-background@2x.png in Resources */,
 				74E9009B1927A81500D37C81 /* bottleNightBkg@2x.png in Resources */,
+				AB569AB3193179CC0007DB0B /* Shake_Line_Down@2x.png in Resources */,
 				74E900601927940000D37C81 /* Demo1.gif in Resources */,
 				746C88711916B62D007F9A5E /* section0_emotion0@2x.png in Resources */,
 				746C88581916B612007F9A5E /* sharemore_myfav@2x.png in Resources */,
 				74E9006B1927940000D37C81 /* SNS@2x.png in Resources */,
 				746C88731916B62D007F9A5E /* section0_emotion2@2x.png in Resources */,
+				AB569AAF193179CC0007DB0B /* Shake_icon_music@2x.png in Resources */,
 				AB8ACCE1192EB04400FA1C80 /* MoreMyBankCard@2x.png in Resources */,
 				746C88371916B5FE007F9A5E /* weChatBubble_Sending_Solid@2x.png in Resources */,
 				746C881F1916B5D6007F9A5E /* keyborad@2x.png in Resources */,
@@ -2106,6 +2157,7 @@
 				746C88771916B62D007F9A5E /* section0_emotion6@2x.png in Resources */,
 				74E900631927940000D37C81 /* ff_IconQRCode@2x.png in Resources */,
 				74E5E9AA1921F7710084BCFA /* RecordingSignal002@2x.png in Resources */,
+				AB713842193195A3009792B5 /* shake_match.wav in Resources */,
 				74E5E9AD1921F7710084BCFA /* RecordingSignal005@2x.png in Resources */,
 				7482450F1908C730008EC388 /* InfoPlist.strings in Resources */,
 				74E9005F1927940000D37C81 /* Demo0.gif in Resources */,
@@ -2118,6 +2170,7 @@
 				746C882D1916B5EE007F9A5E /* input-bar-flat@2x.png in Resources */,
 				74E9005E1927940000D37C81 /* avator@2x.png in Resources */,
 				746C887E1916B62D007F9A5E /* section0_emotion13@2x.png in Resources */,
+				AB713843193195A3009792B5 /* shake_nomatch.wav in Resources */,
 				746C88211916B5D6007F9A5E /* multiMedia@2x.png in Resources */,
 				746C88221916B5D6007F9A5E /* voice_HL@2x.png in Resources */,
 				746C882E1916B5EE007F9A5E /* input-field-cover.png in Resources */,
@@ -2125,6 +2178,7 @@
 				746C887F1916B62D007F9A5E /* section0_emotion14@2x.png in Resources */,
 				74E900AB1927ABF800D37C81 /* fishwater@2x.png in Resources */,
 				746C88351916B5FE007F9A5E /* weChatBubble_Receiving_Solid@2x.png in Resources */,
+				AB569AB5193179CC0007DB0B /* Shake_Logo_Down@2x.png in Resources */,
 				746C88751916B62D007F9A5E /* section0_emotion4@2x.png in Resources */,
 				746C88561916B612007F9A5E /* sharemore_friendcard@2x.png in Resources */,
 				74E5E9B01921F7710084BCFA /* RecordingSignal008@2x.png in Resources */,
@@ -2142,6 +2196,7 @@
 				746C884B1916B607007F9A5E /* SenderVoiceNodePlaying003@2x.png in Resources */,
 				746C88781916B62D007F9A5E /* section0_emotion7@2x.png in Resources */,
 				746C88801916B62D007F9A5E /* section0_emotion15@2x.png in Resources */,
+				AB569AB4193179CC0007DB0B /* Shake_Line_Up@2x.png in Resources */,
 				74E900681927940000D37C81 /* placeholderImage@2x.png in Resources */,
 				746C88461916B607007F9A5E /* ReceiverVoiceNodePlaying003@2x.png in Resources */,
 				744FBDC81915EE7400FB4A65 /* Default-568h@2x.png in Resources */,
@@ -2152,6 +2207,8 @@
 				74E9009A1927A81500D37C81 /* bottleButtonThrow@2x.png in Resources */,
 				746C88471916B607007F9A5E /* SenderVoiceNodePlaying@2x.png in Resources */,
 				74E9006A1927940000D37C81 /* Profile@2x.png in Resources */,
+				AB569AB2193179CC0007DB0B /* Shake_icon_peopleHL@2x.png in Resources */,
+				AB713844193195A3009792B5 /* shake_sound_male.wav in Resources */,
 				746C88821916B64E007F9A5E /* Fav_Cell_Loc@2x.png in Resources */,
 				746C887A1916B62D007F9A5E /* section0_emotion9@2x.png in Resources */,
 				746C885A1916B612007F9A5E /* sharemore_pic@2x.png in Resources */,
@@ -2161,7 +2218,9 @@
 				746C88201916B5D6007F9A5E /* multiMedia_HL@2x.png in Resources */,
 				74E9006E1927940000D37C81 /* TableViewBackgroundImage@2x.png in Resources */,
 				74E5E9AB1921F7710084BCFA /* RecordingSignal003@2x.png in Resources */,
+				AB569AB1193179CC0007DB0B /* Shake_icon_people@2x.png in Resources */,
 				74E900671927940000D37C81 /* IMG_1555.MOV in Resources */,
+				AB569AB6193179CC0007DB0B /* Shake_Logo_Up@2x.png in Resources */,
 				AB79A218192C0B1500A9B951 /* circle@2x.png in Resources */,
 				746C882A1916B5EE007F9A5E /* input-bar-background.png in Resources */,
 				746C88761916B62D007F9A5E /* section0_emotion5@2x.png in Resources */,
@@ -2171,6 +2230,7 @@
 				746C88591916B612007F9A5E /* sharemore_openapi@2x.png in Resources */,
 				74E5E9AC1921F7710084BCFA /* RecordingSignal004@2x.png in Resources */,
 				746C88791916B62D007F9A5E /* section0_emotion8@2x.png in Resources */,
+				AB569AB0193179CC0007DB0B /* Shake_icon_musicHL@2x.png in Resources */,
 				746C885D1916B612007F9A5E /* sharemore_voiceinput@2x.png in Resources */,
 				74C3E7E519291F1B0053F4E1 /* AlbumHeaderBackgrounImage@2x.png in Resources */,
 				AB8ACCE0192EB04400FA1C80 /* MoreMyAlbum@2x.png in Resources */,
@@ -2283,6 +2343,7 @@
 				7D06CA73192B3D9B00DF8C04 /* XHBaseTableViewCell.m in Sources */,
 				74E5EAEA1924FFBE0084BCFA /* SETextMagnifierCaret.m in Sources */,
 				74180BFF190F44A200A35C82 /* NSString+MessageInputView.m in Sources */,
+				AB71383E193193A6009792B5 /* UIButton+XHButtonTitlePosition.m in Sources */,
 				740660C01914D65600E1CE95 /* XHEmotion.m in Sources */,
 				74901A41191D3B1C0049AFF9 /* XHProfileTableViewController.m in Sources */,
 				74E5EAE11924FFBE0084BCFA /* SETextGeometry.m in Sources */,
@@ -2445,6 +2506,7 @@
 				AB372909192EC62C0084D7B5 /* XHLocationServiceTableViewController.m in Sources */,
 				74E900B41928F3D100D37C81 /* XHStoreManager.m in Sources */,
 				74C3E7DC19291A1A0053F4E1 /* XHAlbum.m in Sources */,
+				AB71383D193193A6009792B5 /* UIButton+XHButtonTitlePosition.m in Sources */,
 				746C89391917F691007F9A5E /* XHMessageTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
