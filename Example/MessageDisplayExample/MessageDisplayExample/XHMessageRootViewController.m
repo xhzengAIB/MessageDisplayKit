@@ -9,6 +9,7 @@
 #import "XHMessageRootViewController.h"
 
 #import "XHDemoWeChatMessageTableViewController.h"
+#import "XHFoundationCommon.h"
 
 @interface XHMessageRootViewController ()
 
@@ -24,12 +25,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    UIButton *enterMessageTableViewControllerButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    enterMessageTableViewControllerButton.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds));
-    [enterMessageTableViewControllerButton setTitle:@"进入华捷微信" forState:UIControlStateNormal];
-    [enterMessageTableViewControllerButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [enterMessageTableViewControllerButton addTarget:self action:@selector(enterMessage) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:enterMessageTableViewControllerButton];
+    
+    NSMutableArray *dataSource = [[NSMutableArray alloc] initWithObjects:@"请问你现在在哪里啊？我在广州天河", @"点击我查看最新消息，里面有惊喜哦！", @"点击我查看最新消息，里面有惊喜哦！", @"点击我查看最新消息，里面有惊喜哦！", @"点进入聊天页面，这里有多种显示样式", @"点击我查看最新消息，里面有惊喜哦！", @"点击我查看最新消息，里面有惊喜哦！", @"点击我查看最新消息，里面有惊喜哦！", @"点击我查看最新消息，里面有惊喜哦！", @"点击我查看最新消息，里面有惊喜哦！", @"点击我查看最新消息，里面有惊喜哦！", @"点击我查看最新消息，里面有惊喜哦！", @"请问你现在在哪里啊？我在广州天河", @"请问你现在在哪里啊？我在广州天河", @"请问你现在在哪里啊？我在广州天河", @"请问你现在在哪里啊？我在广州天河", @"请问你现在在哪里啊？我在广州天河", @"点击我查看最新消息，里面有惊喜哦！", @"点击我查看最新消息，里面有惊喜哦！", nil];
+    self.dataSource = dataSource;
+    
+    [self.view addSubview:self.tableView];
 }
 
 - (void)didReceiveMemoryWarning
@@ -38,15 +38,42 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark - UITableView DataSource
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *cellIdentifier = @"cellIdentifier";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
+        cell.textLabel.font = [UIFont systemFontOfSize:15];
+        
+        cell.detailTextLabel.font = [UIFont systemFontOfSize:12];
+        
+    }
+    if (indexPath.row < self.dataSource.count) {
+        cell.textLabel.text = (indexPath.row % 2) ? @"曾宪华" : @"杨仁捷";
+        cell.detailTextLabel.text = self.dataSource[indexPath.row];
+        cell.imageView.image = [UIImage imageNamed:@"avator"];
+    }
+    
+    if (indexPath.row == 4) {
+        cell.detailTextLabel.textColor = [UIColor colorWithRed:0.097 green:0.633 blue:1.000 alpha:1.000];
+    } else {
+        cell.detailTextLabel.textColor = [UIColor grayColor];
+    }
+    
+    return cell;
 }
-*/
+
+#pragma mark - UITableView Delegate
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 50;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [self enterMessage];
+}
 
 @end

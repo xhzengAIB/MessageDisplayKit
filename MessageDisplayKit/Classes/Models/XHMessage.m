@@ -128,11 +128,15 @@
 }
 
 - (instancetype)initWithLocalPositionPhoto:(UIImage *)localPositionPhoto
+                              geolocations:(NSString *)geolocations
+                                  location:(CLLocation *)location
                                     sender:(NSString *)sender
-                                      timestamp:(NSDate *)timestamp {
+                                 timestamp:(NSDate *)timestamp {
     self = [super init];
     if (self) {
         self.localPositionPhoto = localPositionPhoto;
+        self.geolocations = geolocations;
+        self.location = location;
         
         self.sender = sender;
         self.timestamp = timestamp;
@@ -159,6 +163,8 @@
     _emotionPath = nil;
     
     _localPositionPhoto = nil;
+    _geolocations = nil;
+    _location = nil;
     
     _avator = nil;
     _avatorUrl = nil;
@@ -189,6 +195,8 @@
         _emotionPath = [aDecoder decodeObjectForKey:@"emotionPath"];
         
         _localPositionPhoto = [aDecoder decodeObjectForKey:@"localPositionPhoto"];
+        _geolocations = [aDecoder decodeObjectForKey:@"geolocations"];
+        _location = [aDecoder decodeObjectForKey:@"location"];
         
         _avator = [aDecoder decodeObjectForKey:@"avator"];
         _avatorUrl = [aDecoder decodeObjectForKey:@"avatorUrl"];
@@ -219,6 +227,8 @@
     [aCoder encodeObject:self.emotionPath forKey:@"emotionPath"];
     
     [aCoder encodeObject:self.localPositionPhoto forKey:@"localPositionPhoto"];
+    [aCoder encodeObject:self.geolocations forKey:@"geolocations"];
+    [aCoder encodeObject:self.location forKey:@"location"];
     
     [aCoder encodeObject:self.sender forKey:@"sender"];
     [aCoder encodeObject:self.timestamp forKey:@"timestamp"];
@@ -255,6 +265,8 @@
                                                                   timestamp:[self.timestamp copy]];
         case XHBubbleMessageLocalPosition:
             return [[[self class] allocWithZone:zone] initWithLocalPositionPhoto:[self.localPositionPhoto copy]
+                                                                    geolocations:self.geolocations
+                                                                        location:[self.location copy]
                                                                           sender:[self.sender copy]
                                                                             timestamp:[self.timestamp copy]];
         default:

@@ -7,49 +7,62 @@
 //
 
 #import "XHPhotographyHelper.h"
+#import "XHMacro.h"
 
 @interface XHPhotographyHelper () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
 @property (nonatomic, copy) DidFinishTakeMediaCompledBlock didFinishTakeMediaCompled;
-@property (nonatomic, weak) UIViewController *presenViewController;
 
 @end
 
 @implementation XHPhotographyHelper
 
-- (instancetype)initWithViewController:(UIViewController *)viewController didFinishTakeMediaCompledBlock:(DidFinishTakeMediaCompledBlock)didFinishTakeMediaCompled {
+- (instancetype)init {
     self = [super init];
     if (self) {
-        self.presenViewController = viewController;
-        self.didFinishTakeMediaCompled = didFinishTakeMediaCompled;
     }
     return self;
 }
 
-- (void)showOnPickerViewControllerSourceType:(UIImagePickerControllerSourceType)sourceType {
+- (void)dealloc {
+    self.didFinishTakeMediaCompled = nil;
+}
+
+- (void)showOnPickerViewControllerSourceType:(UIImagePickerControllerSourceType)sourceType onViewController:(UIViewController *)viewController compled:(DidFinishTakeMediaCompledBlock)compled {
+    if (![UIImagePickerController isSourceTypeAvailable:sourceType]) {
+        compled(nil, nil);
+        return;
+    }
+    self.didFinishTakeMediaCompled = [compled copy];
     UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
-    imagePickerController.editing = NO;
+    imagePickerController.editing = YES;
     imagePickerController.delegate = self;
     imagePickerController.sourceType = sourceType;
-    [self.presenViewController presentViewController:imagePickerController animated:YES completion:NULL];
+    if (sourceType == UIImagePickerControllerSourceTypeCamera) {
+        imagePickerController.mediaTypes =  [UIImagePickerController availableMediaTypesForSourceType:UIImagePickerControllerSourceTypeCamera];
+    }
+    [viewController presentViewController:imagePickerController animated:YES completion:NULL];
 }
 
 - (void)dismissPickerViewController:(UIImagePickerController *)picker {
-    [picker dismissViewControllerAnimated:YES completion:NULL];
+    WEAKSELF
+    [picker dismissViewControllerAnimated:YES completion:^{
+        weakSelf.didFinishTakeMediaCompled = nil;
+    }];
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary *)editingInfo {
-    [self dismissPickerViewController:picker];
     if (self.didFinishTakeMediaCompled) {
         self.didFinishTakeMediaCompled(image, editingInfo);
     }
+    [self dismissPickerViewController:picker];
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-    [self dismissPickerViewController:picker];
     if (self.didFinishTakeMediaCompled) {
         self.didFinishTakeMediaCompled(nil, info);
     }
+    [self dismissPickerViewController:picker];
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {

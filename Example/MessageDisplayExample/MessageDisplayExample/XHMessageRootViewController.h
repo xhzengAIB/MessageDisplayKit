@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XHBaseTableViewController.h"
 
-@interface XHMessageRootViewController : UIViewController
+@interface XHMessageRootViewController : XHBaseTableViewController
 
 @end

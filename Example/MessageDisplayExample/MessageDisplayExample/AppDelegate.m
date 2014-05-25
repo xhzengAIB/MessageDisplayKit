@@ -7,7 +7,15 @@
 //
 
 #import "AppDelegate.h"
+#import "XHBaseTabBarController.h"
+#import "XHBaseNavigationController.h"
+
 #import "XHMessageRootViewController.h"
+#import "XHContactTableViewController.h"
+#import "XHDiscoverTableViewController.h"
+#import "XHProfileTableViewController.h"
+
+#import "XHMacro.h"
 
 @implementation AppDelegate
 
@@ -17,7 +25,51 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     
-    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[XHMessageRootViewController alloc] init]];
+    // message
+    XHMessageRootViewController *messageRootViewController = [[XHMessageRootViewController alloc] init];
+    messageRootViewController.title = NSLocalizedStringFromTable(@"HUAJIEWeChat", @"MessageDisplayKitString", @"华捷微信");
+    messageRootViewController.tabBarItem.image = [UIImage imageNamed:@"WeChat"];
+    XHBaseNavigationController *messageNavigationController = [[XHBaseNavigationController alloc] initWithRootViewController:messageRootViewController];
+    
+    // contact
+    XHContactTableViewController *contactTableViewController = [[XHContactTableViewController alloc] init];
+    contactTableViewController.title = NSLocalizedStringFromTable(@"Contact", @"MessageDisplayKitString", @"联系人");
+    contactTableViewController.tabBarItem.image = [UIImage imageNamed:@"Contact"];
+    XHBaseNavigationController *contactNavigationController = [[XHBaseNavigationController alloc] initWithRootViewController:contactTableViewController];
+    
+    // discover
+    XHDiscoverTableViewController *discoverTableViewController = [[XHDiscoverTableViewController alloc] init];
+    discoverTableViewController.title = NSLocalizedStringFromTable(@"News", @"MessageDisplayKitString", @"发现");
+    discoverTableViewController.tabBarItem.image = [UIImage imageNamed:@"SNS"];
+    XHBaseNavigationController *discoverNavigationController = [[XHBaseNavigationController alloc] initWithRootViewController:discoverTableViewController];
+    
+    // profile
+    XHProfileTableViewController *profileTableViewController = [[XHProfileTableViewController alloc] init];
+    profileTableViewController.title = NSLocalizedStringFromTable(@"Profile", @"MessageDisplayKitString", @"");
+    profileTableViewController.tabBarItem.image = [UIImage imageNamed:@"Profile"];
+    XHBaseNavigationController *profileNavigationController = [[XHBaseNavigationController alloc] initWithRootViewController:profileTableViewController];
+    
+    // tab bar
+    XHBaseTabBarController *rootTabBarController = [[XHBaseTabBarController alloc] init];
+    rootTabBarController.viewControllers = [NSArray arrayWithObjects:messageNavigationController, contactNavigationController, discoverNavigationController, profileNavigationController, nil];
+    
+    // setup UI Image
+    UIColor *color = [UIColor colorWithRed:0.176 green:0.576 blue:0.980 alpha:1.000];
+    [rootTabBarController.tabBar setBackgroundImage:[UIImage imageNamed:@"tabbarBkg"]];
+    [rootTabBarController.tabBar setSelectedImageTintColor:color];
+    
+    if (CURRENT_SYS_VERSION >= 7.0) {
+        [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:0.071 green:0.060 blue:0.086 alpha:1.000]];
+        [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    } else {
+        [[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:0.071 green:0.060 blue:0.086 alpha:1.000]];
+    }
+    
+    
+    [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
+                                                           [UIColor whiteColor], NSForegroundColorAttributeName, [UIFont boldSystemFontOfSize:17], NSFontAttributeName, nil]];
+    
+    self.window.rootViewController = rootTabBarController;
     
     [self.window makeKeyAndVisible];
     return YES;

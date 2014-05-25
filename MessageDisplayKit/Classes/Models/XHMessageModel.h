@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
 #import "XHMessageBubbleFactory.h"
 
 @class XHMessage;
@@ -25,10 +26,13 @@
 - (NSString *)videoUrl;
 
 - (NSString *)voicePath;
+- (NSString *)voiceUrl;
+
 - (UIImage *)localPositionPhoto;
+- (NSString *)geolocations;
+- (CLLocation *)location;
 
 - (NSString *)emotionPath;
-- (NSString *)voiceUrl;
 
 - (UIImage *)avator;
 - (NSString *)avatorUrl;

@@ -20,4 +20,9 @@
     return self;
 }
 
+- (void)dealloc {
+    self.normalIconImage = nil;
+    self.title = nil;
+}
+
 @end

@@ -12,8 +12,6 @@ typedef void(^DidFinishTakeMediaCompledBlock)(UIImage *image, NSDictionary *edit
 
 @interface XHPhotographyHelper : NSObject
 
-- (instancetype)initWithViewController:(UIViewController *)viewController didFinishTakeMediaCompledBlock:(DidFinishTakeMediaCompledBlock)didFinishTakeMediaCompled;
-
-- (void)showOnPickerViewControllerSourceType:(UIImagePickerControllerSourceType)sourceType;
+- (void)showOnPickerViewControllerSourceType:(UIImagePickerControllerSourceType)sourceType onViewController:(UIViewController *)viewController compled:(DidFinishTakeMediaCompledBlock)compled;
 
 @end

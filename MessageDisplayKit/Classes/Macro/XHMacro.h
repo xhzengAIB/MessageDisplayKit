@@ -9,25 +9,16 @@
 #ifndef MessageDisplayExample_XHMacro_h
 #define MessageDisplayExample_XHMacro_h
 
-#ifdef DEBUG
-#   define DLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
-#else
-#   define DLog(...)
-#endif
+// Foundation 框架宏定义
+#import "XHFoundationMacro.h"
 
-// block self
-#define WEAKSELF typeof(self) __weak weakSelf = self;
-#define STRONGSELF typeof(weakSelf) __strong strongSelf = weakSelf;
+// UIKit 框架宏定义
+#import "XHUIKitMacro.h"
 
-// device verson float value
-#define CURRENT_SYS_VERSION [[[UIDevice currentDevice] systemVersion] floatValue]
 
-// iPad
-#define kIsiPad (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+// User Default Configure Value
 
-// image
-#define STRETCH_IMAGE(image, top, left, bottom, right) (CURRENT_SYS_VERSION < 6.0 ? [image stretchableImageWithLeftCapWidth:left topCapHeight:top] : [image resizableImageWithCapInsets:UIEdgeInsetsMake(top, left, bottom, right) resizingMode:UIImageResizingModeStretch])
-
-#define XH_STRETCH_IMAGE(image, edgeInsets) (CURRENT_SYS_VERSION < 6.0 ? [image stretchableImageWithLeftCapWidth:edgeInsets.left topCapHeight:edgeInsets.top] : [image resizableImageWithCapInsets:edgeInsets resizingMode:UIImageResizingModeStretch])
+// Max record Time
+#define kVoiceRecorderTotalTime 60.0
 
 #endif
