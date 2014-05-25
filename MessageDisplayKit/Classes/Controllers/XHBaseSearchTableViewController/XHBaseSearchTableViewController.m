@@ -21,15 +21,6 @@
 @property (nonatomic) UISearchDisplayController *searchController;
 
 /**
- *  判断TableView是否为搜索控制器的TableView
- *
- *  @param tableView 被判断的目标TableView对象
- *
- *  @return 返回是否为预想结果
- */
-- (BOOL)enableForSearchTableView:(UITableView *)tableView;
-
-/**
  *  查找搜索框目前文本是否为搜索目标文本
  *
  *  @param searchText 搜索框的文本

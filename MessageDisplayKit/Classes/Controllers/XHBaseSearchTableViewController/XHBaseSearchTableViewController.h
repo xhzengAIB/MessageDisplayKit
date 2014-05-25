@@ -21,6 +21,15 @@
 @property (nonatomic, strong) NSArray *sectionIndexTitles;
 
 /**
+ *  判断TableView是否为搜索控制器的TableView
+ *
+ *  @param tableView 被判断的目标TableView对象
+ *
+ *  @return 返回是否为预想结果
+ */
+- (BOOL)enableForSearchTableView:(UITableView *)tableView;
+
+/**
  *  获取搜索框的文本
  *
  *  @return 返回文本对象

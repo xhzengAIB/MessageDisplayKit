@@ -112,7 +112,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    [self pushNewViewController:[[XHContactDetailTableViewController alloc] initWithContact:self.dataSource[indexPath.section][indexPath.row]]];
+    if ([self enableForSearchTableView:tableView]) {
+        [self pushNewViewController:[[XHContactDetailTableViewController alloc] initWithContact:self.filteredDataSource[indexPath.row]]];
+    } else {
+        [self pushNewViewController:[[XHContactDetailTableViewController alloc] initWithContact:self.dataSource[indexPath.section][indexPath.row]]];
+    }
 }
 
 @end
