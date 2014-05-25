@@ -416,6 +416,14 @@
 		AB726383193281CA00AA738F /* XHCaptureHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = AB726381193281CA00AA738F /* XHCaptureHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB726384193281CA00AA738F /* XHCaptureHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AB726382193281CA00AA738F /* XHCaptureHelper.m */; };
 		AB726385193281CA00AA738F /* XHCaptureHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AB726382193281CA00AA738F /* XHCaptureHelper.m */; };
+		AB72638919328D9A00AA738F /* XHLocationServiceTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = AB72638719328D9A00AA738F /* XHLocationServiceTableViewCell.h */; };
+		AB72638A19328D9A00AA738F /* XHLocationServiceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB72638819328D9A00AA738F /* XHLocationServiceTableViewCell.m */; };
+		AB72638B19328D9A00AA738F /* XHLocationServiceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB72638819328D9A00AA738F /* XHLocationServiceTableViewCell.m */; };
+		AB72638E193293DC00AA738F /* barbuttonicon_more@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB72638C193293DC00AA738F /* barbuttonicon_more@2x.png */; };
+		AB72638F193293DC00AA738F /* barbuttonicon_set@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB72638D193293DC00AA738F /* barbuttonicon_set@2x.png */; };
+		AB7263921932944400AA738F /* Shake_Logo_Female_Down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB7263901932944400AA738F /* Shake_Logo_Female_Down@2x.png */; };
+		AB7263931932944400AA738F /* Shake_Logo_Female_Up@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB7263911932944400AA738F /* Shake_Logo_Female_Up@2x.png */; };
+		AB726395193296EE00AA738F /* album_add_photo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB726394193296EE00AA738F /* album_add_photo@2x.png */; };
 		AB73B1651932463E009665E3 /* XHScanningView.h in Headers */ = {isa = PBXBuildFile; fileRef = AB73B1631932463E009665E3 /* XHScanningView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB73B1661932463E009665E3 /* XHScanningView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB73B1641932463E009665E3 /* XHScanningView.m */; };
 		AB73B1671932463E009665E3 /* XHScanningView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB73B1641932463E009665E3 /* XHScanningView.m */; };
@@ -831,6 +839,13 @@
 		AB713841193195A3009792B5 /* shake_sound_male.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = shake_sound_male.wav; sourceTree = "<group>"; };
 		AB726381193281CA00AA738F /* XHCaptureHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHCaptureHelper.h; sourceTree = "<group>"; };
 		AB726382193281CA00AA738F /* XHCaptureHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHCaptureHelper.m; sourceTree = "<group>"; };
+		AB72638719328D9A00AA738F /* XHLocationServiceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLocationServiceTableViewCell.h; sourceTree = "<group>"; };
+		AB72638819328D9A00AA738F /* XHLocationServiceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHLocationServiceTableViewCell.m; sourceTree = "<group>"; };
+		AB72638C193293DC00AA738F /* barbuttonicon_more@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "barbuttonicon_more@2x.png"; sourceTree = "<group>"; };
+		AB72638D193293DC00AA738F /* barbuttonicon_set@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "barbuttonicon_set@2x.png"; sourceTree = "<group>"; };
+		AB7263901932944400AA738F /* Shake_Logo_Female_Down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shake_Logo_Female_Down@2x.png"; sourceTree = "<group>"; };
+		AB7263911932944400AA738F /* Shake_Logo_Female_Up@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shake_Logo_Female_Up@2x.png"; sourceTree = "<group>"; };
+		AB726394193296EE00AA738F /* album_add_photo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "album_add_photo@2x.png"; sourceTree = "<group>"; };
 		AB73B1631932463E009665E3 /* XHScanningView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHScanningView.h; sourceTree = "<group>"; };
 		AB73B1641932463E009665E3 /* XHScanningView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHScanningView.m; sourceTree = "<group>"; };
 		AB79A207192C0A6400A9B951 /* XHPathCover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHPathCover.h; sourceTree = "<group>"; };
@@ -1129,6 +1144,7 @@
 				7D149FF7192DEB49004B4D3B /* ContactViews */,
 				74C3E7CE1929191E0053F4E1 /* AlbumContentViews */,
 				AB73B16219324630009665E3 /* ScanningView */,
+				AB72638619328D8000AA738F /* LocationServiceViews */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1475,6 +1491,7 @@
 				AB79A216192C0B1500A9B951 /* circle@2x.png */,
 				AB79A217192C0B1500A9B951 /* pullrefresh.aif */,
 				74C3E7E419291F1B0053F4E1 /* AlbumHeaderBackgrounImage@2x.png */,
+				AB726394193296EE00AA738F /* album_add_photo@2x.png */,
 			);
 			path = AlbumImages;
 			sourceTree = "<group>";
@@ -1595,6 +1612,8 @@
 				74E900521927940000D37C81 /* ff_IconShake@2x.png */,
 				74E900501927940000D37C81 /* ff_IconLocationService@2x.png */,
 				74E9004F1927940000D37C81 /* ff_IconBottle@2x.png */,
+				AB72638C193293DC00AA738F /* barbuttonicon_more@2x.png */,
+				AB72638D193293DC00AA738F /* barbuttonicon_set@2x.png */,
 				ABF9EC0219324D64003B95DC /* ScanningImages */,
 				74C3E7E319291F1B0053F4E1 /* AlbumImages */,
 				AB569AA4193179CC0007DB0B /* ShakeImages */,
@@ -1813,6 +1832,8 @@
 				AB569AA8193179CC0007DB0B /* Shake_icon_peopleHL@2x.png */,
 				AB569AA9193179CC0007DB0B /* Shake_Line_Down@2x.png */,
 				AB569AAA193179CC0007DB0B /* Shake_Line_Up@2x.png */,
+				AB7263901932944400AA738F /* Shake_Logo_Female_Down@2x.png */,
+				AB7263911932944400AA738F /* Shake_Logo_Female_Up@2x.png */,
 				AB569AAB193179CC0007DB0B /* Shake_Logo_Down@2x.png */,
 				AB569AAC193179CC0007DB0B /* Shake_Logo_Up@2x.png */,
 				AB71383F193195A3009792B5 /* shake_match.wav */,
@@ -1820,6 +1841,15 @@
 				AB713841193195A3009792B5 /* shake_sound_male.wav */,
 			);
 			path = ShakeImages;
+			sourceTree = "<group>";
+		};
+		AB72638619328D8000AA738F /* LocationServiceViews */ = {
+			isa = PBXGroup;
+			children = (
+				AB72638719328D9A00AA738F /* XHLocationServiceTableViewCell.h */,
+				AB72638819328D9A00AA738F /* XHLocationServiceTableViewCell.m */,
+			);
+			path = LocationServiceViews;
 			sourceTree = "<group>";
 		};
 		AB73B16219324630009665E3 /* ScanningView */ = {
@@ -2042,6 +2072,7 @@
 				AB8ACCE7192EB0A400FA1C80 /* XHMultipleSectionTableViewController.h in Headers */,
 				7D14A000192DF30C004B4D3B /* XHUIKitMacro.h in Headers */,
 				AB372923192EC6800084D7B5 /* XHDisplayLocationViewController.h in Headers */,
+				AB72638919328D9A00AA738F /* XHLocationServiceTableViewCell.h in Headers */,
 				AB372929192EC6800084D7B5 /* XHDisplayTextViewController.h in Headers */,
 				AB372926192EC6800084D7B5 /* XHDisplayMediaViewController.h in Headers */,
 				AB372920192EC6800084D7B5 /* XHDisplayEmotionViewController.h in Headers */,
@@ -2223,6 +2254,7 @@
 				746C881F1916B5D6007F9A5E /* keyborad@2x.png in Resources */,
 				746C882C1916B5EE007F9A5E /* input-bar-flat.png in Resources */,
 				746C887C1916B62D007F9A5E /* section0_emotion11@2x.png in Resources */,
+				AB7263931932944400AA738F /* Shake_Logo_Female_Up@2x.png in Resources */,
 				74E900AC1927ABF800D37C81 /* fishwater2@2x.png in Resources */,
 				746C88771916B62D007F9A5E /* section0_emotion6@2x.png in Resources */,
 				74E900631927940000D37C81 /* ff_IconQRCode@2x.png in Resources */,
@@ -2258,6 +2290,7 @@
 				ABF9EC1019324D64003B95DC /* ScanBook_HL@2x.png in Resources */,
 				746C881E1916B5D6007F9A5E /* keyborad_HL@2x.png in Resources */,
 				746C88741916B62D007F9A5E /* section0_emotion3@2x.png in Resources */,
+				AB72638F193293DC00AA738F /* barbuttonicon_set@2x.png in Resources */,
 				746C884A1916B607007F9A5E /* SenderVoiceNodePlaying002@2x.png in Resources */,
 				ABF9EC1119324D64003B95DC /* ScanQR1@2x.png in Resources */,
 				746C88481916B607007F9A5E /* SenderVoiceNodePlaying000@2x.png in Resources */,
@@ -2285,6 +2318,7 @@
 				746C88471916B607007F9A5E /* SenderVoiceNodePlaying@2x.png in Resources */,
 				74E9006A1927940000D37C81 /* Profile@2x.png in Resources */,
 				AB569AB2193179CC0007DB0B /* Shake_icon_peopleHL@2x.png in Resources */,
+				AB72638E193293DC00AA738F /* barbuttonicon_more@2x.png in Resources */,
 				AB713844193195A3009792B5 /* shake_sound_male.wav in Resources */,
 				746C88821916B64E007F9A5E /* Fav_Cell_Loc@2x.png in Resources */,
 				ABF9EC0F19324D64003B95DC /* ScanBook@2x.png in Resources */,
@@ -2326,10 +2360,12 @@
 				74E900A61927A9C900D37C81 /* bottleWriting@2x.png in Resources */,
 				74E5E9AE1921F7710084BCFA /* RecordingSignal006@2x.png in Resources */,
 				746C88491916B607007F9A5E /* SenderVoiceNodePlaying001@2x.png in Resources */,
+				AB726395193296EE00AA738F /* album_add_photo@2x.png in Resources */,
 				74E5E9B11921F7710084BCFA /* RecordingBkg@2x.png in Resources */,
 				74E900641927940000D37C81 /* ff_IconShake@2x.png in Resources */,
 				746C885B1916B612007F9A5E /* sharemore_video@2x.png in Resources */,
 				AB8ACCE3192EB04400FA1C80 /* MoreSetting@2x.png in Resources */,
+				AB7263921932944400AA738F /* Shake_Logo_Female_Down@2x.png in Resources */,
 				746C882F1916B5EE007F9A5E /* input-field-cover@2x.png in Resources */,
 				746C88421916B607007F9A5E /* ReceiverVoiceNodePlaying@2x.png in Resources */,
 				744FBDC91915EE7400FB4A65 /* Default@2x.png in Resources */,
@@ -2419,6 +2455,7 @@
 				74180BFE190F44A000A35C82 /* UIScrollView+XHkeyboardControl.m in Sources */,
 				7D13FC51192C4F4000A23413 /* UIImageView+XHURLDownload.m in Sources */,
 				746C893A1917F691007F9A5E /* XHMessageTableView.m in Sources */,
+				AB72638B19328D9A00AA738F /* XHLocationServiceTableViewCell.m in Sources */,
 				7D13FC5A192C4F4000A23413 /* XHImageViewer.m in Sources */,
 				749019B6191D315A0049AFF9 /* XHMessageVideoConverPhotoFactory.m in Sources */,
 				7D06CA73192B3D9B00DF8C04 /* XHBaseTableViewCell.m in Sources */,
@@ -2584,6 +2621,7 @@
 				7482455C190902DA008EC388 /* UIScrollView+XHkeyboardControl.m in Sources */,
 				746C894B1917F691007F9A5E /* XHEmotionManagerView.m in Sources */,
 				74E5E98A1921317B0084BCFA /* XHVoiceRecordHelper.m in Sources */,
+				AB72638A19328D9A00AA738F /* XHLocationServiceTableViewCell.m in Sources */,
 				7D06CA72192B3D9B00DF8C04 /* XHBaseTableViewCell.m in Sources */,
 				7D13FC50192C4F4000A23413 /* UIImageView+XHURLDownload.m in Sources */,
 				AB372909192EC62C0084D7B5 /* XHLocationServiceTableViewController.m in Sources */,

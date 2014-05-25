@@ -10,11 +10,39 @@
 
 @interface XHBaseViewController ()
 
+@property (nonatomic, copy) XHBarButtonItemActionBlock barbuttonItemAction;
+
 @end
 
 @implementation XHBaseViewController
 
+- (void)clickedBarButtonItemAction {
+    if (self.barbuttonItemAction) {
+        self.barbuttonItemAction();
+    }
+}
+
 #pragma mark - Public Method
+
+- (void)configureBarbuttonItemStyle:(XHBarbuttonItemStyle)style action:(XHBarButtonItemActionBlock)action {
+    switch (style) {
+        case kXHBarbuttonItemSettingStyle: {
+            self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"barbuttonicon_set"] style:UIBarButtonItemStyleBordered target:self action:@selector(clickedBarButtonItemAction)];
+            break;
+        }
+        case kXHBarbuttonItemMoreStyle: {
+            self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"barbuttonicon_more"] style:UIBarButtonItemStyleBordered target:self action:@selector(clickedBarButtonItemAction)];
+            break;
+        }
+        case kXHBarbuttonItemCameraStyle: {
+            self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"album_add_photo"] style:UIBarButtonItemStyleBordered target:self action:@selector(clickedBarButtonItemAction)];
+            break;
+        }
+        default:
+            break;
+    }
+    self.barbuttonItemAction = action;
+}
 
 - (void)setupBackgroundImage:(UIImage *)backgroundImage {
     UIImageView *backgroundImageView = [[UIImageView alloc] initWithFrame:self.view.frame];

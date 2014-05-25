@@ -94,6 +94,10 @@
     // Do any additional setup after loading the view.
     self.title = NSLocalizedStringFromTable(@"Album", @"MessageDisplayKitString", @"朋友圈");
     
+    [self configureBarbuttonItemStyle:kXHBarbuttonItemCameraStyle action:^{
+        DLog(@"发送朋友圈");
+    }];
+    
     self.tableView.tableHeaderView = self.albumHeaderContainerViewPathCover;
     
     [self configuraTableViewNormalSeparatorInset];

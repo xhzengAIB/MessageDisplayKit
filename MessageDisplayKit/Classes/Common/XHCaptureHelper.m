@@ -14,6 +14,8 @@
 
 @property (nonatomic, strong) AVCaptureVideoPreviewLayer *captureVideoPreviewLayer;
 @property (nonatomic, strong) AVCaptureSession *captureSession;
+@property (nonatomic, strong) AVCaptureDeviceInput *captureInput;
+@property (nonatomic, strong) AVCaptureVideoDataOutput *captureOutput;
 
 @end
 
@@ -38,17 +40,17 @@
         
         AVCaptureDevice *inputDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
         
-        AVCaptureDeviceInput *captureInput = [AVCaptureDeviceInput deviceInputWithDevice:inputDevice error:nil];
-        [self.captureSession addInput:captureInput];
+        _captureInput = [AVCaptureDeviceInput deviceInputWithDevice:inputDevice error:nil];
+        [self.captureSession addInput:self.captureInput];
         
-        AVCaptureVideoDataOutput *captureOutput = [[AVCaptureVideoDataOutput alloc] init];
-        captureOutput.alwaysDiscardsLateVideoFrames = YES;
-        [captureOutput setSampleBufferDelegate:self queue:self.captureSessionQueue];
+        _captureOutput = [[AVCaptureVideoDataOutput alloc] init];
+        _captureOutput.alwaysDiscardsLateVideoFrames = YES;
+        [_captureOutput setSampleBufferDelegate:self queue:self.captureSessionQueue];
         NSString *key = (NSString *)kCVPixelBufferPixelFormatTypeKey;
         NSNumber *value = [NSNumber numberWithUnsignedInt:kCVPixelFormatType_32BGRA];
         NSDictionary *videoSettings = [NSDictionary dictionaryWithObject:value forKey:key];
-        [captureOutput setVideoSettings:videoSettings];
-        [self.captureSession addOutput:captureOutput];
+        [_captureOutput setVideoSettings:videoSettings];
+        [self.captureSession addOutput:self.captureOutput];
         
         NSString* preset = 0;
         if (NSClassFromString(@"NSOrderedSet") && // Proxy for "is this iOS 5" ...
@@ -84,9 +86,16 @@
 }
 
 - (void)dealloc {
+    NSLog(@"进来几次？");
     _captureSessionQueue = nil;
-    _captureSession = nil;
     _captureVideoPreviewLayer = nil;
+    
+    if (![_captureSession canAddOutput:self.captureOutput])
+        [_captureSession removeOutput:self.captureOutput];
+    self.captureOutput = nil;
+    
+    [_captureSession stopRunning];
+    _captureSession = nil;   
 }
 
 #pragma mark - AVCaptureVideoDataOutputSampleBuffer Delegate

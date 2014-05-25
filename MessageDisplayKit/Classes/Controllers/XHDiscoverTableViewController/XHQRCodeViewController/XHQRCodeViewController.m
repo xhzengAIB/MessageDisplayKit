@@ -45,6 +45,10 @@
     [self.scanningView transformScanningTypeWithStyle:sender.tag];
 }
 
+- (void)showPhotoLibray {
+    
+}
+
 #pragma mark - Propertys
 
 - (UIButton *)createButton {
@@ -155,6 +159,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = NSLocalizedStringFromTable(@"Scanning", @"MessageDisplayKitString", @"扫一扫");
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"相册" style:UIBarButtonItemStyleBordered target:self action:@selector(showPhotoLibray)];
     
     self.view.backgroundColor = [UIColor grayColor];
     

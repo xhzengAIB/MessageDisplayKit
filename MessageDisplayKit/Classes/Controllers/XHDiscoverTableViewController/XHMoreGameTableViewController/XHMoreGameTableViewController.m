@@ -20,6 +20,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = NSLocalizedStringFromTable(@"Gamge", @"MessageDisplayKitString", @"游戏");
+    
+    [self configureBarbuttonItemStyle:kXHBarbuttonItemMoreStyle action:^{
+        DLog(@"游戏更多");
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

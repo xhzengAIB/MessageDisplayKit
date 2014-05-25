@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^XHBarButtonItemActionBlock)(void);
+
+typedef NS_ENUM(NSInteger, XHBarbuttonItemStyle) {
+    kXHBarbuttonItemSettingStyle = 0,
+    kXHBarbuttonItemMoreStyle,
+    kXHBarbuttonItemCameraStyle,
+};
+
 @interface XHBaseViewController : UIViewController
 
 /**
@@ -50,5 +58,7 @@
  *  隐藏在该View上的所有HUD，不管有哪些，都会全部被隐藏
  */
 - (void)hideLoading;
+
+- (void)configureBarbuttonItemStyle:(XHBarbuttonItemStyle)style action:(XHBarButtonItemActionBlock)action;
 
 @end
