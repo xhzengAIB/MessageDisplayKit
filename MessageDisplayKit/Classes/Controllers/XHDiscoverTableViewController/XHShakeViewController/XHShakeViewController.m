@@ -180,7 +180,7 @@
         self.edgesForExtendedLayout = UIRectEdgeNone;
     }
     
-    self.title = NSLocalizedStringFromTable(@"Shake", @"MessageDisplayKitString", @"个人信息");
+    self.title = NSLocalizedStringFromTable(@"Shake", @"MessageDisplayKitString", @"摇一摇");
     
     self.animationDistans = kIsiPad ? 230 : 100;
     

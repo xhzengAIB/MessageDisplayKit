@@ -92,7 +92,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = NSLocalizedStringFromTable(@"Album", @"MessageDisplayKitString", @"个人信息");
+    self.title = NSLocalizedStringFromTable(@"Album", @"MessageDisplayKitString", @"朋友圈");
     
     self.tableView.tableHeaderView = self.albumHeaderContainerViewPathCover;
     

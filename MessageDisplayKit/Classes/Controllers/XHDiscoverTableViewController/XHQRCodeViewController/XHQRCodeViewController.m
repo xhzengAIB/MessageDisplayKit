@@ -12,9 +12,13 @@
 
 #import "UIButton+XHButtonTitlePosition.h"
 
+#import "XHCaptureHelper.h"
+
 #define kXHScanningButtonPadding 36
 
 @interface XHQRCodeViewController ()
+
+@property (nonatomic, strong) UIView *preview;
 
 @property (nonatomic, strong) XHScanningView *scanningView;
 
@@ -23,6 +27,8 @@
 @property (nonatomic, strong) UIButton *scanBookButton;
 @property (nonatomic, strong) UIButton *scanStreetButton;
 @property (nonatomic, strong) UIButton *scanWordButton;
+
+@property (nonatomic, strong) XHCaptureHelper *captureHelper;
 
 @end
 
@@ -47,6 +53,13 @@
     button.titleLabel.font = [UIFont systemFontOfSize:12];
     [button addTarget:self action:@selector(scanButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
     return button;
+}
+
+- (UIView *)preview {
+    if (!_preview) {
+        _preview = [[UIView alloc] initWithFrame:self.view.bounds];
+    }
+    return _preview;
 }
 
 - (XHScanningView *)scanningView {
@@ -124,15 +137,28 @@
     return _scanWordButton;
 }
 
+- (XHCaptureHelper *)captureHelper {
+    if (!_captureHelper) {
+        _captureHelper = [[XHCaptureHelper alloc] init];
+    }
+    return _captureHelper;
+}
 
 #pragma Life Cycle
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self.captureHelper showCaptureOnView:self.preview];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = NSLocalizedStringFromTable(@"Scanning", @"MessageDisplayKitString", @"个人信息");
+    self.title = NSLocalizedStringFromTable(@"Scanning", @"MessageDisplayKitString", @"扫一扫");
     
     self.view.backgroundColor = [UIColor grayColor];
+    
+    [self.view addSubview:self.preview];
     
     [self.view addSubview:self.scanningView];
     [self.view addSubview:self.buttonContainerView];
@@ -141,6 +167,11 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)dealloc {
+    self.captureHelper = nil;
+    self.scanningView = nil;
 }
 
 @end

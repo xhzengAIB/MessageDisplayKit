@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = NSLocalizedStringFromTable(@"Gamge", @"MessageDisplayKitString", @"");
+    self.title = NSLocalizedStringFromTable(@"Gamge", @"MessageDisplayKitString", @"游戏");
 }
 
 - (void)didReceiveMemoryWarning {

@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = NSLocalizedStringFromTable(@"NearbyPeople", @"MessageDisplayKitString", @"个人信息");
+    self.title = NSLocalizedStringFromTable(@"NearbyPeople", @"MessageDisplayKitString", @"附近的人");
 }
 
 - (void)didReceiveMemoryWarning {

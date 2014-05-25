@@ -185,7 +185,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = NSLocalizedStringFromTable(@"Bottle", @"MessageDisplayKitString", @"个人信息");
+    self.title = NSLocalizedStringFromTable(@"Bottle", @"MessageDisplayKitString", @"漂流瓶");
     [self initilzer];
 }
 
