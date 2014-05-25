@@ -10,6 +10,8 @@
 
 @interface XHCaptureHelper ()
 
+@property (nonatomic, copy) DidOutputSampleBufferBlock didOutputSampleBuffer;
+
 @property (nonatomic, strong) dispatch_queue_t captureSessionQueue;
 
 @property (nonatomic, strong) AVCaptureVideoPreviewLayer *captureVideoPreviewLayer;
@@ -20,6 +22,10 @@
 @end
 
 @implementation XHCaptureHelper
+
+- (void)setDidOutputSampleBufferHandle:(DidOutputSampleBufferBlock)didOutputSampleBuffer {
+    self.didOutputSampleBuffer = didOutputSampleBuffer;
+}
 
 - (void)showCaptureOnView:(UIView *)preview {
     dispatch_async(self.captureSessionQueue, ^{
@@ -86,7 +92,6 @@
 }
 
 - (void)dealloc {
-    NSLog(@"进来几次？");
     _captureSessionQueue = nil;
     _captureVideoPreviewLayer = nil;
     
@@ -101,7 +106,9 @@
 #pragma mark - AVCaptureVideoDataOutputSampleBuffer Delegate
 
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection {
-    
+    if (self.didOutputSampleBuffer) {
+        self.didOutputSampleBuffer(sampleBuffer);
+    }
 }
 
 @end

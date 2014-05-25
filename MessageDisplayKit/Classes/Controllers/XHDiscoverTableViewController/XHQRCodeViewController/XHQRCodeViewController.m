@@ -14,6 +14,8 @@
 
 #import "XHCaptureHelper.h"
 
+#import "XHVideoOutputSampleBufferFactory.h"
+
 #define kXHScanningButtonPadding 36
 
 @interface XHQRCodeViewController ()
@@ -144,6 +146,10 @@
 - (XHCaptureHelper *)captureHelper {
     if (!_captureHelper) {
         _captureHelper = [[XHCaptureHelper alloc] init];
+        [_captureHelper setDidOutputSampleBufferHandle:^(CMSampleBufferRef sampleBuffer) {
+            // 这里可以做子线程的QRCode识别
+            DLog(@"image : %@", [XHVideoOutputSampleBufferFactory imageFromSampleBuffer:sampleBuffer]);
+        }];
     }
     return _captureHelper;
 }
