@@ -1148,8 +1148,8 @@
 		746C89531917F7B4007F9A5E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				746C89721917F89A007F9A5E /* XHBaseNavigationController */,
 				746C89731917F89A007F9A5E /* XHBaseTabBarController */,
+				746C89721917F89A007F9A5E /* XHBaseNavigationController */,
 				74901A42191D4CD30049AFF9 /* XHBaseViewController */,
 				746C89741917F89A007F9A5E /* XHBaseTableViewController */,
 				AB02A9F2192D8DA9004AA23D /* XHBaseSearchTableViewController */,
