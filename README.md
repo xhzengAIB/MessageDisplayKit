@@ -84,10 +84,10 @@ Support the StoryBorad to user.
 Support pull down load more old message, keep visible cells static when inserting old message at top.
 * 19、支持通信录
 * 20、支持朋友圈
-* 21、支持漂流瓶
-* 22、支持附近的人
-* 23、支持扫一扫
-* 24、支持摇一摇
+* 21、支持扫一扫
+* 22、支持摇一摇
+* 23、支持附近的人
+* 24、支持漂流瓶
 
 ## License
 
