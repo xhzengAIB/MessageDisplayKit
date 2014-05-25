@@ -182,7 +182,7 @@
     
     self.title = NSLocalizedStringFromTable(@"Shake", @"MessageDisplayKitString", @"个人信息");
     
-    self.animationDistans = kIsiPad ? 230 : 200;
+    self.animationDistans = kIsiPad ? 230 : 100;
     
     self.view.backgroundColor = [UIColor colorWithRed:0.102 green:0.102 blue:0.114 alpha:1.000];
     
