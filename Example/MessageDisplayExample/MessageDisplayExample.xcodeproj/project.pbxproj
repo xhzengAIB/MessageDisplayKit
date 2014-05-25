@@ -393,6 +393,7 @@
 		AB44D41B192D8BB50069A210 /* XHContact.h in Headers */ = {isa = PBXBuildFile; fileRef = AB44D419192D8BB50069A210 /* XHContact.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB44D41C192D8BB50069A210 /* XHContact.m in Sources */ = {isa = PBXBuildFile; fileRef = AB44D41A192D8BB50069A210 /* XHContact.m */; };
 		AB44D41D192D8BB50069A210 /* XHContact.m in Sources */ = {isa = PBXBuildFile; fileRef = AB44D41A192D8BB50069A210 /* XHContact.m */; };
+		AB4F12F61932AC1300693BD5 /* AlbumFlagMark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB4F12F51932AC1300693BD5 /* AlbumFlagMark@2x.png */; };
 		AB5493961931102E001F2FCC /* XHContactPhotosTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = AB5493941931102E001F2FCC /* XHContactPhotosTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB5493971931102E001F2FCC /* XHContactPhotosTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB5493951931102E001F2FCC /* XHContactPhotosTableViewCell.m */; };
 		AB5493981931102E001F2FCC /* XHContactPhotosTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB5493951931102E001F2FCC /* XHContactPhotosTableViewCell.m */; };
@@ -825,6 +826,7 @@
 		AB439972192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHAlbumCollectionViewFlowLayout.m; sourceTree = "<group>"; };
 		AB44D419192D8BB50069A210 /* XHContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHContact.h; sourceTree = "<group>"; };
 		AB44D41A192D8BB50069A210 /* XHContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHContact.m; sourceTree = "<group>"; };
+		AB4F12F51932AC1300693BD5 /* AlbumFlagMark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AlbumFlagMark@2x.png"; sourceTree = "<group>"; };
 		AB5493941931102E001F2FCC /* XHContactPhotosTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHContactPhotosTableViewCell.h; sourceTree = "<group>"; };
 		AB5493951931102E001F2FCC /* XHContactPhotosTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHContactPhotosTableViewCell.m; sourceTree = "<group>"; };
 		AB549399193110BD001F2FCC /* XHContactPhotosView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHContactPhotosView.h; sourceTree = "<group>"; };
@@ -1497,6 +1499,7 @@
 		74C3E7E319291F1B0053F4E1 /* AlbumImages */ = {
 			isa = PBXGroup;
 			children = (
+				AB4F12F51932AC1300693BD5 /* AlbumFlagMark@2x.png */,
 				ABE87CD2192D6D7F00EC1E49 /* AlbumOperateMore@2x.png */,
 				ABE87CD3192D6D7F00EC1E49 /* AlbumOperateMoreHL@2x.png */,
 				AB79A216192C0B1500A9B951 /* circle@2x.png */,
@@ -2386,6 +2389,7 @@
 				746C88491916B607007F9A5E /* SenderVoiceNodePlaying001@2x.png in Resources */,
 				AB726395193296EE00AA738F /* album_add_photo@2x.png in Resources */,
 				74E5E9B11921F7710084BCFA /* RecordingBkg@2x.png in Resources */,
+				AB4F12F61932AC1300693BD5 /* AlbumFlagMark@2x.png in Resources */,
 				74E900641927940000D37C81 /* ff_IconShake@2x.png in Resources */,
 				746C885B1916B612007F9A5E /* sharemore_video@2x.png in Resources */,
 				AB8ACCE3192EB04400FA1C80 /* MoreSetting@2x.png in Resources */,

@@ -206,9 +206,9 @@
     
     for (int i = 0 ; i < 20; i ++) {
         if (i % 2) {
-            [locationServices addObject:@"曾宪华"];
-        } else {
             [locationServices addObject:@"杨仁捷"];
+        } else {
+            [locationServices addObject:@"吴盛潮"];
         }
     }
     
