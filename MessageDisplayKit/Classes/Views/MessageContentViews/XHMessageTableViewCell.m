@@ -98,8 +98,8 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
 @implementation XHMessageTableViewCell
 
 - (void)avatorButtonClicked:(UIButton *)sender {
-    if ([self.delegate respondsToSelector:@selector(didSelectedAvatorAtIndexPath:)]) {
-        [self.delegate didSelectedAvatorAtIndexPath:self.indexPath];
+    if ([self.delegate respondsToSelector:@selector(didSelectedAvatorOnMessage:atIndexPath:)]) {
+        [self.delegate didSelectedAvatorOnMessage:self.messageBubbleView.message atIndexPath:self.indexPath];
     }
 }
 

@@ -12,7 +12,7 @@
 #import "XHDisplayMediaViewController.h"
 #import "XHDisplayLocationViewController.h"
 
-#import "XHProfileTableViewController.h"
+#import "XHContactDetailTableViewController.h"
 
 @interface XHDemoWeChatMessageTableViewController ()
 
@@ -218,10 +218,13 @@
     [self.navigationController pushViewController:displayTextViewController animated:YES];
 }
 
-- (void)didSelectedAvatorAtIndexPath:(NSIndexPath *)indexPath {
+- (void)didSelectedAvatorOnMessage:(id<XHMessageModel>)message atIndexPath:(NSIndexPath *)indexPath {
     DLog(@"indexPath : %@", indexPath);
-    XHProfileTableViewController *profileTableViewController = [[XHProfileTableViewController alloc] init];
-    [self.navigationController pushViewController:profileTableViewController animated:YES];
+    XHContact *contact = [[XHContact alloc] init];
+    contact.contactName = [message sender];
+    contact.contactIntroduction = @"自定义描述，这个需要和业务逻辑挂钩";
+    XHContactDetailTableViewController *contactDetailTableViewController = [[XHContactDetailTableViewController alloc] initWithContact:contact];
+    [self.navigationController pushViewController:contactDetailTableViewController animated:YES];
 }
 
 - (void)menuDidSelectedAtBubbleMessageMenuSelecteType:(XHBubbleMessageMenuSelecteType)bubbleMessageMenuSelecteType {

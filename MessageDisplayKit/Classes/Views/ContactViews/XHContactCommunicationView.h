@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import "XHMessageAvatorFactory.h"
+
 @interface XHContactCommunicationView : UIView
 
 @property (nonatomic, strong) UIButton *videoCommunicationButton;

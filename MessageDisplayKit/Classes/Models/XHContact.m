@@ -10,6 +10,34 @@
 
 @implementation XHContact
 
+- (NSArray *)contactMyAlbums {
+    if (!_contactMyAlbums) {
+        _contactMyAlbums = [[NSArray alloc] initWithObjects:[UIImage imageNamed:@"bottleButtonFish"], [UIImage imageNamed:@"avator"], [UIImage imageNamed:@"MeIcon"], nil];
+    }
+    return _contactMyAlbums;
+}
+
+- (NSString *)contactIntroduction {
+    if (!_contactIntroduction) {
+        _contactIntroduction = @"我是一名iOS开发者，热衷于简洁的UI，希望大神不要吐槽，多谢支持我的人";
+    }
+    return _contactIntroduction;
+}
+
+- (NSString *)contactUserId {
+    if (!_contactUserId) {
+        _contactUserId = @"15915895880";
+    }
+    return _contactUserId;
+}
+
+- (NSString *)contactRegion {
+    if (!_contactRegion) {
+        _contactRegion = @"广州市天河区";
+    }
+    return _contactRegion;
+}
+
 - (NSString *)description {
     return self.contactName;
 }

@@ -70,6 +70,11 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         // Initialization code
+        self.textLabel.font = [UIFont systemFontOfSize:16];
+        self.detailTextLabel.lineBreakMode = NSLineBreakByTruncatingTail;
+        self.detailTextLabel.numberOfLines = 2;
+        self.detailTextLabel.font = [UIFont systemFontOfSize:13];
+        
         [self.contentView addSubview:self.contactPhotosView];
     }
     return self;

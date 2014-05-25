@@ -40,7 +40,7 @@
  *
  *  @param indexPath 该目标消息在哪个IndexPath里面
  */
-- (void)didSelectedAvatorAtIndexPath:(NSIndexPath *)indexPath;
+- (void)didSelectedAvatorOnMessage:(id <XHMessageModel>)message atIndexPath:(NSIndexPath *)indexPath;
 
 /**
  *  Menu Control Selected Item
