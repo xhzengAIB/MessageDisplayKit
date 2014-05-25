@@ -476,6 +476,8 @@
 		ABB777161932A27B00F4ACAF /* XHVideoOutputSampleBufferFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = ABB777141932A27B00F4ACAF /* XHVideoOutputSampleBufferFactory.h */; };
 		ABB777171932A27B00F4ACAF /* XHVideoOutputSampleBufferFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB777151932A27B00F4ACAF /* XHVideoOutputSampleBufferFactory.m */; };
 		ABB777181932A27B00F4ACAF /* XHVideoOutputSampleBufferFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB777151932A27B00F4ACAF /* XHVideoOutputSampleBufferFactory.m */; };
+		ABB7771C1932A7D700F4ACAF /* Contact_Female@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABB7771A1932A7D700F4ACAF /* Contact_Female@2x.png */; };
+		ABB7771D1932A7D700F4ACAF /* Contact_Male@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABB7771B1932A7D700F4ACAF /* Contact_Male@2x.png */; };
 		ABE87CD4192D6D7F00EC1E49 /* AlbumOperateMore@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABE87CD2192D6D7F00EC1E49 /* AlbumOperateMore@2x.png */; };
 		ABE87CD5192D6D7F00EC1E49 /* AlbumOperateMoreHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABE87CD3192D6D7F00EC1E49 /* AlbumOperateMoreHL@2x.png */; };
 		ABF9EC0F19324D64003B95DC /* ScanBook@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABF9EC0319324D64003B95DC /* ScanBook@2x.png */; };
@@ -886,6 +888,8 @@
 		ABB494031930086C000A2680 /* XHContactCommunicationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHContactCommunicationView.m; sourceTree = "<group>"; };
 		ABB777141932A27B00F4ACAF /* XHVideoOutputSampleBufferFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHVideoOutputSampleBufferFactory.h; sourceTree = "<group>"; };
 		ABB777151932A27B00F4ACAF /* XHVideoOutputSampleBufferFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHVideoOutputSampleBufferFactory.m; sourceTree = "<group>"; };
+		ABB7771A1932A7D700F4ACAF /* Contact_Female@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Contact_Female@2x.png"; sourceTree = "<group>"; };
+		ABB7771B1932A7D700F4ACAF /* Contact_Male@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Contact_Male@2x.png"; sourceTree = "<group>"; };
 		ABE87CD2192D6D7F00EC1E49 /* AlbumOperateMore@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AlbumOperateMore@2x.png"; sourceTree = "<group>"; };
 		ABE87CD3192D6D7F00EC1E49 /* AlbumOperateMoreHL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AlbumOperateMoreHL@2x.png"; sourceTree = "<group>"; };
 		ABF9EC0319324D64003B95DC /* ScanBook@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ScanBook@2x.png"; sourceTree = "<group>"; };
@@ -1601,6 +1605,7 @@
 				74E9004B1927940000D37C81 /* avator@2x.png */,
 				74E9004C1927940000D37C81 /* Demo0.gif */,
 				74E9004D1927940000D37C81 /* Demo1.gif */,
+				ABB777191932A7D700F4ACAF /* ContactImages */,
 				74E9004E1927940000D37C81 /* DisconverImages */,
 				AB8ACCD9192EB04400FA1C80 /* ProfileImages */,
 				74E900551927940000D37C81 /* IMG_1555.MOV */,
@@ -1965,6 +1970,15 @@
 			path = XHMoreSettingTableViewController;
 			sourceTree = "<group>";
 		};
+		ABB777191932A7D700F4ACAF /* ContactImages */ = {
+			isa = PBXGroup;
+			children = (
+				ABB7771A1932A7D700F4ACAF /* Contact_Female@2x.png */,
+				ABB7771B1932A7D700F4ACAF /* Contact_Male@2x.png */,
+			);
+			path = ContactImages;
+			sourceTree = "<group>";
+		};
 		ABF9EC0219324D64003B95DC /* ScanningImages */ = {
 			isa = PBXGroup;
 			children = (
@@ -2316,9 +2330,11 @@
 				AB569AB4193179CC0007DB0B /* Shake_Line_Up@2x.png in Resources */,
 				ABF9EC1219324D64003B95DC /* ScanQR2@2x.png in Resources */,
 				74E900681927940000D37C81 /* placeholderImage@2x.png in Resources */,
+				ABB7771C1932A7D700F4ACAF /* Contact_Female@2x.png in Resources */,
 				746C88461916B607007F9A5E /* ReceiverVoiceNodePlaying003@2x.png in Resources */,
 				744FBDC81915EE7400FB4A65 /* Default-568h@2x.png in Resources */,
 				74BBB020190B8EAB00093577 /* MessageDisplayKitString.strings in Resources */,
+				ABB7771D1932A7D700F4ACAF /* Contact_Male@2x.png in Resources */,
 				74E900A51927A9C900D37C81 /* bottleRecord@2x.png in Resources */,
 				74E900661927940000D37C81 /* MoreGame@2x.png in Resources */,
 				74E900611927940000D37C81 /* ff_IconBottle@2x.png in Resources */,

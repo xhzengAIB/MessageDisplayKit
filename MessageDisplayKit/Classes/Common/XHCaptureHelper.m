@@ -47,7 +47,8 @@
         AVCaptureDevice *inputDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
         
         _captureInput = [AVCaptureDeviceInput deviceInputWithDevice:inputDevice error:nil];
-        [self.captureSession addInput:self.captureInput];
+        if ([_captureSession canAddInput:self.captureInput])
+            [self.captureSession addInput:self.captureInput];
         
         _captureOutput = [[AVCaptureVideoDataOutput alloc] init];
         _captureOutput.alwaysDiscardsLateVideoFrames = YES;
