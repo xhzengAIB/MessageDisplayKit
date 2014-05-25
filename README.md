@@ -101,6 +101,10 @@ If you use this open source components in your project, please [Email us](mailto
 ## What app use this open source
 这里会列出所有使用该开源库的App列表。
 
+## 使用到的第三方组件
+* [PathCover](https://github.com/JackTeam/PathCover)用于朋友圈的下拉刷新。
+* [XHImageViewer](https://github.com/JackTeam/XHImageViewer)图片查看器，用于整个项目。
+
 ## Thanks Developer
 [我家App](https://itunes.apple.com/us/app/wo-jia-jia-ting-quan-si-mi/id538285014?mt=8)的主程Aevit提供了技术支持，他的[github](https://github.com/Aevit)地址，点击[我家App](https://itunes.apple.com/us/app/wo-jia-jia-ting-quan-si-mi/id538285014?mt=8)下载安装，如果看到里面有好的效果，可以协商开源。
 
@@ -115,5 +119,5 @@ Thanks you [kishikawakatsumi](https://github.com/kishikawakatsumi) provide [SECo
 该工程里面任何一个效果组件都不能擅自使用，如需使用，请告之于我。
 
 ## Credits
-Thanks to [jessesquires](https://github.com/jessesquires/MessagesTableViewController) who created JSMessagesViewController on which my chat list UI work is based.
+Thanks to [jessesquires](https://github.com/jessesquires/MessagesTableViewController) who created JSMessagesViewController on which my chat list UI work is based.                             
 
