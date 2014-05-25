@@ -12,6 +12,10 @@
 
 #import "UIButton+XHButtonTitlePosition.h"
 
+#import "XHMacro.h"
+
+#define kXHSelectedButtonSpacing (kIsiPad ? 80 : 30)
+
 @interface XHShakeViewController () {
     SystemSoundID shakingSoundID;
 }
@@ -27,6 +31,8 @@
 
 @property (nonatomic, strong) UIImageView *shakeBackgroundImageView;
 
+@property (nonatomic, assign) CGFloat animationDistans;
+
 @end
 
 @implementation XHShakeViewController
@@ -39,11 +45,9 @@
 }
 
 - (void)shaking {
-    CGFloat animationDistans = 100;
-    
     CABasicAnimation *shakeUpImageViewAnimation = [CABasicAnimation animationWithKeyPath:@"transform.translation.y"];
     shakeUpImageViewAnimation.fromValue = 0;
-    shakeUpImageViewAnimation.toValue = [NSNumber numberWithFloat:-animationDistans];
+    shakeUpImageViewAnimation.toValue = [NSNumber numberWithFloat:-self.animationDistans];
     shakeUpImageViewAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     shakeUpImageViewAnimation.duration = 0.4;
     shakeUpImageViewAnimation.removedOnCompletion = NO;
@@ -54,7 +58,7 @@
     shakeDownImageViewAnimation.delegate = self;
     shakeDownImageViewAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     shakeDownImageViewAnimation.fromValue = 0;
-    shakeDownImageViewAnimation.toValue = [NSNumber numberWithFloat:animationDistans];
+    shakeDownImageViewAnimation.toValue = [NSNumber numberWithFloat:self.animationDistans];
     shakeDownImageViewAnimation.duration = 0.4;
     shakeDownImageViewAnimation.removedOnCompletion = NO;
     shakeDownImageViewAnimation.autoreverses = YES;
@@ -87,7 +91,7 @@
 
 - (UIImageView *)shakeUpImageView {
     if (!_shakeUpImageView) {
-        _shakeUpImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 140)];
+        _shakeUpImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds) * 1.0 / 3)];
         _shakeUpImageView.backgroundColor = self.view.backgroundColor;
         _shakeUpImageView.image = [UIImage imageNamed:@"Shake_Logo_Up"];
         _shakeUpImageView.contentMode = UIViewContentModeBottom;
@@ -130,7 +134,7 @@
 
 - (UIImageView *)shakeBackgroundImageView {
     if (!_shakeBackgroundImageView) {
-        _shakeBackgroundImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.shakeUpImageView.frame) - 100, CGRectGetWidth(self.view.bounds), 200)];
+        _shakeBackgroundImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.shakeUpImageView.frame) - self.animationDistans, CGRectGetWidth(self.view.bounds), self.animationDistans * 2)];
         _shakeBackgroundImageView.image = [UIImage imageNamed:@"AlbumHeaderBackgrounImage"];
     }
     return _shakeBackgroundImageView;
@@ -138,7 +142,7 @@
 
 - (UIButton *)peopleButton {
     if (!_peopleButton) {
-        _peopleButton = [[UIButton alloc] initWithFrame:CGRectMake(CGRectGetMidX(_shakeDownImageView.bounds) - 38 - 30, CGRectGetHeight(self.view.bounds) - 150, 38, 34)];
+        _peopleButton = [[UIButton alloc] initWithFrame:CGRectMake(CGRectGetMidX(_shakeDownImageView.bounds) - 38 - kXHSelectedButtonSpacing, CGRectGetHeight(self.view.bounds) - 150, 38, 34)];
         [_peopleButton setImage:[UIImage imageNamed:@"Shake_icon_people"] forState:UIControlStateNormal];
         [_peopleButton setImage:[UIImage imageNamed:@"Shake_icon_peopleHL"] forState:UIControlStateSelected];
         _peopleButton.titleLabel.font = [UIFont systemFontOfSize:12];
@@ -154,7 +158,7 @@
 
 - (UIButton *)musicButton {
     if (!_musicButton) {
-        _musicButton = [[UIButton alloc] initWithFrame:CGRectMake(CGRectGetMidX(self.shakeDownImageView.bounds) + 30, self.peopleButton.frame.origin.y, 38, CGRectGetHeight(self.peopleButton.frame))];
+        _musicButton = [[UIButton alloc] initWithFrame:CGRectMake(CGRectGetMidX(self.shakeDownImageView.bounds) + kXHSelectedButtonSpacing, self.peopleButton.frame.origin.y, CGRectGetWidth(self.peopleButton.frame), CGRectGetHeight(self.peopleButton.frame))];
         [_musicButton setImage:[UIImage imageNamed:@"Shake_icon_music"] forState:UIControlStateNormal];
         [_musicButton setImage:[UIImage imageNamed:@"Shake_icon_musicHL"] forState:UIControlStateSelected];
         [_musicButton setTitle:@"歌曲" forState:UIControlStateNormal];
@@ -177,6 +181,8 @@
     }
     
     self.title = NSLocalizedStringFromTable(@"Shake", @"MessageDisplayKitString", @"个人信息");
+    
+    self.animationDistans = kIsiPad ? 230 : 200;
     
     self.view.backgroundColor = [UIColor colorWithRed:0.102 green:0.102 blue:0.114 alpha:1.000];
     

@@ -56,7 +56,7 @@
 - (XHContactPhotosView *)contactPhotosView {
     if (!_contactPhotosView) {
         CGFloat contactPhotosViewWidht = kXHAlbumPhotoSize * 3 + kXHAlbumPhotoInsets * 2;
-        _contactPhotosView = [[XHContactPhotosView alloc] initWithFrame:CGRectMake(CGRectGetWidth(self.bounds) - contactPhotosViewWidht - 30, kXHAlbumPhotoInsets, contactPhotosViewWidht, kXHAlbumPhotoSize)];
+        _contactPhotosView = [[XHContactPhotosView alloc] initWithFrame:CGRectMake(CGRectGetWidth([[UIScreen mainScreen] bounds]) - (contactPhotosViewWidht + 40), kXHAlbumPhotoInsets, contactPhotosViewWidht, kXHAlbumPhotoSize)];
         _contactPhotosView.backgroundColor = self.contentView.backgroundColor;
         _contactPhotosView.hidden = YES;
     }
