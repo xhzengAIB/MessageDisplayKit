@@ -53,7 +53,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Helper Method
+#pragma mark - Contact Helper Method
 
 - (BOOL)validataWithContact:(XHContact *)contact {
     return (contact && [contact isKindOfClass:[XHContact class]] && contact.contactName);

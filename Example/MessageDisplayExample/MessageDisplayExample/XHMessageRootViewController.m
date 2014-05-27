@@ -17,10 +17,14 @@
 
 @implementation XHMessageRootViewController
 
+#pragma mark - Action
+
 - (void)enterMessage {
     XHDemoWeChatMessageTableViewController *demoWeChatMessageTableViewController = [[XHDemoWeChatMessageTableViewController alloc] init];
     [self.navigationController pushViewController:demoWeChatMessageTableViewController animated:YES];
 }
+
+#pragma mark - Life Cycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];

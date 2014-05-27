@@ -23,15 +23,6 @@
 
 @implementation XHBaseTableViewController
 
-#pragma mark - TableView Helper Method
-
-- (BOOL)validateSeparatorInset {
-    if ([_tableView respondsToSelector:@selector(setSeparatorInset:)]) {
-        return YES;
-    }
-    return NO;
-}
-
 #pragma mark - Publish Method
 
 - (void)configuraTableViewNormalSeparatorInset {
@@ -95,6 +86,15 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - TableView Helper Method
+
+- (BOOL)validateSeparatorInset {
+    if ([_tableView respondsToSelector:@selector(setSeparatorInset:)]) {
+        return YES;
+    }
+    return NO;
 }
 
 #pragma mark - UITableView DataSource

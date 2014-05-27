@@ -72,21 +72,6 @@
     
 }
 
-#pragma mark - Animation Delegate
-
-- (void)animationDidStart:(CAAnimation *)anim {
-    self.shakeUpLineImageView.hidden = NO;
-    self.shakeDownLineImageView.hidden = NO;
-}
-
-- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
-    self.shakeUpLineImageView.hidden = flag;
-    self.shakeDownLineImageView.hidden = flag;
-    if (flag) {
-        [self pullServerNearUsers];
-    }
-}
-
 #pragma mark - Propertys
 
 - (UIImageView *)shakeUpImageView {
@@ -171,7 +156,7 @@
     return _musicButton;
 }
 
-#pragma Life Cycle
+#pragma mark - Life Cycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -208,6 +193,21 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Animation Delegate
+
+- (void)animationDidStart:(CAAnimation *)anim {
+    self.shakeUpLineImageView.hidden = NO;
+    self.shakeDownLineImageView.hidden = NO;
+}
+
+- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
+    self.shakeUpLineImageView.hidden = flag;
+    self.shakeDownLineImageView.hidden = flag;
+    if (flag) {
+        [self pullServerNearUsers];
+    }
 }
 
 #pragma mark - Event Delegate
