@@ -54,15 +54,6 @@
     searchField.rightViewMode = UITextFieldViewModeAlways;
 }
 
-#pragma mark - Filter Helper Method
-
-- (BOOL)enableForSearchTableView:(UITableView *)tableView {
-    if (tableView == self.searchDisplayController.searchResultsTableView) {
-        return YES;
-    }
-    return NO;
-}
-
 #pragma mark - Propertys
 
 - (NSMutableArray *)filteredDataSource {
@@ -125,6 +116,15 @@
             }
         }
     }
+}
+
+#pragma mark - SearchTableView Helper Method
+
+- (BOOL)enableForSearchTableView:(UITableView *)tableView {
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        return YES;
+    }
+    return NO;
 }
 
 #pragma mark - UISearchDisplayController Delegate Methods
