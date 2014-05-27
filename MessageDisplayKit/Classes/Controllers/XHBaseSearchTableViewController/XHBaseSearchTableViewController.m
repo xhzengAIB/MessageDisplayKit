@@ -32,6 +32,28 @@
 
 @implementation XHBaseSearchTableViewController
 
+#pragma mark - Action
+
+- (void)voiceButtonClicked:(UIButton *)sender {
+    [self.searchDisplayController setActive:YES animated:YES];
+}
+
+- (void)configureSearchBarLeftIconButton {
+    UITextField *searchField;
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] < 7.0)
+        searchField = [_aSearchBar.subviews objectAtIndex:1];
+    else
+        searchField = [((UIView *)[_aSearchBar.subviews objectAtIndex:0]).subviews lastObject];
+    
+    UIButton *leftIconButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 22, 22)];
+    [leftIconButton setImage:[UIImage imageNamed:@"VoiceSearchStartBtn"] forState:UIControlStateNormal];
+    [leftIconButton setImage:[UIImage imageNamed:@"VoiceSearchStartBtn_HL"] forState:UIControlStateHighlighted];
+    [leftIconButton addTarget:self action:@selector(voiceButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    
+    searchField.rightView = leftIconButton;
+    searchField.rightViewMode = UITextFieldViewModeAlways;
+}
+
 #pragma mark - Filter Helper Method
 
 - (BOOL)enableForSearchTableView:(UITableView *)tableView {
@@ -68,6 +90,12 @@
 }
 
 #pragma mark - Life Cycle
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    [self configureSearchBarLeftIconButton];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
