@@ -39,9 +39,9 @@
 
 #pragma mark - Bubble view
 
-+ (CGFloat)textDyWidthForText:(NSString *)txt {
++ (CGFloat)neededWidthForText:(NSString *)text {
     CGSize stringSize;
-    stringSize = [txt sizeWithFont:[[XHMessageBubbleView appearance] font]
+    stringSize = [text sizeWithFont:[[XHMessageBubbleView appearance] font]
                      constrainedToSize:CGSizeMake(MAXFLOAT, 19)];
     return roundf(stringSize.width);
 }
@@ -49,10 +49,10 @@
 + (CGSize)neededSizeForText:(NSString *)text {
     CGFloat maxWidth = CGRectGetWidth([[UIScreen mainScreen] bounds]) * (kIsiPad ? 0.8 : 0.55);
     
-    CGFloat dyCurrentWidth = [XHMessageBubbleView textDyWidthForText:text];
+    CGFloat dyWidth = [XHMessageBubbleView neededWidthForText:text];
     
     CGSize textSize = [SETextView frameRectWithAttributtedString:[[NSAttributedString alloc] initWithString:text] constraintSize:CGSizeMake(maxWidth, MAXFLOAT) lineSpacing:kXHTextLineSpacing font:[[XHMessageBubbleView appearance] font]].size;
-    return CGSizeMake((dyCurrentWidth > textSize.width ? textSize.width : dyCurrentWidth) + kBubblePaddingRight * 2 + kXHArrowMarginWidth, textSize.height);
+    return CGSizeMake((dyWidth > textSize.width ? textSize.width : dyWidth) + kBubblePaddingRight * 2 + kXHArrowMarginWidth, textSize.height);
 }
 
 + (CGSize)neededSizeForPhoto:(UIImage *)photo {
