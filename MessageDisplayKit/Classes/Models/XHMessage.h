@@ -24,6 +24,7 @@
 
 @property (nonatomic, copy) NSString *voicePath;
 @property (nonatomic, copy) NSString *voiceUrl;
+@property (nonatomic, copy) NSString *voiceDuration;
 
 @property (nonatomic, copy) NSString *emotionPath;
 
@@ -95,17 +96,19 @@
 /**
  *  初始化语音类型的消息
  *
- *  @param voicePath 目标语音的本地路径
- *  @param voiceUrl  目标语音在服务器的地址
- *  @param sender    发送者
- *  @param date      发送时间
+ *  @param voicePath        目标语音的本地路径
+ *  @param voiceUrl         目标语音在服务器的地址
+ *  @param voiceDuration    目标语音的时长
+ *  @param sender           发送者
+ *  @param date             发送时间
  *
  *  @return 返回Message model 对象
  */
 - (instancetype)initWithVoicePath:(NSString *)voicePath
                          voiceUrl:(NSString *)voiceUrl
-                                  sender:(NSString *)sender
-                                    timestamp:(NSDate *)timestamp;
+                    voiceDuration:(NSString *)voiceDuration
+                           sender:(NSString *)sender
+                        timestamp:(NSDate *)timestamp;
 
 /**
  *  初始化gif表情类型的消息

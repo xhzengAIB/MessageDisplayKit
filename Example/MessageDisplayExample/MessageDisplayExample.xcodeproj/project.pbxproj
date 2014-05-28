@@ -567,6 +567,8 @@
 		ABF9EC1819324D64003B95DC /* ScanStreet_HL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABF9EC0C19324D64003B95DC /* ScanStreet_HL@2x.png */; };
 		ABF9EC1919324D64003B95DC /* ScanWord@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABF9EC0D19324D64003B95DC /* ScanWord@2x.png */; };
 		ABF9EC1A19324D64003B95DC /* ScanWord_HL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABF9EC0E19324D64003B95DC /* ScanWord_HL@2x.png */; };
+		E1664DC01934789A003F4C5B /* SCAudioPlayerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E1664DBF1934789A003F4C5B /* SCAudioPlayerManager.m */; };
+		E1664DC319347916003F4C5B /* XHVoiceCommonHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E1664DC219347916003F4C5B /* XHVoiceCommonHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1052,6 +1054,10 @@
 		ABF9EC0C19324D64003B95DC /* ScanStreet_HL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ScanStreet_HL@2x.png"; sourceTree = "<group>"; };
 		ABF9EC0D19324D64003B95DC /* ScanWord@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ScanWord@2x.png"; sourceTree = "<group>"; };
 		ABF9EC0E19324D64003B95DC /* ScanWord_HL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ScanWord_HL@2x.png"; sourceTree = "<group>"; };
+		E1664DBE1934789A003F4C5B /* SCAudioPlayerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCAudioPlayerManager.h; sourceTree = "<group>"; };
+		E1664DBF1934789A003F4C5B /* SCAudioPlayerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCAudioPlayerManager.m; sourceTree = "<group>"; };
+		E1664DC119347916003F4C5B /* XHVoiceCommonHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHVoiceCommonHelper.h; sourceTree = "<group>"; };
+		E1664DC219347916003F4C5B /* XHVoiceCommonHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHVoiceCommonHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1597,6 +1603,10 @@
 				74585F3D191B999B00F5E8C8 /* XHLocationHelper.m */,
 				74E5E9871921317B0084BCFA /* XHVoiceRecordHelper.h */,
 				74E5E9881921317B0084BCFA /* XHVoiceRecordHelper.m */,
+				E1664DBE1934789A003F4C5B /* SCAudioPlayerManager.h */,
+				E1664DBF1934789A003F4C5B /* SCAudioPlayerManager.m */,
+				E1664DC119347916003F4C5B /* XHVoiceCommonHelper.h */,
+				E1664DC219347916003F4C5B /* XHVoiceCommonHelper.m */,
 				AB726381193281CA00AA738F /* XHCaptureHelper.h */,
 				AB726382193281CA00AA738F /* XHCaptureHelper.m */,
 				ABB777141932A27B00F4ACAF /* XHVideoOutputSampleBufferFactory.h */,
@@ -2886,6 +2896,7 @@
 				74E5EACE1924FFBE0084BCFA /* SEConstants.m in Sources */,
 				749019B5191D315A0049AFF9 /* XHMessageVideoConverPhotoFactory.m in Sources */,
 				746C89301917F691007F9A5E /* XHBubblePhotoImageView.m in Sources */,
+				E1664DC01934789A003F4C5B /* SCAudioPlayerManager.m in Sources */,
 				746C89881917F8EA007F9A5E /* XHBaseTableViewController.m in Sources */,
 				74E5E9961921E90A0084BCFA /* XHVoiceRecordHUD.m in Sources */,
 				7D13FC5F192C4F4000A23413 /* XHZoomingImageView.m in Sources */,
@@ -2921,6 +2932,7 @@
 				740660BF1914D65600E1CE95 /* XHEmotion.m in Sources */,
 				746C89791917F8B2007F9A5E /* XHBaseNavigationController.m in Sources */,
 				74E5EAD71924FFBE0084BCFA /* SESelectionGrabber.m in Sources */,
+				E1664DC319347916003F4C5B /* XHVoiceCommonHelper.m in Sources */,
 				74E5EAF21924FFBE0084BCFA /* SETextSelectionView.m in Sources */,
 				746C89421917F691007F9A5E /* XHMessageTextView.m in Sources */,
 				74065FBA19123E1C00E1CE95 /* XHShareMenuItem.m in Sources */,

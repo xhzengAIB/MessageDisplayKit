@@ -189,7 +189,10 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
             break;
         }
         case XHBubbleMessageText:
-        case XHBubbleMessageVoice:
+        case XHBubbleMessageVoice: {
+            self.messageBubbleView.voiceDurationLabel.text = [NSString stringWithFormat:@"%@\'\'", message.voiceDuration];
+            break;
+        }
         case XHBubbleMessageFace: {
             UITapGestureRecognizer *tapGestureRecognizer;
             if (currentMediaType == XHBubbleMessageText) {

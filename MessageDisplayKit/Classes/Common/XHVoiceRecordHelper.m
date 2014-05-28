@@ -33,6 +33,7 @@
     self = [super init];
     if (self) {
         self.maxRecordTime = 60.0;
+        self.recordDuration = @"0";
 #if TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE
 		_backgroundIdentifier = UIBackgroundTaskInvalid;
 #endif
@@ -112,6 +113,7 @@
         return;
     }
     
+    /*
     NSFileManager *fileManager = [NSFileManager defaultManager];
     if ([fileManager fileExistsAtPath:self.recordPath]) {
         [fileManager removeItemAtPath:self.recordPath error:&error];
@@ -119,6 +121,7 @@
             NSAssert(@"error", @"删除出错");
         }
     }
+     */
     
     NSMutableDictionary * recordSetting = [NSMutableDictionary dictionary];
     
@@ -170,6 +173,9 @@
 }
 
 - (void)stopRecordingWithStopRecorderCompletion:(XHStopRecorderCompletion)stopRecorderCompletion {
+    //
+#warning 测试
+    [self getVoiceDuration:_recordPath];
     
     _isPause = NO;
     [self stopBackgroundTask];
@@ -243,6 +249,13 @@
             });
         }
     });
+}
+
+- (void)getVoiceDuration:(NSString*)recordPath {
+    AVAudioPlayer *play = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:recordPath] error:nil];
+    DLog(@"时长:%f", play.duration);
+    self.recordDuration = [NSString stringWithFormat:@"%.1f", play.duration];
+//    return play.duration;
 }
 
 @end

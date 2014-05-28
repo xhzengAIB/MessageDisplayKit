@@ -14,9 +14,13 @@
 
 #import "XHContactDetailTableViewController.h"
 
-@interface XHDemoWeChatMessageTableViewController ()
+#import "SCAudioPlayerManager.h"
+
+@interface XHDemoWeChatMessageTableViewController () <SCAudioPlayerManagerDelegate>
 
 @property (nonatomic, strong) NSArray *emotionManagers;
+
+@property (nonatomic, strong) XHMessageTableViewCell *currentSelectedCell;
 
 @end
 
@@ -51,7 +55,8 @@
 }
 
 - (XHMessage *)getVoiceMessageWithBubbleMessageType:(XHBubbleMessageType)bubbleMessageType {
-    XHMessage *voiceMessage = [[XHMessage alloc] initWithVoicePath:nil voiceUrl:nil sender:@"Jayson" timestamp:[NSDate date]];
+//    XHMessage *voiceMessage = [[XHMessage alloc] initWithVoicePath:nil voiceUrl:nil sender:@"Jayson" timestamp:[NSDate date]];
+    XHMessage *voiceMessage = [[XHMessage alloc] initWithVoicePath:nil voiceUrl:nil voiceDuration:@"1" sender:@"Jayson" timestamp:[NSDate date]];
     voiceMessage.avator = [UIImage imageNamed:@"avator"];
     voiceMessage.avatorUrl = @"http://www.pailixiu.com/jack/JieIcon@2x.png";
     voiceMessage.bubbleMessageType = bubbleMessageType;
@@ -188,11 +193,27 @@
             break;
         }
             break;
-        case XHBubbleMessageVoice:
+        case XHBubbleMessageVoice: {
             DLog(@"message : %@", message.voicePath);
+            /*
             [messageTableViewCell.messageBubbleView.animationVoiceImageView startAnimating];
             [messageTableViewCell.messageBubbleView.animationVoiceImageView performSelector:@selector(stopAnimating) withObject:nil afterDelay:3];
+             */
+            [[SCAudioPlayerManager shareInstance] setDelegate:self];
+            if (_currentSelectedCell) {
+                [_currentSelectedCell.messageBubbleView.animationVoiceImageView stopAnimating];
+            }
+            if (_currentSelectedCell == messageTableViewCell) {
+                [messageTableViewCell.messageBubbleView.animationVoiceImageView stopAnimating];
+                [[SCAudioPlayerManager shareInstance] stopAudio];
+                self.currentSelectedCell = nil;
+            } else {
+                self.currentSelectedCell = messageTableViewCell;
+                [messageTableViewCell.messageBubbleView.animationVoiceImageView startAnimating];
+                [[SCAudioPlayerManager shareInstance] managerAudioWithFileName:message.voicePath toPlay:YES];
+            }
             break;
+        }
         case XHBubbleMessageFace:
             DLog(@"facePath : %@", message.emotionPath);
             break;
@@ -229,6 +250,15 @@
 
 - (void)menuDidSelectedAtBubbleMessageMenuSelecteType:(XHBubbleMessageMenuSelecteType)bubbleMessageMenuSelecteType {
     
+}
+
+#pragma mark - SCAudioPlayerManager delegate
+- (void)didAudioPlayerStopPlay:(AVAudioPlayer *)audioPlayer {
+    if (!_currentSelectedCell) {
+        return;
+    }
+    [_currentSelectedCell.messageBubbleView.animationVoiceImageView stopAnimating];
+    self.currentSelectedCell = nil;
 }
 
 #pragma mark - XHEmotionManagerView DataSource
@@ -315,12 +345,13 @@
 /**
  *  发送语音消息的回调方法
  *
- *  @param voicePath 目标语音本地路径
- *  @param sender    发送者的名字
- *  @param date      发送时间
+ *  @param voicePath        目标语音本地路径
+ *  @param voiceDuration    目标语音时长
+ *  @param sender           发送者的名字
+ *  @param date             发送时间
  */
-- (void)didSendVoice:(NSString *)voicePath fromSender:(NSString *)sender onDate:(NSDate *)date {
-    XHMessage *voiceMessage = [[XHMessage alloc] initWithVoicePath:voicePath voiceUrl:nil sender:sender timestamp:date];
+- (void)didSendVoice:(NSString *)voicePath voiceDuration:(NSString *)voiceDuration fromSender:(NSString *)sender onDate:(NSDate *)date {
+    XHMessage *voiceMessage = [[XHMessage alloc] initWithVoicePath:voicePath voiceUrl:nil voiceDuration:voiceDuration sender:sender timestamp:date];
     voiceMessage.avator = [UIImage imageNamed:@"avator"];
     voiceMessage.avatorUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
     [self addMessage:voiceMessage];

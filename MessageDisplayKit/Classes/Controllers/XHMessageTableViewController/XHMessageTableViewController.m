@@ -164,9 +164,10 @@
 /**
  *  根据录音路径开始发送语音消息
  *
- *  @param voicePath 目标语音路径
+ *  @param voicePath        目标语音路径
+ *  @param voiceDuration    目标语音时长
  */
-- (void)didSendMessageWithVoice:(NSString *)voicePath;
+- (void)didSendMessageWithVoice:(NSString *)voicePath voiceDuration:(NSString*)voiceDuration;
 /**
  *  根据第三方gif表情路径开始发送表情消息
  *
@@ -685,7 +686,8 @@ static CGPoint  delayOffset = {0.0};
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter.dateFormat = @"yy-MMMM-dd";
     recorderPath = [[NSString alloc] initWithFormat:@"%@/Documents/", NSHomeDirectory()];
-    dateFormatter.dateFormat = @"hh-mm-ss";
+//    dateFormatter.dateFormat = @"hh-mm-ss";
+    dateFormatter.dateFormat = @"yyyy-MM-dd-hh-mm-ss";
     recorderPath = [recorderPath stringByAppendingFormat:@"%@-MySound.caf", [dateFormatter stringFromDate:now]];
     return recorderPath;
 }
@@ -823,10 +825,10 @@ static CGPoint  delayOffset = {0.0};
     }
 }
 
-- (void)didSendMessageWithVoice:(NSString *)voicePath {
+- (void)didSendMessageWithVoice:(NSString *)voicePath voiceDuration:(NSString*)voiceDuration {
     DLog(@"send voicePath : %@", voicePath);
-    if ([self.delegate respondsToSelector:@selector(didSendVoice:fromSender:onDate:)]) {
-        [self.delegate didSendVoice:voicePath fromSender:self.messageSender onDate:[NSDate date]];
+    if ([self.delegate respondsToSelector:@selector(didSendVoice:voiceDuration:fromSender:onDate:)]) {
+        [self.delegate didSendVoice:voicePath voiceDuration:voiceDuration fromSender:self.messageSender onDate:[NSDate date]];
     }
 }
 
@@ -933,7 +935,7 @@ static CGPoint  delayOffset = {0.0};
         weakSelf.voiceRecordHUD = nil;
     }];
     [self.voiceRecordHelper stopRecordingWithStopRecorderCompletion:^{
-        [weakSelf didSendMessageWithVoice:weakSelf.voiceRecordHelper.recordPath];
+        [weakSelf didSendMessageWithVoice:weakSelf.voiceRecordHelper.recordPath voiceDuration:weakSelf.voiceRecordHelper.recordDuration];
     }];
 }
 
@@ -1157,6 +1159,7 @@ static CGPoint  delayOffset = {0.0};
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     id <XHMessageModel> message = [self.dataSource messageForRowAtIndexPath:indexPath];
     
     BOOL displayTimestamp = YES;
@@ -1188,7 +1191,6 @@ static CGPoint  delayOffset = {0.0};
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     id <XHMessageModel> message = [self.dataSource messageForRowAtIndexPath:indexPath];
-    
     return [self calculateCellHeightWithMessage:message atIndexPath:indexPath];
 }
 
