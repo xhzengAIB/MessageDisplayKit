@@ -117,6 +117,8 @@ If you use this open source components in your project, please [Email us](mailto
 
 Thanks you [kishikawakatsumi](https://github.com/kishikawakatsumi) provide [SECoreTextView](https://github.com/kishikawakatsumi/SECoreTextView).                              
 
+Thanks you [lakesoft](https://github.com/lakesoft) provide [LKBadgeView](https://github.com/lakesoft/LKBadgeView).
+
 ## 警告
 请不要拿该工程的所有资源文件用于商业使用，如果不遵守规则，而产生的法律责任，一律与我无关。代码按照上文描述的License 和 Notes来使用。                              
 该工程里面任何一个效果组件都不能擅自使用，如需使用，请告之于我。
