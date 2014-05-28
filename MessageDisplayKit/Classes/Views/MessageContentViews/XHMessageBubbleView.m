@@ -61,9 +61,11 @@
     return photoSize;
 }
 
-+ (CGSize)neededSizeForVoicePath:(NSString *)voicePath {
++ (CGSize)neededSizeForVoicePath:(NSString *)voicePath voiceDuration:(NSString*)voiceDuration {
     // 这里的100只是暂时固定，到时候会根据一个函数来计算
-    CGSize voiceSize = CGSizeMake(100, [XHMessageInputView textViewLineHeight]);
+    float gapDuration = (!voiceDuration || voiceDuration.length == 0 ? -1 : [voiceDuration floatValue] - 1.0f);
+    CGSize voiceSize = CGSizeMake(100 + (gapDuration > 0 ? (120.0 / (60 - 1) * gapDuration) : 0), [XHMessageInputView textViewLineHeight]);
+//    CGSize voiceSize = CGSizeMake(100, [XHMessageInputView textViewLineHeight]);
     return voiceSize;
 }
 
@@ -88,8 +90,10 @@
             break;
         }
         case XHBubbleMessageVoice: {
-            // 这里的宽度是不定的，高度是固定的，根据需要根据语音长短来定制啦
-            bubbleSize = CGSizeMake(100, [XHMessageInputView textViewLineHeight]);
+#warning 测试
+            bubbleSize = [XHMessageBubbleView neededSizeForVoicePath:message.voicePath voiceDuration:message.voiceDuration];
+//            // 这里的宽度是不定的，高度是固定的，根据需要根据语音长短来定制啦
+//            bubbleSize = CGSizeMake(100, [XHMessageInputView textViewLineHeight]);
             break;
         }
         case XHBubbleMessageFace:
@@ -144,9 +148,12 @@
 - (void)configureBubbleImageView:(id <XHMessageModel>)message {
     XHBubbleMessageMediaType currentType = message.messageMediaType;
     
+    _voiceDurationLabel.hidden = YES;
     switch (currentType) {
+        case XHBubbleMessageVoice: {
+            _voiceDurationLabel.hidden = NO;
+        }
         case XHBubbleMessageText:
-        case XHBubbleMessageVoice:
         case XHBubbleMessageFace: {
             _bubbleImageView.image = [XHMessageBubbleFactory bubbleImageViewForType:message.bubbleMessageType style:XHBubbleImageViewStyleWeChat meidaType:message.messageMediaType];
             // 只要是文本、语音、第三方表情，背景的气泡都不能隐藏
@@ -286,6 +293,18 @@
                 _geolocationsLabel = geolocationsLabel;
             }
         }
+        
+        //4、初始化显示语音时长的label
+        if (!_voiceDurationLabel) {
+            UILabel *lbl = [[UILabel alloc] initWithFrame:CGRectMake(0, 15, 30, 30)];
+            lbl.textColor = [UIColor lightGrayColor];
+            lbl.backgroundColor = [UIColor clearColor];
+            lbl.font = [UIFont systemFontOfSize:13.f];
+            lbl.textAlignment = NSTextAlignmentRight;
+            lbl.hidden = YES;
+            [self addSubview:lbl];
+            self.voiceDurationLabel = lbl;
+        }
     }
     return self;
 }
@@ -300,6 +319,8 @@
     _bubblePhotoImageView = nil;
     
     _animationVoiceImageView = nil;
+    
+    _voiceDurationLabel = nil;
     
     _videoPlayImageView = nil;
     
@@ -337,6 +358,9 @@
             CGRect animationVoiceImageViewFrame = self.animationVoiceImageView.frame;
             animationVoiceImageViewFrame.origin = CGPointMake((self.message.bubbleMessageType == XHBubbleMessageTypeReceiving ? (bubbleFrame.origin.x + kVoiceMargin) : (bubbleFrame.origin.x + CGRectGetWidth(bubbleFrame) - kVoiceMargin - CGRectGetWidth(animationVoiceImageViewFrame))), 17);
             self.animationVoiceImageView.frame = animationVoiceImageViewFrame;
+            
+            [self resetVoiceDurationLabelFrameWithBubbleFrame:bubbleFrame];
+            
             break;
         }
         case XHBubbleMessagePhoto:
@@ -355,6 +379,14 @@
         default:
             break;
     }
+}
+
+- (void)resetVoiceDurationLabelFrameWithBubbleFrame:(CGRect)bubbleFrame {
+    CGRect voiceFrame = _voiceDurationLabel.frame;
+    voiceFrame.origin.x = (self.message.bubbleMessageType == XHBubbleMessageTypeSending ? bubbleFrame.origin.x - _voiceDurationLabel.frame.size.width : bubbleFrame.origin.x + bubbleFrame.size.width);
+    _voiceDurationLabel.frame = voiceFrame;
+    
+    _voiceDurationLabel.textAlignment = (self.message.bubbleMessageType == XHBubbleMessageTypeSending ? NSTextAlignmentRight : NSTextAlignmentLeft);
 }
 
 @end

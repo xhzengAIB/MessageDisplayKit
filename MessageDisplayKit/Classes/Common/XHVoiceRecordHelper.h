@@ -23,6 +23,7 @@ typedef void(^XHPeakPowerForChannel)(float peakPowerForChannel);
 @property (nonatomic, copy) XHRecordProgress recordProgress;
 @property (nonatomic, copy) XHPeakPowerForChannel peakPowerForChannel;
 @property (nonatomic, copy, readonly) NSString *recordPath;
+@property (nonatomic, copy) NSString *recordDuration;
 @property (nonatomic) float maxRecordTime; // 默认 60秒为最大
 @property (nonatomic, readonly) NSTimeInterval currentTimeInterval;
 

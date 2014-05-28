@@ -55,6 +55,11 @@
 @property (nonatomic, weak, readonly) UIImageView *animationVoiceImageView;
 
 /**
+ *  用于显示语音时长的label
+ */
+@property (nonatomic, weak) UILabel *voiceDurationLabel;
+
+/**
  *  用于显示仿微信发送图片的控件
  */
 @property (nonatomic, weak, readonly) XHBubblePhotoImageView *bubblePhotoImageView;

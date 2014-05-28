@@ -27,6 +27,7 @@
 
 - (NSString *)voicePath;
 - (NSString *)voiceUrl;
+- (NSString *)voiceDuration;
 
 - (UIImage *)localPositionPhoto;
 - (NSString *)geolocations;

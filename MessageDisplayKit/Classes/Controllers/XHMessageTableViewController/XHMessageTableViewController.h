@@ -66,11 +66,12 @@
 /**
  *  发送语音消息的回调方法
  *
- *  @param voicePath 目标语音本地路径
- *  @param sender    发送者的名字
- *  @param date      发送时间
+ *  @param voicePath        目标语音本地路径
+ *  @param voiceDuration    目标语音时长
+ *  @param sender           发送者的名字
+ *  @param date             发送时间
  */
-- (void)didSendVoice:(NSString *)voicePath fromSender:(NSString *)sender onDate:(NSDate *)date;
+- (void)didSendVoice:(NSString *)voicePath voiceDuration:(NSString*)voiceDuration fromSender:(NSString *)sender onDate:(NSDate *)date;
 
 /**
  *  发送第三方表情消息的回调方法
