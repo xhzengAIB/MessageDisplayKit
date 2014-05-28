@@ -29,7 +29,7 @@
     self.dataSource = [[XHStoreManager shareStoreManager] getProfileConfigureArray];
 }
 
-#pragma Life Cycle
+#pragma mark - Life Cycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];

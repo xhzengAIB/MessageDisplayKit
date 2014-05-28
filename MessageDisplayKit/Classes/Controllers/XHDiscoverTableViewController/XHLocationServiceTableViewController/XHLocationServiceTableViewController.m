@@ -26,7 +26,7 @@
     self.dataSource = [[XHStoreManager shareStoreManager] getLocationServiceArray];
 }
 
-#pragma Life Cycle
+#pragma mark - Life Cycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];

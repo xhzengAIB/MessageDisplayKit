@@ -506,8 +506,7 @@ static CGPoint  delayOffset = {0.0};
     messageTableView.separatorColor = [UIColor clearColor];
     messageTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     messageTableView.tableHeaderView = self.headerContainerView;
-    [messageTableView addObserver:self forKeyPath:@"frame" options:NSKeyValueObservingOptionNew context:NULL];
-	[self.view addSubview:messageTableView];
+    [self.view addSubview:messageTableView];
     [self.view sendSubviewToBack:messageTableView];
 	_messageTableView = messageTableView;
     

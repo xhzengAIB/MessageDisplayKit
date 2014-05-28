@@ -9,7 +9,7 @@
 #import "XHMessageTableViewCell.h"
 
 static const CGFloat kXHLabelPadding = 5.0f;
-static const CGFloat kXHTimeStampLabelHeight = 15.0f;
+static const CGFloat kXHTimeStampLabelHeight = 20.0f;
 
 static const CGFloat kXHAvatorPaddingX = 8.0;
 static const CGFloat kXHAvatorPaddingY = 15;
@@ -25,7 +25,7 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
 
 @property (nonatomic, weak, readwrite) UIButton *avatorButton;
 
-@property (nonatomic, weak, readwrite) UILabel *timestampLabel;
+@property (nonatomic, weak, readwrite) LKBadgeView *timestampLabel;
 
 /**
  *  是否显示时间轴Label
@@ -331,17 +331,12 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
         
         // 1、是否显示Time Line的label
         if (!_timestampLabel) {
-            UILabel *timestampLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, kXHLabelPadding, 140, kXHTimeStampLabelHeight)];
+            LKBadgeView *timestampLabel = [[LKBadgeView alloc] initWithFrame:CGRectMake(0, kXHLabelPadding, 160, kXHTimeStampLabelHeight)];
             timestampLabel.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleLeftMargin;
-            timestampLabel.backgroundColor = [UIColor colorWithWhite:0.000 alpha:0.380];
-            timestampLabel.textAlignment = NSTextAlignmentCenter;
+            timestampLabel.badgeColor = [UIColor colorWithWhite:0.000 alpha:0.380];
             timestampLabel.textColor = [UIColor whiteColor];
-            timestampLabel.font = [UIFont systemFontOfSize:12.0f];
+            timestampLabel.font = [UIFont systemFontOfSize:13.0f];
             timestampLabel.center = CGPointMake(CGRectGetWidth([[UIScreen mainScreen] bounds]) / 2.0, timestampLabel.center.y);
-            // 这个需要换个方案考虑，比如图片，或者绘制
-//            timestampLabel.layer.cornerRadius = 3.0f;
-//            timestampLabel.layer.masksToBounds = YES;
-            
             [self.contentView addSubview:timestampLabel];
             [self.contentView bringSubviewToFront:timestampLabel];
             _timestampLabel = timestampLabel;

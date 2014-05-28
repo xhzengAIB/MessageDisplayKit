@@ -30,7 +30,6 @@
 
 #define kXHMessageBubbleDisplayMaxLine 200
 
-#define kXHTextFontSize 16
 #define kXHTextLineSpacing 3.0
 
 @interface XHMessageBubbleView : UIView

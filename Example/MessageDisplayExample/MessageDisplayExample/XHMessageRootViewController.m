@@ -11,16 +11,22 @@
 #import "XHDemoWeChatMessageTableViewController.h"
 #import "XHFoundationCommon.h"
 
+#import "UIView+XHBadgeView.h"
+
 @interface XHMessageRootViewController ()
 
 @end
 
 @implementation XHMessageRootViewController
 
+#pragma mark - Action
+
 - (void)enterMessage {
     XHDemoWeChatMessageTableViewController *demoWeChatMessageTableViewController = [[XHDemoWeChatMessageTableViewController alloc] init];
     [self.navigationController pushViewController:demoWeChatMessageTableViewController animated:YES];
 }
+
+#pragma mark - Life Cycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -55,6 +61,12 @@
         cell.detailTextLabel.text = self.dataSource[indexPath.row];
         cell.imageView.image = [UIImage imageNamed:@"avator"];
     }
+    
+    cell.imageView.badgeViewFrame = CGRectMake(40, 0, 10, 10);
+    cell.imageView.badgeView.textColor = [UIColor whiteColor];
+    cell.imageView.badgeView.badgeColor = [UIColor redColor];
+    cell.imageView.badgeView.text = @" ";
+    
     
     if (indexPath.row == 4) {
         cell.detailTextLabel.textColor = [UIColor colorWithRed:0.097 green:0.633 blue:1.000 alpha:1.000];

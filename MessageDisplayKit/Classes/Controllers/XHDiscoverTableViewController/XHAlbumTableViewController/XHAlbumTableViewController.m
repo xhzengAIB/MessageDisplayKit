@@ -68,7 +68,7 @@
     return _photographyHelper;
 }
 
-#pragma mark - DataSource Manager
+#pragma mark - DataSource
 
 - (void)loadDataSource {
     WEAKSELF
@@ -83,7 +83,7 @@
     });
 }
 
-#pragma Life Cycle
+#pragma mark - Life Cycle
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];

@@ -154,7 +154,7 @@
     return _captureHelper;
 }
 
-#pragma Life Cycle
+#pragma mark - Life Cycle
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];

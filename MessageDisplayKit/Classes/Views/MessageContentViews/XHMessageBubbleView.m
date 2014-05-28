@@ -9,9 +9,8 @@
 #import "XHMessageBubbleView.h"
 
 #define kMarginTop 8.0f
-#define kMarginBottom 4.0f
+#define kMarginBottom 2.0f
 #define kPaddingTop 4.0f
-#define kPaddingBottom 8.0f
 #define kBubblePaddingRight 10.0f
 
 #define kVoiceMargin 20.0f
@@ -40,34 +39,20 @@
 
 #pragma mark - Bubble view
 
-+ (CGSize)textSizeForText:(NSString *)txt {
-    CGFloat maxWidth = CGRectGetWidth([[UIScreen mainScreen] bounds]) * (kIsiPad ? 0.8 : 0.55);
-    CGFloat maxHeight = MAX([XHMessageTextView numberOfLinesForMessage:txt],
-                            kXHMessageBubbleDisplayMaxLine) * [XHMessageInputView textViewLineHeight];
-    maxHeight += kXHAvatarImageSize;
-    
++ (CGFloat)neededWidthForText:(NSString *)text {
     CGSize stringSize;
-    
-    if (NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_6_0) {
-        CGRect stringRect = [txt boundingRectWithSize:CGSizeMake(maxWidth, maxHeight)
-                                              options:NSStringDrawingUsesLineFragmentOrigin
-                                           attributes:@{ NSFontAttributeName : [[XHMessageBubbleView appearance] font] }
-                                              context:nil];
-        
-        stringSize = CGRectIntegral(stringRect).size;
-    }
-    else {
-        stringSize = [txt sizeWithFont:[[XHMessageBubbleView appearance] font]
-                     constrainedToSize:CGSizeMake(maxWidth, maxHeight)];
-    }
-    
-    return CGSizeMake(roundf(stringSize.width), roundf(stringSize.height));
+    stringSize = [text sizeWithFont:[[XHMessageBubbleView appearance] font]
+                     constrainedToSize:CGSizeMake(MAXFLOAT, 19)];
+    return roundf(stringSize.width);
 }
 
 + (CGSize)neededSizeForText:(NSString *)text {
     CGFloat maxWidth = CGRectGetWidth([[UIScreen mainScreen] bounds]) * (kIsiPad ? 0.8 : 0.55);
-    CGSize textSize = [SETextView frameRectWithAttributtedString:[[NSAttributedString alloc] initWithString:text] constraintSize:CGSizeMake(maxWidth, MAXFLOAT) lineSpacing:kXHTextLineSpacing font:[UIFont systemFontOfSize:kXHTextFontSize]].size;
-    return CGSizeMake(textSize.width + kBubblePaddingRight * 2 + kXHArrowMarginWidth, textSize.height + kPaddingTop + kPaddingBottom);
+    
+    CGFloat dyWidth = [XHMessageBubbleView neededWidthForText:text];
+    
+    CGSize textSize = [SETextView frameRectWithAttributtedString:[[NSAttributedString alloc] initWithString:text] constraintSize:CGSizeMake(maxWidth, MAXFLOAT) lineSpacing:kXHTextLineSpacing font:[[XHMessageBubbleView appearance] font]].size;
+    return CGSizeMake((dyWidth > textSize.width ? textSize.width : dyWidth) + kBubblePaddingRight * 2 + kXHArrowMarginWidth, textSize.height);
 }
 
 + (CGSize)neededSizeForPhoto:(UIImage *)photo {
@@ -143,7 +128,7 @@
     return CGRectIntegral(CGRectMake((self.message.bubbleMessageType == XHBubbleMessageTypeSending ? CGRectGetWidth(self.bounds) - bubbleSize.width : 0.0f),
                                      kMarginTop,
                                      bubbleSize.width,
-                                     bubbleSize.height + kMarginBottom));
+                                     bubbleSize.height + kMarginTop + kMarginBottom));
 }
 
 #pragma mark - Life cycle
@@ -270,7 +255,7 @@
             displayTextView.backgroundColor = [UIColor clearColor];
             displayTextView.selectable = YES;
             displayTextView.lineSpacing = kXHTextLineSpacing;
-            displayTextView.font = [UIFont systemFontOfSize:kXHTextFontSize];
+            displayTextView.font = [[XHMessageBubbleView appearance] font];
             displayTextView.showsEditingMenuAutomatically = NO;
             displayTextView.highlighted = NO;
             displayTextView.selectable = NO;
@@ -345,7 +330,7 @@
             CGRect textFrame = CGRectMake(textX,
                                           CGRectGetMinY(bubbleFrame) + kPaddingTop,
                                           CGRectGetWidth(bubbleFrame) - kBubblePaddingRight * 2,
-                                          bubbleFrame.size.height - kMarginTop - kPaddingBottom);
+                                          bubbleFrame.size.height - kMarginTop - kMarginBottom);
             
             self.displayTextView.frame = CGRectIntegral(textFrame);
             

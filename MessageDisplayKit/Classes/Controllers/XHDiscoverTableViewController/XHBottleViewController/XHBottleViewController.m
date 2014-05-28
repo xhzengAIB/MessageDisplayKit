@@ -118,7 +118,7 @@
     }];
 }
 
-#pragma Life Cycle
+#pragma mark - Life Cycle
 
 - (void)initilzer {
     // duw with backgrounImage form date

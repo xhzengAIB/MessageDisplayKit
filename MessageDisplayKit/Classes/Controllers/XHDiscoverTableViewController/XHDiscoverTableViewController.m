@@ -17,6 +17,8 @@
 
 #import "XHStoreManager.h"
 
+#import "UIView+XHBadgeView.h"
+
 @interface XHDiscoverTableViewController ()
 
 @end
@@ -55,6 +57,14 @@
         NSDictionary *disconverDictionary = self.dataSource[indexPath.section];
         cell.imageView.image = [UIImage imageNamed:[disconverDictionary valueForKey:@"image"][indexPath.row]];
         cell.textLabel.text = [disconverDictionary valueForKey:@"title"][indexPath.row];
+    }
+    
+    if (indexPath.section == 3) {
+        cell.contentView.badgeViewFrame = CGRectMake(120, 12, 50, 20);
+        cell.contentView.badgeView.font = [UIFont systemFontOfSize:13];
+        cell.contentView.badgeView.text = @"new";
+        cell.contentView.badgeView.textColor = [UIColor whiteColor];
+        cell.contentView.badgeView.badgeColor = [UIColor redColor];
     }
     
     return cell;
