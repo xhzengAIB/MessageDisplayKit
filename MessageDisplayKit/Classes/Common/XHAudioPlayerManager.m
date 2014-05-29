@@ -1,63 +1,18 @@
 //
-//  SCAudioPlayerManager.m
-//  SCCaptureCameraDemo
+//  XHAudioPlayerManager.m
+//  MessageDisplayKit
 //
 //  Created by Aevitx on 14-1-22.
 //  Copyright (c) 2014年 Aevitx. All rights reserved.
 //
 
-#import "SCAudioPlayerManager.h"
-//#import "VoiceConverter.h"
+#import "XHAudioPlayerManager.h"
 #import "XHVoiceCommonHelper.h"
 
-
-@implementation SCAudioPlayerManager
-
-
-+ (id)shareInstance {
-    static SCAudioPlayerManager *instance = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        instance = [[SCAudioPlayerManager alloc] init];
-    });
-    return instance;
-}
-
-- (id)init {
-    self = [super init];
-    if (self) {
-        [self changeProximityMonitorEnableState:YES];
-        [[UIDevice currentDevice] setProximityMonitoringEnabled:NO];
-    }
-    return self;
-}
-
-- (void)dealloc {
-    [self changeProximityMonitorEnableState:NO];
-}
-
-- (AVAudioPlayer*)player {
-    return _player;
-}
-
-- (BOOL)isPlaying {
-    if (!_player) {
-        return NO;
-    }
-    return _player.isPlaying;
-}
-
-- (void)setDelegate:(id<SCAudioPlayerManagerDelegate>)delegate {
-    if (_delegate != delegate) {
-        _delegate = delegate;
-        
-        if (_delegate == nil) {
-            [self stopAudio];
-        }
-    }
-}
+@implementation XHAudioPlayerManager
 
 #pragma mark - action
+
 - (void)managerAudioWithFileName:(NSString*)amrName toPlay:(BOOL)toPlay {
     if (toPlay) {
         [self playAudioWithFileName:amrName];
@@ -134,6 +89,7 @@
 
 /*
 #pragma mark - amr转wav
+
 - (void)convertAmrToWav:(NSString*)amrName {
     if (amrName.length > 0){
         NSString *wavName = [amrName stringByReplacingOccurrencesOfString:@"wavToAmr" withString:@"amrToWav"];// [amrName stringByAppendingString:@"amrToWav"];
@@ -143,9 +99,55 @@
         
     }
 }
- */
+*/
+
+#pragma mark - Life Cycle
+
++ (id)shareInstance {
+    static XHAudioPlayerManager *instance = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        instance = [[XHAudioPlayerManager alloc] init];
+    });
+    return instance;
+}
+
+- (id)init {
+    self = [super init];
+    if (self) {
+        [self changeProximityMonitorEnableState:YES];
+        [[UIDevice currentDevice] setProximityMonitoringEnabled:NO];
+    }
+    return self;
+}
+
+- (void)dealloc {
+    [self changeProximityMonitorEnableState:NO];
+}
+
+- (AVAudioPlayer*)player {
+    return _player;
+}
+
+- (BOOL)isPlaying {
+    if (!_player) {
+        return NO;
+    }
+    return _player.isPlaying;
+}
+
+- (void)setDelegate:(id<XHAudioPlayerManagerDelegate>)delegate {
+    if (_delegate != delegate) {
+        _delegate = delegate;
+        
+        if (_delegate == nil) {
+            [self stopAudio];
+        }
+    }
+}
 
 #pragma mark - audio delegate
+
 - (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag {
     [self stopAudio];
     if ([self.delegate respondsToSelector:@selector(didAudioPlayerStopPlay:)]) {
@@ -154,6 +156,7 @@
 }
 
 #pragma mark - 近距离传感器
+
 - (void)changeProximityMonitorEnableState:(BOOL)enable {
     [[UIDevice currentDevice] setProximityMonitoringEnabled:YES];
     if ([UIDevice currentDevice].proximityMonitoringEnabled == YES) {

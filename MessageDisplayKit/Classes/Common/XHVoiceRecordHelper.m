@@ -173,8 +173,6 @@
 }
 
 - (void)stopRecordingWithStopRecorderCompletion:(XHStopRecorderCompletion)stopRecorderCompletion {
-    //
-#warning 测试
     [self getVoiceDuration:_recordPath];
     
     _isPause = NO;

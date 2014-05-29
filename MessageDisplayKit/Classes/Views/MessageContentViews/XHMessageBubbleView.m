@@ -90,10 +90,8 @@
             break;
         }
         case XHBubbleMessageVoice: {
-#warning 测试
+            // 这里的宽度是不定的，高度是固定的，根据需要根据语音长短来定制啦
             bubbleSize = [XHMessageBubbleView neededSizeForVoicePath:message.voicePath voiceDuration:message.voiceDuration];
-//            // 这里的宽度是不定的，高度是固定的，根据需要根据语音长短来定制啦
-//            bubbleSize = CGSizeMake(100, [XHMessageInputView textViewLineHeight]);
             break;
         }
         case XHBubbleMessageFace:

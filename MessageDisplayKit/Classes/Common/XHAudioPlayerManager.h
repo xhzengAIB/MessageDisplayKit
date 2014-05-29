@@ -1,6 +1,6 @@
 //
-//  SCAudioPlayerManager.h
-//  SCCaptureCameraDemo
+//  XHAudioPlayerManager.h
+//  MessageDisplayKit
 //
 //  Created by Aevitx on 14-1-22.
 //  Copyright (c) 2014年 Aevitx. All rights reserved.
@@ -9,10 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVAudioPlayer.h>
 
-//#import "SCPlayButton.h"
-
-
-@protocol SCAudioPlayerManagerDelegate <NSObject>
+@protocol XHAudioPlayerManagerDelegate <NSObject>
 
 @optional
 - (void)didAudioPlayerBeginPlay:(AVAudioPlayer*)audioPlayer;
@@ -21,13 +18,13 @@
 
 @end
 
-@interface SCAudioPlayerManager : NSObject <AVAudioPlayerDelegate>
+@interface XHAudioPlayerManager : NSObject <AVAudioPlayerDelegate>
 
 @property (nonatomic, strong) AVAudioPlayer *player;
 
 @property (nonatomic, copy) NSString *playingFileName;
 
-@property (nonatomic, assign) id <SCAudioPlayerManagerDelegate> delegate;
+@property (nonatomic, assign) id <XHAudioPlayerManagerDelegate> delegate;
 
 @property (nonatomic, strong) NSIndexPath *playingIndexPathInFeedList;//给动态列表用
 
