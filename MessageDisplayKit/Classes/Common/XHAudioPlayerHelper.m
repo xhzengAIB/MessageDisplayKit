@@ -1,15 +1,15 @@
 //
-//  XHAudioPlayerManager.m
+//  XHAudioPlayerHelper.m
 //  MessageDisplayKit
 //
 //  Created by Aevitx on 14-1-22.
 //  Copyright (c) 2014年 Aevitx. All rights reserved.
 //
 
-#import "XHAudioPlayerManager.h"
+#import "XHAudioPlayerHelper.h"
 #import "XHVoiceCommonHelper.h"
 
-@implementation XHAudioPlayerManager
+@implementation XHAudioPlayerHelper
 
 #pragma mark - Public Methed
 
@@ -112,7 +112,7 @@
 
 #pragma mark - Setter 
 
-- (void)setDelegate:(id<XHAudioPlayerManagerDelegate>)delegate {
+- (void)setDelegate:(id<XHAudioPlayerHelperDelegate>)delegate {
     if (_delegate != delegate) {
         _delegate = delegate;
         
@@ -125,10 +125,10 @@
 #pragma mark - Life Cycle
 
 + (id)shareInstance {
-    static XHAudioPlayerManager *instance = nil;
+    static XHAudioPlayerHelper *instance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        instance = [[XHAudioPlayerManager alloc] init];
+        instance = [[XHAudioPlayerHelper alloc] init];
     });
     return instance;
 }

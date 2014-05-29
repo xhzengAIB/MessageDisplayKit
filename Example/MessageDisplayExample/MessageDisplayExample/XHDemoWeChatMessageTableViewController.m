@@ -14,9 +14,9 @@
 
 #import "XHContactDetailTableViewController.h"
 
-#import "XHAudioPlayerManager.h"
+#import "XHAudioPlayerHelper.h"
 
-@interface XHDemoWeChatMessageTableViewController () <XHAudioPlayerManagerDelegate>
+@interface XHDemoWeChatMessageTableViewController () <XHAudioPlayerHelperDelegate>
 
 @property (nonatomic, strong) NSArray *emotionManagers;
 

@@ -1,5 +1,5 @@
 //
-//  XHAudioPlayerManager.h
+//  XHAudioPlayerHelper.h
 //  MessageDisplayKit
 //
 //  Created by Aevitx on 14-1-22.
@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVAudioPlayer.h>
 
-@protocol XHAudioPlayerManagerDelegate <NSObject>
+@protocol XHAudioPlayerHelperDelegate <NSObject>
 
 @optional
 - (void)didAudioPlayerBeginPlay:(AVAudioPlayer*)audioPlayer;
@@ -18,13 +18,13 @@
 
 @end
 
-@interface XHAudioPlayerManager : NSObject <AVAudioPlayerDelegate>
+@interface XHAudioPlayerHelper : NSObject <AVAudioPlayerDelegate>
 
 @property (nonatomic, strong) AVAudioPlayer *player;
 
 @property (nonatomic, copy) NSString *playingFileName;
 
-@property (nonatomic, assign) id <XHAudioPlayerManagerDelegate> delegate;
+@property (nonatomic, assign) id <XHAudioPlayerHelperDelegate> delegate;
 
 @property (nonatomic, strong) NSIndexPath *playingIndexPathInFeedList;//给动态列表用
 
