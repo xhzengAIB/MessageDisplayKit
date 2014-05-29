@@ -11,7 +11,7 @@
 
 @implementation XHAudioPlayerManager
 
-#pragma mark - action
+#pragma mark - Public Methed
 
 - (void)managerAudioWithFileName:(NSString*)amrName toPlay:(BOOL)toPlay {
     if (toPlay) {
@@ -20,6 +20,30 @@
         [self pausePlayingAudio];
     }
 }
+
+//暂停
+- (void)pausePlayingAudio {
+    if (_player) {
+        [_player pause];
+        if ([self.delegate respondsToSelector:@selector(didAudioPlayerPausePlay:)]) {
+            [self.delegate didAudioPlayerPausePlay:_player];
+        }
+    }
+}
+
+- (void)stopAudio {
+    [self setPlayingFileName:@""];
+    [self setPlayingIndexPathInFeedList:nil];
+    if (_player && _player.isPlaying) {
+        [_player stop];
+    }
+    [[UIDevice currentDevice] setProximityMonitoringEnabled:NO];
+    if ([self.delegate respondsToSelector:@selector(didAudioPlayerStopPlay:)]) {
+        [self.delegate didAudioPlayerStopPlay:_player];
+    }
+}
+
+#pragma mark - action
 
 //播放转换后wav
 - (void)playAudioWithFileName:(NSString*)fileName {
@@ -59,34 +83,6 @@
     }
 }
 
-//暂停
-- (void)pausePlayingAudio {
-    if (_player) {
-        [_player pause];
-        if ([self.delegate respondsToSelector:@selector(didAudioPlayerPausePlay:)]) {
-            [self.delegate didAudioPlayerPausePlay:_player];
-        }
-    }
-}
-
-- (void)pauseAudioWithFileName:(NSString*)fileName {
-    if (_player) {
-        [_player pause];
-    }
-}
-
-- (void)stopAudio {
-    [self setPlayingFileName:@""];
-    [self setPlayingIndexPathInFeedList:nil];
-    if (_player && _player.isPlaying) {
-        [_player stop];
-    }
-    [[UIDevice currentDevice] setProximityMonitoringEnabled:NO];
-    if ([self.delegate respondsToSelector:@selector(didAudioPlayerStopPlay:)]) {
-        [self.delegate didAudioPlayerStopPlay:_player];
-    }
-}
-
 /*
 #pragma mark - amr转wav
 
@@ -100,6 +96,31 @@
     }
 }
 */
+
+#pragma mark - Getter
+
+- (AVAudioPlayer*)player {
+    return _player;
+}
+
+- (BOOL)isPlaying {
+    if (!_player) {
+        return NO;
+    }
+    return _player.isPlaying;
+}
+
+#pragma mark - Setter 
+
+- (void)setDelegate:(id<XHAudioPlayerManagerDelegate>)delegate {
+    if (_delegate != delegate) {
+        _delegate = delegate;
+        
+        if (_delegate == nil) {
+            [self stopAudio];
+        }
+    }
+}
 
 #pragma mark - Life Cycle
 
@@ -123,27 +144,6 @@
 
 - (void)dealloc {
     [self changeProximityMonitorEnableState:NO];
-}
-
-- (AVAudioPlayer*)player {
-    return _player;
-}
-
-- (BOOL)isPlaying {
-    if (!_player) {
-        return NO;
-    }
-    return _player.isPlaying;
-}
-
-- (void)setDelegate:(id<XHAudioPlayerManagerDelegate>)delegate {
-    if (_delegate != delegate) {
-        _delegate = delegate;
-        
-        if (_delegate == nil) {
-            [self stopAudio];
-        }
-    }
 }
 
 #pragma mark - audio delegate
@@ -191,7 +191,5 @@
         }
     }
 }
-
-
 
 @end

@@ -31,12 +31,13 @@
 + (id)shareInstance;
 
 - (AVAudioPlayer*)player;
+- (BOOL)isPlaying;
 
 - (void)managerAudioWithFileName:(NSString*)amrName toPlay:(BOOL)toPlay;
-//- (void)playAudioWithFileName:(NSString*)amrName;//播放
-//- (void)pausePlayingAudio;//暂停
+- (void)pausePlayingAudio;//暂停
 - (void)stopAudio;//停止
-- (BOOL)isPlaying;
+
+
 
 @end
 
