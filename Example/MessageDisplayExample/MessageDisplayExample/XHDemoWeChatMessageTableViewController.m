@@ -115,6 +115,11 @@
     });
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [[XHAudioPlayerHelper shareInstance] stopAudio];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -171,6 +176,7 @@
 
 - (void)dealloc {
     self.emotionManagers = nil;
+    [[XHAudioPlayerHelper shareInstance] setDelegate:nil];
 }
 
 /*
@@ -248,7 +254,7 @@
     
 }
 
-#pragma mark - SCAudioPlayerManager delegate
+#pragma mark - XHAudioPlayerHelper Delegate
 
 - (void)didAudioPlayerStopPlay:(AVAudioPlayer *)audioPlayer {
     if (!_currentSelectedCell) {
