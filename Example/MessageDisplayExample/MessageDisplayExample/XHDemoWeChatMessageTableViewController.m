@@ -195,22 +195,18 @@
             break;
         case XHBubbleMessageVoice: {
             DLog(@"message : %@", message.voicePath);
-            /*
-            [messageTableViewCell.messageBubbleView.animationVoiceImageView startAnimating];
-            [messageTableViewCell.messageBubbleView.animationVoiceImageView performSelector:@selector(stopAnimating) withObject:nil afterDelay:3];
-             */
-            [[SCAudioPlayerManager shareInstance] setDelegate:self];
+            [[XHAudioPlayerHelper shareInstance] setDelegate:self];
             if (_currentSelectedCell) {
                 [_currentSelectedCell.messageBubbleView.animationVoiceImageView stopAnimating];
             }
             if (_currentSelectedCell == messageTableViewCell) {
                 [messageTableViewCell.messageBubbleView.animationVoiceImageView stopAnimating];
-                [[SCAudioPlayerManager shareInstance] stopAudio];
+                [[XHAudioPlayerHelper shareInstance] stopAudio];
                 self.currentSelectedCell = nil;
             } else {
                 self.currentSelectedCell = messageTableViewCell;
                 [messageTableViewCell.messageBubbleView.animationVoiceImageView startAnimating];
-                [[SCAudioPlayerManager shareInstance] managerAudioWithFileName:message.voicePath toPlay:YES];
+                [[XHAudioPlayerHelper shareInstance] managerAudioWithFileName:message.voicePath toPlay:YES];
             }
             break;
         }
@@ -253,6 +249,7 @@
 }
 
 #pragma mark - SCAudioPlayerManager delegate
+
 - (void)didAudioPlayerStopPlay:(AVAudioPlayer *)audioPlayer {
     if (!_currentSelectedCell) {
         return;
