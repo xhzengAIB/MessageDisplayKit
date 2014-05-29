@@ -13,6 +13,8 @@
 
 #import "UIView+XHBadgeView.h"
 
+#import "XHNewsTableViewController.h"
+
 @interface XHMessageRootViewController ()
 
 @end
@@ -24,6 +26,11 @@
 - (void)enterMessage {
     XHDemoWeChatMessageTableViewController *demoWeChatMessageTableViewController = [[XHDemoWeChatMessageTableViewController alloc] init];
     [self.navigationController pushViewController:demoWeChatMessageTableViewController animated:YES];
+}
+
+- (void)enterNewsController {
+    XHNewsTableViewController *newsTableViewController = [[XHNewsTableViewController alloc] init];
+    [self pushNewViewController:newsTableViewController];
 }
 
 #pragma mark - Life Cycle
@@ -85,7 +92,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    [self enterMessage];
+    if (!indexPath.row) {
+        [self enterNewsController];
+    } else {
+        [self enterMessage];
+    }
 }
 
 @end

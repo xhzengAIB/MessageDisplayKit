@@ -411,6 +411,19 @@
 		AB5A6FCE1935769C0053ACB5 /* UIView+XHBadgeView.h in Headers */ = {isa = PBXBuildFile; fileRef = AB5A6FCC1935769C0053ACB5 /* UIView+XHBadgeView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB5A6FCF1935769C0053ACB5 /* UIView+XHBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB5A6FCD1935769C0053ACB5 /* UIView+XHBadgeView.m */; };
 		AB5A6FD01935769C0053ACB5 /* UIView+XHBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB5A6FCD1935769C0053ACB5 /* UIView+XHBadgeView.m */; };
+		AB63BF171936B35400B6C977 /* XHNewsTemplateTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = AB63BF151936B35400B6C977 /* XHNewsTemplateTableViewCell.h */; };
+		AB63BF181936B35500B6C977 /* XHNewsTemplateTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB63BF161936B35400B6C977 /* XHNewsTemplateTableViewCell.m */; };
+		AB63BF191936B35500B6C977 /* XHNewsTemplateTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB63BF161936B35400B6C977 /* XHNewsTemplateTableViewCell.m */; };
+		AB63BF1C1936B4C800B6C977 /* XHNewsTemplateContainerView.h in Headers */ = {isa = PBXBuildFile; fileRef = AB63BF1A1936B4C800B6C977 /* XHNewsTemplateContainerView.h */; };
+		AB63BF1D1936B4C800B6C977 /* XHNewsTemplateContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB63BF1B1936B4C800B6C977 /* XHNewsTemplateContainerView.m */; };
+		AB63BF1E1936B4C800B6C977 /* XHNewsTemplateContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB63BF1B1936B4C800B6C977 /* XHNewsTemplateContainerView.m */; };
+		AB63BF211936B58E00B6C977 /* NewsBackgroundImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB63BF201936B58E00B6C977 /* NewsBackgroundImage@2x.png */; };
+		AB63BF251936B66400B6C977 /* XHNewsTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = AB63BF231936B66400B6C977 /* XHNewsTableViewController.h */; };
+		AB63BF261936B66400B6C977 /* XHNewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB63BF241936B66400B6C977 /* XHNewsTableViewController.m */; };
+		AB63BF271936B66400B6C977 /* XHNewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB63BF241936B66400B6C977 /* XHNewsTableViewController.m */; };
+		AB63BF2A1936BE5400B6C977 /* XHNewsContainerView.h in Headers */ = {isa = PBXBuildFile; fileRef = AB63BF281936BE5400B6C977 /* XHNewsContainerView.h */; };
+		AB63BF2B1936BE5400B6C977 /* XHNewsContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB63BF291936BE5400B6C977 /* XHNewsContainerView.m */; };
+		AB63BF2C1936BE5400B6C977 /* XHNewsContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB63BF291936BE5400B6C977 /* XHNewsContainerView.m */; };
 		AB71383C193193A6009792B5 /* UIButton+XHButtonTitlePosition.h in Headers */ = {isa = PBXBuildFile; fileRef = AB71383A193193A6009792B5 /* UIButton+XHButtonTitlePosition.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB71383D193193A6009792B5 /* UIButton+XHButtonTitlePosition.m in Sources */ = {isa = PBXBuildFile; fileRef = AB71383B193193A6009792B5 /* UIButton+XHButtonTitlePosition.m */; };
 		AB71383E193193A6009792B5 /* UIButton+XHButtonTitlePosition.m in Sources */ = {isa = PBXBuildFile; fileRef = AB71383B193193A6009792B5 /* UIButton+XHButtonTitlePosition.m */; };
@@ -917,6 +930,15 @@
 		AB569AAC193179CC0007DB0B /* Shake_Logo_Up@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shake_Logo_Up@2x.png"; sourceTree = "<group>"; };
 		AB5A6FCC1935769C0053ACB5 /* UIView+XHBadgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XHBadgeView.h"; sourceTree = "<group>"; };
 		AB5A6FCD1935769C0053ACB5 /* UIView+XHBadgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XHBadgeView.m"; sourceTree = "<group>"; };
+		AB63BF151936B35400B6C977 /* XHNewsTemplateTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHNewsTemplateTableViewCell.h; sourceTree = "<group>"; };
+		AB63BF161936B35400B6C977 /* XHNewsTemplateTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHNewsTemplateTableViewCell.m; sourceTree = "<group>"; };
+		AB63BF1A1936B4C800B6C977 /* XHNewsTemplateContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHNewsTemplateContainerView.h; sourceTree = "<group>"; };
+		AB63BF1B1936B4C800B6C977 /* XHNewsTemplateContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHNewsTemplateContainerView.m; sourceTree = "<group>"; };
+		AB63BF201936B58E00B6C977 /* NewsBackgroundImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NewsBackgroundImage@2x.png"; sourceTree = "<group>"; };
+		AB63BF231936B66400B6C977 /* XHNewsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHNewsTableViewController.h; sourceTree = "<group>"; };
+		AB63BF241936B66400B6C977 /* XHNewsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHNewsTableViewController.m; sourceTree = "<group>"; };
+		AB63BF281936BE5400B6C977 /* XHNewsContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHNewsContainerView.h; sourceTree = "<group>"; };
+		AB63BF291936BE5400B6C977 /* XHNewsContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHNewsContainerView.m; sourceTree = "<group>"; };
 		AB71383A193193A6009792B5 /* UIButton+XHButtonTitlePosition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+XHButtonTitlePosition.h"; sourceTree = "<group>"; };
 		AB71383B193193A6009792B5 /* UIButton+XHButtonTitlePosition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+XHButtonTitlePosition.m"; sourceTree = "<group>"; };
 		AB71383F193195A3009792B5 /* shake_match.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = shake_match.wav; sourceTree = "<group>"; };
@@ -1308,6 +1330,7 @@
 				74C3E7CE1929191E0053F4E1 /* AlbumContentViews */,
 				AB73B16219324630009665E3 /* ScanningView */,
 				AB72638619328D8000AA738F /* LocationServiceViews */,
+				AB63BF141936B33A00B6C977 /* NewsTemplateView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1368,6 +1391,7 @@
 				746C89741917F89A007F9A5E /* XHBaseTableViewController */,
 				AB02A9F2192D8DA9004AA23D /* XHBaseSearchTableViewController */,
 				AB8ACCE4192EB09700FA1C80 /* XHMultipleSectionTableViewController */,
+				AB63BF221936B65100B6C977 /* XHNewsTableViewController */,
 				746C89581917F7B4007F9A5E /* XHMessageTableViewController */,
 				74E9002F19278F5200D37C81 /* XHContactTableViewController */,
 				74E9003019278F5200D37C81 /* XHDiscoverTableViewController */,
@@ -1767,6 +1791,7 @@
 				74E9004B1927940000D37C81 /* avator@2x.png */,
 				74E9004C1927940000D37C81 /* Demo0.gif */,
 				74E9004D1927940000D37C81 /* Demo1.gif */,
+				AB63BF1F1936B58600B6C977 /* NewsTemplateImages */,
 				ABB777191932A7D700F4ACAF /* ContactImages */,
 				74E9004E1927940000D37C81 /* DisconverImages */,
 				AB8ACCD9192EB04400FA1C80 /* ProfileImages */,
@@ -2015,6 +2040,36 @@
 				AB713841193195A3009792B5 /* shake_sound_male.wav */,
 			);
 			path = ShakeImages;
+			sourceTree = "<group>";
+		};
+		AB63BF141936B33A00B6C977 /* NewsTemplateView */ = {
+			isa = PBXGroup;
+			children = (
+				AB63BF151936B35400B6C977 /* XHNewsTemplateTableViewCell.h */,
+				AB63BF161936B35400B6C977 /* XHNewsTemplateTableViewCell.m */,
+				AB63BF1A1936B4C800B6C977 /* XHNewsTemplateContainerView.h */,
+				AB63BF1B1936B4C800B6C977 /* XHNewsTemplateContainerView.m */,
+				AB63BF281936BE5400B6C977 /* XHNewsContainerView.h */,
+				AB63BF291936BE5400B6C977 /* XHNewsContainerView.m */,
+			);
+			path = NewsTemplateView;
+			sourceTree = "<group>";
+		};
+		AB63BF1F1936B58600B6C977 /* NewsTemplateImages */ = {
+			isa = PBXGroup;
+			children = (
+				AB63BF201936B58E00B6C977 /* NewsBackgroundImage@2x.png */,
+			);
+			path = NewsTemplateImages;
+			sourceTree = "<group>";
+		};
+		AB63BF221936B65100B6C977 /* XHNewsTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AB63BF231936B66400B6C977 /* XHNewsTableViewController.h */,
+				AB63BF241936B66400B6C977 /* XHNewsTableViewController.m */,
+			);
+			path = XHNewsTableViewController;
 			sourceTree = "<group>";
 		};
 		AB72638619328D8000AA738F /* LocationServiceViews */ = {
@@ -2281,12 +2336,14 @@
 				746C895B1917F7B4007F9A5E /* XHMessageTableViewController.h in Headers */,
 				74E5EAD61924FFBE0084BCFA /* SESelectionGrabber.h in Headers */,
 				74E5EAEE1924FFBE0084BCFA /* SETextSelection.h in Headers */,
+				AB63BF171936B35400B6C977 /* XHNewsTemplateTableViewCell.h in Headers */,
 				74E5EAF11924FFBE0084BCFA /* SETextSelectionView.h in Headers */,
 				74E5EAE51924FFBE0084BCFA /* SETextLayout.h in Headers */,
 				74E5EACD1924FFBE0084BCFA /* SEConstants.h in Headers */,
 				74E5EAE21924FFBE0084BCFA /* SETextInput.h in Headers */,
 				74E5EAD31924FFBE0084BCFA /* SELinkText.h in Headers */,
 				74E5EAF41924FFBE0084BCFA /* SETextView.h in Headers */,
+				AB63BF2A1936BE5400B6C977 /* XHNewsContainerView.h in Headers */,
 				74E5EAD01924FFBE0084BCFA /* SELineLayout.h in Headers */,
 				74E5EAEB1924FFBE0084BCFA /* SETextMagnifierRanged.h in Headers */,
 				74E5EAD91924FFBE0084BCFA /* SETextAttachment.h in Headers */,
@@ -2340,7 +2397,9 @@
 				AB8ACCE7192EB0A400FA1C80 /* XHMultipleSectionTableViewController.h in Headers */,
 				7D14A000192DF30C004B4D3B /* XHUIKitMacro.h in Headers */,
 				AB372923192EC6800084D7B5 /* XHDisplayLocationViewController.h in Headers */,
+				AB63BF251936B66400B6C977 /* XHNewsTableViewController.h in Headers */,
 				AB372929192EC6800084D7B5 /* XHDisplayTextViewController.h in Headers */,
+				AB63BF1C1936B4C800B6C977 /* XHNewsTemplateContainerView.h in Headers */,
 				AB372926192EC6800084D7B5 /* XHDisplayMediaViewController.h in Headers */,
 				AB372920192EC6800084D7B5 /* XHDisplayEmotionViewController.h in Headers */,
 				ABB494041930086C000A2680 /* XHContactCommunicationView.h in Headers */,
@@ -2710,6 +2769,7 @@
 				746C882F1916B5EE007F9A5E /* input-field-cover@2x.png in Resources */,
 				746C88421916B607007F9A5E /* ReceiverVoiceNodePlaying@2x.png in Resources */,
 				744FBDC91915EE7400FB4A65 /* Default@2x.png in Resources */,
+				AB63BF211936B58E00B6C977 /* NewsBackgroundImage@2x.png in Resources */,
 				ABCB35C619342DFA002F9938 /* VoiceSearchFeedback014_ios7@2x.png in Resources */,
 				AB8ACCE2192EB04400FA1C80 /* MoreMyFavorites@2x.png in Resources */,
 			);
@@ -2774,6 +2834,7 @@
 				7D13FC5D192C4F4000A23413 /* XHViewState.m in Sources */,
 				74180BFD190F449400A35C82 /* XHFoundationCommon.m in Sources */,
 				74901A47191D4CD30049AFF9 /* XHBaseViewController.m in Sources */,
+				AB63BF1E1936B4C800B6C977 /* XHNewsTemplateContainerView.m in Sources */,
 				746C893D1917F691007F9A5E /* XHMessageTableViewCell.m in Sources */,
 				ABB494061930086C000A2680 /* XHContactCommunicationView.m in Sources */,
 				746C89461917F691007F9A5E /* XHEmotionCollectionViewCell.m in Sources */,
@@ -2799,6 +2860,7 @@
 				7D13FC51192C4F4000A23413 /* UIImageView+XHURLDownload.m in Sources */,
 				746C893A1917F691007F9A5E /* XHMessageTableView.m in Sources */,
 				AB72638B19328D9A00AA738F /* XHLocationServiceTableViewCell.m in Sources */,
+				AB63BF2C1936BE5400B6C977 /* XHNewsContainerView.m in Sources */,
 				7D13FC5A192C4F4000A23413 /* XHImageViewer.m in Sources */,
 				749019B6191D315A0049AFF9 /* XHMessageVideoConverPhotoFactory.m in Sources */,
 				7D06CA73192B3D9B00DF8C04 /* XHBaseTableViewCell.m in Sources */,
@@ -2812,6 +2874,7 @@
 				AB8ACD08192EBF3600FA1C80 /* XHMoreMyProfileDetailTableViewController.m in Sources */,
 				74E5EAF01924FFBE0084BCFA /* SETextSelection.m in Sources */,
 				746C89311917F691007F9A5E /* XHBubblePhotoImageView.m in Sources */,
+				AB63BF271936B66400B6C977 /* XHNewsTableViewController.m in Sources */,
 				74E5EAD21924FFBE0084BCFA /* SELineLayout.m in Sources */,
 				74E5EAE41924FFBE0084BCFA /* SETextInput.m in Sources */,
 				AB8ACCF9192EBF1700FA1C80 /* XHMoreMyAlbumTableViewController.m in Sources */,
@@ -2847,6 +2910,7 @@
 				74C3E7DD19291A1A0053F4E1 /* XHAlbum.m in Sources */,
 				AB79A21F192C22F500A9B951 /* XHBaseCollectionViewCell.m in Sources */,
 				746C89401917F691007F9A5E /* XHMessageInputView.m in Sources */,
+				AB63BF191936B35500B6C977 /* XHNewsTemplateTableViewCell.m in Sources */,
 				746C897F1917F8C5007F9A5E /* XHBaseTabBarController.m in Sources */,
 				746C89491917F691007F9A5E /* XHEmotionCollectionViewFlowLayout.m in Sources */,
 				74E900B51928F3D100D37C81 /* XHStoreManager.m in Sources */,
@@ -2900,6 +2964,7 @@
 				746C89881917F8EA007F9A5E /* XHBaseTableViewController.m in Sources */,
 				74E5E9961921E90A0084BCFA /* XHVoiceRecordHUD.m in Sources */,
 				7D13FC5F192C4F4000A23413 /* XHZoomingImageView.m in Sources */,
+				AB63BF1D1936B4C800B6C977 /* XHNewsTemplateContainerView.m in Sources */,
 				AB8ACCFD192EBF2100FA1C80 /* XHMoreMyBankCardTableViewController.m in Sources */,
 				74E5EAEF1924FFBE0084BCFA /* SETextSelection.m in Sources */,
 				74E5EAE91924FFBE0084BCFA /* SETextMagnifierCaret.m in Sources */,
@@ -2908,6 +2973,7 @@
 				746C897E1917F8C5007F9A5E /* XHBaseTabBarController.m in Sources */,
 				74E5EAE61924FFBE0084BCFA /* SETextLayout.m in Sources */,
 				7D13FC5C192C4F4000A23413 /* XHViewState.m in Sources */,
+				AB63BF261936B66400B6C977 /* XHNewsTableViewController.m in Sources */,
 				74D1C5C6190DFC1D003B1BCA /* XHFoundationCommon.m in Sources */,
 				74C3E7D2192919360053F4E1 /* XHAlbumTableViewCell.m in Sources */,
 				748245151908C730008EC388 /* AppDelegate.m in Sources */,
@@ -2917,6 +2983,7 @@
 				74585F46191C8B5700F5E8C8 /* UIView+XHNetworkImage.m in Sources */,
 				AB8ACCE8192EB0A400FA1C80 /* XHMultipleSectionTableViewController.m in Sources */,
 				7D149FFB192DEB5D004B4D3B /* XHContactTableViewCell.m in Sources */,
+				AB63BF2B1936BE5400B6C977 /* XHNewsContainerView.m in Sources */,
 				7D13FC53192C4F4000A23413 /* XHCacheManager.m in Sources */,
 				AB8ACD0C192EBF3F00FA1C80 /* XHMoreSettingTableViewController.m in Sources */,
 				AB37290F192EC62C0084D7B5 /* XHQRCodeViewController.m in Sources */,
@@ -2950,6 +3017,7 @@
 				7D13FC56192C4F4000A23413 /* XHFileAttribute.m in Sources */,
 				AB02A9F6192D8DC5004AA23D /* XHBaseSearchTableViewController.m in Sources */,
 				AB79A214192C0A6400A9B951 /* XHWaterDropRefresh.m in Sources */,
+				AB63BF181936B35500B6C977 /* XHNewsTemplateTableViewCell.m in Sources */,
 				74E5EAD11924FFBE0084BCFA /* SELineLayout.m in Sources */,
 				7D13FC59192C4F4000A23413 /* XHImageViewer.m in Sources */,
 				746C89511917F691007F9A5E /* XHShareMenuView.m in Sources */,
