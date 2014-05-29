@@ -411,17 +411,17 @@
 		AB5A6FCE1935769C0053ACB5 /* UIView+XHBadgeView.h in Headers */ = {isa = PBXBuildFile; fileRef = AB5A6FCC1935769C0053ACB5 /* UIView+XHBadgeView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB5A6FCF1935769C0053ACB5 /* UIView+XHBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB5A6FCD1935769C0053ACB5 /* UIView+XHBadgeView.m */; };
 		AB5A6FD01935769C0053ACB5 /* UIView+XHBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB5A6FCD1935769C0053ACB5 /* UIView+XHBadgeView.m */; };
-		AB63BF171936B35400B6C977 /* XHNewsTemplateTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = AB63BF151936B35400B6C977 /* XHNewsTemplateTableViewCell.h */; };
+		AB63BF171936B35400B6C977 /* XHNewsTemplateTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = AB63BF151936B35400B6C977 /* XHNewsTemplateTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB63BF181936B35500B6C977 /* XHNewsTemplateTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB63BF161936B35400B6C977 /* XHNewsTemplateTableViewCell.m */; };
 		AB63BF191936B35500B6C977 /* XHNewsTemplateTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB63BF161936B35400B6C977 /* XHNewsTemplateTableViewCell.m */; };
-		AB63BF1C1936B4C800B6C977 /* XHNewsTemplateContainerView.h in Headers */ = {isa = PBXBuildFile; fileRef = AB63BF1A1936B4C800B6C977 /* XHNewsTemplateContainerView.h */; };
+		AB63BF1C1936B4C800B6C977 /* XHNewsTemplateContainerView.h in Headers */ = {isa = PBXBuildFile; fileRef = AB63BF1A1936B4C800B6C977 /* XHNewsTemplateContainerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB63BF1D1936B4C800B6C977 /* XHNewsTemplateContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB63BF1B1936B4C800B6C977 /* XHNewsTemplateContainerView.m */; };
 		AB63BF1E1936B4C800B6C977 /* XHNewsTemplateContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB63BF1B1936B4C800B6C977 /* XHNewsTemplateContainerView.m */; };
 		AB63BF211936B58E00B6C977 /* NewsBackgroundImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB63BF201936B58E00B6C977 /* NewsBackgroundImage@2x.png */; };
-		AB63BF251936B66400B6C977 /* XHNewsTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = AB63BF231936B66400B6C977 /* XHNewsTableViewController.h */; };
+		AB63BF251936B66400B6C977 /* XHNewsTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = AB63BF231936B66400B6C977 /* XHNewsTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB63BF261936B66400B6C977 /* XHNewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB63BF241936B66400B6C977 /* XHNewsTableViewController.m */; };
 		AB63BF271936B66400B6C977 /* XHNewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB63BF241936B66400B6C977 /* XHNewsTableViewController.m */; };
-		AB63BF2A1936BE5400B6C977 /* XHNewsContainerView.h in Headers */ = {isa = PBXBuildFile; fileRef = AB63BF281936BE5400B6C977 /* XHNewsContainerView.h */; };
+		AB63BF2A1936BE5400B6C977 /* XHNewsContainerView.h in Headers */ = {isa = PBXBuildFile; fileRef = AB63BF281936BE5400B6C977 /* XHNewsContainerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB63BF2B1936BE5400B6C977 /* XHNewsContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB63BF291936BE5400B6C977 /* XHNewsContainerView.m */; };
 		AB63BF2C1936BE5400B6C977 /* XHNewsContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB63BF291936BE5400B6C977 /* XHNewsContainerView.m */; };
 		AB71383C193193A6009792B5 /* UIButton+XHButtonTitlePosition.h in Headers */ = {isa = PBXBuildFile; fileRef = AB71383A193193A6009792B5 /* UIButton+XHButtonTitlePosition.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -461,7 +461,7 @@
 		AB79A222192C231C00A9B951 /* XHAlbumPhotoCollectionViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = AB79A220192C231C00A9B951 /* XHAlbumPhotoCollectionViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB79A223192C231C00A9B951 /* XHAlbumPhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB79A221192C231C00A9B951 /* XHAlbumPhotoCollectionViewCell.m */; };
 		AB79A224192C231C00A9B951 /* XHAlbumPhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB79A221192C231C00A9B951 /* XHAlbumPhotoCollectionViewCell.m */; };
-		AB84B5CF1937EEB30069A10C /* XHExpressionDetailTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = AB84B5CD1937EEB30069A10C /* XHExpressionDetailTableViewController.h */; };
+		AB84B5CF1937EEB30069A10C /* XHExpressionDetailTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = AB84B5CD1937EEB30069A10C /* XHExpressionDetailTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB84B5D01937EEB30069A10C /* XHExpressionDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB84B5CE1937EEB30069A10C /* XHExpressionDetailTableViewController.m */; };
 		AB84B5D11937EEB30069A10C /* XHExpressionDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB84B5CE1937EEB30069A10C /* XHExpressionDetailTableViewController.m */; };
 		AB8ACCDF192EB04400FA1C80 /* MoreExpressionShops@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB8ACCDA192EB04400FA1C80 /* MoreExpressionShops@2x.png */; };
@@ -572,7 +572,7 @@
 		ABCB35EC19342DFA002F9938 /* VoiceSearchOn.wav in Resources */ = {isa = PBXBuildFile; fileRef = ABCB35A819342DFA002F9938 /* VoiceSearchOn.wav */; };
 		ABCB35ED19342DFA002F9938 /* VoiceSearchStartBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABCB35A919342DFA002F9938 /* VoiceSearchStartBtn@2x.png */; };
 		ABCB35EE19342DFA002F9938 /* VoiceSearchStartBtnHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABCB35AA19342DFA002F9938 /* VoiceSearchStartBtnHL@2x.png */; };
-		ABE83CC61937DD5D00BBF653 /* XHMoreExpressionShopsTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = ABE83CC41937DD5D00BBF653 /* XHMoreExpressionShopsTableViewCell.h */; };
+		ABE83CC61937DD5D00BBF653 /* XHMoreExpressionShopsTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = ABE83CC41937DD5D00BBF653 /* XHMoreExpressionShopsTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ABE83CC71937DD5D00BBF653 /* XHMoreExpressionShopsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE83CC51937DD5D00BBF653 /* XHMoreExpressionShopsTableViewCell.m */; };
 		ABE83CC81937DD5D00BBF653 /* XHMoreExpressionShopsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE83CC51937DD5D00BBF653 /* XHMoreExpressionShopsTableViewCell.m */; };
 		ABE83CCD1937E00E00BBF653 /* EmotionDownload@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABE83CCA1937E00E00BBF653 /* EmotionDownload@2x.png */; };
@@ -2387,21 +2387,18 @@
 				740660B41914CA0000E1CE95 /* XHPhotographyHelper.h in Headers */,
 				746C89871917F8EA007F9A5E /* XHBaseTableViewController.h in Headers */,
 				746C897D1917F8C5007F9A5E /* XHBaseTabBarController.h in Headers */,
-				AB84B5CF1937EEB30069A10C /* XHExpressionDetailTableViewController.h in Headers */,
 				746C89781917F8B2007F9A5E /* XHBaseNavigationController.h in Headers */,
 				740660BE1914D65600E1CE95 /* XHEmotion.h in Headers */,
 				74E5E9891921317B0084BCFA /* XHVoiceRecordHelper.h in Headers */,
 				746C895B1917F7B4007F9A5E /* XHMessageTableViewController.h in Headers */,
 				74E5EAD61924FFBE0084BCFA /* SESelectionGrabber.h in Headers */,
 				74E5EAEE1924FFBE0084BCFA /* SETextSelection.h in Headers */,
-				AB63BF171936B35400B6C977 /* XHNewsTemplateTableViewCell.h in Headers */,
 				74E5EAF11924FFBE0084BCFA /* SETextSelectionView.h in Headers */,
 				74E5EAE51924FFBE0084BCFA /* SETextLayout.h in Headers */,
 				74E5EACD1924FFBE0084BCFA /* SEConstants.h in Headers */,
 				74E5EAE21924FFBE0084BCFA /* SETextInput.h in Headers */,
 				74E5EAD31924FFBE0084BCFA /* SELinkText.h in Headers */,
 				74E5EAF41924FFBE0084BCFA /* SETextView.h in Headers */,
-				AB63BF2A1936BE5400B6C977 /* XHNewsContainerView.h in Headers */,
 				74E5EAD01924FFBE0084BCFA /* SELineLayout.h in Headers */,
 				74E5EAEB1924FFBE0084BCFA /* SETextMagnifierRanged.h in Headers */,
 				74E5EAD91924FFBE0084BCFA /* SETextAttachment.h in Headers */,
@@ -2455,9 +2452,7 @@
 				AB8ACCE7192EB0A400FA1C80 /* XHMultipleSectionTableViewController.h in Headers */,
 				7D14A000192DF30C004B4D3B /* XHUIKitMacro.h in Headers */,
 				AB372923192EC6800084D7B5 /* XHDisplayLocationViewController.h in Headers */,
-				AB63BF251936B66400B6C977 /* XHNewsTableViewController.h in Headers */,
 				AB372929192EC6800084D7B5 /* XHDisplayTextViewController.h in Headers */,
-				AB63BF1C1936B4C800B6C977 /* XHNewsTemplateContainerView.h in Headers */,
 				AB372926192EC6800084D7B5 /* XHDisplayMediaViewController.h in Headers */,
 				AB372920192EC6800084D7B5 /* XHDisplayEmotionViewController.h in Headers */,
 				ABB494041930086C000A2680 /* XHContactCommunicationView.h in Headers */,
@@ -2472,10 +2467,15 @@
 				AB73B1651932463E009665E3 /* XHScanningView.h in Headers */,
 				AB71383C193193A6009792B5 /* UIButton+XHButtonTitlePosition.h in Headers */,
 				AB54939B193110BD001F2FCC /* XHContactPhotosView.h in Headers */,
+				AB84B5CF1937EEB30069A10C /* XHExpressionDetailTableViewController.h in Headers */,
+				AB63BF171936B35400B6C977 /* XHNewsTemplateTableViewCell.h in Headers */,
+				AB63BF2A1936BE5400B6C977 /* XHNewsContainerView.h in Headers */,
+				AB63BF251936B66400B6C977 /* XHNewsTableViewController.h in Headers */,
+				AB63BF1C1936B4C800B6C977 /* XHNewsTemplateContainerView.h in Headers */,
+				ABE83CC61937DD5D00BBF653 /* XHMoreExpressionShopsTableViewCell.h in Headers */,
 				AB8C80FC1936A6F7006CDA9B /* LKBadgeView.h in Headers */,
 				ABB777161932A27B00F4ACAF /* XHVideoOutputSampleBufferFactory.h in Headers */,
 				AB72638919328D9A00AA738F /* XHLocationServiceTableViewCell.h in Headers */,
-				ABE83CC61937DD5D00BBF653 /* XHMoreExpressionShopsTableViewCell.h in Headers */,
 				AB5A6FCE1935769C0053ACB5 /* UIView+XHBadgeView.h in Headers */,
 				74E5E9951921E90A0084BCFA /* XHVoiceRecordHUD.h in Headers */,
 				74180C0B190F44EC00A35C82 /* XHMessageBubbleFactory.h in Headers */,
