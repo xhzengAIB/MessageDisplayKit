@@ -45,7 +45,7 @@
 }
 
 - (void)setupBackgroundImage:(UIImage *)backgroundImage {
-    UIImageView *backgroundImageView = [[UIImageView alloc] initWithFrame:self.view.frame];
+    UIImageView *backgroundImageView = [[UIImageView alloc] initWithFrame:self.view.bounds];
     backgroundImageView.image = backgroundImage;
     [self.view insertSubview:backgroundImageView atIndex:0];
 }

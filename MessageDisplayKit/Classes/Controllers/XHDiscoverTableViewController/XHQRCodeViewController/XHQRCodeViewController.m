@@ -16,6 +16,8 @@
 
 #import "XHVideoOutputSampleBufferFactory.h"
 
+#import "XHFoundationCommon.h"
+
 #define kXHScanningButtonPadding 36
 
 @interface XHQRCodeViewController ()
@@ -70,14 +72,14 @@
 
 - (XHScanningView *)scanningView {
     if (!_scanningView) {
-        _scanningView = [[XHScanningView alloc] initWithFrame:CGRectMake(0, (CURRENT_SYS_VERSION >= 7.0 ? 64 : 0), CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds) - 62)];
+        _scanningView = [[XHScanningView alloc] initWithFrame:CGRectMake(0, (CURRENT_SYS_VERSION >= 7.0 ? 64 : 0), CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds) - (CURRENT_SYS_VERSION >= 7.0 ? 64 : 44))];
     }
     return _scanningView;
 }
 
 - (UIView *)buttonContainerView {
     if (!_buttonContainerView) {
-        _buttonContainerView = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.view.bounds) - 60, CGRectGetWidth(self.view.bounds), 62)];
+        _buttonContainerView = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.view.bounds) - 62 - [XHFoundationCommon getAdapterHeight], CGRectGetWidth(self.view.bounds), 62)];
         _buttonContainerView.backgroundColor = [UIColor colorWithWhite:0.000 alpha:0.700];
         
         [_buttonContainerView addSubview:self.scanQRCodeButton];
