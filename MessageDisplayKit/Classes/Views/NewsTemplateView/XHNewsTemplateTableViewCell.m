@@ -14,7 +14,7 @@
 
 - (XHNewsTemplateContainerView *)newsTemplateContainerView {
     if (!_newsTemplateContainerView) {
-        _newsTemplateContainerView = [[XHNewsTemplateContainerView alloc] initWithFrame:CGRectMake(kXHNewsTemplateContainerViewSpacing, kXHNewsTemplateContainerViewSpacing, CGRectGetWidth(self.bounds) - kXHNewsTemplateContainerViewSpacing * 2, kXHNewsTemplateContainerViewHeight)];
+        _newsTemplateContainerView = [[XHNewsTemplateContainerView alloc] initWithFrame:CGRectMake(kXHNewsTemplateContainerViewSpacing, kXHNewsTemplateContainerViewSpacing, CGRectGetWidth([[UIScreen mainScreen] bounds]) - kXHNewsTemplateContainerViewSpacing * 2, kXHNewsTemplateContainerViewHeight)];
     }
     return _newsTemplateContainerView;
 }
