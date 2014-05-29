@@ -461,6 +461,9 @@
 		AB79A222192C231C00A9B951 /* XHAlbumPhotoCollectionViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = AB79A220192C231C00A9B951 /* XHAlbumPhotoCollectionViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB79A223192C231C00A9B951 /* XHAlbumPhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB79A221192C231C00A9B951 /* XHAlbumPhotoCollectionViewCell.m */; };
 		AB79A224192C231C00A9B951 /* XHAlbumPhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB79A221192C231C00A9B951 /* XHAlbumPhotoCollectionViewCell.m */; };
+		AB84B5CF1937EEB30069A10C /* XHExpressionDetailTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = AB84B5CD1937EEB30069A10C /* XHExpressionDetailTableViewController.h */; };
+		AB84B5D01937EEB30069A10C /* XHExpressionDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB84B5CE1937EEB30069A10C /* XHExpressionDetailTableViewController.m */; };
+		AB84B5D11937EEB30069A10C /* XHExpressionDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB84B5CE1937EEB30069A10C /* XHExpressionDetailTableViewController.m */; };
 		AB8ACCDF192EB04400FA1C80 /* MoreExpressionShops@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB8ACCDA192EB04400FA1C80 /* MoreExpressionShops@2x.png */; };
 		AB8ACCE0192EB04400FA1C80 /* MoreMyAlbum@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB8ACCDB192EB04400FA1C80 /* MoreMyAlbum@2x.png */; };
 		AB8ACCE1192EB04400FA1C80 /* MoreMyBankCard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB8ACCDC192EB04400FA1C80 /* MoreMyBankCard@2x.png */; };
@@ -493,6 +496,9 @@
 		ABB494041930086C000A2680 /* XHContactCommunicationView.h in Headers */ = {isa = PBXBuildFile; fileRef = ABB494021930086C000A2680 /* XHContactCommunicationView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ABB494051930086C000A2680 /* XHContactCommunicationView.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB494031930086C000A2680 /* XHContactCommunicationView.m */; };
 		ABB494061930086C000A2680 /* XHContactCommunicationView.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB494031930086C000A2680 /* XHContactCommunicationView.m */; };
+		ABB76E2B1937ED7300E62A2E /* emotionShopOne@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABB76E281937ED7300E62A2E /* emotionShopOne@2x.png */; };
+		ABB76E2C1937ED7300E62A2E /* emotionShopTwo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABB76E291937ED7300E62A2E /* emotionShopTwo@2x.png */; };
+		ABB76E2D1937ED7300E62A2E /* emotionShopOther@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABB76E2A1937ED7300E62A2E /* emotionShopOther@2x.png */; };
 		ABB777161932A27B00F4ACAF /* XHVideoOutputSampleBufferFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = ABB777141932A27B00F4ACAF /* XHVideoOutputSampleBufferFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ABB777171932A27B00F4ACAF /* XHVideoOutputSampleBufferFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB777151932A27B00F4ACAF /* XHVideoOutputSampleBufferFactory.m */; };
 		ABB777181932A27B00F4ACAF /* XHVideoOutputSampleBufferFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB777151932A27B00F4ACAF /* XHVideoOutputSampleBufferFactory.m */; };
@@ -566,6 +572,15 @@
 		ABCB35EC19342DFA002F9938 /* VoiceSearchOn.wav in Resources */ = {isa = PBXBuildFile; fileRef = ABCB35A819342DFA002F9938 /* VoiceSearchOn.wav */; };
 		ABCB35ED19342DFA002F9938 /* VoiceSearchStartBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABCB35A919342DFA002F9938 /* VoiceSearchStartBtn@2x.png */; };
 		ABCB35EE19342DFA002F9938 /* VoiceSearchStartBtnHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABCB35AA19342DFA002F9938 /* VoiceSearchStartBtnHL@2x.png */; };
+		ABE83CC61937DD5D00BBF653 /* XHMoreExpressionShopsTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = ABE83CC41937DD5D00BBF653 /* XHMoreExpressionShopsTableViewCell.h */; };
+		ABE83CC71937DD5D00BBF653 /* XHMoreExpressionShopsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE83CC51937DD5D00BBF653 /* XHMoreExpressionShopsTableViewCell.m */; };
+		ABE83CC81937DD5D00BBF653 /* XHMoreExpressionShopsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE83CC51937DD5D00BBF653 /* XHMoreExpressionShopsTableViewCell.m */; };
+		ABE83CCD1937E00E00BBF653 /* EmotionDownload@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABE83CCA1937E00E00BBF653 /* EmotionDownload@2x.png */; };
+		ABE83CCE1937E00E00BBF653 /* EmotionListNewTips@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABE83CCB1937E00E00BBF653 /* EmotionListNewTips@2x.png */; };
+		ABE83CCF1937E00E00BBF653 /* GreenBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABE83CCC1937E00E00BBF653 /* GreenBtn@2x.png */; };
+		ABE83CD21937E4FF00BBF653 /* EmoStoreDownloadBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABE83CD01937E4FF00BBF653 /* EmoStoreDownloadBtn@2x.png */; };
+		ABE83CD31937E4FF00BBF653 /* EmoStoreDownloadBtnHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABE83CD11937E4FF00BBF653 /* EmoStoreDownloadBtnHL@2x.png */; };
+		ABE83CD51937E57F00BBF653 /* EmotionDownloadComplete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABE83CD41937E57F00BBF653 /* EmotionDownloadComplete@2x.png */; };
 		ABE87CD4192D6D7F00EC1E49 /* AlbumOperateMore@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABE87CD2192D6D7F00EC1E49 /* AlbumOperateMore@2x.png */; };
 		ABE87CD5192D6D7F00EC1E49 /* AlbumOperateMoreHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABE87CD3192D6D7F00EC1E49 /* AlbumOperateMoreHL@2x.png */; };
 		ABF9EC0F19324D64003B95DC /* ScanBook@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABF9EC0319324D64003B95DC /* ScanBook@2x.png */; };
@@ -967,6 +982,8 @@
 		AB79A21C192C22F500A9B951 /* XHBaseCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHBaseCollectionViewCell.m; sourceTree = "<group>"; };
 		AB79A220192C231C00A9B951 /* XHAlbumPhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHAlbumPhotoCollectionViewCell.h; sourceTree = "<group>"; };
 		AB79A221192C231C00A9B951 /* XHAlbumPhotoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHAlbumPhotoCollectionViewCell.m; sourceTree = "<group>"; };
+		AB84B5CD1937EEB30069A10C /* XHExpressionDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHExpressionDetailTableViewController.h; sourceTree = "<group>"; };
+		AB84B5CE1937EEB30069A10C /* XHExpressionDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHExpressionDetailTableViewController.m; sourceTree = "<group>"; };
 		AB8ACCDA192EB04400FA1C80 /* MoreExpressionShops@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MoreExpressionShops@2x.png"; sourceTree = "<group>"; };
 		AB8ACCDB192EB04400FA1C80 /* MoreMyAlbum@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MoreMyAlbum@2x.png"; sourceTree = "<group>"; };
 		AB8ACCDC192EB04400FA1C80 /* MoreMyBankCard@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MoreMyBankCard@2x.png"; sourceTree = "<group>"; };
@@ -990,6 +1007,9 @@
 		AB8C80FB1936A6F7006CDA9B /* LKBadgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKBadgeView.m; sourceTree = "<group>"; };
 		ABB494021930086C000A2680 /* XHContactCommunicationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHContactCommunicationView.h; sourceTree = "<group>"; };
 		ABB494031930086C000A2680 /* XHContactCommunicationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHContactCommunicationView.m; sourceTree = "<group>"; };
+		ABB76E281937ED7300E62A2E /* emotionShopOne@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emotionShopOne@2x.png"; sourceTree = "<group>"; };
+		ABB76E291937ED7300E62A2E /* emotionShopTwo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emotionShopTwo@2x.png"; sourceTree = "<group>"; };
+		ABB76E2A1937ED7300E62A2E /* emotionShopOther@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emotionShopOther@2x.png"; sourceTree = "<group>"; };
 		ABB777141932A27B00F4ACAF /* XHVideoOutputSampleBufferFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHVideoOutputSampleBufferFactory.h; sourceTree = "<group>"; };
 		ABB777151932A27B00F4ACAF /* XHVideoOutputSampleBufferFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHVideoOutputSampleBufferFactory.m; sourceTree = "<group>"; };
 		ABB7771A1932A7D700F4ACAF /* Contact_Female@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Contact_Female@2x.png"; sourceTree = "<group>"; };
@@ -1062,6 +1082,14 @@
 		ABCB35A819342DFA002F9938 /* VoiceSearchOn.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = VoiceSearchOn.wav; sourceTree = "<group>"; };
 		ABCB35A919342DFA002F9938 /* VoiceSearchStartBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VoiceSearchStartBtn@2x.png"; sourceTree = "<group>"; };
 		ABCB35AA19342DFA002F9938 /* VoiceSearchStartBtnHL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VoiceSearchStartBtnHL@2x.png"; sourceTree = "<group>"; };
+		ABE83CC41937DD5D00BBF653 /* XHMoreExpressionShopsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMoreExpressionShopsTableViewCell.h; sourceTree = "<group>"; };
+		ABE83CC51937DD5D00BBF653 /* XHMoreExpressionShopsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMoreExpressionShopsTableViewCell.m; sourceTree = "<group>"; };
+		ABE83CCA1937E00E00BBF653 /* EmotionDownload@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "EmotionDownload@2x.png"; sourceTree = "<group>"; };
+		ABE83CCB1937E00E00BBF653 /* EmotionListNewTips@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "EmotionListNewTips@2x.png"; sourceTree = "<group>"; };
+		ABE83CCC1937E00E00BBF653 /* GreenBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GreenBtn@2x.png"; sourceTree = "<group>"; };
+		ABE83CD01937E4FF00BBF653 /* EmoStoreDownloadBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "EmoStoreDownloadBtn@2x.png"; sourceTree = "<group>"; };
+		ABE83CD11937E4FF00BBF653 /* EmoStoreDownloadBtnHL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "EmoStoreDownloadBtnHL@2x.png"; sourceTree = "<group>"; };
+		ABE83CD41937E57F00BBF653 /* EmotionDownloadComplete@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "EmotionDownloadComplete@2x.png"; sourceTree = "<group>"; };
 		ABE87CD2192D6D7F00EC1E49 /* AlbumOperateMore@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AlbumOperateMore@2x.png"; sourceTree = "<group>"; };
 		ABE87CD3192D6D7F00EC1E49 /* AlbumOperateMoreHL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AlbumOperateMoreHL@2x.png"; sourceTree = "<group>"; };
 		ABF9EC0319324D64003B95DC /* ScanBook@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ScanBook@2x.png"; sourceTree = "<group>"; };
@@ -1331,6 +1359,7 @@
 				AB73B16219324630009665E3 /* ScanningView */,
 				AB72638619328D8000AA738F /* LocationServiceViews */,
 				AB63BF141936B33A00B6C977 /* NewsTemplateView */,
+				ABE83CC31937DD4A00BBF653 /* MoreExpressionShopsView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1791,6 +1820,7 @@
 				74E9004B1927940000D37C81 /* avator@2x.png */,
 				74E9004C1927940000D37C81 /* Demo0.gif */,
 				74E9004D1927940000D37C81 /* Demo1.gif */,
+				ABE83CC91937E00E00BBF653 /* EmotionImages */,
 				AB63BF1F1936B58600B6C977 /* NewsTemplateImages */,
 				ABB777191932A7D700F4ACAF /* ContactImages */,
 				74E9004E1927940000D37C81 /* DisconverImages */,
@@ -2138,6 +2168,8 @@
 			children = (
 				AB8ACCF0192EBF0C00FA1C80 /* XHMoreExpressionShopsTableViewController.h */,
 				AB8ACCF1192EBF0C00FA1C80 /* XHMoreExpressionShopsTableViewController.m */,
+				AB84B5CD1937EEB30069A10C /* XHExpressionDetailTableViewController.h */,
+				AB84B5CE1937EEB30069A10C /* XHExpressionDetailTableViewController.m */,
 			);
 			path = XHMoreExpressionShopsTableViewController;
 			sourceTree = "<group>";
@@ -2281,6 +2313,31 @@
 			path = VoiceImages;
 			sourceTree = "<group>";
 		};
+		ABE83CC31937DD4A00BBF653 /* MoreExpressionShopsView */ = {
+			isa = PBXGroup;
+			children = (
+				ABE83CC41937DD5D00BBF653 /* XHMoreExpressionShopsTableViewCell.h */,
+				ABE83CC51937DD5D00BBF653 /* XHMoreExpressionShopsTableViewCell.m */,
+			);
+			path = MoreExpressionShopsView;
+			sourceTree = "<group>";
+		};
+		ABE83CC91937E00E00BBF653 /* EmotionImages */ = {
+			isa = PBXGroup;
+			children = (
+				ABB76E281937ED7300E62A2E /* emotionShopOne@2x.png */,
+				ABB76E291937ED7300E62A2E /* emotionShopTwo@2x.png */,
+				ABB76E2A1937ED7300E62A2E /* emotionShopOther@2x.png */,
+				ABE83CCA1937E00E00BBF653 /* EmotionDownload@2x.png */,
+				ABE83CD41937E57F00BBF653 /* EmotionDownloadComplete@2x.png */,
+				ABE83CCB1937E00E00BBF653 /* EmotionListNewTips@2x.png */,
+				ABE83CCC1937E00E00BBF653 /* GreenBtn@2x.png */,
+				ABE83CD01937E4FF00BBF653 /* EmoStoreDownloadBtn@2x.png */,
+				ABE83CD11937E4FF00BBF653 /* EmoStoreDownloadBtnHL@2x.png */,
+			);
+			path = EmotionImages;
+			sourceTree = "<group>";
+		};
 		ABF9EC0219324D64003B95DC /* ScanningImages */ = {
 			isa = PBXGroup;
 			children = (
@@ -2330,6 +2387,7 @@
 				740660B41914CA0000E1CE95 /* XHPhotographyHelper.h in Headers */,
 				746C89871917F8EA007F9A5E /* XHBaseTableViewController.h in Headers */,
 				746C897D1917F8C5007F9A5E /* XHBaseTabBarController.h in Headers */,
+				AB84B5CF1937EEB30069A10C /* XHExpressionDetailTableViewController.h in Headers */,
 				746C89781917F8B2007F9A5E /* XHBaseNavigationController.h in Headers */,
 				740660BE1914D65600E1CE95 /* XHEmotion.h in Headers */,
 				74E5E9891921317B0084BCFA /* XHVoiceRecordHelper.h in Headers */,
@@ -2417,6 +2475,7 @@
 				AB8C80FC1936A6F7006CDA9B /* LKBadgeView.h in Headers */,
 				ABB777161932A27B00F4ACAF /* XHVideoOutputSampleBufferFactory.h in Headers */,
 				AB72638919328D9A00AA738F /* XHLocationServiceTableViewCell.h in Headers */,
+				ABE83CC61937DD5D00BBF653 /* XHMoreExpressionShopsTableViewCell.h in Headers */,
 				AB5A6FCE1935769C0053ACB5 /* UIView+XHBadgeView.h in Headers */,
 				74E5E9951921E90A0084BCFA /* XHVoiceRecordHUD.h in Headers */,
 				74180C0B190F44EC00A35C82 /* XHMessageBubbleFactory.h in Headers */,
@@ -2581,6 +2640,7 @@
 				ABCB35D519342DFA002F9938 /* VoiceSearchIconHL@2x.png in Resources */,
 				AB569AB3193179CC0007DB0B /* Shake_Line_Down@2x.png in Resources */,
 				74E900601927940000D37C81 /* Demo1.gif in Resources */,
+				ABB76E2C1937ED7300E62A2E /* emotionShopTwo@2x.png in Resources */,
 				746C88711916B62D007F9A5E /* section0_emotion0@2x.png in Resources */,
 				746C88581916B612007F9A5E /* sharemore_myfav@2x.png in Resources */,
 				74E9006B1927940000D37C81 /* SNS@2x.png in Resources */,
@@ -2591,6 +2651,7 @@
 				746C881F1916B5D6007F9A5E /* keyborad@2x.png in Resources */,
 				ABCB35E119342DFA002F9938 /* VoiceSearchLoading006@2x.png in Resources */,
 				746C882C1916B5EE007F9A5E /* input-bar-flat.png in Resources */,
+				ABE83CD51937E57F00BBF653 /* EmotionDownloadComplete@2x.png in Resources */,
 				746C887C1916B62D007F9A5E /* section0_emotion11@2x.png in Resources */,
 				AB7263931932944400AA738F /* Shake_Logo_Female_Up@2x.png in Resources */,
 				74E900AC1927ABF800D37C81 /* fishwater2@2x.png in Resources */,
@@ -2648,6 +2709,7 @@
 				74E5E9B01921F7710084BCFA /* RecordingSignal008@2x.png in Resources */,
 				ABF9EC1019324D64003B95DC /* ScanBook_HL@2x.png in Resources */,
 				ABCB35E419342DFA002F9938 /* VoiceSearchLoading007_ios7@2x.png in Resources */,
+				ABE83CCF1937E00E00BBF653 /* GreenBtn@2x.png in Resources */,
 				746C881E1916B5D6007F9A5E /* keyborad_HL@2x.png in Resources */,
 				746C88741916B62D007F9A5E /* section0_emotion3@2x.png in Resources */,
 				AB72638F193293DC00AA738F /* barbuttonicon_set@2x.png in Resources */,
@@ -2682,12 +2744,15 @@
 				ABCB35B519342DFA002F9938 /* VoiceSearchFeedback006@2x.png in Resources */,
 				ABCB35E519342DFA002F9938 /* VoiceSearchLoading008@2x.png in Resources */,
 				744FBDC81915EE7400FB4A65 /* Default-568h@2x.png in Resources */,
+				ABE83CCE1937E00E00BBF653 /* EmotionListNewTips@2x.png in Resources */,
 				74BBB020190B8EAB00093577 /* MessageDisplayKitString.strings in Resources */,
 				ABB7771D1932A7D700F4ACAF /* Contact_Male@2x.png in Resources */,
 				74E900A51927A9C900D37C81 /* bottleRecord@2x.png in Resources */,
 				74E900661927940000D37C81 /* MoreGame@2x.png in Resources */,
 				74E900611927940000D37C81 /* ff_IconBottle@2x.png in Resources */,
 				ABCB35C219342DFA002F9938 /* VoiceSearchFeedback012_ios7@2x.png in Resources */,
+				ABB76E2B1937ED7300E62A2E /* emotionShopOne@2x.png in Resources */,
+				ABE83CD31937E4FF00BBF653 /* EmoStoreDownloadBtnHL@2x.png in Resources */,
 				74E9009A1927A81500D37C81 /* bottleButtonThrow@2x.png in Resources */,
 				ABCB35AB19342DFA002F9938 /* VoiceSearchBtn@2x.png in Resources */,
 				746C88471916B607007F9A5E /* SenderVoiceNodePlaying@2x.png in Resources */,
@@ -2716,9 +2781,11 @@
 				74E900671927940000D37C81 /* IMG_1555.MOV in Resources */,
 				ABCB35C119342DFA002F9938 /* VoiceSearchFeedback012@2x.png in Resources */,
 				AB569AB6193179CC0007DB0B /* Shake_Logo_Up@2x.png in Resources */,
+				ABE83CD21937E4FF00BBF653 /* EmoStoreDownloadBtn@2x.png in Resources */,
 				AB79A218192C0B1500A9B951 /* circle@2x.png in Resources */,
 				746C882A1916B5EE007F9A5E /* input-bar-background.png in Resources */,
 				ABCB35DE19342DFA002F9938 /* VoiceSearchLoading004_ios7@2x.png in Resources */,
+				ABE83CCD1937E00E00BBF653 /* EmotionDownload@2x.png in Resources */,
 				746C88761916B62D007F9A5E /* section0_emotion5@2x.png in Resources */,
 				746C885E1916B612007F9A5E /* sharemore_voipvoice@2x.png in Resources */,
 				746C881B1916B5D6007F9A5E /* face_HL@2x.png in Resources */,
@@ -2757,6 +2824,7 @@
 				746C88491916B607007F9A5E /* SenderVoiceNodePlaying001@2x.png in Resources */,
 				AB726395193296EE00AA738F /* album_add_photo@2x.png in Resources */,
 				74E5E9B11921F7710084BCFA /* RecordingBkg@2x.png in Resources */,
+				ABB76E2D1937ED7300E62A2E /* emotionShopOther@2x.png in Resources */,
 				ABCB35D119342DFA002F9938 /* VoiceSearchFeedback020@2x.png in Resources */,
 				AB4F12F61932AC1300693BD5 /* AlbumFlagMark@2x.png in Resources */,
 				ABCB35D319342DFA002F9938 /* VoiceSearchIcon@2x.png in Resources */,
@@ -2851,6 +2919,7 @@
 				74065FBB19123E1C00E1CE95 /* XHShareMenuItem.m in Sources */,
 				AB726385193281CA00AA738F /* XHCaptureHelper.m in Sources */,
 				746C89521917F691007F9A5E /* XHShareMenuView.m in Sources */,
+				AB84B5D11937EEB30069A10C /* XHExpressionDetailTableViewController.m in Sources */,
 				AB8ACD0D192EBF3F00FA1C80 /* XHMoreSettingTableViewController.m in Sources */,
 				AB54939D193110BD001F2FCC /* XHContactPhotosView.m in Sources */,
 				74E5EAD81924FFBE0084BCFA /* SESelectionGrabber.m in Sources */,
@@ -2870,6 +2939,7 @@
 				740660C01914D65600E1CE95 /* XHEmotion.m in Sources */,
 				74901A41191D3B1C0049AFF9 /* XHProfileTableViewController.m in Sources */,
 				74E5EAE11924FFBE0084BCFA /* SETextGeometry.m in Sources */,
+				ABE83CC81937DD5D00BBF653 /* XHMoreExpressionShopsTableViewCell.m in Sources */,
 				74180C01190F44A600A35C82 /* XHMessage.m in Sources */,
 				AB8ACD08192EBF3600FA1C80 /* XHMoreMyProfileDetailTableViewController.m in Sources */,
 				74E5EAF01924FFBE0084BCFA /* SETextSelection.m in Sources */,
@@ -2938,6 +3008,8 @@
 				ABB494051930086C000A2680 /* XHContactCommunicationView.m in Sources */,
 				AB79A211192C0A6400A9B951 /* XHSoundManager.m in Sources */,
 				74901A46191D4CD30049AFF9 /* XHBaseViewController.m in Sources */,
+				AB84B5D01937EEB30069A10C /* XHExpressionDetailTableViewController.m in Sources */,
+				ABE83CC71937DD5D00BBF653 /* XHMoreExpressionShopsTableViewCell.m in Sources */,
 				AB79A223192C231C00A9B951 /* XHAlbumPhotoCollectionViewCell.m in Sources */,
 				74D1C5E9190E2BE6003B1BCA /* XHMessageVoiceFactory.m in Sources */,
 				7482459A1909F370008EC388 /* XHMessageAvatorFactory.m in Sources */,
