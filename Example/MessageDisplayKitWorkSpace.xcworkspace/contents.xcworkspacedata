@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:MessageDisplayKitCoreDataExample/MessageDisplayKitCoreDataExample.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:MessageDisplayKitStoryBoradExample/MessageDisplayKitStoryBoradExample.xcodeproj">
    </FileRef>
    <FileRef

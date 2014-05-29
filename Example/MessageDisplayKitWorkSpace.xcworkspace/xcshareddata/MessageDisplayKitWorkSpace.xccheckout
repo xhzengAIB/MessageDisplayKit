@@ -5,7 +5,7 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>D1224CCE-5538-4C86-A2A6-730C074FB202</string>
+	<string>4C5998D2-1F4E-465C-A4A9-C7E1A365B061</string>
 	<key>IDESourceControlProjectName</key>
 	<string>MessageDisplayKitWorkSpace</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
@@ -18,7 +18,7 @@
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>8D76E15D-8215-4652-9E44-A2D809A03466</key>
-		<string>../..</string>
+		<string>../MessageDisplayKitCoreDataExample</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/xhzengAIB/MessageDisplayKit.git</string>
@@ -34,7 +34,15 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>8D76E15D-8215-4652-9E44-A2D809A03466</string>
 			<key>IDESourceControlWCCName</key>
-			<string>MessageDisplayKit</string>
+			<string>MessageDisplayKitCoreDataExample</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8D76E15D-8215-4652-9E44-A2D809A03466</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MessageDisplayKitCoreDataExample</string>
 		</dict>
 	</array>
 </dict>
