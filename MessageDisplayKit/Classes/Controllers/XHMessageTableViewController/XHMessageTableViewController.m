@@ -506,7 +506,14 @@ static CGPoint  delayOffset = {0.0};
 	messageTableView.delegate = self;
     messageTableView.separatorColor = [UIColor clearColor];
     messageTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    messageTableView.tableHeaderView = self.headerContainerView;
+    
+    BOOL shouldLoadMoreMessagesScrollToTop = YES;
+    if ([self.delegate respondsToSelector:@selector(shouldLoadMoreMessagesScrollToTop)]) {
+        shouldLoadMoreMessagesScrollToTop = [self.delegate shouldLoadMoreMessagesScrollToTop];
+    }
+    if (shouldLoadMoreMessagesScrollToTop) {
+        messageTableView.tableHeaderView = self.headerContainerView;
+    }
     [self.view addSubview:messageTableView];
     [self.view sendSubviewToBack:messageTableView];
 	_messageTableView = messageTableView;

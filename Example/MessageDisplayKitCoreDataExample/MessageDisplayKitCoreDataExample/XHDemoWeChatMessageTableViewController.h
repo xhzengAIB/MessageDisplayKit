@@ -8,6 +8,12 @@
 
 #import <MessageDisplayFramework/XHMessageTableViewController.h>
 
-@interface XHDemoWeChatMessageTableViewController : XHMessageTableViewController
+#import <CoreData/CoreData.h>
+
+@interface XHDemoWeChatMessageTableViewController : XHMessageTableViewController <NSFetchedResultsControllerDelegate>
+
+@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+
 
 @end

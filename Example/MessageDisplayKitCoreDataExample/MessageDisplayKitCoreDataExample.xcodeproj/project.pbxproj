@@ -16,7 +16,6 @@
 		AB5C7E561937FE7000FA7D5B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AB5C7E551937FE7000FA7D5B /* AppDelegate.m */; };
 		AB5C7E591937FE7000FA7D5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB5C7E571937FE7000FA7D5B /* Main.storyboard */; };
 		AB5C7E5C1937FE7000FA7D5B /* MessageDisplayKitCoreDataExample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AB5C7E5A1937FE7000FA7D5B /* MessageDisplayKitCoreDataExample.xcdatamodeld */; };
-		AB5C7E5F1937FE7000FA7D5B /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB5C7E5E1937FE7000FA7D5B /* MasterViewController.m */; };
 		AB5C7E641937FE7000FA7D5B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB5C7E631937FE7000FA7D5B /* Images.xcassets */; };
 		AB5C7E6B1937FE7000FA7D5B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB5C7E6A1937FE7000FA7D5B /* XCTest.framework */; };
 		AB5C7E6C1937FE7000FA7D5B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB5C7E431937FE7000FA7D5B /* Foundation.framework */; };
@@ -245,6 +244,7 @@
 		AB5C80491938017700FA7D5B /* tabbarBkg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB5C7FB31938017700FA7D5B /* tabbarBkg@2x.png */; };
 		AB5C804A1938017700FA7D5B /* WeChat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB5C7FB41938017700FA7D5B /* WeChat@2x.png */; };
 		AB5C804B1938017700FA7D5B /* TableViewBackgroundImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB5C7FB51938017700FA7D5B /* TableViewBackgroundImage@2x.png */; };
+		ABC47CFB193922EB00ECADEA /* MDKMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC47CFA193922EB00ECADEA /* MDKMessage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -271,8 +271,6 @@
 		AB5C7E551937FE7000FA7D5B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		AB5C7E581937FE7000FA7D5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AB5C7E5B1937FE7000FA7D5B /* MessageDisplayKitCoreDataExample.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MessageDisplayKitCoreDataExample.xcdatamodel; sourceTree = "<group>"; };
-		AB5C7E5D1937FE7000FA7D5B /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
-		AB5C7E5E1937FE7000FA7D5B /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 		AB5C7E631937FE7000FA7D5B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AB5C7E691937FE7000FA7D5B /* MessageDisplayKitCoreDataExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MessageDisplayKitCoreDataExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB5C7E6A1937FE7000FA7D5B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -502,6 +500,8 @@
 		AB5C7FB31938017700FA7D5B /* tabbarBkg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbarBkg@2x.png"; sourceTree = "<group>"; };
 		AB5C7FB41938017700FA7D5B /* WeChat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WeChat@2x.png"; sourceTree = "<group>"; };
 		AB5C7FB51938017700FA7D5B /* TableViewBackgroundImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TableViewBackgroundImage@2x.png"; sourceTree = "<group>"; };
+		ABC47CF9193922EB00ECADEA /* MDKMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDKMessage.h; sourceTree = "<group>"; };
+		ABC47CFA193922EB00ECADEA /* MDKMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDKMessage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -569,12 +569,12 @@
 				AB5C7E541937FE7000FA7D5B /* AppDelegate.h */,
 				AB5C7E551937FE7000FA7D5B /* AppDelegate.m */,
 				AB5C7E571937FE7000FA7D5B /* Main.storyboard */,
-				AB5C7E5D1937FE7000FA7D5B /* MasterViewController.h */,
-				AB5C7E5E1937FE7000FA7D5B /* MasterViewController.m */,
 				AB5C7F111937FFCC00FA7D5B /* XHDemoWeChatMessageTableViewController.h */,
 				AB5C7F121937FFCC00FA7D5B /* XHDemoWeChatMessageTableViewController.m */,
 				AB5C7E631937FE7000FA7D5B /* Images.xcassets */,
 				AB5C7E5A1937FE7000FA7D5B /* MessageDisplayKitCoreDataExample.xcdatamodeld */,
+				ABC47CF9193922EB00ECADEA /* MDKMessage.h */,
+				ABC47CFA193922EB00ECADEA /* MDKMessage.m */,
 				AB5C7E4C1937FE7000FA7D5B /* Supporting Files */,
 			);
 			path = MessageDisplayKitCoreDataExample;
@@ -1259,8 +1259,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB5C7E5F1937FE7000FA7D5B /* MasterViewController.m in Sources */,
 				AB5C7F131937FFCC00FA7D5B /* XHDemoWeChatMessageTableViewController.m in Sources */,
+				ABC47CFB193922EB00ECADEA /* MDKMessage.m in Sources */,
 				AB5C7E561937FE7000FA7D5B /* AppDelegate.m in Sources */,
 				AB5C7E5C1937FE7000FA7D5B /* MessageDisplayKitCoreDataExample.xcdatamodeld in Sources */,
 				AB5C7E521937FE7000FA7D5B /* main.m in Sources */,
@@ -1495,6 +1495,7 @@
 				AB5C7E7D1937FE7000FA7D5B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AB5C7E7E1937FE7000FA7D5B /* Build configuration list for PBXNativeTarget "MessageDisplayKitCoreDataExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -1503,6 +1504,7 @@
 				AB5C7E801937FE7000FA7D5B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="12E55" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Event">
-        <attribute name="timeStamp" optional="YES" attributeType="Date">
-            <userInfo/>
-        </attribute>
-        <userInfo/>
+    <entity name="MDKMessage" representedClassName="MDKMessage" syncable="YES">
+        <attribute name="photo" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="sender" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="timestamp" optional="YES" attributeType="Date" syncable="YES"/>
     </entity>
-    <entity name="MDKMessage" syncable="YES"/>
     <elements>
-        <element name="Event" positionX="261" positionY="189" width="128" height="60"/>
-        <element name="MDKMessage" positionX="261" positionY="198" width="128" height="43"/>
+        <element name="MDKMessage" positionX="261" positionY="198" width="128" height="105"/>
     </elements>
 </model>

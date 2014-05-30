@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 
-#import "MasterViewController.h"
+#import "XHDemoWeChatMessageTableViewController.h"
 
 @implementation AppDelegate
 
@@ -20,7 +20,7 @@
 {
     // Override point for customization after application launch.
     UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
-    MasterViewController *controller = (MasterViewController *)navigationController.topViewController;
+    XHDemoWeChatMessageTableViewController *controller = (XHDemoWeChatMessageTableViewController *)navigationController.topViewController;
     controller.managedObjectContext = self.managedObjectContext;
     return YES;
 }
