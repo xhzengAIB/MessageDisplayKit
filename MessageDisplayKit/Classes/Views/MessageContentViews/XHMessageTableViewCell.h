@@ -11,7 +11,7 @@
 #import "XHBaseTableViewCell.h"
 
 #import "XHMessageBubbleView.h"
-#import "UIView+XHNetworkImage.h"
+#import "UIView+XHRemoteImage.h"
 
 #import "LKBadgeView.h"
 

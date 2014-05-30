@@ -1,12 +1,12 @@
 //
-//  UIImageView+XHURLDownload.m
-//  XHImageViewer
+//  UIView+XHRemoteImage.m
+//  MessageDisplayExample
 //
-//  Created by 曾 宪华 on 14-2-18.
+//  Created by 曾 宪华 on 14-5-30.
 //  Copyright (c) 2014年 曾宪华 开发团队(http://iyilunba.com ) 本人QQ:543413507 本人QQ群（142557668）. All rights reserved.
 //
 
-#import "UIImageView+XHURLDownload.h"
+#import "UIView+XHRemoteImage.h"
 
 #import <objc/runtime.h>
 
@@ -18,9 +18,11 @@ const char* const kXHLoadingViewKey   = "XHURLDownloadLoadingViewKey";
 
 const char* const kXHActivityIndicatorViewKey   = "XHActivityIndicatorViewKey";
 
+const char* const kXHMessageAvatorTypeKey   = "XHMessageAvatorTypeKey";
+
 #define kXHActivityIndicatorViewSize 35
 
-@implementation UIImageView (XHURLDownload)
+@implementation UIView (XHRemoteImage)
 
 + (id)imageViewWithURL:(NSURL *)url autoLoading:(BOOL)autoLoading {
     UIImageView *view = [self new];
@@ -64,15 +66,23 @@ const char* const kXHActivityIndicatorViewKey   = "XHActivityIndicatorViewKey";
     return objc_getAssociatedObject(self, kXHActivityIndicatorViewKey);
 }
 
+- (void)setMessageAvatorType:(XHMessageAvatorType)messageAvatorType {
+    objc_setAssociatedObject(self, &kXHMessageAvatorTypeKey, [NSNumber numberWithInteger:messageAvatorType], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (XHMessageAvatorType)messageAvatorType {
+    return (XHMessageAvatorType)([objc_getAssociatedObject(self, &kXHMessageAvatorTypeKey) integerValue]);
+}
+
 - (NSURL*)url {
     return objc_getAssociatedObject(self, kXHURLPropertyKey);
 }
 
 - (void)setUrl:(NSURL *)url {
-    [self setUrl:url autoLoading:NO];
+    [self setImageUrl:url autoLoading:NO];
 }
 
-- (void)setUrl:(NSURL *)url autoLoading:(BOOL)autoLoading {
+- (void)setImageUrl:(NSURL *)url autoLoading:(BOOL)autoLoading {
     if(![url isEqual:self.url]) {
         objc_setAssociatedObject(self, kXHURLPropertyKey, url, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
         
@@ -89,28 +99,29 @@ const char* const kXHActivityIndicatorViewKey   = "XHActivityIndicatorViewKey";
     }
 }
 
-- (void)loadWithURL:(NSURL *)url {
-    [self loadWithURL:url placeholer:nil];
+- (void)setImageWithURL:(NSURL *)url {
+    [self setImageWithURL:url placeholer:nil];
 }
 
-- (void)loadWithURL:(NSURL *)url placeholer:(UIImage *)placeholerImage {
-    [self loadWithURL:url placeholer:placeholerImage showActivityIndicatorView:NO];
+- (void)setImageWithURL:(NSURL *)url placeholer:(UIImage *)placeholerImage {
+    [self setImageWithURL:url placeholer:placeholerImage showActivityIndicatorView:NO];
 }
 
-- (void)loadWithURL:(NSURL *)url placeholer:(UIImage *)placeholerImage showActivityIndicatorView:(BOOL)show {
+- (void)setImageWithURL:(NSURL *)url placeholer:(UIImage *)placeholerImage showActivityIndicatorView:(BOOL)show {
     [self _setupPlaecholerImage:placeholerImage showActivityIndicatorView:show];
-    [self setUrl:url autoLoading:YES];
+    [self setImageUrl:url autoLoading:YES];
 }
 
-- (void)loadWithURL:(NSURL *)url placeholer:(UIImage *)placeholerImage showActivityIndicatorView:(BOOL)show completionBlock:(void(^)(UIImage *image, NSURL *url, NSError *error))handler {
+- (void)setImageWithURL:(NSURL *)url placeholer:(UIImage *)placeholerImage showActivityIndicatorView:(BOOL)show completionBlock:(void(^)(UIImage *image, NSURL *url, NSError *error))handler {
     [self _setupPlaecholerImage:placeholerImage showActivityIndicatorView:show];
-    [self setUrl:url autoLoading:NO];
+    [self setImageUrl:url autoLoading:NO];
     [self loadWithCompletionBlock:handler];
 }
 
 - (void)_setupPlaecholerImage:(UIImage *)placeholerImage showActivityIndicatorView:(BOOL)show {
-    if (placeholerImage)
-        [self setImage:placeholerImage];
+    if (placeholerImage) {
+        [self setupImage:placeholerImage];
+    }
     if (show) {
         UIActivityIndicatorView *activityIndicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
         activityIndicatorView.frame = CGRectMake(0, 0, kXHActivityIndicatorViewSize, kXHActivityIndicatorViewSize);
@@ -150,6 +161,18 @@ const char* const kXHActivityIndicatorViewKey   = "XHActivityIndicatorViewKey";
     indicator.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     indicator.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1];
     self.loadingView = indicator;
+}
+
+#pragma mark - Setup Image
+
+- (void)setupImage:(UIImage *)image {
+    if ([self isKindOfClass:[UIButton class]]) {
+        UIButton *currentButton = (UIButton *)self;
+        [currentButton setImage:image forState:UIControlStateNormal];
+    } else if ([self isKindOfClass:[UIImageView class]]) {
+        UIImageView *currentImageView = (UIImageView *)self;
+        currentImageView.image = image;
+    }
 }
 
 #pragma mark- Loading view
@@ -223,6 +246,9 @@ const char* const kXHActivityIndicatorViewKey   = "XHActivityIndicatorViewKey";
     __weak typeof(self) weakSelf = self;
     dispatch_async(self.cachingQueue, ^{
         UIImage *cacheImage = [XHCacheManager imageWithURL:weakSelf.url storeMemoryCache:YES];
+        if (self.messageAvatorType != XHMessageAvatorNormal) {
+            cacheImage = [XHMessageAvatorFactory avatarImageNamed:cacheImage messageAvatorType:self.messageAvatorType];
+        }
         if (cacheImage) {
             [self setImage:cacheImage forURL:weakSelf.url];
             if (handler)
@@ -258,11 +284,14 @@ const char* const kXHActivityIndicatorViewKey   = "XHActivityIndicatorViewKey";
         [self cachingImageData:data url:url];
     }
     UIImage *image = [UIImage imageWithData:data];
+    if (self.messageAvatorType != XHMessageAvatorNormal) {
+        image = [XHMessageAvatorFactory avatarImageNamed:image messageAvatorType:self.messageAvatorType];
+    }
     if([url isEqual:self.url]) {
         if(error) {
             self.loadingState = UIImageViewURLDownloadStateFailed;
         } else {
-            [self performSelectorOnMainThread:@selector(setImage:) withObject:image waitUntilDone:NO];
+            [self performSelectorOnMainThread:@selector(setupImage:) withObject:image waitUntilDone:NO];
             self.loadingState = UIImageViewURLDownloadStateLoaded;
         }
         [self hideLoadingView];
@@ -272,7 +301,7 @@ const char* const kXHActivityIndicatorViewKey   = "XHActivityIndicatorViewKey";
 
 - (void)setImage:(UIImage *)image forURL:(NSURL *)url {
     if([url isEqual:self.url]) {
-        [self performSelectorOnMainThread:@selector(setImage:) withObject:image waitUntilDone:NO];
+        [self performSelectorOnMainThread:@selector(setupImage:) withObject:image waitUntilDone:NO];
         self.loadingState = UIImageViewURLDownloadStateLoaded;
         [self hideLoadingView];
     }

@@ -165,7 +165,8 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
     if (message.avator) {
         [self.avatorButton setImage:message.avator forState:UIControlStateNormal];
         if (message.avatorUrl) {
-            [self.avatorButton setImageUrl:message.avatorUrl];
+            self.avatorButton.messageAvatorType = XHMessageAvatorSquare;
+            [self.avatorButton setImageWithURL:[NSURL URLWithString:message.avatorUrl] placeholer:[UIImage imageNamed:@"avator"]];
         }
     } else {
         [self.avatorButton setImage:[XHMessageAvatorFactory avatarImageNamed:[UIImage imageNamed:@"avator"] messageAvatorType:XHMessageAvatorSquare] forState:UIControlStateNormal];

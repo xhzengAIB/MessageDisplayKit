@@ -1,12 +1,13 @@
 //
-//  UIImageView+XHURLDownload.h
-//  XHImageViewer
+//  UIView+XHRemoteImage.h
+//  MessageDisplayExample
 //
-//  Created by 曾 宪华 on 14-2-18.
+//  Created by 曾 宪华 on 14-5-30.
 //  Copyright (c) 2014年 曾宪华 开发团队(http://iyilunba.com ) 本人QQ:543413507 本人QQ群（142557668）. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
+#import "XHMessageAvatorFactory.h"
 
 typedef NS_ENUM(NSInteger, UIImageViewURLDownloadState) {
     UIImageViewURLDownloadStateUnknown = 0,
@@ -16,13 +17,16 @@ typedef NS_ENUM(NSInteger, UIImageViewURLDownloadState) {
     UIImageViewURLDownloadStateFailed,
 };
 
-@interface UIImageView (XHURLDownload)
+@interface UIView (XHRemoteImage)
 
 // url
 @property (nonatomic, strong) NSURL *url;
 
 // download state
 @property (nonatomic, readonly) UIImageViewURLDownloadState loadingState;
+
+//
+@property (nonatomic, assign) XHMessageAvatorType messageAvatorType;
 
 // UI
 @property (nonatomic, strong) UIView *loadingView;
@@ -37,12 +41,12 @@ typedef NS_ENUM(NSInteger, UIImageViewURLDownloadState) {
 + (id)indicatorImageViewWithURL:(NSURL *)url autoLoading:(BOOL)autoLoading;
 
 // Download
-- (void)loadWithURL:(NSURL *)url;
-- (void)loadWithURL:(NSURL *)url placeholer:(UIImage *)placeholerImage;
-- (void)loadWithURL:(NSURL *)url placeholer:(UIImage *)placeholerImage showActivityIndicatorView:(BOOL)show;
-- (void)loadWithURL:(NSURL *)url placeholer:(UIImage *)placeholerImage showActivityIndicatorView:(BOOL)show completionBlock:(void(^)(UIImage *image, NSURL *url, NSError *error))handler;
+- (void)setImageWithURL:(NSURL *)url;
+- (void)setImageWithURL:(NSURL *)url placeholer:(UIImage *)placeholerImage;
+- (void)setImageWithURL:(NSURL *)url placeholer:(UIImage *)placeholerImage showActivityIndicatorView:(BOOL)show;
+- (void)setImageWithURL:(NSURL *)url placeholer:(UIImage *)placeholerImage showActivityIndicatorView:(BOOL)show completionBlock:(void(^)(UIImage *image, NSURL *url, NSError *error))handler;
 
-- (void)setUrl:(NSURL *)url autoLoading:(BOOL)autoLoading;
+- (void)setImageUrl:(NSURL *)url autoLoading:(BOOL)autoLoading;
 - (void)load;
 
 @end
