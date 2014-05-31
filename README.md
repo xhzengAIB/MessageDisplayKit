@@ -11,7 +11,7 @@ It's ok if you don't understand how the code works. Most code has comments, whic
 
 ## 开源许可协议
 很多人和我说，你不知道什么是开源许可协议，其实我也不清楚他是不知道还是不想知道，作为一个开发者，不懂得尊重别人的成果，那你到底想怎样，你自己最清楚。                      
-说一件事吧！曾经我也这么做了，没尊重作者的成功，最终被人鄙视了一段时间，于是我删除了那个开源库，现在终于明白，尊重这个词，这对于别人来说是一个认可，我们不可以剥夺这份利益。
+说一件事吧！曾经我也这么做了，没尊重作者的成果，最终被人鄙视了一段时间，于是我删除了那个开源库，现在终于明白，尊重这个词，这对于别人来说是一个认可，我们不可以剥夺这份利益。
 网易新闻App的开发者很厚道，他们有做到这一份尊重，他们是这么做的：                          
 ```objc
 UIWebView *librariesWebView = [[UIWebView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
