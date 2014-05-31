@@ -475,6 +475,15 @@
 		AB8C80FC1936A6F7006CDA9B /* LKBadgeView.h in Headers */ = {isa = PBXBuildFile; fileRef = AB8C80FA1936A6F7006CDA9B /* LKBadgeView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB8C80FD1936A6F7006CDA9B /* LKBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8C80FB1936A6F7006CDA9B /* LKBadgeView.m */; };
 		AB8C80FE1936A6F7006CDA9B /* LKBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8C80FB1936A6F7006CDA9B /* LKBadgeView.m */; };
+		AB9B0F58193A8630004FA35D /* XHHorizontalGridView.h in Headers */ = {isa = PBXBuildFile; fileRef = AB9B0F56193A8630004FA35D /* XHHorizontalGridView.h */; };
+		AB9B0F59193A8630004FA35D /* XHHorizontalGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9B0F57193A8630004FA35D /* XHHorizontalGridView.m */; };
+		AB9B0F5A193A8630004FA35D /* XHHorizontalGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9B0F57193A8630004FA35D /* XHHorizontalGridView.m */; };
+		AB9B0F5D193A8649004FA35D /* XHHorizontalGridItem.h in Headers */ = {isa = PBXBuildFile; fileRef = AB9B0F5B193A8649004FA35D /* XHHorizontalGridItem.h */; };
+		AB9B0F5E193A8649004FA35D /* XHHorizontalGridItem.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9B0F5C193A8649004FA35D /* XHHorizontalGridItem.m */; };
+		AB9B0F5F193A8649004FA35D /* XHHorizontalGridItem.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9B0F5C193A8649004FA35D /* XHHorizontalGridItem.m */; };
+		AB9B0F62193A88AD004FA35D /* XHHorizontalGridItemView.h in Headers */ = {isa = PBXBuildFile; fileRef = AB9B0F60193A88AD004FA35D /* XHHorizontalGridItemView.h */; };
+		AB9B0F63193A88AD004FA35D /* XHHorizontalGridItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9B0F61193A88AD004FA35D /* XHHorizontalGridItemView.m */; };
+		AB9B0F64193A88AD004FA35D /* XHHorizontalGridItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9B0F61193A88AD004FA35D /* XHHorizontalGridItemView.m */; };
 		ABB494041930086C000A2680 /* XHContactCommunicationView.h in Headers */ = {isa = PBXBuildFile; fileRef = ABB494021930086C000A2680 /* XHContactCommunicationView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ABB494051930086C000A2680 /* XHContactCommunicationView.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB494031930086C000A2680 /* XHContactCommunicationView.m */; };
 		ABB494061930086C000A2680 /* XHContactCommunicationView.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB494031930086C000A2680 /* XHContactCommunicationView.m */; };
@@ -583,6 +592,12 @@
 		ABE83CD51937E57F00BBF653 /* EmotionDownloadComplete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABE83CD41937E57F00BBF653 /* EmotionDownloadComplete@2x.png */; };
 		ABE87CD4192D6D7F00EC1E49 /* AlbumOperateMore@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABE87CD2192D6D7F00EC1E49 /* AlbumOperateMore@2x.png */; };
 		ABE87CD5192D6D7F00EC1E49 /* AlbumOperateMoreHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABE87CD3192D6D7F00EC1E49 /* AlbumOperateMoreHL@2x.png */; };
+		ABEC5131193A8497004954E3 /* dgame1.png in Resources */ = {isa = PBXBuildFile; fileRef = ABEC512B193A8497004954E3 /* dgame1.png */; };
+		ABEC5132193A8497004954E3 /* dgame2.png in Resources */ = {isa = PBXBuildFile; fileRef = ABEC512C193A8497004954E3 /* dgame2.png */; };
+		ABEC5133193A8497004954E3 /* dgame0.png in Resources */ = {isa = PBXBuildFile; fileRef = ABEC512D193A8497004954E3 /* dgame0.png */; };
+		ABEC5134193A8497004954E3 /* game1.png in Resources */ = {isa = PBXBuildFile; fileRef = ABEC512E193A8497004954E3 /* game1.png */; };
+		ABEC5135193A8497004954E3 /* game2.png in Resources */ = {isa = PBXBuildFile; fileRef = ABEC512F193A8497004954E3 /* game2.png */; };
+		ABEC5136193A8497004954E3 /* game3.png in Resources */ = {isa = PBXBuildFile; fileRef = ABEC5130193A8497004954E3 /* game3.png */; };
 		ABF9EC0F19324D64003B95DC /* ScanBook@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABF9EC0319324D64003B95DC /* ScanBook@2x.png */; };
 		ABF9EC1019324D64003B95DC /* ScanBook_HL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABF9EC0419324D64003B95DC /* ScanBook_HL@2x.png */; };
 		ABF9EC1119324D64003B95DC /* ScanQR1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABF9EC0519324D64003B95DC /* ScanQR1@2x.png */; };
@@ -993,6 +1008,12 @@
 		AB8ACD0A192EBF3F00FA1C80 /* XHMoreSettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMoreSettingTableViewController.m; sourceTree = "<group>"; };
 		AB8C80FA1936A6F7006CDA9B /* LKBadgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKBadgeView.h; sourceTree = "<group>"; };
 		AB8C80FB1936A6F7006CDA9B /* LKBadgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKBadgeView.m; sourceTree = "<group>"; };
+		AB9B0F56193A8630004FA35D /* XHHorizontalGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHHorizontalGridView.h; sourceTree = "<group>"; };
+		AB9B0F57193A8630004FA35D /* XHHorizontalGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHHorizontalGridView.m; sourceTree = "<group>"; };
+		AB9B0F5B193A8649004FA35D /* XHHorizontalGridItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHHorizontalGridItem.h; sourceTree = "<group>"; };
+		AB9B0F5C193A8649004FA35D /* XHHorizontalGridItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHHorizontalGridItem.m; sourceTree = "<group>"; };
+		AB9B0F60193A88AD004FA35D /* XHHorizontalGridItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHHorizontalGridItemView.h; sourceTree = "<group>"; };
+		AB9B0F61193A88AD004FA35D /* XHHorizontalGridItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHHorizontalGridItemView.m; sourceTree = "<group>"; };
 		ABB494021930086C000A2680 /* XHContactCommunicationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHContactCommunicationView.h; sourceTree = "<group>"; };
 		ABB494031930086C000A2680 /* XHContactCommunicationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHContactCommunicationView.m; sourceTree = "<group>"; };
 		ABB5470919394C80000D3C9C /* NSString+XHMD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+XHMD5.h"; sourceTree = "<group>"; };
@@ -1092,6 +1113,12 @@
 		ABE83CD41937E57F00BBF653 /* EmotionDownloadComplete@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "EmotionDownloadComplete@2x.png"; sourceTree = "<group>"; };
 		ABE87CD2192D6D7F00EC1E49 /* AlbumOperateMore@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AlbumOperateMore@2x.png"; sourceTree = "<group>"; };
 		ABE87CD3192D6D7F00EC1E49 /* AlbumOperateMoreHL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AlbumOperateMoreHL@2x.png"; sourceTree = "<group>"; };
+		ABEC512B193A8497004954E3 /* dgame1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dgame1.png; sourceTree = "<group>"; };
+		ABEC512C193A8497004954E3 /* dgame2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dgame2.png; sourceTree = "<group>"; };
+		ABEC512D193A8497004954E3 /* dgame0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dgame0.png; sourceTree = "<group>"; };
+		ABEC512E193A8497004954E3 /* game1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = game1.png; sourceTree = "<group>"; };
+		ABEC512F193A8497004954E3 /* game2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = game2.png; sourceTree = "<group>"; };
+		ABEC5130193A8497004954E3 /* game3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = game3.png; sourceTree = "<group>"; };
 		ABF9EC0319324D64003B95DC /* ScanBook@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ScanBook@2x.png"; sourceTree = "<group>"; };
 		ABF9EC0419324D64003B95DC /* ScanBook_HL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ScanBook_HL@2x.png"; sourceTree = "<group>"; };
 		ABF9EC0519324D64003B95DC /* ScanQR1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ScanQR1@2x.png"; sourceTree = "<group>"; };
@@ -1360,6 +1387,7 @@
 				AB72638619328D8000AA738F /* LocationServiceViews */,
 				AB63BF141936B33A00B6C977 /* NewsTemplateView */,
 				ABE83CC31937DD4A00BBF653 /* MoreExpressionShopsView */,
+				AB9B0F55193A8623004FA35D /* HorizontalGridView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1825,6 +1853,7 @@
 				74E9004B1927940000D37C81 /* avator@2x.png */,
 				74E9004C1927940000D37C81 /* Demo0.gif */,
 				74E9004D1927940000D37C81 /* Demo1.gif */,
+				ABEC512A193A8497004954E3 /* GameImages */,
 				ABE83CC91937E00E00BBF653 /* EmotionImages */,
 				AB63BF1F1936B58600B6C977 /* NewsTemplateImages */,
 				ABB777191932A7D700F4ACAF /* ContactImages */,
@@ -2223,6 +2252,19 @@
 			path = LKBadgeView;
 			sourceTree = "<group>";
 		};
+		AB9B0F55193A8623004FA35D /* HorizontalGridView */ = {
+			isa = PBXGroup;
+			children = (
+				AB9B0F56193A8630004FA35D /* XHHorizontalGridView.h */,
+				AB9B0F57193A8630004FA35D /* XHHorizontalGridView.m */,
+				AB9B0F5B193A8649004FA35D /* XHHorizontalGridItem.h */,
+				AB9B0F5C193A8649004FA35D /* XHHorizontalGridItem.m */,
+				AB9B0F60193A88AD004FA35D /* XHHorizontalGridItemView.h */,
+				AB9B0F61193A88AD004FA35D /* XHHorizontalGridItemView.m */,
+			);
+			path = HorizontalGridView;
+			sourceTree = "<group>";
+		};
 		ABB5472419394D47000D3C9C /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -2362,6 +2404,19 @@
 			path = EmotionImages;
 			sourceTree = "<group>";
 		};
+		ABEC512A193A8497004954E3 /* GameImages */ = {
+			isa = PBXGroup;
+			children = (
+				ABEC512B193A8497004954E3 /* dgame1.png */,
+				ABEC512C193A8497004954E3 /* dgame2.png */,
+				ABEC512D193A8497004954E3 /* dgame0.png */,
+				ABEC512E193A8497004954E3 /* game1.png */,
+				ABEC512F193A8497004954E3 /* game2.png */,
+				ABEC5130193A8497004954E3 /* game3.png */,
+			);
+			path = GameImages;
+			sourceTree = "<group>";
+		};
 		ABF9EC0219324D64003B95DC /* ScanningImages */ = {
 			isa = PBXGroup;
 			children = (
@@ -2397,6 +2452,7 @@
 				746C892F1917F691007F9A5E /* XHBubblePhotoImageView.h in Headers */,
 				746C89351917F691007F9A5E /* XHMessageDisplayTextView.h in Headers */,
 				746C893E1917F691007F9A5E /* XHMessageInputView.h in Headers */,
+				AB9B0F62193A88AD004FA35D /* XHHorizontalGridItemView.h in Headers */,
 				746C89471917F691007F9A5E /* XHEmotionCollectionViewFlowLayout.h in Headers */,
 				746C89321917F691007F9A5E /* XHMessageBubbleView.h in Headers */,
 				746C89501917F691007F9A5E /* XHShareMenuView.h in Headers */,
@@ -2448,6 +2504,7 @@
 				AB79A213192C0A6400A9B951 /* XHWaterDropRefresh.h in Headers */,
 				AB79A20D192C0A6400A9B951 /* XHPathCover.h in Headers */,
 				7D13FC5E192C4F4000A23413 /* XHZoomingImageView.h in Headers */,
+				AB9B0F58193A8630004FA35D /* XHHorizontalGridView.h in Headers */,
 				7D13FC5B192C4F4000A23413 /* XHViewState.h in Headers */,
 				7D13FC58192C4F4000A23413 /* XHImageViewer.h in Headers */,
 				7D149FFA192DEB5D004B4D3B /* XHContactTableViewCell.h in Headers */,
@@ -2486,6 +2543,7 @@
 				AB71383C193193A6009792B5 /* UIButton+XHButtonTitlePosition.h in Headers */,
 				AB54939B193110BD001F2FCC /* XHContactPhotosView.h in Headers */,
 				AB84B5CF1937EEB30069A10C /* XHExpressionDetailTableViewController.h in Headers */,
+				AB9B0F5D193A8649004FA35D /* XHHorizontalGridItem.h in Headers */,
 				AB63BF171936B35400B6C977 /* XHNewsTemplateTableViewCell.h in Headers */,
 				AB63BF2A1936BE5400B6C977 /* XHNewsContainerView.h in Headers */,
 				AB63BF251936B66400B6C977 /* XHNewsTableViewController.h in Headers */,
@@ -2707,6 +2765,7 @@
 				74E9005E1927940000D37C81 /* avator@2x.png in Resources */,
 				ABCB35EB19342DFA002F9938 /* VoiceSearchOff.wav in Resources */,
 				746C887E1916B62D007F9A5E /* section0_emotion13@2x.png in Resources */,
+				ABEC5131193A8497004954E3 /* dgame1.png in Resources */,
 				ABCB35CF19342DFA002F9938 /* VoiceSearchFeedback019@2x.png in Resources */,
 				AB713843193195A3009792B5 /* shake_nomatch.wav in Resources */,
 				ABCB35DF19342DFA002F9938 /* VoiceSearchLoading005@2x.png in Resources */,
@@ -2744,6 +2803,7 @@
 				ABCB35B119342DFA002F9938 /* VoiceSearchFeedback004@2x.png in Resources */,
 				746C881C1916B5D6007F9A5E /* face@2x.png in Resources */,
 				ABE87CD5192D6D7F00EC1E49 /* AlbumOperateMoreHL@2x.png in Resources */,
+				ABEC5134193A8497004954E3 /* game1.png in Resources */,
 				746C887B1916B62D007F9A5E /* section0_emotion10@2x.png in Resources */,
 				ABCB35D419342DFA002F9938 /* VoiceSearchIcon_ios7@2x.png in Resources */,
 				ABCB35AC19342DFA002F9938 /* VoiceSearchBtn_ios7@2x.png in Resources */,
@@ -2782,6 +2842,7 @@
 				746C88471916B607007F9A5E /* SenderVoiceNodePlaying@2x.png in Resources */,
 				ABCB35BB19342DFA002F9938 /* VoiceSearchFeedback009@2x.png in Resources */,
 				74E9006A1927940000D37C81 /* Profile@2x.png in Resources */,
+				ABEC5132193A8497004954E3 /* dgame2.png in Resources */,
 				ABCB35B419342DFA002F9938 /* VoiceSearchFeedback005_ios7@2x.png in Resources */,
 				AB569AB2193179CC0007DB0B /* Shake_icon_peopleHL@2x.png in Resources */,
 				AB72638E193293DC00AA738F /* barbuttonicon_more@2x.png in Resources */,
@@ -2792,6 +2853,7 @@
 				ABCB35E719342DFA002F9938 /* VoiceSearchLoading009@2x.png in Resources */,
 				ABF9EC0F19324D64003B95DC /* ScanBook@2x.png in Resources */,
 				746C887A1916B62D007F9A5E /* section0_emotion9@2x.png in Resources */,
+				ABEC5135193A8497004954E3 /* game2.png in Resources */,
 				746C885A1916B612007F9A5E /* sharemore_pic@2x.png in Resources */,
 				ABF9EC1419324D64003B95DC /* ScanQR4@2x.png in Resources */,
 				746C885F1916B612007F9A5E /* sharemore_wxtalk@2x.png in Resources */,
@@ -2807,6 +2869,7 @@
 				AB569AB6193179CC0007DB0B /* Shake_Logo_Up@2x.png in Resources */,
 				ABE83CD21937E4FF00BBF653 /* EmoStoreDownloadBtn@2x.png in Resources */,
 				AB79A218192C0B1500A9B951 /* circle@2x.png in Resources */,
+				ABEC5136193A8497004954E3 /* game3.png in Resources */,
 				746C882A1916B5EE007F9A5E /* input-bar-background.png in Resources */,
 				ABCB35DE19342DFA002F9938 /* VoiceSearchLoading004_ios7@2x.png in Resources */,
 				ABE83CCD1937E00E00BBF653 /* EmotionDownload@2x.png in Resources */,
@@ -2856,6 +2919,7 @@
 				746C885B1916B612007F9A5E /* sharemore_video@2x.png in Resources */,
 				ABCB35CA19342DFA002F9938 /* VoiceSearchFeedback016_ios7@2x.png in Resources */,
 				ABCB35E819342DFA002F9938 /* VoiceSearchLoading009_ios7@2x.png in Resources */,
+				ABEC5133193A8497004954E3 /* dgame0.png in Resources */,
 				AB8ACCE3192EB04400FA1C80 /* MoreSetting@2x.png in Resources */,
 				AB7263921932944400AA738F /* Shake_Logo_Female_Down@2x.png in Resources */,
 				746C882F1916B5EE007F9A5E /* input-field-cover@2x.png in Resources */,
@@ -2947,10 +3011,12 @@
 				AB54939D193110BD001F2FCC /* XHContactPhotosView.m in Sources */,
 				74E5EAD81924FFBE0084BCFA /* SESelectionGrabber.m in Sources */,
 				74E5EACF1924FFBE0084BCFA /* SEConstants.m in Sources */,
+				AB9B0F5F193A8649004FA35D /* XHHorizontalGridItem.m in Sources */,
 				74180BFE190F44A000A35C82 /* UIScrollView+XHkeyboardControl.m in Sources */,
 				ABB5473019394D47000D3C9C /* XHFileAttribute.m in Sources */,
 				746C893A1917F691007F9A5E /* XHMessageTableView.m in Sources */,
 				AB72638B19328D9A00AA738F /* XHLocationServiceTableViewCell.m in Sources */,
+				AB9B0F5A193A8630004FA35D /* XHHorizontalGridView.m in Sources */,
 				AB63BF2C1936BE5400B6C977 /* XHNewsContainerView.m in Sources */,
 				7D13FC5A192C4F4000A23413 /* XHImageViewer.m in Sources */,
 				749019B6191D315A0049AFF9 /* XHMessageVideoConverPhotoFactory.m in Sources */,
@@ -2964,6 +3030,7 @@
 				ABB5472D19394D47000D3C9C /* XHCacheManager.m in Sources */,
 				74E5EAE11924FFBE0084BCFA /* SETextGeometry.m in Sources */,
 				ABE83CC81937DD5D00BBF653 /* XHMoreExpressionShopsTableViewCell.m in Sources */,
+				AB9B0F64193A88AD004FA35D /* XHHorizontalGridItemView.m in Sources */,
 				74180C01190F44A600A35C82 /* XHMessage.m in Sources */,
 				AB8ACD08192EBF3600FA1C80 /* XHMoreMyProfileDetailTableViewController.m in Sources */,
 				74E5EAF01924FFBE0084BCFA /* SETextSelection.m in Sources */,
@@ -3050,6 +3117,7 @@
 				746C89481917F691007F9A5E /* XHEmotionCollectionViewFlowLayout.m in Sources */,
 				7482456B19090C04008EC388 /* XHMessage.m in Sources */,
 				AB439974192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.m in Sources */,
+				AB9B0F5E193A8649004FA35D /* XHHorizontalGridItem.m in Sources */,
 				7482458F19092170008EC388 /* NSString+MessageInputView.m in Sources */,
 				74901A40191D3B1C0049AFF9 /* XHProfileTableViewController.m in Sources */,
 				AB73B1661932463E009665E3 /* XHScanningView.m in Sources */,
@@ -3142,7 +3210,9 @@
 				74E900B41928F3D100D37C81 /* XHStoreManager.m in Sources */,
 				AB726384193281CA00AA738F /* XHCaptureHelper.m in Sources */,
 				74C3E7DC19291A1A0053F4E1 /* XHAlbum.m in Sources */,
+				AB9B0F59193A8630004FA35D /* XHHorizontalGridView.m in Sources */,
 				AB71383D193193A6009792B5 /* UIButton+XHButtonTitlePosition.m in Sources */,
+				AB9B0F63193A88AD004FA35D /* XHHorizontalGridItemView.m in Sources */,
 				746C89391917F691007F9A5E /* XHMessageTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
