@@ -475,13 +475,13 @@
 		AB8C80FC1936A6F7006CDA9B /* LKBadgeView.h in Headers */ = {isa = PBXBuildFile; fileRef = AB8C80FA1936A6F7006CDA9B /* LKBadgeView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB8C80FD1936A6F7006CDA9B /* LKBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8C80FB1936A6F7006CDA9B /* LKBadgeView.m */; };
 		AB8C80FE1936A6F7006CDA9B /* LKBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8C80FB1936A6F7006CDA9B /* LKBadgeView.m */; };
-		AB9B0F58193A8630004FA35D /* XHHorizontalGridView.h in Headers */ = {isa = PBXBuildFile; fileRef = AB9B0F56193A8630004FA35D /* XHHorizontalGridView.h */; };
+		AB9B0F58193A8630004FA35D /* XHHorizontalGridView.h in Headers */ = {isa = PBXBuildFile; fileRef = AB9B0F56193A8630004FA35D /* XHHorizontalGridView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB9B0F59193A8630004FA35D /* XHHorizontalGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9B0F57193A8630004FA35D /* XHHorizontalGridView.m */; };
 		AB9B0F5A193A8630004FA35D /* XHHorizontalGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9B0F57193A8630004FA35D /* XHHorizontalGridView.m */; };
-		AB9B0F5D193A8649004FA35D /* XHHorizontalGridItem.h in Headers */ = {isa = PBXBuildFile; fileRef = AB9B0F5B193A8649004FA35D /* XHHorizontalGridItem.h */; };
+		AB9B0F5D193A8649004FA35D /* XHHorizontalGridItem.h in Headers */ = {isa = PBXBuildFile; fileRef = AB9B0F5B193A8649004FA35D /* XHHorizontalGridItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB9B0F5E193A8649004FA35D /* XHHorizontalGridItem.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9B0F5C193A8649004FA35D /* XHHorizontalGridItem.m */; };
 		AB9B0F5F193A8649004FA35D /* XHHorizontalGridItem.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9B0F5C193A8649004FA35D /* XHHorizontalGridItem.m */; };
-		AB9B0F62193A88AD004FA35D /* XHHorizontalGridItemView.h in Headers */ = {isa = PBXBuildFile; fileRef = AB9B0F60193A88AD004FA35D /* XHHorizontalGridItemView.h */; };
+		AB9B0F62193A88AD004FA35D /* XHHorizontalGridItemView.h in Headers */ = {isa = PBXBuildFile; fileRef = AB9B0F60193A88AD004FA35D /* XHHorizontalGridItemView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB9B0F63193A88AD004FA35D /* XHHorizontalGridItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9B0F61193A88AD004FA35D /* XHHorizontalGridItemView.m */; };
 		AB9B0F64193A88AD004FA35D /* XHHorizontalGridItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9B0F61193A88AD004FA35D /* XHHorizontalGridItemView.m */; };
 		ABB494041930086C000A2680 /* XHContactCommunicationView.h in Headers */ = {isa = PBXBuildFile; fileRef = ABB494021930086C000A2680 /* XHContactCommunicationView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -2452,7 +2452,6 @@
 				746C892F1917F691007F9A5E /* XHBubblePhotoImageView.h in Headers */,
 				746C89351917F691007F9A5E /* XHMessageDisplayTextView.h in Headers */,
 				746C893E1917F691007F9A5E /* XHMessageInputView.h in Headers */,
-				AB9B0F62193A88AD004FA35D /* XHHorizontalGridItemView.h in Headers */,
 				746C89471917F691007F9A5E /* XHEmotionCollectionViewFlowLayout.h in Headers */,
 				746C89321917F691007F9A5E /* XHMessageBubbleView.h in Headers */,
 				746C89501917F691007F9A5E /* XHShareMenuView.h in Headers */,
@@ -2504,7 +2503,6 @@
 				AB79A213192C0A6400A9B951 /* XHWaterDropRefresh.h in Headers */,
 				AB79A20D192C0A6400A9B951 /* XHPathCover.h in Headers */,
 				7D13FC5E192C4F4000A23413 /* XHZoomingImageView.h in Headers */,
-				AB9B0F58193A8630004FA35D /* XHHorizontalGridView.h in Headers */,
 				7D13FC5B192C4F4000A23413 /* XHViewState.h in Headers */,
 				7D13FC58192C4F4000A23413 /* XHImageViewer.h in Headers */,
 				7D149FFA192DEB5D004B4D3B /* XHContactTableViewCell.h in Headers */,
@@ -2543,7 +2541,6 @@
 				AB71383C193193A6009792B5 /* UIButton+XHButtonTitlePosition.h in Headers */,
 				AB54939B193110BD001F2FCC /* XHContactPhotosView.h in Headers */,
 				AB84B5CF1937EEB30069A10C /* XHExpressionDetailTableViewController.h in Headers */,
-				AB9B0F5D193A8649004FA35D /* XHHorizontalGridItem.h in Headers */,
 				AB63BF171936B35400B6C977 /* XHNewsTemplateTableViewCell.h in Headers */,
 				AB63BF2A1936BE5400B6C977 /* XHNewsContainerView.h in Headers */,
 				AB63BF251936B66400B6C977 /* XHNewsTableViewController.h in Headers */,
@@ -2558,6 +2555,9 @@
 				AB5A6FCE1935769C0053ACB5 /* UIView+XHBadgeView.h in Headers */,
 				74E5E9951921E90A0084BCFA /* XHVoiceRecordHUD.h in Headers */,
 				ABB5472B19394D47000D3C9C /* XHCacheManager.h in Headers */,
+				AB9B0F62193A88AD004FA35D /* XHHorizontalGridItemView.h in Headers */,
+				AB9B0F58193A8630004FA35D /* XHHorizontalGridView.h in Headers */,
+				AB9B0F5D193A8649004FA35D /* XHHorizontalGridItem.h in Headers */,
 				ABB5472E19394D47000D3C9C /* XHFileAttribute.h in Headers */,
 				ABB5473319394D7C000D3C9C /* XHHTTPClient.h in Headers */,
 				74180C0B190F44EC00A35C82 /* XHMessageBubbleFactory.h in Headers */,
