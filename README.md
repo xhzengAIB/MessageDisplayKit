@@ -102,12 +102,30 @@ Support pull down load more old message, keep visible cells static when insertin
 * 23、支持附近的人
 * 24、支持漂流瓶
 
+## How to use
+Easy to drop into your project.
+```objc
+1、#import "XHMessageTableViewController.h"
+
+2、Your must be subClass XHMessageTableViewController.
+
+3、implementation XHMessageTableViewController delegate due with message send.
+
+4、implementation XHMessageTableViewController DataSource due with message source.
+
+5、If you went to emotion message / plug function / audio play, must be implementation other delegate or dataSource.
+
+
+Detail look this [demo](https://github.com/xhzengAIB/MessageDisplayKit/blob/master/Example/MessageDisplayExample/MessageDisplayExample/XHDemoWeChatMessageTableViewController.m).
+
+
+```
+
 ## License
 
 中文: MessageDisplayKit 是在MIT协议下使用的，可以在LICENSE文件里面找到相关的使用协议信息。
 
 English: MessageDisplayKit is available under the MIT license, see the LICENSE file for more information.     
-
 
 ## 须知       Notes
 如果您在您的项目中使用该开源组件,请给我们发[电子邮件](mailto:xhzengAIB@gmail.com?subject=From%20GitHub%20MessageDisplayKit)告诉我们您的应用程序的名称，谢谢！主要是为了互推的效果，如果您的app火了，请给予少许的回报，如果您的App不火，或许能通过这个开源库了解到您的App！            
