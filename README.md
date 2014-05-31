@@ -112,7 +112,7 @@ Easy to drop into your project.
                                 
 * 4、implementation XHMessageTableViewController DataSource due with message source.                                
                                 
-* 5、If you went to emotion message / plug function / audio play, must be implementation other delegate or dataSource.                                
+* 5、If you went to emotion message / plug function / audio play, must be implementation other delegate or dataSource.                                                                   
 Detail look this [demo](https://github.com/xhzengAIB/MessageDisplayKit/blob/master/Example/MessageDisplayExample/MessageDisplayExample/XHDemoWeChatMessageTableViewController.m).                           
 
 
