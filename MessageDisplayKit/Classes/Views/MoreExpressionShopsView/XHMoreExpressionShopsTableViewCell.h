@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import "XHMacro.h"
+
 typedef NS_ENUM(NSInteger, XHExpressionStateType) {
     kXHFreeExpression = 0,
     kXHRemoteExpression,

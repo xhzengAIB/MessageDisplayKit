@@ -10,6 +10,8 @@
 
 #import "XHFoundationCommon.h"
 
+#import "XHMacro.h"
+
 @interface XHBottleViewController ()
 
 @property (nonatomic, strong) UIImageView *pickerMarkImageView;

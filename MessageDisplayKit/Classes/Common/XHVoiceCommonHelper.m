@@ -8,6 +8,8 @@
 
 #import "XHVoiceCommonHelper.h"
 
+#import "XHMacro.h"
+
 @implementation XHVoiceCommonHelper
 
 /**

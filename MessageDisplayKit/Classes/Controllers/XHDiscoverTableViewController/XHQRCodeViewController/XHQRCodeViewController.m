@@ -18,6 +18,8 @@
 
 #import "XHFoundationCommon.h"
 
+#import "XHMacro.h"
+
 #define kXHScanningButtonPadding 36
 
 @interface XHQRCodeViewController ()

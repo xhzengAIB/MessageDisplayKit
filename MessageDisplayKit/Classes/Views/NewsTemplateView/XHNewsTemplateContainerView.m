@@ -10,6 +10,8 @@
 
 #import "XHNewsContainerView.h"
 
+#import "XHMacro.h"
+
 @interface XHNewsTemplateContainerView ()
 
 @property (nonatomic, strong) UIView *containerView;

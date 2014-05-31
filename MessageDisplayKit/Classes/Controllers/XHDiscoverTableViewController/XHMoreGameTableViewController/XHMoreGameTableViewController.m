@@ -8,6 +8,8 @@
 
 #import "XHMoreGameTableViewController.h"
 
+#import "XHMacro.h"
+
 @interface XHMoreGameTableViewController ()
 
 @end
