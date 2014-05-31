@@ -9,6 +9,19 @@ An IM APP like WeChat App has to send text, pictures, audio, video, location mes
 
 It's ok if you don't understand how the code works. Most code has comments, which I believe will help you a lot. Feel free to [open an issue] (https://github.com/xhzengAIB/MessageDisplayKit/issues?state=open) if you have any questions. I will do my best to answer them.
 
+## 开源许可协议
+很多人和我说，你不知道什么是开源许可协议，其实我也不清楚他是不知道还是不想知道，作为一个开发者，不懂得尊重别人的成果，那你到底想怎样，你自己最清楚。                      
+说一件事吧！曾经我也这么做了，没尊重作者的成功，最终被人鄙视了一段时间，于是我删除了那个开源库，现在终于明白，尊重这个词，这对于别人来说是一个认可，我们不可以剥夺这份利益。
+网易新闻App的开发者很厚道，他们有做到这一份尊重，他们是这么做的：                          
+```objc
+UIWebView *librariesWebView = [[UIWebView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.163.com/special/newsclient/ios_libraries.html"]]; // 这里的URL是网易新闻所用的，大家可以点击打开，如果你没有服务器，那你敢直接写个开源库的主页URL嘛？
+[librariesWebView loadRequest:urlRequest];
+[self.view addSubview:librariesWebView];
+```
+我把代码都给上了，哪怕你复制都不愿意，那我就无语了。                                 
+如果您还不知道开源许可协议是怎样的，那你点击[这里](http://m.163.com/special/newsclient/ios_libraries.html)看看网易大神们的节操。                     
+
 ## 组件要求                                        Requirements
 
 * iOS 6.0+ 
