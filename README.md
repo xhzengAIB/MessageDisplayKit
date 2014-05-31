@@ -103,18 +103,16 @@ Support pull down load more old message, keep visible cells static when insertin
 * 24、支持漂流瓶
 
 ## How to use
-Easy to drop into your project.
-```objc
-* 1、#import "XHMessageTableViewController.h"
-
-* 2、Your must be subClass XHMessageTableViewController.
-
-* 3、implementation XHMessageTableViewController delegate due with message send.
-
-* 4、implementation XHMessageTableViewController DataSource due with message source.
-
-* 5、If you went to emotion message / plug function / audio play, must be implementation other delegate or dataSource.
-```
+Easy to drop into your project.                                
+* 1、#import "XHMessageTableViewController.h"                                
+                                
+* 2、Your must be subClass XHMessageTableViewController.                                
+                                
+* 3、implementation XHMessageTableViewController delegate due with message send.                                
+                                
+* 4、implementation XHMessageTableViewController DataSource due with message source.                                
+                                
+* 5、If you went to emotion message / plug function / audio play, must be implementation other delegate or dataSource.                                
 Detail look this [demo](https://github.com/xhzengAIB/MessageDisplayKit/blob/master/Example/MessageDisplayExample/MessageDisplayExample/XHDemoWeChatMessageTableViewController.m).                           
 
 
