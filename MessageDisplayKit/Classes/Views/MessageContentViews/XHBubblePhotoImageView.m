@@ -9,6 +9,10 @@
 #import "XHBubblePhotoImageView.h"
 #import "XHMacro.h"
 
+#import "UIView+XHRemoteImage.h"
+
+#import "UIImage+Resize.h"
+
 @interface XHBubblePhotoImageView ()
 
 /**
@@ -19,16 +23,6 @@
 @end
 
 @implementation XHBubblePhotoImageView
-
-- (NSOperationQueue *)bubbleNetworkQueue {
-    static NSOperationQueue *currentQueue;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        currentQueue = [[NSOperationQueue alloc] init];
-        currentQueue.maxConcurrentOperationCount = 1;
-    });
-    return currentQueue;
-}
 
 - (XHBubbleMessageType)getBubbleMessageType {
     return self.bubbleMessageType;
@@ -55,10 +49,9 @@
         WEAKSELF
         [self addSubview:self.activityIndicatorView];
         [self.activityIndicatorView startAnimating];
-        NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:thumbnailUrl]];
-        [NSURLConnection sendAsynchronousRequest:request queue:[self bubbleNetworkQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-            if (!connectionError) {
-                UIImage *image = [UIImage imageWithData:data];
+        [self setImageWithURL:[NSURL URLWithString:thumbnailUrl] placeholer:nil showActivityIndicatorView:NO completionBlock:^(UIImage *image, NSURL *url, NSError *error) {
+            if ([url.absoluteString isEqualToString:thumbnailUrl]) {
+                image = [image resizedImage:CGSizeMake(CGRectGetWidth(weakSelf.bounds) * 2, CGRectGetHeight(weakSelf.bounds) * 2) interpolationQuality:1.0];
                 if (image) {
                     dispatch_async(dispatch_get_main_queue(), ^{
                         weakSelf.messagePhoto = image;

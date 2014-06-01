@@ -390,6 +390,15 @@
 		AB569AB4193179CC0007DB0B /* Shake_Line_Up@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB569AAA193179CC0007DB0B /* Shake_Line_Up@2x.png */; };
 		AB569AB5193179CC0007DB0B /* Shake_Logo_Down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB569AAB193179CC0007DB0B /* Shake_Logo_Down@2x.png */; };
 		AB569AB6193179CC0007DB0B /* Shake_Logo_Up@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB569AAC193179CC0007DB0B /* Shake_Logo_Up@2x.png */; };
+		AB59D7AF193BC8C6002ED6B8 /* UIImage+Alpha.h in Headers */ = {isa = PBXBuildFile; fileRef = AB59D7A9193BC8C6002ED6B8 /* UIImage+Alpha.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB59D7B0193BC8C6002ED6B8 /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = AB59D7AA193BC8C6002ED6B8 /* UIImage+Alpha.m */; };
+		AB59D7B1193BC8C6002ED6B8 /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = AB59D7AA193BC8C6002ED6B8 /* UIImage+Alpha.m */; };
+		AB59D7B2193BC8C6002ED6B8 /* UIImage+Resize.h in Headers */ = {isa = PBXBuildFile; fileRef = AB59D7AB193BC8C6002ED6B8 /* UIImage+Resize.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB59D7B3193BC8C6002ED6B8 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = AB59D7AC193BC8C6002ED6B8 /* UIImage+Resize.m */; };
+		AB59D7B4193BC8C6002ED6B8 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = AB59D7AC193BC8C6002ED6B8 /* UIImage+Resize.m */; };
+		AB59D7B5193BC8C6002ED6B8 /* UIImage+RoundedCorner.h in Headers */ = {isa = PBXBuildFile; fileRef = AB59D7AD193BC8C6002ED6B8 /* UIImage+RoundedCorner.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB59D7B6193BC8C6002ED6B8 /* UIImage+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = AB59D7AE193BC8C6002ED6B8 /* UIImage+RoundedCorner.m */; };
+		AB59D7B7193BC8C6002ED6B8 /* UIImage+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = AB59D7AE193BC8C6002ED6B8 /* UIImage+RoundedCorner.m */; };
 		AB5A6FCE1935769C0053ACB5 /* UIView+XHBadgeView.h in Headers */ = {isa = PBXBuildFile; fileRef = AB5A6FCC1935769C0053ACB5 /* UIView+XHBadgeView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB5A6FCF1935769C0053ACB5 /* UIView+XHBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB5A6FCD1935769C0053ACB5 /* UIView+XHBadgeView.m */; };
 		AB5A6FD01935769C0053ACB5 /* UIView+XHBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB5A6FCD1935769C0053ACB5 /* UIView+XHBadgeView.m */; };
@@ -946,6 +955,12 @@
 		AB569AAA193179CC0007DB0B /* Shake_Line_Up@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shake_Line_Up@2x.png"; sourceTree = "<group>"; };
 		AB569AAB193179CC0007DB0B /* Shake_Logo_Down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shake_Logo_Down@2x.png"; sourceTree = "<group>"; };
 		AB569AAC193179CC0007DB0B /* Shake_Logo_Up@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shake_Logo_Up@2x.png"; sourceTree = "<group>"; };
+		AB59D7A9193BC8C6002ED6B8 /* UIImage+Alpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Alpha.h"; sourceTree = "<group>"; };
+		AB59D7AA193BC8C6002ED6B8 /* UIImage+Alpha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Alpha.m"; sourceTree = "<group>"; };
+		AB59D7AB193BC8C6002ED6B8 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
+		AB59D7AC193BC8C6002ED6B8 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
+		AB59D7AD193BC8C6002ED6B8 /* UIImage+RoundedCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RoundedCorner.h"; sourceTree = "<group>"; };
+		AB59D7AE193BC8C6002ED6B8 /* UIImage+RoundedCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RoundedCorner.m"; sourceTree = "<group>"; };
 		AB5A6FCC1935769C0053ACB5 /* UIView+XHBadgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XHBadgeView.h"; sourceTree = "<group>"; };
 		AB5A6FCD1935769C0053ACB5 /* UIView+XHBadgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XHBadgeView.m"; sourceTree = "<group>"; };
 		AB63BF151936B35400B6C977 /* XHNewsTemplateTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHNewsTemplateTableViewCell.h; sourceTree = "<group>"; };
@@ -1632,6 +1647,12 @@
 				AB71383B193193A6009792B5 /* UIButton+XHButtonTitlePosition.m */,
 				AB5A6FCC1935769C0053ACB5 /* UIView+XHBadgeView.h */,
 				AB5A6FCD1935769C0053ACB5 /* UIView+XHBadgeView.m */,
+				AB59D7A9193BC8C6002ED6B8 /* UIImage+Alpha.h */,
+				AB59D7AA193BC8C6002ED6B8 /* UIImage+Alpha.m */,
+				AB59D7AB193BC8C6002ED6B8 /* UIImage+Resize.h */,
+				AB59D7AC193BC8C6002ED6B8 /* UIImage+Resize.m */,
+				AB59D7AD193BC8C6002ED6B8 /* UIImage+RoundedCorner.h */,
+				AB59D7AE193BC8C6002ED6B8 /* UIImage+RoundedCorner.m */,
 			);
 			path = Categorys;
 			sourceTree = "<group>";
@@ -2558,6 +2579,9 @@
 				AB9B0F62193A88AD004FA35D /* XHHorizontalGridItemView.h in Headers */,
 				AB9B0F58193A8630004FA35D /* XHHorizontalGridView.h in Headers */,
 				AB9B0F5D193A8649004FA35D /* XHHorizontalGridItem.h in Headers */,
+				AB59D7AF193BC8C6002ED6B8 /* UIImage+Alpha.h in Headers */,
+				AB59D7B2193BC8C6002ED6B8 /* UIImage+Resize.h in Headers */,
+				AB59D7B5193BC8C6002ED6B8 /* UIImage+RoundedCorner.h in Headers */,
 				ABB5472E19394D47000D3C9C /* XHFileAttribute.h in Headers */,
 				ABB5473319394D7C000D3C9C /* XHHTTPClient.h in Headers */,
 				74180C0B190F44EC00A35C82 /* XHMessageBubbleFactory.h in Headers */,
@@ -2986,6 +3010,7 @@
 				AB79A212192C0A6400A9B951 /* XHSoundManager.m in Sources */,
 				74585FFF191D10CC00F5E8C8 /* XHAnnotation.m in Sources */,
 				74E5E98B1921317B0084BCFA /* XHVoiceRecordHelper.m in Sources */,
+				AB59D7B4193BC8C6002ED6B8 /* UIImage+Resize.m in Sources */,
 				7D14A006192EF8FD004B4D3B /* XHContactDetailTableViewController.m in Sources */,
 				7D13FC5D192C4F4000A23413 /* XHViewState.m in Sources */,
 				74180BFD190F449400A35C82 /* XHFoundationCommon.m in Sources */,
@@ -3011,6 +3036,7 @@
 				AB54939D193110BD001F2FCC /* XHContactPhotosView.m in Sources */,
 				74E5EAD81924FFBE0084BCFA /* SESelectionGrabber.m in Sources */,
 				74E5EACF1924FFBE0084BCFA /* SEConstants.m in Sources */,
+				AB59D7B1193BC8C6002ED6B8 /* UIImage+Alpha.m in Sources */,
 				AB9B0F5F193A8649004FA35D /* XHHorizontalGridItem.m in Sources */,
 				74180BFE190F44A000A35C82 /* UIScrollView+XHkeyboardControl.m in Sources */,
 				ABB5473019394D47000D3C9C /* XHFileAttribute.m in Sources */,
@@ -3045,6 +3071,7 @@
 				740660CF1914E1F400E1CE95 /* XHEmotionManager.m in Sources */,
 				74E9003A19278F6700D37C81 /* XHDiscoverTableViewController.m in Sources */,
 				AB372910192EC62C0084D7B5 /* XHQRCodeViewController.m in Sources */,
+				AB59D7B7193BC8C6002ED6B8 /* UIImage+RoundedCorner.m in Sources */,
 				AB8ACD03192EBF2C00FA1C80 /* XHMoreMyFavoritesTableViewController.m in Sources */,
 				7D149FFC192DEB5D004B4D3B /* XHContactTableViewCell.m in Sources */,
 				740660A91913552800E1CE95 /* UIImage+XHAnimatedFaceGif.m in Sources */,
@@ -3119,7 +3146,9 @@
 				AB439974192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.m in Sources */,
 				AB9B0F5E193A8649004FA35D /* XHHorizontalGridItem.m in Sources */,
 				7482458F19092170008EC388 /* NSString+MessageInputView.m in Sources */,
+				AB59D7B3193BC8C6002ED6B8 /* UIImage+Resize.m in Sources */,
 				74901A40191D3B1C0049AFF9 /* XHProfileTableViewController.m in Sources */,
+				AB59D7B6193BC8C6002ED6B8 /* UIImage+RoundedCorner.m in Sources */,
 				AB73B1661932463E009665E3 /* XHScanningView.m in Sources */,
 				746C893F1917F691007F9A5E /* XHMessageInputView.m in Sources */,
 				74E5EACE1924FFBE0084BCFA /* SEConstants.m in Sources */,
@@ -3167,6 +3196,7 @@
 				E1664DC319347916003F4C5B /* XHVoiceCommonHelper.m in Sources */,
 				74E5EAF21924FFBE0084BCFA /* SETextSelectionView.m in Sources */,
 				746C89421917F691007F9A5E /* XHMessageTextView.m in Sources */,
+				AB59D7B0193BC8C6002ED6B8 /* UIImage+Alpha.m in Sources */,
 				74065FBA19123E1C00E1CE95 /* XHShareMenuItem.m in Sources */,
 				ABB777171932A27B00F4ACAF /* XHVideoOutputSampleBufferFactory.m in Sources */,
 				AB79A20E192C0A6400A9B951 /* XHPathCover.m in Sources */,
