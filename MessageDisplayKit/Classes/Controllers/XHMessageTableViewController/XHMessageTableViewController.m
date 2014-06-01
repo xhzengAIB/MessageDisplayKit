@@ -309,9 +309,9 @@ static CGPoint  delayOffset = {0.0};
     }
     return _loadMoreActivityIndicatorView;
 }
-- (void)setLoadMoreMessage:(BOOL)loadMoreMessage {
-    _loadMoreMessage = loadMoreMessage;
-    if (loadMoreMessage) {
+- (void)setLoadingMoreMessage:(BOOL)loadingMoreMessage {
+    _loadingMoreMessage = loadingMoreMessage;
+    if (loadingMoreMessage) {
         [self.loadMoreActivityIndicatorView startAnimating];
     } else {
         [self.loadMoreActivityIndicatorView stopAnimating];
@@ -1116,7 +1116,7 @@ static CGPoint  delayOffset = {0.0};
         BOOL shouldLoadMoreMessages = [self.delegate shouldLoadMoreMessagesScrollToTop];
         if (shouldLoadMoreMessages) {
             if (scrollView.contentOffset.y >=0 && scrollView.contentOffset.y <= 44) {
-                if (!self.loadMoreMessage) {
+                if (!self.loadingMoreMessage) {
                     if ([self.delegate respondsToSelector:@selector(loadMoreMessagesScrollTotop)]) {
                         [self.delegate loadMoreMessagesScrollTotop];
                     }

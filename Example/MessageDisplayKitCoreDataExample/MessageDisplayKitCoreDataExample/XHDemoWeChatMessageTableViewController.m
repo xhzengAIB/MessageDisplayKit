@@ -402,8 +402,8 @@
 }
 
 - (void)loadMoreMessagesScrollTotop {
-    if (!self.loadMoreMessage) {
-        self.loadMoreMessage = YES;
+    if (!self.loadingMoreMessage) {
+        self.loadingMoreMessage = YES;
         
         WEAKSELF
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
@@ -411,7 +411,7 @@
             sleep(3);
             dispatch_async(dispatch_get_main_queue(), ^{
                 [weakSelf insertOldMessages:messages];
-                weakSelf.loadMoreMessage = NO;
+                weakSelf.loadingMoreMessage = NO;
             });
         });
     }

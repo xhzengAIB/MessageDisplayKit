@@ -181,7 +181,10 @@
  */
 @property (nonatomic, weak, readonly) XHEmotionManagerView *emotionManagerView;
 
-@property (nonatomic, assign) BOOL loadMoreMessage;
+/**
+ *  是否正在加载更多旧的消息数据
+ */
+@property (nonatomic, assign) BOOL loadingMoreMessage;
 
 #pragma mark - Message View Controller Default stup
 /**
