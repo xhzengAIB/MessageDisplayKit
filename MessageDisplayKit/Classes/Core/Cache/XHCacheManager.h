@@ -24,6 +24,9 @@
 + (void)removeCacheDirectory;
 - (void)removeCacheDirectory;
 
++ (unsigned long long)diskSize;
+- (unsigned long long)diskSize;
+
 // NSData caching
 + (void)storeData:(NSData *)data forURL:(NSURL *)url storeMemoryCache:(BOOL)storeMemoryCache;
 - (void)storeData:(NSData *)data forURL:(NSURL *)url storeMemoryCache:(BOOL)storeMemoryCache;

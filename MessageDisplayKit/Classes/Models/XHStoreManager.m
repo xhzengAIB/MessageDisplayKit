@@ -11,6 +11,10 @@
 #import "XHContact.h"
 #import "XHAlbum.h"
 
+#import "XHCacheManager.h"
+
+#import "NSString+XHDiskSizeTransfrom.h"
+
 @implementation XHStoreManager
 
 + (instancetype)shareStoreManager {
@@ -224,7 +228,7 @@
     
     [settings addObject:@[@{titleKey: @"新消息通知"}, @{titleKey: @"隐私"}, @{titleKey: @"通用"}]];
     
-    [settings addObject:@[@{titleKey: @"关于微信"}]];
+    [settings addObject:@[@{titleKey: @"关于微信"}, @{titleKey: [NSString stringWithFormat:@"离线缓存大小 %@", [NSString transformedValue:[XHCacheManager diskSize]]]}]];
     
     [settings addObject:@[@{titleKey: @"退出登录"}]];
     

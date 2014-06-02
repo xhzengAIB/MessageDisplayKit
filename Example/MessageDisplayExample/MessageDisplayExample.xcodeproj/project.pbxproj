@@ -522,6 +522,9 @@
 		ABB777181932A27B00F4ACAF /* XHVideoOutputSampleBufferFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB777151932A27B00F4ACAF /* XHVideoOutputSampleBufferFactory.m */; };
 		ABB7771C1932A7D700F4ACAF /* Contact_Female@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABB7771A1932A7D700F4ACAF /* Contact_Female@2x.png */; };
 		ABB7771D1932A7D700F4ACAF /* Contact_Male@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABB7771B1932A7D700F4ACAF /* Contact_Male@2x.png */; };
+		ABB839E9193CCACA003DEE7A /* NSString+XHDiskSizeTransfrom.h in Headers */ = {isa = PBXBuildFile; fileRef = ABB839E7193CCACA003DEE7A /* NSString+XHDiskSizeTransfrom.h */; };
+		ABB839EA193CCACA003DEE7A /* NSString+XHDiskSizeTransfrom.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB839E8193CCACA003DEE7A /* NSString+XHDiskSizeTransfrom.m */; };
+		ABB839EB193CCACA003DEE7A /* NSString+XHDiskSizeTransfrom.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB839E8193CCACA003DEE7A /* NSString+XHDiskSizeTransfrom.m */; };
 		ABCB35AB19342DFA002F9938 /* VoiceSearchBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABCB356719342DFA002F9938 /* VoiceSearchBtn@2x.png */; };
 		ABCB35AC19342DFA002F9938 /* VoiceSearchBtn_ios7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABCB356819342DFA002F9938 /* VoiceSearchBtn_ios7@2x.png */; };
 		ABCB35AD19342DFA002F9938 /* VoiceSearchBtnHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABCB356919342DFA002F9938 /* VoiceSearchBtnHL@2x.png */; };
@@ -1050,6 +1053,8 @@
 		ABB777151932A27B00F4ACAF /* XHVideoOutputSampleBufferFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHVideoOutputSampleBufferFactory.m; sourceTree = "<group>"; };
 		ABB7771A1932A7D700F4ACAF /* Contact_Female@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Contact_Female@2x.png"; sourceTree = "<group>"; };
 		ABB7771B1932A7D700F4ACAF /* Contact_Male@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Contact_Male@2x.png"; sourceTree = "<group>"; };
+		ABB839E7193CCACA003DEE7A /* NSString+XHDiskSizeTransfrom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+XHDiskSizeTransfrom.h"; sourceTree = "<group>"; };
+		ABB839E8193CCACA003DEE7A /* NSString+XHDiskSizeTransfrom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+XHDiskSizeTransfrom.m"; sourceTree = "<group>"; };
 		ABCB356719342DFA002F9938 /* VoiceSearchBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VoiceSearchBtn@2x.png"; sourceTree = "<group>"; };
 		ABCB356819342DFA002F9938 /* VoiceSearchBtn_ios7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VoiceSearchBtn_ios7@2x.png"; sourceTree = "<group>"; };
 		ABCB356919342DFA002F9938 /* VoiceSearchBtnHL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VoiceSearchBtnHL@2x.png"; sourceTree = "<group>"; };
@@ -2135,6 +2140,8 @@
 				AB6AB483193C03D600AFE823 /* NSString+MessageInputView.m */,
 				AB6AB484193C03D600AFE823 /* NSString+XHMD5.h */,
 				AB6AB485193C03D600AFE823 /* NSString+XHMD5.m */,
+				ABB839E7193CCACA003DEE7A /* NSString+XHDiskSizeTransfrom.h */,
+				ABB839E8193CCACA003DEE7A /* NSString+XHDiskSizeTransfrom.m */,
 			);
 			path = NSString;
 			sourceTree = "<group>";
@@ -2614,6 +2621,7 @@
 				AB6AB4B9193C03D600AFE823 /* UIScrollView+XHkeyboardControl.h in Headers */,
 				AB6AB4B0193C03D600AFE823 /* UIImage+Utility.h in Headers */,
 				AB6AB4A1193C03D600AFE823 /* NSString+XHMD5.h in Headers */,
+				ABB839E9193CCACA003DEE7A /* NSString+XHDiskSizeTransfrom.h in Headers */,
 				AB6AB4AD193C03D600AFE823 /* UIImage+RoundedCorner.h in Headers */,
 				ABB777161932A27B00F4ACAF /* XHVideoOutputSampleBufferFactory.h in Headers */,
 				AB72638919328D9A00AA738F /* XHLocationServiceTableViewCell.h in Headers */,
@@ -3142,6 +3150,7 @@
 				AB63BF191936B35500B6C977 /* XHNewsTemplateTableViewCell.m in Sources */,
 				746C897F1917F8C5007F9A5E /* XHBaseTabBarController.m in Sources */,
 				746C89491917F691007F9A5E /* XHEmotionCollectionViewFlowLayout.m in Sources */,
+				ABB839EB193CCACA003DEE7A /* NSString+XHDiskSizeTransfrom.m in Sources */,
 				74E900B51928F3D100D37C81 /* XHStoreManager.m in Sources */,
 				AB5493981931102E001F2FCC /* XHContactPhotosTableViewCell.m in Sources */,
 				AB73B1671932463E009665E3 /* XHScanningView.m in Sources */,
@@ -3240,6 +3249,7 @@
 				74E5EAF21924FFBE0084BCFA /* SETextSelectionView.m in Sources */,
 				746C89421917F691007F9A5E /* XHMessageTextView.m in Sources */,
 				74065FBA19123E1C00E1CE95 /* XHShareMenuItem.m in Sources */,
+				ABB839EA193CCACA003DEE7A /* NSString+XHDiskSizeTransfrom.m in Sources */,
 				ABB777171932A27B00F4ACAF /* XHVideoOutputSampleBufferFactory.m in Sources */,
 				AB79A20E192C0A6400A9B951 /* XHPathCover.m in Sources */,
 				74E5EAE31924FFBE0084BCFA /* SETextInput.m in Sources */,

@@ -169,6 +169,25 @@
     _cacheDirectoryPath = nil;
 }
 
+- (unsigned long long)diskSize {
+    long long diskSize = 0;
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSError *error;
+    NSArray *contents = [fileManager contentsOfDirectoryAtPath:[self _cacheDirectory] error:&error];
+    if (!contents) {
+        NSLog(@"Failed to list directory with error %@", error);
+        return diskSize;
+    }
+    for (NSString *pathComponent in contents) {
+        NSString *path = [[self _cacheDirectory] stringByAppendingPathComponent:pathComponent];
+        NSDictionary *attributes = [fileManager attributesOfItemAtPath:path error:&error];
+        if (!attributes) continue;
+        
+        diskSize += attributes.fileSize;
+    }
+    return diskSize;
+}
+
 #pragma mark- NSData caching
 
 - (void)storeData:(NSData *)data forURL:(NSURL *)url storeMemoryCache:(BOOL)storeMemoryCache {
@@ -281,6 +300,10 @@
 
 + (void)removeCacheDirectory {
     [self.manager removeCacheDirectory];
+}
+
++ (unsigned long long)diskSize {
+    return [self.manager diskSize];
 }
 
 + (void)storeData:(NSData *)data forURL:(NSURL *)url storeMemoryCache:(BOOL)storeMemoryCache {
