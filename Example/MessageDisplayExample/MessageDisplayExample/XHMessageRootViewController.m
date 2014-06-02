@@ -69,10 +69,11 @@
         cell.imageView.image = [UIImage imageNamed:@"avator"];
     }
     
-    cell.imageView.badgeViewFrame = CGRectMake(40, 0, 10, 10);
-    cell.imageView.badgeView.textColor = [UIColor whiteColor];
-    cell.imageView.badgeView.badgeColor = [UIColor redColor];
-    cell.imageView.badgeView.text = @" ";
+//    cell.imageView.badgeViewFrame = CGRectMake(40, 0, 10, 10);
+//    cell.imageView.badgeView.textColor = [UIColor whiteColor];
+//    cell.imageView.badgeView.badgeColor = [UIColor redColor];
+//    cell.imageView.badgeView.text = @" ";
+    [cell.imageView setupCircleBadge];
     
     
     if (indexPath.row == 4) {

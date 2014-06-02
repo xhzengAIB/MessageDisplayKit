@@ -10,8 +10,33 @@
 
 #import <objc/runtime.h>
 
+@implementation XHCircleView
+
+- (id)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    if (self) {
+        self.backgroundColor = [UIColor clearColor];
+    }
+    return self;
+}
+
+- (void)drawRect:(CGRect)rect {
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    CGContextAddEllipseInRect(context, CGRectMake(0, 0, CGRectGetWidth(rect), CGRectGetHeight(rect)));
+    
+    CGContextSetFillColorWithColor(context, [UIColor colorWithRed:0.829 green:0.194 blue:0.257 alpha:1.000].CGColor);
+    
+    CGContextFillPath(context);
+}
+
+@end
+
+
 static NSString const * XHBadgeViewKey = @"XHBadgeViewKey";
 static NSString const * XHBadgeViewFrameKey = @"XHBadgeViewFrameKey";
+
+static NSString const * XHCircleBadgeViewKey = @"XHCircleBadgeViewKey";
 
 @implementation UIView (XHBadgeView)
 
@@ -38,6 +63,21 @@ static NSString const * XHBadgeViewFrameKey = @"XHBadgeViewFrameKey";
 
 - (void)setBadgeView:(LKBadgeView *)badgeView {
     objc_setAssociatedObject(self, &XHBadgeViewKey, badgeView, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (XHCircleView *)setupCircleBadge {
+    self.opaque = NO;
+    self.clipsToBounds = NO;
+    XHCircleView *circleView = objc_getAssociatedObject(self, &XHCircleBadgeViewKey);
+    if (circleView)
+        return circleView;
+    
+    if (!circleView) {
+        circleView = [[XHCircleView alloc] initWithFrame:CGRectMake(CGRectGetWidth(self.bounds), 0, 8, 8)];
+        [self addSubview:circleView];
+        objc_setAssociatedObject(self, &XHCircleBadgeViewKey, circleView, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    }
+    return circleView;
 }
 
 @end
