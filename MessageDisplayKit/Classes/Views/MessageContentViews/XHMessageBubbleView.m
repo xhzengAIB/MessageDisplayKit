@@ -8,6 +8,8 @@
 
 #import "XHMessageBubbleView.h"
 
+#import "XHMessageBubbleHelper.h"
+
 #define kMarginTop 8.0f
 #define kMarginBottom 2.0f
 #define kPaddingTop 4.0f
@@ -51,7 +53,7 @@
     
     CGFloat dyWidth = [XHMessageBubbleView neededWidthForText:text];
     
-    CGSize textSize = [SETextView frameRectWithAttributtedString:[[NSAttributedString alloc] initWithString:text] constraintSize:CGSizeMake(maxWidth, MAXFLOAT) lineSpacing:kXHTextLineSpacing font:[[XHMessageBubbleView appearance] font]].size;
+    CGSize textSize = [SETextView frameRectWithAttributtedString:[[XHMessageBubbleHelper sharedMessageBubbleHelper] bubbleAttributtedStringWithText:text] constraintSize:CGSizeMake(maxWidth, MAXFLOAT) lineSpacing:kXHTextLineSpacing font:[[XHMessageBubbleView appearance] font]].size;
     return CGSizeMake((dyWidth > textSize.width ? textSize.width : dyWidth) + kBubblePaddingRight * 2 + kXHArrowMarginWidth, textSize.height);
 }
 
@@ -123,6 +125,7 @@
 }
 
 #pragma mark - Getters
+
 
 - (CGRect)bubbleFrame {
     CGSize bubbleSize = [XHMessageBubbleView getBubbleFrameWithMessage:self.message];
@@ -209,7 +212,7 @@
 - (void)configureMessageDisplayMediaWithMessage:(id <XHMessageModel>)message {
     switch (message.messageMediaType) {
         case XHBubbleMessageText:
-            _displayTextView.attributedText = [[NSAttributedString alloc] initWithString:[message text]];
+            _displayTextView.attributedText = [[XHMessageBubbleHelper sharedMessageBubbleHelper] bubbleAttributtedStringWithText:[message text]];
             break;
         case XHBubbleMessagePhoto:
             [_bubblePhotoImageView configureMessagePhoto:message.photo thumbnailUrl:message.thumbnailUrl originPhotoUrl:message.originPhotoUrl onBubbleMessageType:self.message.bubbleMessageType];
@@ -263,7 +266,6 @@
             displayTextView.font = [[XHMessageBubbleView appearance] font];
             displayTextView.showsEditingMenuAutomatically = NO;
             displayTextView.highlighted = NO;
-            displayTextView.selectable = NO;
             [self addSubview:displayTextView];
             _displayTextView = displayTextView;
         }
