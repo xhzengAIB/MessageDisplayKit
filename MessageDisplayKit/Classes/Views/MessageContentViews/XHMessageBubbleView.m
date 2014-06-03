@@ -63,11 +63,10 @@
     return photoSize;
 }
 
-+ (CGSize)neededSizeForVoicePath:(NSString *)voicePath voiceDuration:(NSString*)voiceDuration {
++ (CGSize)neededSizeForVoicePath:(NSString *)voicePath voiceDuration:(NSString *)voiceDuration {
     // 这里的100只是暂时固定，到时候会根据一个函数来计算
     float gapDuration = (!voiceDuration || voiceDuration.length == 0 ? -1 : [voiceDuration floatValue] - 1.0f);
     CGSize voiceSize = CGSizeMake(100 + (gapDuration > 0 ? (120.0 / (60 - 1) * gapDuration) : 0), [XHMessageInputView textViewLineHeight]);
-//    CGSize voiceSize = CGSizeMake(100, [XHMessageInputView textViewLineHeight]);
     return voiceSize;
 }
 
