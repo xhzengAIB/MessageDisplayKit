@@ -40,7 +40,7 @@
                              withRegularExpression:(NSRegularExpression *)expression
                                         attributes:(NSDictionary *)attributesDict {
     [expression enumerateMatchesInString:text
-                                 options:NSMatchingWithoutAnchoringBounds
+                                 options:0
                                    range:NSMakeRange(0, [text length])
                               usingBlock:^(NSTextCheckingResult *result, NSMatchingFlags flags, BOOL *stop) {
                                   NSRange matchRange = [result range];
