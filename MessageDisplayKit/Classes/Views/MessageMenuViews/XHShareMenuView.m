@@ -35,7 +35,7 @@
 - (void)setup {
     if (!_shareMenuItemButton) {
         UIButton *shareMenuItemButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        shareMenuItemButton.frame = CGRectMake(0, 0, kXHShareMenuItemIconSize, kXHShareMenuItemIconSize);
+        shareMenuItemButton.frame = CGRectMake(0, 0, kXHShareMenuItemWidth, kXHShareMenuItemWidth);
         shareMenuItemButton.backgroundColor = [UIColor clearColor];
         [self addSubview:shareMenuItemButton];
         
@@ -43,7 +43,7 @@
     }
     
     if (!_shareMenuItemTitleLabel) {
-        UILabel *shareMenuItemTitleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.shareMenuItemButton.frame), kXHShareMenuItemIconSize, KXHShareMenuItemHeight - kXHShareMenuItemIconSize)];
+        UILabel *shareMenuItemTitleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.shareMenuItemButton.frame), kXHShareMenuItemWidth, KXHShareMenuItemHeight - kXHShareMenuItemWidth)];
         shareMenuItemTitleLabel.backgroundColor = [UIColor clearColor];
         shareMenuItemTitleLabel.textColor = [UIColor blackColor];
         shareMenuItemTitleLabel.font = [UIFont systemFontOfSize:12];
@@ -115,8 +115,15 @@
     CGFloat paddingY = 10;
     for (XHShareMenuItem *shareMenuItem in self.shareMenuItems) {
         NSInteger index = [self.shareMenuItems indexOfObject:shareMenuItem];
-        NSInteger page = index / (kXHShareMenuPerRowItemCount * 2);
-        CGRect shareMenuItemViewFrame = CGRectMake((index % kXHShareMenuPerRowItemCount) * (kXHShareMenuItemIconSize + paddingX) + paddingX + (page * CGRectGetWidth(self.bounds)), ((index / kXHShareMenuPerRowItemCount) - kXHShareMenuPerColum * page) * (KXHShareMenuItemHeight + paddingY) + paddingY, kXHShareMenuItemIconSize, KXHShareMenuItemHeight);
+        NSInteger page = index / (kXHShareMenuPerRowItemCount * kXHShareMenuPerColum);
+        CGRect shareMenuItemViewFrame = [self getFrameWithPerRowItemCount:kXHShareMenuPerRowItemCount
+                                                        perColumItemCount:kXHShareMenuPerColum
+                                                                itemWidth:kXHShareMenuItemWidth
+                                                               itemHeight:KXHShareMenuItemHeight
+                                                                 paddingX:paddingX
+                                                                 paddingY:paddingY
+                                                                  atIndex:index
+                                                                   onPage:page];
         XHShareMenuItemView *shareMenuItemView = [[XHShareMenuItemView alloc] initWithFrame:shareMenuItemViewFrame];
         
         shareMenuItemView.shareMenuItemButton.tag = index;
@@ -129,6 +136,32 @@
     
     self.shareMenuPageControl.numberOfPages = (self.shareMenuItems.count / (kXHShareMenuPerRowItemCount * 2) + (self.shareMenuItems.count % (kXHShareMenuPerRowItemCount * 2) ? 1 : 0));
     [self.shareMenuScrollView setContentSize:CGSizeMake(((self.shareMenuItems.count / (kXHShareMenuPerRowItemCount * 2) + (self.shareMenuItems.count % (kXHShareMenuPerRowItemCount * 2) ? 1 : 0)) * CGRectGetWidth(self.bounds)), CGRectGetHeight(self.shareMenuScrollView.bounds))];
+}
+
+/**
+ *  通过目标的参数，获取一个grid布局
+ *
+ *  @param perRowItemCount   每行有多少列
+ *  @param perColumItemCount 每列有多少行
+ *  @param itemWidth         gridItem的宽度
+ *  @param itemHeight        gridItem的高度
+ *  @param paddingX          gridItem之间的X轴间隔
+ *  @param paddingY          gridItem之间的Y轴间隔
+ *  @param index             某个gridItem所在的index序号
+ *  @param page              某个gridItem所在的页码
+ *
+ *  @return 返回一个已经处理好的gridItem frame
+ */
+- (CGRect)getFrameWithPerRowItemCount:(NSInteger)perRowItemCount
+                    perColumItemCount:(NSInteger)perColumItemCount
+                            itemWidth:(CGFloat)itemWidth
+                           itemHeight:(NSInteger)itemHeight
+                             paddingX:(CGFloat)paddingX
+                             paddingY:(CGFloat)paddingY
+                              atIndex:(NSInteger)index
+                               onPage:(NSInteger)page {
+    CGRect itemFrame = CGRectMake((index % perRowItemCount) * (itemWidth + paddingX) + paddingX + (page * CGRectGetWidth(self.bounds)), ((index / perRowItemCount) - perColumItemCount * page) * (itemHeight + paddingY) + paddingY, itemWidth, itemHeight);
+    return itemFrame;
 }
 
 #pragma mark - Life cycle
