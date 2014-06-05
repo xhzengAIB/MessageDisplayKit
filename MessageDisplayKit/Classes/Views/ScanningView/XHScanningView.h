@@ -9,10 +9,10 @@
 #import <UIKit/UIKit.h>
 
 typedef NS_ENUM(NSInteger, XHScanningStyle) {
-    kXHQRCodeStyle = 0,
-    kXHBookStyle,
-    kXHStreetStyle,
-    kXHWordStyle,
+    XHScanningStyleQRCode = 0,
+    XHScanningStyleBook,
+    XHScanningStyleStreet,
+    XHScanningStyleWord,
 };
 
 @interface XHScanningView : UIView

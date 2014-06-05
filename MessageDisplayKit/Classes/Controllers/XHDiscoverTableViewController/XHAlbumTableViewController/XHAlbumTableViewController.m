@@ -94,7 +94,7 @@
     // Do any additional setup after loading the view.
     self.title = NSLocalizedStringFromTable(@"Album", @"MessageDisplayKitString", @"朋友圈");
     
-    [self configureBarbuttonItemStyle:kXHBarbuttonItemCameraStyle action:^{
+    [self configureBarbuttonItemStyle:XHBarbuttonItemStyleCamera action:^{
         DLog(@"发送朋友圈");
     }];
     

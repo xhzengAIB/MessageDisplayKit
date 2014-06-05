@@ -188,8 +188,8 @@
 - (void)multiMediaMessageDidSelectedOnMessage:(id<XHMessageModel>)message atIndexPath:(NSIndexPath *)indexPath onMessageTableViewCell:(XHMessageTableViewCell *)messageTableViewCell {
     UIViewController *disPlayViewController;
     switch (message.messageMediaType) {
-        case XHBubbleMessageVideo:
-        case XHBubbleMessagePhoto: {
+        case XHBubbleMessageMediaTypeVideo:
+        case XHBubbleMessageMediaTypePhoto: {
             DLog(@"message : %@", message.photo);
             DLog(@"message : %@", message.videoConverPhoto);
             XHDisplayMediaViewController *messageDisplayTextView = [[XHDisplayMediaViewController alloc] init];
@@ -198,7 +198,7 @@
             break;
         }
             break;
-        case XHBubbleMessageVoice: {
+        case XHBubbleMessageMediaTypeVoice: {
             DLog(@"message : %@", message.voicePath);
             [[XHAudioPlayerHelper shareInstance] setDelegate:self];
             if (_currentSelectedCell) {
@@ -215,10 +215,10 @@
             }
             break;
         }
-        case XHBubbleMessageFace:
+        case XHBubbleMessageMediaTypeEmotion:
             DLog(@"facePath : %@", message.emotionPath);
             break;
-        case XHBubbleMessageLocalPosition: {
+        case XHBubbleMessageMediaTypeLocalPosition: {
             DLog(@"facePath : %@", message.localPositionPhoto);
             XHDisplayLocationViewController *displayLocationViewController = [[XHDisplayLocationViewController alloc] init];
             displayLocationViewController.message = message;
@@ -311,7 +311,7 @@
     textMessage.avator = [UIImage imageNamed:@"avator"];
     textMessage.avatorUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
     [self addMessage:textMessage];
-    [self finishSendMessageWithBubbleMessageType:XHBubbleMessageText];
+    [self finishSendMessageWithBubbleMessageType:XHBubbleMessageMediaTypeText];
 }
 
 /**
@@ -326,7 +326,7 @@
     photoMessage.avator = [UIImage imageNamed:@"avator"];
     photoMessage.avatorUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
     [self addMessage:photoMessage];
-    [self finishSendMessageWithBubbleMessageType:XHBubbleMessagePhoto];
+    [self finishSendMessageWithBubbleMessageType:XHBubbleMessageMediaTypePhoto];
 }
 
 /**
@@ -341,7 +341,7 @@
     videoMessage.avator = [UIImage imageNamed:@"avator"];
     videoMessage.avatorUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
     [self addMessage:videoMessage];
-    [self finishSendMessageWithBubbleMessageType:XHBubbleMessageVideo];
+    [self finishSendMessageWithBubbleMessageType:XHBubbleMessageMediaTypeVideo];
 }
 
 /**
@@ -357,7 +357,7 @@
     voiceMessage.avator = [UIImage imageNamed:@"avator"];
     voiceMessage.avatorUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
     [self addMessage:voiceMessage];
-    [self finishSendMessageWithBubbleMessageType:XHBubbleMessageVoice];
+    [self finishSendMessageWithBubbleMessageType:XHBubbleMessageMediaTypeVoice];
 }
 
 /**
@@ -372,7 +372,7 @@
     emotionMessage.avator = [UIImage imageNamed:@"avator"];
     emotionMessage.avatorUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
     [self addMessage:emotionMessage];
-    [self finishSendMessageWithBubbleMessageType:XHBubbleMessageFace];
+    [self finishSendMessageWithBubbleMessageType:XHBubbleMessageMediaTypeEmotion];
 }
 
 /**
@@ -383,7 +383,7 @@
     geoLocationsMessage.avator = [UIImage imageNamed:@"avator"];
     geoLocationsMessage.avatorUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
     [self addMessage:geoLocationsMessage];
-    [self finishSendMessageWithBubbleMessageType:XHBubbleMessageLocalPosition];
+    [self finishSendMessageWithBubbleMessageType:XHBubbleMessageMediaTypeLocalPosition];
 }
 
 /**

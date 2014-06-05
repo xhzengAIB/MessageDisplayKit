@@ -39,12 +39,12 @@
     }
     
     switch (mediaType) {
-        case XHBubbleMessagePhoto:
-        case XHBubbleMessageVideo:
+        case XHBubbleMessageMediaTypePhoto:
+        case XHBubbleMessageMediaTypeVideo:
             messageTypeString = [messageTypeString stringByAppendingString:@"_Solid"];
             break;
-        case XHBubbleMessageText:
-        case XHBubbleMessageVoice:
+        case XHBubbleMessageMediaTypeText:
+        case XHBubbleMessageMediaTypeVoice:
             messageTypeString = [messageTypeString stringByAppendingString:@"_Solid"];
             break;
         default:

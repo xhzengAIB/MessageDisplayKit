@@ -11,9 +11,9 @@
 typedef void(^XHBarButtonItemActionBlock)(void);
 
 typedef NS_ENUM(NSInteger, XHBarbuttonItemStyle) {
-    kXHBarbuttonItemSettingStyle = 0,
-    kXHBarbuttonItemMoreStyle,
-    kXHBarbuttonItemCameraStyle,
+    XHBarbuttonItemStyleSetting = 0,
+    XHBarbuttonItemStyleMore,
+    XHBarbuttonItemStyleCamera,
 };
 
 @interface XHBaseViewController : UIViewController

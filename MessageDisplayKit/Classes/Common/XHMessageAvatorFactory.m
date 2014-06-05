@@ -15,13 +15,13 @@
             messageAvatorType:(XHMessageAvatorType)messageAvatorType {
     CGFloat radius = 0.0;
     switch (messageAvatorType) {
-        case XHMessageAvatorNormal:
+        case XHMessageAvatorTypeNormal:
             return originImage;
             break;
-        case XHMessageAvatorCircle:
+        case XHMessageAvatorTypeCircle:
             radius = originImage.size.width / 2.0;
             break;
-        case XHMessageAvatorSquare:
+        case XHMessageAvatorTypeSquare:
             radius = 8;
             break;
         default:

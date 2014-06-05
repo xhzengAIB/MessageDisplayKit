@@ -12,7 +12,7 @@
 
 - (void)setTitlePositionWithType:(XHButtonTitlePostionType)type {
     switch (type) {
-        case kXHTitleBottomType: {
+        case XHButtonTitlePostionTypeBottom: {
             // the space between the image and text
             CGFloat spacing = 2.0;
             

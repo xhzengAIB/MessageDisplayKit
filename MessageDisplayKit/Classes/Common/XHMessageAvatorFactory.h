@@ -13,9 +13,9 @@ static CGFloat const kXHAvatarImageSize = 40.0f;
 static CGFloat const kXHAlbumAvatorSpacing = 15.0f;
 
 typedef NS_ENUM(NSInteger, XHMessageAvatorType) {
-    XHMessageAvatorNormal = 0,
-    XHMessageAvatorSquare,
-    XHMessageAvatorCircle
+    XHMessageAvatorTypeNormal = 0,
+    XHMessageAvatorTypeSquare,
+    XHMessageAvatorTypeCircle
 };
 
 @interface XHMessageAvatorFactory : NSObject

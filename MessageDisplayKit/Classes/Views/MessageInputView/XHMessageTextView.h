@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-typedef NS_ENUM(NSUInteger, XHTextViewInputViewType) {
-    XHTextViewNormalInputType = 0,
-    XHTextViewTextInputType,
-    XHTextViewFaceInputType,
-    XHTextViewShareMenuInputType,
+typedef NS_ENUM(NSUInteger, XHInputViewType) {
+    XHInputViewTypeNormal = 0,
+    XHInputViewTypeText,
+    XHInputViewTypeEmotion,
+    XHInputViewTypeShareMenu,
 };
 
 @interface XHMessageTextView : UITextView

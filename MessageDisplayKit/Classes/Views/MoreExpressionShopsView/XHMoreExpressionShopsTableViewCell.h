@@ -11,10 +11,10 @@
 #import "XHMacro.h"
 
 typedef NS_ENUM(NSInteger, XHExpressionStateType) {
-    kXHFreeExpression = 0,
-    kXHRemoteExpression,
-    kXHDownloadedExpression,
-    kXHPaymentExpression,
+    XHExpressionStateTypeFreeExpression = 0,
+    XHExpressionStateTypeRemoteExpression,
+    XHExpressionStateTypeDownloadedExpression,
+    XHExpressionStateTypePaymentExpression,
 };
 
 @interface XHMoreExpressionShopsTableViewCell : UITableViewCell

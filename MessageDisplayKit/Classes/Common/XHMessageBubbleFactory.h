@@ -18,33 +18,33 @@ typedef NS_ENUM(NSUInteger, XHBubbleImageViewStyle) {
 };
 
 typedef NS_ENUM(NSInteger, XHBubbleMessageMediaType) {
-    XHBubbleMessageText = 0,
-    XHBubbleMessagePhoto = 1,
-    XHBubbleMessageVideo = 2,
-    XHBubbleMessageVoice = 3,
-    XHBubbleMessageFace = 4,
-    XHBubbleMessageLocalPosition = 5,
+    XHBubbleMessageMediaTypeText = 0,
+    XHBubbleMessageMediaTypePhoto = 1,
+    XHBubbleMessageMediaTypeVideo = 2,
+    XHBubbleMessageMediaTypeVoice = 3,
+    XHBubbleMessageMediaTypeEmotion = 4,
+    XHBubbleMessageMediaTypeLocalPosition = 5,
 };
 
 typedef NS_ENUM(NSInteger, XHBubbleMessageMenuSelecteType) {
-    XHBubbleMessageTextCopy = 0,
-    XHBubbleMessageTextTranspond = 1,
-    XHBubbleMessageTextFavorites = 2,
-    XHBubbleMessageTextMore = 3,
+    XHBubbleMessageMenuSelecteTypeTextCopy = 0,
+    XHBubbleMessageMenuSelecteTypeTextTranspond = 1,
+    XHBubbleMessageMenuSelecteTypeTextFavorites = 2,
+    XHBubbleMessageMenuSelecteTypeTextMore = 3,
     
-    XHBubbleMessagePhotoCopy = 4,
-    XHBubbleMessagePhotoTranspond = 5,
-    XHBubbleMessagePhotoFavorites = 6,
-    XHBubbleMessagePhotoMore = 7,
+    XHBubbleMessageMenuSelecteTypePhotoCopy = 4,
+    XHBubbleMessageMenuSelecteTypePhotoTranspond = 5,
+    XHBubbleMessageMenuSelecteTypePhotoFavorites = 6,
+    XHBubbleMessageMenuSelecteTypePhotoMore = 7,
     
-    XHBubbleMessageVideoTranspond = 8,
-    XHBubbleMessageVideoFavorites = 9,
-    XHBubbleMessageVideoMore = 10,
+    XHBubbleMessageMenuSelecteTypeVideoTranspond = 8,
+    XHBubbleMessageMenuSelecteTypeVideoFavorites = 9,
+    XHBubbleMessageMenuSelecteTypeVideoMore = 10,
     
-    XHBubbleMessageVoicePlay = 11,
-    XHBubbleMessageVoiceFavorites = 12,
-    XHBubbleMessageVoiceTurnToText = 13,
-    XHBubbleMessageVoiceMore = 14,
+    XHBubbleMessageMenuSelecteTypeVoicePlay = 11,
+    XHBubbleMessageMenuSelecteTypeVoiceFavorites = 12,
+    XHBubbleMessageMenuSelecteTypeVoiceTurnToText = 13,
+    XHBubbleMessageMenuSelecteTypeVoiceMore = 14,
 };
 
 @interface XHMessageBubbleFactory : NSObject

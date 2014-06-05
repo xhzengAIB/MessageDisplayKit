@@ -136,7 +136,7 @@
         _peopleButton.selected = YES;
         [_peopleButton addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
         
-        [_peopleButton setTitlePositionWithType:kXHTitleBottomType];
+        [_peopleButton setTitlePositionWithType:XHButtonTitlePostionTypeBottom];
     }
     return _peopleButton;
 }
@@ -151,7 +151,7 @@
         [_musicButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [_musicButton addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
         
-        [_musicButton setTitlePositionWithType:kXHTitleBottomType];
+        [_musicButton setTitlePositionWithType:XHButtonTitlePostionTypeBottom];
     }
     return _musicButton;
 }
@@ -167,7 +167,7 @@
     
     self.title = NSLocalizedStringFromTable(@"Shake", @"MessageDisplayKitString", @"摇一摇");
     
-    [self configureBarbuttonItemStyle:kXHBarbuttonItemSettingStyle action:^{
+    [self configureBarbuttonItemStyle:XHBarbuttonItemStyleSetting action:^{
         DLog(@"摇一摇设置");
     }];
     

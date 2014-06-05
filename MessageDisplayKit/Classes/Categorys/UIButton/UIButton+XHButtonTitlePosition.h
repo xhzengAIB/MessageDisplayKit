@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 typedef NS_ENUM(NSInteger, XHButtonTitlePostionType) {
-    kXHTitleBottomType = 0,
+    XHButtonTitlePostionTypeBottom = 0,
 };
 
 @interface UIButton (XHButtonTitlePosition)

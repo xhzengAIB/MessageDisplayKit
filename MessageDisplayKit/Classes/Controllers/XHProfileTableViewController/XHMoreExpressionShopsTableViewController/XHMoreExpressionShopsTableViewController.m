@@ -60,7 +60,7 @@
         cell = [[XHMoreExpressionShopsTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
     }
     cell.newExpressionEffect = YES;
-    cell.expressionStateType = (indexPath.row % 2 ? kXHRemoteExpression : kXHDownloadedExpression);
+    cell.expressionStateType = (indexPath.row % 2 ? XHExpressionStateTypeRemoteExpression : XHExpressionStateTypeDownloadedExpression);
     
     cell.imageView.image = [UIImage imageNamed:self.dataSource[indexPath.row]];
     cell.textLabel.text = @"甜甜私房猫";

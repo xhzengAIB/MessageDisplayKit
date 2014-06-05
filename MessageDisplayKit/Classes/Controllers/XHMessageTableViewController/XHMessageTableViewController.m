@@ -26,7 +26,7 @@
  */
 @property (nonatomic, assign) CGFloat keyboardViewHeight;
 
-@property (nonatomic, assign) XHTextViewInputViewType textViewInputViewType;
+@property (nonatomic, assign) XHInputViewType textViewInputViewType;
 
 @property (nonatomic, weak, readwrite) XHMessageTableView *messageTableView;
 @property (nonatomic, weak, readwrite) XHMessageInputView *messageInputView;
@@ -387,7 +387,7 @@ static CGPoint  delayOffset = {0.0};
 
 - (void)finishSendMessageWithBubbleMessageType:(XHBubbleMessageMediaType)mediaType {
     switch (mediaType) {
-        case XHBubbleMessageText: {
+        case XHBubbleMessageMediaTypeText: {
             [self.messageInputView.inputTextView setText:nil];
             if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
                 self.messageInputView.inputTextView.enablesReturnKeyAutomatically = NO;
@@ -398,19 +398,19 @@ static CGPoint  delayOffset = {0.0};
             }
             break;
         }
-        case XHBubbleMessagePhoto: {
+        case XHBubbleMessageMediaTypePhoto: {
             break;
         }
-        case XHBubbleMessageVideo: {
+        case XHBubbleMessageMediaTypeVideo: {
             break;
         }
-        case XHBubbleMessageVoice: {
+        case XHBubbleMessageMediaTypeVoice: {
             break;
         }
-        case XHBubbleMessageFace: {
+        case XHBubbleMessageMediaTypeEmotion: {
             break;
         }
-        case XHBubbleMessageLocalPosition: {
+        case XHBubbleMessageMediaTypeLocalPosition: {
             break;
         }
         default:
@@ -542,12 +542,12 @@ static CGPoint  delayOffset = {0.0};
         };
         
         self.messageTableView.keyboardDidScrollToPoint = ^(CGPoint point) {
-            if (weakSelf.textViewInputViewType == XHTextViewTextInputType)
+            if (weakSelf.textViewInputViewType == XHInputViewTypeText)
                 AnimationForMessageInputViewAtPoint(point);
         };
         
         self.messageTableView.keyboardWillSnapBackToPoint = ^(CGPoint point) {
-            if (weakSelf.textViewInputViewType == XHTextViewTextInputType)
+            if (weakSelf.textViewInputViewType == XHInputViewTypeText)
                 AnimationForMessageInputViewAtPoint(point);
         };
         
@@ -560,7 +560,7 @@ static CGPoint  delayOffset = {0.0};
     
     // block回调键盘通知
     self.messageTableView.keyboardWillChange = ^(CGRect keyboardRect, UIViewAnimationOptions options, double duration, BOOL showKeyborad) {
-        if (weakSelf.textViewInputViewType == XHTextViewTextInputType) {
+        if (weakSelf.textViewInputViewType == XHInputViewTypeText) {
             [UIView animateWithDuration:duration
                                   delay:0.0
                                 options:options
@@ -592,7 +592,7 @@ static CGPoint  delayOffset = {0.0};
     self.messageTableView.keyboardDidChange = ^(BOOL didShowed) {
         if ([weakSelf.messageInputView.inputTextView isFirstResponder]) {
             if (didShowed) {
-                if (weakSelf.textViewInputViewType == XHTextViewTextInputType) {
+                if (weakSelf.textViewInputViewType == XHInputViewTypeText) {
                     weakSelf.shareMenuView.alpha = 0.0;
                     weakSelf.emotionManagerView.alpha = 0.0;
                 }
@@ -882,11 +882,11 @@ static CGPoint  delayOffset = {0.0};
         
         if (hide) {
             switch (self.textViewInputViewType) {
-                case XHTextViewFaceInputType: {
+                case XHInputViewTypeEmotion: {
                     EmotionManagerViewAnimation(hide);
                     break;
                 }
-                case XHTextViewShareMenuInputType: {
+                case XHInputViewTypeShareMenu: {
                     ShareMenuViewAnimation(hide);
                     break;
                 }
@@ -897,14 +897,14 @@ static CGPoint  delayOffset = {0.0};
             
             // 这里需要注意block的执行顺序，因为otherMenuViewFrame是公用的对象，所以对于被隐藏的Menu的frame的origin的y会是最大值
             switch (self.textViewInputViewType) {
-                case XHTextViewFaceInputType: {
+                case XHInputViewTypeEmotion: {
                     // 1、先隐藏和自己无关的View
                     ShareMenuViewAnimation(!hide);
                     // 2、再显示和自己相关的View
                     EmotionManagerViewAnimation(hide);
                     break;
                 }
-                case XHTextViewShareMenuInputType: {
+                case XHInputViewTypeShareMenu: {
                     // 1、先隐藏和自己无关的View
                     EmotionManagerViewAnimation(!hide);
                     // 2、再显示和自己相关的View
@@ -967,7 +967,7 @@ static CGPoint  delayOffset = {0.0};
 #pragma mark - XHMessageInputView Delegate
 
 - (void)inputTextViewWillBeginEditing:(XHMessageTextView *)messageInputTextView {
-    self.textViewInputViewType = XHTextViewTextInputType;
+    self.textViewInputViewType = XHInputViewTypeText;
 }
 
 - (void)inputTextViewDidBeginEditing:(XHMessageTextView *)messageInputTextView {
@@ -977,7 +977,7 @@ static CGPoint  delayOffset = {0.0};
 
 - (void)didChangeSendVoiceAction:(BOOL)changed {
     if (changed) {
-        if (self.textViewInputViewType == XHTextViewTextInputType)
+        if (self.textViewInputViewType == XHInputViewTypeText)
             return;
         // 在这之前，textViewInputViewType已经不是XHTextViewTextInputType
         [self layoutOtherMenuViewHiden:YES];
@@ -993,13 +993,13 @@ static CGPoint  delayOffset = {0.0};
 
 - (void)didSelectedMultipleMediaAction {
     DLog(@"didSelectedMultipleMediaAction");
-    self.textViewInputViewType = XHTextViewShareMenuInputType;
+    self.textViewInputViewType = XHInputViewTypeShareMenu;
     [self layoutOtherMenuViewHiden:NO];
 }
 
 - (void)didSendFaceAction:(BOOL)sendFace {
     if (sendFace) {
-        self.textViewInputViewType = XHTextViewFaceInputType;
+        self.textViewInputViewType = XHInputViewTypeEmotion;
         [self layoutOtherMenuViewHiden:NO];
     } else {
         [self.messageInputView.inputTextView becomeFirstResponder];
@@ -1134,7 +1134,7 @@ static CGPoint  delayOffset = {0.0};
         [menu setMenuVisible:NO animated:YES];
     }
     
-    if (self.textViewInputViewType != XHTextViewNormalInputType && self.textViewInputViewType != XHTextViewTextInputType) {
+    if (self.textViewInputViewType != XHInputViewTypeNormal && self.textViewInputViewType != XHInputViewTypeText) {
         [self layoutOtherMenuViewHiden:YES];
     }
 }

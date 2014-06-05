@@ -11,8 +11,8 @@
 #import "XHContact.h"
 
 typedef NS_ENUM(NSInteger, kXHContactInfoCellType) {
-    kXHNormalType = 0,
-    kXHAlbumType,
+    kXHContactInfoCellTypeNormal = 0,
+    kXHContactInfoCellTypeAlbum,
 };
 
 @interface XHContactPhotosTableViewCell : UITableViewCell

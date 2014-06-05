@@ -165,11 +165,11 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
     if (message.avator) {
         [self.avatorButton setImage:message.avator forState:UIControlStateNormal];
         if (message.avatorUrl) {
-            self.avatorButton.messageAvatorType = XHMessageAvatorSquare;
+            self.avatorButton.messageAvatorType = XHMessageAvatorTypeSquare;
             [self.avatorButton setImageWithURL:[NSURL URLWithString:message.avatorUrl] placeholer:[UIImage imageNamed:@"avator"]];
         }
     } else {
-        [self.avatorButton setImage:[XHMessageAvatorFactory avatarImageNamed:[UIImage imageNamed:@"avator"] messageAvatorType:XHMessageAvatorSquare] forState:UIControlStateNormal];
+        [self.avatorButton setImage:[XHMessageAvatorFactory avatarImageNamed:[UIImage imageNamed:@"avator"] messageAvatorType:XHMessageAvatorTypeSquare] forState:UIControlStateNormal];
     }
 }
 
@@ -182,26 +182,26 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
         [self.messageBubbleView.bubblePhotoImageView removeGestureRecognizer:gesTureRecognizer];
     }
     switch (currentMediaType) {
-        case XHBubbleMessagePhoto:
-        case XHBubbleMessageVideo:
-        case XHBubbleMessageLocalPosition: {
+        case XHBubbleMessageMediaTypePhoto:
+        case XHBubbleMessageMediaTypeVideo:
+        case XHBubbleMessageMediaTypeLocalPosition: {
             UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(sigleTapGestureRecognizerHandle:)];
             [self.messageBubbleView.bubblePhotoImageView addGestureRecognizer:tapGestureRecognizer];
             break;
         }
-        case XHBubbleMessageText:
-        case XHBubbleMessageVoice: {
+        case XHBubbleMessageMediaTypeText:
+        case XHBubbleMessageMediaTypeVoice: {
             self.messageBubbleView.voiceDurationLabel.text = [NSString stringWithFormat:@"%@\'\'", message.voiceDuration];
 //            break;
         }
-        case XHBubbleMessageFace: {
+        case XHBubbleMessageMediaTypeEmotion: {
             UITapGestureRecognizer *tapGestureRecognizer;
-            if (currentMediaType == XHBubbleMessageText) {
+            if (currentMediaType == XHBubbleMessageMediaTypeText) {
                 tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doubleTapGestureRecognizerHandle:)];
             } else {
                 tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(sigleTapGestureRecognizerHandle:)];
             }
-            tapGestureRecognizer.numberOfTapsRequired = (currentMediaType == XHBubbleMessageText ? 2 : 1);
+            tapGestureRecognizer.numberOfTapsRequired = (currentMediaType == XHBubbleMessageMediaTypeText ? 2 : 1);
             [self.messageBubbleView.bubbleImageView addGestureRecognizer:tapGestureRecognizer];
             break;
         }
@@ -361,7 +361,7 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
         }
         
         UIButton *avatorButton = [[UIButton alloc] initWithFrame:avatorButtonFrame];
-        [avatorButton setImage:[XHMessageAvatorFactory avatarImageNamed:[UIImage imageNamed:@"avator"] messageAvatorType:XHMessageAvatorCircle] forState:UIControlStateNormal];
+        [avatorButton setImage:[XHMessageAvatorFactory avatarImageNamed:[UIImage imageNamed:@"avator"] messageAvatorType:XHMessageAvatorTypeCircle] forState:UIControlStateNormal];
         [avatorButton addTarget:self action:@selector(avatorButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
         [self.contentView addSubview:avatorButton];
         self.avatorButton = avatorButton;

@@ -67,19 +67,19 @@
 
 - (void)setExpressionStateType:(XHExpressionStateType)expressionStateType {
     switch (expressionStateType) {
-        case kXHFreeExpression: {
+        case XHExpressionStateTypeFreeExpression: {
             [self setupFreeExpressionAccessView];
             break;
         }
-        case kXHRemoteExpression: {
+        case XHExpressionStateTypeRemoteExpression: {
             [self setupRemoteExpressionAccessView];
             break;
         }
-        case kXHDownloadedExpression: {
+        case XHExpressionStateTypeDownloadedExpression: {
             [self setupDownloadedExpressionAccessView];
             break;
         }
-        case kXHPaymentExpression: {
+        case XHExpressionStateTypePaymentExpression: {
             [self setupPaymentExpressionAccessView];
             break;
         }
@@ -106,7 +106,7 @@
         [self.contentView addSubview:self.emotionListNewTipsImageView];
         self.newExpressionEffect = NO;
         self.accessoryView = self.accessButton;
-        self.expressionStateType = kXHFreeExpression;
+        self.expressionStateType = XHExpressionStateTypeFreeExpression;
     }
     return self;
 }

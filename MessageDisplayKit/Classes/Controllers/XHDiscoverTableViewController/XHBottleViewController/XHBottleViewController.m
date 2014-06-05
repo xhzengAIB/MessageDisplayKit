@@ -191,7 +191,7 @@
     // Do any additional setup after loading the view.
     self.title = NSLocalizedStringFromTable(@"Bottle", @"MessageDisplayKitString", @"漂流瓶");
     
-    [self configureBarbuttonItemStyle:kXHBarbuttonItemSettingStyle action:^{
+    [self configureBarbuttonItemStyle:XHBarbuttonItemStyleSetting action:^{
         DLog(@"漂流瓶设置");
     }];
     

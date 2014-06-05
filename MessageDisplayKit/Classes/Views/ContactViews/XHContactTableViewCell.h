@@ -11,8 +11,8 @@
 #import "XHContact.h"
 
 typedef NS_ENUM(NSInteger, XHContactType) {
-    kXHNormalType = 0,
-    kXHFilterType,
+    XHContactTypeNormal = 0,
+    XHContactTypeFilter,
 };
 
 @interface XHContactTableViewCell : UITableViewCell

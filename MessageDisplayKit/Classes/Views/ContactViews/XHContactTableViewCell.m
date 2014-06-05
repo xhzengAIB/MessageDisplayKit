@@ -14,11 +14,11 @@
     self.currentContact = contact;
     
     switch (contactType) {
-        case kXHNormalType: {
+        case XHContactTypeNormal: {
             self.textLabel.text = contact.contactName;
             break;
         }
-        case kXHFilterType: {
+        case XHContactTypeFilter: {
             NSMutableAttributedString *attributedTitle = [[NSMutableAttributedString alloc] initWithString:contact.contactName attributes:@{NSForegroundColorAttributeName: [UIColor colorWithWhite:0.785 alpha:1.000], NSFontAttributeName:[UIFont preferredFontForTextStyle:UIFontTextStyleBody]}];
             [attributedTitle addAttribute:NSForegroundColorAttributeName
                                     value:[UIColor colorWithRed:0.122 green:0.475 blue:0.992 alpha:1.000]

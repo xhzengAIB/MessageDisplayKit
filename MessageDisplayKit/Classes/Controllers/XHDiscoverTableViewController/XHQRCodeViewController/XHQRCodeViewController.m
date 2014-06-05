@@ -100,7 +100,7 @@
         [_scanQRCodeButton setImage:[UIImage imageNamed:@"ScanQRCode_HL"] forState:UIControlStateSelected];
         _scanQRCodeButton.selected = YES;
         [_scanQRCodeButton setTitle:@"扫码" forState:UIControlStateNormal];
-        [_scanQRCodeButton setTitlePositionWithType:kXHTitleBottomType];
+        [_scanQRCodeButton setTitlePositionWithType:XHButtonTitlePostionTypeBottom];
     }
     return _scanQRCodeButton;
 }
@@ -114,7 +114,7 @@
         [_scanBookButton setImage:[UIImage imageNamed:@"ScanBook"] forState:UIControlStateNormal];
         [_scanBookButton setImage:[UIImage imageNamed:@"ScanBook_HL"] forState:UIControlStateSelected];
         [_scanBookButton setTitle:@"封面" forState:UIControlStateNormal];
-        [_scanBookButton setTitlePositionWithType:kXHTitleBottomType];
+        [_scanBookButton setTitlePositionWithType:XHButtonTitlePostionTypeBottom];
     }
     return _scanBookButton;
 }
@@ -128,7 +128,7 @@
         [_scanStreetButton setImage:[UIImage imageNamed:@"ScanStreet"] forState:UIControlStateNormal];
         [_scanStreetButton setImage:[UIImage imageNamed:@"ScanStreet_HL"] forState:UIControlStateSelected];
         [_scanStreetButton setTitle:@"街景" forState:UIControlStateNormal];
-        [_scanStreetButton setTitlePositionWithType:kXHTitleBottomType];
+        [_scanStreetButton setTitlePositionWithType:XHButtonTitlePostionTypeBottom];
     }
     return _scanStreetButton;
 }
@@ -142,7 +142,7 @@
         [_scanWordButton setImage:[UIImage imageNamed:@"ScanWord"] forState:UIControlStateNormal];
         [_scanWordButton setImage:[UIImage imageNamed:@"ScanWord_HL"] forState:UIControlStateSelected];
         [_scanWordButton setTitle:@"翻译" forState:UIControlStateNormal];
-        [_scanWordButton setTitlePositionWithType:kXHTitleBottomType];
+        [_scanWordButton setTitlePositionWithType:XHButtonTitlePostionTypeBottom];
     }
     return _scanWordButton;
 }

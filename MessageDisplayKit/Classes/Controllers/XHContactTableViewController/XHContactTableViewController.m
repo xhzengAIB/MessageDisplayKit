@@ -84,7 +84,7 @@
             contact = contacts[row];
             
             if ([self validataWithContact:contact]) {
-                [cell configureContact:contact inContactType:kXHFilterType searchBarText:[self getSearchBarText]];
+                [cell configureContact:contact inContactType:XHContactTypeFilter searchBarText:[self getSearchBarText]];
             }
         }
     } else {
@@ -98,7 +98,7 @@
             if (row < [contacts count]) {
                 contact = contacts[row];
                 if ([self validataWithContact:contact]) {
-                    [cell configureContact:contact inContactType:kXHNormalType searchBarText:nil];
+                    [cell configureContact:contact inContactType:XHContactTypeNormal searchBarText:nil];
                 }
             }
         }

@@ -133,7 +133,7 @@ typedef void(^TransformScanningAnimationBlock)(void);
     self.scanningImageView.hidden = YES;
     self.myQRCodeButton.hidden = YES;
     switch (self.scanningStyle) {
-        case kXHQRCodeStyle: {
+        case XHScanningStyleQRCode: {
             tipLabelPadding = 30;
             self.QRCodeTipLabel.text = kXHQRCodeTipString;
             
@@ -143,10 +143,10 @@ typedef void(^TransformScanningAnimationBlock)(void);
             clearRect = CGRectMake(paddingX, 30, CGRectGetWidth(rect) - paddingX * 2, CGRectGetWidth(rect) - paddingX * 2);
             break;
         }
-        case kXHStreetStyle:
-        case kXHBookStyle:
+        case XHScanningStyleStreet:
+        case XHScanningStyleBook:
             tipLabelPadding = 20;
-            if (self.scanningStyle == kXHStreetStyle) {
+            if (self.scanningStyle == XHScanningStyleStreet) {
                 self.QRCodeTipLabel.text = kXHStreetTipString;
             } else {
                 self.QRCodeTipLabel.text = kXHBookTipString;
@@ -155,7 +155,7 @@ typedef void(^TransformScanningAnimationBlock)(void);
             paddingX = 20;
             clearRect = CGRectMake(paddingX, 20, CGRectGetWidth(rect) - paddingX * 2, CGRectGetWidth(rect) - paddingX * 2);
             break;
-        case kXHWordStyle:
+        case XHScanningStyleWord:
             tipLabelPadding = 25;
             self.QRCodeTipLabel.text = kXHWordTipString;
             
