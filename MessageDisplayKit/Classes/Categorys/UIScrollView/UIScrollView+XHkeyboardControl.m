@@ -158,7 +158,9 @@ static NSString * const MessageInputBarHeightKey = @"MessageInputBarHeightKey";
 
 - (void)disSetupPanGestureControlKeyboardHide:(BOOL)isPanGestured {
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillShowNotification object:nil];
-	[[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillHideNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillHideNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardDidShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardDidHideNotification object:nil];
     
     if (isPanGestured)
         [self.panGestureRecognizer removeTarget:self action:@selector(handlePanGesture:)];
