@@ -360,6 +360,18 @@
 		AB41A587194273150095C12C /* XHVideoOutputSampleBufferFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = AB41A579194273150095C12C /* XHVideoOutputSampleBufferFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB41A588194273150095C12C /* XHVideoOutputSampleBufferFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = AB41A57A194273150095C12C /* XHVideoOutputSampleBufferFactory.m */; };
 		AB41A589194273150095C12C /* XHVideoOutputSampleBufferFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = AB41A57A194273150095C12C /* XHVideoOutputSampleBufferFactory.m */; };
+		AB41A58C194274240095C12C /* XHPullRefreshTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = AB41A58A194274240095C12C /* XHPullRefreshTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB41A58D194274240095C12C /* XHPullRefreshTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB41A58B194274240095C12C /* XHPullRefreshTableViewController.m */; };
+		AB41A58E194274240095C12C /* XHPullRefreshTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB41A58B194274240095C12C /* XHPullRefreshTableViewController.m */; };
+		AB41A592194274950095C12C /* XHRefreshCircleView.h in Headers */ = {isa = PBXBuildFile; fileRef = AB41A590194274950095C12C /* XHRefreshCircleView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB41A593194274950095C12C /* XHRefreshCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB41A591194274950095C12C /* XHRefreshCircleView.m */; };
+		AB41A594194274950095C12C /* XHRefreshCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB41A591194274950095C12C /* XHRefreshCircleView.m */; };
+		AB41A597194274AC0095C12C /* XHRefreshView.h in Headers */ = {isa = PBXBuildFile; fileRef = AB41A595194274AC0095C12C /* XHRefreshView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB41A598194274AC0095C12C /* XHRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB41A596194274AC0095C12C /* XHRefreshView.m */; };
+		AB41A599194274AC0095C12C /* XHRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB41A596194274AC0095C12C /* XHRefreshView.m */; };
+		AB41A59C194279380095C12C /* XHLoadMoreView.h in Headers */ = {isa = PBXBuildFile; fileRef = AB41A59A194279380095C12C /* XHLoadMoreView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB41A59D194279380095C12C /* XHLoadMoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB41A59B194279380095C12C /* XHLoadMoreView.m */; };
+		AB41A59E194279380095C12C /* XHLoadMoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB41A59B194279380095C12C /* XHLoadMoreView.m */; };
 		AB439973192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = AB439971192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB439974192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = AB439972192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.m */; };
 		AB439975192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = AB439972192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.m */; };
@@ -528,6 +540,9 @@
 		ABB839E9193CCACA003DEE7A /* NSString+XHDiskSizeTransfrom.h in Headers */ = {isa = PBXBuildFile; fileRef = ABB839E7193CCACA003DEE7A /* NSString+XHDiskSizeTransfrom.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ABB839EA193CCACA003DEE7A /* NSString+XHDiskSizeTransfrom.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB839E8193CCACA003DEE7A /* NSString+XHDiskSizeTransfrom.m */; };
 		ABB839EB193CCACA003DEE7A /* NSString+XHDiskSizeTransfrom.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB839E8193CCACA003DEE7A /* NSString+XHDiskSizeTransfrom.m */; };
+		ABBA5D0C19427D96008BA06D /* XHRefreshControl.h in Headers */ = {isa = PBXBuildFile; fileRef = ABBA5D0A19427D96008BA06D /* XHRefreshControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ABBA5D0D19427D96008BA06D /* XHRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = ABBA5D0B19427D96008BA06D /* XHRefreshControl.m */; };
+		ABBA5D0E19427D96008BA06D /* XHRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = ABBA5D0B19427D96008BA06D /* XHRefreshControl.m */; };
 		ABCB35AB19342DFA002F9938 /* VoiceSearchBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABCB356719342DFA002F9938 /* VoiceSearchBtn@2x.png */; };
 		ABCB35AC19342DFA002F9938 /* VoiceSearchBtn_ios7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABCB356819342DFA002F9938 /* VoiceSearchBtn_ios7@2x.png */; };
 		ABCB35AD19342DFA002F9938 /* VoiceSearchBtnHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ABCB356919342DFA002F9938 /* VoiceSearchBtnHL@2x.png */; };
@@ -938,6 +953,14 @@
 		AB41A578194273150095C12C /* XHMessageVoiceFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMessageVoiceFactory.m; sourceTree = "<group>"; };
 		AB41A579194273150095C12C /* XHVideoOutputSampleBufferFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHVideoOutputSampleBufferFactory.h; sourceTree = "<group>"; };
 		AB41A57A194273150095C12C /* XHVideoOutputSampleBufferFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHVideoOutputSampleBufferFactory.m; sourceTree = "<group>"; };
+		AB41A58A194274240095C12C /* XHPullRefreshTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHPullRefreshTableViewController.h; sourceTree = "<group>"; };
+		AB41A58B194274240095C12C /* XHPullRefreshTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHPullRefreshTableViewController.m; sourceTree = "<group>"; };
+		AB41A590194274950095C12C /* XHRefreshCircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHRefreshCircleView.h; sourceTree = "<group>"; };
+		AB41A591194274950095C12C /* XHRefreshCircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHRefreshCircleView.m; sourceTree = "<group>"; };
+		AB41A595194274AC0095C12C /* XHRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHRefreshView.h; sourceTree = "<group>"; };
+		AB41A596194274AC0095C12C /* XHRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHRefreshView.m; sourceTree = "<group>"; };
+		AB41A59A194279380095C12C /* XHLoadMoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLoadMoreView.h; sourceTree = "<group>"; };
+		AB41A59B194279380095C12C /* XHLoadMoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHLoadMoreView.m; sourceTree = "<group>"; };
 		AB439971192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHAlbumCollectionViewFlowLayout.h; sourceTree = "<group>"; };
 		AB439972192C278400EC5E0D /* XHAlbumCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHAlbumCollectionViewFlowLayout.m; sourceTree = "<group>"; };
 		AB44D419192D8BB50069A210 /* XHContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHContact.h; sourceTree = "<group>"; };
@@ -1060,6 +1083,8 @@
 		ABB7771B1932A7D700F4ACAF /* Contact_Male@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Contact_Male@2x.png"; sourceTree = "<group>"; };
 		ABB839E7193CCACA003DEE7A /* NSString+XHDiskSizeTransfrom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+XHDiskSizeTransfrom.h"; sourceTree = "<group>"; };
 		ABB839E8193CCACA003DEE7A /* NSString+XHDiskSizeTransfrom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+XHDiskSizeTransfrom.m"; sourceTree = "<group>"; };
+		ABBA5D0A19427D96008BA06D /* XHRefreshControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHRefreshControl.h; sourceTree = "<group>"; };
+		ABBA5D0B19427D96008BA06D /* XHRefreshControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHRefreshControl.m; sourceTree = "<group>"; };
 		ABCB356719342DFA002F9938 /* VoiceSearchBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VoiceSearchBtn@2x.png"; sourceTree = "<group>"; };
 		ABCB356819342DFA002F9938 /* VoiceSearchBtn_ios7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VoiceSearchBtn_ios7@2x.png"; sourceTree = "<group>"; };
 		ABCB356919342DFA002F9938 /* VoiceSearchBtnHL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VoiceSearchBtnHL@2x.png"; sourceTree = "<group>"; };
@@ -1413,6 +1438,7 @@
 				AB63BF141936B33A00B6C977 /* NewsTemplateView */,
 				ABE83CC31937DD4A00BBF653 /* MoreExpressionShopsView */,
 				AB9B0F55193A8623004FA35D /* HorizontalGridView */,
+				AB41A58F194274840095C12C /* RefreshViews */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1518,6 +1544,8 @@
 			children = (
 				746C89851917F8EA007F9A5E /* XHBaseTableViewController.h */,
 				746C89861917F8EA007F9A5E /* XHBaseTableViewController.m */,
+				AB41A58A194274240095C12C /* XHPullRefreshTableViewController.h */,
+				AB41A58B194274240095C12C /* XHPullRefreshTableViewController.m */,
 			);
 			path = XHBaseTableViewController;
 			sourceTree = "<group>";
@@ -2086,6 +2114,21 @@
 			path = Factorys;
 			sourceTree = "<group>";
 		};
+		AB41A58F194274840095C12C /* RefreshViews */ = {
+			isa = PBXGroup;
+			children = (
+				AB41A590194274950095C12C /* XHRefreshCircleView.h */,
+				AB41A591194274950095C12C /* XHRefreshCircleView.m */,
+				AB41A595194274AC0095C12C /* XHRefreshView.h */,
+				AB41A596194274AC0095C12C /* XHRefreshView.m */,
+				AB41A59A194279380095C12C /* XHLoadMoreView.h */,
+				AB41A59B194279380095C12C /* XHLoadMoreView.m */,
+				ABBA5D0A19427D96008BA06D /* XHRefreshControl.h */,
+				ABBA5D0B19427D96008BA06D /* XHRefreshControl.m */,
+			);
+			path = RefreshViews;
+			sourceTree = "<group>";
+		};
 		AB569AA4193179CC0007DB0B /* ShakeImages */ = {
 			isa = PBXGroup;
 			children = (
@@ -2644,6 +2687,11 @@
 				AB72638919328D9A00AA738F /* XHLocationServiceTableViewCell.h in Headers */,
 				74E5E9951921E90A0084BCFA /* XHVoiceRecordHUD.h in Headers */,
 				ABB5472B19394D47000D3C9C /* XHCacheManager.h in Headers */,
+				ABBA5D0C19427D96008BA06D /* XHRefreshControl.h in Headers */,
+				AB41A592194274950095C12C /* XHRefreshCircleView.h in Headers */,
+				AB41A58C194274240095C12C /* XHPullRefreshTableViewController.h in Headers */,
+				AB41A597194274AC0095C12C /* XHRefreshView.h in Headers */,
+				AB41A59C194279380095C12C /* XHLoadMoreView.h in Headers */,
 				AB9B0F62193A88AD004FA35D /* XHHorizontalGridItemView.h in Headers */,
 				AB9B0F58193A8630004FA35D /* XHHorizontalGridView.h in Headers */,
 				AB9B0F5D193A8649004FA35D /* XHHorizontalGridItem.h in Headers */,
@@ -3061,6 +3109,7 @@
 				746C89431917F691007F9A5E /* XHMessageTextView.m in Sources */,
 				AB6AB4B2193C03D600AFE823 /* UIImage+Utility.m in Sources */,
 				74E5E9971921E90A0084BCFA /* XHVoiceRecordHUD.m in Sources */,
+				AB41A599194274AC0095C12C /* XHRefreshView.m in Sources */,
 				74C3E7D8192919930053F4E1 /* XHAlbumRichTextView.m in Sources */,
 				74E5EADB1924FFBE0084BCFA /* SETextAttachment.m in Sources */,
 				AB372907192EC62C0084D7B5 /* XHBottleViewController.m in Sources */,
@@ -3079,6 +3128,7 @@
 				7D13FC5D192C4F4000A23413 /* XHViewState.m in Sources */,
 				74180BFD190F449400A35C82 /* XHFoundationCommon.m in Sources */,
 				74901A47191D4CD30049AFF9 /* XHBaseViewController.m in Sources */,
+				AB41A58E194274240095C12C /* XHPullRefreshTableViewController.m in Sources */,
 				AB63BF1E1936B4C800B6C977 /* XHNewsTemplateContainerView.m in Sources */,
 				746C893D1917F691007F9A5E /* XHMessageTableViewCell.m in Sources */,
 				ABB494061930086C000A2680 /* XHContactCommunicationView.m in Sources */,
@@ -3090,6 +3140,7 @@
 				746C89891917F8EA007F9A5E /* XHBaseTableViewController.m in Sources */,
 				746C897A1917F8B2007F9A5E /* XHBaseNavigationController.m in Sources */,
 				AB37292B192EC6800084D7B5 /* XHDisplayTextViewController.m in Sources */,
+				ABBA5D0E19427D96008BA06D /* XHRefreshControl.m in Sources */,
 				746C894F1917F691007F9A5E /* XHEmotionSectionBar.m in Sources */,
 				AB41A586194273150095C12C /* XHMessageVoiceFactory.m in Sources */,
 				740660B61914CA0000E1CE95 /* XHPhotographyHelper.m in Sources */,
@@ -3116,11 +3167,13 @@
 				AB6AB4A3193C03D600AFE823 /* NSString+XHMD5.m in Sources */,
 				AB41A580194273150095C12C /* XHMessageBubbleFactory.m in Sources */,
 				AB41A57D194273150095C12C /* XHMessageAvatorFactory.m in Sources */,
+				AB41A594194274950095C12C /* XHRefreshCircleView.m in Sources */,
 				74E5EAEA1924FFBE0084BCFA /* SETextMagnifierCaret.m in Sources */,
 				740660C01914D65600E1CE95 /* XHEmotion.m in Sources */,
 				74901A41191D3B1C0049AFF9 /* XHProfileTableViewController.m in Sources */,
 				ABB5472D19394D47000D3C9C /* XHCacheManager.m in Sources */,
 				ABA88471193D00BA00413CEC /* XHMessageBubbleHelper.m in Sources */,
+				AB41A59E194279380095C12C /* XHLoadMoreView.m in Sources */,
 				74E5EAE11924FFBE0084BCFA /* SETextGeometry.m in Sources */,
 				ABE83CC81937DD5D00BBF653 /* XHMoreExpressionShopsTableViewCell.m in Sources */,
 				AB9B0F64193A88AD004FA35D /* XHHorizontalGridItemView.m in Sources */,
@@ -3198,6 +3251,7 @@
 				740660B51914CA0000E1CE95 /* XHPhotographyHelper.m in Sources */,
 				ABB5473419394D7C000D3C9C /* XHHTTPClient.m in Sources */,
 				74585F3F191B999B00F5E8C8 /* XHLocationHelper.m in Sources */,
+				AB41A593194274950095C12C /* XHRefreshCircleView.m in Sources */,
 				74E5EAC81924FFBE0084BCFA /* NSMutableAttributedString+Helper.m in Sources */,
 				AB6AB4B7193C03D600AFE823 /* UIImage+XHRounded.m in Sources */,
 				AB8ACD07192EBF3600FA1C80 /* XHMoreMyProfileDetailTableViewController.m in Sources */,
@@ -3228,6 +3282,7 @@
 				74E5EAE91924FFBE0084BCFA /* SETextMagnifierCaret.m in Sources */,
 				AB372924192EC6800084D7B5 /* XHDisplayLocationViewController.m in Sources */,
 				AB37292A192EC6800084D7B5 /* XHDisplayTextViewController.m in Sources */,
+				AB41A59D194279380095C12C /* XHLoadMoreView.m in Sources */,
 				AB6AB49F193C03D600AFE823 /* NSString+MessageInputView.m in Sources */,
 				ABB5472F19394D47000D3C9C /* XHFileAttribute.m in Sources */,
 				746C897E1917F8C5007F9A5E /* XHBaseTabBarController.m in Sources */,
@@ -3238,6 +3293,7 @@
 				AB6AB4A8193C03D600AFE823 /* UIImage+Alpha.m in Sources */,
 				74C3E7D2192919360053F4E1 /* XHAlbumTableViewCell.m in Sources */,
 				748245151908C730008EC388 /* AppDelegate.m in Sources */,
+				ABBA5D0D19427D96008BA06D /* XHRefreshControl.m in Sources */,
 				AB44D41C192D8BB50069A210 /* XHContact.m in Sources */,
 				740660CE1914E1F400E1CE95 /* XHEmotionManager.m in Sources */,
 				AB8ACCE8192EB0A400FA1C80 /* XHMultipleSectionTableViewController.m in Sources */,
@@ -3255,6 +3311,7 @@
 				AB54939C193110BD001F2FCC /* XHContactPhotosView.m in Sources */,
 				74E5EACB1924FFBE0084BCFA /* SECompatibility.m in Sources */,
 				74C3E7D7192919930053F4E1 /* XHAlbumRichTextView.m in Sources */,
+				AB41A58D194274240095C12C /* XHPullRefreshTableViewController.m in Sources */,
 				740660BF1914D65600E1CE95 /* XHEmotion.m in Sources */,
 				AB41A57F194273150095C12C /* XHMessageBubbleFactory.m in Sources */,
 				746C89791917F8B2007F9A5E /* XHBaseNavigationController.m in Sources */,
@@ -3284,6 +3341,7 @@
 				746C89331917F691007F9A5E /* XHMessageBubbleView.m in Sources */,
 				74BBB02C190BE8C400093577 /* XHMessageRootViewController.m in Sources */,
 				AB8ACCF3192EBF0C00FA1C80 /* XHMoreExpressionShopsTableViewController.m in Sources */,
+				AB41A598194274AC0095C12C /* XHRefreshView.m in Sources */,
 				746C894E1917F691007F9A5E /* XHEmotionSectionBar.m in Sources */,
 				7D14A005192EF8FD004B4D3B /* XHContactDetailTableViewController.m in Sources */,
 				AB41A582194273150095C12C /* XHMessageVideoConverPhotoFactory.m in Sources */,
