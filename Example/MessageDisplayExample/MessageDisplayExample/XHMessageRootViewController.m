@@ -8,14 +8,14 @@
 
 #import "XHMessageRootViewController.h"
 
-#import "XHDemoWeChatMessageTableViewController.h"
 #import "XHFoundationCommon.h"
 
-#import "UIView+XHBadgeView.h"
-
 #import "XHNewsTableViewController.h"
+#import "XHQRCodeViewController.h"
+#import "XHDemoWeChatMessageTableViewController.h"
 
 #import "XHPopMenu.h"
+#import "UIView+XHBadgeView.h"
 
 @interface XHMessageRootViewController ()
 
@@ -37,11 +37,63 @@
     [self pushNewViewController:newsTableViewController];
 }
 
+- (void)enterQRCodeController {
+    XHQRCodeViewController *QRCodeViewController = [[XHQRCodeViewController alloc] init];
+    [self pushNewViewController:QRCodeViewController];
+}
+
+- (void)showMenuOnView:(UIBarButtonItem *)buttonItem {
+    [self.popMenu showMenuOnView:self.view atPoint:CGPointZero];
+}
+
 #pragma mark - Propertys
 
 - (XHPopMenu *)popMenu {
     if (!_popMenu) {
+        NSMutableArray *popMenuItems = [[NSMutableArray alloc] initWithCapacity:6];
+        for (int i = 0; i < 5; i ++) {
+            NSString *imageName;
+            NSString *title;
+            switch (i) {
+                case 0: {
+                    imageName = @"contacts_add_newmessage";
+                    title = @"发起群聊";
+                    break;
+                }
+                case 1: {
+                    imageName = @"contacts_add_friend";
+                    title = @"添加朋友";
+                    break;
+                }
+                case 2: {
+                    imageName = @"contacts_add_scan";
+                    title = @"扫一扫";
+                    break;
+                }
+                case 3: {
+                    imageName = @"contacts_add_photo";
+                    title = @"拍照分享";
+                    break;
+                }
+                case 4: {
+                    imageName = @"contacts_add_voip";
+                    title = @"视频聊天";
+                    break;
+                }
+                default:
+                    break;
+            }
+            XHPopMenuItem *popMenuItem = [[XHPopMenuItem alloc] initWithImage:[UIImage imageNamed:imageName] title:title];
+            [popMenuItems addObject:popMenuItem];
+        }
         
+        WEAKSELF
+        _popMenu = [[XHPopMenu alloc] initWithMenus:popMenuItems];
+        _popMenu.popMenuDidSlectedCompled = ^(NSInteger index, XHPopMenuItem *popMenuItems) {
+            if (index == 2) {
+                [weakSelf enterQRCodeController];
+            }
+        };
     }
     return _popMenu;
 }
@@ -51,6 +103,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(showMenuOnView:)];
     
     NSMutableArray *dataSource = [[NSMutableArray alloc] initWithObjects:@"请问你现在在哪里啊？我在广州天河", @"点击我查看最新消息，里面有惊喜哦！", @"点击我查看最新消息，里面有惊喜哦！", @"点击我查看最新消息，里面有惊喜哦！", @"点进入聊天页面，这里有多种显示样式", @"点击我查看最新消息，里面有惊喜哦！", @"点击我查看最新消息，里面有惊喜哦！", @"点击我查看最新消息，里面有惊喜哦！", @"点击我查看最新消息，里面有惊喜哦！", @"点击我查看最新消息，里面有惊喜哦！", @"点击我查看最新消息，里面有惊喜哦！", @"点击我查看最新消息，里面有惊喜哦！", @"请问你现在在哪里啊？我在广州天河", @"请问你现在在哪里啊？我在广州天河", @"请问你现在在哪里啊？我在广州天河", @"请问你现在在哪里啊？我在广州天河", @"请问你现在在哪里啊？我在广州天河", @"点击我查看最新消息，里面有惊喜哦！", @"点击我查看最新消息，里面有惊喜哦！", nil];
     self.dataSource = dataSource;
@@ -82,12 +136,7 @@
         cell.imageView.image = [UIImage imageNamed:@"avator"];
     }
     
-//    cell.imageView.badgeViewFrame = CGRectMake(40, 0, 10, 10);
-//    cell.imageView.badgeView.textColor = [UIColor whiteColor];
-//    cell.imageView.badgeView.badgeColor = [UIColor redColor];
-//    cell.imageView.badgeView.text = @" ";
     [cell.imageView setupCircleBadge];
-    
     
     if (indexPath.row == 4) {
         cell.detailTextLabel.textColor = [UIColor colorWithRed:0.097 green:0.633 blue:1.000 alpha:1.000];

@@ -14,4 +14,6 @@
 
 @property (nonatomic, strong) XHPopMenuItem *popMenuItem;
 
+- (void)setupPopMenuItem:(XHPopMenuItem *)popMenuItem atIndexPath:(NSIndexPath *)indexPath isBottom:(BOOL)isBottom;
+
 @end
