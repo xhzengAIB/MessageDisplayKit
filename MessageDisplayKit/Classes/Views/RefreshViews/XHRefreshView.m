@@ -8,7 +8,23 @@
 
 #import "XHRefreshView.h"
 
+#import "XHRefreshCircleView.h"
+
+@interface XHRefreshView ()
+
+@property (nonatomic, strong) XHRefreshCircleView *refreshCircleView;
+
+@property (nonatomic, strong) UILabel *stateLabel;
+
+@property (nonatomic, strong) UILabel *timeLabel;
+
+@end
+
 @implementation XHRefreshView
+
+#pragma mark - Propertys
+
+#pragma mark - Life Cycle
 
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];

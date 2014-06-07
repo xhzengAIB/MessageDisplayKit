@@ -10,4 +10,6 @@
 
 @interface XHLoadMoreView : UIView
 
+@property (nonatomic, strong) UIButton *loadMoreButton;
+
 @end

@@ -8,7 +8,15 @@
 
 #import "XHLoadMoreView.h"
 
+@interface XHLoadMoreView ()
+
+@end
+
 @implementation XHLoadMoreView
+
+#pragma mark - Propertys
+
+#pragma mark - Life Cycle
 
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];

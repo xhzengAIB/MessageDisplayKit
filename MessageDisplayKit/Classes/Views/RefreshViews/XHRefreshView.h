@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface XHRefreshView : UIView
+
 
 @end
