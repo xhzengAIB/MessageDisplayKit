@@ -60,11 +60,9 @@
 
 - (UIImageView *)menuContainerView {
     if (!_menuContainerView) {
-        UIImage *image = [UIImage imageNamed:@"MoreFunctionFrame"];
-        UIImage *resizeImage = [image resizableImageWithCapInsets:UIEdgeInsetsMake(30, 10, 30, 50) resizingMode:UIImageResizingModeTile];
-        _menuContainerView = [[UIImageView alloc] initWithImage:resizeImage];
+        _menuContainerView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"MoreFunctionFrame"] resizableImageWithCapInsets:UIEdgeInsetsMake(30, 10, 30, 50) resizingMode:UIImageResizingModeTile]];
         _menuContainerView.userInteractionEnabled = YES;
-        _menuContainerView.frame = CGRectMake(CGRectGetWidth(self.bounds) - 140 - 6, 65, 140, self.menus.count * (35 + 0.5) + 7);
+        _menuContainerView.frame = CGRectMake(CGRectGetWidth(self.bounds) - kXHMenuTableViewWidth - 6, 65, kXHMenuTableViewWidth, self.menus.count * (kXHMenuItemViewHeight + kXHSeparatorLineImageViewHeight) + kXHMenuTableViewSapcing);
         
         [_menuContainerView addSubview:self.menuTableView];
     }
@@ -73,13 +71,13 @@
 
 - (UITableView *)menuTableView {
     if (!_menuTableView) {
-        _menuTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 7, CGRectGetWidth(_menuContainerView.bounds), CGRectGetHeight(_menuContainerView.bounds) - 7) style:UITableViewStylePlain];
+        _menuTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, kXHMenuTableViewSapcing, CGRectGetWidth(_menuContainerView.bounds), CGRectGetHeight(_menuContainerView.bounds) - kXHMenuTableViewSapcing) style:UITableViewStylePlain];
         _menuTableView.backgroundColor = [UIColor clearColor];
         _menuTableView.separatorColor = [UIColor clearColor];
         _menuTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _menuTableView.delegate = self;
         _menuTableView.dataSource = self;
-        _menuTableView.rowHeight = 35;
+        _menuTableView.rowHeight = kXHMenuItemViewHeight;
         _menuTableView.scrollEnabled = NO;
     }
     return _menuTableView;

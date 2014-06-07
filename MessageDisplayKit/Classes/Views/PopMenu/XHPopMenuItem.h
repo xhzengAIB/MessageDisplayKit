@@ -8,6 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+#define kXHMenuTableViewWidth 140
+#define kXHMenuTableViewSapcing 7
+
+#define kXHMenuItemViewHeight 35
+#define kXHMenuItemViewImageSapcing 15
+#define kXHSeparatorLineImageViewHeight 0.5
+
+
 @interface XHPopMenuItem : NSObject
 
 @property (nonatomic, strong) UIImage *image;
