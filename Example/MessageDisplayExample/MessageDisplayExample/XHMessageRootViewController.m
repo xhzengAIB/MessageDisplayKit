@@ -15,7 +15,11 @@
 
 #import "XHNewsTableViewController.h"
 
+#import "XHPopMenu.h"
+
 @interface XHMessageRootViewController ()
+
+@property (nonatomic, strong) XHPopMenu *popMenu;
 
 @end
 
@@ -31,6 +35,15 @@
 - (void)enterNewsController {
     XHNewsTableViewController *newsTableViewController = [[XHNewsTableViewController alloc] init];
     [self pushNewViewController:newsTableViewController];
+}
+
+#pragma mark - Propertys
+
+- (XHPopMenu *)popMenu {
+    if (!_popMenu) {
+        
+    }
+    return _popMenu;
 }
 
 #pragma mark - Life Cycle

@@ -286,6 +286,16 @@
 		7D06CA73192B3D9B00DF8C04 /* XHBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D06CA70192B3D9B00DF8C04 /* XHBaseTableViewCell.m */; };
 		7D08C21E192C7A5E00B26D93 /* MeIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D08C21D192C7A5E00B26D93 /* MeIcon@2x.png */; };
 		7D08C220192CA06B00B26D93 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D08C21F192CA06B00B26D93 /* CoreMedia.framework */; };
+		7D0AAFE61943179A00988FC3 /* XHPopMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D0AAFE41943179A00988FC3 /* XHPopMenu.h */; };
+		7D0AAFE71943179A00988FC3 /* XHPopMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D0AAFE51943179A00988FC3 /* XHPopMenu.m */; };
+		7D0AAFE81943179A00988FC3 /* XHPopMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D0AAFE51943179A00988FC3 /* XHPopMenu.m */; };
+		7D0AAFEB194319A500988FC3 /* XHPopMenuItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D0AAFE9194319A500988FC3 /* XHPopMenuItem.h */; };
+		7D0AAFEC194319A500988FC3 /* XHPopMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D0AAFEA194319A500988FC3 /* XHPopMenuItem.m */; };
+		7D0AAFED194319A500988FC3 /* XHPopMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D0AAFEA194319A500988FC3 /* XHPopMenuItem.m */; };
+		7D0AAFF019431A9400988FC3 /* XHPopMenuItemView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D0AAFEE19431A9400988FC3 /* XHPopMenuItemView.h */; };
+		7D0AAFF119431A9400988FC3 /* XHPopMenuItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D0AAFEF19431A9400988FC3 /* XHPopMenuItemView.m */; };
+		7D0AAFF219431A9400988FC3 /* XHPopMenuItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D0AAFEF19431A9400988FC3 /* XHPopMenuItemView.m */; };
+		7D0AAFF51943231400988FC3 /* MoreFunctionFrame@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D0AAFF41943231400988FC3 /* MoreFunctionFrame@2x.png */; };
 		7D13FC58192C4F4000A23413 /* XHImageViewer.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D13FC43192C4F4000A23413 /* XHImageViewer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7D13FC59192C4F4000A23413 /* XHImageViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D13FC44192C4F4000A23413 /* XHImageViewer.m */; };
 		7D13FC5A192C4F4000A23413 /* XHImageViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D13FC44192C4F4000A23413 /* XHImageViewer.m */; };
@@ -901,6 +911,13 @@
 		7D06CA70192B3D9B00DF8C04 /* XHBaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHBaseTableViewCell.m; sourceTree = "<group>"; };
 		7D08C21D192C7A5E00B26D93 /* MeIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MeIcon@2x.png"; sourceTree = "<group>"; };
 		7D08C21F192CA06B00B26D93 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		7D0AAFE41943179A00988FC3 /* XHPopMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHPopMenu.h; sourceTree = "<group>"; };
+		7D0AAFE51943179A00988FC3 /* XHPopMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHPopMenu.m; sourceTree = "<group>"; };
+		7D0AAFE9194319A500988FC3 /* XHPopMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHPopMenuItem.h; sourceTree = "<group>"; };
+		7D0AAFEA194319A500988FC3 /* XHPopMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHPopMenuItem.m; sourceTree = "<group>"; };
+		7D0AAFEE19431A9400988FC3 /* XHPopMenuItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHPopMenuItemView.h; sourceTree = "<group>"; };
+		7D0AAFEF19431A9400988FC3 /* XHPopMenuItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHPopMenuItemView.m; sourceTree = "<group>"; };
+		7D0AAFF41943231400988FC3 /* MoreFunctionFrame@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MoreFunctionFrame@2x.png"; sourceTree = "<group>"; };
 		7D13FC43192C4F4000A23413 /* XHImageViewer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHImageViewer.h; sourceTree = "<group>"; };
 		7D13FC44192C4F4000A23413 /* XHImageViewer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHImageViewer.m; sourceTree = "<group>"; };
 		7D13FC45192C4F4000A23413 /* XHViewState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHViewState.h; sourceTree = "<group>"; };
@@ -1439,6 +1456,7 @@
 				ABE83CC31937DD4A00BBF653 /* MoreExpressionShopsView */,
 				AB9B0F55193A8623004FA35D /* HorizontalGridView */,
 				AB41A58F194274840095C12C /* RefreshViews */,
+				7D0AAFE31943178D00988FC3 /* PopMenu */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1942,6 +1960,7 @@
 		74FAB0BA190A92CC005623D0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7D0AAFF3194322FE00988FC3 /* PopMenuImages */,
 				74E5E99E1921F7580084BCFA /* VoiceRecordHUDImages */,
 				746C87FC1916B57D007F9A5E /* InputViewImages */,
 				746C87F41916B511007F9A5E /* BubbleImages */,
@@ -1957,6 +1976,27 @@
 				7D06CA70192B3D9B00DF8C04 /* XHBaseTableViewCell.m */,
 			);
 			path = BaseTableViewCell;
+			sourceTree = "<group>";
+		};
+		7D0AAFE31943178D00988FC3 /* PopMenu */ = {
+			isa = PBXGroup;
+			children = (
+				7D0AAFE41943179A00988FC3 /* XHPopMenu.h */,
+				7D0AAFE51943179A00988FC3 /* XHPopMenu.m */,
+				7D0AAFE9194319A500988FC3 /* XHPopMenuItem.h */,
+				7D0AAFEA194319A500988FC3 /* XHPopMenuItem.m */,
+				7D0AAFEE19431A9400988FC3 /* XHPopMenuItemView.h */,
+				7D0AAFEF19431A9400988FC3 /* XHPopMenuItemView.m */,
+			);
+			path = PopMenu;
+			sourceTree = "<group>";
+		};
+		7D0AAFF3194322FE00988FC3 /* PopMenuImages */ = {
+			isa = PBXGroup;
+			children = (
+				7D0AAFF41943231400988FC3 /* MoreFunctionFrame@2x.png */,
+			);
+			name = PopMenuImages;
 			sourceTree = "<group>";
 		};
 		7D13FC38192C4F4000A23413 /* XHImageViewer */ = {
@@ -2584,6 +2624,7 @@
 				746C89411917F691007F9A5E /* XHMessageTextView.h in Headers */,
 				746C893B1917F691007F9A5E /* XHMessageTableViewCell.h in Headers */,
 				74065FB919123E1C00E1CE95 /* XHShareMenuItem.h in Headers */,
+				7D0AAFE61943179A00988FC3 /* XHPopMenu.h in Headers */,
 				740660CD1914E1F400E1CE95 /* XHEmotionManager.h in Headers */,
 				740660B41914CA0000E1CE95 /* XHPhotographyHelper.h in Headers */,
 				746C89871917F8EA007F9A5E /* XHBaseTableViewController.h in Headers */,
@@ -2626,6 +2667,7 @@
 				7D13FC5E192C4F4000A23413 /* XHZoomingImageView.h in Headers */,
 				7D13FC5B192C4F4000A23413 /* XHViewState.h in Headers */,
 				7D13FC58192C4F4000A23413 /* XHImageViewer.h in Headers */,
+				7D0AAFEB194319A500988FC3 /* XHPopMenuItem.h in Headers */,
 				7D149FFA192DEB5D004B4D3B /* XHContactTableViewCell.h in Headers */,
 				AB44D41B192D8BB50069A210 /* XHContact.h in Headers */,
 				AB02A9F5192D8DC5004AA23D /* XHBaseSearchTableViewController.h in Headers */,
@@ -2670,6 +2712,7 @@
 				AB6AB4A7193C03D600AFE823 /* UIImage+Alpha.h in Headers */,
 				AB6AB4BC193C03D600AFE823 /* UIView+XHBadgeView.h in Headers */,
 				AB6AB4A4193C03D600AFE823 /* UIButton+XHButtonTitlePosition.h in Headers */,
+				7D0AAFF019431A9400988FC3 /* XHPopMenuItemView.h in Headers */,
 				AB6AB49E193C03D600AFE823 /* NSString+MessageInputView.h in Headers */,
 				AB6AB4B3193C03D600AFE823 /* UIImage+XHAnimatedFaceGif.h in Headers */,
 				AB6AB4BF193C03D600AFE823 /* UIView+XHRemoteImage.h in Headers */,
@@ -3044,6 +3087,7 @@
 				ABCB35E019342DFA002F9938 /* VoiceSearchLoading005_ios7@2x.png in Resources */,
 				ABCB35B619342DFA002F9938 /* VoiceSearchFeedback006_ios7@2x.png in Resources */,
 				ABCB35EA19342DFA002F9938 /* VoiceSearchLoading010_ios7@2x.png in Resources */,
+				7D0AAFF51943231400988FC3 /* MoreFunctionFrame@2x.png in Resources */,
 				746C88491916B607007F9A5E /* SenderVoiceNodePlaying001@2x.png in Resources */,
 				AB726395193296EE00AA738F /* album_add_photo@2x.png in Resources */,
 				74E5E9B11921F7710084BCFA /* RecordingBkg@2x.png in Resources */,
@@ -3123,6 +3167,7 @@
 				AB6AB4A9193C03D600AFE823 /* UIImage+Alpha.m in Sources */,
 				AB79A212192C0A6400A9B951 /* XHSoundManager.m in Sources */,
 				74585FFF191D10CC00F5E8C8 /* XHAnnotation.m in Sources */,
+				7D0AAFE81943179A00988FC3 /* XHPopMenu.m in Sources */,
 				74E5E98B1921317B0084BCFA /* XHVoiceRecordHelper.m in Sources */,
 				7D14A006192EF8FD004B4D3B /* XHContactDetailTableViewController.m in Sources */,
 				7D13FC5D192C4F4000A23413 /* XHViewState.m in Sources */,
@@ -3158,11 +3203,13 @@
 				AB41A589194273150095C12C /* XHVideoOutputSampleBufferFactory.m in Sources */,
 				ABB5473019394D47000D3C9C /* XHFileAttribute.m in Sources */,
 				746C893A1917F691007F9A5E /* XHMessageTableView.m in Sources */,
+				7D0AAFF219431A9400988FC3 /* XHPopMenuItemView.m in Sources */,
 				AB72638B19328D9A00AA738F /* XHLocationServiceTableViewCell.m in Sources */,
 				AB9B0F5A193A8630004FA35D /* XHHorizontalGridView.m in Sources */,
 				AB63BF2C1936BE5400B6C977 /* XHNewsContainerView.m in Sources */,
 				7D13FC5A192C4F4000A23413 /* XHImageViewer.m in Sources */,
 				7D06CA73192B3D9B00DF8C04 /* XHBaseTableViewCell.m in Sources */,
+				7D0AAFED194319A500988FC3 /* XHPopMenuItem.m in Sources */,
 				ABB5473519394D7C000D3C9C /* XHHTTPClient.m in Sources */,
 				AB6AB4A3193C03D600AFE823 /* NSString+XHMD5.m in Sources */,
 				AB41A580194273150095C12C /* XHMessageBubbleFactory.m in Sources */,
@@ -3246,6 +3293,7 @@
 				AB79A211192C0A6400A9B951 /* XHSoundManager.m in Sources */,
 				74901A46191D4CD30049AFF9 /* XHBaseViewController.m in Sources */,
 				AB84B5D01937EEB30069A10C /* XHExpressionDetailTableViewController.m in Sources */,
+				7D0AAFEC194319A500988FC3 /* XHPopMenuItem.m in Sources */,
 				ABE83CC71937DD5D00BBF653 /* XHMoreExpressionShopsTableViewCell.m in Sources */,
 				AB79A223192C231C00A9B951 /* XHAlbumPhotoCollectionViewCell.m in Sources */,
 				740660B51914CA0000E1CE95 /* XHPhotographyHelper.m in Sources */,
@@ -3282,6 +3330,7 @@
 				74E5EAE91924FFBE0084BCFA /* SETextMagnifierCaret.m in Sources */,
 				AB372924192EC6800084D7B5 /* XHDisplayLocationViewController.m in Sources */,
 				AB37292A192EC6800084D7B5 /* XHDisplayTextViewController.m in Sources */,
+				7D0AAFF119431A9400988FC3 /* XHPopMenuItemView.m in Sources */,
 				AB41A59D194279380095C12C /* XHLoadMoreView.m in Sources */,
 				AB6AB49F193C03D600AFE823 /* NSString+MessageInputView.m in Sources */,
 				ABB5472F19394D47000D3C9C /* XHFileAttribute.m in Sources */,
@@ -3317,6 +3366,7 @@
 				746C89791917F8B2007F9A5E /* XHBaseNavigationController.m in Sources */,
 				74E5EAD71924FFBE0084BCFA /* SESelectionGrabber.m in Sources */,
 				E1664DC319347916003F4C5B /* XHVoiceCommonHelper.m in Sources */,
+				7D0AAFE71943179A00988FC3 /* XHPopMenu.m in Sources */,
 				AB6AB4C0193C03D600AFE823 /* UIView+XHRemoteImage.m in Sources */,
 				74E5EAF21924FFBE0084BCFA /* SETextSelectionView.m in Sources */,
 				746C89421917F691007F9A5E /* XHMessageTextView.m in Sources */,
