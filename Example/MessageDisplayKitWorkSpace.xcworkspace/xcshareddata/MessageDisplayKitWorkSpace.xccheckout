@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>02E15C0D-40E0-4FB9-81C9-38DC21B192C8</string>
+	<string>0606E50B-2540-4F8F-AD56-E5FA3F630C93</string>
 	<key>IDESourceControlProjectName</key>
 	<string>MessageDisplayKitWorkSpace</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>13E9BD29-4E6C-4B91-A261-901167192D00</key>
-		<string>https://github.com/molon/MessageDisplayKit.git</string>
+		<key>2AEFA4A6-9FCB-4E0C-B6CD-639AFEB54034</key>
+		<string>ssh://github.com/molon/MessageDisplayKit.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Example/MessageDisplayKitWorkSpace.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>13E9BD29-4E6C-4B91-A261-901167192D00</key>
+		<key>2AEFA4A6-9FCB-4E0C-B6CD-639AFEB54034</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/molon/MessageDisplayKit.git</string>
+	<string>ssh://github.com/molon/MessageDisplayKit.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>13E9BD29-4E6C-4B91-A261-901167192D00</string>
+	<string>2AEFA4A6-9FCB-4E0C-B6CD-639AFEB54034</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>13E9BD29-4E6C-4B91-A261-901167192D00</string>
+			<string>2AEFA4A6-9FCB-4E0C-B6CD-639AFEB54034</string>
 			<key>IDESourceControlWCCName</key>
 			<string>MessageDisplayKit</string>
 		</dict>
