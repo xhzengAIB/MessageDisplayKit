@@ -25,6 +25,8 @@
 
 @property (nonatomic, assign) CGFloat refreshTotalPixels;
 
+@property (nonatomic, weak) UIScrollView *scrollView;
+
 @end
 
 @implementation XHRefreshControl
@@ -81,6 +83,7 @@
 - (id)initWithScrollView:(UIScrollView *)scrollView {
     self = [super init];
     if (self) {
+        self.scrollView = scrollView;
         [self setup];
     }
     return self;

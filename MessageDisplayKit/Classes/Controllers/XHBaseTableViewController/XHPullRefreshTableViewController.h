@@ -10,4 +10,8 @@
 
 @interface XHPullRefreshTableViewController : XHBaseTableViewController
 
+@property (nonatomic, assign) BOOL isLoading;
+
+@property (nonatomic, assign) NSInteger requestCurrentPage;
+
 @end
