@@ -38,7 +38,7 @@
 
 - (UIImageView *)separatorLineImageView {
     if (!_separatorLineImageView) {
-        _separatorLineImageView = [[UIImageView alloc] initWithFrame:CGRectMake(kXHMenuItemViewImageSapcing, kXHMenuTableViewSapcing - kXHSeparatorLineImageViewHeight, kXHMenuTableViewWidth - kXHMenuItemViewImageSapcing * 2, kXHSeparatorLineImageViewHeight)];
+        _separatorLineImageView = [[UIImageView alloc] initWithFrame:CGRectMake(kXHMenuItemViewImageSapcing, kXHMenuItemViewHeight - kXHSeparatorLineImageViewHeight, kXHMenuTableViewWidth - kXHMenuItemViewImageSapcing * 2, kXHSeparatorLineImageViewHeight)];
         _separatorLineImageView.backgroundColor = [UIColor colorWithRed:0.468 green:0.519 blue:0.549 alpha:0.900];
     }
     return _separatorLineImageView;
