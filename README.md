@@ -138,6 +138,7 @@ If you use this open source components in your project, please [Email us](mailto
 ## 使用到的第三方组件
 * [PathCover](https://github.com/JackTeam/PathCover)用于朋友圈的下拉刷新。
 * [XHImageViewer](https://github.com/JackTeam/XHImageViewer)图片查看器，用于整个项目。
+* [XHRefreshControl](https://github.com/xhzengAIB/XHRefreshControl)是一款高扩展性、低耦合度的下拉刷新、上提加载更多的组件。                           
 
 ## Thanks Developer
 [我家App](https://itunes.apple.com/us/app/wo-jia-jia-ting-quan-si-mi/id538285014?mt=8)的主程Aevit提供了技术支持，他的[github](https://github.com/Aevit)地址，点击[我家App](https://itunes.apple.com/us/app/wo-jia-jia-ting-quan-si-mi/id538285014?mt=8)下载安装，如果看到里面有好的效果，可以协商开源。
