@@ -262,7 +262,7 @@
         if (!_displayTextView) {
             SETextView *displayTextView = [[SETextView alloc] initWithFrame:CGRectZero];
             displayTextView.backgroundColor = [UIColor clearColor];
-            displayTextView.selectable = YES;
+            displayTextView.selectable = NO;
             displayTextView.lineSpacing = kXHTextLineSpacing;
             displayTextView.font = [[XHMessageBubbleView appearance] font];
             displayTextView.showsEditingMenuAutomatically = NO;
