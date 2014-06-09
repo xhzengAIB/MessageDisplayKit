@@ -117,7 +117,7 @@
     } completion:^(BOOL finished) {
         if (show) {
             [self setupResult];
-            [self performSelector:@selector(showResult) withObject:nil afterDelay:2];
+            [self performSelector:@selector(showResult) withObject:nil afterDelay:0.5];
         }
     }];
 }
