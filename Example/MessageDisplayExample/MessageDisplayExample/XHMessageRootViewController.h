@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "XHPullRefreshTableViewController.h"
+#import "XHBaseTableViewController.h"
 
-@interface XHMessageRootViewController : XHPullRefreshTableViewController
+@interface XHMessageRootViewController : XHBaseTableViewController
 
 @end
