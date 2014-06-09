@@ -101,6 +101,11 @@ Support pull down load more old message, keep visible cells static when insertin
 * 22、支持摇一摇
 * 23、支持附近的人
 * 24、支持漂流瓶
+* 25、支持多选联系人
+* 26、支持新闻模板嵌套
+* 27、支持弹出Menu菜单
+* 28、支持游戏室展示
+* 29、支持表情商店预览
 
 ## How to use
 Easy to drop into your project.                                
