@@ -7,6 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		368098D01944AFF300211010 /* AddGroupMemberBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3680989F1944AFF300211010 /* AddGroupMemberBtn@2x.png */; };
+		368098D11944AFF300211010 /* AddGroupMemberBtnHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 368098A01944AFF300211010 /* AddGroupMemberBtnHL@2x.png */; };
+		368098D21944AFF300211010 /* avatar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 368098A11944AFF300211010 /* avatar.jpg */; };
+		368098D31944AFF300211010 /* CellBlueSelected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 368098A21944AFF300211010 /* CellBlueSelected@2x.png */; };
+		368098D41944AFF300211010 /* CellGraySelected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 368098A31944AFF300211010 /* CellGraySelected@2x.png */; };
+		368098D51944AFF300211010 /* CellNotSelected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 368098A41944AFF300211010 /* CellNotSelected@2x.png */; };
+		368098D61944AFF300211010 /* CellRedSelected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 368098A51944AFF300211010 /* CellRedSelected@2x.png */; };
+		368098D71944AFF300211010 /* ContactsPanelDotRect@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 368098A61944AFF300211010 /* ContactsPanelDotRect@2x.png */; };
+		368098D81944AFF300211010 /* MultiSelectedPanelBkg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 368098A71944AFF300211010 /* MultiSelectedPanelBkg@2x.png */; };
+		368098D91944AFF300211010 /* MultiSelectedPanelConfirmBtnbKG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 368098A81944AFF300211010 /* MultiSelectedPanelConfirmBtnbKG@2x.png */; };
+		368098DA1944AFF300211010 /* SearchIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 368098A91944AFF300211010 /* SearchIcon@2x.png */; };
+		368098DB1944AFF300211010 /* MLLetterIndexNavigationItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 368098AC1944AFF300211010 /* MLLetterIndexNavigationItem.m */; };
+		368098DC1944AFF300211010 /* MLLetterIndexNavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 368098AE1944AFF300211010 /* MLLetterIndexNavigationView.m */; };
+		368098DD1944AFF300211010 /* MultiSelectedPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 368098B11944AFF300211010 /* MultiSelectedPanel.m */; };
+		368098DE1944AFF300211010 /* MultiSelectedPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 368098B21944AFF300211010 /* MultiSelectedPanel.xib */; };
+		368098DF1944AFF300211010 /* MultiSelectItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 368098B41944AFF300211010 /* MultiSelectItem.m */; };
+		368098E01944AFF300211010 /* MultiSelectSearchResultTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 368098B61944AFF300211010 /* MultiSelectSearchResultTableViewCell.m */; };
+		368098E11944AFF300211010 /* MultiSelectSearchResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 368098B71944AFF300211010 /* MultiSelectSearchResultTableViewCell.xib */; };
+		368098E21944AFF300211010 /* MultiSelectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 368098B91944AFF300211010 /* MultiSelectTableViewCell.m */; };
+		368098E31944AFF300211010 /* MultiSelectTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 368098BA1944AFF300211010 /* MultiSelectTableViewCell.xib */; };
+		368098E41944AFF300211010 /* MultiSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 368098BC1944AFF300211010 /* MultiSelectViewController.m */; };
+		368098E51944AFF300211010 /* UIView+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 368098BE1944AFF300211010 /* UIView+Convenience.m */; };
 		74065FB919123E1C00E1CE95 /* XHShareMenuItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 74065FB719123E1C00E1CE95 /* XHShareMenuItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74065FBA19123E1C00E1CE95 /* XHShareMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 74065FB819123E1C00E1CE95 /* XHShareMenuItem.m */; };
 		74065FBB19123E1C00E1CE95 /* XHShareMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 74065FB819123E1C00E1CE95 /* XHShareMenuItem.m */; };
@@ -677,6 +699,36 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3680989F1944AFF300211010 /* AddGroupMemberBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AddGroupMemberBtn@2x.png"; sourceTree = "<group>"; };
+		368098A01944AFF300211010 /* AddGroupMemberBtnHL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AddGroupMemberBtnHL@2x.png"; sourceTree = "<group>"; };
+		368098A11944AFF300211010 /* avatar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = avatar.jpg; sourceTree = "<group>"; };
+		368098A21944AFF300211010 /* CellBlueSelected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CellBlueSelected@2x.png"; sourceTree = "<group>"; };
+		368098A31944AFF300211010 /* CellGraySelected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CellGraySelected@2x.png"; sourceTree = "<group>"; };
+		368098A41944AFF300211010 /* CellNotSelected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CellNotSelected@2x.png"; sourceTree = "<group>"; };
+		368098A51944AFF300211010 /* CellRedSelected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CellRedSelected@2x.png"; sourceTree = "<group>"; };
+		368098A61944AFF300211010 /* ContactsPanelDotRect@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ContactsPanelDotRect@2x.png"; sourceTree = "<group>"; };
+		368098A71944AFF300211010 /* MultiSelectedPanelBkg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MultiSelectedPanelBkg@2x.png"; sourceTree = "<group>"; };
+		368098A81944AFF300211010 /* MultiSelectedPanelConfirmBtnbKG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MultiSelectedPanelConfirmBtnbKG@2x.png"; sourceTree = "<group>"; };
+		368098A91944AFF300211010 /* SearchIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SearchIcon@2x.png"; sourceTree = "<group>"; };
+		368098AB1944AFF300211010 /* MLLetterIndexNavigationItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLLetterIndexNavigationItem.h; sourceTree = "<group>"; };
+		368098AC1944AFF300211010 /* MLLetterIndexNavigationItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLLetterIndexNavigationItem.m; sourceTree = "<group>"; };
+		368098AD1944AFF300211010 /* MLLetterIndexNavigationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLLetterIndexNavigationView.h; sourceTree = "<group>"; };
+		368098AE1944AFF300211010 /* MLLetterIndexNavigationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLLetterIndexNavigationView.m; sourceTree = "<group>"; };
+		368098B01944AFF300211010 /* MultiSelectedPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiSelectedPanel.h; sourceTree = "<group>"; };
+		368098B11944AFF300211010 /* MultiSelectedPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiSelectedPanel.m; sourceTree = "<group>"; };
+		368098B21944AFF300211010 /* MultiSelectedPanel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MultiSelectedPanel.xib; sourceTree = "<group>"; };
+		368098B31944AFF300211010 /* MultiSelectItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiSelectItem.h; sourceTree = "<group>"; };
+		368098B41944AFF300211010 /* MultiSelectItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiSelectItem.m; sourceTree = "<group>"; };
+		368098B51944AFF300211010 /* MultiSelectSearchResultTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiSelectSearchResultTableViewCell.h; sourceTree = "<group>"; };
+		368098B61944AFF300211010 /* MultiSelectSearchResultTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiSelectSearchResultTableViewCell.m; sourceTree = "<group>"; };
+		368098B71944AFF300211010 /* MultiSelectSearchResultTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MultiSelectSearchResultTableViewCell.xib; sourceTree = "<group>"; };
+		368098B81944AFF300211010 /* MultiSelectTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiSelectTableViewCell.h; sourceTree = "<group>"; };
+		368098B91944AFF300211010 /* MultiSelectTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiSelectTableViewCell.m; sourceTree = "<group>"; };
+		368098BA1944AFF300211010 /* MultiSelectTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MultiSelectTableViewCell.xib; sourceTree = "<group>"; };
+		368098BB1944AFF300211010 /* MultiSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiSelectViewController.h; sourceTree = "<group>"; };
+		368098BC1944AFF300211010 /* MultiSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiSelectViewController.m; sourceTree = "<group>"; };
+		368098BD1944AFF300211010 /* UIView+Convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Convenience.h"; sourceTree = "<group>"; };
+		368098BE1944AFF300211010 /* UIView+Convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Convenience.m"; sourceTree = "<group>"; };
 		74065FB719123E1C00E1CE95 /* XHShareMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHShareMenuItem.h; sourceTree = "<group>"; };
 		74065FB819123E1C00E1CE95 /* XHShareMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHShareMenuItem.m; sourceTree = "<group>"; };
 		740660B21914CA0000E1CE95 /* XHPhotographyHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHPhotographyHelper.h; sourceTree = "<group>"; };
@@ -1262,6 +1314,67 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		368098711944AFF300211010 /* MultiSelectTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3680989E1944AFF300211010 /* Image */,
+				368098AA1944AFF300211010 /* LetterIndex */,
+				368098AF1944AFF300211010 /* MultiSelect */,
+				368098BD1944AFF300211010 /* UIView+Convenience.h */,
+				368098BE1944AFF300211010 /* UIView+Convenience.m */,
+			);
+			path = MultiSelectTableViewController;
+			sourceTree = "<group>";
+		};
+		3680989E1944AFF300211010 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				3680989F1944AFF300211010 /* AddGroupMemberBtn@2x.png */,
+				368098A01944AFF300211010 /* AddGroupMemberBtnHL@2x.png */,
+				368098A11944AFF300211010 /* avatar.jpg */,
+				368098A21944AFF300211010 /* CellBlueSelected@2x.png */,
+				368098A31944AFF300211010 /* CellGraySelected@2x.png */,
+				368098A41944AFF300211010 /* CellNotSelected@2x.png */,
+				368098A51944AFF300211010 /* CellRedSelected@2x.png */,
+				368098A61944AFF300211010 /* ContactsPanelDotRect@2x.png */,
+				368098A71944AFF300211010 /* MultiSelectedPanelBkg@2x.png */,
+				368098A81944AFF300211010 /* MultiSelectedPanelConfirmBtnbKG@2x.png */,
+				368098A91944AFF300211010 /* SearchIcon@2x.png */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		368098AA1944AFF300211010 /* LetterIndex */ = {
+			isa = PBXGroup;
+			children = (
+				368098AB1944AFF300211010 /* MLLetterIndexNavigationItem.h */,
+				368098AC1944AFF300211010 /* MLLetterIndexNavigationItem.m */,
+				368098AD1944AFF300211010 /* MLLetterIndexNavigationView.h */,
+				368098AE1944AFF300211010 /* MLLetterIndexNavigationView.m */,
+			);
+			path = LetterIndex;
+			sourceTree = "<group>";
+		};
+		368098AF1944AFF300211010 /* MultiSelect */ = {
+			isa = PBXGroup;
+			children = (
+				368098B01944AFF300211010 /* MultiSelectedPanel.h */,
+				368098B11944AFF300211010 /* MultiSelectedPanel.m */,
+				368098B21944AFF300211010 /* MultiSelectedPanel.xib */,
+				368098B31944AFF300211010 /* MultiSelectItem.h */,
+				368098B41944AFF300211010 /* MultiSelectItem.m */,
+				368098B51944AFF300211010 /* MultiSelectSearchResultTableViewCell.h */,
+				368098B61944AFF300211010 /* MultiSelectSearchResultTableViewCell.m */,
+				368098B71944AFF300211010 /* MultiSelectSearchResultTableViewCell.xib */,
+				368098B81944AFF300211010 /* MultiSelectTableViewCell.h */,
+				368098B91944AFF300211010 /* MultiSelectTableViewCell.m */,
+				368098BA1944AFF300211010 /* MultiSelectTableViewCell.xib */,
+				368098BB1944AFF300211010 /* MultiSelectViewController.h */,
+				368098BC1944AFF300211010 /* MultiSelectViewController.m */,
+			);
+			path = MultiSelect;
+			sourceTree = "<group>";
+		};
 		74180BD7190F447100A35C82 /* MessageDisplayFramework */ = {
 			isa = PBXGroup;
 			children = (
@@ -1581,6 +1694,7 @@
 		748244F81908C730008EC388 = {
 			isa = PBXGroup;
 			children = (
+				368098711944AFF300211010 /* MultiSelectTableViewController */,
 				748245331908C73B008EC388 /* MessageDisplayKit */,
 				7482450A1908C730008EC388 /* MessageDisplayExample */,
 				748245231908C730008EC388 /* MessageDisplayExampleTests */,
@@ -2919,6 +3033,7 @@
 				ABB76E2C1937ED7300E62A2E /* emotionShopTwo@2x.png in Resources */,
 				746C88711916B62D007F9A5E /* section0_emotion0@2x.png in Resources */,
 				746C88581916B612007F9A5E /* sharemore_myfav@2x.png in Resources */,
+				368098DE1944AFF300211010 /* MultiSelectedPanel.xib in Resources */,
 				74E9006B1927940000D37C81 /* SNS@2x.png in Resources */,
 				746C88731916B62D007F9A5E /* section0_emotion2@2x.png in Resources */,
 				AB569AAF193179CC0007DB0B /* Shake_icon_music@2x.png in Resources */,
@@ -2932,6 +3047,7 @@
 				AB7263931932944400AA738F /* Shake_Logo_Female_Up@2x.png in Resources */,
 				74E900AC1927ABF800D37C81 /* fishwater2@2x.png in Resources */,
 				746C88771916B62D007F9A5E /* section0_emotion6@2x.png in Resources */,
+				368098DA1944AFF300211010 /* SearchIcon@2x.png in Resources */,
 				74E900631927940000D37C81 /* ff_IconQRCode@2x.png in Resources */,
 				ABCB35CE19342DFA002F9938 /* VoiceSearchFeedback018_ios7@2x.png in Resources */,
 				74E5E9AA1921F7710084BCFA /* RecordingSignal002@2x.png in Resources */,
@@ -2953,6 +3069,7 @@
 				ABCB35DA19342DFA002F9938 /* VoiceSearchLoading002_ios7@2x.png in Resources */,
 				AB79A219192C0B1500A9B951 /* pullrefresh.aif in Resources */,
 				746C88721916B62D007F9A5E /* section0_emotion1@2x.png in Resources */,
+				368098D81944AFF300211010 /* MultiSelectedPanelBkg@2x.png in Resources */,
 				ABCB35C719342DFA002F9938 /* VoiceSearchFeedback015@2x.png in Resources */,
 				AB8ACCDF192EB04400FA1C80 /* MoreExpressionShops@2x.png in Resources */,
 				746C882D1916B5EE007F9A5E /* input-bar-flat@2x.png in Resources */,
@@ -2971,6 +3088,7 @@
 				ABCB35D619342DFA002F9938 /* VoiceSearchIconHL_ios7@2x.png in Resources */,
 				746C88211916B5D6007F9A5E /* multiMedia@2x.png in Resources */,
 				746C88221916B5D6007F9A5E /* voice_HL@2x.png in Resources */,
+				368098D51944AFF300211010 /* CellNotSelected@2x.png in Resources */,
 				746C882E1916B5EE007F9A5E /* input-field-cover.png in Resources */,
 				ABCB35CD19342DFA002F9938 /* VoiceSearchFeedback018@2x.png in Resources */,
 				ABCB35ED19342DFA002F9938 /* VoiceSearchStartBtn@2x.png in Resources */,
@@ -2991,6 +3109,7 @@
 				746C881E1916B5D6007F9A5E /* keyborad_HL@2x.png in Resources */,
 				746C88741916B62D007F9A5E /* section0_emotion3@2x.png in Resources */,
 				AB72638F193293DC00AA738F /* barbuttonicon_set@2x.png in Resources */,
+				368098D01944AFF300211010 /* AddGroupMemberBtn@2x.png in Resources */,
 				746C884A1916B607007F9A5E /* SenderVoiceNodePlaying002@2x.png in Resources */,
 				ABF9EC1119324D64003B95DC /* ScanQR1@2x.png in Resources */,
 				746C88481916B607007F9A5E /* SenderVoiceNodePlaying000@2x.png in Resources */,
@@ -3012,6 +3131,7 @@
 				ABF9EC1319324D64003B95DC /* ScanQR3@2x.png in Resources */,
 				ABCB35C919342DFA002F9938 /* VoiceSearchFeedback016@2x.png in Resources */,
 				746C88781916B62D007F9A5E /* section0_emotion7@2x.png in Resources */,
+				368098E31944AFF300211010 /* MultiSelectTableViewCell.xib in Resources */,
 				746C88801916B62D007F9A5E /* section0_emotion15@2x.png in Resources */,
 				ABCB35D919342DFA002F9938 /* VoiceSearchLoading002@2x.png in Resources */,
 				AB569AB4193179CC0007DB0B /* Shake_Line_Up@2x.png in Resources */,
@@ -3020,7 +3140,9 @@
 				ABF9EC1219324D64003B95DC /* ScanQR2@2x.png in Resources */,
 				74E900681927940000D37C81 /* placeholderImage@2x.png in Resources */,
 				ABB7771C1932A7D700F4ACAF /* Contact_Female@2x.png in Resources */,
+				368098D71944AFF300211010 /* ContactsPanelDotRect@2x.png in Resources */,
 				746C88461916B607007F9A5E /* ReceiverVoiceNodePlaying003@2x.png in Resources */,
+				368098D21944AFF300211010 /* avatar.jpg in Resources */,
 				ABCB35B519342DFA002F9938 /* VoiceSearchFeedback006@2x.png in Resources */,
 				ABCB35E519342DFA002F9938 /* VoiceSearchLoading008@2x.png in Resources */,
 				744FBDC81915EE7400FB4A65 /* Default-568h@2x.png in Resources */,
@@ -3029,7 +3151,9 @@
 				ABB7771D1932A7D700F4ACAF /* Contact_Male@2x.png in Resources */,
 				AB0C4AD81943B6BB00D346FF /* contacts_add_scan@2x.png in Resources */,
 				AB0C4AD51943B6BB00D346FF /* contacts_add_friend@2x.png in Resources */,
+				368098D41944AFF300211010 /* CellGraySelected@2x.png in Resources */,
 				74E900A51927A9C900D37C81 /* bottleRecord@2x.png in Resources */,
+				368098D61944AFF300211010 /* CellRedSelected@2x.png in Resources */,
 				74E900661927940000D37C81 /* MoreGame@2x.png in Resources */,
 				74E900611927940000D37C81 /* ff_IconBottle@2x.png in Resources */,
 				ABCB35C219342DFA002F9938 /* VoiceSearchFeedback012_ios7@2x.png in Resources */,
@@ -3049,7 +3173,9 @@
 				ABCB35E619342DFA002F9938 /* VoiceSearchLoading008_ios7@2x.png in Resources */,
 				ABCB35EC19342DFA002F9938 /* VoiceSearchOn.wav in Resources */,
 				ABCB35E719342DFA002F9938 /* VoiceSearchLoading009@2x.png in Resources */,
+				368098D31944AFF300211010 /* CellBlueSelected@2x.png in Resources */,
 				ABF9EC0F19324D64003B95DC /* ScanBook@2x.png in Resources */,
+				368098D11944AFF300211010 /* AddGroupMemberBtnHL@2x.png in Resources */,
 				746C887A1916B62D007F9A5E /* section0_emotion9@2x.png in Resources */,
 				ABEC5135193A8497004954E3 /* game2.png in Resources */,
 				746C885A1916B612007F9A5E /* sharemore_pic@2x.png in Resources */,
@@ -3094,6 +3220,7 @@
 				746C88231916B5D6007F9A5E /* voice@2x.png in Resources */,
 				746C88451916B607007F9A5E /* ReceiverVoiceNodePlaying002@2x.png in Resources */,
 				746C887D1916B62D007F9A5E /* section0_emotion12@2x.png in Resources */,
+				368098D91944AFF300211010 /* MultiSelectedPanelConfirmBtnbKG@2x.png in Resources */,
 				74E5E99A1921EC8C0084BCFA /* VoiceBtn_Black@2x.png in Resources */,
 				74E900AD1927ABF800D37C81 /* fishwater3@2x.png in Resources */,
 				74E900981927A81500D37C81 /* bottleButtonFish@2x.png in Resources */,
@@ -3121,6 +3248,7 @@
 				ABCB35E819342DFA002F9938 /* VoiceSearchLoading009_ios7@2x.png in Resources */,
 				ABEC5133193A8497004954E3 /* dgame0.png in Resources */,
 				AB8ACCE3192EB04400FA1C80 /* MoreSetting@2x.png in Resources */,
+				368098E11944AFF300211010 /* MultiSelectSearchResultTableViewCell.xib in Resources */,
 				AB7263921932944400AA738F /* Shake_Logo_Female_Down@2x.png in Resources */,
 				746C882F1916B5EE007F9A5E /* input-field-cover@2x.png in Resources */,
 				746C88421916B607007F9A5E /* ReceiverVoiceNodePlaying@2x.png in Resources */,
@@ -3320,6 +3448,7 @@
 				ABB5473419394D7C000D3C9C /* XHHTTPClient.m in Sources */,
 				74585F3F191B999B00F5E8C8 /* XHLocationHelper.m in Sources */,
 				AB41A593194274950095C12C /* XHRefreshCircleView.m in Sources */,
+				368098E21944AFF300211010 /* MultiSelectTableViewCell.m in Sources */,
 				74E5EAC81924FFBE0084BCFA /* NSMutableAttributedString+Helper.m in Sources */,
 				AB6AB4B7193C03D600AFE823 /* UIImage+XHRounded.m in Sources */,
 				AB8ACD07192EBF3600FA1C80 /* XHMoreMyProfileDetailTableViewController.m in Sources */,
@@ -3360,13 +3489,18 @@
 				AB63BF261936B66400B6C977 /* XHNewsTableViewController.m in Sources */,
 				74D1C5C6190DFC1D003B1BCA /* XHFoundationCommon.m in Sources */,
 				AB6AB4A8193C03D600AFE823 /* UIImage+Alpha.m in Sources */,
+				368098E41944AFF300211010 /* MultiSelectViewController.m in Sources */,
 				74C3E7D2192919360053F4E1 /* XHAlbumTableViewCell.m in Sources */,
 				748245151908C730008EC388 /* AppDelegate.m in Sources */,
+				368098DD1944AFF300211010 /* MultiSelectedPanel.m in Sources */,
 				ABBA5D0D19427D96008BA06D /* XHRefreshControl.m in Sources */,
 				AB44D41C192D8BB50069A210 /* XHContact.m in Sources */,
 				740660CE1914E1F400E1CE95 /* XHEmotionManager.m in Sources */,
+				368098DB1944AFF300211010 /* MLLetterIndexNavigationItem.m in Sources */,
 				AB8ACCE8192EB0A400FA1C80 /* XHMultipleSectionTableViewController.m in Sources */,
+				368098E51944AFF300211010 /* UIView+Convenience.m in Sources */,
 				7D149FFB192DEB5D004B4D3B /* XHContactTableViewCell.m in Sources */,
+				368098DC1944AFF300211010 /* MLLetterIndexNavigationView.m in Sources */,
 				AB63BF2B1936BE5400B6C977 /* XHNewsContainerView.m in Sources */,
 				AB41A57C194273150095C12C /* XHMessageAvatorFactory.m in Sources */,
 				AB8ACD0C192EBF3F00FA1C80 /* XHMoreSettingTableViewController.m in Sources */,
@@ -3419,6 +3553,7 @@
 				74E5EAD41924FFBE0084BCFA /* SELinkText.m in Sources */,
 				746C89451917F691007F9A5E /* XHEmotionCollectionViewCell.m in Sources */,
 				74E5EAF51924FFBE0084BCFA /* SETextView.m in Sources */,
+				368098DF1944AFF300211010 /* MultiSelectItem.m in Sources */,
 				AB8ACD02192EBF2C00FA1C80 /* XHMoreMyFavoritesTableViewController.m in Sources */,
 				AB41A585194273150095C12C /* XHMessageVoiceFactory.m in Sources */,
 				748245111908C730008EC388 /* main.m in Sources */,
@@ -3430,6 +3565,7 @@
 				AB6AB4A5193C03D600AFE823 /* UIButton+XHButtonTitlePosition.m in Sources */,
 				AB72638A19328D9A00AA738F /* XHLocationServiceTableViewCell.m in Sources */,
 				7D06CA72192B3D9B00DF8C04 /* XHBaseTableViewCell.m in Sources */,
+				368098E01944AFF300211010 /* MultiSelectSearchResultTableViewCell.m in Sources */,
 				AB372909192EC62C0084D7B5 /* XHLocationServiceTableViewController.m in Sources */,
 				74E900B41928F3D100D37C81 /* XHStoreManager.m in Sources */,
 				AB726384193281CA00AA738F /* XHCaptureHelper.m in Sources */,
