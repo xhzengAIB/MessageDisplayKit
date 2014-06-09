@@ -197,7 +197,7 @@
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(showMenuOnView:)];
     
-    NSMutableArray *dataSource = [[NSMutableArray alloc] initWithObjects:@"请问你现在在哪里啊？我在广州天河", @"点击我查看最新消息，里面有惊喜哦！", @"点击我查看最新消息，里面有惊喜哦！", @"点击我查看最新消息，里面有惊喜哦！", @"点进入聊天页面，这里有多种显示样式", @"点击我查看最新消息，里面有惊喜哦！", @"点击我查看最新消息，里面有惊喜哦！", @"点击我查看最新消息，里面有惊喜哦！", @"点击我查看最新消息，里面有惊喜哦！", @"点击我查看最新消息，里面有惊喜哦！", @"点击我查看最新消息，里面有惊喜哦！", @"点击我查看最新消息，里面有惊喜哦！", @"请问你现在在哪里啊？我在广州天河", @"请问你现在在哪里啊？我在广州天河", @"请问你现在在哪里啊？我在广州天河", @"请问你现在在哪里啊？我在广州天河", @"请问你现在在哪里啊？我在广州天河", @"点击我查看最新消息，里面有惊喜哦！", @"点击我查看最新消息，里面有惊喜哦！", nil];
+    NSMutableArray *dataSource = [[NSMutableArray alloc] initWithObjects:@"华捷新闻，点击查看美女新闻呢！", @"点击我查看最新消息，里面有惊喜哦！", @"点击我查看最新消息，里面有惊喜哦！", @"点击我查看最新消息，里面有惊喜哦！", @"点进入聊天页面，这里有多种显示样式", @"点击我查看最新消息，里面有惊喜哦！", @"点击我查看最新消息，里面有惊喜哦！", @"点击我查看最新消息，里面有惊喜哦！", @"点击我查看最新消息，里面有惊喜哦！", @"点击我查看最新消息，里面有惊喜哦！", @"点击我查看最新消息，里面有惊喜哦！", @"点击我查看最新消息，里面有惊喜哦！", @"请问你现在在哪里啊？我在广州天河", @"请问你现在在哪里啊？我在广州天河", @"请问你现在在哪里啊？我在广州天河", @"请问你现在在哪里啊？我在广州天河", @"请问你现在在哪里啊？我在广州天河", @"点击我查看最新消息，里面有惊喜哦！", @"点击我查看最新消息，里面有惊喜哦！", nil];
     self.dataSource = dataSource;
     
     [self.view addSubview:self.tableView];
@@ -222,15 +222,24 @@
         
     }
     if (indexPath.row < self.dataSource.count) {
-        cell.textLabel.text = (indexPath.row % 2) ? @"曾宪华" : @"杨仁捷";
-        cell.detailTextLabel.text = self.dataSource[indexPath.row];
-        cell.imageView.image = [UIImage imageNamed:@"avator"];
+        if (!indexPath.row) {
+            cell.textLabel.text = self.dataSource[indexPath.row];
+            cell.imageView.image = [UIImage imageNamed:@"dgame1"];
+            cell.detailTextLabel.text = nil;
+        } else {
+            cell.textLabel.text = (indexPath.row % 2) ? @"曾宪华" : @"杨仁捷";
+            cell.detailTextLabel.text = self.dataSource[indexPath.row];
+            cell.imageView.image = [UIImage imageNamed:@"avator"];
+        }
     }
     
     [cell.imageView setupCircleBadge];
     
+    cell.textLabel.textColor = [UIColor blackColor];
     if (indexPath.row == 4) {
         cell.detailTextLabel.textColor = [UIColor colorWithRed:0.097 green:0.633 blue:1.000 alpha:1.000];
+    } else if (indexPath.row == 0){
+        cell.textLabel.textColor = [UIColor colorWithRed:0.429 green:0.187 blue:1.000 alpha:1.000];
     } else {
         cell.detailTextLabel.textColor = [UIColor grayColor];
     }
