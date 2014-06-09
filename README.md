@@ -137,7 +137,7 @@ If you use this open source components in your project, please [Email us](mailto
 ## Thanks Developer
 [我家App](https://itunes.apple.com/us/app/wo-jia-jia-ting-quan-si-mi/id538285014?mt=8)的主程Aevit提供了技术支持，他的[github](https://github.com/Aevit)地址，点击[我家App](https://itunes.apple.com/us/app/wo-jia-jia-ting-quan-si-mi/id538285014?mt=8)下载安装，如果看到里面有好的效果，可以协商开源。
 
-谢谢[慕龙大神](https://github.com/molon)提供[多选组件](https://github.com/molon/MLMultiSelectViewController)，现在已经集成进去了。
+谢谢[慕龙大神](https://github.com/molon)提供[多选组件](https://github.com/molon/MLMultiSelectViewController)，现在已经集成进去了。可用于群聊、添加多个朋友、选择多个联系人做其他操作。
 
 Thanks you [kishikawakatsumi](https://github.com/kishikawakatsumi) provide [SECoreTextView](https://github.com/kishikawakatsumi/SECoreTextView).                              
 
