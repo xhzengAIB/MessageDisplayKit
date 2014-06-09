@@ -403,9 +403,8 @@
 
 - (void)didConfirmWithMultiSelectedPanel:(MultiSelectedPanel*)multiSelectedPanel
 {
-    NSLog(@"确认");
     [self dismiss];
-#warning 这里咋弄自己研究，已经选择的为self.selectedItems或者(原本传递进来的items里找selected=YES的)
+    // 这里咋弄自己研究，已经选择的为self.selectedItems或者(原本传递进来的items里找selected=YES的)
 }
 
 #pragma mark - searchbar delegate
