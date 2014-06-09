@@ -23,7 +23,7 @@
 
 @property (nonatomic, weak, readwrite) SETextView *displayTextView;
 
-@property (nonatomic, weak, readwrite) UIImageView *bubbleImageView;
+@property (nonatomic, weak, readwrite) FLAnimatedImageView *bubbleImageView;
 
 @property (nonatomic, weak, readwrite) UIImageView *animationVoiceImageView;
 
@@ -224,7 +224,9 @@
         case XHBubbleMessageMediaTypeEmotion:
             // 直接设置GIF
             if (message.emotionPath) {
-                _bubbleImageView.image = [UIImage animatedImageWithAnimatedGIFURL:[NSURL fileURLWithPath:message.emotionPath]];
+                NSData *animatedData = [NSData dataWithContentsOfFile:message.emotionPath];
+                FLAnimatedImage *animatedImage = [[FLAnimatedImage alloc] initWithAnimatedGIFData:animatedData];
+                _bubbleImageView.animatedImage = animatedImage;
             }
             break;
         case XHBubbleMessageMediaTypeLocalPosition:
@@ -249,7 +251,7 @@
         // 1、初始化气泡的背景
         if (!_bubbleImageView) {
             //bubble image
-            UIImageView *bubbleImageView = [[UIImageView alloc] init];
+            FLAnimatedImageView *bubbleImageView = [[FLAnimatedImageView alloc] init];
             bubbleImageView.frame = self.bounds;
             bubbleImageView.userInteractionEnabled = YES;
             [self addSubview:bubbleImageView];

@@ -165,8 +165,6 @@
 		AB5C7FFA1938017700FA7D5B /* VoiceSearchOn.wav in Resources */ = {isa = PBXBuildFile; fileRef = AB5C7F5B1938017700FA7D5B /* VoiceSearchOn.wav */; };
 		AB5C7FFB1938017700FA7D5B /* VoiceSearchStartBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB5C7F5C1938017700FA7D5B /* VoiceSearchStartBtn@2x.png */; };
 		AB5C7FFC1938017700FA7D5B /* VoiceSearchStartBtnHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB5C7F5D1938017700FA7D5B /* VoiceSearchStartBtnHL@2x.png */; };
-		AB5C7FFD1938017700FA7D5B /* Demo0.gif in Resources */ = {isa = PBXBuildFile; fileRef = AB5C7F5E1938017700FA7D5B /* Demo0.gif */; };
-		AB5C7FFE1938017700FA7D5B /* Demo1.gif in Resources */ = {isa = PBXBuildFile; fileRef = AB5C7F5F1938017700FA7D5B /* Demo1.gif */; };
 		AB5C7FFF1938017700FA7D5B /* album_add_photo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB5C7F621938017700FA7D5B /* album_add_photo@2x.png */; };
 		AB5C80001938017700FA7D5B /* AlbumFlagMark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB5C7F631938017700FA7D5B /* AlbumFlagMark@2x.png */; };
 		AB5C80011938017700FA7D5B /* AlbumHeaderBackgrounImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB5C7F641938017700FA7D5B /* AlbumHeaderBackgrounImage@2x.png */; };
@@ -421,8 +419,6 @@
 		AB5C7F5B1938017700FA7D5B /* VoiceSearchOn.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = VoiceSearchOn.wav; sourceTree = "<group>"; };
 		AB5C7F5C1938017700FA7D5B /* VoiceSearchStartBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VoiceSearchStartBtn@2x.png"; sourceTree = "<group>"; };
 		AB5C7F5D1938017700FA7D5B /* VoiceSearchStartBtnHL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VoiceSearchStartBtnHL@2x.png"; sourceTree = "<group>"; };
-		AB5C7F5E1938017700FA7D5B /* Demo0.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Demo0.gif; sourceTree = "<group>"; };
-		AB5C7F5F1938017700FA7D5B /* Demo1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Demo1.gif; sourceTree = "<group>"; };
 		AB5C7F621938017700FA7D5B /* album_add_photo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "album_add_photo@2x.png"; sourceTree = "<group>"; };
 		AB5C7F631938017700FA7D5B /* AlbumFlagMark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AlbumFlagMark@2x.png"; sourceTree = "<group>"; };
 		AB5C7F641938017700FA7D5B /* AlbumHeaderBackgrounImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AlbumHeaderBackgrounImage@2x.png"; sourceTree = "<group>"; };
@@ -701,8 +697,6 @@
 			children = (
 				AB5C7F151938017700FA7D5B /* avator@2x.png */,
 				AB5C7F161938017700FA7D5B /* ContactImages */,
-				AB5C7F5E1938017700FA7D5B /* Demo0.gif */,
-				AB5C7F5F1938017700FA7D5B /* Demo1.gif */,
 				AB5C7F601938017700FA7D5B /* DisconverImages */,
 				AB5C7F9A1938017700FA7D5B /* EmotionImages */,
 				AB5C7FA41938017700FA7D5B /* IMG_1555.MOV */,
@@ -1099,7 +1093,6 @@
 				AB5C7FD31938017700FA7D5B /* VoiceSearchFeedback014@2x.png in Resources */,
 				AB5C80411938017700FA7D5B /* MoreExpressionShops@2x.png in Resources */,
 				AB5C7EDB1937FF9B00FA7D5B /* ReceiverVoiceNodePlaying000@2x.png in Resources */,
-				AB5C7FFD1938017700FA7D5B /* Demo0.gif in Resources */,
 				AB5C80001938017700FA7D5B /* AlbumFlagMark@2x.png in Resources */,
 				AB5C802B1938017700FA7D5B /* Shake_Line_Down@2x.png in Resources */,
 				AB5C802D1938017700FA7D5B /* Shake_Logo_Down@2x.png in Resources */,
@@ -1206,7 +1199,6 @@
 				AB5C7F081937FF9B00FA7D5B /* sharemore_wxtalk@2x.png in Resources */,
 				AB5C7ECD1937FF9B00FA7D5B /* face@2x.png in Resources */,
 				AB5C7FC21938017700FA7D5B /* VoiceSearchFeedback005_ios7@2x.png in Resources */,
-				AB5C7FFE1938017700FA7D5B /* Demo1.gif in Resources */,
 				AB5C7FC91938017700FA7D5B /* VoiceSearchFeedback009@2x.png in Resources */,
 				AB5C7EDF1937FF9B00FA7D5B /* ReceiverVoiceNodePlaying@2x.png in Resources */,
 				AB5C7FEB1938017700FA7D5B /* VoiceSearchLoading004@2x.png in Resources */,

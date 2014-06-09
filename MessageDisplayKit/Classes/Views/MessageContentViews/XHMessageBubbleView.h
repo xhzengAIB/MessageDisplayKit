@@ -15,6 +15,9 @@
 #import "XHBubblePhotoImageView.h"
 #import "SETextView.h"
 
+#import "FLAnimatedImageView.h"
+#import "FLAnimatedImage.h"
+
 // Macro
 #import "XHMacro.h"
 
@@ -47,7 +50,7 @@
 /**
  *  用于显示气泡的ImageView控件
  */
-@property (nonatomic, weak, readonly) UIImageView *bubbleImageView;
+@property (nonatomic, weak, readonly) FLAnimatedImageView *bubbleImageView;
 
 /**
  *  用于显示语音的控件，并且支持播放动画

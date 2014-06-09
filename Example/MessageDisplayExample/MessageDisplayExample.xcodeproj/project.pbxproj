@@ -249,8 +249,6 @@
 		74E9003919278F6700D37C81 /* XHDiscoverTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E9003719278F6700D37C81 /* XHDiscoverTableViewController.m */; };
 		74E9003A19278F6700D37C81 /* XHDiscoverTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E9003719278F6700D37C81 /* XHDiscoverTableViewController.m */; };
 		74E9005E1927940000D37C81 /* avator@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74E9004B1927940000D37C81 /* avator@2x.png */; };
-		74E9005F1927940000D37C81 /* Demo0.gif in Resources */ = {isa = PBXBuildFile; fileRef = 74E9004C1927940000D37C81 /* Demo0.gif */; };
-		74E900601927940000D37C81 /* Demo1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 74E9004D1927940000D37C81 /* Demo1.gif */; };
 		74E900611927940000D37C81 /* ff_IconBottle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74E9004F1927940000D37C81 /* ff_IconBottle@2x.png */; };
 		74E900621927940000D37C81 /* ff_IconLocationService@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74E900501927940000D37C81 /* ff_IconLocationService@2x.png */; };
 		74E900631927940000D37C81 /* ff_IconQRCode@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74E900511927940000D37C81 /* ff_IconQRCode@2x.png */; };
@@ -362,6 +360,29 @@
 		7DA2EC8F19455F5700B009FC /* MultiSelectedPanelBkg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DA2EC8419455F5700B009FC /* MultiSelectedPanelBkg@2x.png */; };
 		7DA2EC9019455F5700B009FC /* MultiSelectedPanelConfirmBtnbKG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DA2EC8519455F5700B009FC /* MultiSelectedPanelConfirmBtnbKG@2x.png */; };
 		7DA2EC9119455F5700B009FC /* SearchIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DA2EC8619455F5700B009FC /* SearchIcon@2x.png */; };
+		7DA2EC97194577EA00B009FC /* FLAnimatedImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DA2EC93194577EA00B009FC /* FLAnimatedImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7DA2EC98194577EA00B009FC /* FLAnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA2EC94194577EA00B009FC /* FLAnimatedImage.m */; };
+		7DA2EC99194577EA00B009FC /* FLAnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA2EC94194577EA00B009FC /* FLAnimatedImage.m */; };
+		7DA2EC9A194577EA00B009FC /* FLAnimatedImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DA2EC95194577EA00B009FC /* FLAnimatedImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7DA2EC9B194577EA00B009FC /* FLAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA2EC96194577EA00B009FC /* FLAnimatedImageView.m */; };
+		7DA2EC9C194577EA00B009FC /* FLAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA2EC96194577EA00B009FC /* FLAnimatedImageView.m */; };
+		7DA2ECAF19457A2D00B009FC /* emotion1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7DA2EC9E19457A2D00B009FC /* emotion1.gif */; };
+		7DA2ECB019457A2D00B009FC /* emotion10.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7DA2EC9F19457A2D00B009FC /* emotion10.gif */; };
+		7DA2ECB119457A2D00B009FC /* emotion11.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7DA2ECA019457A2D00B009FC /* emotion11.gif */; };
+		7DA2ECB219457A2D00B009FC /* emotion12.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7DA2ECA119457A2D00B009FC /* emotion12.gif */; };
+		7DA2ECB319457A2D00B009FC /* emotion13.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7DA2ECA219457A2D00B009FC /* emotion13.gif */; };
+		7DA2ECB419457A2D00B009FC /* emotion14.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7DA2ECA319457A2D00B009FC /* emotion14.gif */; };
+		7DA2ECB519457A2D00B009FC /* emotion15.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7DA2ECA419457A2D00B009FC /* emotion15.gif */; };
+		7DA2ECB619457A2D00B009FC /* emotion16.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7DA2ECA519457A2D00B009FC /* emotion16.gif */; };
+		7DA2ECB719457A2D00B009FC /* emotion0.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7DA2ECA619457A2D00B009FC /* emotion0.gif */; };
+		7DA2ECB819457A2D00B009FC /* emotion2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7DA2ECA719457A2D00B009FC /* emotion2.gif */; };
+		7DA2ECB919457A2D00B009FC /* emotion3.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7DA2ECA819457A2D00B009FC /* emotion3.gif */; };
+		7DA2ECBA19457A2D00B009FC /* emotion4.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7DA2ECA919457A2D00B009FC /* emotion4.gif */; };
+		7DA2ECBB19457A2D00B009FC /* emotion5.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7DA2ECAA19457A2D00B009FC /* emotion5.gif */; };
+		7DA2ECBC19457A2D00B009FC /* emotion6.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7DA2ECAB19457A2D00B009FC /* emotion6.gif */; };
+		7DA2ECBD19457A2D00B009FC /* emotion7.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7DA2ECAC19457A2D00B009FC /* emotion7.gif */; };
+		7DA2ECBE19457A2D00B009FC /* emotion8.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7DA2ECAD19457A2D00B009FC /* emotion8.gif */; };
+		7DA2ECBF19457A2D00B009FC /* emotion9.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7DA2ECAE19457A2D00B009FC /* emotion9.gif */; };
 		AB02A9F5192D8DC5004AA23D /* XHBaseSearchTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = AB02A9F3192D8DC5004AA23D /* XHBaseSearchTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB02A9F6192D8DC5004AA23D /* XHBaseSearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB02A9F4192D8DC5004AA23D /* XHBaseSearchTableViewController.m */; };
 		AB02A9F7192D8DC5004AA23D /* XHBaseSearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB02A9F4192D8DC5004AA23D /* XHBaseSearchTableViewController.m */; };
@@ -921,8 +942,6 @@
 		74E9003619278F6700D37C81 /* XHDiscoverTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHDiscoverTableViewController.h; sourceTree = "<group>"; };
 		74E9003719278F6700D37C81 /* XHDiscoverTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHDiscoverTableViewController.m; sourceTree = "<group>"; };
 		74E9004B1927940000D37C81 /* avator@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avator@2x.png"; sourceTree = "<group>"; };
-		74E9004C1927940000D37C81 /* Demo0.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Demo0.gif; sourceTree = "<group>"; };
-		74E9004D1927940000D37C81 /* Demo1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Demo1.gif; sourceTree = "<group>"; };
 		74E9004F1927940000D37C81 /* ff_IconBottle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ff_IconBottle@2x.png"; sourceTree = "<group>"; };
 		74E900501927940000D37C81 /* ff_IconLocationService@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ff_IconLocationService@2x.png"; sourceTree = "<group>"; };
 		74E900511927940000D37C81 /* ff_IconQRCode@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ff_IconQRCode@2x.png"; sourceTree = "<group>"; };
@@ -1012,6 +1031,27 @@
 		7DA2EC8419455F5700B009FC /* MultiSelectedPanelBkg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MultiSelectedPanelBkg@2x.png"; sourceTree = "<group>"; };
 		7DA2EC8519455F5700B009FC /* MultiSelectedPanelConfirmBtnbKG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MultiSelectedPanelConfirmBtnbKG@2x.png"; sourceTree = "<group>"; };
 		7DA2EC8619455F5700B009FC /* SearchIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SearchIcon@2x.png"; sourceTree = "<group>"; };
+		7DA2EC93194577EA00B009FC /* FLAnimatedImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLAnimatedImage.h; sourceTree = "<group>"; };
+		7DA2EC94194577EA00B009FC /* FLAnimatedImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLAnimatedImage.m; sourceTree = "<group>"; };
+		7DA2EC95194577EA00B009FC /* FLAnimatedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLAnimatedImageView.h; sourceTree = "<group>"; };
+		7DA2EC96194577EA00B009FC /* FLAnimatedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLAnimatedImageView.m; sourceTree = "<group>"; };
+		7DA2EC9E19457A2D00B009FC /* emotion1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = emotion1.gif; sourceTree = "<group>"; };
+		7DA2EC9F19457A2D00B009FC /* emotion10.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = emotion10.gif; sourceTree = "<group>"; };
+		7DA2ECA019457A2D00B009FC /* emotion11.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = emotion11.gif; sourceTree = "<group>"; };
+		7DA2ECA119457A2D00B009FC /* emotion12.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = emotion12.gif; sourceTree = "<group>"; };
+		7DA2ECA219457A2D00B009FC /* emotion13.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = emotion13.gif; sourceTree = "<group>"; };
+		7DA2ECA319457A2D00B009FC /* emotion14.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = emotion14.gif; sourceTree = "<group>"; };
+		7DA2ECA419457A2D00B009FC /* emotion15.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = emotion15.gif; sourceTree = "<group>"; };
+		7DA2ECA519457A2D00B009FC /* emotion16.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = emotion16.gif; sourceTree = "<group>"; };
+		7DA2ECA619457A2D00B009FC /* emotion0.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = emotion0.gif; sourceTree = "<group>"; };
+		7DA2ECA719457A2D00B009FC /* emotion2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = emotion2.gif; sourceTree = "<group>"; };
+		7DA2ECA819457A2D00B009FC /* emotion3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = emotion3.gif; sourceTree = "<group>"; };
+		7DA2ECA919457A2D00B009FC /* emotion4.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = emotion4.gif; sourceTree = "<group>"; };
+		7DA2ECAA19457A2D00B009FC /* emotion5.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = emotion5.gif; sourceTree = "<group>"; };
+		7DA2ECAB19457A2D00B009FC /* emotion6.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = emotion6.gif; sourceTree = "<group>"; };
+		7DA2ECAC19457A2D00B009FC /* emotion7.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = emotion7.gif; sourceTree = "<group>"; };
+		7DA2ECAD19457A2D00B009FC /* emotion8.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = emotion8.gif; sourceTree = "<group>"; };
+		7DA2ECAE19457A2D00B009FC /* emotion9.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = emotion9.gif; sourceTree = "<group>"; };
 		AB02A9F3192D8DC5004AA23D /* XHBaseSearchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHBaseSearchTableViewController.h; sourceTree = "<group>"; };
 		AB02A9F4192D8DC5004AA23D /* XHBaseSearchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHBaseSearchTableViewController.m; sourceTree = "<group>"; };
 		AB0C4AD01943B6BB00D346FF /* contacts_add_friend@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "contacts_add_friend@2x.png"; sourceTree = "<group>"; };
@@ -1892,6 +1932,7 @@
 		74E5EAA51924FFBE0084BCFA /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				7DA2EC92194577EA00B009FC /* FLAnimatedImageView */,
 				7DA2EC2519455EF000B009FC /* MultiSelectTableViewController */,
 				AB8C80F91936A6F7006CDA9B /* LKBadgeView */,
 				7D13FC38192C4F4000A23413 /* XHImageViewer */,
@@ -1970,8 +2011,6 @@
 			children = (
 				7D08C21D192C7A5E00B26D93 /* MeIcon@2x.png */,
 				74E9004B1927940000D37C81 /* avator@2x.png */,
-				74E9004C1927940000D37C81 /* Demo0.gif */,
-				74E9004D1927940000D37C81 /* Demo1.gif */,
 				ABEC512A193A8497004954E3 /* GameImages */,
 				ABE83CC91937E00E00BBF653 /* EmotionImages */,
 				AB63BF1F1936B58600B6C977 /* NewsTemplateImages */,
@@ -2181,6 +2220,41 @@
 				7DA2EC8619455F5700B009FC /* SearchIcon@2x.png */,
 			);
 			name = MultiSelectImages;
+			sourceTree = "<group>";
+		};
+		7DA2EC92194577EA00B009FC /* FLAnimatedImageView */ = {
+			isa = PBXGroup;
+			children = (
+				7DA2EC93194577EA00B009FC /* FLAnimatedImage.h */,
+				7DA2EC94194577EA00B009FC /* FLAnimatedImage.m */,
+				7DA2EC95194577EA00B009FC /* FLAnimatedImageView.h */,
+				7DA2EC96194577EA00B009FC /* FLAnimatedImageView.m */,
+			);
+			path = FLAnimatedImageView;
+			sourceTree = "<group>";
+		};
+		7DA2EC9D19457A2D00B009FC /* emoticons */ = {
+			isa = PBXGroup;
+			children = (
+				7DA2ECA619457A2D00B009FC /* emotion0.gif */,
+				7DA2EC9E19457A2D00B009FC /* emotion1.gif */,
+				7DA2ECA719457A2D00B009FC /* emotion2.gif */,
+				7DA2ECA819457A2D00B009FC /* emotion3.gif */,
+				7DA2ECA919457A2D00B009FC /* emotion4.gif */,
+				7DA2ECAA19457A2D00B009FC /* emotion5.gif */,
+				7DA2ECAB19457A2D00B009FC /* emotion6.gif */,
+				7DA2ECAC19457A2D00B009FC /* emotion7.gif */,
+				7DA2ECAD19457A2D00B009FC /* emotion8.gif */,
+				7DA2ECAE19457A2D00B009FC /* emotion9.gif */,
+				7DA2EC9F19457A2D00B009FC /* emotion10.gif */,
+				7DA2ECA019457A2D00B009FC /* emotion11.gif */,
+				7DA2ECA119457A2D00B009FC /* emotion12.gif */,
+				7DA2ECA219457A2D00B009FC /* emotion13.gif */,
+				7DA2ECA319457A2D00B009FC /* emotion14.gif */,
+				7DA2ECA419457A2D00B009FC /* emotion15.gif */,
+				7DA2ECA519457A2D00B009FC /* emotion16.gif */,
+			);
+			path = emoticons;
 			sourceTree = "<group>";
 		};
 		AB02A9F2192D8DA9004AA23D /* XHBaseSearchTableViewController */ = {
@@ -2702,6 +2776,7 @@
 		ABE83CC91937E00E00BBF653 /* EmotionImages */ = {
 			isa = PBXGroup;
 			children = (
+				7DA2EC9D19457A2D00B009FC /* emoticons */,
 				ABB76E281937ED7300E62A2E /* emotionShopOne@2x.png */,
 				ABB76E291937ED7300E62A2E /* emotionShopTwo@2x.png */,
 				ABB76E2A1937ED7300E62A2E /* emotionShopOther@2x.png */,
@@ -2890,6 +2965,8 @@
 				AB41A59C194279380095C12C /* XHLoadMoreView.h in Headers */,
 				AB9B0F62193A88AD004FA35D /* XHHorizontalGridItemView.h in Headers */,
 				AB9B0F58193A8630004FA35D /* XHHorizontalGridView.h in Headers */,
+				7DA2EC9A194577EA00B009FC /* FLAnimatedImageView.h in Headers */,
+				7DA2EC97194577EA00B009FC /* FLAnimatedImage.h in Headers */,
 				AB9B0F5D193A8649004FA35D /* XHHorizontalGridItem.h in Headers */,
 				ABB5472E19394D47000D3C9C /* XHFileAttribute.h in Headers */,
 				ABB5473319394D7C000D3C9C /* XHHTTPClient.h in Headers */,
@@ -3048,6 +3125,8 @@
 				74E9006C1927940000D37C81 /* tabbarBkg@2x.png in Resources */,
 				746C88431916B607007F9A5E /* ReceiverVoiceNodePlaying000@2x.png in Resources */,
 				74E9009F1927A9C900D37C81 /* bottleBkg@2x.png in Resources */,
+				7DA2ECB119457A2D00B009FC /* emotion11.gif in Resources */,
+				7DA2ECAF19457A2D00B009FC /* emotion1.gif in Resources */,
 				746C885C1916B612007F9A5E /* sharemore_videovoip@2x.png in Resources */,
 				ABCB35BC19342DFA002F9938 /* VoiceSearchFeedback009_ios7@2x.png in Resources */,
 				ABCB35B319342DFA002F9938 /* VoiceSearchFeedback005@2x.png in Resources */,
@@ -3055,10 +3134,10 @@
 				ABF9EC1619324D64003B95DC /* ScanQRCode_HL@2x.png in Resources */,
 				ABCB35B019342DFA002F9938 /* VoiceSearchFeedback003_ios7@2x.png in Resources */,
 				74E9009B1927A81500D37C81 /* bottleNightBkg@2x.png in Resources */,
+				7DA2ECB819457A2D00B009FC /* emotion2.gif in Resources */,
 				ABCB35D819342DFA002F9938 /* VoiceSearchLoading001_ios7@2x.png in Resources */,
 				ABCB35D519342DFA002F9938 /* VoiceSearchIconHL@2x.png in Resources */,
 				AB569AB3193179CC0007DB0B /* Shake_Line_Down@2x.png in Resources */,
-				74E900601927940000D37C81 /* Demo1.gif in Resources */,
 				ABB76E2C1937ED7300E62A2E /* emotionShopTwo@2x.png in Resources */,
 				746C88711916B62D007F9A5E /* section0_emotion0@2x.png in Resources */,
 				746C88581916B612007F9A5E /* sharemore_myfav@2x.png in Resources */,
@@ -3070,10 +3149,12 @@
 				746C88371916B5FE007F9A5E /* weChatBubble_Sending_Solid@2x.png in Resources */,
 				746C881F1916B5D6007F9A5E /* keyborad@2x.png in Resources */,
 				ABCB35E119342DFA002F9938 /* VoiceSearchLoading006@2x.png in Resources */,
+				7DA2ECBA19457A2D00B009FC /* emotion4.gif in Resources */,
 				746C882C1916B5EE007F9A5E /* input-bar-flat.png in Resources */,
 				ABE83CD51937E57F00BBF653 /* EmotionDownloadComplete@2x.png in Resources */,
 				746C887C1916B62D007F9A5E /* section0_emotion11@2x.png in Resources */,
 				AB7263931932944400AA738F /* Shake_Logo_Female_Up@2x.png in Resources */,
+				7DA2ECB019457A2D00B009FC /* emotion10.gif in Resources */,
 				74E900AC1927ABF800D37C81 /* fishwater2@2x.png in Resources */,
 				746C88771916B62D007F9A5E /* section0_emotion6@2x.png in Resources */,
 				74E900631927940000D37C81 /* ff_IconQRCode@2x.png in Resources */,
@@ -3087,8 +3168,8 @@
 				7DA2EC8819455F5700B009FC /* AddGroupMemberBtnHL@2x.png in Resources */,
 				74E5E9AD1921F7710084BCFA /* RecordingSignal005@2x.png in Resources */,
 				7482450F1908C730008EC388 /* InfoPlist.strings in Resources */,
-				74E9005F1927940000D37C81 /* Demo0.gif in Resources */,
 				ABCB35D719342DFA002F9938 /* VoiceSearchLoading001@2x.png in Resources */,
+				7DA2ECBD19457A2D00B009FC /* emotion7.gif in Resources */,
 				AB0C4AD61943B6BB00D346FF /* contacts_add_newmessage@2x.png in Resources */,
 				74E900A01927A9C900D37C81 /* bottleBkgSpotLight@2x.png in Resources */,
 				ABF9EC1A19324D64003B95DC /* ScanWord_HL@2x.png in Resources */,
@@ -3108,12 +3189,16 @@
 				ABEC5131193A8497004954E3 /* dgame1.png in Resources */,
 				ABCB35CF19342DFA002F9938 /* VoiceSearchFeedback019@2x.png in Resources */,
 				AB713843193195A3009792B5 /* shake_nomatch.wav in Resources */,
+				7DA2ECB619457A2D00B009FC /* emotion16.gif in Resources */,
 				ABCB35DF19342DFA002F9938 /* VoiceSearchLoading005@2x.png in Resources */,
 				ABF9EC1819324D64003B95DC /* ScanStreet_HL@2x.png in Resources */,
 				ABCB35DC19342DFA002F9938 /* VoiceSearchLoading003_ios7@2x.png in Resources */,
 				ABCB35AF19342DFA002F9938 /* VoiceSearchFeedback003@2x.png in Resources */,
 				ABCB35B219342DFA002F9938 /* VoiceSearchFeedback004_ios7@2x.png in Resources */,
+				7DA2ECB419457A2D00B009FC /* emotion14.gif in Resources */,
 				ABCB35D619342DFA002F9938 /* VoiceSearchIconHL_ios7@2x.png in Resources */,
+				7DA2ECB519457A2D00B009FC /* emotion15.gif in Resources */,
+				7DA2ECB319457A2D00B009FC /* emotion13.gif in Resources */,
 				746C88211916B5D6007F9A5E /* multiMedia@2x.png in Resources */,
 				746C88221916B5D6007F9A5E /* voice_HL@2x.png in Resources */,
 				7DA2EC8B19455F5700B009FC /* CellGraySelected@2x.png in Resources */,
@@ -3139,6 +3224,7 @@
 				746C88741916B62D007F9A5E /* section0_emotion3@2x.png in Resources */,
 				AB72638F193293DC00AA738F /* barbuttonicon_set@2x.png in Resources */,
 				746C884A1916B607007F9A5E /* SenderVoiceNodePlaying002@2x.png in Resources */,
+				7DA2ECB219457A2D00B009FC /* emotion12.gif in Resources */,
 				ABF9EC1119324D64003B95DC /* ScanQR1@2x.png in Resources */,
 				746C88481916B607007F9A5E /* SenderVoiceNodePlaying000@2x.png in Resources */,
 				ABCB35D219342DFA002F9938 /* VoiceSearchFeedback020_ios7@2x.png in Resources */,
@@ -3173,6 +3259,7 @@
 				ABCB35B519342DFA002F9938 /* VoiceSearchFeedback006@2x.png in Resources */,
 				ABCB35E519342DFA002F9938 /* VoiceSearchLoading008@2x.png in Resources */,
 				744FBDC81915EE7400FB4A65 /* Default-568h@2x.png in Resources */,
+				7DA2ECBF19457A2D00B009FC /* emotion9.gif in Resources */,
 				ABE83CCE1937E00E00BBF653 /* EmotionListNewTips@2x.png in Resources */,
 				74BBB020190B8EAB00093577 /* MessageDisplayKitString.strings in Resources */,
 				ABB7771D1932A7D700F4ACAF /* Contact_Male@2x.png in Resources */,
@@ -3184,6 +3271,7 @@
 				ABCB35C219342DFA002F9938 /* VoiceSearchFeedback012_ios7@2x.png in Resources */,
 				ABB76E2B1937ED7300E62A2E /* emotionShopOne@2x.png in Resources */,
 				ABE83CD31937E4FF00BBF653 /* EmoStoreDownloadBtnHL@2x.png in Resources */,
+				7DA2ECBB19457A2D00B009FC /* emotion5.gif in Resources */,
 				74E9009A1927A81500D37C81 /* bottleButtonThrow@2x.png in Resources */,
 				7DA2EC9019455F5700B009FC /* MultiSelectedPanelConfirmBtnbKG@2x.png in Resources */,
 				ABCB35AB19342DFA002F9938 /* VoiceSearchBtn@2x.png in Resources */,
@@ -3201,7 +3289,9 @@
 				ABCB35E719342DFA002F9938 /* VoiceSearchLoading009@2x.png in Resources */,
 				ABF9EC0F19324D64003B95DC /* ScanBook@2x.png in Resources */,
 				746C887A1916B62D007F9A5E /* section0_emotion9@2x.png in Resources */,
+				7DA2ECB919457A2D00B009FC /* emotion3.gif in Resources */,
 				ABEC5135193A8497004954E3 /* game2.png in Resources */,
+				7DA2ECBE19457A2D00B009FC /* emotion8.gif in Resources */,
 				746C885A1916B612007F9A5E /* sharemore_pic@2x.png in Resources */,
 				ABF9EC1419324D64003B95DC /* ScanQR4@2x.png in Resources */,
 				746C885F1916B612007F9A5E /* sharemore_wxtalk@2x.png in Resources */,
@@ -3254,6 +3344,7 @@
 				746C88571916B612007F9A5E /* sharemore_location@2x.png in Resources */,
 				ABF9EC1919324D64003B95DC /* ScanWord@2x.png in Resources */,
 				74E900A61927A9C900D37C81 /* bottleWriting@2x.png in Resources */,
+				7DA2ECB719457A2D00B009FC /* emotion0.gif in Resources */,
 				74E5E9AE1921F7710084BCFA /* RecordingSignal006@2x.png in Resources */,
 				ABCB35BE19342DFA002F9938 /* VoiceSearchFeedback010_ios7@2x.png in Resources */,
 				ABCB35E019342DFA002F9938 /* VoiceSearchLoading005_ios7@2x.png in Resources */,
@@ -3279,6 +3370,7 @@
 				746C882F1916B5EE007F9A5E /* input-field-cover@2x.png in Resources */,
 				746C88421916B607007F9A5E /* ReceiverVoiceNodePlaying@2x.png in Resources */,
 				744FBDC91915EE7400FB4A65 /* Default@2x.png in Resources */,
+				7DA2ECBC19457A2D00B009FC /* emotion6.gif in Resources */,
 				AB63BF211936B58E00B6C977 /* NewsBackgroundImage@2x.png in Resources */,
 				ABCB35C619342DFA002F9938 /* VoiceSearchFeedback014_ios7@2x.png in Resources */,
 				AB8ACCE2192EB04400FA1C80 /* MoreMyFavorites@2x.png in Resources */,
@@ -3334,6 +3426,7 @@
 				746C894C1917F691007F9A5E /* XHEmotionManagerView.m in Sources */,
 				7D13FC60192C4F4000A23413 /* XHZoomingImageView.m in Sources */,
 				AB6AB4BB193C03D600AFE823 /* UIScrollView+XHkeyboardControl.m in Sources */,
+				7DA2EC9C194577EA00B009FC /* FLAnimatedImageView.m in Sources */,
 				AB8ACCF4192EBF0C00FA1C80 /* XHMoreExpressionShopsTableViewController.m in Sources */,
 				AB6AB4BE193C03D600AFE823 /* UIView+XHBadgeView.m in Sources */,
 				7D14A00B192EFD33004B4D3B /* XHContactView.m in Sources */,
@@ -3427,6 +3520,7 @@
 				74585F40191B999B00F5E8C8 /* XHLocationHelper.m in Sources */,
 				AB44D41D192D8BB50069A210 /* XHContact.m in Sources */,
 				AB372925192EC6800084D7B5 /* XHDisplayLocationViewController.m in Sources */,
+				7DA2EC99194577EA00B009FC /* FLAnimatedImage.m in Sources */,
 				AB37290D192EC62C0084D7B5 /* XHMoreGameTableViewController.m in Sources */,
 				AB6AB4B5193C03D600AFE823 /* UIImage+XHAnimatedFaceGif.m in Sources */,
 				7DA2EC7A19455EF100B009FC /* UIView+Convenience.m in Sources */,
@@ -3551,6 +3645,7 @@
 				AB41A57F194273150095C12C /* XHMessageBubbleFactory.m in Sources */,
 				746C89791917F8B2007F9A5E /* XHBaseNavigationController.m in Sources */,
 				74E5EAD71924FFBE0084BCFA /* SESelectionGrabber.m in Sources */,
+				7DA2EC9B194577EA00B009FC /* FLAnimatedImageView.m in Sources */,
 				E1664DC319347916003F4C5B /* XHVoiceCommonHelper.m in Sources */,
 				7D0AAFE71943179A00988FC3 /* XHPopMenu.m in Sources */,
 				AB6AB4C0193C03D600AFE823 /* UIView+XHRemoteImage.m in Sources */,
@@ -3568,6 +3663,7 @@
 				AB79A21E192C22F500A9B951 /* XHBaseCollectionViewCell.m in Sources */,
 				74E9003419278F5C00D37C81 /* XHContactTableViewController.m in Sources */,
 				AB372921192EC6800084D7B5 /* XHDisplayEmotionViewController.m in Sources */,
+				7DA2EC98194577EA00B009FC /* FLAnimatedImage.m in Sources */,
 				AB6AB4AE193C03D600AFE823 /* UIImage+RoundedCorner.m in Sources */,
 				ABB5472C19394D47000D3C9C /* XHCacheManager.m in Sources */,
 				AB02A9F6192D8DC5004AA23D /* XHBaseSearchTableViewController.m in Sources */,
