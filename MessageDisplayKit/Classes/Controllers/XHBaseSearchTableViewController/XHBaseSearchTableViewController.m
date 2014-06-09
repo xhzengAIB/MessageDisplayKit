@@ -174,14 +174,25 @@
 
 #pragma mark - UITableView Delegate
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+//section 头部,为了IOS6的美化
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     if ([self enableForSearchTableView:tableView]) {
         return nil;
     }
     BOOL showSection = [[self.dataSource objectAtIndex:section] count] != 0;
-    //only show the section title if there are rows in the section
-    return (showSection) ? [[UILocalizedIndexedCollation.currentCollation sectionTitles] objectAtIndex:section] : nil;
+    //only show the section title if there are rows in the sections
     
+    UIView *customHeaderView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 22.0f)];
+    customHeaderView.backgroundColor = [UIColor colorWithRed:0.926 green:0.920 blue:0.956 alpha:1.000];
+    
+    UILabel *headerLabel = [[UILabel alloc]initWithFrame:CGRectMake(15.0f, 0, CGRectGetWidth(customHeaderView.bounds) - 15.0f, 22.0f)];
+    headerLabel.text = (showSection) ? [[UILocalizedIndexedCollation.currentCollation sectionTitles] objectAtIndex:section] : nil;
+    headerLabel.backgroundColor = [UIColor clearColor];
+    headerLabel.font = [UIFont boldSystemFontOfSize:14.0f];
+    headerLabel.textColor = [UIColor darkGrayColor];
+    
+    [customHeaderView addSubview:headerLabel];
+    return customHeaderView;
 }
 
 @end
