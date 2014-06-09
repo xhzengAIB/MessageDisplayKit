@@ -138,16 +138,14 @@ If you use this open source components in your project, please [Email us](mailto
 ## 使用到的第三方组件
 * [PathCover](https://github.com/JackTeam/PathCover)用于朋友圈的下拉刷新。
 * [XHImageViewer](https://github.com/JackTeam/XHImageViewer)图片查看器，用于整个项目。
-* [XHRefreshControl](https://github.com/xhzengAIB/XHRefreshControl)是一款高扩展性、低耦合度的下拉刷新、上提加载更多的组件。                           
+* [XHRefreshControl](https://github.com/xhzengAIB/XHRefreshControl)是一款高扩展性、低耦合度的下拉刷新、上提加载更多的组件。                          
+* 谢谢[molon](https://github.com/molon)提供多选组件[MLMultiSelectViewController](https://github.com/molon/MLMultiSelectViewController)，现在已经集成进去了。可用于群聊、添加多个朋友、选择多个联系人做其他操作。
+* Thanks you [lakesoft](https://github.com/lakesoft) provide [LKBadgeView](https://github.com/lakesoft/LKBadgeView).
+* Thanks you [kishikawakatsumi](https://github.com/kishikawakatsumi) provide [SECoreTextView](https://github.com/kishikawakatsumi/SECoreTextView).     
 
 ## Thanks Developer
-[我家App](https://itunes.apple.com/us/app/wo-jia-jia-ting-quan-si-mi/id538285014?mt=8)的主程Aevit提供了技术支持，他的[github](https://github.com/Aevit)地址，点击[我家App](https://itunes.apple.com/us/app/wo-jia-jia-ting-quan-si-mi/id538285014?mt=8)下载安装，如果看到里面有好的效果，可以协商开源。
+[我家App](https://itunes.apple.com/us/app/wo-jia-jia-ting-quan-si-mi/id538285014?mt=8)的主程Aevit提供了技术支持，他的[github](https://github.com/Aevit)地址，点击[我家App](https://itunes.apple.com/us/app/wo-jia-jia-ting-quan-si-mi/id538285014?mt=8)下载安装，如果看到里面有好的效果，可以协商开源。                       
 
-谢谢[molon](https://github.com/molon)提供多选组件[MLMultiSelectViewController](https://github.com/molon/MLMultiSelectViewController)，现在已经集成进去了。可用于群聊、添加多个朋友、选择多个联系人做其他操作。
-
-Thanks you [kishikawakatsumi](https://github.com/kishikawakatsumi) provide [SECoreTextView](https://github.com/kishikawakatsumi/SECoreTextView).                              
-
-Thanks you [lakesoft](https://github.com/lakesoft) provide [LKBadgeView](https://github.com/lakesoft/LKBadgeView).                             
 
 谢谢[微信App](https://itunes.apple.com/cn/app/wei-xin/id414478124?mt=8)给予我鼓励，我参考了很多框架设计问题、也提供了许多素材，但是请网友不要直接使用素材，我不知道是否会引起侵权的问题，所以请自重，我这里只是模仿微信，而不是攻击。使用该开源库所导致的所有侵权关系与我无关，我只是提供学习机会。                                         
 
