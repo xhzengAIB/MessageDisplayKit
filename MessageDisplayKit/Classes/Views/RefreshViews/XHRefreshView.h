@@ -8,8 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+#import "XHRefreshCircleView.h"
 
 @interface XHRefreshView : UIView
 
+@property (nonatomic, strong) XHRefreshCircleView *refreshCircleView;
+
+@property (nonatomic, strong) UILabel *stateLabel;
+
+@property (nonatomic, strong) UILabel *timeLabel;
 
 @end

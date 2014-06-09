@@ -18,6 +18,18 @@
 
 @implementation XHPullRefreshTableViewController
 
+- (void)startPullDownRefreshing {
+    [self.refreshControl startPullDownRefreshing];
+}
+
+- (void)endPullDownRefreshing {
+    [self.refreshControl endPullDownRefreshing];
+}
+
+- (void)endLoadMoreRefreshing {
+    [self.refreshControl endLoadMoreRefresing];
+}
+
 #pragma mark - Propertys
 
 - (XHRefreshControl *)refreshControl {
@@ -43,15 +55,26 @@
 #pragma mark - XHRefreshControl Delegate
 
 - (BOOL)isLoading {
-    return self.isLoading;
+    return self.isDataLoading;
 }
 
 - (void)beginPullDownRefreshing {
     self.requestCurrentPage = 0;
+    [self loadDataSource];
 }
 
 - (void)beginLoadMoreRefreshing {
     self.requestCurrentPage ++;
+    [self loadDataSource];
+}
+
+- (NSDate *)lastUpdateTime {
+    return [NSDate date];
+}
+
+- (BOOL)keepiOS7NewApiCharacter {
+    BOOL keeped = [[[UIDevice currentDevice] systemVersion] integerValue] >= 7.0;
+    return keeped;
 }
 
 @end

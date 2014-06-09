@@ -8,8 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+#define kXHLoadMoreViewHeight 50
+
 @interface XHLoadMoreView : UIView
 
 @property (nonatomic, strong) UIButton *loadMoreButton;
+
+- (void)startLoading;
+
+- (void)endLoading;
 
 @end
