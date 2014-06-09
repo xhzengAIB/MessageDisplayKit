@@ -21,7 +21,29 @@
 @implementation XHMoreExpressionShopsTableViewController
 
 - (void)loadDataSource {
-    self.dataSource = (NSMutableArray *)@[@"emotionShopOne", @"emotionShopOne", @"emotionShopOne", @"emotionShopOne", @"emotionShopTwo", @"emotionShopOther", @"emotionShopTwo", @"", @"emotionShopTwo", @"emotionShopOther", @"emotionShopOne", @"emotionShopOther", @"emotionShopTwo", @"emotionShopOne", @"emotionShopTwo"];
+    self.isDataLoading = YES;
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        sleep(1);
+        NSMutableArray *dataSource = [NSMutableArray arrayWithArray:@[@"emotionShopOne", @"emotionShopOne", @"emotionShopOne", @"emotionShopOne", @"emotionShopTwo", @"emotionShopOther", @"emotionShopTwo", @"", @"emotionShopTwo", @"emotionShopOther", @"emotionShopOne", @"emotionShopOther", @"emotionShopTwo", @"emotionShopOne", @"emotionShopTwo"]];
+
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.isDataLoading = NO;
+            if (self.requestCurrentPage) {
+                NSMutableArray *indexPaths = [NSMutableArray array];
+                [dataSource enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+                    [indexPaths addObject:[NSIndexPath indexPathForRow:self.dataSource.count + idx inSection:0]];
+                }];
+                
+                [self.dataSource addObjectsFromArray:dataSource];
+                [self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationBottom];
+                [self endLoadMoreRefreshing];
+            } else {
+                self.dataSource = dataSource;
+                [self.tableView reloadData];
+                [self endPullDownRefreshing];
+            }
+        });
+    });
 }
 
 #pragma mark - Propertys
@@ -36,14 +58,17 @@
 
 #pragma mark - Life cycle
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self startPullDownRefreshing];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = NSLocalizedStringFromTable(@"Expression", @"MessageDisplayKitString", @"");
     
     self.tableView.tableHeaderView = self.topEmotionImageView;
-    
-    [self loadDataSource];
 }
 
 - (void)didReceiveMemoryWarning {

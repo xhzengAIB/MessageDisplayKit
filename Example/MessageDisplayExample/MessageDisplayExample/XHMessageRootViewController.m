@@ -189,15 +189,11 @@
 #pragma mark - DataSource
 
 - (void)loadDataSource {
-    self.isDataLoading = YES;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSMutableArray *dataSource = [[NSMutableArray alloc] initWithObjects:@"华捷新闻，点击查看美女新闻呢！", @"点击我查看最新消息，里面有惊喜哦！", @"点击我查看最新消息，里面有惊喜哦！", @"点击我查看最新消息，里面有惊喜哦！", @"点进入聊天页面，这里有多种显示样式", @"点击我查看最新消息，里面有惊喜哦！", @"点击我查看最新消息，里面有惊喜哦！", @"点击我查看最新消息，里面有惊喜哦！", @"点击我查看最新消息，里面有惊喜哦！", @"点击我查看最新消息，里面有惊喜哦！", @"点击我查看最新消息，里面有惊喜哦！", @"点击我查看最新消息，里面有惊喜哦！", @"请问你现在在哪里啊？我在广州天河", @"请问你现在在哪里啊？我在广州天河", @"请问你现在在哪里啊？我在广州天河", @"请问你现在在哪里啊？我在广州天河", @"请问你现在在哪里啊？我在广州天河", @"点击我查看最新消息，里面有惊喜哦！", @"点击我查看最新消息，里面有惊喜哦！", nil];
-        sleep(2);
         dispatch_async(dispatch_get_main_queue(), ^{
-            self.isDataLoading = NO;
             self.dataSource = dataSource;
             [self.tableView reloadData];
-            [self endPullDownRefreshing];
         });
     });
 }
@@ -206,7 +202,6 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    [self startPullDownRefreshing];
 }
 
 - (void)viewDidLoad {
@@ -216,6 +211,8 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(showMenuOnView:)];
     
     [self.view addSubview:self.tableView];
+    
+    [self loadDataSource];
 }
 
 - (void)didReceiveMemoryWarning

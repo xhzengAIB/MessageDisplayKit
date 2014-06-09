@@ -117,9 +117,6 @@ typedef NS_ENUM(NSInteger, XHRefreshState) {
 - (void)endLoadMoreRefresing {
     self.loadMoreRefreshing = NO;
     self.refreshState = XHRefreshStateNormal;
-    UIEdgeInsets contentInset = self.scrollView.contentInset;
-    contentInset.bottom -= CGRectGetHeight(self.loadMoreView.bounds);
-    self.scrollView.contentInset = contentInset;
     [self.loadMoreView endLoading];
 }
 
