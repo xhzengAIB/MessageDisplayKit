@@ -18,4 +18,6 @@
 
 - (void)endLoading;
 
+- (void)configuraManualState;
+
 @end

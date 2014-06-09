@@ -2376,14 +2376,14 @@
 		AB41A58F194274840095C12C /* RefreshViews */ = {
 			isa = PBXGroup;
 			children = (
-				AB41A590194274950095C12C /* XHRefreshCircleView.h */,
-				AB41A591194274950095C12C /* XHRefreshCircleView.m */,
-				AB41A595194274AC0095C12C /* XHRefreshView.h */,
-				AB41A596194274AC0095C12C /* XHRefreshView.m */,
-				AB41A59A194279380095C12C /* XHLoadMoreView.h */,
-				AB41A59B194279380095C12C /* XHLoadMoreView.m */,
 				ABBA5D0A19427D96008BA06D /* XHRefreshControl.h */,
 				ABBA5D0B19427D96008BA06D /* XHRefreshControl.m */,
+				AB41A595194274AC0095C12C /* XHRefreshView.h */,
+				AB41A596194274AC0095C12C /* XHRefreshView.m */,
+				AB41A590194274950095C12C /* XHRefreshCircleView.h */,
+				AB41A591194274950095C12C /* XHRefreshCircleView.m */,
+				AB41A59A194279380095C12C /* XHLoadMoreView.h */,
+				AB41A59B194279380095C12C /* XHLoadMoreView.m */,
 			);
 			path = RefreshViews;
 			sourceTree = "<group>";

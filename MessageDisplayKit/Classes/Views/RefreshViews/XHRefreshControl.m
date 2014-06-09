@@ -98,10 +98,11 @@ typedef NS_ENUM(NSInteger, XHRefreshState) {
 #pragma mark - Load More Refreshing Method
 
 - (void)startLoadMoreRefreshing {
-    NSLog(@"进入上提多少次");
-    //    if (self.loadMoreRefreshedCount < self.autoLoadMoreRefreshedCount) {
-    [self callBeginLoadMoreRefreshing];
-    //    }
+    if (self.loadMoreRefreshedCount < self.autoLoadMoreRefreshedCount) {
+        [self callBeginLoadMoreRefreshing];
+    } else {
+        [self.loadMoreView configuraManualState];
+    }
 }
 
 - (void)callBeginLoadMoreRefreshing {

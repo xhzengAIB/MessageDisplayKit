@@ -28,6 +28,11 @@
     [self.activityIndicatorView stopAnimating];
 }
 
+- (void)configuraManualState {
+    self.hidden = NO;
+    [self.loadMoreButton setTitle:@"显示下20条" forState:UIControlStateNormal];
+}
+
 #pragma mark - Propertys
 
 - (UIButton *)loadMoreButton {
