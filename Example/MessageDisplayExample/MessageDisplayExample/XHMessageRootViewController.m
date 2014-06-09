@@ -19,6 +19,7 @@
 
 #import "MultiSelectItem.h"
 #import "MultiSelectViewController.h"
+#import "XHBaseNavigationController.h"
 
 @interface XHMessageRootViewController ()
 
@@ -183,7 +184,7 @@
     MultiSelectViewController *vc = [[MultiSelectViewController alloc]init];
     vc.items = items;
     
-    UINavigationController *navVC = [[UINavigationController alloc]initWithRootViewController:vc];
+    XHBaseNavigationController *navVC = [[XHBaseNavigationController alloc]initWithRootViewController:vc];
     [self.navigationController presentViewController:navVC animated:YES completion:nil];
 }
 
