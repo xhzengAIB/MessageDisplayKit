@@ -13,6 +13,7 @@
 #import "UIView+Convenience.h"
 #import "MultiSelectedPanel.h"
 #import "MultiSelectSearchResultTableViewCell.h"
+#import "UIView+XHRemoteImage.h"
 
 #define kDefaultSectionHeaderHeight 22.0f
 #define kDefaultRowHeight 55.0f
