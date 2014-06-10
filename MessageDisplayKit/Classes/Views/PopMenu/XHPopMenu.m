@@ -19,6 +19,9 @@
 
 @property (nonatomic, weak) UIView *currentSuperView;
 @property (nonatomic, assign) CGPoint targetPoint;
+
+@property (nonatomic, strong) NSIndexPath *indexPath;
+
 @end
 
 @implementation XHPopMenu
@@ -37,21 +40,27 @@
 
 - (void)showMenu {
     if (![self.currentSuperView.subviews containsObject:self]) {
-        self.alpha = 1.0;
-        self.transform = CGAffineTransformIdentity;
+        self.alpha = 0.0;
         [self.currentSuperView addSubview:self];
+        [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+            self.alpha = 1.0;
+        } completion:^(BOOL finished) {
+            
+        }];
     } else {
-        [self dissMissPopMenuAnimated:YES];
+        [self dissMissPopMenuAnimatedOnMenuSelected:NO];
     }
 }
 
-- (void)dissMissPopMenuAnimated:(BOOL)animated {
-    [UIView animateWithDuration:(animated ? 0.3 : 0) delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-        if (animated) {
-            self.alpha = 0.0;
-            self.transform = CGAffineTransformMakeScale(0.3, 0.3);
-        }
+- (void)dissMissPopMenuAnimatedOnMenuSelected:(BOOL)selected {
+    [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        self.alpha = 0.0;
     } completion:^(BOOL finished) {
+        if (selected) {
+            if (self.popMenuDidDismissCompled) {
+                self.popMenuDidDismissCompled(self.indexPath.row, self.menus[self.indexPath.row]);
+            }
+        }
         [super removeFromSuperview];
     }];
 }
@@ -127,7 +136,7 @@
     if (CGRectContainsPoint(self.menuTableView.frame, localPoint)) {
         [self hitTest:localPoint withEvent:event];
     } else {
-        [self dissMissPopMenuAnimated:YES];
+        [self dissMissPopMenuAnimatedOnMenuSelected:NO];
     }
 }
 
@@ -154,12 +163,9 @@
 #pragma mark - UITableView Delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self dissMissPopMenuAnimated:NO];
-        });
-    });
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    self.indexPath = indexPath;
+    [self dissMissPopMenuAnimatedOnMenuSelected:YES];
     if (self.popMenuDidSlectedCompled) {
         self.popMenuDidSlectedCompled(indexPath.row, self.menus[indexPath.row]);
     }

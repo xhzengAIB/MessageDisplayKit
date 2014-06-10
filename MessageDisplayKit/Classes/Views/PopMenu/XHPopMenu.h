@@ -24,4 +24,6 @@ typedef void(^PopMenuDidSlectedCompledBlock)(NSInteger index, XHPopMenuItem *men
 
 @property (nonatomic, copy) PopMenuDidSlectedCompledBlock popMenuDidSlectedCompled;
 
+@property (nonatomic, copy) PopMenuDidSlectedCompledBlock popMenuDidDismissCompled;
+
 @end
