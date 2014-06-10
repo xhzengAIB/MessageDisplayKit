@@ -65,8 +65,13 @@ typedef NS_ENUM(NSInteger, XHRefreshState) {
         self.pullDownRefreshing = YES;
         
         NSDate *date = [self.delegate lastUpdateTime];
-        if (date || [date isKindOfClass:[NSDate class]]) {
-            self.refreshView.timeLabel.text = [NSString stringWithFormat:@"上次刷新：%@", @"10小时前"];
+        if ([date isKindOfClass:[NSDate class]] || date) {
+            NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+            
+            [dateFormatter setDateFormat:@"MM-dd HH:mm"];
+            
+            NSString *destDateString = [dateFormatter stringFromDate:date];
+            self.refreshView.timeLabel.text = [NSString stringWithFormat:@"上次刷新：%@", destDateString];
         }
         
         self.refreshState = XHRefreshStatePulling;
@@ -145,6 +150,9 @@ typedef NS_ENUM(NSInteger, XHRefreshState) {
     } completion:^(BOOL finished) {
         
         self.refreshState = XHRefreshStateNormal;
+        
+        self.refreshView.refreshCircleView.offsetY = 0;
+        [self.refreshView.refreshCircleView setNeedsDisplay];
         
         if (self.refreshView.refreshCircleView) {
             [self.refreshView.refreshCircleView.layer removeAllAnimations];
@@ -407,12 +415,9 @@ typedef NS_ENUM(NSInteger, XHRefreshState) {
             }
         }
     } else if ([keyPath isEqualToString:@"contentInset"]) {
-        UIEdgeInsets contentInset = [[change valueForKey:NSKeyValueChangeNewKey] UIEdgeInsetsValue];
-        NSLog(@"contentInset : %@", NSStringFromUIEdgeInsets(contentInset));
     } else if ([keyPath isEqualToString:@"contentSize"]) {
         if (self.isLoadMoreRefreshed) {
             CGSize contentSize = [[change valueForKey:NSKeyValueChangeNewKey] CGSizeValue];
-            NSLog(@"contentSize : %@", NSStringFromCGSize(contentSize));
             if (contentSize.height > CGRectGetHeight(self.scrollView.frame)) {
                 CGRect loadMoreViewFrame = self.loadMoreView.frame;
                 loadMoreViewFrame.origin.y = contentSize.height;

@@ -82,4 +82,8 @@
     return 2;
 }
 
+- (XHRefreshViewLayerType)refreshViewLayerType {
+    return XHRefreshViewLayerTypeOnSuperView;
+}
+
 @end
