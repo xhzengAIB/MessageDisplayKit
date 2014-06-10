@@ -8,6 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
+#import "XHOperationNetworkKit.h"
+
+#define kXHBaseHomeURL @"http://.......set there"
+
 @interface XHHTTPClient : NSObject
+
++ (void)GETPath:(NSString *)urlString parameters:(NSDictionary *)parameters jsonSuccessHandler:(XHJSONSuccessHandler)jsonSuccessHandler
+ failureHandler:(XHHTTPFailureHandler)failureHandler;
+
++ (void)POSTPath:(NSString *)urlString parameters:(NSDictionary *)parameters jsonSuccessHandler:(XHJSONSuccessHandler)jsonSuccessHandler
+  failureHandler:(XHHTTPFailureHandler)failureHandler;
+
++ (void)DELETEPath:(NSString *)urlString parameters:(NSDictionary *)parameters jsonSuccessHandler:(XHJSONSuccessHandler)jsonSuccessHandler
+    failureHandler:(XHHTTPFailureHandler)failureHandler;
 
 @end

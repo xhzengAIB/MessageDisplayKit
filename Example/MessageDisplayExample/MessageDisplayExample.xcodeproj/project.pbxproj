@@ -584,6 +584,9 @@
 		AB8C80FC1936A6F7006CDA9B /* LKBadgeView.h in Headers */ = {isa = PBXBuildFile; fileRef = AB8C80FA1936A6F7006CDA9B /* LKBadgeView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB8C80FD1936A6F7006CDA9B /* LKBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8C80FB1936A6F7006CDA9B /* LKBadgeView.m */; };
 		AB8C80FE1936A6F7006CDA9B /* LKBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8C80FB1936A6F7006CDA9B /* LKBadgeView.m */; };
+		AB94CDBC194688FB0010F0D7 /* XHOperationNetworkKit.h in Headers */ = {isa = PBXBuildFile; fileRef = AB94CDBA194688FB0010F0D7 /* XHOperationNetworkKit.h */; };
+		AB94CDBD194688FB0010F0D7 /* XHOperationNetworkKit.m in Sources */ = {isa = PBXBuildFile; fileRef = AB94CDBB194688FB0010F0D7 /* XHOperationNetworkKit.m */; };
+		AB94CDBE194688FB0010F0D7 /* XHOperationNetworkKit.m in Sources */ = {isa = PBXBuildFile; fileRef = AB94CDBB194688FB0010F0D7 /* XHOperationNetworkKit.m */; };
 		AB9B0F58193A8630004FA35D /* XHHorizontalGridView.h in Headers */ = {isa = PBXBuildFile; fileRef = AB9B0F56193A8630004FA35D /* XHHorizontalGridView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB9B0F59193A8630004FA35D /* XHHorizontalGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9B0F57193A8630004FA35D /* XHHorizontalGridView.m */; };
 		AB9B0F5A193A8630004FA35D /* XHHorizontalGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9B0F57193A8630004FA35D /* XHHorizontalGridView.m */; };
@@ -1196,6 +1199,8 @@
 		AB8ACD0A192EBF3F00FA1C80 /* XHMoreSettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMoreSettingTableViewController.m; sourceTree = "<group>"; };
 		AB8C80FA1936A6F7006CDA9B /* LKBadgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKBadgeView.h; sourceTree = "<group>"; };
 		AB8C80FB1936A6F7006CDA9B /* LKBadgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKBadgeView.m; sourceTree = "<group>"; };
+		AB94CDBA194688FB0010F0D7 /* XHOperationNetworkKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHOperationNetworkKit.h; sourceTree = "<group>"; };
+		AB94CDBB194688FB0010F0D7 /* XHOperationNetworkKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHOperationNetworkKit.m; sourceTree = "<group>"; };
 		AB9B0F56193A8630004FA35D /* XHHorizontalGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHHorizontalGridView.h; sourceTree = "<group>"; };
 		AB9B0F57193A8630004FA35D /* XHHorizontalGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHHorizontalGridView.m; sourceTree = "<group>"; };
 		AB9B0F5B193A8649004FA35D /* XHHorizontalGridItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHHorizontalGridItem.h; sourceTree = "<group>"; };
@@ -2675,6 +2680,8 @@
 			children = (
 				ABB5473119394D7C000D3C9C /* XHHTTPClient.h */,
 				ABB5473219394D7C000D3C9C /* XHHTTPClient.m */,
+				AB94CDBA194688FB0010F0D7 /* XHOperationNetworkKit.h */,
+				AB94CDBB194688FB0010F0D7 /* XHOperationNetworkKit.m */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -2841,6 +2848,7 @@
 				746C89441917F691007F9A5E /* XHEmotionCollectionViewCell.h in Headers */,
 				746C894D1917F691007F9A5E /* XHEmotionSectionBar.h in Headers */,
 				746C894A1917F691007F9A5E /* XHEmotionManagerView.h in Headers */,
+				AB94CDBC194688FB0010F0D7 /* XHOperationNetworkKit.h in Headers */,
 				746C89411917F691007F9A5E /* XHMessageTextView.h in Headers */,
 				746C893B1917F691007F9A5E /* XHMessageTableViewCell.h in Headers */,
 				74065FB919123E1C00E1CE95 /* XHShareMenuItem.h in Headers */,
@@ -3437,6 +3445,7 @@
 				7D0AAFE81943179A00988FC3 /* XHPopMenu.m in Sources */,
 				74E5E98B1921317B0084BCFA /* XHVoiceRecordHelper.m in Sources */,
 				7D14A006192EF8FD004B4D3B /* XHContactDetailTableViewController.m in Sources */,
+				AB94CDBE194688FB0010F0D7 /* XHOperationNetworkKit.m in Sources */,
 				7D13FC5D192C4F4000A23413 /* XHViewState.m in Sources */,
 				74180BFD190F449400A35C82 /* XHFoundationCommon.m in Sources */,
 				74901A47191D4CD30049AFF9 /* XHBaseViewController.m in Sources */,
@@ -3693,6 +3702,7 @@
 				746C894B1917F691007F9A5E /* XHEmotionManagerView.m in Sources */,
 				AB6AB4B1193C03D600AFE823 /* UIImage+Utility.m in Sources */,
 				74E5E98A1921317B0084BCFA /* XHVoiceRecordHelper.m in Sources */,
+				AB94CDBD194688FB0010F0D7 /* XHOperationNetworkKit.m in Sources */,
 				AB6AB4A5193C03D600AFE823 /* UIButton+XHButtonTitlePosition.m in Sources */,
 				AB72638A19328D9A00AA738F /* XHLocationServiceTableViewCell.m in Sources */,
 				7D06CA72192B3D9B00DF8C04 /* XHBaseTableViewCell.m in Sources */,
