@@ -12,6 +12,8 @@
 
 #define kXHBaseHomeURL @"http://.......set there"
 
+#define XHHTTPClientTimeoutInterval 30
+
 @interface XHHTTPClient : NSObject
 
 + (void)GETPath:(NSString *)urlString parameters:(NSDictionary *)parameters jsonSuccessHandler:(XHJSONSuccessHandler)jsonSuccessHandler

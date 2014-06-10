@@ -36,13 +36,13 @@
 
 + (void)GETPath:(NSString *)urlString parameters:(NSDictionary *)parameters jsonSuccessHandler:(XHJSONSuccessHandler)jsonSuccessHandler
  failureHandler:(XHHTTPFailureHandler)failureHandler {
-    XHOperationNetworkKit *operation = [[XHOperationNetworkKit alloc] initWithRequest:[self requestWithURLString:[NSString stringWithFormat:@"%@%@", pailixiuHomeURL, urlString] HTTPMethod:@"GET" parameters:parameters] jsonSuccessHandler:jsonSuccessHandler failureHandler:failureHandler];
+    XHOperationNetworkKit *operation = [[XHOperationNetworkKit alloc] initWithRequest:[self requestWithURLString:[NSString stringWithFormat:@"%@%@", kXHBaseHomeURL, urlString] HTTPMethod:@"GET" parameters:parameters] jsonSuccessHandler:jsonSuccessHandler failureHandler:failureHandler];
     [[XHOperationNetworkKit queue] addOperation:operation];
 }
 
 + (void)POSTPath:(NSString *)urlString parameters:(NSDictionary *)parameters jsonSuccessHandler:(XHJSONSuccessHandler)jsonSuccessHandler
   failureHandler:(XHHTTPFailureHandler)failureHandler {
-    XHOperationNetworkKit *operation = [[XHOperationNetworkKit alloc] initWithRequest:[self requestWithURLString:[NSString stringWithFormat:@"%@%@", pailixiuHomeURL, urlString] HTTPMethod:@"POST" parameters:parameters] jsonSuccessHandler:jsonSuccessHandler failureHandler:failureHandler];
+    XHOperationNetworkKit *operation = [[XHOperationNetworkKit alloc] initWithRequest:[self requestWithURLString:[NSString stringWithFormat:@"%@%@", kXHBaseHomeURL, urlString] HTTPMethod:@"POST" parameters:parameters] jsonSuccessHandler:jsonSuccessHandler failureHandler:failureHandler];
     [[XHOperationNetworkKit queue] addOperation:operation];
 }
 
