@@ -21,6 +21,8 @@
     XHHTTPProgressHandler _progressHandler;
 }
 
++ (NSOperationQueue *)queue;
+
 @property (nonatomic, copy) NSURLRequest *request;
 @property (nonatomic, readwrite, getter = isFinished) BOOL finished;
 

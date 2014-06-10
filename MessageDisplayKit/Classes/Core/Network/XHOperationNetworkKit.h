@@ -15,8 +15,6 @@ typedef void (^XHHTTPFailureHandler)(NSData *responseData, NSURLResponse *respon
 
 @interface XHOperationNetworkKit : NSOperation
 
-+ (NSOperationQueue *)queue;
-
 - (id)initWithRequest:(NSURLRequest *)request;
 - (id)initWithRequest:(NSURLRequest *)request
    jsonSuccessHandler:(XHJSONSuccessHandler)jsonSuccessHandler
