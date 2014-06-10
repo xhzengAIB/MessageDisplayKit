@@ -34,8 +34,7 @@
 
 - (XHRefreshControl *)refreshControl {
     if (!_refreshControl) {
-        _refreshControl = [[XHRefreshControl alloc] initWithScrollView:self.tableView];
-        _refreshControl.delegate = self;
+        _refreshControl = [[XHRefreshControl alloc] initWithScrollView:self.tableView delegate:self];
     }
     return _refreshControl;
 }
@@ -73,8 +72,14 @@
 }
 
 - (BOOL)keepiOS7NewApiCharacter {
+    if (!self.navigationController)
+        return NO;
     BOOL keeped = [[[UIDevice currentDevice] systemVersion] integerValue] >= 7.0;
     return keeped;
+}
+
+- (NSInteger)autoLoadMoreRefreshedCountConverManual {
+    return 2;
 }
 
 @end

@@ -28,29 +28,31 @@ typedef NS_ENUM(NSInteger, XHRefreshState) {
 
 @interface XHRefreshControl ()
 
+@property (nonatomic, weak) id <XHRefreshControlDelegate> delegate;
+
+// getter
 @property (nonatomic, strong) XHRefreshView *refreshView;
-
 @property (nonatomic, strong) XHLoadMoreView *loadMoreView;
-
 @property (nonatomic, assign) BOOL isPullDownRefreshed;
-
 @property (nonatomic, assign) BOOL isLoadMoreRefreshed;
-
 @property (nonatomic, assign) CGFloat refreshTotalPixels;
-
 @property (nonatomic, assign) NSInteger autoLoadMoreRefreshedCount;
+@property (nonatomic, assign) XHRefreshViewLayerType refreshViewLayerType;
 
+// recoder
 @property (nonatomic, readwrite) CGFloat originalTopInset;
 
+// target scrollview
 @property (nonatomic, strong) UIScrollView *scrollView;
 
+// target state
 @property (nonatomic, assign) XHRefreshState refreshState;
 
+// controll the loading and auto loading
 @property (nonatomic, assign) NSInteger loadMoreRefreshedCount;
-
 @property (nonatomic, assign) BOOL pullDownRefreshing;
-
 @property (nonatomic, assign) BOOL loadMoreRefreshing;
+
 
 @end
 
@@ -59,16 +61,18 @@ typedef NS_ENUM(NSInteger, XHRefreshState) {
 #pragma mark - Pull Down Refreshing Method
 
 - (void)startPullDownRefreshing {
-    self.pullDownRefreshing = YES;
-    
-    NSDate *date = [self.delegate lastUpdateTime];
-    if (date || [date isKindOfClass:[NSDate class]]) {
-        self.refreshView.timeLabel.text = [NSString stringWithFormat:@"上次刷新：%@", @"10小时前"];
+    if (self.isPullDownRefreshed) {
+        self.pullDownRefreshing = YES;
+        
+        NSDate *date = [self.delegate lastUpdateTime];
+        if (date || [date isKindOfClass:[NSDate class]]) {
+            self.refreshView.timeLabel.text = [NSString stringWithFormat:@"上次刷新：%@", @"10小时前"];
+        }
+        
+        self.refreshState = XHRefreshStatePulling;
+        
+        self.refreshState = XHRefreshStateLoading;
     }
-    
-    self.refreshState = XHRefreshStatePulling;
-    
-    self.refreshState = XHRefreshStateLoading;
 }
 
 - (void)animationRefreshCircleView {
@@ -89,19 +93,23 @@ typedef NS_ENUM(NSInteger, XHRefreshState) {
 }
 
 - (void)endPullDownRefreshing {
-    self.pullDownRefreshing = NO;
-    self.refreshState = XHRefreshStateStopped;
-    
-    [self resetScrollViewContentInset];
+    if (self.isPullDownRefreshed) {
+        self.pullDownRefreshing = NO;
+        self.refreshState = XHRefreshStateStopped;
+        
+        [self resetScrollViewContentInset];
+    }
 }
 
 #pragma mark - Load More Refreshing Method
 
 - (void)startLoadMoreRefreshing {
-    if (self.loadMoreRefreshedCount < self.autoLoadMoreRefreshedCount) {
-        [self callBeginLoadMoreRefreshing];
-    } else {
-        [self.loadMoreView configuraManualState];
+    if (self.isLoadMoreRefreshed) {
+        if (self.loadMoreRefreshedCount < self.autoLoadMoreRefreshedCount) {
+            [self callBeginLoadMoreRefreshing];
+        } else {
+            [self.loadMoreView configuraManualState];
+        }
     }
 }
 
@@ -116,9 +124,11 @@ typedef NS_ENUM(NSInteger, XHRefreshState) {
 }
 
 - (void)endLoadMoreRefresing {
-    self.loadMoreRefreshing = NO;
-    self.refreshState = XHRefreshStateNormal;
-    [self.loadMoreView endLoading];
+    if (self.isLoadMoreRefreshed) {
+        self.loadMoreRefreshing = NO;
+        self.refreshState = XHRefreshStateNormal;
+        [self.loadMoreView endLoading];
+    }
 }
 
 - (void)loadMoreButtonClciked:(UIButton *)sender {
@@ -178,7 +188,8 @@ typedef NS_ENUM(NSInteger, XHRefreshState) {
 
 - (XHRefreshView *)refreshView {
     if (!_refreshView) {
-        _refreshView = [[XHRefreshView alloc] initWithFrame:CGRectMake(0, -kXHDefaultRefreshTotalPixels, CGRectGetWidth([[UIScreen mainScreen] bounds]), kXHDefaultRefreshTotalPixels)];
+        _refreshView = [[XHRefreshView alloc] initWithFrame:CGRectMake(0, (self.refreshViewLayerType == XHRefreshViewLayerTypeOnScrollViews ? -kXHDefaultRefreshTotalPixels : self.originalTopInset), CGRectGetWidth([[UIScreen mainScreen] bounds]), kXHDefaultRefreshTotalPixels)];
+        _refreshView.backgroundColor = [UIColor clearColor];
         _refreshView.refreshCircleView.heightBeginToRefresh = kXHDefaultRefreshTotalPixels - kXHRefreshCircleViewHeight;
         _refreshView.refreshCircleView.offsetY = 0;
     }
@@ -200,17 +211,21 @@ typedef NS_ENUM(NSInteger, XHRefreshState) {
 }
 
 - (BOOL)isPullDownRefreshed {
+    BOOL pullDowned = YES;
     if ([self.delegate respondsToSelector:@selector(isPullDownRefreshed)]) {
-        return [self.delegate isPullDownRefreshed];
+        pullDowned = [self.delegate isPullDownRefreshed];
+        return pullDowned;
     }
     return YES;
 }
 
 - (BOOL)isLoadMoreRefreshed {
+    BOOL loadMored = YES;
     if ([self.delegate respondsToSelector:@selector(isLoadMoreRefreshed)]) {
-        return [self.delegate isLoadMoreRefreshed];
+        loadMored = [self.delegate isLoadMoreRefreshed];
+        return loadMored;
     }
-    return YES;
+    return loadMored;
 }
 
 - (CGFloat)refreshTotalPixels {
@@ -230,6 +245,14 @@ typedef NS_ENUM(NSInteger, XHRefreshState) {
         return [self.delegate autoLoadMoreRefreshedCountConverManual];
     }
     return kXHAutoLoadMoreRefreshedCount;
+}
+
+- (XHRefreshViewLayerType)refreshViewLayerType {
+    XHRefreshViewLayerType currentRefreshViewLayerType = XHRefreshViewLayerTypeOnScrollViews;
+    if ([self.delegate respondsToSelector:@selector(refreshViewLayerType)]) {
+        currentRefreshViewLayerType = [self.delegate refreshViewLayerType];
+    }
+    return currentRefreshViewLayerType;
 }
 
 #pragma mark - Setter Method
@@ -278,19 +301,35 @@ typedef NS_ENUM(NSInteger, XHRefreshState) {
 }
 
 - (void)setup {
+    self.originalTopInset = self.scrollView.contentInset.top;
+    
+    
     self.refreshState = XHRefreshStateNormal;
     
     [self configuraObserverWithScrollView:self.scrollView];
     
-    [self.scrollView addSubview:self.refreshView];
-    [self.scrollView addSubview:self.loadMoreView];
+    if (self.refreshViewLayerType == XHRefreshViewLayerTypeOnSuperView) {
+        self.scrollView.backgroundColor = [UIColor clearColor];
+        UIView *currentSuperView = self.scrollView.superview;
+        if (self.isPullDownRefreshed) {
+            [currentSuperView insertSubview:self.refreshView belowSubview:self.scrollView];
+        }
+    } else if (self.refreshViewLayerType == XHRefreshViewLayerTypeOnScrollViews) {
+        if (self.isPullDownRefreshed) {
+            [self.scrollView addSubview:self.refreshView];
+        }
+    }
     
-    self.originalTopInset = self.scrollView.contentInset.top;
+    
+    if (self.isLoadMoreRefreshed) {
+        [self.scrollView addSubview:self.loadMoreView];
+    }
 }
 
-- (id)initWithScrollView:(UIScrollView *)scrollView {
+- (id)initWithScrollView:(UIScrollView *)scrollView delegate:(id <XHRefreshControlDelegate>)delegate {
     self = [super init];
     if (self) {
+        self.delegate = delegate;
         self.scrollView = scrollView;
         [self setup];
     }
@@ -314,66 +353,72 @@ typedef NS_ENUM(NSInteger, XHRefreshState) {
         CGPoint contentOffset = [[change valueForKey:NSKeyValueChangeNewKey] CGPointValue];
         
         
-        // 上提加载更多的逻辑方法
-        int currentPostion = contentOffset.y;
-        
-        if (currentPostion > 0) {
+        if (self.isLoadMoreRefreshed) {
+            // 上提加载更多的逻辑方法
+            int currentPostion = contentOffset.y;
             
-            CGRect bounds = self.scrollView.bounds;//边界
-            
-            CGSize size = self.scrollView.contentSize;//滚动视图内容区域size
-            
-            UIEdgeInsets inset = self.scrollView.contentInset;//视图周围额外的滚动视图区域
-            
-            float y = currentPostion + bounds.size.height + inset. bottom;
-            
-            //判断是否滚动到底部
-            if((y - size.height) > kXHLoadMoreViewHeight && self.refreshState != XHRefreshStateLoading && self.isLoadMoreRefreshed && !self.loadMoreRefreshing) {
-                [self startLoadMoreRefreshing];
+            if (currentPostion > 0) {
+                
+                CGRect bounds = self.scrollView.bounds;//边界
+                
+                CGSize size = self.scrollView.contentSize;//滚动视图内容区域size
+                
+                UIEdgeInsets inset = self.scrollView.contentInset;//视图周围额外的滚动视图区域
+                
+                float y = currentPostion + bounds.size.height + inset. bottom;
+                
+                //判断是否滚动到底部
+                if((y - size.height) > kXHLoadMoreViewHeight && self.refreshState != XHRefreshStateLoading && self.isLoadMoreRefreshed && !self.loadMoreRefreshing) {
+                    [self startLoadMoreRefreshing];
+                }
             }
         }
         
-        if (!self.loadMoreRefreshing) {
-            // 下拉刷新的逻辑方法
-            if(self.refreshState != XHRefreshStateLoading) {
-                // 如果不是加载状态的时候
-                
-                if (ABS(self.scrollView.contentOffset.y + [self getAdaptorHeight]) >= kXHRefreshCircleViewHeight) {
-                    self.refreshView.refreshCircleView.offsetY = MIN(ABS(self.scrollView.contentOffset.y + [self getAdaptorHeight]), kXHDefaultRefreshTotalPixels) - kXHRefreshCircleViewHeight;
-                    [self.refreshView.refreshCircleView setNeedsDisplay];
+        if (self.isPullDownRefreshed) {
+            if (!self.loadMoreRefreshing) {
+                // 下拉刷新的逻辑方法
+                if(self.refreshState != XHRefreshStateLoading) {
+                    // 如果不是加载状态的时候
+                    
+                    if (ABS(self.scrollView.contentOffset.y + [self getAdaptorHeight]) >= kXHRefreshCircleViewHeight) {
+                        self.refreshView.refreshCircleView.offsetY = MIN(ABS(self.scrollView.contentOffset.y + [self getAdaptorHeight]), kXHDefaultRefreshTotalPixels) - kXHRefreshCircleViewHeight;
+                        [self.refreshView.refreshCircleView setNeedsDisplay];
+                    }
+                    
+                    CGFloat scrollOffsetThreshold;
+                    scrollOffsetThreshold = -(kXHDefaultRefreshTotalPixels + self.originalTopInset);
+                    
+                    if(!self.scrollView.isDragging && self.refreshState == XHRefreshStatePulling) {
+                        self.pullDownRefreshing = YES;
+                        self.refreshState = XHRefreshStateLoading;
+                    } else if(contentOffset.y < scrollOffsetThreshold && self.scrollView.isDragging && self.refreshState == XHRefreshStateStopped) {
+                        self.refreshState = XHRefreshStatePulling;
+                    } else if(contentOffset.y >= scrollOffsetThreshold && self.refreshState != XHRefreshStateStopped) {
+                        self.refreshState = XHRefreshStateStopped;
+                    }
+                } else {
+                    CGFloat offset;
+                    UIEdgeInsets contentInset;
+                    offset = MAX(self.scrollView.contentOffset.y * -1, 0.0f);
+                    offset = MIN(offset, self.refreshTotalPixels);
+                    contentInset = self.scrollView.contentInset;
+                    self.scrollView.contentInset = UIEdgeInsetsMake(offset, contentInset.left, contentInset.bottom, contentInset.right);
                 }
-                
-                CGFloat scrollOffsetThreshold;
-                scrollOffsetThreshold = -(kXHDefaultRefreshTotalPixels + self.originalTopInset);
-                
-                if(!self.scrollView.isDragging && self.refreshState == XHRefreshStatePulling) {
-                    self.pullDownRefreshing = YES;
-                    self.refreshState = XHRefreshStateLoading;
-                } else if(contentOffset.y < scrollOffsetThreshold && self.scrollView.isDragging && self.refreshState == XHRefreshStateStopped) {
-                    self.refreshState = XHRefreshStatePulling;
-                } else if(contentOffset.y >= scrollOffsetThreshold && self.refreshState != XHRefreshStateStopped) {
-                    self.refreshState = XHRefreshStateStopped;
-                }
-            } else {
-                CGFloat offset;
-                UIEdgeInsets contentInset;
-                offset = MAX(self.scrollView.contentOffset.y * -1, 0.0f);
-                offset = MIN(offset, self.refreshTotalPixels);
-                contentInset = self.scrollView.contentInset;
-                self.scrollView.contentInset = UIEdgeInsetsMake(offset, contentInset.left, contentInset.bottom, contentInset.right);
             }
         }
     } else if ([keyPath isEqualToString:@"contentInset"]) {
         UIEdgeInsets contentInset = [[change valueForKey:NSKeyValueChangeNewKey] UIEdgeInsetsValue];
         NSLog(@"contentInset : %@", NSStringFromUIEdgeInsets(contentInset));
     } else if ([keyPath isEqualToString:@"contentSize"]) {
-        CGSize contentSize = [[change valueForKey:NSKeyValueChangeNewKey] CGSizeValue];
-        NSLog(@"contentSize : %@", NSStringFromCGSize(contentSize));
-        if (contentSize.height > CGRectGetHeight(self.scrollView.frame)) {
-            CGRect loadMoreViewFrame = self.loadMoreView.frame;
-            loadMoreViewFrame.origin.y = contentSize.height;
-            self.loadMoreView.frame = loadMoreViewFrame;
-            [self setScrollViewContentInsetForLoadMore];
+        if (self.isLoadMoreRefreshed) {
+            CGSize contentSize = [[change valueForKey:NSKeyValueChangeNewKey] CGSizeValue];
+            NSLog(@"contentSize : %@", NSStringFromCGSize(contentSize));
+            if (contentSize.height > CGRectGetHeight(self.scrollView.frame)) {
+                CGRect loadMoreViewFrame = self.loadMoreView.frame;
+                loadMoreViewFrame.origin.y = contentSize.height;
+                self.loadMoreView.frame = loadMoreViewFrame;
+                [self setScrollViewContentInsetForLoadMore];
+            }
         }
     }
 }

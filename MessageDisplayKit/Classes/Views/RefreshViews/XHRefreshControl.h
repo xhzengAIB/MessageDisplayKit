@@ -23,7 +23,7 @@
 // 5、多少次上提加载后，启用点击按钮进行加载一页数据
 
 typedef NS_ENUM(NSInteger, XHRefreshViewLayerType) {
-    XHRefreshViewLayerTypeOnScrollView = 0,
+    XHRefreshViewLayerTypeOnScrollViews = 0,
     XHRefreshViewLayerTypeOnSuperView = 1,
 };
 
@@ -72,7 +72,7 @@ typedef NS_ENUM(NSInteger, XHRefreshViewLayerType) {
 /**
  *  3、标识下拉刷新是UIScrollView的子view，还是UIScrollView父view的子view
  *
- *  @return 如果没有实现该delegate方法，默认是scrollView父View的子View，为XHRefreshViewLayerTypeOnSuperView
+ *  @return 如果没有实现该delegate方法，默认是scrollView的子View，为XHRefreshViewLayerTypeOnScrollViews
  */
 - (XHRefreshViewLayerType)refreshViewLayerType;
 
@@ -94,9 +94,7 @@ typedef NS_ENUM(NSInteger, XHRefreshViewLayerType) {
 
 @interface XHRefreshControl : NSObject
 
-@property (nonatomic, weak) id <XHRefreshControlDelegate> delegate;
-
-- (id)initWithScrollView:(UIScrollView *)scrollView;
+- (id)initWithScrollView:(UIScrollView *)scrollView delegate:(id <XHRefreshControlDelegate>)delegate;
 
 /**
  *  外部手动启动下拉加载的方法，这个方法不需要手动去拖动UIScrollView
