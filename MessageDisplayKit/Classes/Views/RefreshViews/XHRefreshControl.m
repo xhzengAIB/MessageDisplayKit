@@ -94,6 +94,7 @@ typedef NS_ENUM(NSInteger, XHRefreshState) {
 }
 
 - (void)callBeginPullDownRefreshing {
+    self.loadMoreRefreshedCount = 0;
     [self.delegate beginPullDownRefreshing];
 }
 
@@ -200,6 +201,7 @@ typedef NS_ENUM(NSInteger, XHRefreshState) {
         _refreshView.backgroundColor = [UIColor clearColor];
         _refreshView.refreshCircleView.heightBeginToRefresh = kXHDefaultRefreshTotalPixels - kXHRefreshCircleViewHeight;
         _refreshView.refreshCircleView.offsetY = 0;
+        _refreshView.refreshCircleView.isRefreshViewOnTableView = self.refreshViewLayerType;
     }
     return _refreshView;
 }
