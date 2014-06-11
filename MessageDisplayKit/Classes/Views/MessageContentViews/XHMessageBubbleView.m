@@ -304,14 +304,14 @@
         
         // 4、初始化显示语音时长的label
         if (!_voiceDurationLabel) {
-            UILabel *lbl = [[UILabel alloc] initWithFrame:CGRectMake(0, 15, 30, 30)];
-            lbl.textColor = [UIColor lightGrayColor];
-            lbl.backgroundColor = [UIColor clearColor];
-            lbl.font = [UIFont systemFontOfSize:13.f];
-            lbl.textAlignment = NSTextAlignmentRight;
-            lbl.hidden = YES;
-            [self addSubview:lbl];
-            self.voiceDurationLabel = lbl;
+            UILabel *voiceDurationLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 15, 30, 30)];
+            voiceDurationLabel.textColor = [UIColor lightGrayColor];
+            voiceDurationLabel.backgroundColor = [UIColor clearColor];
+            voiceDurationLabel.font = [UIFont systemFontOfSize:13.f];
+            voiceDurationLabel.textAlignment = NSTextAlignmentRight;
+            voiceDurationLabel.hidden = YES;
+            [self addSubview:voiceDurationLabel];
+            _voiceDurationLabel = voiceDurationLabel;
         }
         
         // 5、初始化显示gif表情的控件
