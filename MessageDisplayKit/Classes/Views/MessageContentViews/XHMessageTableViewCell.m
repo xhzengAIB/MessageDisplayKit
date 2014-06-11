@@ -447,7 +447,7 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
     self.messageBubbleView.displayTextView.text = nil;
     self.messageBubbleView.displayTextView.attributedText = nil;
     self.messageBubbleView.bubblePhotoImageView.messagePhoto = nil;
-    self.messageBubbleView.bubbleImageView.animatedImage = nil;
+    self.messageBubbleView.emotionImageView.animatedImage = nil;
     self.timestampLabel.text = nil;
 }
 

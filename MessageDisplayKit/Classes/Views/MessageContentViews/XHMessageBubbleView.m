@@ -23,7 +23,9 @@
 
 @property (nonatomic, weak, readwrite) SETextView *displayTextView;
 
-@property (nonatomic, weak, readwrite) FLAnimatedImageView *bubbleImageView;
+@property (nonatomic, weak, readwrite) UIImageView *bubbleImageView;
+
+@property (nonatomic, weak, readwrite) FLAnimatedImageView *emotionImageView;
 
 @property (nonatomic, weak, readwrite) UIImageView *animationVoiceImageView;
 
@@ -168,6 +170,7 @@
                 _displayTextView.hidden = NO;
                 // 那语言的gif动画imageView就需要隐藏了
                 _animationVoiceImageView.hidden = YES;
+                _emotionImageView.hidden = YES;
             } else {
                 // 那如果不文本消息，必须把文本消息的控件隐藏了啊
                 _displayTextView.hidden = YES;
@@ -182,6 +185,9 @@
                     _animationVoiceImageView = animationVoiceImageView;
                     _animationVoiceImageView.hidden = NO;
                 } else {
+                    _emotionImageView.hidden = NO;
+                    
+                    _bubbleImageView.hidden = YES;
                     _animationVoiceImageView.hidden = YES;
                 }
             }
@@ -201,6 +207,7 @@
             _displayTextView.hidden = YES;
             _bubbleImageView.hidden = YES;
             _animationVoiceImageView.hidden = YES;
+            _emotionImageView.hidden = YES;
             break;
         }
         default:
@@ -226,7 +233,7 @@
             if (message.emotionPath) {
                 NSData *animatedData = [NSData dataWithContentsOfFile:message.emotionPath];
                 FLAnimatedImage *animatedImage = [[FLAnimatedImage alloc] initWithAnimatedGIFData:animatedData];
-                _bubbleImageView.animatedImage = animatedImage;
+                _emotionImageView.animatedImage = animatedImage;
             }
             break;
         case XHBubbleMessageMediaTypeLocalPosition:
@@ -295,7 +302,7 @@
             }
         }
         
-        //4、初始化显示语音时长的label
+        // 4、初始化显示语音时长的label
         if (!_voiceDurationLabel) {
             UILabel *lbl = [[UILabel alloc] initWithFrame:CGRectMake(0, 15, 30, 30)];
             lbl.textColor = [UIColor lightGrayColor];
@@ -305,6 +312,13 @@
             lbl.hidden = YES;
             [self addSubview:lbl];
             self.voiceDurationLabel = lbl;
+        }
+        
+        // 5、初始化显示gif表情的控件
+        if (!_emotionImageView) {
+            FLAnimatedImageView *emotionImageView = [[FLAnimatedImageView alloc] initWithFrame:CGRectZero];
+            [self addSubview:emotionImageView];
+            _emotionImageView = emotionImageView;
         }
     }
     return self;
@@ -322,6 +336,8 @@
     _animationVoiceImageView = nil;
     
     _voiceDurationLabel = nil;
+    
+    _emotionImageView = nil;
     
     _videoPlayImageView = nil;
     
@@ -361,6 +377,8 @@
             self.animationVoiceImageView.frame = animationVoiceImageViewFrame;
             
             [self resetVoiceDurationLabelFrameWithBubbleFrame:bubbleFrame];
+            
+            self.emotionImageView.frame = bubbleFrame;
             
             break;
         }

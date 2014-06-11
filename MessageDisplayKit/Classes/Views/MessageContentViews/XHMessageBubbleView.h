@@ -50,7 +50,12 @@
 /**
  *  用于显示气泡的ImageView控件
  */
-@property (nonatomic, weak, readonly) FLAnimatedImageView *bubbleImageView;
+@property (nonatomic, weak, readonly) UIImageView *bubbleImageView;
+
+/**
+ *  专门用于gif表情显示控件
+ */
+@property (nonatomic, weak, readonly) FLAnimatedImageView *emotionImageView;
 
 /**
  *  用于显示语音的控件，并且支持播放动画
