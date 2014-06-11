@@ -11,7 +11,7 @@
 #define kXHMenuTableViewWidth 140
 #define kXHMenuTableViewSapcing 7
 
-#define kXHMenuItemViewHeight 35
+#define kXHMenuItemViewHeight 40
 #define kXHMenuItemViewImageSapcing 15
 #define kXHSeparatorLineImageViewHeight 0.5
 

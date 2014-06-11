@@ -1,11 +1,11 @@
 Pod::Spec.new do |s|
   s.name         = "MessageDisplayKit"
-  s.version      = "0.2.1"
-  s.summary      = "A messages UI for iPhone and iPad,You can send txt, voice, image,video,emotion .etc messages. like WeChat App."
+  s.version      = "0.2.2"
+  s.summary      = "An IM App like WeChat App has to send text, pictures, audio, video, location messaging, managing local address book, share a circle of friends, drifting friends, shake a fun and more interesting features."
   s.homepage     = "https://github.com/xhzengAIB/MessageDisplayKit"
   s.license      = "MIT"
-  s.authors      = { "xhzengAIB" => "xhzengAIB@gmail.com" }
-  s.source       = { :git => "https://github.com/xhzengAIB/MessageDisplayKit.git", :tag => "v0.2.1" }
+  s.authors      = { "Jack" => "xhzengAIB@gmail.com" }
+  s.source       = { :git => "https://github.com/xhzengAIB/MessageDisplayKit.git", :tag => "v0.2.2" }
   s.frameworks   = 'Foundation', 'CoreGraphics', 'UIKit', 'MobileCoreServices', 'AVFoundation', 'CoreLocation', 'MediaPlayer', 'CoreMedia', 'CoreText', 'AudioToolbox'
   s.platform     = :ios, '6.0'
   s.source_files = 'MessageDisplayKit/Classes/**/*.{h,m}'
