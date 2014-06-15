@@ -39,16 +39,6 @@ pod 'MessageDisplayKit'
 and run `pod install`, then you're all done!
 
 ## TODO
-* 核心网络层。                                 
-Core Network Layer.                                    
-* 核心缓存层。                                    
-Core Cache Layer.                              
-* 核心数据层。                              
-Core Model Layer.
-* 优化TableView性能                                 
-Majorization tableView performance.  
-* 强化gif播放机制                                 
-Keep FPS due wih gif play.
 * 尽量去除绘制代码，由于现在引起性能下降的原因之一。                            
 Delete drawRect code, because of lead to lower FPS. 
 * 语音转换处理，适应多平台可用语音、视频等数据。                             
@@ -106,6 +96,16 @@ Support pull down load more old message, keep visible cells static when insertin
 * 27、支持弹出Menu菜单
 * 28、支持游戏室展示
 * 29、支持表情商店预览
+* 30、核心网络层。                                 
+Core Network Layer.                                                          
+* 31、核心缓存层。                                    
+Core Cache Layer.                                                    
+* 32、核心数据层。                              
+Core Model Layer.                      
+* 33、优化TableView性能                                 
+Majorization tableView performance.                        
+* 34、强化gif播放机制                                 
+Keep FPS due wih gif play.                      
 
 ## How to use
 Easy to drop into your project.                                
