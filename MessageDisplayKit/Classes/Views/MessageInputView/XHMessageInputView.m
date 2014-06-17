@@ -322,7 +322,6 @@
             _inputTextView.layer.borderColor = [UIColor colorWithWhite:0.8f alpha:1.0f].CGColor;
             _inputTextView.layer.borderWidth = 0.65f;
             _inputTextView.layer.cornerRadius = 6.0f;
-            
             self.image = [[UIImage imageNamed:@"input-bar-flat"] resizableImageWithCapInsets:UIEdgeInsetsMake(2.0f, 0.0f, 0.0f, 0.0f)
                                                                                 resizingMode:UIImageResizingModeStretch];
             break;
