@@ -9,6 +9,8 @@
 #import "MultiSelectedPanel.h"
 #import "MultiSelectItem.h"
 #import "UIView+XHRemoteImage.h"
+#import <QuartzCore/QuartzCore.h>
+
 
 @interface MultiSelectedPanel()<UITableViewDataSource,UITabBarControllerDelegate>
 
