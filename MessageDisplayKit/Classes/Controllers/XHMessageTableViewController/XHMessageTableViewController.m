@@ -470,7 +470,7 @@ static CGPoint  delayOffset = {0.0};
 - (void)setup {
     // iPhone or iPad keyboard view height set here.
     self.keyboardViewHeight = (kIsiPad ? 264 : 216);
-    _allowsPanToDismissKeyboard = YES;
+    _allowsPanToDismissKeyboard = NO;
     _allowsSendVoice = YES;
     _allowsSendMultiMedia = YES;
     _allowsSendFace = YES;
@@ -1134,7 +1134,7 @@ static CGPoint  delayOffset = {0.0};
         [menu setMenuVisible:NO animated:YES];
     }
     
-    if (self.textViewInputViewType != XHInputViewTypeNormal && self.textViewInputViewType != XHInputViewTypeText) {
+    if (self.textViewInputViewType != XHInputViewTypeNormal) {
         [self layoutOtherMenuViewHiden:YES];
     }
 }
