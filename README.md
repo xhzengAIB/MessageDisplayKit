@@ -155,5 +155,5 @@ If you use this open source components in your project, please [Email us](mailto
 该工程里面任何一个效果组件都不能擅自使用，如需使用，请告之于我。
 
 ## Credits
-Thanks to [jessesquires](https://github.com/jessesquires/MessagesTableViewController) who created JSMessagesViewController on which my chat list UI work is based.                             
+Thanks to [jessesquires](https://github.com/jessesquires) who created JSMessagesViewController(https://github.com/jessesquires/MessagesTableViewController) on which my chat list UI work is based.                             
 
