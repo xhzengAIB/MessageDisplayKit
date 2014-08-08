@@ -32,7 +32,7 @@ typedef NS_ENUM (NSUInteger, SETouchPhase) {
     SETouchPhaseAny        = NSUIntegerMax
 };
 
-static NSString * const OBJECT_REPLACEMENT_CHARACTER = @"\uFFFC";
+static NSString * const OBJECT_REPLACEMENT_CHARACTER = @" ";
 static NSString * const ZERO_WIDTH_SPACE = @"\u200B";
 static NSString * const LINE_SEPARATOR = @"\u2028";
 static NSString * const PARAGRAPH_SEPARATOR = @"\u2029";
