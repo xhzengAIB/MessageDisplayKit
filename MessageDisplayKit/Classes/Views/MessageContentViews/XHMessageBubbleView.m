@@ -12,8 +12,8 @@
 
 #define kMarginTop 8.0f
 #define kMarginBottom 2.0f
-#define kPaddingTop 4.0f
-#define kBubblePaddingRight 10.0f
+#define kPaddingTop 12.0f
+#define kBubblePaddingRight 14.0f
 
 #define kVoiceMargin 20.0f
 
@@ -56,7 +56,7 @@
     CGFloat dyWidth = [XHMessageBubbleView neededWidthForText:text];
     
     CGSize textSize = [SETextView frameRectWithAttributtedString:[[XHMessageBubbleHelper sharedMessageBubbleHelper] bubbleAttributtedStringWithText:text] constraintSize:CGSizeMake(maxWidth, MAXFLOAT) lineSpacing:kXHTextLineSpacing font:[[XHMessageBubbleView appearance] font]].size;
-    return CGSizeMake((dyWidth > textSize.width ? textSize.width : dyWidth) + kBubblePaddingRight * 2 + kXHArrowMarginWidth, textSize.height);
+    return CGSizeMake((dyWidth > textSize.width ? textSize.width : dyWidth) + kBubblePaddingRight * 2 + kXHArrowMarginWidth, textSize.height + kMarginTop * 2);
 }
 
 + (CGSize)neededSizeForPhoto:(UIImage *)photo {
@@ -68,7 +68,7 @@
 + (CGSize)neededSizeForVoicePath:(NSString *)voicePath voiceDuration:(NSString *)voiceDuration {
     // 这里的100只是暂时固定，到时候会根据一个函数来计算
     float gapDuration = (!voiceDuration || voiceDuration.length == 0 ? -1 : [voiceDuration floatValue] - 1.0f);
-    CGSize voiceSize = CGSizeMake(100 + (gapDuration > 0 ? (120.0 / (60 - 1) * gapDuration) : 0), [XHMessageInputView textViewLineHeight]);
+    CGSize voiceSize = CGSizeMake(100 + (gapDuration > 0 ? (120.0 / (60 - 1) * gapDuration) : 0), 30);
     return voiceSize;
 }
 
@@ -362,7 +362,7 @@
             CGFloat textX = CGRectGetMinX(bubbleFrame) + kBubblePaddingRight;
             
             if (self.message.bubbleMessageType == XHBubbleMessageTypeReceiving) {
-                textX += kXHArrowMarginWidth;
+                textX += kXHArrowMarginWidth / 2.0;
             }
             
             CGRect textFrame = CGRectMake(textX,

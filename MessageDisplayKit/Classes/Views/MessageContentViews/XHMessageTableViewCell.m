@@ -378,7 +378,7 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
         self.avatorButton = avatorButton;
         
         // 3、配置用户名
-        UILabel *userNameLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+        UILabel *userNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.avatorButton.bounds) + 20, 20)];
         userNameLabel.textAlignment = NSTextAlignmentCenter;
         userNameLabel.backgroundColor = [UIColor clearColor];
         userNameLabel.font = [UIFont systemFontOfSize:12];
@@ -448,7 +448,7 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
     
     self.avatorButton.frame = avatorButtonFrame;
     
-    self.userNameLabel.frame = CGRectMake(([self bubbleMessageType] == XHBubbleMessageTypeReceiving ? 4 : CGRectGetMinX(self.avatorButton.frame) - 14), CGRectGetMaxY(self.avatorButton.frame), CGRectGetWidth(self.avatorButton.bounds) + 20, 20);
+    self.userNameLabel.center = CGPointMake(CGRectGetMidX(avatorButtonFrame), CGRectGetMaxY(avatorButtonFrame) + CGRectGetMidY(self.userNameLabel.bounds));
     
     self.messageBubbleView.frame = bubbleMessageViewFrame;
 }
