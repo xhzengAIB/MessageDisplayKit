@@ -25,6 +25,8 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
 
 @property (nonatomic, weak, readwrite) UIButton *avatorButton;
 
+@property (nonatomic, weak, readwrite) UILabel *userNameLabel;
+
 @property (nonatomic, weak, readwrite) LKBadgeView *timestampLabel;
 
 /**
@@ -147,7 +149,10 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
     // 2、配置头像
     [self configAvatorWithMessage:message];
     
-    // 3、配置需要显示什么消息内容，比如语音、文字、视频、图片
+    // 3、配置用户名
+    [self configUserNameWithMessage:message];
+    
+    // 4、配置需要显示什么消息内容，比如语音、文字、视频、图片
     [self configureMessageBubbleViewWithMessage:message];
 }
 
@@ -171,6 +176,10 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
     } else {
         [self.avatorButton setImage:[XHMessageAvatorFactory avatarImageNamed:[UIImage imageNamed:@"avator"] messageAvatorType:XHMessageAvatorTypeSquare] forState:UIControlStateNormal];
     }
+}
+
+- (void)configUserNameWithMessage:(id <XHMessageModel>)message {
+    self.userNameLabel.text = [message sender];
 }
 
 - (void)configureMessageBubbleViewWithMessage:(id <XHMessageModel>)message {
@@ -302,7 +311,9 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
     CGFloat timestampHeight = displayTimestamp ? (kXHTimeStampLabelHeight + kXHLabelPadding * 2) : kXHLabelPadding;
     CGFloat avatarHeight = kXHAvatarImageSize;
     
-    CGFloat subviewHeights = timestampHeight + kXHBubbleMessageViewPadding * 2;
+    CGFloat userNameHeight = 20;
+    
+    CGFloat subviewHeights = timestampHeight + kXHBubbleMessageViewPadding * 2 + userNameHeight;
     
     CGFloat bubbleHeight = [XHMessageBubbleView calculateCellHeightWithMessage:message];
     
@@ -366,7 +377,16 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
         [self.contentView addSubview:avatorButton];
         self.avatorButton = avatorButton;
         
-        // 3、配置需要显示什么消息内容，比如语音、文字、视频、图片
+        // 3、配置用户名
+        UILabel *userNameLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+        userNameLabel.textAlignment = NSTextAlignmentCenter;
+        userNameLabel.backgroundColor = [UIColor clearColor];
+        userNameLabel.font = [UIFont systemFontOfSize:12];
+        userNameLabel.textColor = [UIColor colorWithRed:0.140 green:0.635 blue:0.969 alpha:1.000];
+        [self.contentView addSubview:userNameLabel];
+        self.userNameLabel = userNameLabel;
+        
+        // 4、配置需要显示什么消息内容，比如语音、文字、视频、图片
         if (!_messageBubbleView) {
             CGFloat bubbleX = 0.0f;
             
@@ -427,6 +447,9 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
     bubbleMessageViewFrame.origin.x = bubbleX;
     
     self.avatorButton.frame = avatorButtonFrame;
+    
+    self.userNameLabel.frame = CGRectMake(([self bubbleMessageType] == XHBubbleMessageTypeReceiving ? 4 : CGRectGetMinX(self.avatorButton.frame) - 14), CGRectGetMaxY(self.avatorButton.frame), CGRectGetWidth(self.avatorButton.bounds) + 20, 20);
+    
     self.messageBubbleView.frame = bubbleMessageViewFrame;
 }
 

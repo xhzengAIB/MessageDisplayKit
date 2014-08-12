@@ -68,6 +68,11 @@
 @property (nonatomic, weak, readonly) UIButton *avatorButton;
 
 /**
+ *  用户名标签
+ */
+@property (nonatomic, weak, readonly) UILabel *userNameLabel;
+
+/**
  *  时间轴Label
  */
 @property (nonatomic, weak, readonly) LKBadgeView *timestampLabel;
