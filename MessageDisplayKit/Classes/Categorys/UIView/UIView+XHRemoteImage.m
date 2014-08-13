@@ -246,11 +246,11 @@ const char* const kXHMessageAvatorTypeKey   = "XHMessageAvatorTypeKey";
     __weak typeof(self) weakSelf = self;
     dispatch_async(self.cachingQueue, ^{
         UIImage *cacheImage = [XHCacheManager imageWithURL:weakSelf.url storeMemoryCache:YES];
-        if (self.messageAvatorType != XHMessageAvatorTypeNormal) {
-            cacheImage = [XHMessageAvatorFactory avatarImageNamed:cacheImage messageAvatorType:self.messageAvatorType];
+        if (weakSelf.messageAvatorType != XHMessageAvatorTypeNormal) {
+            cacheImage = [XHMessageAvatorFactory avatarImageNamed:cacheImage messageAvatorType:weakSelf.messageAvatorType];
         }
         if (cacheImage) {
-            [self setImage:cacheImage forURL:weakSelf.url];
+            [weakSelf setImage:cacheImage forURL:weakSelf.url];
             if (handler)
                 handler(cacheImage, weakSelf.url, nil);
         } else {
