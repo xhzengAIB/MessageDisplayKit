@@ -51,7 +51,7 @@
         [self.activityIndicatorView startAnimating];
         [self setImageWithURL:[NSURL URLWithString:thumbnailUrl] placeholer:nil showActivityIndicatorView:NO completionBlock:^(UIImage *image, NSURL *url, NSError *error) {
             if ([url.absoluteString isEqualToString:thumbnailUrl]) {
-                image = [image resizedImage:CGSizeMake(CGRectGetWidth(weakSelf.bounds) * 2, CGRectGetHeight(weakSelf.bounds) * 2) interpolationQuality:1.0];
+                image = [image thumbnailImage:CGRectGetWidth(weakSelf.bounds) * 2 transparentBorder:0 cornerRadius:0 interpolationQuality:1.0];
                 if (image) {
                     dispatch_async(dispatch_get_main_queue(), ^{
                         weakSelf.messagePhoto = image;
@@ -90,6 +90,7 @@
     // Drawing code
     rect.origin = CGPointZero;
     [self.messagePhoto drawInRect:rect];
+    
     CGFloat width = rect.size.width;
     CGFloat height = rect.size.height+1;//莫名其妙会出现绘制底部有残留 +1像素遮盖
     // 简便起见，这里把圆角半径设置为长和宽平均值的1/10

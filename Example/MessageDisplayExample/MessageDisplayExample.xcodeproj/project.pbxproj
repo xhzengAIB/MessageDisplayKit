@@ -421,6 +421,7 @@
 		AB372929192EC6800084D7B5 /* XHDisplayTextViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = AB37291E192EC6800084D7B5 /* XHDisplayTextViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB37292A192EC6800084D7B5 /* XHDisplayTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB37291F192EC6800084D7B5 /* XHDisplayTextViewController.m */; };
 		AB37292B192EC6800084D7B5 /* XHDisplayTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB37291F192EC6800084D7B5 /* XHDisplayTextViewController.m */; };
+		AB406DD8199AE5CC00669D05 /* SECoreTextView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AB406DD7199AE5CC00669D05 /* SECoreTextView.bundle */; };
 		AB41A57B194273150095C12C /* XHMessageAvatorFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = AB41A571194273150095C12C /* XHMessageAvatorFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB41A57C194273150095C12C /* XHMessageAvatorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = AB41A572194273150095C12C /* XHMessageAvatorFactory.m */; };
 		AB41A57D194273150095C12C /* XHMessageAvatorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = AB41A572194273150095C12C /* XHMessageAvatorFactory.m */; };
@@ -1084,6 +1085,7 @@
 		AB37291C192EC6800084D7B5 /* XHDisplayMediaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHDisplayMediaViewController.m; sourceTree = "<group>"; };
 		AB37291E192EC6800084D7B5 /* XHDisplayTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHDisplayTextViewController.h; sourceTree = "<group>"; };
 		AB37291F192EC6800084D7B5 /* XHDisplayTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHDisplayTextViewController.m; sourceTree = "<group>"; };
+		AB406DD7199AE5CC00669D05 /* SECoreTextView.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SECoreTextView.bundle; sourceTree = "<group>"; };
 		AB41A571194273150095C12C /* XHMessageAvatorFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMessageAvatorFactory.h; sourceTree = "<group>"; };
 		AB41A572194273150095C12C /* XHMessageAvatorFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMessageAvatorFactory.m; sourceTree = "<group>"; };
 		AB41A573194273150095C12C /* XHMessageBubbleFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMessageBubbleFactory.h; sourceTree = "<group>"; };
@@ -2097,6 +2099,7 @@
 				746C87FC1916B57D007F9A5E /* InputViewImages */,
 				746C87F41916B511007F9A5E /* BubbleImages */,
 				74BBB022190B8EAB00093577 /* MessageDisplayKitString.strings */,
+				AB406DD7199AE5CC00669D05 /* SECoreTextView.bundle */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -3366,6 +3369,7 @@
 				7D08C21E192C7A5E00B26D93 /* MeIcon@2x.png in Resources */,
 				ABCB35C419342DFA002F9938 /* VoiceSearchFeedback013_ios7@2x.png in Resources */,
 				746C88571916B612007F9A5E /* sharemore_location@2x.png in Resources */,
+				AB406DD8199AE5CC00669D05 /* SECoreTextView.bundle in Resources */,
 				ABF9EC1919324D64003B95DC /* ScanWord@2x.png in Resources */,
 				74E900A61927A9C900D37C81 /* bottleWriting@2x.png in Resources */,
 				7DA2ECB719457A2D00B009FC /* emotion0.gif in Resources */,
