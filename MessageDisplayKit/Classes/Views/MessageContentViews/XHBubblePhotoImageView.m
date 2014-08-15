@@ -15,6 +15,8 @@
 
 @interface XHBubblePhotoImageView ()
 
+@property dispatch_semaphore_t semaphore;
+
 /**
  *  消息类型
  */
@@ -51,6 +53,13 @@
         [self.activityIndicatorView startAnimating];
         [self setImageWithURL:[NSURL URLWithString:thumbnailUrl] placeholer:nil showActivityIndicatorView:NO completionBlock:^(UIImage *image, NSURL *url, NSError *error) {
             if ([url.absoluteString isEqualToString:thumbnailUrl]) {
+
+                if (CGRectEqualToRect(weakSelf.bounds, CGRectZero)) {
+                    weakSelf.semaphore = dispatch_semaphore_create(0);
+                    dispatch_semaphore_wait(weakSelf.semaphore, DISPATCH_TIME_FOREVER);
+                    weakSelf.semaphore = nil;
+                }
+                
                 image = [image thumbnailImage:CGRectGetWidth(weakSelf.bounds) * 2 transparentBorder:0 cornerRadius:0 interpolationQuality:1.0];
                 if (image) {
                     dispatch_async(dispatch_get_main_queue(), ^{
@@ -65,6 +74,9 @@
 
 - (void)setFrame:(CGRect)frame {
     [super setFrame:frame];
+    if (self.semaphore) {
+        dispatch_semaphore_signal(self.semaphore);
+    }
     _activityIndicatorView.center = CGPointMake(CGRectGetWidth(self.bounds) / 2.0, CGRectGetHeight(self.bounds) / 2.0);
 }
 
