@@ -229,7 +229,7 @@
 - (void)addMessage:(XHMessage *)addedMessage {
     WEAKSELF
     [self exChangeMessageDataSourceQueue:^{
-        NSMutableArray *messages = [NSMutableArray arrayWithArray:self.messages];
+        NSMutableArray *messages = [NSMutableArray arrayWithArray:weakSelf.messages];
         [messages addObject:addedMessage];
         
         NSMutableArray *indexPaths = [NSMutableArray arrayWithCapacity:1];
@@ -260,7 +260,7 @@ static CGPoint  delayOffset = {0.0};
     WEAKSELF
     [self exChangeMessageDataSourceQueue:^{
         NSMutableArray *messages = [NSMutableArray arrayWithArray:oldMessages];
-        [messages addObjectsFromArray:self.messages];
+        [messages addObjectsFromArray:weakSelf.messages];
         
         delayOffset = weakSelf.messageTableView.contentOffset;
         NSMutableArray *indexPaths = [NSMutableArray arrayWithCapacity:oldMessages.count];
