@@ -12,6 +12,11 @@
 #import <MobileCoreServices/MobileCoreServices.h>
 #import <CoreGraphics/CoreGraphics.h>
 
+// From vm_param.h, define for iOS 8.0 or higher to build on device.
+#ifndef BYTE_SIZE
+#define BYTE_SIZE 8 // byte size in bits
+#endif
+
 
 #define MEGABYTE (1024 * 1024)
 
