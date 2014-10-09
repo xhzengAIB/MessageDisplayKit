@@ -119,6 +119,17 @@
     [[XHAudioPlayerHelper shareInstance] stopAudio];
 }
 
+- (id)init {
+    self = [super init];
+    if (self) {
+        // 配置输入框UI的样式
+//        self.allowsSendVoice = NO;
+//        self.allowsSendFace = NO;
+//        self.allowsSendMultiMedia = NO;
+    }
+    return self;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
