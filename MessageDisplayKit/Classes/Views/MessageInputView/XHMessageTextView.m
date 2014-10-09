@@ -137,7 +137,7 @@
         
         [self.placeHolderTextColor set];
         
-        if (NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_6_0) {
+        if ([[[UIDevice currentDevice]systemVersion]floatValue] >= 7.0) {
             NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
             paragraphStyle.lineBreakMode = NSLineBreakByTruncatingTail;
             paragraphStyle.alignment = self.textAlignment;
