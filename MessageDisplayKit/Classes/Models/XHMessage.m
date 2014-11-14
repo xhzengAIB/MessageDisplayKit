@@ -101,6 +101,28 @@
                     voiceDuration:(NSString *)voiceDuration
                            sender:(NSString *)sender
                         timestamp:(NSDate *)timestamp {
+    
+    return [self initWithVoicePath:voicePath voiceUrl:voiceUrl voiceDuration:voiceDuration sender:sender timestamp:timestamp isRead:YES];
+}
+
+/**
+ *  初始化语音类型的消息。增加已读未读标记
+ *
+ *  @param voicePath        目标语音的本地路径
+ *  @param voiceUrl         目标语音在服务器的地址
+ *  @param voiceDuration    目标语音的时长
+ *  @param sender           发送者
+ *  @param date             发送时间
+ *  @param isRead           已读未读标记
+ *
+ *  @return 返回Message model 对象
+ */
+- (instancetype)initWithVoicePath:(NSString *)voicePath
+                         voiceUrl:(NSString *)voiceUrl
+                    voiceDuration:(NSString *)voiceDuration
+                           sender:(NSString *)sender
+                        timestamp:(NSDate *)timestamp
+                           isRead:(BOOL)isRead {
     self = [super init];
     if (self) {
         self.voicePath = voicePath;
@@ -109,6 +131,7 @@
         
         self.sender = sender;
         self.timestamp = timestamp;
+        self.isRead = isRead;
         
         self.messageMediaType = XHBubbleMessageMediaTypeVoice;
     }

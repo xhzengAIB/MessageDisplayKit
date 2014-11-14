@@ -211,6 +211,11 @@
             break;
         case XHBubbleMessageMediaTypeVoice: {
             DLog(@"message : %@", message.voicePath);
+            
+            // Mark the voice as read and hide the red dot.
+            message.isRead = YES;
+            messageTableViewCell.messageBubbleView.voiceUnreadDotImageView.hidden = YES;
+            
             [[XHAudioPlayerHelper shareInstance] setDelegate:self];
             if (_currentSelectedCell) {
                 [_currentSelectedCell.messageBubbleView.animationVoiceImageView stopAnimating];

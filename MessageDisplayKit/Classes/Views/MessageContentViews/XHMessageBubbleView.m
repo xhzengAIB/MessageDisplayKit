@@ -29,6 +29,8 @@
 
 @property (nonatomic, weak, readwrite) UIImageView *animationVoiceImageView;
 
+@property (nonatomic, weak, readwrite) UIImageView *voiceUnreadDotImageView;
+
 @property (nonatomic, weak, readwrite) XHBubblePhotoImageView *bubblePhotoImageView;
 
 @property (nonatomic, weak, readwrite) UIImageView *videoPlayImageView;
@@ -154,6 +156,9 @@
     switch (currentType) {
         case XHBubbleMessageMediaTypeVoice: {
             _voiceDurationLabel.hidden = NO;
+            if (message.isRead == NO) {
+                _voiceUnreadDotImageView.hidden = NO;
+            }
         }
         case XHBubbleMessageMediaTypeText:
         case XHBubbleMessageMediaTypeEmotion: {
@@ -320,6 +325,15 @@
             [self addSubview:emotionImageView];
             _emotionImageView = emotionImageView;
         }
+        
+        // 6. 初始化显示语音未读标记的imageview
+        if (!_voiceUnreadDotImageView) {
+            UIImageView *voiceUnreadDotImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 10, 10)];
+            voiceUnreadDotImageView.image = [UIImage imageNamed:@"msg_chat_voice_unread"];
+            voiceUnreadDotImageView.hidden = YES;
+            [self addSubview:voiceUnreadDotImageView];
+            _voiceUnreadDotImageView = voiceUnreadDotImageView;
+        }
     }
     return self;
 }
@@ -334,6 +348,8 @@
     _bubblePhotoImageView = nil;
     
     _animationVoiceImageView = nil;
+    
+    _voiceUnreadDotImageView = nil;
     
     _voiceDurationLabel = nil;
     
@@ -377,6 +393,7 @@
             self.animationVoiceImageView.frame = animationVoiceImageViewFrame;
             
             [self resetVoiceDurationLabelFrameWithBubbleFrame:bubbleFrame];
+            [self resetVoiceUnreadDotImageViewFrameWithBubbleFrame:bubbleFrame];
             
             self.emotionImageView.frame = bubbleFrame;
             
@@ -406,6 +423,13 @@
     _voiceDurationLabel.frame = voiceFrame;
     
     _voiceDurationLabel.textAlignment = (self.message.bubbleMessageType == XHBubbleMessageTypeSending ? NSTextAlignmentRight : NSTextAlignmentLeft);
+}
+
+- (void)resetVoiceUnreadDotImageViewFrameWithBubbleFrame:(CGRect)bubbleFrame {
+    CGRect voiceUnreadDotFrame = _voiceUnreadDotImageView.frame;
+    voiceUnreadDotFrame.origin.x = (self.message.bubbleMessageType == XHBubbleMessageTypeSending ? bubbleFrame.origin.x + _voiceUnreadDotImageView.frame.size.width : bubbleFrame.origin.x + bubbleFrame.size.width - _voiceUnreadDotImageView.frame.size.width * 2);
+    voiceUnreadDotFrame.origin.y = bubbleFrame.size.height/2 + _voiceUnreadDotImageView.frame.size.height/2 - 2;
+    _voiceUnreadDotImageView.frame = voiceUnreadDotFrame;
 }
 
 @end

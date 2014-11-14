@@ -48,5 +48,8 @@
 
 - (NSDate *)timestamp;
 
+- (BOOL)isRead;
+- (void)setIsRead:(BOOL)isRead;
+
 @end
 
