@@ -56,7 +56,11 @@ typedef NS_ENUM(NSInteger, XHMessageInputViewStyle) {
 - (void)didSelectedMultipleMediaAction;
 
 /**
- *  按下录音按钮开始录音
+ *  按下錄音按鈕 "準備" 錄音
+ */
+- (void)prepareRecordingVoiceActionWithCompletion:(BOOL (^)(void))completion;
+/**
+ *  开始录音
  */
 - (void)didStartRecordingVoiceAction;
 /**

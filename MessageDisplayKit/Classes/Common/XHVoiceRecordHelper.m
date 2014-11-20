@@ -93,57 +93,65 @@
     [self resetTimer];
 }
 
-- (void)startRecordingWithPath:(NSString *)path StartRecorderCompletion:(XHStartRecorderCompletion)startRecorderCompletion {
-    _isPause = NO;
-    NSError *error = nil;
-    
-    AVAudioSession *audioSession = [AVAudioSession sharedInstance];
-    [audioSession setCategory :AVAudioSessionCategoryPlayAndRecord error:&error];
-    
-    if(error) {
-        DLog(@"audioSession: %@ %ld %@", [error domain], (long)[error code], [[error userInfo] description]);
-        return;
-    }
-    
-    [audioSession setActive:YES error:&error];
-    
-    error = nil;
-    if(error) {
-        DLog(@"audioSession: %@ %ld %@", [error domain], (long)[error code], [[error userInfo] description]);
-        return;
-    }
-    
-    /*
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    if ([fileManager fileExistsAtPath:self.recordPath]) {
-        [fileManager removeItemAtPath:self.recordPath error:&error];
-        if (error) {
-            NSAssert(@"error", @"删除出错");
+- (void)prepareRecordingWithPath:(NSString *)path prepareRecorderCompletion:(XHPrepareRecorderCompletion)prepareRecorderCompletion {
+    WEAKSELF
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        _isPause = NO;
+        
+        NSError *error = nil;
+        AVAudioSession *audioSession = [AVAudioSession sharedInstance];
+        [audioSession setCategory :AVAudioSessionCategoryPlayAndRecord error:&error];
+        if(error) {
+            DLog(@"audioSession: %@ %ld %@", [error domain], (long)[error code], [[error userInfo] description]);
+            return;
         }
-    }
-     */
-    
-    NSMutableDictionary * recordSetting = [NSMutableDictionary dictionary];
-    
-    [recordSetting setValue :[NSNumber numberWithInt:kAudioFormatAppleIMA4] forKey:AVFormatIDKey];
-    [recordSetting setValue:[NSNumber numberWithFloat:16000.0] forKey:AVSampleRateKey];
-    [recordSetting setValue:[NSNumber numberWithInt: 1] forKey:AVNumberOfChannelsKey];
-    
-    self.recordPath = path;
-    
-    error = nil;
-    
-    if (self.recorder) {
-        [self cancelRecording];
-    } else {
-        _recorder = [[AVAudioRecorder alloc] initWithURL:[NSURL fileURLWithPath:self.recordPath] settings:recordSetting error:&error];
-        _recorder.delegate = self;
-        [_recorder prepareToRecord];
-        _recorder.meteringEnabled = YES;
-        [_recorder recordForDuration:(NSTimeInterval) 160];
-        [self startBackgroundTask];
-    }
-    
+        
+        error = nil;
+        [audioSession setActive:YES error:&error];
+        if(error) {
+            DLog(@"audioSession: %@ %ld %@", [error domain], (long)[error code], [[error userInfo] description]);
+            return;
+        }
+        
+        NSMutableDictionary * recordSetting = [NSMutableDictionary dictionary];
+        [recordSetting setValue :[NSNumber numberWithInt:kAudioFormatAppleIMA4] forKey:AVFormatIDKey];
+        [recordSetting setValue:[NSNumber numberWithFloat:16000.0] forKey:AVSampleRateKey];
+        [recordSetting setValue:[NSNumber numberWithInt: 1] forKey:AVNumberOfChannelsKey];
+        
+        if (weakSelf) {
+            STRONGSELF
+            strongSelf.recordPath = path;
+            error = nil;
+            
+            if (strongSelf.recorder) {
+                [strongSelf cancelRecording];
+            } else {
+                strongSelf.recorder = [[AVAudioRecorder alloc] initWithURL:[NSURL fileURLWithPath:strongSelf.recordPath] settings:recordSetting error:&error];
+                strongSelf.recorder.delegate = strongSelf;
+                [strongSelf.recorder prepareToRecord];
+                strongSelf.recorder.meteringEnabled = YES;
+                [strongSelf.recorder recordForDuration:(NSTimeInterval) 160];
+                [strongSelf startBackgroundTask];
+            }
+            
+            if(error) {
+                DLog(@"audioSession: %@ %ld %@", [error domain], (long)[error code], [[error userInfo] description]);
+                return;
+            }
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                //上層如果傳會來說已經取消了, 那這邊就做原先取消的動作
+                if (!prepareRecorderCompletion()) {
+                    [strongSelf cancelledDeleteWithCompletion:^{
+                    }];
+                }
+            });
+        }
+    });
+}
+
+- (void)startRecordingWithStartRecorderCompletion:(XHStartRecorderCompletion)startRecorderCompletion {
     if ([_recorder record]) {
         [self resetTimer];
         _timer = [NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(updateMeters) userInfo:nil repeats:YES];
