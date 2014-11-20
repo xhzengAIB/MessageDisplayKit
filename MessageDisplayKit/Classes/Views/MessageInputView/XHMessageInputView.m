@@ -28,6 +28,16 @@
 @property (nonatomic, weak, readwrite) UIButton *holdDownButton;
 
 /**
+ *  是否取消錄音
+ */
+@property (nonatomic, assign, readwrite) BOOL isCancelled;
+
+/**
+ *  是否正在錄音
+ */
+@property (nonatomic, assign, readwrite) BOOL isRecording;
+
+/**
  *  在切换语音和文本消息的时候，需要保存原本已经输入的文本，这样达到一个好的UE
  */
 @property (nonatomic, copy) NSString *inputedText;
@@ -167,32 +177,72 @@
 }
 
 - (void)holdDownButtonTouchDown {
-    if ([self.delegate respondsToSelector:@selector(didStartRecordingVoiceAction)]) {
-        [self.delegate didStartRecordingVoiceAction];
+    self.isCancelled = NO;
+    self.isRecording = NO;
+    if ([self.delegate respondsToSelector:@selector(prepareRecordingVoiceActionWithCompletion:)]) {
+        WEAKSELF
+        
+        //這邊回調 return 的 YES, 或 NO, 可以讓底層知道該次錄音是否成功, 進而處理無用的 record 對象
+        [self.delegate prepareRecordingVoiceActionWithCompletion:^BOOL{
+            STRONGSELF
+            
+            //這邊要判斷回調回來的時候, 使用者是不是已經早就鬆開手了
+            if (strongSelf && !strongSelf.isCancelled) {
+                strongSelf.isRecording = YES;
+                [strongSelf.delegate didStartRecordingVoiceAction];
+                return YES;
+            } else {
+                return NO;
+            }
+        }];
     }
 }
 
 - (void)holdDownButtonTouchUpOutside {
-    if ([self.delegate respondsToSelector:@selector(didCancelRecordingVoiceAction)]) {
-        [self.delegate didCancelRecordingVoiceAction];
+    
+    //如果已經開始錄音了, 才需要做取消的動作, 否則只要切換 isCancelled, 不讓錄音開始.
+    if (self.isRecording) {
+        if ([self.delegate respondsToSelector:@selector(didCancelRecordingVoiceAction)]) {
+            [self.delegate didCancelRecordingVoiceAction];
+        }
+    } else {
+        self.isCancelled = YES;
     }
 }
 
 - (void)holdDownButtonTouchUpInside {
-    if ([self.delegate respondsToSelector:@selector(didFinishRecoingVoiceAction)]) {
-        [self.delegate didFinishRecoingVoiceAction];
+    
+    //如果已經開始錄音了, 才需要做結束的動作, 否則只要切換 isCancelled, 不讓錄音開始.
+    if (self.isRecording) {
+        if ([self.delegate respondsToSelector:@selector(didFinishRecoingVoiceAction)]) {
+            [self.delegate didFinishRecoingVoiceAction];
+        }
+    } else {
+        self.isCancelled = YES;
     }
 }
 
 - (void)holdDownDragOutside {
-    if ([self.delegate respondsToSelector:@selector(didDragOutsideAction)]) {
-        [self.delegate didDragOutsideAction];
+    
+    //如果已經開始錄音了, 才需要做拖曳出去的動作, 否則只要切換 isCancelled, 不讓錄音開始.
+    if (self.isRecording) {
+        if ([self.delegate respondsToSelector:@selector(didDragOutsideAction)]) {
+            [self.delegate didDragOutsideAction];
+        }
+    } else {
+        self.isCancelled = YES;
     }
 }
 
 - (void)holdDownDragInside {
-    if ([self.delegate respondsToSelector:@selector(didDragInsideAction)]) {
-        [self.delegate didDragInsideAction];
+    
+    //如果已經開始錄音了, 才需要做拖曳回來的動作, 否則只要切換 isCancelled, 不讓錄音開始.
+    if (self.isRecording) {
+        if ([self.delegate respondsToSelector:@selector(didDragInsideAction)]) {
+            [self.delegate didDragInsideAction];
+        }
+    } else {
+        self.isCancelled = YES;
     }
 }
 

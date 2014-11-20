@@ -929,10 +929,13 @@ static CGPoint  delayOffset = {0.0};
 
 #pragma mark - Voice Recording Helper Method
 
+- (void)prepareRecordWithCompletion:(XHPrepareRecorderCompletion)completion {
+    [self.voiceRecordHelper prepareRecordingWithPath:[self getRecorderPath] prepareRecorderCompletion:completion];
+}
+
 - (void)startRecord {
     [self.voiceRecordHUD startRecordingHUDAtView:self.view];
-    [self.voiceRecordHelper startRecordingWithPath:[self getRecorderPath] StartRecorderCompletion:^{
-        
+    [self.voiceRecordHelper startRecordingWithStartRecorderCompletion:^{
     }];
 }
 
@@ -1004,6 +1007,11 @@ static CGPoint  delayOffset = {0.0};
     } else {
         [self.messageInputView.inputTextView becomeFirstResponder];
     }
+}
+
+- (void)prepareRecordingVoiceActionWithCompletion:(BOOL (^)(void))completion {
+    DLog(@"prepareRecordingWithCompletion");
+    [self prepareRecordWithCompletion:completion];
 }
 
 - (void)didStartRecordingVoiceAction {
