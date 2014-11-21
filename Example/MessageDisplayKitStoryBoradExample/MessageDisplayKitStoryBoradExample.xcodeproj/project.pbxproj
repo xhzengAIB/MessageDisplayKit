@@ -98,6 +98,8 @@
 		74E5EA3E192210E20084BCFA /* weChatBubble_Receiving_Solid@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74E5E9F8192210E20084BCFA /* weChatBubble_Receiving_Solid@2x.png */; };
 		74E5EA3F192210E20084BCFA /* weChatBubble_Sending_Cavern@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74E5E9F9192210E20084BCFA /* weChatBubble_Sending_Cavern@2x.png */; };
 		74E5EA40192210E20084BCFA /* weChatBubble_Sending_Solid@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 74E5E9FA192210E20084BCFA /* weChatBubble_Sending_Solid@2x.png */; };
+		7D1738591A1EDDEA0064A7F2 /* msg_chat_voice_unread.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D1738571A1EDDEA0064A7F2 /* msg_chat_voice_unread.png */; };
+		7D17385A1A1EDDEA0064A7F2 /* msg_chat_voice_unread@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D1738581A1EDDEA0064A7F2 /* msg_chat_voice_unread@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -209,6 +211,8 @@
 		74E5E9F9192210E20084BCFA /* weChatBubble_Sending_Cavern@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weChatBubble_Sending_Cavern@2x.png"; sourceTree = "<group>"; };
 		74E5E9FA192210E20084BCFA /* weChatBubble_Sending_Solid@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weChatBubble_Sending_Solid@2x.png"; sourceTree = "<group>"; };
 		74E5E9FB192210E20084BCFA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/MessageDisplayKitString.strings"; sourceTree = "<group>"; };
+		7D1738571A1EDDEA0064A7F2 /* msg_chat_voice_unread.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = msg_chat_voice_unread.png; sourceTree = "<group>"; };
+		7D1738581A1EDDEA0064A7F2 /* msg_chat_voice_unread@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "msg_chat_voice_unread@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -339,6 +343,8 @@
 		74E5E9B4192210E20084BCFA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7D1738571A1EDDEA0064A7F2 /* msg_chat_voice_unread.png */,
+				7D1738581A1EDDEA0064A7F2 /* msg_chat_voice_unread@2x.png */,
 				74E5E9B5192210E20084BCFA /* MessageDisplayKitString.strings */,
 				74E5E9B7192210E20084BCFA /* face@2x.png */,
 				74E5E9B8192210E20084BCFA /* face_HL@2x.png */,
@@ -500,6 +506,7 @@
 				74E5E9FD192210E20084BCFA /* face@2x.png in Resources */,
 				74E5EA22192210E20084BCFA /* section0_emotion2@2x.png in Resources */,
 				74E5E9FC192210E20084BCFA /* MessageDisplayKitString.strings in Resources */,
+				7D1738591A1EDDEA0064A7F2 /* msg_chat_voice_unread.png in Resources */,
 				744FBDD01915FFD500FB4A65 /* Default-568h@2x.png in Resources */,
 				749019C3191D39850049AFF9 /* TableViewBackgroundImage@2x.png in Resources */,
 				74E5EA26192210E20084BCFA /* section0_emotion6@2x.png in Resources */,
@@ -539,6 +546,7 @@
 				74E5E9FF192210E20084BCFA /* Fav_Cell_Loc@2x.png in Resources */,
 				74E5EA29192210E20084BCFA /* section0_emotion9@2x.png in Resources */,
 				74E5EA03192210E20084BCFA /* input-bar-flat@2x.png in Resources */,
+				7D17385A1A1EDDEA0064A7F2 /* msg_chat_voice_unread@2x.png in Resources */,
 				74E5EA2C192210E20084BCFA /* SenderVoiceNodePlaying002@2x.png in Resources */,
 				74E5EA33192210E20084BCFA /* sharemore_pic@2x.png in Resources */,
 				74E5EA0F192210E20084BCFA /* ReceiverVoiceNodePlaying@2x.png in Resources */,
