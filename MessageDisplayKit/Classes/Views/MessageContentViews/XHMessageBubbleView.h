@@ -63,6 +63,11 @@
 @property (nonatomic, weak, readonly) UIImageView *animationVoiceImageView;
 
 /**
+ *  用于显示语音未读的控件，小圆点
+ */
+@property (nonatomic, weak, readonly) UIImageView *voiceUnreadDotImageView;
+
+/**
  *  用于显示语音时长的label
  */
 @property (nonatomic, weak) UILabel *voiceDurationLabel;

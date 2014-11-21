@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1FE768581A1627F200732D37 /* msg_chat_voice_unread.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FE768561A1627F200732D37 /* msg_chat_voice_unread.png */; };
+		1FE768591A1627F200732D37 /* msg_chat_voice_unread@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1FE768571A1627F200732D37 /* msg_chat_voice_unread@2x.png */; };
 		74065FB919123E1C00E1CE95 /* XHShareMenuItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 74065FB719123E1C00E1CE95 /* XHShareMenuItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		74065FBA19123E1C00E1CE95 /* XHShareMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 74065FB819123E1C00E1CE95 /* XHShareMenuItem.m */; };
 		74065FBB19123E1C00E1CE95 /* XHShareMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 74065FB819123E1C00E1CE95 /* XHShareMenuItem.m */; };
@@ -744,6 +746,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1FE768561A1627F200732D37 /* msg_chat_voice_unread.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = msg_chat_voice_unread.png; sourceTree = "<group>"; };
+		1FE768571A1627F200732D37 /* msg_chat_voice_unread@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "msg_chat_voice_unread@2x.png"; sourceTree = "<group>"; };
 		74065FB719123E1C00E1CE95 /* XHShareMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHShareMenuItem.h; sourceTree = "<group>"; };
 		74065FB819123E1C00E1CE95 /* XHShareMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHShareMenuItem.m; sourceTree = "<group>"; };
 		740660B21914CA0000E1CE95 /* XHPhotographyHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHPhotographyHelper.h; sourceTree = "<group>"; };
@@ -1384,6 +1388,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1FE768551A1627E100732D37 /* ExtendImages */ = {
+			isa = PBXGroup;
+			children = (
+				1FE768561A1627F200732D37 /* msg_chat_voice_unread.png */,
+				1FE768571A1627F200732D37 /* msg_chat_voice_unread@2x.png */,
+			);
+			name = ExtendImages;
+			sourceTree = "<group>";
+		};
 		74180BD7190F447100A35C82 /* MessageDisplayFramework */ = {
 			isa = PBXGroup;
 			children = (
@@ -2093,6 +2106,7 @@
 		74FAB0BA190A92CC005623D0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1FE768551A1627E100732D37 /* ExtendImages */,
 				7DA2EC7B19455F4100B009FC /* MultiSelectImages */,
 				7D0AAFF3194322FE00988FC3 /* PopMenuImages */,
 				74E5E99E1921F7580084BCFA /* VoiceRecordHUDImages */,
@@ -3288,6 +3302,7 @@
 				7DA2ECBF19457A2D00B009FC /* emotion9.gif in Resources */,
 				ABE83CCE1937E00E00BBF653 /* EmotionListNewTips@2x.png in Resources */,
 				74BBB020190B8EAB00093577 /* MessageDisplayKitString.strings in Resources */,
+				1FE768581A1627F200732D37 /* msg_chat_voice_unread.png in Resources */,
 				ABB7771D1932A7D700F4ACAF /* Contact_Male@2x.png in Resources */,
 				AB0C4AD81943B6BB00D346FF /* contacts_add_scan@2x.png in Resources */,
 				AB0C4AD51943B6BB00D346FF /* contacts_add_friend@2x.png in Resources */,
@@ -3323,6 +3338,7 @@
 				746C885F1916B612007F9A5E /* sharemore_wxtalk@2x.png in Resources */,
 				74E5E9AF1921F7710084BCFA /* RecordingSignal007@2x.png in Resources */,
 				ABCB35B819342DFA002F9938 /* VoiceSearchFeedback007_ios7@2x.png in Resources */,
+				1FE768591A1627F200732D37 /* msg_chat_voice_unread@2x.png in Resources */,
 				74E900691927940000D37C81 /* Contact@2x.png in Resources */,
 				746C88201916B5D6007F9A5E /* multiMedia_HL@2x.png in Resources */,
 				74E9006E1927940000D37C81 /* TableViewBackgroundImage@2x.png in Resources */,
