@@ -30,7 +30,7 @@ UIWebView *librariesWebView = [[UIWebView alloc] initWithFrame:[[UIScreen mainSc
 
 ## Podfile
 
-[CocosPods](http://cocosPods.org) is the recommended method to install MessageDisplayKit, just add the following line to `Podfile`
+[CocoaPods](http://cocoapods.org/) is the recommended method to install MessageDisplayKit, just add the following line to `Podfile`
 
 ```
 pod 'MessageDisplayKit'
