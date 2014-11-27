@@ -53,6 +53,11 @@
  */
 @property (nonatomic, strong) XHVoiceRecordHelper *voiceRecordHelper;
 
+/**
+ *  判断是不是超出了录音最大时长
+ */
+@property (nonatomic) BOOL isMaxTimeStop;
+
 #pragma mark - DataSource Change
 /**
  *  改变数据源需要的子线程
@@ -369,10 +374,19 @@ static CGPoint  delayOffset = {0.0};
 
 - (XHVoiceRecordHelper *)voiceRecordHelper {
     if (!_voiceRecordHelper) {
+        _isMaxTimeStop = NO;
+        
         WEAKSELF
         _voiceRecordHelper = [[XHVoiceRecordHelper alloc] init];
         _voiceRecordHelper.maxTimeStopRecorderCompletion = ^{
             DLog(@"已经达到最大限制时间了，进入下一步的提示");
+            
+            // Unselect and unhilight the hold down button, and set isMaxTimeStop to YES.
+            UIButton *holdDown = weakSelf.messageInputView.holdDownButton;
+            holdDown.selected = NO;
+            holdDown.highlighted = NO;
+            weakSelf.isMaxTimeStop = YES;
+            
             [weakSelf finishRecorded];
         };
         _voiceRecordHelper.peakPowerForChannel = ^(float peakPowerForChannel) {
@@ -1026,7 +1040,11 @@ static CGPoint  delayOffset = {0.0};
 
 - (void)didFinishRecoingVoiceAction {
     DLog(@"didFinishRecoingVoice");
-    [self finishRecorded];
+    if (self.isMaxTimeStop == NO) {
+        [self finishRecorded];
+    } else {
+        self.isMaxTimeStop = NO;
+    }
 }
 
 - (void)didDragOutsideAction {
