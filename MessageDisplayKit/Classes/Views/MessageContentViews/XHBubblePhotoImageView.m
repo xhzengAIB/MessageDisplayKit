@@ -55,16 +55,24 @@
             if ([url.absoluteString isEqualToString:thumbnailUrl]) {
 
                 if (CGRectEqualToRect(weakSelf.bounds, CGRectZero)) {
-                    weakSelf.semaphore = dispatch_semaphore_create(0);
-                    dispatch_semaphore_wait(weakSelf.semaphore, DISPATCH_TIME_FOREVER);
-                    weakSelf.semaphore = nil;
+                    if (weakSelf) {
+                        weakSelf.semaphore = dispatch_semaphore_create(0);
+                        dispatch_semaphore_wait(weakSelf.semaphore, DISPATCH_TIME_FOREVER);
+                        weakSelf.semaphore = nil;
+                    }
                 }
                 
-                image = [image thumbnailImage:CGRectGetWidth(weakSelf.bounds) * 2 transparentBorder:0 cornerRadius:0 interpolationQuality:1.0];
+                // if image not nil
                 if (image) {
+                    // scale image
+                    image = [image thumbnailImage:CGRectGetWidth(weakSelf.bounds) * 2 transparentBorder:0 cornerRadius:0 interpolationQuality:1.0];
                     dispatch_async(dispatch_get_main_queue(), ^{
-                        weakSelf.messagePhoto = image;
-                        [weakSelf.activityIndicatorView stopAnimating];
+                        // if image not nil
+                        if (image) {
+                            // show image
+                            weakSelf.messagePhoto = image;
+                            [weakSelf.activityIndicatorView stopAnimating];
+                        }
                     });
                 }
             }
