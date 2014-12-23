@@ -153,12 +153,11 @@
     XHBubbleMessageMediaType currentType = message.messageMediaType;
     
     _voiceDurationLabel.hidden = YES;
+    _voiceUnreadDotImageView.hidden = YES;
     switch (currentType) {
         case XHBubbleMessageMediaTypeVoice: {
             _voiceDurationLabel.hidden = NO;
-            if (message.isRead == NO) {
-                _voiceUnreadDotImageView.hidden = NO;
-            }
+            _voiceUnreadDotImageView.hidden = message.isRead;
         }
         case XHBubbleMessageMediaTypeText:
         case XHBubbleMessageMediaTypeEmotion: {

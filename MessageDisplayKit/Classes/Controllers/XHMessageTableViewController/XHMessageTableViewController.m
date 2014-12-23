@@ -242,7 +242,7 @@
         
         [weakSelf exMainQueue:^{
             weakSelf.messages = messages;
-            [weakSelf.messageTableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationNone];
+            [weakSelf.messageTableView reloadData];
             [weakSelf scrollToBottomAnimated:YES];
         }];
     }];
