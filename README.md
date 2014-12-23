@@ -9,6 +9,8 @@ An IM APP like WeChat App has to send text, pictures, audio, video, location mes
 
 It's ok if you don't understand how the code works. Most code has comments, which I believe will help you a lot. Feel free to [open an issue] (https://github.com/xhzengAIB/MessageDisplayKit/issues?state=open) if you have any questions. I will do my best to answer them.
 
+很多朋友说不能直接编译该项目的主要工程，其实原因很简单，只是没有打包静态库的插件，需要安装一个Xcode插件，点击以下链接[iOS-Universal-Framework](https://github.com/kstenerud/iOS-Universal-Framework)，安装方法很简单的，里面有教程，只要安装了该插件后，重启你的xcode，就可以开始编译了！
+
 ## 开源许可协议
 很多人和我说，你不知道什么是开源许可协议，其实我也不清楚他是不知道还是不想知道，作为一个开发者，不懂得尊重别人的成果，那你到底想怎样，你自己最清楚。                      
 说一件事吧！曾经我也这么做了，没尊重作者的成果，最终被人鄙视了一段时间，于是我删除了那个开源库，现在终于明白，尊重这个词，这对于别人来说是一个认可，我们不可以剥夺这份利益。
