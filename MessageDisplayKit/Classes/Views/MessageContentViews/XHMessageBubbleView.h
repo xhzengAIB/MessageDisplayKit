@@ -11,7 +11,6 @@
 // Views
 #import "XHMessageTextView.h"
 #import "XHMessageInputView.h"
-#import "XHMessageDisplayTextView.h"
 #import "XHBubblePhotoImageView.h"
 #import "SETextView.h"
 
@@ -25,7 +24,7 @@
 #import "XHMessage.h"
 
 // Factorys
-#import "XHMessageAvatorFactory.h"
+#import "XHMessageAvatarFactory.h"
 #import "XHMessageVoiceFactory.h"
 
 // Categorys

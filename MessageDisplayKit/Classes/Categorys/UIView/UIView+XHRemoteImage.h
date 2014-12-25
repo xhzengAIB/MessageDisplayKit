@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "XHMessageAvatorFactory.h"
+#import "XHMessageAvatarFactory.h"
 
 typedef NS_ENUM(NSInteger, UIImageViewURLDownloadState) {
     UIImageViewURLDownloadStateUnknown = 0,

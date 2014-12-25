@@ -18,7 +18,7 @@ typedef NS_ENUM(NSInteger, XHMessageAvatorType) {
     XHMessageAvatorTypeCircle
 };
 
-@interface XHMessageAvatorFactory : NSObject
+@interface XHMessageAvatarFactory : NSObject
 
 + (UIImage *)avatarImageNamed:(UIImage *)originImage
             messageAvatorType:(XHMessageAvatorType)type;

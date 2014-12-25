@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 #import "XHContact.h"
-#import "XHMessageAvatorFactory.h"
+#import "XHMessageAvatarFactory.h"
 
 @interface XHContactView : UIView
 

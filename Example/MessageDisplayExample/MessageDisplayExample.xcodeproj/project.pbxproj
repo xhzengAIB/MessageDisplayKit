@@ -104,9 +104,6 @@
 		746C89321917F691007F9A5E /* XHMessageBubbleView.h in Headers */ = {isa = PBXBuildFile; fileRef = 746C89171917F691007F9A5E /* XHMessageBubbleView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		746C89331917F691007F9A5E /* XHMessageBubbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C89181917F691007F9A5E /* XHMessageBubbleView.m */; };
 		746C89341917F691007F9A5E /* XHMessageBubbleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C89181917F691007F9A5E /* XHMessageBubbleView.m */; };
-		746C89351917F691007F9A5E /* XHMessageDisplayTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 746C89191917F691007F9A5E /* XHMessageDisplayTextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		746C89361917F691007F9A5E /* XHMessageDisplayTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C891A1917F691007F9A5E /* XHMessageDisplayTextView.m */; };
-		746C89371917F691007F9A5E /* XHMessageDisplayTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C891A1917F691007F9A5E /* XHMessageDisplayTextView.m */; };
 		746C89381917F691007F9A5E /* XHMessageTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 746C891B1917F691007F9A5E /* XHMessageTableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		746C89391917F691007F9A5E /* XHMessageTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C891C1917F691007F9A5E /* XHMessageTableView.m */; };
 		746C893A1917F691007F9A5E /* XHMessageTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 746C891C1917F691007F9A5E /* XHMessageTableView.m */; };
@@ -424,9 +421,9 @@
 		AB37292A192EC6800084D7B5 /* XHDisplayTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB37291F192EC6800084D7B5 /* XHDisplayTextViewController.m */; };
 		AB37292B192EC6800084D7B5 /* XHDisplayTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB37291F192EC6800084D7B5 /* XHDisplayTextViewController.m */; };
 		AB406DD8199AE5CC00669D05 /* SECoreTextView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AB406DD7199AE5CC00669D05 /* SECoreTextView.bundle */; };
-		AB41A57B194273150095C12C /* XHMessageAvatorFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = AB41A571194273150095C12C /* XHMessageAvatorFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AB41A57C194273150095C12C /* XHMessageAvatorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = AB41A572194273150095C12C /* XHMessageAvatorFactory.m */; };
-		AB41A57D194273150095C12C /* XHMessageAvatorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = AB41A572194273150095C12C /* XHMessageAvatorFactory.m */; };
+		AB41A57B194273150095C12C /* XHMessageAvatarFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = AB41A571194273150095C12C /* XHMessageAvatarFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB41A57C194273150095C12C /* XHMessageAvatarFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = AB41A572194273150095C12C /* XHMessageAvatarFactory.m */; };
+		AB41A57D194273150095C12C /* XHMessageAvatarFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = AB41A572194273150095C12C /* XHMessageAvatarFactory.m */; };
 		AB41A57E194273150095C12C /* XHMessageBubbleFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = AB41A573194273150095C12C /* XHMessageBubbleFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB41A57F194273150095C12C /* XHMessageBubbleFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = AB41A574194273150095C12C /* XHMessageBubbleFactory.m */; };
 		AB41A580194273150095C12C /* XHMessageBubbleFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = AB41A574194273150095C12C /* XHMessageBubbleFactory.m */; };
@@ -831,8 +828,6 @@
 		746C89161917F691007F9A5E /* XHBubblePhotoImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHBubblePhotoImageView.m; sourceTree = "<group>"; };
 		746C89171917F691007F9A5E /* XHMessageBubbleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMessageBubbleView.h; sourceTree = "<group>"; };
 		746C89181917F691007F9A5E /* XHMessageBubbleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMessageBubbleView.m; sourceTree = "<group>"; };
-		746C89191917F691007F9A5E /* XHMessageDisplayTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMessageDisplayTextView.h; sourceTree = "<group>"; };
-		746C891A1917F691007F9A5E /* XHMessageDisplayTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMessageDisplayTextView.m; sourceTree = "<group>"; };
 		746C891B1917F691007F9A5E /* XHMessageTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMessageTableView.h; sourceTree = "<group>"; };
 		746C891C1917F691007F9A5E /* XHMessageTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMessageTableView.m; sourceTree = "<group>"; };
 		746C891D1917F691007F9A5E /* XHMessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMessageTableViewCell.h; sourceTree = "<group>"; };
@@ -1090,8 +1085,8 @@
 		AB37291E192EC6800084D7B5 /* XHDisplayTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHDisplayTextViewController.h; sourceTree = "<group>"; };
 		AB37291F192EC6800084D7B5 /* XHDisplayTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHDisplayTextViewController.m; sourceTree = "<group>"; };
 		AB406DD7199AE5CC00669D05 /* SECoreTextView.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SECoreTextView.bundle; sourceTree = "<group>"; };
-		AB41A571194273150095C12C /* XHMessageAvatorFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMessageAvatorFactory.h; sourceTree = "<group>"; };
-		AB41A572194273150095C12C /* XHMessageAvatorFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMessageAvatorFactory.m; sourceTree = "<group>"; };
+		AB41A571194273150095C12C /* XHMessageAvatarFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMessageAvatarFactory.h; sourceTree = "<group>"; };
+		AB41A572194273150095C12C /* XHMessageAvatarFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMessageAvatarFactory.m; sourceTree = "<group>"; };
 		AB41A573194273150095C12C /* XHMessageBubbleFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMessageBubbleFactory.h; sourceTree = "<group>"; };
 		AB41A574194273150095C12C /* XHMessageBubbleFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMessageBubbleFactory.m; sourceTree = "<group>"; };
 		AB41A575194273150095C12C /* XHMessageVideoConverPhotoFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMessageVideoConverPhotoFactory.h; sourceTree = "<group>"; };
@@ -1618,8 +1613,6 @@
 				746C89181917F691007F9A5E /* XHMessageBubbleView.m */,
 				746C89151917F691007F9A5E /* XHBubblePhotoImageView.h */,
 				746C89161917F691007F9A5E /* XHBubblePhotoImageView.m */,
-				746C89191917F691007F9A5E /* XHMessageDisplayTextView.h */,
-				746C891A1917F691007F9A5E /* XHMessageDisplayTextView.m */,
 			);
 			path = MessageContentViews;
 			sourceTree = "<group>";
@@ -2388,8 +2381,8 @@
 		AB41A570194273150095C12C /* Factorys */ = {
 			isa = PBXGroup;
 			children = (
-				AB41A571194273150095C12C /* XHMessageAvatorFactory.h */,
-				AB41A572194273150095C12C /* XHMessageAvatorFactory.m */,
+				AB41A571194273150095C12C /* XHMessageAvatarFactory.h */,
+				AB41A572194273150095C12C /* XHMessageAvatarFactory.m */,
 				AB41A573194273150095C12C /* XHMessageBubbleFactory.h */,
 				AB41A574194273150095C12C /* XHMessageBubbleFactory.m */,
 				AB41A575194273150095C12C /* XHMessageVideoConverPhotoFactory.h */,
@@ -2872,7 +2865,6 @@
 				74180C0F190F44F600A35C82 /* XHFoundationCommon.h in Headers */,
 				74180C13190F450200A35C82 /* XHMessageModel.h in Headers */,
 				746C892F1917F691007F9A5E /* XHBubblePhotoImageView.h in Headers */,
-				746C89351917F691007F9A5E /* XHMessageDisplayTextView.h in Headers */,
 				746C893E1917F691007F9A5E /* XHMessageInputView.h in Headers */,
 				746C89471917F691007F9A5E /* XHEmotionCollectionViewFlowLayout.h in Headers */,
 				746C89321917F691007F9A5E /* XHMessageBubbleView.h in Headers */,
@@ -2983,7 +2975,7 @@
 				AB41A581194273150095C12C /* XHMessageVideoConverPhotoFactory.h in Headers */,
 				AB41A587194273150095C12C /* XHVideoOutputSampleBufferFactory.h in Headers */,
 				AB41A584194273150095C12C /* XHMessageVoiceFactory.h in Headers */,
-				AB41A57B194273150095C12C /* XHMessageAvatorFactory.h in Headers */,
+				AB41A57B194273150095C12C /* XHMessageAvatarFactory.h in Headers */,
 				ABB839E9193CCACA003DEE7A /* NSString+XHDiskSizeTransfrom.h in Headers */,
 				AB72638919328D9A00AA738F /* XHLocationServiceTableViewCell.h in Headers */,
 				74E5E9951921E90A0084BCFA /* XHVoiceRecordHUD.h in Headers */,
@@ -3491,7 +3483,6 @@
 				ABB494061930086C000A2680 /* XHContactCommunicationView.m in Sources */,
 				AB6AB4A6193C03D600AFE823 /* UIButton+XHButtonTitlePosition.m in Sources */,
 				746C89461917F691007F9A5E /* XHEmotionCollectionViewCell.m in Sources */,
-				746C89371917F691007F9A5E /* XHMessageDisplayTextView.m in Sources */,
 				AB02A9F7192D8DC5004AA23D /* XHBaseSearchTableViewController.m in Sources */,
 				AB372928192EC6800084D7B5 /* XHDisplayMediaViewController.m in Sources */,
 				7DA2EC7719455EF100B009FC /* MultiSelectViewController.m in Sources */,
@@ -3528,7 +3519,7 @@
 				ABB5473519394D7C000D3C9C /* XHHTTPClient.m in Sources */,
 				AB6AB4A3193C03D600AFE823 /* NSString+XHMD5.m in Sources */,
 				AB41A580194273150095C12C /* XHMessageBubbleFactory.m in Sources */,
-				AB41A57D194273150095C12C /* XHMessageAvatorFactory.m in Sources */,
+				AB41A57D194273150095C12C /* XHMessageAvatarFactory.m in Sources */,
 				AB41A594194274950095C12C /* XHRefreshCircleView.m in Sources */,
 				74E5EAEA1924FFBE0084BCFA /* SETextMagnifierCaret.m in Sources */,
 				740660C01914D65600E1CE95 /* XHEmotion.m in Sources */,
@@ -3673,11 +3664,10 @@
 				AB8ACCE8192EB0A400FA1C80 /* XHMultipleSectionTableViewController.m in Sources */,
 				7D149FFB192DEB5D004B4D3B /* XHContactTableViewCell.m in Sources */,
 				AB63BF2B1936BE5400B6C977 /* XHNewsContainerView.m in Sources */,
-				AB41A57C194273150095C12C /* XHMessageAvatorFactory.m in Sources */,
+				AB41A57C194273150095C12C /* XHMessageAvatarFactory.m in Sources */,
 				AB8ACD0C192EBF3F00FA1C80 /* XHMoreSettingTableViewController.m in Sources */,
 				AB37290F192EC62C0084D7B5 /* XHQRCodeViewController.m in Sources */,
 				74585FFE191D10CC00F5E8C8 /* XHAnnotation.m in Sources */,
-				746C89361917F691007F9A5E /* XHMessageDisplayTextView.m in Sources */,
 				AB8C80FD1936A6F7006CDA9B /* LKBadgeView.m in Sources */,
 				AB372906192EC62C0084D7B5 /* XHBottleViewController.m in Sources */,
 				74E5EADD1924FFBE0084BCFA /* SETextEditingCaret.m in Sources */,

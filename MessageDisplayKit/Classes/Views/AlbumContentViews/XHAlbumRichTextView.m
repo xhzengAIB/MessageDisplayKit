@@ -8,7 +8,7 @@
 
 #import "XHAlbumRichTextView.h"
 
-#import "XHMessageAvatorFactory.h"
+#import "XHMessageAvatarFactory.h"
 #import "XHAlbumPhotoCollectionViewCell.h"
 #import "XHAlbumCollectionViewFlowLayout.h"
 

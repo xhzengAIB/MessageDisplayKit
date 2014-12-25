@@ -46,7 +46,7 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
  *
  *  @param message 需要配置的目标消息Model
  */
-- (void)configAvatorWithMessage:(id <XHMessageModel>)message;
+- (void)configAvatarWithMessage:(id <XHMessageModel>)message;
 
 /**
  *  3、配置需要显示什么消息内容，比如语音、文字、视频、图片
@@ -147,7 +147,7 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
     [self configureTimestamp:displayTimestamp atMessage:message];
     
     // 2、配置头像
-    [self configAvatorWithMessage:message];
+    [self configAvatarWithMessage:message];
     
     // 3、配置用户名
     [self configUserNameWithMessage:message];
@@ -166,19 +166,28 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
     }
 }
 
-- (void)configAvatorWithMessage:(id <XHMessageModel>)message {
+- (void)configAvatarWithMessage:(id <XHMessageModel>)message {
     if (message.avator) {
-        [self.avatorButton setImage:message.avator forState:UIControlStateNormal];
+        [self configAvatarWithPhoto:message.avator];
         if (message.avatorUrl) {
-            self.avatorButton.messageAvatorType = XHMessageAvatorTypeSquare;
-            [self.avatorButton setImageWithURL:[NSURL URLWithString:message.avatorUrl] placeholer:[UIImage imageNamed:@"avator"]];
+            [self configAvatarWithPhotoURLString:message.avatorUrl];
         }
     } else if (message.avatorUrl) {
-        self.avatorButton.messageAvatorType = XHMessageAvatorTypeSquare;
-        [self.avatorButton setImageWithURL:[NSURL URLWithString:message.avatorUrl] placeholer:[UIImage imageNamed:@"avator"]];
-    }else {
-        [self.avatorButton setImage:[XHMessageAvatorFactory avatarImageNamed:[UIImage imageNamed:@"avator"] messageAvatorType:XHMessageAvatorTypeSquare] forState:UIControlStateNormal];
+        [self configAvatarWithPhotoURLString:message.avatorUrl];
+    } else {
+        UIImage *avatarPhoto = [XHMessageAvatarFactory avatarImageNamed:[UIImage imageNamed:@"avator"] messageAvatorType:XHMessageAvatorTypeSquare];
+        [self configAvatarWithPhoto:avatarPhoto];
     }
+}
+
+- (void)configAvatarWithPhoto:(UIImage *)photo {
+    [self.avatorButton setImage:photo forState:UIControlStateNormal];
+}
+
+- (void)configAvatarWithPhotoURLString:(NSString *)photoURLString {
+    self.avatorButton.messageAvatorType = XHMessageAvatorTypeSquare;
+    [self.avatorButton setImageWithURL:[NSURL URLWithString:photoURLString] placeholer:[UIImage imageNamed:@"avator"]];
+    
 }
 
 - (void)configUserNameWithMessage:(id <XHMessageModel>)message {
@@ -375,7 +384,7 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
         }
         
         UIButton *avatorButton = [[UIButton alloc] initWithFrame:avatorButtonFrame];
-        [avatorButton setImage:[XHMessageAvatorFactory avatarImageNamed:[UIImage imageNamed:@"avator"] messageAvatorType:XHMessageAvatorTypeCircle] forState:UIControlStateNormal];
+        [avatorButton setImage:[XHMessageAvatarFactory avatarImageNamed:[UIImage imageNamed:@"avator"] messageAvatorType:XHMessageAvatorTypeCircle] forState:UIControlStateNormal];
         [avatorButton addTarget:self action:@selector(avatorButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
         [self.contentView addSubview:avatorButton];
         self.avatorButton = avatorButton;
