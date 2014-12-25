@@ -8,18 +8,19 @@
 
 #import "XHMessageRootViewController.h"
 
-#import "XHFoundationCommon.h"
+#import <MessageDisplayKit/XHFoundationCommon.h>
 
-#import "XHNewsTableViewController.h"
-#import "XHQRCodeViewController.h"
+#import <MessageDisplayKit/XHNewsTableViewController.h>
+#import <MessageDisplayKit/XHQRCodeViewController.h>
 #import "XHDemoWeChatMessageTableViewController.h"
 
-#import "XHPopMenu.h"
-#import "UIView+XHBadgeView.h"
+#import <MessageDisplayKit/XHPopMenu.h>
+#import <MessageDisplayKit/UIView+XHBadgeView.h>
 
-#import "MultiSelectItem.h"
-#import "MultiSelectViewController.h"
-#import "XHBaseNavigationController.h"
+#import <MessageDisplayKit/MultiSelectItem.h>
+#import <MessageDisplayKit/MultiSelectViewController.h>
+#import <MessageDisplayKit/XHBaseNavigationController.h>
+
 
 @interface XHMessageRootViewController ()
 

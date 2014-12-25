@@ -8,13 +8,13 @@
 
 #import "XHDemoWeChatMessageTableViewController.h"
 
-#import "XHDisplayTextViewController.h"
-#import "XHDisplayMediaViewController.h"
-#import "XHDisplayLocationViewController.h"
+#import <MessageDisplayKit/XHDisplayTextViewController.h>
+#import <MessageDisplayKit/XHDisplayMediaViewController.h>
+#import <MessageDisplayKit/XHDisplayLocationViewController.h>
 
-#import "XHContactDetailTableViewController.h"
+#import <MessageDisplayKit/XHContactDetailTableViewController.h>
 
-#import "XHAudioPlayerHelper.h"
+#import <MessageDisplayKit/XHAudioPlayerHelper.h>
 
 @interface XHDemoWeChatMessageTableViewController () <XHAudioPlayerHelperDelegate>
 
