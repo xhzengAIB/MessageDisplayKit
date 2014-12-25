@@ -173,7 +173,10 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
             self.avatorButton.messageAvatorType = XHMessageAvatorTypeSquare;
             [self.avatorButton setImageWithURL:[NSURL URLWithString:message.avatorUrl] placeholer:[UIImage imageNamed:@"avator"]];
         }
-    } else {
+    } else if (message.avatorUrl) {
+        self.avatorButton.messageAvatorType = XHMessageAvatorTypeSquare;
+        [self.avatorButton setImageWithURL:[NSURL URLWithString:message.avatorUrl] placeholer:[UIImage imageNamed:@"avator"]];
+    }else {
         [self.avatorButton setImage:[XHMessageAvatorFactory avatarImageNamed:[UIImage imageNamed:@"avator"] messageAvatorType:XHMessageAvatorTypeSquare] forState:UIControlStateNormal];
     }
 }
