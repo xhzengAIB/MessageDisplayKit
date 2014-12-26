@@ -2,7 +2,7 @@
 //  MessageDisplayKitTests.m
 //  MessageDisplayKitTests
 //
-//  Created by kingsoft_ios on 14/12/25.
+//  Created by HUAJIE on 14/12/25.
 //  Copyright (c) 2014年 iOS软件开发工程师 曾宪华 热衷于简洁的UI QQ:543413507 http://www.pailixiu.com/blog   http://www.pailixiu.com/Jack/personal. All rights reserved.
 //
 
