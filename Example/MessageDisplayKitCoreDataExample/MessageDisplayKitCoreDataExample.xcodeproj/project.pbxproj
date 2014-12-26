@@ -264,6 +264,7 @@
 		F751C9E51A4C469600743ECB /* weChatBubble_Sending_Cavern@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F751C9881A4C469600743ECB /* weChatBubble_Sending_Cavern@2x.png */; };
 		F751C9E61A4C469600743ECB /* weChatBubble_Sending_Solid@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F751C9891A4C469600743ECB /* weChatBubble_Sending_Solid@2x.png */; };
 		F751C9E71A4C469600743ECB /* MessageDisplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F751C98B1A4C469600743ECB /* MessageDisplayKit.framework */; };
+		F7D249EB1A4D072F0015764B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D249EA1A4D072F0015764B /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -540,6 +541,8 @@
 		F751C9881A4C469600743ECB /* weChatBubble_Sending_Cavern@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weChatBubble_Sending_Cavern@2x.png"; sourceTree = "<group>"; };
 		F751C9891A4C469600743ECB /* weChatBubble_Sending_Solid@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weChatBubble_Sending_Solid@2x.png"; sourceTree = "<group>"; };
 		F751C98B1A4C469600743ECB /* MessageDisplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageDisplayKit.framework; path = "../../../../../../../../Users/kingsoft_ios/Library/Developer/Xcode/DerivedData/MessageDisplayKitWorkSpace-bwtmvzqdsnglfuhcxcucroskvpwq/Build/Products/Debug-iphoneos/MessageDisplayKit.framework"; sourceTree = "<group>"; };
+		F7D249E91A4D072F0015764B /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F7D249EA1A4D072F0015764B /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -607,6 +610,8 @@
 				AB5C7E541937FE7000FA7D5B /* AppDelegate.h */,
 				AB5C7E551937FE7000FA7D5B /* AppDelegate.m */,
 				AB5C7E571937FE7000FA7D5B /* Main.storyboard */,
+				F7D249E91A4D072F0015764B /* ViewController.h */,
+				F7D249EA1A4D072F0015764B /* ViewController.m */,
 				AB5C7F111937FFCC00FA7D5B /* XHDemoWeChatMessageTableViewController.h */,
 				AB5C7F121937FFCC00FA7D5B /* XHDemoWeChatMessageTableViewController.m */,
 				AB5C7E631937FE7000FA7D5B /* Images.xcassets */,
@@ -1336,6 +1341,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7D249EB1A4D072F0015764B /* ViewController.m in Sources */,
 				AB5C7F131937FFCC00FA7D5B /* XHDemoWeChatMessageTableViewController.m in Sources */,
 				ABC47CFB193922EB00ECADEA /* MDKMessage.m in Sources */,
 				AB5C7E561937FE7000FA7D5B /* AppDelegate.m in Sources */,

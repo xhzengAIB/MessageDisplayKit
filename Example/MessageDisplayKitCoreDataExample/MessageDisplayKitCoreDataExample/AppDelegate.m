@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 
-#import "XHDemoWeChatMessageTableViewController.h"
 
 @implementation AppDelegate
 
@@ -19,9 +18,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
-    XHDemoWeChatMessageTableViewController *controller = (XHDemoWeChatMessageTableViewController *)navigationController.topViewController;
-    controller.managedObjectContext = self.managedObjectContext;
     return YES;
 }
 							
