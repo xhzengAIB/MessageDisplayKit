@@ -1116,9 +1116,7 @@ static CGPoint  delayOffset = {0.0};
 #pragma mark - XHEmotionManagerView Delegate
 
 - (void)didSelecteEmotion:(XHEmotion *)emotion atIndexPath:(NSIndexPath *)indexPath {
-    if (emotion.emotionPath) {
-        [self didSendEmotionMessageWithEmotionPath:emotion.emotionPath];
-    }
+    [self didSendEmotionMessageWithEmotionPath:emotion.emotionPath];
 }
 
 #pragma mark - XHEmotionManagerView DataSource

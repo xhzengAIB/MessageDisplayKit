@@ -487,11 +487,16 @@
  *  @param date     发送时间
  */
 - (void)didSendEmotion:(NSString *)emotionPath fromSender:(NSString *)sender onDate:(NSDate *)date {
-    XHMessage *emotionMessage = [[XHMessage alloc] initWithEmotionPath:emotionPath sender:sender timestamp:date];
-    emotionMessage.avator = [UIImage imageNamed:@"avator"];
-    emotionMessage.avatorUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
-    [self addMessage:emotionMessage];
-    [self finishSendMessageWithBubbleMessageType:XHBubbleMessageMediaTypeEmotion];
+    if (emotionPath) {
+        XHMessage *emotionMessage = [[XHMessage alloc] initWithEmotionPath:emotionPath sender:sender timestamp:date];
+        emotionMessage.avator = [UIImage imageNamed:@"avator"];
+        emotionMessage.avatorUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
+        [self addMessage:emotionMessage];
+        [self finishSendMessageWithBubbleMessageType:XHBubbleMessageMediaTypeEmotion];
+        
+    } else {
+        [[[UIAlertView alloc] initWithTitle:@"温馨提示" message:@"如果想测试，请运行MessageDisplayKitWeChatExample工程" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"确定", nil] show];
+    }
 }
 
 /**
