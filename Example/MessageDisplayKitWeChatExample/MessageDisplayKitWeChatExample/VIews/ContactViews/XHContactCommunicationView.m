@@ -17,7 +17,7 @@
 
 - (UIButton *)videoCommunicationButton {
     if (!_videoCommunicationButton) {
-        _videoCommunicationButton = [[UIButton alloc] initWithFrame:CGRectMake(kXHAlbumAvatorSpacing, 0, CGRectGetWidth(self.bounds) - kXHAlbumAvatorSpacing * 2, kXHContactButtonHeight)];
+        _videoCommunicationButton = [[UIButton alloc] initWithFrame:CGRectMake(kXHAlbumAvatarSpacing, 0, CGRectGetWidth(self.bounds) - kXHAlbumAvatarSpacing * 2, kXHContactButtonHeight)];
         _videoCommunicationButton.layer.cornerRadius = 4;
         _videoCommunicationButton.backgroundColor = [UIColor colorWithRed:0.263 green:0.717 blue:0.031 alpha:1.000];
         [_videoCommunicationButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];

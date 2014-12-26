@@ -38,7 +38,7 @@
 
 - (XHContactView *)contactUserInfoView {
     if (!_contactUserInfoView) {
-        _contactUserInfoView = [[XHContactView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), kXHAlbumAvatorSpacing * 2 + kXHContactAvatorSize)];
+        _contactUserInfoView = [[XHContactView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), kXHAlbumAvatarSpacing * 2 + kXHContactAvatarSize)];
     }
     _contactUserInfoView.displayContact = self.contact;
     return _contactUserInfoView;

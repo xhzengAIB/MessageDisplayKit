@@ -18,7 +18,7 @@ const char* const kXHLoadingViewKey   = "XHURLDownloadLoadingViewKey";
 
 const char* const kXHActivityIndicatorViewKey   = "XHActivityIndicatorViewKey";
 
-const char* const kXHMessageAvatorTypeKey   = "XHMessageAvatorTypeKey";
+const char* const kXHMessageAvatarTypeKey   = "XHMessageAvatarTypeKey";
 
 #define kXHActivityIndicatorViewSize 35
 
@@ -66,12 +66,12 @@ const char* const kXHMessageAvatorTypeKey   = "XHMessageAvatorTypeKey";
     return objc_getAssociatedObject(self, kXHActivityIndicatorViewKey);
 }
 
-- (void)setMessageAvatorType:(XHMessageAvatorType)messageAvatorType {
-    objc_setAssociatedObject(self, &kXHMessageAvatorTypeKey, [NSNumber numberWithInteger:messageAvatorType], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+- (void)setMessageAvatarType:(XHMessageAvatarType)messageAvatarType {
+    objc_setAssociatedObject(self, &kXHMessageAvatarTypeKey, [NSNumber numberWithInteger:messageAvatarType], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (XHMessageAvatorType)messageAvatorType {
-    return (XHMessageAvatorType)([objc_getAssociatedObject(self, &kXHMessageAvatorTypeKey) integerValue]);
+- (XHMessageAvatarType)messageAvatarType {
+    return (XHMessageAvatarType)([objc_getAssociatedObject(self, &kXHMessageAvatarTypeKey) integerValue]);
 }
 
 - (NSURL*)url {
@@ -246,8 +246,8 @@ const char* const kXHMessageAvatorTypeKey   = "XHMessageAvatorTypeKey";
     __weak typeof(self) weakSelf = self;
     dispatch_async(self.cachingQueue, ^{
         UIImage *cacheImage = [XHCacheManager imageWithURL:weakSelf.url storeMemoryCache:YES];
-        if (weakSelf.messageAvatorType != XHMessageAvatorTypeNormal) {
-            cacheImage = [XHMessageAvatarFactory avatarImageNamed:cacheImage messageAvatorType:weakSelf.messageAvatorType];
+        if (weakSelf.messageAvatarType != XHMessageAvatarTypeNormal) {
+            cacheImage = [XHMessageAvatarFactory avatarImageNamed:cacheImage messageAvatarType:weakSelf.messageAvatarType];
         }
         if (cacheImage) {
             [weakSelf setImage:cacheImage forURL:weakSelf.url];
@@ -284,8 +284,8 @@ const char* const kXHMessageAvatorTypeKey   = "XHMessageAvatorTypeKey";
         [self cachingImageData:data url:url];
     }
     UIImage *image = [UIImage imageWithData:data];
-    if (self.messageAvatorType != XHMessageAvatorTypeNormal) {
-        image = [XHMessageAvatarFactory avatarImageNamed:image messageAvatorType:self.messageAvatorType];
+    if (self.messageAvatarType != XHMessageAvatarTypeNormal) {
+        image = [XHMessageAvatarFactory avatarImageNamed:image messageAvatarType:self.messageAvatarType];
     }
     if([url isEqual:self.url]) {
         if(error) {

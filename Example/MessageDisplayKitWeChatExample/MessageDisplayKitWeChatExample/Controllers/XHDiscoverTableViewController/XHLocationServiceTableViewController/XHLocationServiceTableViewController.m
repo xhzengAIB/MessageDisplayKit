@@ -58,7 +58,7 @@
 #pragma mark - UITableView Delegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return (kXHNearAvatorSize + kXHNearAvatorSpacing * 2);
+    return (kXHNearAvatarSize + kXHNearAvatarSpacing * 2);
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

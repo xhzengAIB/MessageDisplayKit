@@ -11,8 +11,8 @@
 static const CGFloat kXHLabelPadding = 5.0f;
 static const CGFloat kXHTimeStampLabelHeight = 20.0f;
 
-static const CGFloat kXHAvatorPaddingX = 8.0;
-static const CGFloat kXHAvatorPaddingY = 15;
+static const CGFloat kXHAvatarPaddingX = 8.0;
+static const CGFloat kXHAvatarPaddingY = 15;
 
 static const CGFloat kXHBubbleMessageViewPadding = 8;
 
@@ -23,7 +23,7 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
 
 @property (nonatomic, weak, readwrite) XHMessageBubbleView *messageBubbleView;
 
-@property (nonatomic, weak, readwrite) UIButton *avatorButton;
+@property (nonatomic, weak, readwrite) UIButton *AvatarButton;
 
 @property (nonatomic, weak, readwrite) UILabel *userNameLabel;
 
@@ -60,7 +60,7 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
  *
  *  @param sender 头像按钮对象
  */
-- (void)avatorButtonClicked:(UIButton *)sender;
+- (void)AvatarButtonClicked:(UIButton *)sender;
 
 /**
  *  统一一个方法隐藏MenuController，多处需要调用
@@ -99,9 +99,9 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
 
 @implementation XHMessageTableViewCell
 
-- (void)avatorButtonClicked:(UIButton *)sender {
-    if ([self.delegate respondsToSelector:@selector(didSelectedAvatorOnMessage:atIndexPath:)]) {
-        [self.delegate didSelectedAvatorOnMessage:self.messageBubbleView.message atIndexPath:self.indexPath];
+- (void)AvatarButtonClicked:(UIButton *)sender {
+    if ([self.delegate respondsToSelector:@selector(didSelectedAvatarOnMessage:atIndexPath:)]) {
+        [self.delegate didSelectedAvatarOnMessage:self.messageBubbleView.message atIndexPath:self.indexPath];
     }
 }
 
@@ -167,26 +167,26 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
 }
 
 - (void)configAvatarWithMessage:(id <XHMessageModel>)message {
-    if (message.avator) {
-        [self configAvatarWithPhoto:message.avator];
-        if (message.avatorUrl) {
-            [self configAvatarWithPhotoURLString:message.avatorUrl];
+    if (message.Avatar) {
+        [self configAvatarWithPhoto:message.Avatar];
+        if (message.AvatarUrl) {
+            [self configAvatarWithPhotoURLString:message.AvatarUrl];
         }
-    } else if (message.avatorUrl) {
-        [self configAvatarWithPhotoURLString:message.avatorUrl];
+    } else if (message.AvatarUrl) {
+        [self configAvatarWithPhotoURLString:message.AvatarUrl];
     } else {
-        UIImage *avatarPhoto = [XHMessageAvatarFactory avatarImageNamed:[UIImage imageNamed:@"avator"] messageAvatorType:XHMessageAvatorTypeSquare];
+        UIImage *avatarPhoto = [XHMessageAvatarFactory avatarImageNamed:[UIImage imageNamed:@"Avatar"] messageAvatarType:XHMessageAvatarTypeSquare];
         [self configAvatarWithPhoto:avatarPhoto];
     }
 }
 
 - (void)configAvatarWithPhoto:(UIImage *)photo {
-    [self.avatorButton setImage:photo forState:UIControlStateNormal];
+    [self.AvatarButton setImage:photo forState:UIControlStateNormal];
 }
 
 - (void)configAvatarWithPhotoURLString:(NSString *)photoURLString {
-    self.avatorButton.messageAvatorType = XHMessageAvatorTypeSquare;
-    [self.avatorButton setImageWithURL:[NSURL URLWithString:photoURLString] placeholer:[UIImage imageNamed:@"avator"]];
+    self.AvatarButton.messageAvatarType = XHMessageAvatarTypeSquare;
+    [self.AvatarButton setImageWithURL:[NSURL URLWithString:photoURLString] placeholer:[UIImage imageNamed:@"Avatar"]];
     
 }
 
@@ -370,27 +370,27 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
         }
         
         // 2、配置头像
-        // avator
-        CGRect avatorButtonFrame;
+        // Avatar
+        CGRect AvatarButtonFrame;
         switch (message.bubbleMessageType) {
             case XHBubbleMessageTypeReceiving:
-                avatorButtonFrame = CGRectMake(kXHAvatorPaddingX, kXHAvatorPaddingY + (self.displayTimestamp ? kXHTimeStampLabelHeight : 0), kXHAvatarImageSize, kXHAvatarImageSize);
+                AvatarButtonFrame = CGRectMake(kXHAvatarPaddingX, kXHAvatarPaddingY + (self.displayTimestamp ? kXHTimeStampLabelHeight : 0), kXHAvatarImageSize, kXHAvatarImageSize);
                 break;
             case XHBubbleMessageTypeSending:
-                avatorButtonFrame = CGRectMake(CGRectGetWidth(self.bounds) - kXHAvatarImageSize - kXHAvatorPaddingX, kXHAvatorPaddingY + (self.displayTimestamp ? kXHTimeStampLabelHeight : 0), kXHAvatarImageSize, kXHAvatarImageSize);
+                AvatarButtonFrame = CGRectMake(CGRectGetWidth(self.bounds) - kXHAvatarImageSize - kXHAvatarPaddingX, kXHAvatarPaddingY + (self.displayTimestamp ? kXHTimeStampLabelHeight : 0), kXHAvatarImageSize, kXHAvatarImageSize);
                 break;
             default:
                 break;
         }
         
-        UIButton *avatorButton = [[UIButton alloc] initWithFrame:avatorButtonFrame];
-        [avatorButton setImage:[XHMessageAvatarFactory avatarImageNamed:[UIImage imageNamed:@"avator"] messageAvatorType:XHMessageAvatorTypeCircle] forState:UIControlStateNormal];
-        [avatorButton addTarget:self action:@selector(avatorButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
-        [self.contentView addSubview:avatorButton];
-        self.avatorButton = avatorButton;
+        UIButton *AvatarButton = [[UIButton alloc] initWithFrame:AvatarButtonFrame];
+        [AvatarButton setImage:[XHMessageAvatarFactory avatarImageNamed:[UIImage imageNamed:@"Avatar"] messageAvatarType:XHMessageAvatarTypeCircle] forState:UIControlStateNormal];
+        [AvatarButton addTarget:self action:@selector(AvatarButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+        [self.contentView addSubview:AvatarButton];
+        self.AvatarButton = AvatarButton;
         
         // 3、配置用户名
-        UILabel *userNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.avatorButton.bounds) + 20, 20)];
+        UILabel *userNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.AvatarButton.bounds) + 20, 20)];
         userNameLabel.textAlignment = NSTextAlignmentCenter;
         userNameLabel.backgroundColor = [UIColor clearColor];
         userNameLabel.font = [UIFont systemFontOfSize:12];
@@ -405,9 +405,9 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
             CGFloat offsetX = 0.0f;
             
             if (message.bubbleMessageType == XHBubbleMessageTypeReceiving)
-                bubbleX = kXHAvatarImageSize + kXHAvatorPaddingX + kXHAvatorPaddingX;
+                bubbleX = kXHAvatarImageSize + kXHAvatarPaddingX + kXHAvatarPaddingX;
             else
-                offsetX = kXHAvatarImageSize + kXHAvatorPaddingX + kXHAvatorPaddingX;
+                offsetX = kXHAvatarImageSize + kXHAvatarPaddingX + kXHAvatarPaddingX;
             
             CGRect frame = CGRectMake(bubbleX,
                                       kXHBubbleMessageViewPadding + (self.displayTimestamp ? (kXHTimeStampLabelHeight + kXHLabelPadding) : kXHLabelPadding),
@@ -444,10 +444,10 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
 - (void)layoutSubviews {
     [super layoutSubviews];
     
-    CGFloat layoutOriginY = kXHAvatorPaddingY + (self.displayTimestamp ? kXHTimeStampLabelHeight : 0);
-    CGRect avatorButtonFrame = self.avatorButton.frame;
-    avatorButtonFrame.origin.y = layoutOriginY;
-    avatorButtonFrame.origin.x = ([self bubbleMessageType] == XHBubbleMessageTypeReceiving) ? kXHAvatorPaddingX : ((CGRectGetWidth(self.bounds) - kXHAvatorPaddingX - kXHAvatarImageSize));
+    CGFloat layoutOriginY = kXHAvatarPaddingY + (self.displayTimestamp ? kXHTimeStampLabelHeight : 0);
+    CGRect AvatarButtonFrame = self.AvatarButton.frame;
+    AvatarButtonFrame.origin.y = layoutOriginY;
+    AvatarButtonFrame.origin.x = ([self bubbleMessageType] == XHBubbleMessageTypeReceiving) ? kXHAvatarPaddingX : ((CGRectGetWidth(self.bounds) - kXHAvatarPaddingX - kXHAvatarImageSize));
     
     layoutOriginY = kXHBubbleMessageViewPadding + (self.displayTimestamp ? kXHTimeStampLabelHeight : 0);
     CGRect bubbleMessageViewFrame = self.messageBubbleView.frame;
@@ -455,18 +455,18 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
     
     CGFloat bubbleX = 0.0f;
     if ([self bubbleMessageType] == XHBubbleMessageTypeReceiving)
-        bubbleX = kXHAvatarImageSize + kXHAvatorPaddingX + kXHAvatorPaddingX;
+        bubbleX = kXHAvatarImageSize + kXHAvatarPaddingX + kXHAvatarPaddingX;
     bubbleMessageViewFrame.origin.x = bubbleX;
     
-    self.avatorButton.frame = avatorButtonFrame;
+    self.AvatarButton.frame = AvatarButtonFrame;
     
-    self.userNameLabel.center = CGPointMake(CGRectGetMidX(avatorButtonFrame), CGRectGetMaxY(avatorButtonFrame) + CGRectGetMidY(self.userNameLabel.bounds));
+    self.userNameLabel.center = CGPointMake(CGRectGetMidX(AvatarButtonFrame), CGRectGetMaxY(AvatarButtonFrame) + CGRectGetMidY(self.userNameLabel.bounds));
     
     self.messageBubbleView.frame = bubbleMessageViewFrame;
 }
 
 - (void)dealloc {
-    _avatorButton = nil;
+    _AvatarButton = nil;
     _timestampLabel = nil;
     _messageBubbleView = nil;
     _indexPath = nil;

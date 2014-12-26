@@ -42,7 +42,7 @@
  *
  *  @param indexPath 该目标消息在哪个IndexPath里面
  */
-- (void)didSelectedAvatorOnMessage:(id <XHMessageModel>)message atIndexPath:(NSIndexPath *)indexPath;
+- (void)didSelectedAvatarOnMessage:(id <XHMessageModel>)message atIndexPath:(NSIndexPath *)indexPath;
 
 /**
  *  Menu Control Selected Item
@@ -65,7 +65,7 @@
 /**
  *  头像按钮
  */
-@property (nonatomic, weak, readonly) UIButton *avatorButton;
+@property (nonatomic, weak, readonly) UIButton *AvatarButton;
 
 /**
  *  用户名标签

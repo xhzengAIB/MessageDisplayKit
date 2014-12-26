@@ -10,7 +10,7 @@
 
 @interface XHLocationServiceTableViewCell ()
 
-@property (nonatomic, strong) UIImageView *avatorImageView;
+@property (nonatomic, strong) UIImageView *AvatarImageView;
 
 @property (nonatomic, strong) UILabel *userNameLabel;
 @property (nonatomic, strong) UIImageView *userSexImageView;
@@ -37,17 +37,17 @@
 
 #pragma mark - Propertys
 
-- (UIImageView *)avatorImageView {
-    if (!_avatorImageView) {
-        _avatorImageView = [[UIImageView alloc] initWithFrame:CGRectMake(kXHNearAvatorSpacing, kXHNearAvatorSpacing, kXHNearAvatorSize, kXHNearAvatorSize)];
-        _avatorImageView.image = [UIImage imageNamed:@"avator"];
+- (UIImageView *)AvatarImageView {
+    if (!_AvatarImageView) {
+        _AvatarImageView = [[UIImageView alloc] initWithFrame:CGRectMake(kXHNearAvatarSpacing, kXHNearAvatarSpacing, kXHNearAvatarSize, kXHNearAvatarSize)];
+        _AvatarImageView.image = [UIImage imageNamed:@"Avatar"];
     }
-    return _avatorImageView;
+    return _AvatarImageView;
 }
 
 - (UILabel *)userNameLabel {
     if (!_userNameLabel) {
-        _userNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.avatorImageView.frame) + kXHNearAvatorSpacing, kXHNearAvatorSpacing, 55, 30)];
+        _userNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.AvatarImageView.frame) + kXHNearAvatarSpacing, kXHNearAvatarSpacing, 55, 30)];
         _userNameLabel.backgroundColor = [UIColor clearColor];
         _userNameLabel.textColor = [UIColor blackColor];
         _userNameLabel.font = [UIFont boldSystemFontOfSize:17];
@@ -87,7 +87,7 @@
 
 - (UILabel *)introductionLabel {
     if (!_introductionLabel) {
-        _introductionLabel = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetWidth([[UIScreen mainScreen] bounds]) - kXHNearAvatorSpacing - 160, kXHNearAvatorSpacing, 160, kXHNearAvatorSize)];
+        _introductionLabel = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetWidth([[UIScreen mainScreen] bounds]) - kXHNearAvatarSpacing - 160, kXHNearAvatarSpacing, 160, kXHNearAvatarSize)];
         _introductionLabel.font = [UIFont systemFontOfSize:10];
         _introductionLabel.backgroundColor = [UIColor clearColor];
         _introductionLabel.textColor = [UIColor colorWithRed:0.097 green:0.633 blue:1.000 alpha:1.000];
@@ -103,7 +103,7 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         // Initialization code
-        [self.contentView addSubview:self.avatorImageView];
+        [self.contentView addSubview:self.AvatarImageView];
         [self.contentView addSubview:self.userNameLabel];
         [self.contentView addSubview:self.userSexImageView];
         [self.contentView addSubview:self.distanseLabel];

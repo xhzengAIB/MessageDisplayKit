@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-#define kXHContactAvatorSize 80
+#define kXHContactAvatarSize 80
 #define kXHContactNameLabelHeight 30
 
 #define kXHContactButtonHeight 44

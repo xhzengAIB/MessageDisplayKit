@@ -26,7 +26,7 @@ typedef NS_ENUM(NSInteger, UIImageViewURLDownloadState) {
 @property (nonatomic, readonly) UIImageViewURLDownloadState loadingState;
 
 //
-@property (nonatomic, assign) XHMessageAvatorType messageAvatorType;
+@property (nonatomic, assign) XHMessageAvatarType messageAvatarType;
 
 // UI
 @property (nonatomic, strong) UIView *loadingView;

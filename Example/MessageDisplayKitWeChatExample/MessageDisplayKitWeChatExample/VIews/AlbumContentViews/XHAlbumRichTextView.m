@@ -18,7 +18,7 @@
 
 @interface XHAlbumRichTextView () <UICollectionViewDelegate, UICollectionViewDataSource>
 
-@property (nonatomic, strong) UIImageView *avatorImageView;
+@property (nonatomic, strong) UIImageView *AvatarImageView;
 @property (nonatomic, strong) UILabel *userNameLabel;
 
 @property (nonatomic, strong) UICollectionView *sharePhotoCollectionView;
@@ -33,7 +33,7 @@
 + (CGFloat)getRichTextHeightWithText:(NSString *)text {
     if (!text || !text.length)
         return 0;
-    return [SETextView frameRectWithAttributtedString:[[NSAttributedString alloc] initWithString:text] constraintSize:CGSizeMake(CGRectGetWidth([[UIScreen mainScreen] bounds]) - kXHAvatarImageSize - (kXHAlbumAvatorSpacing * 3), CGFLOAT_MAX) lineSpacing:kXHAlbumContentLineSpacing font:kXHAlbumContentFont].size.height;
+    return [SETextView frameRectWithAttributtedString:[[NSAttributedString alloc] initWithString:text] constraintSize:CGSizeMake(CGRectGetWidth([[UIScreen mainScreen] bounds]) - kXHAvatarImageSize - (kXHAlbumAvatarSpacing * 3), CGFLOAT_MAX) lineSpacing:kXHAlbumContentLineSpacing font:kXHAlbumContentFont].size.height;
 }
 
 + (CGFloat)getSharePhotoCollectionViewHeightWithPhotos:(NSArray *)photos {
@@ -43,7 +43,7 @@
 }
 
 + (CGFloat)calculateRichTextHeightWithAlbum:(XHAlbum *)currentAlbum {
-    CGFloat richTextHeight = kXHAlbumAvatorSpacing * 2;
+    CGFloat richTextHeight = kXHAlbumAvatarSpacing * 2;
     
     richTextHeight += kXHAlbumUserNameHeigth;
     
@@ -77,18 +77,18 @@
     [self setNeedsLayout];
 }
 
-- (UIImageView *)avatorImageView {
-    if (!_avatorImageView) {
-        _avatorImageView = [[UIImageView alloc] initWithFrame:CGRectMake(kXHAlbumAvatorSpacing, kXHAlbumAvatorSpacing, kXHAvatarImageSize, kXHAvatarImageSize)];
-        _avatorImageView.image = [UIImage imageNamed:@"avator"];
+- (UIImageView *)AvatarImageView {
+    if (!_AvatarImageView) {
+        _AvatarImageView = [[UIImageView alloc] initWithFrame:CGRectMake(kXHAlbumAvatarSpacing, kXHAlbumAvatarSpacing, kXHAvatarImageSize, kXHAvatarImageSize)];
+        _AvatarImageView.image = [UIImage imageNamed:@"Avatar"];
     }
-    return _avatorImageView;
+    return _AvatarImageView;
 }
 
 - (UILabel *)userNameLabel {
     if (!_userNameLabel) {
-        CGFloat userNameLabelX = CGRectGetMaxX(self.avatorImageView.frame) + kXHAlbumAvatorSpacing;
-        _userNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(userNameLabelX, CGRectGetMinY(self.avatorImageView.frame), CGRectGetWidth([[UIScreen mainScreen] bounds]) - userNameLabelX - kXHAlbumAvatorSpacing, kXHAlbumUserNameHeigth)];
+        CGFloat userNameLabelX = CGRectGetMaxX(self.AvatarImageView.frame) + kXHAlbumAvatarSpacing;
+        _userNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(userNameLabelX, CGRectGetMinY(self.AvatarImageView.frame), CGRectGetWidth([[UIScreen mainScreen] bounds]) - userNameLabelX - kXHAlbumAvatarSpacing, kXHAlbumUserNameHeigth)];
         _userNameLabel.backgroundColor = [UIColor clearColor];
         _userNameLabel.textColor = [UIColor colorWithRed:0.294 green:0.595 blue:1.000 alpha:1.000];
     
@@ -147,7 +147,7 @@
     self.textAlignment = NSTextAlignmentLeft;
     self.lineSpacing = kXHAlbumContentLineSpacing;
     
-    [self addSubview:self.avatorImageView];
+    [self addSubview:self.AvatarImageView];
     [self addSubview:self.userNameLabel];
     
     [self addSubview:self.richTextView];
@@ -172,7 +172,7 @@
     self.richTextView = nil;
     _displayAlbum = nil;
     
-    self.avatorImageView = nil;
+    self.AvatarImageView = nil;
     self.userNameLabel = nil;
     self.sharePhotoCollectionView.delegate = nil;
     self.sharePhotoCollectionView.dataSource = nil;
@@ -183,20 +183,20 @@
     [super layoutSubviews];
     
     CGFloat richTextViewX = CGRectGetMinX(self.userNameLabel.frame);
-    CGRect richTextViewFrame = CGRectMake(richTextViewX, CGRectGetMaxY(self.userNameLabel.frame) + kXHAlbumContentLineSpacing, CGRectGetWidth([[UIScreen mainScreen] bounds]) - richTextViewX - kXHAlbumAvatorSpacing, [XHAlbumRichTextView getRichTextHeightWithText:self.displayAlbum.albumShareContent]);
+    CGRect richTextViewFrame = CGRectMake(richTextViewX, CGRectGetMaxY(self.userNameLabel.frame) + kXHAlbumContentLineSpacing, CGRectGetWidth([[UIScreen mainScreen] bounds]) - richTextViewX - kXHAlbumAvatarSpacing, [XHAlbumRichTextView getRichTextHeightWithText:self.displayAlbum.albumShareContent]);
     self.richTextView.frame = richTextViewFrame;
     
     CGRect sharePhotoCollectionViewFrame = CGRectMake(richTextViewX, CGRectGetMaxY(richTextViewFrame) + kXHAlbumPhotoInsets, kXHAlbumPhotoInsets * 4 + kXHAlbumPhotoSize * 3, [XHAlbumRichTextView getSharePhotoCollectionViewHeightWithPhotos:self.displayAlbum.albumSharePhotos]);
     self.sharePhotoCollectionView.frame = sharePhotoCollectionViewFrame;
     
     CGRect commentButtonFrame = self.commentButton.frame;
-    commentButtonFrame.origin = CGPointMake(CGRectGetWidth(self.bounds) - kXHAlbumAvatorSpacing - kXHAlbumCommentButtonWidth, CGRectGetMaxY(sharePhotoCollectionViewFrame) + kXHAlbumContentLineSpacing);
+    commentButtonFrame.origin = CGPointMake(CGRectGetWidth(self.bounds) - kXHAlbumAvatarSpacing - kXHAlbumCommentButtonWidth, CGRectGetMaxY(sharePhotoCollectionViewFrame) + kXHAlbumContentLineSpacing);
     commentButtonFrame.size = CGSizeMake(kXHAlbumCommentButtonWidth, kXHAlbumCommentButtonHeight);
     self.commentButton.frame = commentButtonFrame;
     
     CGRect timestampLabelFrame = self.timestampLabel.frame;
     timestampLabelFrame.origin = CGPointMake(CGRectGetMinX(richTextViewFrame), CGRectGetMinY(commentButtonFrame));
-    timestampLabelFrame.size = CGSizeMake(CGRectGetWidth(self.bounds) - kXHAlbumAvatorSpacing * 3 - kXHAvatarImageSize - kXHAlbumCommentButtonWidth, CGRectGetHeight(commentButtonFrame));
+    timestampLabelFrame.size = CGSizeMake(CGRectGetWidth(self.bounds) - kXHAlbumAvatarSpacing * 3 - kXHAvatarImageSize - kXHAlbumCommentButtonWidth, CGRectGetHeight(commentButtonFrame));
     self.timestampLabel.frame = timestampLabelFrame;
     
     CGRect frame = self.frame;
