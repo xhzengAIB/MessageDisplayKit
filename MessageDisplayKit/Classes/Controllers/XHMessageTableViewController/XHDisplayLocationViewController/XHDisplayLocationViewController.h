@@ -9,10 +9,9 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 
-#import "XHBaseViewController.h"
 #import "XHMessageModel.h"
 
-@interface XHDisplayLocationViewController : XHBaseViewController
+@interface XHDisplayLocationViewController : UIViewController
 
 @property (nonatomic, strong) id <XHMessageModel> message;
 

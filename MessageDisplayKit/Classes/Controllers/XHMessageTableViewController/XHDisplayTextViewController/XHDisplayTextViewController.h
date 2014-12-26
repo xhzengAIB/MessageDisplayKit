@@ -7,10 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "XHBaseViewController.h"
 #import "XHMessageModel.h"
 
-@interface XHDisplayTextViewController : XHBaseViewController
+@interface XHDisplayTextViewController : UIViewController
 
 @property (nonatomic, strong) id <XHMessageModel> message;
 

@@ -8,11 +8,9 @@
 
 #import "XHDemoWeChatMessageTableViewController.h"
 
-#import <MessageDisplayFramework/XHDisplayTextViewController.h>
-#import <MessageDisplayFramework/XHDisplayMediaViewController.h>
-#import <MessageDisplayFramework/XHDisplayLocationViewController.h>
-
-#import <MessageDisplayFramework/XHProfileTableViewController.h>
+#import <MessageDisplayKit/XHDisplayTextViewController.h>
+#import <MessageDisplayKit/XHDisplayMediaViewController.h>
+#import <MessageDisplayKit/XHDisplayLocationViewController.h>
 
 @interface XHDemoWeChatMessageTableViewController ()
 
@@ -218,8 +216,7 @@
 
 - (void)didSelectedAvatorAtIndexPath:(NSIndexPath *)indexPath {
     DLog(@"indexPath : %@", indexPath);
-    XHProfileTableViewController *profileTableViewController = [[XHProfileTableViewController alloc] init];
-    [self.navigationController pushViewController:profileTableViewController animated:YES];
+    
 }
 
 - (void)menuDidSelectedAtBubbleMessageMenuSelecteType:(XHBubbleMessageMenuSelecteType)bubbleMessageMenuSelecteType {

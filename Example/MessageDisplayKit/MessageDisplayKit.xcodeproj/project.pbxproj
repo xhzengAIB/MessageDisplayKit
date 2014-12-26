@@ -11,12 +11,8 @@
 		F751C1F81A4C3E1B00743ECB /* MessageDisplayKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C1F71A4C3E1B00743ECB /* MessageDisplayKitTests.m */; };
 		F751C3E51A4C3EDB00743ECB /* NSString+MessageInputView.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C2291A4C3EDA00743ECB /* NSString+MessageInputView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F751C3E61A4C3EDB00743ECB /* NSString+MessageInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C22A1A4C3EDA00743ECB /* NSString+MessageInputView.m */; };
-		F751C3E71A4C3EDB00743ECB /* NSString+XHDiskSizeTransfrom.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C22B1A4C3EDA00743ECB /* NSString+XHDiskSizeTransfrom.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C3E81A4C3EDB00743ECB /* NSString+XHDiskSizeTransfrom.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C22C1A4C3EDA00743ECB /* NSString+XHDiskSizeTransfrom.m */; };
 		F751C3E91A4C3EDB00743ECB /* NSString+XHMD5.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C22D1A4C3EDA00743ECB /* NSString+XHMD5.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F751C3EA1A4C3EDB00743ECB /* NSString+XHMD5.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C22E1A4C3EDA00743ECB /* NSString+XHMD5.m */; };
-		F751C3EB1A4C3EDB00743ECB /* UIButton+XHButtonTitlePosition.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C2301A4C3EDA00743ECB /* UIButton+XHButtonTitlePosition.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C3EC1A4C3EDB00743ECB /* UIButton+XHButtonTitlePosition.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C2311A4C3EDA00743ECB /* UIButton+XHButtonTitlePosition.m */; };
 		F751C3ED1A4C3EDB00743ECB /* UIImage+Alpha.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C2331A4C3EDA00743ECB /* UIImage+Alpha.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F751C3EE1A4C3EDB00743ECB /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C2341A4C3EDA00743ECB /* UIImage+Alpha.m */; };
 		F751C3EF1A4C3EDB00743ECB /* UIImage+Resize.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C2351A4C3EDA00743ECB /* UIImage+Resize.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -25,22 +21,16 @@
 		F751C3F21A4C3EDB00743ECB /* UIImage+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C2381A4C3EDA00743ECB /* UIImage+RoundedCorner.m */; };
 		F751C3F31A4C3EDB00743ECB /* UIImage+Utility.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C2391A4C3EDA00743ECB /* UIImage+Utility.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F751C3F41A4C3EDB00743ECB /* UIImage+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C23A1A4C3EDA00743ECB /* UIImage+Utility.m */; };
-		F751C3F51A4C3EDB00743ECB /* UIImage+XHAnimatedFaceGif.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C23B1A4C3EDA00743ECB /* UIImage+XHAnimatedFaceGif.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C3F61A4C3EDB00743ECB /* UIImage+XHAnimatedFaceGif.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C23C1A4C3EDA00743ECB /* UIImage+XHAnimatedFaceGif.m */; };
 		F751C3F71A4C3EDB00743ECB /* UIImage+XHRounded.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C23D1A4C3EDA00743ECB /* UIImage+XHRounded.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F751C3F81A4C3EDB00743ECB /* UIImage+XHRounded.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C23E1A4C3EDA00743ECB /* UIImage+XHRounded.m */; };
 		F751C3F91A4C3EDB00743ECB /* UIScrollView+XHkeyboardControl.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C2401A4C3EDA00743ECB /* UIScrollView+XHkeyboardControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F751C3FA1A4C3EDB00743ECB /* UIScrollView+XHkeyboardControl.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C2411A4C3EDA00743ECB /* UIScrollView+XHkeyboardControl.m */; };
-		F751C3FB1A4C3EDB00743ECB /* UIView+XHBadgeView.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C2431A4C3EDA00743ECB /* UIView+XHBadgeView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C3FC1A4C3EDB00743ECB /* UIView+XHBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C2441A4C3EDA00743ECB /* UIView+XHBadgeView.m */; };
 		F751C3FD1A4C3EDB00743ECB /* UIView+XHRemoteImage.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C2451A4C3EDA00743ECB /* UIView+XHRemoteImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F751C3FE1A4C3EDB00743ECB /* UIView+XHRemoteImage.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C2461A4C3EDA00743ECB /* UIView+XHRemoteImage.m */; };
 		F751C3FF1A4C3EDB00743ECB /* XHAudioPlayerHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C2481A4C3EDA00743ECB /* XHAudioPlayerHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F751C4001A4C3EDB00743ECB /* XHAudioPlayerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C2491A4C3EDA00743ECB /* XHAudioPlayerHelper.m */; };
 		F751C4011A4C3EDB00743ECB /* XHCaptureHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C24A1A4C3EDA00743ECB /* XHCaptureHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F751C4021A4C3EDB00743ECB /* XHCaptureHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C24B1A4C3EDA00743ECB /* XHCaptureHelper.m */; };
-		F751C4031A4C3EDB00743ECB /* XHFoundationCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C24C1A4C3EDA00743ECB /* XHFoundationCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C4041A4C3EDB00743ECB /* XHFoundationCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C24D1A4C3EDA00743ECB /* XHFoundationCommon.m */; };
 		F751C4051A4C3EDB00743ECB /* XHLocationHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C24E1A4C3EDA00743ECB /* XHLocationHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F751C4061A4C3EDB00743ECB /* XHLocationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C24F1A4C3EDA00743ECB /* XHLocationHelper.m */; };
 		F751C4071A4C3EDB00743ECB /* XHMessageBubbleHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C2501A4C3EDA00743ECB /* XHMessageBubbleHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -51,36 +41,6 @@
 		F751C40C1A4C3EDB00743ECB /* XHVoiceCommonHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C2551A4C3EDA00743ECB /* XHVoiceCommonHelper.m */; };
 		F751C40D1A4C3EDB00743ECB /* XHVoiceRecordHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C2561A4C3EDA00743ECB /* XHVoiceRecordHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F751C40E1A4C3EDB00743ECB /* XHVoiceRecordHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C2571A4C3EDA00743ECB /* XHVoiceRecordHelper.m */; };
-		F751C40F1A4C3EDB00743ECB /* XHBaseNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C25A1A4C3EDA00743ECB /* XHBaseNavigationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C4101A4C3EDB00743ECB /* XHBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C25B1A4C3EDA00743ECB /* XHBaseNavigationController.m */; };
-		F751C4111A4C3EDB00743ECB /* XHBaseSearchTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C25D1A4C3EDA00743ECB /* XHBaseSearchTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C4121A4C3EDB00743ECB /* XHBaseSearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C25E1A4C3EDA00743ECB /* XHBaseSearchTableViewController.m */; };
-		F751C4131A4C3EDB00743ECB /* XHBaseTabBarController.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C2601A4C3EDA00743ECB /* XHBaseTabBarController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C4141A4C3EDB00743ECB /* XHBaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C2611A4C3EDA00743ECB /* XHBaseTabBarController.m */; };
-		F751C4151A4C3EDB00743ECB /* XHBaseTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C2631A4C3EDA00743ECB /* XHBaseTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C4161A4C3EDB00743ECB /* XHBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C2641A4C3EDA00743ECB /* XHBaseTableViewController.m */; };
-		F751C4171A4C3EDB00743ECB /* XHPullRefreshTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C2651A4C3EDA00743ECB /* XHPullRefreshTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C4181A4C3EDB00743ECB /* XHPullRefreshTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C2661A4C3EDA00743ECB /* XHPullRefreshTableViewController.m */; };
-		F751C4191A4C3EDB00743ECB /* XHBaseViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C2681A4C3EDA00743ECB /* XHBaseViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C41A1A4C3EDB00743ECB /* XHBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C2691A4C3EDA00743ECB /* XHBaseViewController.m */; };
-		F751C41B1A4C3EDB00743ECB /* XHContactDetailTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C26C1A4C3EDA00743ECB /* XHContactDetailTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C41C1A4C3EDB00743ECB /* XHContactDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C26D1A4C3EDA00743ECB /* XHContactDetailTableViewController.m */; };
-		F751C41D1A4C3EDB00743ECB /* XHContactTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C26E1A4C3EDA00743ECB /* XHContactTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C41E1A4C3EDB00743ECB /* XHContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C26F1A4C3EDA00743ECB /* XHContactTableViewController.m */; };
-		F751C41F1A4C3EDB00743ECB /* XHAlbumTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C2721A4C3EDA00743ECB /* XHAlbumTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C4201A4C3EDB00743ECB /* XHAlbumTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C2731A4C3EDA00743ECB /* XHAlbumTableViewController.m */; };
-		F751C4211A4C3EDB00743ECB /* XHBottleViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C2751A4C3EDA00743ECB /* XHBottleViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C4221A4C3EDB00743ECB /* XHBottleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C2761A4C3EDA00743ECB /* XHBottleViewController.m */; };
-		F751C4231A4C3EDB00743ECB /* XHDiscoverTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C2771A4C3EDA00743ECB /* XHDiscoverTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C4241A4C3EDB00743ECB /* XHDiscoverTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C2781A4C3EDA00743ECB /* XHDiscoverTableViewController.m */; };
-		F751C4251A4C3EDB00743ECB /* XHLocationServiceTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C27A1A4C3EDA00743ECB /* XHLocationServiceTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C4261A4C3EDB00743ECB /* XHLocationServiceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C27B1A4C3EDA00743ECB /* XHLocationServiceTableViewController.m */; };
-		F751C4271A4C3EDB00743ECB /* XHMoreGameTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C27D1A4C3EDA00743ECB /* XHMoreGameTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C4281A4C3EDB00743ECB /* XHMoreGameTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C27E1A4C3EDA00743ECB /* XHMoreGameTableViewController.m */; };
-		F751C4291A4C3EDB00743ECB /* XHQRCodeViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C2801A4C3EDA00743ECB /* XHQRCodeViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C42A1A4C3EDB00743ECB /* XHQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C2811A4C3EDA00743ECB /* XHQRCodeViewController.m */; };
-		F751C42B1A4C3EDB00743ECB /* XHShakeViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C2831A4C3EDA00743ECB /* XHShakeViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C42C1A4C3EDB00743ECB /* XHShakeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C2841A4C3EDA00743ECB /* XHShakeViewController.m */; };
 		F751C42D1A4C3EDB00743ECB /* XHDisplayEmotionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C2871A4C3EDA00743ECB /* XHDisplayEmotionViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F751C42E1A4C3EDB00743ECB /* XHDisplayEmotionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C2881A4C3EDA00743ECB /* XHDisplayEmotionViewController.m */; };
 		F751C42F1A4C3EDB00743ECB /* XHDisplayLocationViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C28A1A4C3EDA00743ECB /* XHDisplayLocationViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -91,26 +51,6 @@
 		F751C4341A4C3EDB00743ECB /* XHDisplayTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C2911A4C3EDA00743ECB /* XHDisplayTextViewController.m */; };
 		F751C4351A4C3EDB00743ECB /* XHMessageTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C2921A4C3EDA00743ECB /* XHMessageTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F751C4361A4C3EDB00743ECB /* XHMessageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C2931A4C3EDA00743ECB /* XHMessageTableViewController.m */; };
-		F751C4371A4C3EDB00743ECB /* XHMultipleSectionTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C2951A4C3EDA00743ECB /* XHMultipleSectionTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C4381A4C3EDB00743ECB /* XHMultipleSectionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C2961A4C3EDA00743ECB /* XHMultipleSectionTableViewController.m */; };
-		F751C4391A4C3EDB00743ECB /* XHNewsTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C2981A4C3EDA00743ECB /* XHNewsTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C43A1A4C3EDB00743ECB /* XHNewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C2991A4C3EDA00743ECB /* XHNewsTableViewController.m */; };
-		F751C43B1A4C3EDB00743ECB /* XHExpressionDetailTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C29C1A4C3EDB00743ECB /* XHExpressionDetailTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C43C1A4C3EDB00743ECB /* XHExpressionDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C29D1A4C3EDB00743ECB /* XHExpressionDetailTableViewController.m */; };
-		F751C43D1A4C3EDB00743ECB /* XHMoreExpressionShopsTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C29E1A4C3EDB00743ECB /* XHMoreExpressionShopsTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C43E1A4C3EDB00743ECB /* XHMoreExpressionShopsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C29F1A4C3EDB00743ECB /* XHMoreExpressionShopsTableViewController.m */; };
-		F751C43F1A4C3EDB00743ECB /* XHMoreMyAlbumTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C2A11A4C3EDB00743ECB /* XHMoreMyAlbumTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C4401A4C3EDB00743ECB /* XHMoreMyAlbumTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C2A21A4C3EDB00743ECB /* XHMoreMyAlbumTableViewController.m */; };
-		F751C4411A4C3EDB00743ECB /* XHMoreMyBankCardTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C2A41A4C3EDB00743ECB /* XHMoreMyBankCardTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C4421A4C3EDB00743ECB /* XHMoreMyBankCardTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C2A51A4C3EDB00743ECB /* XHMoreMyBankCardTableViewController.m */; };
-		F751C4431A4C3EDB00743ECB /* XHMoreMyFavoritesTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C2A71A4C3EDB00743ECB /* XHMoreMyFavoritesTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C4441A4C3EDB00743ECB /* XHMoreMyFavoritesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C2A81A4C3EDB00743ECB /* XHMoreMyFavoritesTableViewController.m */; };
-		F751C4451A4C3EDB00743ECB /* XHMoreMyProfileDetailTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C2AA1A4C3EDB00743ECB /* XHMoreMyProfileDetailTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C4461A4C3EDB00743ECB /* XHMoreMyProfileDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C2AB1A4C3EDB00743ECB /* XHMoreMyProfileDetailTableViewController.m */; };
-		F751C4471A4C3EDB00743ECB /* XHMoreSettingTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C2AD1A4C3EDB00743ECB /* XHMoreSettingTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C4481A4C3EDB00743ECB /* XHMoreSettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C2AE1A4C3EDB00743ECB /* XHMoreSettingTableViewController.m */; };
-		F751C4491A4C3EDB00743ECB /* XHProfileTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C2AF1A4C3EDB00743ECB /* XHProfileTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C44A1A4C3EDB00743ECB /* XHProfileTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C2B01A4C3EDB00743ECB /* XHProfileTableViewController.m */; };
 		F751C44B1A4C3EDB00743ECB /* XHCacheManager.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C2B31A4C3EDB00743ECB /* XHCacheManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F751C44C1A4C3EDB00743ECB /* XHCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C2B41A4C3EDB00743ECB /* XHCacheManager.m */; };
 		F751C44D1A4C3EDB00743ECB /* XHFileAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C2B51A4C3EDB00743ECB /* XHFileAttribute.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -132,12 +72,8 @@
 		F751C45D1A4C3EDB00743ECB /* XHFoundationMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C2C81A4C3EDB00743ECB /* XHFoundationMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F751C45E1A4C3EDB00743ECB /* XHMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C2C91A4C3EDB00743ECB /* XHMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F751C45F1A4C3EDB00743ECB /* XHUIKitMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C2CA1A4C3EDB00743ECB /* XHUIKitMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C4601A4C3EDB00743ECB /* XHAlbum.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C2CC1A4C3EDB00743ECB /* XHAlbum.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C4611A4C3EDB00743ECB /* XHAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C2CD1A4C3EDB00743ECB /* XHAlbum.m */; };
 		F751C4621A4C3EDB00743ECB /* XHAnnotation.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C2CE1A4C3EDB00743ECB /* XHAnnotation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F751C4631A4C3EDB00743ECB /* XHAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C2CF1A4C3EDB00743ECB /* XHAnnotation.m */; };
-		F751C4641A4C3EDB00743ECB /* XHContact.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C2D01A4C3EDB00743ECB /* XHContact.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C4651A4C3EDB00743ECB /* XHContact.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C2D11A4C3EDB00743ECB /* XHContact.m */; };
 		F751C4661A4C3EDB00743ECB /* XHEmotion.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C2D21A4C3EDB00743ECB /* XHEmotion.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F751C4671A4C3EDB00743ECB /* XHEmotion.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C2D31A4C3EDB00743ECB /* XHEmotion.m */; };
 		F751C4681A4C3EDB00743ECB /* XHEmotionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C2D41A4C3EDB00743ECB /* XHEmotionManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -147,33 +83,10 @@
 		F751C46C1A4C3EDB00743ECB /* XHMessageModel.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C2D81A4C3EDB00743ECB /* XHMessageModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F751C46D1A4C3EDB00743ECB /* XHShareMenuItem.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C2D91A4C3EDB00743ECB /* XHShareMenuItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F751C46E1A4C3EDB00743ECB /* XHShareMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C2DA1A4C3EDB00743ECB /* XHShareMenuItem.m */; };
-		F751C46F1A4C3EDB00743ECB /* XHStoreManager.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C2DB1A4C3EDB00743ECB /* XHStoreManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C4701A4C3EDB00743ECB /* XHStoreManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C2DC1A4C3EDB00743ECB /* XHStoreManager.m */; };
 		F751C4711A4C3EDB00743ECB /* FLAnimatedImage.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C2DF1A4C3EDB00743ECB /* FLAnimatedImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F751C4721A4C3EDB00743ECB /* FLAnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C2E01A4C3EDB00743ECB /* FLAnimatedImage.m */; };
 		F751C4731A4C3EDB00743ECB /* FLAnimatedImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C2E11A4C3EDB00743ECB /* FLAnimatedImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F751C4741A4C3EDB00743ECB /* FLAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C2E21A4C3EDB00743ECB /* FLAnimatedImageView.m */; };
-		F751C4751A4C3EDB00743ECB /* LKBadgeView.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C2E41A4C3EDB00743ECB /* LKBadgeView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C4761A4C3EDB00743ECB /* LKBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C2E51A4C3EDB00743ECB /* LKBadgeView.m */; };
-		F751C4771A4C3EDB00743ECB /* MLLetterIndexNavigationItem.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C2E81A4C3EDB00743ECB /* MLLetterIndexNavigationItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C4781A4C3EDB00743ECB /* MLLetterIndexNavigationItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C2E91A4C3EDB00743ECB /* MLLetterIndexNavigationItem.m */; };
-		F751C4791A4C3EDB00743ECB /* MLLetterIndexNavigationView.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C2EA1A4C3EDB00743ECB /* MLLetterIndexNavigationView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C47A1A4C3EDB00743ECB /* MLLetterIndexNavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C2EB1A4C3EDB00743ECB /* MLLetterIndexNavigationView.m */; };
-		F751C47B1A4C3EDB00743ECB /* MultiSelectedPanel.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C2ED1A4C3EDB00743ECB /* MultiSelectedPanel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C47C1A4C3EDB00743ECB /* MultiSelectedPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C2EE1A4C3EDB00743ECB /* MultiSelectedPanel.m */; };
-		F751C47D1A4C3EDB00743ECB /* MultiSelectedPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = F751C2EF1A4C3EDB00743ECB /* MultiSelectedPanel.xib */; };
-		F751C47E1A4C3EDB00743ECB /* MultiSelectItem.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C2F01A4C3EDB00743ECB /* MultiSelectItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C47F1A4C3EDB00743ECB /* MultiSelectItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C2F11A4C3EDB00743ECB /* MultiSelectItem.m */; };
-		F751C4801A4C3EDB00743ECB /* MultiSelectSearchResultTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C2F21A4C3EDB00743ECB /* MultiSelectSearchResultTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C4811A4C3EDB00743ECB /* MultiSelectSearchResultTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C2F31A4C3EDB00743ECB /* MultiSelectSearchResultTableViewCell.m */; };
-		F751C4821A4C3EDB00743ECB /* MultiSelectSearchResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F751C2F41A4C3EDB00743ECB /* MultiSelectSearchResultTableViewCell.xib */; };
-		F751C4831A4C3EDB00743ECB /* MultiSelectTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C2F51A4C3EDB00743ECB /* MultiSelectTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C4841A4C3EDB00743ECB /* MultiSelectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C2F61A4C3EDB00743ECB /* MultiSelectTableViewCell.m */; };
-		F751C4851A4C3EDB00743ECB /* MultiSelectTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F751C2F71A4C3EDB00743ECB /* MultiSelectTableViewCell.xib */; };
-		F751C4861A4C3EDB00743ECB /* MultiSelectViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C2F81A4C3EDB00743ECB /* MultiSelectViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C4871A4C3EDB00743ECB /* MultiSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C2F91A4C3EDB00743ECB /* MultiSelectViewController.m */; };
-		F751C4881A4C3EDB00743ECB /* UIView+Convenience.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C2FA1A4C3EDB00743ECB /* UIView+Convenience.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C4891A4C3EDB00743ECB /* UIView+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C2FB1A4C3EDB00743ECB /* UIView+Convenience.m */; };
 		F751C48A1A4C3EDB00743ECB /* NSMutableAttributedString+Helper.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C2FD1A4C3EDB00743ECB /* NSMutableAttributedString+Helper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F751C48B1A4C3EDB00743ECB /* NSMutableAttributedString+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C2FE1A4C3EDB00743ECB /* NSMutableAttributedString+Helper.m */; };
 		F751C48C1A4C3EDB00743ECB /* SECompatibility.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C2FF1A4C3EDB00743ECB /* SECompatibility.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -206,48 +119,8 @@
 		F751C4A71A4C3EDB00743ECB /* SETextSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C31A1A4C3EDB00743ECB /* SETextSelectionView.m */; };
 		F751C4A81A4C3EDB00743ECB /* SETextView.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C31B1A4C3EDB00743ECB /* SETextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F751C4A91A4C3EDB00743ECB /* SETextView.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C31C1A4C3EDB00743ECB /* SETextView.m */; };
-		F751C4AA1A4C3EDB00743ECB /* XHImageViewer.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C31E1A4C3EDB00743ECB /* XHImageViewer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C4AB1A4C3EDB00743ECB /* XHImageViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C31F1A4C3EDB00743ECB /* XHImageViewer.m */; };
-		F751C4AC1A4C3EDB00743ECB /* XHViewState.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C3201A4C3EDB00743ECB /* XHViewState.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C4AD1A4C3EDB00743ECB /* XHViewState.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C3211A4C3EDB00743ECB /* XHViewState.m */; };
-		F751C4AE1A4C3EDB00743ECB /* XHZoomingImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C3221A4C3EDB00743ECB /* XHZoomingImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C4AF1A4C3EDB00743ECB /* XHZoomingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C3231A4C3EDB00743ECB /* XHZoomingImageView.m */; };
-		F751C4B01A4C3EDB00743ECB /* XHPathCover.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C3251A4C3EDB00743ECB /* XHPathCover.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C4B11A4C3EDB00743ECB /* XHPathCover.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C3261A4C3EDB00743ECB /* XHPathCover.m */; };
-		F751C4B21A4C3EDB00743ECB /* XHSoundManager.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C3271A4C3EDB00743ECB /* XHSoundManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C4B31A4C3EDB00743ECB /* XHSoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C3281A4C3EDB00743ECB /* XHSoundManager.m */; };
-		F751C4B41A4C3EDB00743ECB /* XHWaterDropRefresh.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C3291A4C3EDB00743ECB /* XHWaterDropRefresh.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C4B51A4C3EDB00743ECB /* XHWaterDropRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C32A1A4C3EDB00743ECB /* XHWaterDropRefresh.m */; };
-		F751C4B61A4C3EDB00743ECB /* XHAlbumCollectionViewFlowLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C32D1A4C3EDB00743ECB /* XHAlbumCollectionViewFlowLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C4B71A4C3EDB00743ECB /* XHAlbumCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C32E1A4C3EDB00743ECB /* XHAlbumCollectionViewFlowLayout.m */; };
-		F751C4B81A4C3EDB00743ECB /* XHAlbumPhotoCollectionViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C32F1A4C3EDB00743ECB /* XHAlbumPhotoCollectionViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C4B91A4C3EDB00743ECB /* XHAlbumPhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C3301A4C3EDB00743ECB /* XHAlbumPhotoCollectionViewCell.m */; };
-		F751C4BA1A4C3EDB00743ECB /* XHAlbumRichTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C3311A4C3EDB00743ECB /* XHAlbumRichTextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C4BB1A4C3EDB00743ECB /* XHAlbumRichTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C3321A4C3EDB00743ECB /* XHAlbumRichTextView.m */; };
-		F751C4BC1A4C3EDB00743ECB /* XHAlbumTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C3331A4C3EDB00743ECB /* XHAlbumTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C4BD1A4C3EDB00743ECB /* XHAlbumTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C3341A4C3EDB00743ECB /* XHAlbumTableViewCell.m */; };
-		F751C4BE1A4C3EDB00743ECB /* XHBaseCollectionViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C3361A4C3EDB00743ECB /* XHBaseCollectionViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C4BF1A4C3EDB00743ECB /* XHBaseCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C3371A4C3EDB00743ECB /* XHBaseCollectionViewCell.m */; };
 		F751C4C01A4C3EDB00743ECB /* XHBaseTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C3391A4C3EDB00743ECB /* XHBaseTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F751C4C11A4C3EDB00743ECB /* XHBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C33A1A4C3EDB00743ECB /* XHBaseTableViewCell.m */; };
-		F751C4C21A4C3EDB00743ECB /* XHContactCommunicationView.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C33C1A4C3EDB00743ECB /* XHContactCommunicationView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C4C31A4C3EDB00743ECB /* XHContactCommunicationView.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C33D1A4C3EDB00743ECB /* XHContactCommunicationView.m */; };
-		F751C4C41A4C3EDB00743ECB /* XHContactPhotosTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C33E1A4C3EDB00743ECB /* XHContactPhotosTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C4C51A4C3EDB00743ECB /* XHContactPhotosTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C33F1A4C3EDB00743ECB /* XHContactPhotosTableViewCell.m */; };
-		F751C4C61A4C3EDB00743ECB /* XHContactPhotosView.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C3401A4C3EDB00743ECB /* XHContactPhotosView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C4C71A4C3EDB00743ECB /* XHContactPhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C3411A4C3EDB00743ECB /* XHContactPhotosView.m */; };
-		F751C4C81A4C3EDB00743ECB /* XHContactTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C3421A4C3EDB00743ECB /* XHContactTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C4C91A4C3EDB00743ECB /* XHContactTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C3431A4C3EDB00743ECB /* XHContactTableViewCell.m */; };
-		F751C4CA1A4C3EDB00743ECB /* XHContactView.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C3441A4C3EDB00743ECB /* XHContactView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C4CB1A4C3EDB00743ECB /* XHContactView.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C3451A4C3EDB00743ECB /* XHContactView.m */; };
-		F751C4CC1A4C3EDB00743ECB /* XHHorizontalGridItem.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C3471A4C3EDB00743ECB /* XHHorizontalGridItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C4CD1A4C3EDB00743ECB /* XHHorizontalGridItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C3481A4C3EDB00743ECB /* XHHorizontalGridItem.m */; };
-		F751C4CE1A4C3EDB00743ECB /* XHHorizontalGridItemView.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C3491A4C3EDB00743ECB /* XHHorizontalGridItemView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C4CF1A4C3EDB00743ECB /* XHHorizontalGridItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C34A1A4C3EDB00743ECB /* XHHorizontalGridItemView.m */; };
-		F751C4D01A4C3EDB00743ECB /* XHHorizontalGridView.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C34B1A4C3EDB00743ECB /* XHHorizontalGridView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C4D11A4C3EDB00743ECB /* XHHorizontalGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C34C1A4C3EDB00743ECB /* XHHorizontalGridView.m */; };
-		F751C4D21A4C3EDB00743ECB /* XHLocationServiceTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C34E1A4C3EDB00743ECB /* XHLocationServiceTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C4D31A4C3EDB00743ECB /* XHLocationServiceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C34F1A4C3EDB00743ECB /* XHLocationServiceTableViewCell.m */; };
 		F751C4D41A4C3EDB00743ECB /* XHBubblePhotoImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C3511A4C3EDB00743ECB /* XHBubblePhotoImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F751C4D51A4C3EDB00743ECB /* XHBubblePhotoImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C3521A4C3EDB00743ECB /* XHBubblePhotoImageView.m */; };
 		F751C4D61A4C3EDB00743ECB /* XHMessageBubbleView.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C3531A4C3EDB00743ECB /* XHMessageBubbleView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -272,30 +145,6 @@
 		F751C4E91A4C3EDB00743ECB /* XHEmotionSectionBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C3681A4C3EDB00743ECB /* XHEmotionSectionBar.m */; };
 		F751C4EA1A4C3EDB00743ECB /* XHShareMenuView.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C3691A4C3EDB00743ECB /* XHShareMenuView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F751C4EB1A4C3EDB00743ECB /* XHShareMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C36A1A4C3EDB00743ECB /* XHShareMenuView.m */; };
-		F751C4EC1A4C3EDB00743ECB /* XHMoreExpressionShopsTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C36C1A4C3EDB00743ECB /* XHMoreExpressionShopsTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C4ED1A4C3EDB00743ECB /* XHMoreExpressionShopsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C36D1A4C3EDB00743ECB /* XHMoreExpressionShopsTableViewCell.m */; };
-		F751C4EE1A4C3EDB00743ECB /* XHNewsContainerView.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C36F1A4C3EDB00743ECB /* XHNewsContainerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C4EF1A4C3EDB00743ECB /* XHNewsContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C3701A4C3EDB00743ECB /* XHNewsContainerView.m */; };
-		F751C4F01A4C3EDB00743ECB /* XHNewsTemplateContainerView.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C3711A4C3EDB00743ECB /* XHNewsTemplateContainerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C4F11A4C3EDB00743ECB /* XHNewsTemplateContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C3721A4C3EDB00743ECB /* XHNewsTemplateContainerView.m */; };
-		F751C4F21A4C3EDB00743ECB /* XHNewsTemplateTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C3731A4C3EDB00743ECB /* XHNewsTemplateTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C4F31A4C3EDB00743ECB /* XHNewsTemplateTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C3741A4C3EDB00743ECB /* XHNewsTemplateTableViewCell.m */; };
-		F751C4F41A4C3EDB00743ECB /* XHPopMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C3761A4C3EDB00743ECB /* XHPopMenu.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C4F51A4C3EDB00743ECB /* XHPopMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C3771A4C3EDB00743ECB /* XHPopMenu.m */; };
-		F751C4F61A4C3EDB00743ECB /* XHPopMenuItem.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C3781A4C3EDB00743ECB /* XHPopMenuItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C4F71A4C3EDB00743ECB /* XHPopMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C3791A4C3EDB00743ECB /* XHPopMenuItem.m */; };
-		F751C4F81A4C3EDB00743ECB /* XHPopMenuItemView.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C37A1A4C3EDB00743ECB /* XHPopMenuItemView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C4F91A4C3EDB00743ECB /* XHPopMenuItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C37B1A4C3EDB00743ECB /* XHPopMenuItemView.m */; };
-		F751C4FA1A4C3EDB00743ECB /* XHLoadMoreView.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C37D1A4C3EDB00743ECB /* XHLoadMoreView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C4FB1A4C3EDB00743ECB /* XHLoadMoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C37E1A4C3EDB00743ECB /* XHLoadMoreView.m */; };
-		F751C4FC1A4C3EDB00743ECB /* XHRefreshCircleView.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C37F1A4C3EDB00743ECB /* XHRefreshCircleView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C4FD1A4C3EDB00743ECB /* XHRefreshCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C3801A4C3EDB00743ECB /* XHRefreshCircleView.m */; };
-		F751C4FE1A4C3EDB00743ECB /* XHRefreshControl.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C3811A4C3EDB00743ECB /* XHRefreshControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C4FF1A4C3EDB00743ECB /* XHRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C3821A4C3EDB00743ECB /* XHRefreshControl.m */; };
-		F751C5001A4C3EDB00743ECB /* XHRefreshView.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C3831A4C3EDB00743ECB /* XHRefreshView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C5011A4C3EDB00743ECB /* XHRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C3841A4C3EDB00743ECB /* XHRefreshView.m */; };
-		F751C5021A4C3EDB00743ECB /* XHScanningView.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C3861A4C3EDB00743ECB /* XHScanningView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C5031A4C3EDB00743ECB /* XHScanningView.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C3871A4C3EDB00743ECB /* XHScanningView.m */; };
 		F751C5041A4C3EDB00743ECB /* AddGroupMemberBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F751C3891A4C3EDB00743ECB /* AddGroupMemberBtn@2x.png */; };
 		F751C5051A4C3EDB00743ECB /* AddGroupMemberBtnHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F751C38A1A4C3EDB00743ECB /* AddGroupMemberBtnHL@2x.png */; };
 		F751C5061A4C3EDB00743ECB /* avator@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F751C38B1A4C3EDB00743ECB /* avator@2x.png */; };
@@ -389,6 +238,8 @@
 		F751C7AB1A4C402000743ECB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F751C7AA1A4C402000743ECB /* UIKit.framework */; };
 		F751C7AD1A4C402400743ECB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F751C7AC1A4C402400743ECB /* Foundation.framework */; };
 		F751C7B01A4C407800743ECB /* MessageDisplayKit-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = F751C7AF1A4C407800743ECB /* MessageDisplayKit-Prefix.pch */; settings = {ATTRIBUTES = (Public, ); }; };
+		F7D253471A4D32B30015764B /* LKBadgeView.h in Headers */ = {isa = PBXBuildFile; fileRef = F7D253451A4D32B30015764B /* LKBadgeView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F7D253481A4D32B30015764B /* LKBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D253461A4D32B30015764B /* LKBadgeView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -409,12 +260,8 @@
 		F751C1F71A4C3E1B00743ECB /* MessageDisplayKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageDisplayKitTests.m; sourceTree = "<group>"; };
 		F751C2291A4C3EDA00743ECB /* NSString+MessageInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MessageInputView.h"; sourceTree = "<group>"; };
 		F751C22A1A4C3EDA00743ECB /* NSString+MessageInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MessageInputView.m"; sourceTree = "<group>"; };
-		F751C22B1A4C3EDA00743ECB /* NSString+XHDiskSizeTransfrom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+XHDiskSizeTransfrom.h"; sourceTree = "<group>"; };
-		F751C22C1A4C3EDA00743ECB /* NSString+XHDiskSizeTransfrom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+XHDiskSizeTransfrom.m"; sourceTree = "<group>"; };
 		F751C22D1A4C3EDA00743ECB /* NSString+XHMD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+XHMD5.h"; sourceTree = "<group>"; };
 		F751C22E1A4C3EDA00743ECB /* NSString+XHMD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+XHMD5.m"; sourceTree = "<group>"; };
-		F751C2301A4C3EDA00743ECB /* UIButton+XHButtonTitlePosition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+XHButtonTitlePosition.h"; sourceTree = "<group>"; };
-		F751C2311A4C3EDA00743ECB /* UIButton+XHButtonTitlePosition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+XHButtonTitlePosition.m"; sourceTree = "<group>"; };
 		F751C2331A4C3EDA00743ECB /* UIImage+Alpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Alpha.h"; sourceTree = "<group>"; };
 		F751C2341A4C3EDA00743ECB /* UIImage+Alpha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Alpha.m"; sourceTree = "<group>"; };
 		F751C2351A4C3EDA00743ECB /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
@@ -423,22 +270,16 @@
 		F751C2381A4C3EDA00743ECB /* UIImage+RoundedCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RoundedCorner.m"; sourceTree = "<group>"; };
 		F751C2391A4C3EDA00743ECB /* UIImage+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Utility.h"; sourceTree = "<group>"; };
 		F751C23A1A4C3EDA00743ECB /* UIImage+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Utility.m"; sourceTree = "<group>"; };
-		F751C23B1A4C3EDA00743ECB /* UIImage+XHAnimatedFaceGif.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+XHAnimatedFaceGif.h"; sourceTree = "<group>"; };
-		F751C23C1A4C3EDA00743ECB /* UIImage+XHAnimatedFaceGif.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+XHAnimatedFaceGif.m"; sourceTree = "<group>"; };
 		F751C23D1A4C3EDA00743ECB /* UIImage+XHRounded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+XHRounded.h"; sourceTree = "<group>"; };
 		F751C23E1A4C3EDA00743ECB /* UIImage+XHRounded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+XHRounded.m"; sourceTree = "<group>"; };
 		F751C2401A4C3EDA00743ECB /* UIScrollView+XHkeyboardControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+XHkeyboardControl.h"; sourceTree = "<group>"; };
 		F751C2411A4C3EDA00743ECB /* UIScrollView+XHkeyboardControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+XHkeyboardControl.m"; sourceTree = "<group>"; };
-		F751C2431A4C3EDA00743ECB /* UIView+XHBadgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XHBadgeView.h"; sourceTree = "<group>"; };
-		F751C2441A4C3EDA00743ECB /* UIView+XHBadgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XHBadgeView.m"; sourceTree = "<group>"; };
 		F751C2451A4C3EDA00743ECB /* UIView+XHRemoteImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XHRemoteImage.h"; sourceTree = "<group>"; };
 		F751C2461A4C3EDA00743ECB /* UIView+XHRemoteImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XHRemoteImage.m"; sourceTree = "<group>"; };
 		F751C2481A4C3EDA00743ECB /* XHAudioPlayerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHAudioPlayerHelper.h; sourceTree = "<group>"; };
 		F751C2491A4C3EDA00743ECB /* XHAudioPlayerHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHAudioPlayerHelper.m; sourceTree = "<group>"; };
 		F751C24A1A4C3EDA00743ECB /* XHCaptureHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHCaptureHelper.h; sourceTree = "<group>"; };
 		F751C24B1A4C3EDA00743ECB /* XHCaptureHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHCaptureHelper.m; sourceTree = "<group>"; };
-		F751C24C1A4C3EDA00743ECB /* XHFoundationCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHFoundationCommon.h; sourceTree = "<group>"; };
-		F751C24D1A4C3EDA00743ECB /* XHFoundationCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHFoundationCommon.m; sourceTree = "<group>"; };
 		F751C24E1A4C3EDA00743ECB /* XHLocationHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLocationHelper.h; sourceTree = "<group>"; };
 		F751C24F1A4C3EDA00743ECB /* XHLocationHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHLocationHelper.m; sourceTree = "<group>"; };
 		F751C2501A4C3EDA00743ECB /* XHMessageBubbleHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMessageBubbleHelper.h; sourceTree = "<group>"; };
@@ -449,36 +290,6 @@
 		F751C2551A4C3EDA00743ECB /* XHVoiceCommonHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHVoiceCommonHelper.m; sourceTree = "<group>"; };
 		F751C2561A4C3EDA00743ECB /* XHVoiceRecordHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHVoiceRecordHelper.h; sourceTree = "<group>"; };
 		F751C2571A4C3EDA00743ECB /* XHVoiceRecordHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHVoiceRecordHelper.m; sourceTree = "<group>"; };
-		F751C25A1A4C3EDA00743ECB /* XHBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHBaseNavigationController.h; sourceTree = "<group>"; };
-		F751C25B1A4C3EDA00743ECB /* XHBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHBaseNavigationController.m; sourceTree = "<group>"; };
-		F751C25D1A4C3EDA00743ECB /* XHBaseSearchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHBaseSearchTableViewController.h; sourceTree = "<group>"; };
-		F751C25E1A4C3EDA00743ECB /* XHBaseSearchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHBaseSearchTableViewController.m; sourceTree = "<group>"; };
-		F751C2601A4C3EDA00743ECB /* XHBaseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHBaseTabBarController.h; sourceTree = "<group>"; };
-		F751C2611A4C3EDA00743ECB /* XHBaseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHBaseTabBarController.m; sourceTree = "<group>"; };
-		F751C2631A4C3EDA00743ECB /* XHBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHBaseTableViewController.h; sourceTree = "<group>"; };
-		F751C2641A4C3EDA00743ECB /* XHBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHBaseTableViewController.m; sourceTree = "<group>"; };
-		F751C2651A4C3EDA00743ECB /* XHPullRefreshTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHPullRefreshTableViewController.h; sourceTree = "<group>"; };
-		F751C2661A4C3EDA00743ECB /* XHPullRefreshTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHPullRefreshTableViewController.m; sourceTree = "<group>"; };
-		F751C2681A4C3EDA00743ECB /* XHBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHBaseViewController.h; sourceTree = "<group>"; };
-		F751C2691A4C3EDA00743ECB /* XHBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHBaseViewController.m; sourceTree = "<group>"; };
-		F751C26C1A4C3EDA00743ECB /* XHContactDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHContactDetailTableViewController.h; sourceTree = "<group>"; };
-		F751C26D1A4C3EDA00743ECB /* XHContactDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHContactDetailTableViewController.m; sourceTree = "<group>"; };
-		F751C26E1A4C3EDA00743ECB /* XHContactTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHContactTableViewController.h; sourceTree = "<group>"; };
-		F751C26F1A4C3EDA00743ECB /* XHContactTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHContactTableViewController.m; sourceTree = "<group>"; };
-		F751C2721A4C3EDA00743ECB /* XHAlbumTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHAlbumTableViewController.h; sourceTree = "<group>"; };
-		F751C2731A4C3EDA00743ECB /* XHAlbumTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHAlbumTableViewController.m; sourceTree = "<group>"; };
-		F751C2751A4C3EDA00743ECB /* XHBottleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHBottleViewController.h; sourceTree = "<group>"; };
-		F751C2761A4C3EDA00743ECB /* XHBottleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHBottleViewController.m; sourceTree = "<group>"; };
-		F751C2771A4C3EDA00743ECB /* XHDiscoverTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHDiscoverTableViewController.h; sourceTree = "<group>"; };
-		F751C2781A4C3EDA00743ECB /* XHDiscoverTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHDiscoverTableViewController.m; sourceTree = "<group>"; };
-		F751C27A1A4C3EDA00743ECB /* XHLocationServiceTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLocationServiceTableViewController.h; sourceTree = "<group>"; };
-		F751C27B1A4C3EDA00743ECB /* XHLocationServiceTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHLocationServiceTableViewController.m; sourceTree = "<group>"; };
-		F751C27D1A4C3EDA00743ECB /* XHMoreGameTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMoreGameTableViewController.h; sourceTree = "<group>"; };
-		F751C27E1A4C3EDA00743ECB /* XHMoreGameTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMoreGameTableViewController.m; sourceTree = "<group>"; };
-		F751C2801A4C3EDA00743ECB /* XHQRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHQRCodeViewController.h; sourceTree = "<group>"; };
-		F751C2811A4C3EDA00743ECB /* XHQRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHQRCodeViewController.m; sourceTree = "<group>"; };
-		F751C2831A4C3EDA00743ECB /* XHShakeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHShakeViewController.h; sourceTree = "<group>"; };
-		F751C2841A4C3EDA00743ECB /* XHShakeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHShakeViewController.m; sourceTree = "<group>"; };
 		F751C2871A4C3EDA00743ECB /* XHDisplayEmotionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHDisplayEmotionViewController.h; sourceTree = "<group>"; };
 		F751C2881A4C3EDA00743ECB /* XHDisplayEmotionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHDisplayEmotionViewController.m; sourceTree = "<group>"; };
 		F751C28A1A4C3EDA00743ECB /* XHDisplayLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHDisplayLocationViewController.h; sourceTree = "<group>"; };
@@ -489,26 +300,6 @@
 		F751C2911A4C3EDA00743ECB /* XHDisplayTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHDisplayTextViewController.m; sourceTree = "<group>"; };
 		F751C2921A4C3EDA00743ECB /* XHMessageTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMessageTableViewController.h; sourceTree = "<group>"; };
 		F751C2931A4C3EDA00743ECB /* XHMessageTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMessageTableViewController.m; sourceTree = "<group>"; };
-		F751C2951A4C3EDA00743ECB /* XHMultipleSectionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMultipleSectionTableViewController.h; sourceTree = "<group>"; };
-		F751C2961A4C3EDA00743ECB /* XHMultipleSectionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMultipleSectionTableViewController.m; sourceTree = "<group>"; };
-		F751C2981A4C3EDA00743ECB /* XHNewsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHNewsTableViewController.h; sourceTree = "<group>"; };
-		F751C2991A4C3EDA00743ECB /* XHNewsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHNewsTableViewController.m; sourceTree = "<group>"; };
-		F751C29C1A4C3EDB00743ECB /* XHExpressionDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHExpressionDetailTableViewController.h; sourceTree = "<group>"; };
-		F751C29D1A4C3EDB00743ECB /* XHExpressionDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHExpressionDetailTableViewController.m; sourceTree = "<group>"; };
-		F751C29E1A4C3EDB00743ECB /* XHMoreExpressionShopsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMoreExpressionShopsTableViewController.h; sourceTree = "<group>"; };
-		F751C29F1A4C3EDB00743ECB /* XHMoreExpressionShopsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMoreExpressionShopsTableViewController.m; sourceTree = "<group>"; };
-		F751C2A11A4C3EDB00743ECB /* XHMoreMyAlbumTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMoreMyAlbumTableViewController.h; sourceTree = "<group>"; };
-		F751C2A21A4C3EDB00743ECB /* XHMoreMyAlbumTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMoreMyAlbumTableViewController.m; sourceTree = "<group>"; };
-		F751C2A41A4C3EDB00743ECB /* XHMoreMyBankCardTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMoreMyBankCardTableViewController.h; sourceTree = "<group>"; };
-		F751C2A51A4C3EDB00743ECB /* XHMoreMyBankCardTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMoreMyBankCardTableViewController.m; sourceTree = "<group>"; };
-		F751C2A71A4C3EDB00743ECB /* XHMoreMyFavoritesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMoreMyFavoritesTableViewController.h; sourceTree = "<group>"; };
-		F751C2A81A4C3EDB00743ECB /* XHMoreMyFavoritesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMoreMyFavoritesTableViewController.m; sourceTree = "<group>"; };
-		F751C2AA1A4C3EDB00743ECB /* XHMoreMyProfileDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMoreMyProfileDetailTableViewController.h; sourceTree = "<group>"; };
-		F751C2AB1A4C3EDB00743ECB /* XHMoreMyProfileDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMoreMyProfileDetailTableViewController.m; sourceTree = "<group>"; };
-		F751C2AD1A4C3EDB00743ECB /* XHMoreSettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMoreSettingTableViewController.h; sourceTree = "<group>"; };
-		F751C2AE1A4C3EDB00743ECB /* XHMoreSettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMoreSettingTableViewController.m; sourceTree = "<group>"; };
-		F751C2AF1A4C3EDB00743ECB /* XHProfileTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHProfileTableViewController.h; sourceTree = "<group>"; };
-		F751C2B01A4C3EDB00743ECB /* XHProfileTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHProfileTableViewController.m; sourceTree = "<group>"; };
 		F751C2B31A4C3EDB00743ECB /* XHCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHCacheManager.h; sourceTree = "<group>"; };
 		F751C2B41A4C3EDB00743ECB /* XHCacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHCacheManager.m; sourceTree = "<group>"; };
 		F751C2B51A4C3EDB00743ECB /* XHFileAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHFileAttribute.h; sourceTree = "<group>"; };
@@ -530,12 +321,8 @@
 		F751C2C81A4C3EDB00743ECB /* XHFoundationMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHFoundationMacro.h; sourceTree = "<group>"; };
 		F751C2C91A4C3EDB00743ECB /* XHMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMacro.h; sourceTree = "<group>"; };
 		F751C2CA1A4C3EDB00743ECB /* XHUIKitMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHUIKitMacro.h; sourceTree = "<group>"; };
-		F751C2CC1A4C3EDB00743ECB /* XHAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHAlbum.h; sourceTree = "<group>"; };
-		F751C2CD1A4C3EDB00743ECB /* XHAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHAlbum.m; sourceTree = "<group>"; };
 		F751C2CE1A4C3EDB00743ECB /* XHAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHAnnotation.h; sourceTree = "<group>"; };
 		F751C2CF1A4C3EDB00743ECB /* XHAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHAnnotation.m; sourceTree = "<group>"; };
-		F751C2D01A4C3EDB00743ECB /* XHContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHContact.h; sourceTree = "<group>"; };
-		F751C2D11A4C3EDB00743ECB /* XHContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHContact.m; sourceTree = "<group>"; };
 		F751C2D21A4C3EDB00743ECB /* XHEmotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHEmotion.h; sourceTree = "<group>"; };
 		F751C2D31A4C3EDB00743ECB /* XHEmotion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHEmotion.m; sourceTree = "<group>"; };
 		F751C2D41A4C3EDB00743ECB /* XHEmotionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHEmotionManager.h; sourceTree = "<group>"; };
@@ -545,33 +332,10 @@
 		F751C2D81A4C3EDB00743ECB /* XHMessageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMessageModel.h; sourceTree = "<group>"; };
 		F751C2D91A4C3EDB00743ECB /* XHShareMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHShareMenuItem.h; sourceTree = "<group>"; };
 		F751C2DA1A4C3EDB00743ECB /* XHShareMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHShareMenuItem.m; sourceTree = "<group>"; };
-		F751C2DB1A4C3EDB00743ECB /* XHStoreManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHStoreManager.h; sourceTree = "<group>"; };
-		F751C2DC1A4C3EDB00743ECB /* XHStoreManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHStoreManager.m; sourceTree = "<group>"; };
 		F751C2DF1A4C3EDB00743ECB /* FLAnimatedImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLAnimatedImage.h; sourceTree = "<group>"; };
 		F751C2E01A4C3EDB00743ECB /* FLAnimatedImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLAnimatedImage.m; sourceTree = "<group>"; };
 		F751C2E11A4C3EDB00743ECB /* FLAnimatedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLAnimatedImageView.h; sourceTree = "<group>"; };
 		F751C2E21A4C3EDB00743ECB /* FLAnimatedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLAnimatedImageView.m; sourceTree = "<group>"; };
-		F751C2E41A4C3EDB00743ECB /* LKBadgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKBadgeView.h; sourceTree = "<group>"; };
-		F751C2E51A4C3EDB00743ECB /* LKBadgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKBadgeView.m; sourceTree = "<group>"; };
-		F751C2E81A4C3EDB00743ECB /* MLLetterIndexNavigationItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLLetterIndexNavigationItem.h; sourceTree = "<group>"; };
-		F751C2E91A4C3EDB00743ECB /* MLLetterIndexNavigationItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLLetterIndexNavigationItem.m; sourceTree = "<group>"; };
-		F751C2EA1A4C3EDB00743ECB /* MLLetterIndexNavigationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLLetterIndexNavigationView.h; sourceTree = "<group>"; };
-		F751C2EB1A4C3EDB00743ECB /* MLLetterIndexNavigationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLLetterIndexNavigationView.m; sourceTree = "<group>"; };
-		F751C2ED1A4C3EDB00743ECB /* MultiSelectedPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiSelectedPanel.h; sourceTree = "<group>"; };
-		F751C2EE1A4C3EDB00743ECB /* MultiSelectedPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiSelectedPanel.m; sourceTree = "<group>"; };
-		F751C2EF1A4C3EDB00743ECB /* MultiSelectedPanel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MultiSelectedPanel.xib; sourceTree = "<group>"; };
-		F751C2F01A4C3EDB00743ECB /* MultiSelectItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiSelectItem.h; sourceTree = "<group>"; };
-		F751C2F11A4C3EDB00743ECB /* MultiSelectItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiSelectItem.m; sourceTree = "<group>"; };
-		F751C2F21A4C3EDB00743ECB /* MultiSelectSearchResultTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiSelectSearchResultTableViewCell.h; sourceTree = "<group>"; };
-		F751C2F31A4C3EDB00743ECB /* MultiSelectSearchResultTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiSelectSearchResultTableViewCell.m; sourceTree = "<group>"; };
-		F751C2F41A4C3EDB00743ECB /* MultiSelectSearchResultTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MultiSelectSearchResultTableViewCell.xib; sourceTree = "<group>"; };
-		F751C2F51A4C3EDB00743ECB /* MultiSelectTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiSelectTableViewCell.h; sourceTree = "<group>"; };
-		F751C2F61A4C3EDB00743ECB /* MultiSelectTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiSelectTableViewCell.m; sourceTree = "<group>"; };
-		F751C2F71A4C3EDB00743ECB /* MultiSelectTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MultiSelectTableViewCell.xib; sourceTree = "<group>"; };
-		F751C2F81A4C3EDB00743ECB /* MultiSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiSelectViewController.h; sourceTree = "<group>"; };
-		F751C2F91A4C3EDB00743ECB /* MultiSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiSelectViewController.m; sourceTree = "<group>"; };
-		F751C2FA1A4C3EDB00743ECB /* UIView+Convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Convenience.h"; sourceTree = "<group>"; };
-		F751C2FB1A4C3EDB00743ECB /* UIView+Convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Convenience.m"; sourceTree = "<group>"; };
 		F751C2FD1A4C3EDB00743ECB /* NSMutableAttributedString+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+Helper.h"; sourceTree = "<group>"; };
 		F751C2FE1A4C3EDB00743ECB /* NSMutableAttributedString+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+Helper.m"; sourceTree = "<group>"; };
 		F751C2FF1A4C3EDB00743ECB /* SECompatibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SECompatibility.h; sourceTree = "<group>"; };
@@ -604,48 +368,8 @@
 		F751C31A1A4C3EDB00743ECB /* SETextSelectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SETextSelectionView.m; sourceTree = "<group>"; };
 		F751C31B1A4C3EDB00743ECB /* SETextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SETextView.h; sourceTree = "<group>"; };
 		F751C31C1A4C3EDB00743ECB /* SETextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SETextView.m; sourceTree = "<group>"; };
-		F751C31E1A4C3EDB00743ECB /* XHImageViewer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHImageViewer.h; sourceTree = "<group>"; };
-		F751C31F1A4C3EDB00743ECB /* XHImageViewer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHImageViewer.m; sourceTree = "<group>"; };
-		F751C3201A4C3EDB00743ECB /* XHViewState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHViewState.h; sourceTree = "<group>"; };
-		F751C3211A4C3EDB00743ECB /* XHViewState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHViewState.m; sourceTree = "<group>"; };
-		F751C3221A4C3EDB00743ECB /* XHZoomingImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHZoomingImageView.h; sourceTree = "<group>"; };
-		F751C3231A4C3EDB00743ECB /* XHZoomingImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHZoomingImageView.m; sourceTree = "<group>"; };
-		F751C3251A4C3EDB00743ECB /* XHPathCover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHPathCover.h; sourceTree = "<group>"; };
-		F751C3261A4C3EDB00743ECB /* XHPathCover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHPathCover.m; sourceTree = "<group>"; };
-		F751C3271A4C3EDB00743ECB /* XHSoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHSoundManager.h; sourceTree = "<group>"; };
-		F751C3281A4C3EDB00743ECB /* XHSoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHSoundManager.m; sourceTree = "<group>"; };
-		F751C3291A4C3EDB00743ECB /* XHWaterDropRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHWaterDropRefresh.h; sourceTree = "<group>"; };
-		F751C32A1A4C3EDB00743ECB /* XHWaterDropRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHWaterDropRefresh.m; sourceTree = "<group>"; };
-		F751C32D1A4C3EDB00743ECB /* XHAlbumCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHAlbumCollectionViewFlowLayout.h; sourceTree = "<group>"; };
-		F751C32E1A4C3EDB00743ECB /* XHAlbumCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHAlbumCollectionViewFlowLayout.m; sourceTree = "<group>"; };
-		F751C32F1A4C3EDB00743ECB /* XHAlbumPhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHAlbumPhotoCollectionViewCell.h; sourceTree = "<group>"; };
-		F751C3301A4C3EDB00743ECB /* XHAlbumPhotoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHAlbumPhotoCollectionViewCell.m; sourceTree = "<group>"; };
-		F751C3311A4C3EDB00743ECB /* XHAlbumRichTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHAlbumRichTextView.h; sourceTree = "<group>"; };
-		F751C3321A4C3EDB00743ECB /* XHAlbumRichTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHAlbumRichTextView.m; sourceTree = "<group>"; };
-		F751C3331A4C3EDB00743ECB /* XHAlbumTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHAlbumTableViewCell.h; sourceTree = "<group>"; };
-		F751C3341A4C3EDB00743ECB /* XHAlbumTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHAlbumTableViewCell.m; sourceTree = "<group>"; };
-		F751C3361A4C3EDB00743ECB /* XHBaseCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHBaseCollectionViewCell.h; sourceTree = "<group>"; };
-		F751C3371A4C3EDB00743ECB /* XHBaseCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHBaseCollectionViewCell.m; sourceTree = "<group>"; };
 		F751C3391A4C3EDB00743ECB /* XHBaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHBaseTableViewCell.h; sourceTree = "<group>"; };
 		F751C33A1A4C3EDB00743ECB /* XHBaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHBaseTableViewCell.m; sourceTree = "<group>"; };
-		F751C33C1A4C3EDB00743ECB /* XHContactCommunicationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHContactCommunicationView.h; sourceTree = "<group>"; };
-		F751C33D1A4C3EDB00743ECB /* XHContactCommunicationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHContactCommunicationView.m; sourceTree = "<group>"; };
-		F751C33E1A4C3EDB00743ECB /* XHContactPhotosTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHContactPhotosTableViewCell.h; sourceTree = "<group>"; };
-		F751C33F1A4C3EDB00743ECB /* XHContactPhotosTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHContactPhotosTableViewCell.m; sourceTree = "<group>"; };
-		F751C3401A4C3EDB00743ECB /* XHContactPhotosView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHContactPhotosView.h; sourceTree = "<group>"; };
-		F751C3411A4C3EDB00743ECB /* XHContactPhotosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHContactPhotosView.m; sourceTree = "<group>"; };
-		F751C3421A4C3EDB00743ECB /* XHContactTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHContactTableViewCell.h; sourceTree = "<group>"; };
-		F751C3431A4C3EDB00743ECB /* XHContactTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHContactTableViewCell.m; sourceTree = "<group>"; };
-		F751C3441A4C3EDB00743ECB /* XHContactView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHContactView.h; sourceTree = "<group>"; };
-		F751C3451A4C3EDB00743ECB /* XHContactView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHContactView.m; sourceTree = "<group>"; };
-		F751C3471A4C3EDB00743ECB /* XHHorizontalGridItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHHorizontalGridItem.h; sourceTree = "<group>"; };
-		F751C3481A4C3EDB00743ECB /* XHHorizontalGridItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHHorizontalGridItem.m; sourceTree = "<group>"; };
-		F751C3491A4C3EDB00743ECB /* XHHorizontalGridItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHHorizontalGridItemView.h; sourceTree = "<group>"; };
-		F751C34A1A4C3EDB00743ECB /* XHHorizontalGridItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHHorizontalGridItemView.m; sourceTree = "<group>"; };
-		F751C34B1A4C3EDB00743ECB /* XHHorizontalGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHHorizontalGridView.h; sourceTree = "<group>"; };
-		F751C34C1A4C3EDB00743ECB /* XHHorizontalGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHHorizontalGridView.m; sourceTree = "<group>"; };
-		F751C34E1A4C3EDB00743ECB /* XHLocationServiceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLocationServiceTableViewCell.h; sourceTree = "<group>"; };
-		F751C34F1A4C3EDB00743ECB /* XHLocationServiceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHLocationServiceTableViewCell.m; sourceTree = "<group>"; };
 		F751C3511A4C3EDB00743ECB /* XHBubblePhotoImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHBubblePhotoImageView.h; sourceTree = "<group>"; };
 		F751C3521A4C3EDB00743ECB /* XHBubblePhotoImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHBubblePhotoImageView.m; sourceTree = "<group>"; };
 		F751C3531A4C3EDB00743ECB /* XHMessageBubbleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMessageBubbleView.h; sourceTree = "<group>"; };
@@ -670,30 +394,6 @@
 		F751C3681A4C3EDB00743ECB /* XHEmotionSectionBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHEmotionSectionBar.m; sourceTree = "<group>"; };
 		F751C3691A4C3EDB00743ECB /* XHShareMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHShareMenuView.h; sourceTree = "<group>"; };
 		F751C36A1A4C3EDB00743ECB /* XHShareMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHShareMenuView.m; sourceTree = "<group>"; };
-		F751C36C1A4C3EDB00743ECB /* XHMoreExpressionShopsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMoreExpressionShopsTableViewCell.h; sourceTree = "<group>"; };
-		F751C36D1A4C3EDB00743ECB /* XHMoreExpressionShopsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMoreExpressionShopsTableViewCell.m; sourceTree = "<group>"; };
-		F751C36F1A4C3EDB00743ECB /* XHNewsContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHNewsContainerView.h; sourceTree = "<group>"; };
-		F751C3701A4C3EDB00743ECB /* XHNewsContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHNewsContainerView.m; sourceTree = "<group>"; };
-		F751C3711A4C3EDB00743ECB /* XHNewsTemplateContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHNewsTemplateContainerView.h; sourceTree = "<group>"; };
-		F751C3721A4C3EDB00743ECB /* XHNewsTemplateContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHNewsTemplateContainerView.m; sourceTree = "<group>"; };
-		F751C3731A4C3EDB00743ECB /* XHNewsTemplateTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHNewsTemplateTableViewCell.h; sourceTree = "<group>"; };
-		F751C3741A4C3EDB00743ECB /* XHNewsTemplateTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHNewsTemplateTableViewCell.m; sourceTree = "<group>"; };
-		F751C3761A4C3EDB00743ECB /* XHPopMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHPopMenu.h; sourceTree = "<group>"; };
-		F751C3771A4C3EDB00743ECB /* XHPopMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHPopMenu.m; sourceTree = "<group>"; };
-		F751C3781A4C3EDB00743ECB /* XHPopMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHPopMenuItem.h; sourceTree = "<group>"; };
-		F751C3791A4C3EDB00743ECB /* XHPopMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHPopMenuItem.m; sourceTree = "<group>"; };
-		F751C37A1A4C3EDB00743ECB /* XHPopMenuItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHPopMenuItemView.h; sourceTree = "<group>"; };
-		F751C37B1A4C3EDB00743ECB /* XHPopMenuItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHPopMenuItemView.m; sourceTree = "<group>"; };
-		F751C37D1A4C3EDB00743ECB /* XHLoadMoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLoadMoreView.h; sourceTree = "<group>"; };
-		F751C37E1A4C3EDB00743ECB /* XHLoadMoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHLoadMoreView.m; sourceTree = "<group>"; };
-		F751C37F1A4C3EDB00743ECB /* XHRefreshCircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHRefreshCircleView.h; sourceTree = "<group>"; };
-		F751C3801A4C3EDB00743ECB /* XHRefreshCircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHRefreshCircleView.m; sourceTree = "<group>"; };
-		F751C3811A4C3EDB00743ECB /* XHRefreshControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHRefreshControl.h; sourceTree = "<group>"; };
-		F751C3821A4C3EDB00743ECB /* XHRefreshControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHRefreshControl.m; sourceTree = "<group>"; };
-		F751C3831A4C3EDB00743ECB /* XHRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHRefreshView.h; sourceTree = "<group>"; };
-		F751C3841A4C3EDB00743ECB /* XHRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHRefreshView.m; sourceTree = "<group>"; };
-		F751C3861A4C3EDB00743ECB /* XHScanningView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHScanningView.h; sourceTree = "<group>"; };
-		F751C3871A4C3EDB00743ECB /* XHScanningView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHScanningView.m; sourceTree = "<group>"; };
 		F751C3891A4C3EDB00743ECB /* AddGroupMemberBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AddGroupMemberBtn@2x.png"; sourceTree = "<group>"; };
 		F751C38A1A4C3EDB00743ECB /* AddGroupMemberBtnHL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AddGroupMemberBtnHL@2x.png"; sourceTree = "<group>"; };
 		F751C38B1A4C3EDB00743ECB /* avator@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avator@2x.png"; sourceTree = "<group>"; };
@@ -788,6 +488,8 @@
 		F751C7AA1A4C402000743ECB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F751C7AC1A4C402400743ECB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F751C7AF1A4C407800743ECB /* MessageDisplayKit-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MessageDisplayKit-Prefix.pch"; sourceTree = "<group>"; };
+		F7D253451A4D32B30015764B /* LKBadgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKBadgeView.h; sourceTree = "<group>"; };
+		F7D253461A4D32B30015764B /* LKBadgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKBadgeView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -878,15 +580,15 @@
 		F751C2261A4C3EDA00743ECB /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				F751C2271A4C3EDA00743ECB /* Categorys */,
+				F751C2DD1A4C3EDB00743ECB /* Vendor */,
 				F751C2471A4C3EDA00743ECB /* Common */,
-				F751C2581A4C3EDA00743ECB /* Controllers */,
+				F751C2271A4C3EDA00743ECB /* Categorys */,
+				F751C2C71A4C3EDB00743ECB /* Macro */,
 				F751C2B11A4C3EDB00743ECB /* Core */,
 				F751C2BC1A4C3EDB00743ECB /* Factorys */,
-				F751C2C71A4C3EDB00743ECB /* Macro */,
 				F751C2CB1A4C3EDB00743ECB /* Models */,
-				F751C2DD1A4C3EDB00743ECB /* Vendor */,
 				F751C32B1A4C3EDB00743ECB /* Views */,
+				F751C2581A4C3EDA00743ECB /* Controllers */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -895,7 +597,6 @@
 			isa = PBXGroup;
 			children = (
 				F751C2281A4C3EDA00743ECB /* NSString */,
-				F751C22F1A4C3EDA00743ECB /* UIButton */,
 				F751C2321A4C3EDA00743ECB /* UIImage */,
 				F751C23F1A4C3EDA00743ECB /* UIScrollView */,
 				F751C2421A4C3EDA00743ECB /* UIView */,
@@ -908,21 +609,10 @@
 			children = (
 				F751C2291A4C3EDA00743ECB /* NSString+MessageInputView.h */,
 				F751C22A1A4C3EDA00743ECB /* NSString+MessageInputView.m */,
-				F751C22B1A4C3EDA00743ECB /* NSString+XHDiskSizeTransfrom.h */,
-				F751C22C1A4C3EDA00743ECB /* NSString+XHDiskSizeTransfrom.m */,
 				F751C22D1A4C3EDA00743ECB /* NSString+XHMD5.h */,
 				F751C22E1A4C3EDA00743ECB /* NSString+XHMD5.m */,
 			);
 			path = NSString;
-			sourceTree = "<group>";
-		};
-		F751C22F1A4C3EDA00743ECB /* UIButton */ = {
-			isa = PBXGroup;
-			children = (
-				F751C2301A4C3EDA00743ECB /* UIButton+XHButtonTitlePosition.h */,
-				F751C2311A4C3EDA00743ECB /* UIButton+XHButtonTitlePosition.m */,
-			);
-			path = UIButton;
 			sourceTree = "<group>";
 		};
 		F751C2321A4C3EDA00743ECB /* UIImage */ = {
@@ -936,8 +626,6 @@
 				F751C2381A4C3EDA00743ECB /* UIImage+RoundedCorner.m */,
 				F751C2391A4C3EDA00743ECB /* UIImage+Utility.h */,
 				F751C23A1A4C3EDA00743ECB /* UIImage+Utility.m */,
-				F751C23B1A4C3EDA00743ECB /* UIImage+XHAnimatedFaceGif.h */,
-				F751C23C1A4C3EDA00743ECB /* UIImage+XHAnimatedFaceGif.m */,
 				F751C23D1A4C3EDA00743ECB /* UIImage+XHRounded.h */,
 				F751C23E1A4C3EDA00743ECB /* UIImage+XHRounded.m */,
 			);
@@ -956,8 +644,6 @@
 		F751C2421A4C3EDA00743ECB /* UIView */ = {
 			isa = PBXGroup;
 			children = (
-				F751C2431A4C3EDA00743ECB /* UIView+XHBadgeView.h */,
-				F751C2441A4C3EDA00743ECB /* UIView+XHBadgeView.m */,
 				F751C2451A4C3EDA00743ECB /* UIView+XHRemoteImage.h */,
 				F751C2461A4C3EDA00743ECB /* UIView+XHRemoteImage.m */,
 			);
@@ -971,8 +657,6 @@
 				F751C2491A4C3EDA00743ECB /* XHAudioPlayerHelper.m */,
 				F751C24A1A4C3EDA00743ECB /* XHCaptureHelper.h */,
 				F751C24B1A4C3EDA00743ECB /* XHCaptureHelper.m */,
-				F751C24C1A4C3EDA00743ECB /* XHFoundationCommon.h */,
-				F751C24D1A4C3EDA00743ECB /* XHFoundationCommon.m */,
 				F751C24E1A4C3EDA00743ECB /* XHLocationHelper.h */,
 				F751C24F1A4C3EDA00743ECB /* XHLocationHelper.m */,
 				F751C2501A4C3EDA00743ECB /* XHMessageBubbleHelper.h */,
@@ -990,154 +674,9 @@
 		F751C2581A4C3EDA00743ECB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				F751C2591A4C3EDA00743ECB /* XHBaseNavigationController */,
-				F751C25C1A4C3EDA00743ECB /* XHBaseSearchTableViewController */,
-				F751C25F1A4C3EDA00743ECB /* XHBaseTabBarController */,
-				F751C2621A4C3EDA00743ECB /* XHBaseTableViewController */,
-				F751C2671A4C3EDA00743ECB /* XHBaseViewController */,
-				F751C26A1A4C3EDA00743ECB /* XHContactTableViewController */,
-				F751C2701A4C3EDA00743ECB /* XHDiscoverTableViewController */,
 				F751C2851A4C3EDA00743ECB /* XHMessageTableViewController */,
-				F751C2941A4C3EDA00743ECB /* XHMultipleSectionTableViewController */,
-				F751C2971A4C3EDA00743ECB /* XHNewsTableViewController */,
-				F751C29A1A4C3EDA00743ECB /* XHProfileTableViewController */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		F751C2591A4C3EDA00743ECB /* XHBaseNavigationController */ = {
-			isa = PBXGroup;
-			children = (
-				F751C25A1A4C3EDA00743ECB /* XHBaseNavigationController.h */,
-				F751C25B1A4C3EDA00743ECB /* XHBaseNavigationController.m */,
-			);
-			path = XHBaseNavigationController;
-			sourceTree = "<group>";
-		};
-		F751C25C1A4C3EDA00743ECB /* XHBaseSearchTableViewController */ = {
-			isa = PBXGroup;
-			children = (
-				F751C25D1A4C3EDA00743ECB /* XHBaseSearchTableViewController.h */,
-				F751C25E1A4C3EDA00743ECB /* XHBaseSearchTableViewController.m */,
-			);
-			path = XHBaseSearchTableViewController;
-			sourceTree = "<group>";
-		};
-		F751C25F1A4C3EDA00743ECB /* XHBaseTabBarController */ = {
-			isa = PBXGroup;
-			children = (
-				F751C2601A4C3EDA00743ECB /* XHBaseTabBarController.h */,
-				F751C2611A4C3EDA00743ECB /* XHBaseTabBarController.m */,
-			);
-			path = XHBaseTabBarController;
-			sourceTree = "<group>";
-		};
-		F751C2621A4C3EDA00743ECB /* XHBaseTableViewController */ = {
-			isa = PBXGroup;
-			children = (
-				F751C2631A4C3EDA00743ECB /* XHBaseTableViewController.h */,
-				F751C2641A4C3EDA00743ECB /* XHBaseTableViewController.m */,
-				F751C2651A4C3EDA00743ECB /* XHPullRefreshTableViewController.h */,
-				F751C2661A4C3EDA00743ECB /* XHPullRefreshTableViewController.m */,
-			);
-			path = XHBaseTableViewController;
-			sourceTree = "<group>";
-		};
-		F751C2671A4C3EDA00743ECB /* XHBaseViewController */ = {
-			isa = PBXGroup;
-			children = (
-				F751C2681A4C3EDA00743ECB /* XHBaseViewController.h */,
-				F751C2691A4C3EDA00743ECB /* XHBaseViewController.m */,
-			);
-			path = XHBaseViewController;
-			sourceTree = "<group>";
-		};
-		F751C26A1A4C3EDA00743ECB /* XHContactTableViewController */ = {
-			isa = PBXGroup;
-			children = (
-				F751C26B1A4C3EDA00743ECB /* XHContactDetailTableViewController */,
-				F751C26E1A4C3EDA00743ECB /* XHContactTableViewController.h */,
-				F751C26F1A4C3EDA00743ECB /* XHContactTableViewController.m */,
-			);
-			path = XHContactTableViewController;
-			sourceTree = "<group>";
-		};
-		F751C26B1A4C3EDA00743ECB /* XHContactDetailTableViewController */ = {
-			isa = PBXGroup;
-			children = (
-				F751C26C1A4C3EDA00743ECB /* XHContactDetailTableViewController.h */,
-				F751C26D1A4C3EDA00743ECB /* XHContactDetailTableViewController.m */,
-			);
-			path = XHContactDetailTableViewController;
-			sourceTree = "<group>";
-		};
-		F751C2701A4C3EDA00743ECB /* XHDiscoverTableViewController */ = {
-			isa = PBXGroup;
-			children = (
-				F751C2711A4C3EDA00743ECB /* XHAlbumTableViewController */,
-				F751C2741A4C3EDA00743ECB /* XHBottleViewController */,
-				F751C2771A4C3EDA00743ECB /* XHDiscoverTableViewController.h */,
-				F751C2781A4C3EDA00743ECB /* XHDiscoverTableViewController.m */,
-				F751C2791A4C3EDA00743ECB /* XHLocationServiceTableViewController */,
-				F751C27C1A4C3EDA00743ECB /* XHMoreGameTableViewController */,
-				F751C27F1A4C3EDA00743ECB /* XHQRCodeViewController */,
-				F751C2821A4C3EDA00743ECB /* XHShakeViewController */,
-			);
-			path = XHDiscoverTableViewController;
-			sourceTree = "<group>";
-		};
-		F751C2711A4C3EDA00743ECB /* XHAlbumTableViewController */ = {
-			isa = PBXGroup;
-			children = (
-				F751C2721A4C3EDA00743ECB /* XHAlbumTableViewController.h */,
-				F751C2731A4C3EDA00743ECB /* XHAlbumTableViewController.m */,
-			);
-			path = XHAlbumTableViewController;
-			sourceTree = "<group>";
-		};
-		F751C2741A4C3EDA00743ECB /* XHBottleViewController */ = {
-			isa = PBXGroup;
-			children = (
-				F751C2751A4C3EDA00743ECB /* XHBottleViewController.h */,
-				F751C2761A4C3EDA00743ECB /* XHBottleViewController.m */,
-			);
-			path = XHBottleViewController;
-			sourceTree = "<group>";
-		};
-		F751C2791A4C3EDA00743ECB /* XHLocationServiceTableViewController */ = {
-			isa = PBXGroup;
-			children = (
-				F751C27A1A4C3EDA00743ECB /* XHLocationServiceTableViewController.h */,
-				F751C27B1A4C3EDA00743ECB /* XHLocationServiceTableViewController.m */,
-			);
-			path = XHLocationServiceTableViewController;
-			sourceTree = "<group>";
-		};
-		F751C27C1A4C3EDA00743ECB /* XHMoreGameTableViewController */ = {
-			isa = PBXGroup;
-			children = (
-				F751C27D1A4C3EDA00743ECB /* XHMoreGameTableViewController.h */,
-				F751C27E1A4C3EDA00743ECB /* XHMoreGameTableViewController.m */,
-			);
-			path = XHMoreGameTableViewController;
-			sourceTree = "<group>";
-		};
-		F751C27F1A4C3EDA00743ECB /* XHQRCodeViewController */ = {
-			isa = PBXGroup;
-			children = (
-				F751C2801A4C3EDA00743ECB /* XHQRCodeViewController.h */,
-				F751C2811A4C3EDA00743ECB /* XHQRCodeViewController.m */,
-			);
-			path = XHQRCodeViewController;
-			sourceTree = "<group>";
-		};
-		F751C2821A4C3EDA00743ECB /* XHShakeViewController */ = {
-			isa = PBXGroup;
-			children = (
-				F751C2831A4C3EDA00743ECB /* XHShakeViewController.h */,
-				F751C2841A4C3EDA00743ECB /* XHShakeViewController.m */,
-			);
-			path = XHShakeViewController;
 			sourceTree = "<group>";
 		};
 		F751C2851A4C3EDA00743ECB /* XHMessageTableViewController */ = {
@@ -1187,95 +726,6 @@
 				F751C2911A4C3EDA00743ECB /* XHDisplayTextViewController.m */,
 			);
 			path = XHDisplayTextViewController;
-			sourceTree = "<group>";
-		};
-		F751C2941A4C3EDA00743ECB /* XHMultipleSectionTableViewController */ = {
-			isa = PBXGroup;
-			children = (
-				F751C2951A4C3EDA00743ECB /* XHMultipleSectionTableViewController.h */,
-				F751C2961A4C3EDA00743ECB /* XHMultipleSectionTableViewController.m */,
-			);
-			path = XHMultipleSectionTableViewController;
-			sourceTree = "<group>";
-		};
-		F751C2971A4C3EDA00743ECB /* XHNewsTableViewController */ = {
-			isa = PBXGroup;
-			children = (
-				F751C2981A4C3EDA00743ECB /* XHNewsTableViewController.h */,
-				F751C2991A4C3EDA00743ECB /* XHNewsTableViewController.m */,
-			);
-			path = XHNewsTableViewController;
-			sourceTree = "<group>";
-		};
-		F751C29A1A4C3EDA00743ECB /* XHProfileTableViewController */ = {
-			isa = PBXGroup;
-			children = (
-				F751C29B1A4C3EDB00743ECB /* XHMoreExpressionShopsTableViewController */,
-				F751C2A01A4C3EDB00743ECB /* XHMoreMyAlbumTableViewController */,
-				F751C2A31A4C3EDB00743ECB /* XHMoreMyBankCardTableViewController */,
-				F751C2A61A4C3EDB00743ECB /* XHMoreMyFavoritesTableViewController */,
-				F751C2A91A4C3EDB00743ECB /* XHMoreMyProfileDetailTableViewController */,
-				F751C2AC1A4C3EDB00743ECB /* XHMoreSettingTableViewController */,
-				F751C2AF1A4C3EDB00743ECB /* XHProfileTableViewController.h */,
-				F751C2B01A4C3EDB00743ECB /* XHProfileTableViewController.m */,
-			);
-			path = XHProfileTableViewController;
-			sourceTree = "<group>";
-		};
-		F751C29B1A4C3EDB00743ECB /* XHMoreExpressionShopsTableViewController */ = {
-			isa = PBXGroup;
-			children = (
-				F751C29C1A4C3EDB00743ECB /* XHExpressionDetailTableViewController.h */,
-				F751C29D1A4C3EDB00743ECB /* XHExpressionDetailTableViewController.m */,
-				F751C29E1A4C3EDB00743ECB /* XHMoreExpressionShopsTableViewController.h */,
-				F751C29F1A4C3EDB00743ECB /* XHMoreExpressionShopsTableViewController.m */,
-			);
-			path = XHMoreExpressionShopsTableViewController;
-			sourceTree = "<group>";
-		};
-		F751C2A01A4C3EDB00743ECB /* XHMoreMyAlbumTableViewController */ = {
-			isa = PBXGroup;
-			children = (
-				F751C2A11A4C3EDB00743ECB /* XHMoreMyAlbumTableViewController.h */,
-				F751C2A21A4C3EDB00743ECB /* XHMoreMyAlbumTableViewController.m */,
-			);
-			path = XHMoreMyAlbumTableViewController;
-			sourceTree = "<group>";
-		};
-		F751C2A31A4C3EDB00743ECB /* XHMoreMyBankCardTableViewController */ = {
-			isa = PBXGroup;
-			children = (
-				F751C2A41A4C3EDB00743ECB /* XHMoreMyBankCardTableViewController.h */,
-				F751C2A51A4C3EDB00743ECB /* XHMoreMyBankCardTableViewController.m */,
-			);
-			path = XHMoreMyBankCardTableViewController;
-			sourceTree = "<group>";
-		};
-		F751C2A61A4C3EDB00743ECB /* XHMoreMyFavoritesTableViewController */ = {
-			isa = PBXGroup;
-			children = (
-				F751C2A71A4C3EDB00743ECB /* XHMoreMyFavoritesTableViewController.h */,
-				F751C2A81A4C3EDB00743ECB /* XHMoreMyFavoritesTableViewController.m */,
-			);
-			path = XHMoreMyFavoritesTableViewController;
-			sourceTree = "<group>";
-		};
-		F751C2A91A4C3EDB00743ECB /* XHMoreMyProfileDetailTableViewController */ = {
-			isa = PBXGroup;
-			children = (
-				F751C2AA1A4C3EDB00743ECB /* XHMoreMyProfileDetailTableViewController.h */,
-				F751C2AB1A4C3EDB00743ECB /* XHMoreMyProfileDetailTableViewController.m */,
-			);
-			path = XHMoreMyProfileDetailTableViewController;
-			sourceTree = "<group>";
-		};
-		F751C2AC1A4C3EDB00743ECB /* XHMoreSettingTableViewController */ = {
-			isa = PBXGroup;
-			children = (
-				F751C2AD1A4C3EDB00743ECB /* XHMoreSettingTableViewController.h */,
-				F751C2AE1A4C3EDB00743ECB /* XHMoreSettingTableViewController.m */,
-			);
-			path = XHMoreSettingTableViewController;
 			sourceTree = "<group>";
 		};
 		F751C2B11A4C3EDB00743ECB /* Core */ = {
@@ -1339,12 +789,8 @@
 		F751C2CB1A4C3EDB00743ECB /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F751C2CC1A4C3EDB00743ECB /* XHAlbum.h */,
-				F751C2CD1A4C3EDB00743ECB /* XHAlbum.m */,
 				F751C2CE1A4C3EDB00743ECB /* XHAnnotation.h */,
 				F751C2CF1A4C3EDB00743ECB /* XHAnnotation.m */,
-				F751C2D01A4C3EDB00743ECB /* XHContact.h */,
-				F751C2D11A4C3EDB00743ECB /* XHContact.m */,
 				F751C2D21A4C3EDB00743ECB /* XHEmotion.h */,
 				F751C2D31A4C3EDB00743ECB /* XHEmotion.m */,
 				F751C2D41A4C3EDB00743ECB /* XHEmotionManager.h */,
@@ -1354,8 +800,6 @@
 				F751C2D81A4C3EDB00743ECB /* XHMessageModel.h */,
 				F751C2D91A4C3EDB00743ECB /* XHShareMenuItem.h */,
 				F751C2DA1A4C3EDB00743ECB /* XHShareMenuItem.m */,
-				F751C2DB1A4C3EDB00743ECB /* XHStoreManager.h */,
-				F751C2DC1A4C3EDB00743ECB /* XHStoreManager.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1363,12 +807,9 @@
 		F751C2DD1A4C3EDB00743ECB /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				F7D253441A4D32B30015764B /* LKBadgeView */,
 				F751C2DE1A4C3EDB00743ECB /* FLAnimatedImageView */,
-				F751C2E31A4C3EDB00743ECB /* LKBadgeView */,
-				F751C2E61A4C3EDB00743ECB /* MultiSelectTableViewController */,
 				F751C2FC1A4C3EDB00743ECB /* SECoreTextView */,
-				F751C31D1A4C3EDB00743ECB /* XHImageViewer */,
-				F751C3241A4C3EDB00743ECB /* XHPathCover */,
 			);
 			path = Vendor;
 			sourceTree = "<group>";
@@ -1382,57 +823,6 @@
 				F751C2E21A4C3EDB00743ECB /* FLAnimatedImageView.m */,
 			);
 			path = FLAnimatedImageView;
-			sourceTree = "<group>";
-		};
-		F751C2E31A4C3EDB00743ECB /* LKBadgeView */ = {
-			isa = PBXGroup;
-			children = (
-				F751C2E41A4C3EDB00743ECB /* LKBadgeView.h */,
-				F751C2E51A4C3EDB00743ECB /* LKBadgeView.m */,
-			);
-			path = LKBadgeView;
-			sourceTree = "<group>";
-		};
-		F751C2E61A4C3EDB00743ECB /* MultiSelectTableViewController */ = {
-			isa = PBXGroup;
-			children = (
-				F751C2E71A4C3EDB00743ECB /* LetterIndex */,
-				F751C2EC1A4C3EDB00743ECB /* MultiSelect */,
-				F751C2FA1A4C3EDB00743ECB /* UIView+Convenience.h */,
-				F751C2FB1A4C3EDB00743ECB /* UIView+Convenience.m */,
-			);
-			path = MultiSelectTableViewController;
-			sourceTree = "<group>";
-		};
-		F751C2E71A4C3EDB00743ECB /* LetterIndex */ = {
-			isa = PBXGroup;
-			children = (
-				F751C2E81A4C3EDB00743ECB /* MLLetterIndexNavigationItem.h */,
-				F751C2E91A4C3EDB00743ECB /* MLLetterIndexNavigationItem.m */,
-				F751C2EA1A4C3EDB00743ECB /* MLLetterIndexNavigationView.h */,
-				F751C2EB1A4C3EDB00743ECB /* MLLetterIndexNavigationView.m */,
-			);
-			path = LetterIndex;
-			sourceTree = "<group>";
-		};
-		F751C2EC1A4C3EDB00743ECB /* MultiSelect */ = {
-			isa = PBXGroup;
-			children = (
-				F751C2ED1A4C3EDB00743ECB /* MultiSelectedPanel.h */,
-				F751C2EE1A4C3EDB00743ECB /* MultiSelectedPanel.m */,
-				F751C2EF1A4C3EDB00743ECB /* MultiSelectedPanel.xib */,
-				F751C2F01A4C3EDB00743ECB /* MultiSelectItem.h */,
-				F751C2F11A4C3EDB00743ECB /* MultiSelectItem.m */,
-				F751C2F21A4C3EDB00743ECB /* MultiSelectSearchResultTableViewCell.h */,
-				F751C2F31A4C3EDB00743ECB /* MultiSelectSearchResultTableViewCell.m */,
-				F751C2F41A4C3EDB00743ECB /* MultiSelectSearchResultTableViewCell.xib */,
-				F751C2F51A4C3EDB00743ECB /* MultiSelectTableViewCell.h */,
-				F751C2F61A4C3EDB00743ECB /* MultiSelectTableViewCell.m */,
-				F751C2F71A4C3EDB00743ECB /* MultiSelectTableViewCell.xib */,
-				F751C2F81A4C3EDB00743ECB /* MultiSelectViewController.h */,
-				F751C2F91A4C3EDB00743ECB /* MultiSelectViewController.m */,
-			);
-			path = MultiSelect;
 			sourceTree = "<group>";
 		};
 		F751C2FC1A4C3EDB00743ECB /* SECoreTextView */ = {
@@ -1474,75 +864,15 @@
 			path = SECoreTextView;
 			sourceTree = "<group>";
 		};
-		F751C31D1A4C3EDB00743ECB /* XHImageViewer */ = {
-			isa = PBXGroup;
-			children = (
-				F751C31E1A4C3EDB00743ECB /* XHImageViewer.h */,
-				F751C31F1A4C3EDB00743ECB /* XHImageViewer.m */,
-				F751C3201A4C3EDB00743ECB /* XHViewState.h */,
-				F751C3211A4C3EDB00743ECB /* XHViewState.m */,
-				F751C3221A4C3EDB00743ECB /* XHZoomingImageView.h */,
-				F751C3231A4C3EDB00743ECB /* XHZoomingImageView.m */,
-			);
-			path = XHImageViewer;
-			sourceTree = "<group>";
-		};
-		F751C3241A4C3EDB00743ECB /* XHPathCover */ = {
-			isa = PBXGroup;
-			children = (
-				F751C3251A4C3EDB00743ECB /* XHPathCover.h */,
-				F751C3261A4C3EDB00743ECB /* XHPathCover.m */,
-				F751C3271A4C3EDB00743ECB /* XHSoundManager.h */,
-				F751C3281A4C3EDB00743ECB /* XHSoundManager.m */,
-				F751C3291A4C3EDB00743ECB /* XHWaterDropRefresh.h */,
-				F751C32A1A4C3EDB00743ECB /* XHWaterDropRefresh.m */,
-			);
-			path = XHPathCover;
-			sourceTree = "<group>";
-		};
 		F751C32B1A4C3EDB00743ECB /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				F751C32C1A4C3EDB00743ECB /* AlbumContentViews */,
-				F751C3351A4C3EDB00743ECB /* BaseCollectionViewCell */,
 				F751C3381A4C3EDB00743ECB /* BaseTableViewCell */,
-				F751C33B1A4C3EDB00743ECB /* ContactViews */,
-				F751C3461A4C3EDB00743ECB /* HorizontalGridView */,
-				F751C34D1A4C3EDB00743ECB /* LocationServiceViews */,
 				F751C3501A4C3EDB00743ECB /* MessageContentViews */,
 				F751C3591A4C3EDB00743ECB /* MessageInputView */,
 				F751C3601A4C3EDB00743ECB /* MessageMenuViews */,
-				F751C36B1A4C3EDB00743ECB /* MoreExpressionShopsView */,
-				F751C36E1A4C3EDB00743ECB /* NewsTemplateView */,
-				F751C3751A4C3EDB00743ECB /* PopMenu */,
-				F751C37C1A4C3EDB00743ECB /* RefreshViews */,
-				F751C3851A4C3EDB00743ECB /* ScanningView */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		F751C32C1A4C3EDB00743ECB /* AlbumContentViews */ = {
-			isa = PBXGroup;
-			children = (
-				F751C32D1A4C3EDB00743ECB /* XHAlbumCollectionViewFlowLayout.h */,
-				F751C32E1A4C3EDB00743ECB /* XHAlbumCollectionViewFlowLayout.m */,
-				F751C32F1A4C3EDB00743ECB /* XHAlbumPhotoCollectionViewCell.h */,
-				F751C3301A4C3EDB00743ECB /* XHAlbumPhotoCollectionViewCell.m */,
-				F751C3311A4C3EDB00743ECB /* XHAlbumRichTextView.h */,
-				F751C3321A4C3EDB00743ECB /* XHAlbumRichTextView.m */,
-				F751C3331A4C3EDB00743ECB /* XHAlbumTableViewCell.h */,
-				F751C3341A4C3EDB00743ECB /* XHAlbumTableViewCell.m */,
-			);
-			path = AlbumContentViews;
-			sourceTree = "<group>";
-		};
-		F751C3351A4C3EDB00743ECB /* BaseCollectionViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				F751C3361A4C3EDB00743ECB /* XHBaseCollectionViewCell.h */,
-				F751C3371A4C3EDB00743ECB /* XHBaseCollectionViewCell.m */,
-			);
-			path = BaseCollectionViewCell;
 			sourceTree = "<group>";
 		};
 		F751C3381A4C3EDB00743ECB /* BaseTableViewCell */ = {
@@ -1552,45 +882,6 @@
 				F751C33A1A4C3EDB00743ECB /* XHBaseTableViewCell.m */,
 			);
 			path = BaseTableViewCell;
-			sourceTree = "<group>";
-		};
-		F751C33B1A4C3EDB00743ECB /* ContactViews */ = {
-			isa = PBXGroup;
-			children = (
-				F751C33C1A4C3EDB00743ECB /* XHContactCommunicationView.h */,
-				F751C33D1A4C3EDB00743ECB /* XHContactCommunicationView.m */,
-				F751C33E1A4C3EDB00743ECB /* XHContactPhotosTableViewCell.h */,
-				F751C33F1A4C3EDB00743ECB /* XHContactPhotosTableViewCell.m */,
-				F751C3401A4C3EDB00743ECB /* XHContactPhotosView.h */,
-				F751C3411A4C3EDB00743ECB /* XHContactPhotosView.m */,
-				F751C3421A4C3EDB00743ECB /* XHContactTableViewCell.h */,
-				F751C3431A4C3EDB00743ECB /* XHContactTableViewCell.m */,
-				F751C3441A4C3EDB00743ECB /* XHContactView.h */,
-				F751C3451A4C3EDB00743ECB /* XHContactView.m */,
-			);
-			path = ContactViews;
-			sourceTree = "<group>";
-		};
-		F751C3461A4C3EDB00743ECB /* HorizontalGridView */ = {
-			isa = PBXGroup;
-			children = (
-				F751C3471A4C3EDB00743ECB /* XHHorizontalGridItem.h */,
-				F751C3481A4C3EDB00743ECB /* XHHorizontalGridItem.m */,
-				F751C3491A4C3EDB00743ECB /* XHHorizontalGridItemView.h */,
-				F751C34A1A4C3EDB00743ECB /* XHHorizontalGridItemView.m */,
-				F751C34B1A4C3EDB00743ECB /* XHHorizontalGridView.h */,
-				F751C34C1A4C3EDB00743ECB /* XHHorizontalGridView.m */,
-			);
-			path = HorizontalGridView;
-			sourceTree = "<group>";
-		};
-		F751C34D1A4C3EDB00743ECB /* LocationServiceViews */ = {
-			isa = PBXGroup;
-			children = (
-				F751C34E1A4C3EDB00743ECB /* XHLocationServiceTableViewCell.h */,
-				F751C34F1A4C3EDB00743ECB /* XHLocationServiceTableViewCell.m */,
-			);
-			path = LocationServiceViews;
 			sourceTree = "<group>";
 		};
 		F751C3501A4C3EDB00743ECB /* MessageContentViews */ = {
@@ -1636,65 +927,6 @@
 				F751C36A1A4C3EDB00743ECB /* XHShareMenuView.m */,
 			);
 			path = MessageMenuViews;
-			sourceTree = "<group>";
-		};
-		F751C36B1A4C3EDB00743ECB /* MoreExpressionShopsView */ = {
-			isa = PBXGroup;
-			children = (
-				F751C36C1A4C3EDB00743ECB /* XHMoreExpressionShopsTableViewCell.h */,
-				F751C36D1A4C3EDB00743ECB /* XHMoreExpressionShopsTableViewCell.m */,
-			);
-			path = MoreExpressionShopsView;
-			sourceTree = "<group>";
-		};
-		F751C36E1A4C3EDB00743ECB /* NewsTemplateView */ = {
-			isa = PBXGroup;
-			children = (
-				F751C36F1A4C3EDB00743ECB /* XHNewsContainerView.h */,
-				F751C3701A4C3EDB00743ECB /* XHNewsContainerView.m */,
-				F751C3711A4C3EDB00743ECB /* XHNewsTemplateContainerView.h */,
-				F751C3721A4C3EDB00743ECB /* XHNewsTemplateContainerView.m */,
-				F751C3731A4C3EDB00743ECB /* XHNewsTemplateTableViewCell.h */,
-				F751C3741A4C3EDB00743ECB /* XHNewsTemplateTableViewCell.m */,
-			);
-			path = NewsTemplateView;
-			sourceTree = "<group>";
-		};
-		F751C3751A4C3EDB00743ECB /* PopMenu */ = {
-			isa = PBXGroup;
-			children = (
-				F751C3761A4C3EDB00743ECB /* XHPopMenu.h */,
-				F751C3771A4C3EDB00743ECB /* XHPopMenu.m */,
-				F751C3781A4C3EDB00743ECB /* XHPopMenuItem.h */,
-				F751C3791A4C3EDB00743ECB /* XHPopMenuItem.m */,
-				F751C37A1A4C3EDB00743ECB /* XHPopMenuItemView.h */,
-				F751C37B1A4C3EDB00743ECB /* XHPopMenuItemView.m */,
-			);
-			path = PopMenu;
-			sourceTree = "<group>";
-		};
-		F751C37C1A4C3EDB00743ECB /* RefreshViews */ = {
-			isa = PBXGroup;
-			children = (
-				F751C37D1A4C3EDB00743ECB /* XHLoadMoreView.h */,
-				F751C37E1A4C3EDB00743ECB /* XHLoadMoreView.m */,
-				F751C37F1A4C3EDB00743ECB /* XHRefreshCircleView.h */,
-				F751C3801A4C3EDB00743ECB /* XHRefreshCircleView.m */,
-				F751C3811A4C3EDB00743ECB /* XHRefreshControl.h */,
-				F751C3821A4C3EDB00743ECB /* XHRefreshControl.m */,
-				F751C3831A4C3EDB00743ECB /* XHRefreshView.h */,
-				F751C3841A4C3EDB00743ECB /* XHRefreshView.m */,
-			);
-			path = RefreshViews;
-			sourceTree = "<group>";
-		};
-		F751C3851A4C3EDB00743ECB /* ScanningView */ = {
-			isa = PBXGroup;
-			children = (
-				F751C3861A4C3EDB00743ECB /* XHScanningView.h */,
-				F751C3871A4C3EDB00743ECB /* XHScanningView.m */,
-			);
-			path = ScanningView;
 			sourceTree = "<group>";
 		};
 		F751C3881A4C3EDB00743ECB /* Resources */ = {
@@ -1803,6 +1035,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F7D253441A4D32B30015764B /* LKBadgeView */ = {
+			isa = PBXGroup;
+			children = (
+				F7D253451A4D32B30015764B /* LKBadgeView.h */,
+				F7D253461A4D32B30015764B /* LKBadgeView.m */,
+			);
+			path = LKBadgeView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1811,149 +1052,76 @@
 			buildActionMask = 2147483647;
 			files = (
 				F751C4091A4C3EDB00743ECB /* XHPhotographyHelper.h in Headers */,
-				F751C47E1A4C3EDB00743ECB /* MultiSelectItem.h in Headers */,
-				F751C4FE1A4C3EDB00743ECB /* XHRefreshControl.h in Headers */,
 				F751C44D1A4C3EDB00743ECB /* XHFileAttribute.h in Headers */,
 				F751C4311A4C3EDB00743ECB /* XHDisplayMediaViewController.h in Headers */,
-				F751C4B61A4C3EDB00743ECB /* XHAlbumCollectionViewFlowLayout.h in Headers */,
 				F751C4E41A4C3EDB00743ECB /* XHEmotionCollectionViewFlowLayout.h in Headers */,
 				F751C4961A4C3EDB00743ECB /* SETextAttachment.h in Headers */,
 				F751C4621A4C3EDB00743ECB /* XHAnnotation.h in Headers */,
 				F751C3E51A4C3EDB00743ECB /* NSString+MessageInputView.h in Headers */,
-				F751C4CE1A4C3EDB00743ECB /* XHHorizontalGridItemView.h in Headers */,
 				F751C46A1A4C3EDB00743ECB /* XHMessage.h in Headers */,
 				F751C3F71A4C3EDB00743ECB /* UIImage+XHRounded.h in Headers */,
-				F751C41F1A4C3EDB00743ECB /* XHAlbumTableViewController.h in Headers */,
-				F751C4BE1A4C3EDB00743ECB /* XHBaseCollectionViewCell.h in Headers */,
-				F751C4F21A4C3EDB00743ECB /* XHNewsTemplateTableViewCell.h in Headers */,
-				F751C4471A4C3EDB00743ECB /* XHMoreSettingTableViewController.h in Headers */,
 				F751C4E81A4C3EDB00743ECB /* XHEmotionSectionBar.h in Headers */,
-				F751C4D01A4C3EDB00743ECB /* XHHorizontalGridView.h in Headers */,
-				F751C4FC1A4C3EDB00743ECB /* XHRefreshCircleView.h in Headers */,
-				F751C4CA1A4C3EDB00743ECB /* XHContactView.h in Headers */,
 				F751C40D1A4C3EDB00743ECB /* XHVoiceRecordHelper.h in Headers */,
 				F751C46C1A4C3EDB00743ECB /* XHMessageModel.h in Headers */,
 				F751C4A61A4C3EDB00743ECB /* SETextSelectionView.h in Headers */,
-				F751C3E71A4C3EDB00743ECB /* NSString+XHDiskSizeTransfrom.h in Headers */,
-				F751C4BA1A4C3EDB00743ECB /* XHAlbumRichTextView.h in Headers */,
 				F751C4A21A4C3EDB00743ECB /* SETextMagnifierRanged.h in Headers */,
 				F751C4071A4C3EDB00743ECB /* XHMessageBubbleHelper.h in Headers */,
 				F751C4A81A4C3EDB00743ECB /* SETextView.h in Headers */,
-				F751C4D21A4C3EDB00743ECB /* XHLocationServiceTableViewCell.h in Headers */,
-				F751C4391A4C3EDB00743ECB /* XHNewsTableViewController.h in Headers */,
 				F751C4D61A4C3EDB00743ECB /* XHMessageBubbleView.h in Headers */,
 				F751C3F11A4C3EDB00743ECB /* UIImage+RoundedCorner.h in Headers */,
 				F751C4EA1A4C3EDB00743ECB /* XHShareMenuView.h in Headers */,
-				F751C4F41A4C3EDB00743ECB /* XHPopMenu.h in Headers */,
 				F751C42F1A4C3EDB00743ECB /* XHDisplayLocationViewController.h in Headers */,
-				F751C4EE1A4C3EDB00743ECB /* XHNewsContainerView.h in Headers */,
 				F751C4731A4C3EDB00743ECB /* FLAnimatedImageView.h in Headers */,
 				F751C49C1A4C3EDB00743ECB /* SETextInput.h in Headers */,
 				F751C4711A4C3EDB00743ECB /* FLAnimatedImage.h in Headers */,
-				F751C4431A4C3EDB00743ECB /* XHMoreMyFavoritesTableViewController.h in Headers */,
 				F751C4A41A4C3EDB00743ECB /* SETextSelection.h in Headers */,
 				F751C4661A4C3EDB00743ECB /* XHEmotion.h in Headers */,
-				F751C4FA1A4C3EDB00743ECB /* XHLoadMoreView.h in Headers */,
 				F751C40B1A4C3EDB00743ECB /* XHVoiceCommonHelper.h in Headers */,
-				F751C4AC1A4C3EDB00743ECB /* XHViewState.h in Headers */,
-				F751C4F01A4C3EDB00743ECB /* XHNewsTemplateContainerView.h in Headers */,
 				F751C4D81A4C3EDB00743ECB /* XHMessageTableView.h in Headers */,
-				F751C46F1A4C3EDB00743ECB /* XHStoreManager.h in Headers */,
 				F751C3F31A4C3EDB00743ECB /* UIImage+Utility.h in Headers */,
-				F751C41B1A4C3EDB00743ECB /* XHContactDetailTableViewController.h in Headers */,
 				F751C4D41A4C3EDB00743ECB /* XHBubblePhotoImageView.h in Headers */,
-				F751C5021A4C3EDB00743ECB /* XHScanningView.h in Headers */,
-				F751C4861A4C3EDB00743ECB /* MultiSelectViewController.h in Headers */,
-				F751C4451A4C3EDB00743ECB /* XHMoreMyProfileDetailTableViewController.h in Headers */,
 				F751C3E91A4C3EDB00743ECB /* NSString+XHMD5.h in Headers */,
-				F751C4171A4C3EDB00743ECB /* XHPullRefreshTableViewController.h in Headers */,
-				F751C4411A4C3EDB00743ECB /* XHMoreMyBankCardTableViewController.h in Headers */,
 				F751C4941A4C3EDB00743ECB /* SESelectionGrabber.h in Headers */,
 				F751C3FD1A4C3EDB00743ECB /* UIView+XHRemoteImage.h in Headers */,
-				F751C4291A4C3EDB00743ECB /* XHQRCodeViewController.h in Headers */,
-				F751C4C61A4C3EDB00743ECB /* XHContactPhotosView.h in Headers */,
-				F751C4B41A4C3EDB00743ECB /* XHWaterDropRefresh.h in Headers */,
 				F751C45D1A4C3EDB00743ECB /* XHFoundationMacro.h in Headers */,
 				F751C7B01A4C407800743ECB /* MessageDisplayKit-Prefix.pch in Headers */,
-				F751C3FB1A4C3EDB00743ECB /* UIView+XHBadgeView.h in Headers */,
 				F751C48C1A4C3EDB00743ECB /* SECompatibility.h in Headers */,
-				F751C4AA1A4C3EDB00743ECB /* XHImageViewer.h in Headers */,
-				F751C4881A4C3EDB00743ECB /* UIView+Convenience.h in Headers */,
-				F751C4191A4C3EDB00743ECB /* XHBaseViewController.h in Headers */,
 				F751C42D1A4C3EDB00743ECB /* XHDisplayEmotionViewController.h in Headers */,
 				F751C49A1A4C3EDB00743ECB /* SETextGeometry.h in Headers */,
-				F751C4BC1A4C3EDB00743ECB /* XHAlbumTableViewCell.h in Headers */,
 				F751C4051A4C3EDB00743ECB /* XHLocationHelper.h in Headers */,
-				F751C47B1A4C3EDB00743ECB /* MultiSelectedPanel.h in Headers */,
 				F751C44B1A4C3EDB00743ECB /* XHCacheManager.h in Headers */,
 				F751C4531A4C3EDB00743ECB /* XHMessageAvatarFactory.h in Headers */,
-				F751C3EB1A4C3EDB00743ECB /* UIButton+XHButtonTitlePosition.h in Headers */,
-				F751C4151A4C3EDB00743ECB /* XHBaseTableViewController.h in Headers */,
 				F751C4351A4C3EDB00743ECB /* XHMessageTableViewController.h in Headers */,
-				F751C5001A4C3EDB00743ECB /* XHRefreshView.h in Headers */,
 				F751C45E1A4C3EDB00743ECB /* XHMacro.h in Headers */,
-				F751C4B21A4C3EDB00743ECB /* XHSoundManager.h in Headers */,
 				F751C4E61A4C3EDB00743ECB /* XHEmotionManagerView.h in Headers */,
-				F751C4031A4C3EDB00743ECB /* XHFoundationCommon.h in Headers */,
-				F751C4C41A4C3EDB00743ECB /* XHContactPhotosTableViewCell.h in Headers */,
 				F751C4E21A4C3EDB00743ECB /* XHEmotionCollectionViewCell.h in Headers */,
-				F751C4641A4C3EDB00743ECB /* XHContact.h in Headers */,
-				F751C43D1A4C3EDB00743ECB /* XHMoreExpressionShopsTableViewController.h in Headers */,
 				F751C4551A4C3EDB00743ECB /* XHMessageBubbleFactory.h in Headers */,
 				F751C49E1A4C3EDB00743ECB /* SETextLayout.h in Headers */,
 				F751C4591A4C3EDB00743ECB /* XHMessageVoiceFactory.h in Headers */,
-				F751C4AE1A4C3EDB00743ECB /* XHZoomingImageView.h in Headers */,
 				F751C4331A4C3EDB00743ECB /* XHDisplayTextViewController.h in Headers */,
 				F751C3EF1A4C3EDB00743ECB /* UIImage+Resize.h in Headers */,
 				F751C4011A4C3EDB00743ECB /* XHCaptureHelper.h in Headers */,
 				F751C4C01A4C3EDB00743ECB /* XHBaseTableViewCell.h in Headers */,
-				F751C4601A4C3EDB00743ECB /* XHAlbum.h in Headers */,
 				F751C44F1A4C3EDB00743ECB /* XHHTTPClient.h in Headers */,
-				F751C4771A4C3EDB00743ECB /* MLLetterIndexNavigationItem.h in Headers */,
-				F751C43B1A4C3EDB00743ECB /* XHExpressionDetailTableViewController.h in Headers */,
-				F751C4B01A4C3EDB00743ECB /* XHPathCover.h in Headers */,
-				F751C4491A4C3EDB00743ECB /* XHProfileTableViewController.h in Headers */,
-				F751C4B81A4C3EDB00743ECB /* XHAlbumPhotoCollectionViewCell.h in Headers */,
-				F751C4251A4C3EDB00743ECB /* XHLocationServiceTableViewController.h in Headers */,
 				F751C4DE1A4C3EDB00743ECB /* XHMessageTextView.h in Headers */,
-				F751C4EC1A4C3EDB00743ECB /* XHMoreExpressionShopsTableViewCell.h in Headers */,
-				F751C4211A4C3EDB00743ECB /* XHBottleViewController.h in Headers */,
-				F751C43F1A4C3EDB00743ECB /* XHMoreMyAlbumTableViewController.h in Headers */,
 				F751C46D1A4C3EDB00743ECB /* XHShareMenuItem.h in Headers */,
 				F751C48E1A4C3EDB00743ECB /* SEConstants.h in Headers */,
 				F751C4681A4C3EDB00743ECB /* XHEmotionManager.h in Headers */,
-				F751C4C21A4C3EDB00743ECB /* XHContactCommunicationView.h in Headers */,
-				F751C4271A4C3EDB00743ECB /* XHMoreGameTableViewController.h in Headers */,
 				F751C48A1A4C3EDB00743ECB /* NSMutableAttributedString+Helper.h in Headers */,
-				F751C40F1A4C3EDB00743ECB /* XHBaseNavigationController.h in Headers */,
 				F751C4A01A4C3EDB00743ECB /* SETextMagnifierCaret.h in Headers */,
 				F751C4DA1A4C3EDB00743ECB /* XHMessageTableViewCell.h in Headers */,
 				F751C45B1A4C3EDB00743ECB /* XHVideoOutputSampleBufferFactory.h in Headers */,
-				F751C4801A4C3EDB00743ECB /* MultiSelectSearchResultTableViewCell.h in Headers */,
 				F751C3ED1A4C3EDB00743ECB /* UIImage+Alpha.h in Headers */,
-				F751C4231A4C3EDB00743ECB /* XHDiscoverTableViewController.h in Headers */,
-				F751C4CC1A4C3EDB00743ECB /* XHHorizontalGridItem.h in Headers */,
 				F751C3F91A4C3EDB00743ECB /* UIScrollView+XHkeyboardControl.h in Headers */,
 				F751C4DC1A4C3EDB00743ECB /* XHMessageInputView.h in Headers */,
 				F751C4511A4C3EDB00743ECB /* XHOperationNetworkKit.h in Headers */,
-				F751C4791A4C3EDB00743ECB /* MLLetterIndexNavigationView.h in Headers */,
-				F751C4C81A4C3EDB00743ECB /* XHContactTableViewCell.h in Headers */,
 				F751C4571A4C3EDB00743ECB /* XHMessageVideoConverPhotoFactory.h in Headers */,
-				F751C4111A4C3EDB00743ECB /* XHBaseSearchTableViewController.h in Headers */,
-				F751C4751A4C3EDB00743ECB /* LKBadgeView.h in Headers */,
-				F751C3F51A4C3EDB00743ECB /* UIImage+XHAnimatedFaceGif.h in Headers */,
 				F751C4981A4C3EDB00743ECB /* SETextEditingCaret.h in Headers */,
 				F751C3FF1A4C3EDB00743ECB /* XHAudioPlayerHelper.h in Headers */,
-				F751C4831A4C3EDB00743ECB /* MultiSelectTableViewCell.h in Headers */,
-				F751C4F61A4C3EDB00743ECB /* XHPopMenuItem.h in Headers */,
-				F751C4F81A4C3EDB00743ECB /* XHPopMenuItemView.h in Headers */,
 				F751C4901A4C3EDB00743ECB /* SELineLayout.h in Headers */,
-				F751C4131A4C3EDB00743ECB /* XHBaseTabBarController.h in Headers */,
 				F751C45F1A4C3EDB00743ECB /* XHUIKitMacro.h in Headers */,
-				F751C4371A4C3EDB00743ECB /* XHMultipleSectionTableViewController.h in Headers */,
-				F751C42B1A4C3EDB00743ECB /* XHShakeViewController.h in Headers */,
-				F751C41D1A4C3EDB00743ECB /* XHContactTableViewController.h in Headers */,
 				F751C4E01A4C3EDB00743ECB /* XHVoiceRecordHUD.h in Headers */,
+				F7D253471A4D32B30015764B /* LKBadgeView.h in Headers */,
 				F751C4921A4C3EDB00743ECB /* SELinkText.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2045,7 +1213,6 @@
 				F751C5531A4C3EDB00743ECB /* sharemore_voiceinput@2x.png in Resources */,
 				F751C5081A4C3EDB00743ECB /* CellGraySelected@2x.png in Resources */,
 				F751C51F1A4C3EDB00743ECB /* msg_chat_voice_unread.png in Resources */,
-				F751C4821A4C3EDB00743ECB /* MultiSelectSearchResultTableViewCell.xib in Resources */,
 				F751C51C1A4C3EDB00743ECB /* keyborad_HL@2x.png in Resources */,
 				F751C52F1A4C3EDB00743ECB /* RecordingSignal003@2x.png in Resources */,
 				F751C5411A4C3EDB00743ECB /* section0_emotion4@2x.png in Resources */,
@@ -2054,7 +1221,6 @@
 				F751C5561A4C3EDB00743ECB /* voice@2x.png in Resources */,
 				F751C5431A4C3EDB00743ECB /* section0_emotion6@2x.png in Resources */,
 				F751C52D1A4C3EDB00743ECB /* RecordingSignal001@2x.png in Resources */,
-				F751C47D1A4C3EDB00743ECB /* MultiSelectedPanel.xib in Resources */,
 				F751C5261A4C3EDB00743ECB /* ReceiverVoiceNodePlaying000@2x.png in Resources */,
 				F751C50D1A4C3EDB00743ECB /* contacts_add_photo@2x.png in Resources */,
 				F751C54C1A4C3EDB00743ECB /* sharemore_friendcard@2x.png in Resources */,
@@ -2063,7 +1229,6 @@
 				F751C5121A4C3EDB00743ECB /* face@2x.png in Resources */,
 				F751C5131A4C3EDB00743ECB /* face_HL@2x.png in Resources */,
 				F751C54B1A4C3EDB00743ECB /* SenderVoiceNodePlaying@2x.png in Resources */,
-				F751C4851A4C3EDB00743ECB /* MultiSelectTableViewCell.xib in Resources */,
 				F751C5511A4C3EDB00743ECB /* sharemore_video@2x.png in Resources */,
 				F751C54A1A4C3EDB00743ECB /* SenderVoiceNodePlaying003@2x.png in Resources */,
 				F751C55C1A4C3EDB00743ECB /* weChatBubble_Sending_Cavern@2x.png in Resources */,
@@ -2149,145 +1314,72 @@
 			buildActionMask = 2147483647;
 			files = (
 				F751C49F1A4C3EDB00743ECB /* SETextLayout.m in Sources */,
-				F751C4781A4C3EDB00743ECB /* MLLetterIndexNavigationItem.m in Sources */,
-				F751C4241A4C3EDB00743ECB /* XHDiscoverTableViewController.m in Sources */,
 				F751C3FE1A4C3EDB00743ECB /* UIView+XHRemoteImage.m in Sources */,
 				F751C4A51A4C3EDB00743ECB /* SETextSelection.m in Sources */,
 				F751C4721A4C3EDB00743ECB /* FLAnimatedImage.m in Sources */,
 				F751C4631A4C3EDB00743ECB /* XHAnnotation.m in Sources */,
 				F751C4321A4C3EDB00743ECB /* XHDisplayMediaViewController.m in Sources */,
-				F751C41C1A4C3EDB00743ECB /* XHContactDetailTableViewController.m in Sources */,
 				F751C4C11A4C3EDB00743ECB /* XHBaseTableViewCell.m in Sources */,
-				F751C3E81A4C3EDB00743ECB /* NSString+XHDiskSizeTransfrom.m in Sources */,
 				F751C4741A4C3EDB00743ECB /* FLAnimatedImageView.m in Sources */,
-				F751C4D31A4C3EDB00743ECB /* XHLocationServiceTableViewCell.m in Sources */,
 				F751C4E91A4C3EDB00743ECB /* XHEmotionSectionBar.m in Sources */,
-				F751C4C31A4C3EDB00743ECB /* XHContactCommunicationView.m in Sources */,
 				F751C48D1A4C3EDB00743ECB /* SECompatibility.m in Sources */,
-				F751C4101A4C3EDB00743ECB /* XHBaseNavigationController.m in Sources */,
 				F751C48B1A4C3EDB00743ECB /* NSMutableAttributedString+Helper.m in Sources */,
-				F751C42C1A4C3EDB00743ECB /* XHShakeViewController.m in Sources */,
 				F751C4991A4C3EDB00743ECB /* SETextEditingCaret.m in Sources */,
 				F751C3E61A4C3EDB00743ECB /* NSString+MessageInputView.m in Sources */,
-				F751C4BD1A4C3EDB00743ECB /* XHAlbumTableViewCell.m in Sources */,
-				F751C4281A4C3EDB00743ECB /* XHMoreGameTableViewController.m in Sources */,
-				F751C5031A4C3EDB00743ECB /* XHScanningView.m in Sources */,
 				F751C40C1A4C3EDB00743ECB /* XHVoiceCommonHelper.m in Sources */,
 				F751C4561A4C3EDB00743ECB /* XHMessageBubbleFactory.m in Sources */,
 				F751C3F21A4C3EDB00743ECB /* UIImage+RoundedCorner.m in Sources */,
 				F751C4E51A4C3EDB00743ECB /* XHEmotionCollectionViewFlowLayout.m in Sources */,
-				F751C4F11A4C3EDB00743ECB /* XHNewsTemplateContainerView.m in Sources */,
-				F751C42A1A4C3EDB00743ECB /* XHQRCodeViewController.m in Sources */,
-				F751C3EC1A4C3EDB00743ECB /* UIButton+XHButtonTitlePosition.m in Sources */,
 				F751C40E1A4C3EDB00743ECB /* XHVoiceRecordHelper.m in Sources */,
 				F751C3F41A4C3EDB00743ECB /* UIImage+Utility.m in Sources */,
 				F751C4541A4C3EDB00743ECB /* XHMessageAvatarFactory.m in Sources */,
-				F751C43E1A4C3EDB00743ECB /* XHMoreExpressionShopsTableViewController.m in Sources */,
-				F751C4EF1A4C3EDB00743ECB /* XHNewsContainerView.m in Sources */,
-				F751C4F71A4C3EDB00743ECB /* XHPopMenuItem.m in Sources */,
-				F751C4461A4C3EDB00743ECB /* XHMoreMyProfileDetailTableViewController.m in Sources */,
 				F751C45A1A4C3EDB00743ECB /* XHMessageVoiceFactory.m in Sources */,
-				F751C41A1A4C3EDB00743ECB /* XHBaseViewController.m in Sources */,
-				F751C4B71A4C3EDB00743ECB /* XHAlbumCollectionViewFlowLayout.m in Sources */,
-				F751C4FD1A4C3EDB00743ECB /* XHRefreshCircleView.m in Sources */,
-				F751C5011A4C3EDB00743ECB /* XHRefreshView.m in Sources */,
 				F751C4DF1A4C3EDB00743ECB /* XHMessageTextView.m in Sources */,
 				F751C4971A4C3EDB00743ECB /* SETextAttachment.m in Sources */,
-				F751C4AB1A4C3EDB00743ECB /* XHImageViewer.m in Sources */,
 				F751C4E31A4C3EDB00743ECB /* XHEmotionCollectionViewCell.m in Sources */,
 				F751C44C1A4C3EDB00743ECB /* XHCacheManager.m in Sources */,
-				F751C4F31A4C3EDB00743ECB /* XHNewsTemplateTableViewCell.m in Sources */,
-				F751C4121A4C3EDB00743ECB /* XHBaseSearchTableViewController.m in Sources */,
 				F751C4501A4C3EDB00743ECB /* XHHTTPClient.m in Sources */,
 				F751C44E1A4C3EDB00743ECB /* XHFileAttribute.m in Sources */,
 				F751C4301A4C3EDB00743ECB /* XHDisplayLocationViewController.m in Sources */,
-				F751C4B51A4C3EDB00743ECB /* XHWaterDropRefresh.m in Sources */,
 				F751C3EE1A4C3EDB00743ECB /* UIImage+Alpha.m in Sources */,
 				F751C4081A4C3EDB00743ECB /* XHMessageBubbleHelper.m in Sources */,
 				F751C4D51A4C3EDB00743ECB /* XHBubblePhotoImageView.m in Sources */,
 				F751C4A11A4C3EDB00743ECB /* SETextMagnifierCaret.m in Sources */,
-				F751C4811A4C3EDB00743ECB /* MultiSelectSearchResultTableViewCell.m in Sources */,
-				F751C3F61A4C3EDB00743ECB /* UIImage+XHAnimatedFaceGif.m in Sources */,
 				F751C40A1A4C3EDB00743ECB /* XHPhotographyHelper.m in Sources */,
-				F751C4701A4C3EDB00743ECB /* XHStoreManager.m in Sources */,
 				F751C4DB1A4C3EDB00743ECB /* XHMessageTableViewCell.m in Sources */,
-				F751C4C91A4C3EDB00743ECB /* XHContactTableViewCell.m in Sources */,
 				F751C4931A4C3EDB00743ECB /* SELinkText.m in Sources */,
-				F751C4891A4C3EDB00743ECB /* UIView+Convenience.m in Sources */,
-				F751C41E1A4C3EDB00743ECB /* XHContactTableViewController.m in Sources */,
 				F751C4361A4C3EDB00743ECB /* XHMessageTableViewController.m in Sources */,
-				F751C4AD1A4C3EDB00743ECB /* XHViewState.m in Sources */,
-				F751C47C1A4C3EDB00743ECB /* MultiSelectedPanel.m in Sources */,
 				F751C4691A4C3EDB00743ECB /* XHEmotionManager.m in Sources */,
 				F751C4671A4C3EDB00743ECB /* XHEmotion.m in Sources */,
-				F751C4651A4C3EDB00743ECB /* XHContact.m in Sources */,
-				F751C47F1A4C3EDB00743ECB /* MultiSelectItem.m in Sources */,
-				F751C44A1A4C3EDB00743ECB /* XHProfileTableViewController.m in Sources */,
 				F751C3EA1A4C3EDB00743ECB /* NSString+XHMD5.m in Sources */,
-				F751C4FB1A4C3EDB00743ECB /* XHLoadMoreView.m in Sources */,
 				F751C4E71A4C3EDB00743ECB /* XHEmotionManagerView.m in Sources */,
-				F751C4F51A4C3EDB00743ECB /* XHPopMenu.m in Sources */,
 				F751C3FA1A4C3EDB00743ECB /* UIScrollView+XHkeyboardControl.m in Sources */,
-				F751C4F91A4C3EDB00743ECB /* XHPopMenuItemView.m in Sources */,
 				F751C42E1A4C3EDB00743ECB /* XHDisplayEmotionViewController.m in Sources */,
-				F751C4841A4C3EDB00743ECB /* MultiSelectTableViewCell.m in Sources */,
-				F751C4C71A4C3EDB00743ECB /* XHContactPhotosView.m in Sources */,
 				F751C4D71A4C3EDB00743ECB /* XHMessageBubbleView.m in Sources */,
-				F751C4421A4C3EDB00743ECB /* XHMoreMyBankCardTableViewController.m in Sources */,
-				F751C4181A4C3EDB00743ECB /* XHPullRefreshTableViewController.m in Sources */,
 				F751C4061A4C3EDB00743ECB /* XHLocationHelper.m in Sources */,
 				F751C46B1A4C3EDB00743ECB /* XHMessage.m in Sources */,
-				F751C4FF1A4C3EDB00743ECB /* XHRefreshControl.m in Sources */,
-				F751C43A1A4C3EDB00743ECB /* XHNewsTableViewController.m in Sources */,
-				F751C4B91A4C3EDB00743ECB /* XHAlbumPhotoCollectionViewCell.m in Sources */,
-				F751C4611A4C3EDB00743ECB /* XHAlbum.m in Sources */,
-				F751C4871A4C3EDB00743ECB /* MultiSelectViewController.m in Sources */,
-				F751C4481A4C3EDB00743ECB /* XHMoreSettingTableViewController.m in Sources */,
 				F751C4D91A4C3EDB00743ECB /* XHMessageTableView.m in Sources */,
 				F751C4DD1A4C3EDB00743ECB /* XHMessageInputView.m in Sources */,
-				F751C4B31A4C3EDB00743ECB /* XHSoundManager.m in Sources */,
 				F751C4581A4C3EDB00743ECB /* XHMessageVideoConverPhotoFactory.m in Sources */,
 				F751C4E11A4C3EDB00743ECB /* XHVoiceRecordHUD.m in Sources */,
-				F751C4AF1A4C3EDB00743ECB /* XHZoomingImageView.m in Sources */,
 				F751C4021A4C3EDB00743ECB /* XHCaptureHelper.m in Sources */,
-				F751C3FC1A4C3EDB00743ECB /* UIView+XHBadgeView.m in Sources */,
-				F751C43C1A4C3EDB00743ECB /* XHExpressionDetailTableViewController.m in Sources */,
-				F751C4401A4C3EDB00743ECB /* XHMoreMyAlbumTableViewController.m in Sources */,
-				F751C4441A4C3EDB00743ECB /* XHMoreMyFavoritesTableViewController.m in Sources */,
 				F751C4951A4C3EDB00743ECB /* SESelectionGrabber.m in Sources */,
-				F751C4BB1A4C3EDB00743ECB /* XHAlbumRichTextView.m in Sources */,
-				F751C4B11A4C3EDB00743ECB /* XHPathCover.m in Sources */,
-				F751C4C51A4C3EDB00743ECB /* XHContactPhotosTableViewCell.m in Sources */,
+				F7D253481A4D32B30015764B /* LKBadgeView.m in Sources */,
 				F751C4001A4C3EDB00743ECB /* XHAudioPlayerHelper.m in Sources */,
-				F751C4221A4C3EDB00743ECB /* XHBottleViewController.m in Sources */,
-				F751C4761A4C3EDB00743ECB /* LKBadgeView.m in Sources */,
-				F751C4D11A4C3EDB00743ECB /* XHHorizontalGridView.m in Sources */,
 				F751C3F01A4C3EDB00743ECB /* UIImage+Resize.m in Sources */,
 				F751C46E1A4C3EDB00743ECB /* XHShareMenuItem.m in Sources */,
 				F751C4521A4C3EDB00743ECB /* XHOperationNetworkKit.m in Sources */,
-				F751C4CF1A4C3EDB00743ECB /* XHHorizontalGridItemView.m in Sources */,
 				F751C4A91A4C3EDB00743ECB /* SETextView.m in Sources */,
 				F751C4A71A4C3EDB00743ECB /* SETextSelectionView.m in Sources */,
-				F751C4201A4C3EDB00743ECB /* XHAlbumTableViewController.m in Sources */,
 				F751C4A31A4C3EDB00743ECB /* SETextMagnifierRanged.m in Sources */,
 				F751C4EB1A4C3EDB00743ECB /* XHShareMenuView.m in Sources */,
-				F751C4CB1A4C3EDB00743ECB /* XHContactView.m in Sources */,
 				F751C49B1A4C3EDB00743ECB /* SETextGeometry.m in Sources */,
-				F751C4ED1A4C3EDB00743ECB /* XHMoreExpressionShopsTableViewCell.m in Sources */,
-				F751C4381A4C3EDB00743ECB /* XHMultipleSectionTableViewController.m in Sources */,
 				F751C45C1A4C3EDB00743ECB /* XHVideoOutputSampleBufferFactory.m in Sources */,
-				F751C47A1A4C3EDB00743ECB /* MLLetterIndexNavigationView.m in Sources */,
 				F751C49D1A4C3EDB00743ECB /* SETextInput.m in Sources */,
 				F751C4341A4C3EDB00743ECB /* XHDisplayTextViewController.m in Sources */,
 				F751C3F81A4C3EDB00743ECB /* UIImage+XHRounded.m in Sources */,
 				F751C48F1A4C3EDB00743ECB /* SEConstants.m in Sources */,
-				F751C4161A4C3EDB00743ECB /* XHBaseTableViewController.m in Sources */,
-				F751C4BF1A4C3EDB00743ECB /* XHBaseCollectionViewCell.m in Sources */,
-				F751C4CD1A4C3EDB00743ECB /* XHHorizontalGridItem.m in Sources */,
 				F751C4911A4C3EDB00743ECB /* SELineLayout.m in Sources */,
-				F751C4261A4C3EDB00743ECB /* XHLocationServiceTableViewController.m in Sources */,
-				F751C4141A4C3EDB00743ECB /* XHBaseTabBarController.m in Sources */,
-				F751C4041A4C3EDB00743ECB /* XHFoundationCommon.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2489,6 +1581,7 @@
 				F751C1FD1A4C3E1B00743ECB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F751C1FE1A4C3E1B00743ECB /* Build configuration list for PBXNativeTarget "MessageDisplayKitTests" */ = {
 			isa = XCConfigurationList;
@@ -2497,6 +1590,7 @@
 				F751C2001A4C3E1B00743ECB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

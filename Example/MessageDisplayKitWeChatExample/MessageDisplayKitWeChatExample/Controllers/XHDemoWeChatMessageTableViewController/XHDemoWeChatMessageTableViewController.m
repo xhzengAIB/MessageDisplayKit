@@ -12,18 +12,23 @@
 #import <MessageDisplayKit/XHDisplayMediaViewController.h>
 #import <MessageDisplayKit/XHDisplayLocationViewController.h>
 
-#import "MDKMessage.h"
+#import <MessageDisplayKit/XHAudioPlayerHelper.h>
 
-@interface XHDemoWeChatMessageTableViewController ()
+#import "XHContactDetailTableViewController.h"
+
+
+@interface XHDemoWeChatMessageTableViewController () <XHAudioPlayerHelperDelegate>
 
 @property (nonatomic, strong) NSArray *emotionManagers;
+
+@property (nonatomic, strong) XHMessageTableViewCell *currentSelectedCell;
 
 @end
 
 @implementation XHDemoWeChatMessageTableViewController
 
 - (XHMessage *)getTextMessageWithBubbleMessageType:(XHBubbleMessageType)bubbleMessageType {
-    XHMessage *textMessage = [[XHMessage alloc] initWithText:@"Call Me 15915895880.这是华捷微信，为什么模仿这个页面效果呢？希望微信团队能看到我们在努力，请微信团队给个机会，让我好好的努力靠近大神，希望自己也能发亮，好像有点过分的希望了，如果大家喜欢这个开源库，请大家帮帮忙支持这个开源库吧！我是Jack，叫华仔也行，曾宪华就是我啦！" sender:@"华仔" timestamp:[NSDate distantPast]];
+    XHMessage *textMessage = [[XHMessage alloc] initWithText:@"Call Me 15915895880. 这是华捷微信，为什么模仿这个页面效果呢？希望微信团队能看到我们在努力，请微信团队给个机会，让我好好的努力靠近大神，希望自己也能发亮，好像有点过分的希望了，如果大家喜欢这个开源库，请大家帮帮忙支持这个开源库吧！我是Jack，叫华仔也行，曾宪华就是我啦！" sender:@"华仔" timestamp:[NSDate distantPast]];
     textMessage.avator = [UIImage imageNamed:@"avator"];
     textMessage.avatorUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
     textMessage.bubbleMessageType = bubbleMessageType;
@@ -32,7 +37,7 @@
 }
 
 - (XHMessage *)getPhotoMessageWithBubbleMessageType:(XHBubbleMessageType)bubbleMessageType {
-    XHMessage *photoMessage = [[XHMessage alloc] initWithPhoto:[UIImage imageNamed:@"placeholderImage"] thumbnailUrl:@"http://www.pailixiu.com/jack/networkPhoto.png" originPhotoUrl:nil sender:@"Jack" timestamp:[NSDate date]];
+    XHMessage *photoMessage = [[XHMessage alloc] initWithPhoto:[UIImage imageNamed:@"placeholderImage"] thumbnailUrl:@"http://d.hiphotos.baidu.com/image/pic/item/30adcbef76094b361721961da1cc7cd98c109d8b.jpg" originPhotoUrl:nil sender:@"Jack" timestamp:[NSDate date]];
     photoMessage.avator = [UIImage imageNamed:@"avator"];
     photoMessage.avatorUrl = @"http://www.pailixiu.com/jack/JieIcon@2x.png";
     photoMessage.bubbleMessageType = bubbleMessageType;
@@ -51,7 +56,7 @@
 }
 
 - (XHMessage *)getVoiceMessageWithBubbleMessageType:(XHBubbleMessageType)bubbleMessageType {
-    XHMessage *voiceMessage = [[XHMessage alloc] initWithVoicePath:nil voiceUrl:nil voiceDuration:@"1" sender:@"Jayson" timestamp:[NSDate date]];    initWithVoicePath: voiceUrl: sender: timestamp:
+    XHMessage *voiceMessage = [[XHMessage alloc] initWithVoicePath:nil voiceUrl:nil voiceDuration:@"1" sender:@"Jayson" timestamp:[NSDate date] isRead:NO];
     voiceMessage.avator = [UIImage imageNamed:@"avator"];
     voiceMessage.avatorUrl = @"http://www.pailixiu.com/jack/JieIcon@2x.png";
     voiceMessage.bubbleMessageType = bubbleMessageType;
@@ -60,7 +65,7 @@
 }
 
 - (XHMessage *)getEmotionMessageWithBubbleMessageType:(XHBubbleMessageType)bubbleMessageType {
-    XHMessage *emotionMessage = [[XHMessage alloc] initWithEmotionPath:[[NSBundle mainBundle] pathForResource:@"Demo0.gif" ofType:nil] sender:@"Jayson" timestamp:[NSDate date]];
+    XHMessage *emotionMessage = [[XHMessage alloc] initWithEmotionPath:[[NSBundle mainBundle] pathForResource:@"emotion1.gif" ofType:nil] sender:@"Jayson" timestamp:[NSDate date]];
     emotionMessage.avator = [UIImage imageNamed:@"avator"];
     emotionMessage.avatorUrl = @"http://www.pailixiu.com/jack/JieIcon@2x.png";
     emotionMessage.bubbleMessageType = bubbleMessageType;
@@ -110,10 +115,28 @@
     });
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [[XHAudioPlayerHelper shareInstance] stopAudio];
+}
+
+- (id)init {
+    self = [super init];
+    if (self) {
+        // 配置输入框UI的样式
+//        self.allowsSendVoice = NO;
+//        self.allowsSendFace = NO;
+//        self.allowsSendMultiMedia = NO;
+    }
+    return self;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.title = NSLocalizedStringFromTable(@"Chat", @"MessageDisplayKitString", @"聊天");
+    
     // Custom UI
 //    [self setBackgroundColor:[UIColor clearColor]];
 //    [self setBackgroundImage:[UIImage imageNamed:@"TableViewBackgroundImage"]];
@@ -135,10 +158,10 @@
         XHEmotionManager *emotionManager = [[XHEmotionManager alloc] init];
         emotionManager.emotionName = [NSString stringWithFormat:@"表情%ld", (long)i];
         NSMutableArray *emotions = [NSMutableArray array];
-        for (NSInteger j = 0; j < 32; j ++) {
+        for (NSInteger j = 0; j < 18; j ++) {
             XHEmotion *emotion = [[XHEmotion alloc] init];
             NSString *imageName = [NSString stringWithFormat:@"section%ld_emotion%ld", (long)i , (long)j % 16];
-            emotion.emotionPath = [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"Demo%ld.gif", (long)j % 2] ofType:@""];
+            emotion.emotionPath = [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"emotion%ld.gif", (long)j] ofType:@""];
             emotion.emotionConverPhoto = [UIImage imageNamed:imageName];
             [emotions addObject:emotion];
         }
@@ -164,35 +187,13 @@
 
 - (void)dealloc {
     self.emotionManagers = nil;
+    [[XHAudioPlayerHelper shareInstance] setDelegate:nil];
 }
 
 /*
  [self removeMessageAtIndexPath:indexPath];
  [self insertOldMessages:self.messages];
  */
-
-#pragma mark - NSFetch Helper Method
-
-- (void)insertNewObject:(XHMessage *)message {
-    NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
-    NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity];
-    NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
-    
-    // If appropriate, configure the new managed object.
-    // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
-    [newManagedObject setValue:message.timestamp forKey:@"timestamp"];
-    [newManagedObject setValue:message.sender forKeyPath:@"sender"];
-    [newManagedObject setValue:message.text forKeyPath:@"text"];
-    
-    // Save the context.
-    NSError *error = nil;
-    if (![context save:&error]) {
-        // Replace this implementation with code to handle the error appropriately.
-        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        abort();
-    }
-}
 
 #pragma mark - XHMessageTableViewCell delegate
 
@@ -209,11 +210,28 @@
             break;
         }
             break;
-        case XHBubbleMessageMediaTypeVoice:
+        case XHBubbleMessageMediaTypeVoice: {
             DLog(@"message : %@", message.voicePath);
-            [messageTableViewCell.messageBubbleView.animationVoiceImageView startAnimating];
-            [messageTableViewCell.messageBubbleView.animationVoiceImageView performSelector:@selector(stopAnimating) withObject:nil afterDelay:3];
+            
+            // Mark the voice as read and hide the red dot.
+            message.isRead = YES;
+            messageTableViewCell.messageBubbleView.voiceUnreadDotImageView.hidden = YES;
+            
+            [[XHAudioPlayerHelper shareInstance] setDelegate:self];
+            if (_currentSelectedCell) {
+                [_currentSelectedCell.messageBubbleView.animationVoiceImageView stopAnimating];
+            }
+            if (_currentSelectedCell == messageTableViewCell) {
+                [messageTableViewCell.messageBubbleView.animationVoiceImageView stopAnimating];
+                [[XHAudioPlayerHelper shareInstance] stopAudio];
+                self.currentSelectedCell = nil;
+            } else {
+                self.currentSelectedCell = messageTableViewCell;
+                [messageTableViewCell.messageBubbleView.animationVoiceImageView startAnimating];
+                [[XHAudioPlayerHelper shareInstance] managerAudioWithFileName:message.voicePath toPlay:YES];
+            }
             break;
+        }
         case XHBubbleMessageMediaTypeEmotion:
             DLog(@"facePath : %@", message.emotionPath);
             break;
@@ -239,13 +257,27 @@
     [self.navigationController pushViewController:displayTextViewController animated:YES];
 }
 
-- (void)didSelectedAvatorAtIndexPath:(NSIndexPath *)indexPath {
+- (void)didSelectedAvatorOnMessage:(id<XHMessageModel>)message atIndexPath:(NSIndexPath *)indexPath {
     DLog(@"indexPath : %@", indexPath);
-    
+    XHContact *contact = [[XHContact alloc] init];
+    contact.contactName = [message sender];
+    contact.contactIntroduction = @"自定义描述，这个需要和业务逻辑挂钩";
+    XHContactDetailTableViewController *contactDetailTableViewController = [[XHContactDetailTableViewController alloc] initWithContact:contact];
+    [self.navigationController pushViewController:contactDetailTableViewController animated:YES];
 }
 
 - (void)menuDidSelectedAtBubbleMessageMenuSelecteType:(XHBubbleMessageMenuSelecteType)bubbleMessageMenuSelecteType {
     
+}
+
+#pragma mark - XHAudioPlayerHelper Delegate
+
+- (void)didAudioPlayerStopPlay:(AVAudioPlayer *)audioPlayer {
+    if (!_currentSelectedCell) {
+        return;
+    }
+    [_currentSelectedCell.messageBubbleView.animationVoiceImageView stopAnimating];
+    self.currentSelectedCell = nil;
 }
 
 #pragma mark - XHEmotionManagerView DataSource
@@ -262,140 +294,10 @@
     return self.emotionManagers;
 }
 
-#pragma mark - XHMessageTableViewController DataSource
-
-- (id<XHMessageModel>)messageForRowAtIndexPath:(NSIndexPath *)indexPath {
-    MDKMessage *message = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    XHMessage *currentMessage = [[XHMessage alloc] init];
-    currentMessage.sender = message.sender;
-    currentMessage.timestamp = message.timestamp;
-    currentMessage.text = message.text;
-    return currentMessage;
-}
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return [[self.fetchedResultsController sections] count];
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController sections][section];
-    return [sectionInfo numberOfObjects];
-}
-
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
-        [context deleteObject:[self.fetchedResultsController objectAtIndexPath:indexPath]];
-        
-        NSError *error = nil;
-        if (![context save:&error]) {
-            // Replace this implementation with code to handle the error appropriately.
-            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-            abort();
-        }
-    }
-}
-
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // The table view should not be re-orderable.
-    return NO;
-}
-#pragma mark - Fetched results controller
-
-- (NSFetchedResultsController *)fetchedResultsController {
-    if (_fetchedResultsController != nil) {
-        return _fetchedResultsController;
-    }
-    
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    // Edit the entity name as appropriate.
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"MDKMessage" inManagedObjectContext:self.managedObjectContext];
-    [fetchRequest setEntity:entity];
-    
-    // Set the batch size to a suitable number.
-    [fetchRequest setFetchBatchSize:20];
-    
-    // Edit the sort key as appropriate.
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"timestamp" ascending:NO];
-    NSArray *sortDescriptors = @[sortDescriptor];
-    
-    [fetchRequest setSortDescriptors:sortDescriptors];
-    
-    // Edit the section name key path and cache name if appropriate.
-    // nil for section name key path means "no sections".
-    NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:@"Master"];
-    aFetchedResultsController.delegate = self;
-    self.fetchedResultsController = aFetchedResultsController;
-    
-	NSError *error = nil;
-	if (![self.fetchedResultsController performFetch:&error]) {
-        // Replace this implementation with code to handle the error appropriately.
-        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-	    NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-	    abort();
-	}
-    
-    return _fetchedResultsController;
-}
-
-- (void)controllerWillChangeContent:(NSFetchedResultsController *)controller {
-    [self.messageTableView beginUpdates];
-}
-
-- (void)controller:(NSFetchedResultsController *)controller didChangeSection:(id <NSFetchedResultsSectionInfo>)sectionInfo
-           atIndex:(NSUInteger)sectionIndex forChangeType:(NSFetchedResultsChangeType)type
-{
-    switch(type) {
-        case NSFetchedResultsChangeInsert:
-            [self.messageTableView insertSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
-            break;
-            
-        case NSFetchedResultsChangeDelete:
-            [self.messageTableView deleteSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
-            break;
-    }
-}
-
-- (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject
-       atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type
-      newIndexPath:(NSIndexPath *)newIndexPath {
-    UITableView *tableView = self.messageTableView;
-    
-    switch(type) {
-        case NSFetchedResultsChangeInsert:
-            [tableView insertRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
-            break;
-            
-        case NSFetchedResultsChangeDelete:
-            [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-            break;
-            
-        case NSFetchedResultsChangeUpdate:
-            [self configureCell:(XHMessageTableViewCell *)[tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
-            break;
-            
-        case NSFetchedResultsChangeMove:
-            [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-            [tableView insertRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
-            break;
-    }
-}
-
-- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
-    [self.messageTableView endUpdates];
-}
-
 #pragma mark - XHMessageTableViewController Delegate
 
 - (BOOL)shouldLoadMoreMessagesScrollToTop {
-    return NO;
+    return YES;
 }
 
 - (void)loadMoreMessagesScrollTotop {
@@ -405,7 +307,7 @@
         WEAKSELF
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             NSMutableArray *messages = [weakSelf getTestMessages];
-            sleep(3);
+            sleep(2);
             dispatch_async(dispatch_get_main_queue(), ^{
                 [weakSelf insertOldMessages:messages];
                 weakSelf.loadingMoreMessage = NO;
@@ -425,9 +327,8 @@
     XHMessage *textMessage = [[XHMessage alloc] initWithText:text sender:sender timestamp:date];
     textMessage.avator = [UIImage imageNamed:@"avator"];
     textMessage.avatorUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
-    [self insertNewObject:textMessage];
+    [self addMessage:textMessage];
     [self finishSendMessageWithBubbleMessageType:XHBubbleMessageMediaTypeText];
-    [self scrollToBottomAnimated:YES];
 }
 
 /**
@@ -468,7 +369,7 @@
  *  @param sender           发送者的名字
  *  @param date             发送时间
  */
-- (void)didSendVoice:(NSString *)voicePath voiceDuration:(NSString*)voiceDuration fromSender:(NSString *)sender onDate:(NSDate *)date {
+- (void)didSendVoice:(NSString *)voicePath voiceDuration:(NSString *)voiceDuration fromSender:(NSString *)sender onDate:(NSDate *)date {
     XHMessage *voiceMessage = [[XHMessage alloc] initWithVoicePath:voicePath voiceUrl:nil voiceDuration:voiceDuration sender:sender timestamp:date];
     voiceMessage.avator = [UIImage imageNamed:@"avator"];
     voiceMessage.avatorUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
@@ -484,16 +385,11 @@
  *  @param date     发送时间
  */
 - (void)didSendEmotion:(NSString *)emotionPath fromSender:(NSString *)sender onDate:(NSDate *)date {
-    if (emotionPath) {
-        XHMessage *emotionMessage = [[XHMessage alloc] initWithEmotionPath:emotionPath sender:sender timestamp:date];
-        emotionMessage.avator = [UIImage imageNamed:@"avator"];
-        emotionMessage.avatorUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
-        [self addMessage:emotionMessage];
-        [self finishSendMessageWithBubbleMessageType:XHBubbleMessageMediaTypeEmotion];
-        
-    } else {
-        [[[UIAlertView alloc] initWithTitle:@"温馨提示" message:@"如果想测试，请运行MessageDisplayKitWeChatExample工程" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"确定", nil] show];
-    }
+    XHMessage *emotionMessage = [[XHMessage alloc] initWithEmotionPath:emotionPath sender:sender timestamp:date];
+    emotionMessage.avator = [UIImage imageNamed:@"avator"];
+    emotionMessage.avatorUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
+    [self addMessage:emotionMessage];
+    [self finishSendMessageWithBubbleMessageType:XHBubbleMessageMediaTypeEmotion];
 }
 
 /**
@@ -528,11 +424,7 @@
  *  @param indexPath 目标Cell所在位置IndexPath
  */
 - (void)configureCell:(XHMessageTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row % 4) {
-        cell.messageBubbleView.displayTextView.textColor = [UIColor colorWithRed:0.106 green:0.586 blue:1.000 alpha:1.000];
-    } else {
-        cell.messageBubbleView.displayTextView.textColor = [UIColor blackColor];
-    }
+
 }
 
 /**

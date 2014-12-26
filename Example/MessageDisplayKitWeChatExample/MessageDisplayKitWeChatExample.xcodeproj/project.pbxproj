@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F7122EE61A4D33E200734F17 /* XHAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = F7122EE31A4D33E200734F17 /* XHAlbum.m */; };
+		F7122EE71A4D33E200734F17 /* XHContact.m in Sources */ = {isa = PBXBuildFile; fileRef = F7122EE51A4D33E200734F17 /* XHContact.m */; };
 		F7D24A331A4D099F0015764B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D24A321A4D099F0015764B /* main.m */; };
 		F7D24A361A4D099F0015764B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D24A351A4D099F0015764B /* AppDelegate.m */; };
 		F7D24A411A4D099F0015764B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7D24A401A4D099F0015764B /* Images.xcassets */; };
@@ -102,8 +104,6 @@
 		F7D24BCA1A4D0AA50015764B /* weChatBubble_Sending_Cavern@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7D24B6D1A4D0AA50015764B /* weChatBubble_Sending_Cavern@2x.png */; };
 		F7D24BCB1A4D0AA50015764B /* weChatBubble_Sending_Solid@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7D24B6E1A4D0AA50015764B /* weChatBubble_Sending_Solid@2x.png */; };
 		F7D24BCC1A4D0AA50015764B /* MessageDisplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7D24B701A4D0AA50015764B /* MessageDisplayKit.framework */; };
-		F7D24BD11A4D0BB40015764B /* XHDemoWeChatMessageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D24BCE1A4D0BB40015764B /* XHDemoWeChatMessageTableViewController.m */; };
-		F7D24BD21A4D0BB40015764B /* XHMessageRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D24BD01A4D0BB40015764B /* XHMessageRootViewController.m */; };
 		F7D24EB21A4D0EB30015764B /* avator@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7D24DF71A4D0EB20015764B /* avator@2x.png */; };
 		F7D24EB31A4D0EB30015764B /* Contact_Female@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7D24DF91A4D0EB20015764B /* Contact_Female@2x.png */; };
 		F7D24EB41A4D0EB30015764B /* Contact_Male@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7D24DFA1A4D0EB20015764B /* Contact_Male@2x.png */; };
@@ -277,6 +277,81 @@
 		F7D24F5C1A4D0EB30015764B /* tabbarBkg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7D24EAF1A4D0EB30015764B /* tabbarBkg@2x.png */; };
 		F7D24F5D1A4D0EB30015764B /* WeChat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7D24EB01A4D0EB30015764B /* WeChat@2x.png */; };
 		F7D24F5E1A4D0EB30015764B /* TableViewBackgroundImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7D24EB11A4D0EB30015764B /* TableViewBackgroundImage@2x.png */; };
+		F7D252F51A4D31F60015764B /* NSString+XHDiskSizeTransfrom.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D252341A4D31F60015764B /* NSString+XHDiskSizeTransfrom.m */; };
+		F7D252F61A4D31F60015764B /* UIButton+XHButtonTitlePosition.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D252371A4D31F60015764B /* UIButton+XHButtonTitlePosition.m */; };
+		F7D252F71A4D31F60015764B /* UIView+XHBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D2523A1A4D31F60015764B /* UIView+XHBadgeView.m */; };
+		F7D252F81A4D31F60015764B /* XHFoundationCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D2523D1A4D31F60015764B /* XHFoundationCommon.m */; };
+		F7D252F91A4D31F60015764B /* XHBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D252411A4D31F60015764B /* XHBaseNavigationController.m */; };
+		F7D252FA1A4D31F60015764B /* XHBaseSearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D252441A4D31F60015764B /* XHBaseSearchTableViewController.m */; };
+		F7D252FB1A4D31F60015764B /* XHBaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D252471A4D31F60015764B /* XHBaseTabBarController.m */; };
+		F7D252FC1A4D31F60015764B /* XHBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D2524A1A4D31F60015764B /* XHBaseTableViewController.m */; };
+		F7D252FD1A4D31F60015764B /* XHPullRefreshTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D2524C1A4D31F60015764B /* XHPullRefreshTableViewController.m */; };
+		F7D252FE1A4D31F60015764B /* XHBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D2524F1A4D31F60015764B /* XHBaseViewController.m */; };
+		F7D252FF1A4D31F60015764B /* XHContactDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D252531A4D31F60015764B /* XHContactDetailTableViewController.m */; };
+		F7D253001A4D31F60015764B /* XHContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D252551A4D31F60015764B /* XHContactTableViewController.m */; };
+		F7D253011A4D31F60015764B /* XHDemoWeChatMessageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D252581A4D31F60015764B /* XHDemoWeChatMessageTableViewController.m */; };
+		F7D253021A4D31F60015764B /* XHAlbumTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D2525C1A4D31F60015764B /* XHAlbumTableViewController.m */; };
+		F7D253031A4D31F60015764B /* XHBottleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D2525F1A4D31F60015764B /* XHBottleViewController.m */; };
+		F7D253041A4D31F60015764B /* XHDiscoverTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D252611A4D31F60015764B /* XHDiscoverTableViewController.m */; };
+		F7D253051A4D31F60015764B /* XHLocationServiceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D252641A4D31F60015764B /* XHLocationServiceTableViewController.m */; };
+		F7D253061A4D31F60015764B /* XHMoreGameTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D252671A4D31F60015764B /* XHMoreGameTableViewController.m */; };
+		F7D253071A4D31F60015764B /* XHQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D2526A1A4D31F60015764B /* XHQRCodeViewController.m */; };
+		F7D253081A4D31F60015764B /* XHShakeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D2526D1A4D31F60015764B /* XHShakeViewController.m */; };
+		F7D253091A4D31F60015764B /* XHMessageRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D252701A4D31F60015764B /* XHMessageRootViewController.m */; };
+		F7D2530A1A4D31F60015764B /* XHMultipleSectionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D252731A4D31F60015764B /* XHMultipleSectionTableViewController.m */; };
+		F7D2530B1A4D31F60015764B /* XHNewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D252761A4D31F60015764B /* XHNewsTableViewController.m */; };
+		F7D2530C1A4D31F60015764B /* XHExpressionDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D2527A1A4D31F60015764B /* XHExpressionDetailTableViewController.m */; };
+		F7D2530D1A4D31F60015764B /* XHMoreExpressionShopsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D2527C1A4D31F60015764B /* XHMoreExpressionShopsTableViewController.m */; };
+		F7D2530E1A4D31F60015764B /* XHMoreMyAlbumTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D2527F1A4D31F60015764B /* XHMoreMyAlbumTableViewController.m */; };
+		F7D2530F1A4D31F60015764B /* XHMoreMyBankCardTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D252821A4D31F60015764B /* XHMoreMyBankCardTableViewController.m */; };
+		F7D253101A4D31F60015764B /* XHMoreMyFavoritesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D252851A4D31F60015764B /* XHMoreMyFavoritesTableViewController.m */; };
+		F7D253111A4D31F60015764B /* XHMoreMyProfileDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D252881A4D31F60015764B /* XHMoreMyProfileDetailTableViewController.m */; };
+		F7D253121A4D31F60015764B /* XHMoreSettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D2528B1A4D31F60015764B /* XHMoreSettingTableViewController.m */; };
+		F7D253131A4D31F60015764B /* XHProfileTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D2528D1A4D31F60015764B /* XHProfileTableViewController.m */; };
+		F7D253151A4D31F60015764B /* MLLetterIndexNavigationItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D252951A4D31F60015764B /* MLLetterIndexNavigationItem.m */; };
+		F7D253161A4D31F60015764B /* MLLetterIndexNavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D252971A4D31F60015764B /* MLLetterIndexNavigationView.m */; };
+		F7D253171A4D31F60015764B /* MultiSelectedPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D2529A1A4D31F60015764B /* MultiSelectedPanel.m */; };
+		F7D253181A4D31F60015764B /* MultiSelectedPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7D2529B1A4D31F60015764B /* MultiSelectedPanel.xib */; };
+		F7D253191A4D31F60015764B /* MultiSelectItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D2529D1A4D31F60015764B /* MultiSelectItem.m */; };
+		F7D2531A1A4D31F60015764B /* MultiSelectSearchResultTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D2529F1A4D31F60015764B /* MultiSelectSearchResultTableViewCell.m */; };
+		F7D2531B1A4D31F60015764B /* MultiSelectSearchResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7D252A01A4D31F60015764B /* MultiSelectSearchResultTableViewCell.xib */; };
+		F7D2531C1A4D31F60015764B /* MultiSelectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D252A21A4D31F60015764B /* MultiSelectTableViewCell.m */; };
+		F7D2531D1A4D31F60015764B /* MultiSelectTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7D252A31A4D31F60015764B /* MultiSelectTableViewCell.xib */; };
+		F7D2531E1A4D31F60015764B /* MultiSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D252A51A4D31F60015764B /* MultiSelectViewController.m */; };
+		F7D2531F1A4D31F60015764B /* UIView+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D252A71A4D31F60015764B /* UIView+Convenience.m */; };
+		F7D253201A4D31F60015764B /* XHImageViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D252AA1A4D31F60015764B /* XHImageViewer.m */; };
+		F7D253211A4D31F60015764B /* XHViewState.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D252AC1A4D31F60015764B /* XHViewState.m */; };
+		F7D253221A4D31F60015764B /* XHZoomingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D252AE1A4D31F60015764B /* XHZoomingImageView.m */; };
+		F7D253231A4D31F60015764B /* XHPathCover.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D252B11A4D31F60015764B /* XHPathCover.m */; };
+		F7D253241A4D31F60015764B /* XHSoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D252B31A4D31F60015764B /* XHSoundManager.m */; };
+		F7D253251A4D31F60015764B /* XHWaterDropRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D252B51A4D31F60015764B /* XHWaterDropRefresh.m */; };
+		F7D253261A4D31F60015764B /* XHLoadMoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D252B81A4D31F60015764B /* XHLoadMoreView.m */; };
+		F7D253271A4D31F60015764B /* XHRefreshCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D252BA1A4D31F60015764B /* XHRefreshCircleView.m */; };
+		F7D253281A4D31F60015764B /* XHRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D252BC1A4D31F60015764B /* XHRefreshControl.m */; };
+		F7D253291A4D31F60015764B /* XHRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D252BE1A4D31F60015764B /* XHRefreshView.m */; };
+		F7D2532A1A4D31F60015764B /* XHAlbumCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D252C21A4D31F60015764B /* XHAlbumCollectionViewFlowLayout.m */; };
+		F7D2532B1A4D31F60015764B /* XHAlbumPhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D252C41A4D31F60015764B /* XHAlbumPhotoCollectionViewCell.m */; };
+		F7D2532C1A4D31F60015764B /* XHAlbumRichTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D252C61A4D31F60015764B /* XHAlbumRichTextView.m */; };
+		F7D2532D1A4D31F60015764B /* XHAlbumTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D252C81A4D31F60015764B /* XHAlbumTableViewCell.m */; };
+		F7D2532E1A4D31F60015764B /* XHBaseCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D252CB1A4D31F60015764B /* XHBaseCollectionViewCell.m */; };
+		F7D2532F1A4D31F60015764B /* XHContactCommunicationView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D252CE1A4D31F60015764B /* XHContactCommunicationView.m */; };
+		F7D253301A4D31F60015764B /* XHContactPhotosTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D252D01A4D31F60015764B /* XHContactPhotosTableViewCell.m */; };
+		F7D253311A4D31F60015764B /* XHContactPhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D252D21A4D31F60015764B /* XHContactPhotosView.m */; };
+		F7D253321A4D31F60015764B /* XHContactTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D252D41A4D31F60015764B /* XHContactTableViewCell.m */; };
+		F7D253331A4D31F60015764B /* XHContactView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D252D61A4D31F60015764B /* XHContactView.m */; };
+		F7D253341A4D31F60015764B /* XHHorizontalGridItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D252D91A4D31F60015764B /* XHHorizontalGridItem.m */; };
+		F7D253351A4D31F60015764B /* XHHorizontalGridItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D252DB1A4D31F60015764B /* XHHorizontalGridItemView.m */; };
+		F7D253361A4D31F60015764B /* XHHorizontalGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D252DD1A4D31F60015764B /* XHHorizontalGridView.m */; };
+		F7D253371A4D31F60015764B /* XHLocationServiceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D252E01A4D31F60015764B /* XHLocationServiceTableViewCell.m */; };
+		F7D253381A4D31F60015764B /* XHMoreExpressionShopsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D252E31A4D31F60015764B /* XHMoreExpressionShopsTableViewCell.m */; };
+		F7D253391A4D31F60015764B /* XHNewsContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D252E61A4D31F60015764B /* XHNewsContainerView.m */; };
+		F7D2533A1A4D31F60015764B /* XHNewsTemplateContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D252E81A4D31F60015764B /* XHNewsTemplateContainerView.m */; };
+		F7D2533B1A4D31F60015764B /* XHNewsTemplateTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D252EA1A4D31F60015764B /* XHNewsTemplateTableViewCell.m */; };
+		F7D2533C1A4D31F60015764B /* XHPopMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D252ED1A4D31F60015764B /* XHPopMenu.m */; };
+		F7D2533D1A4D31F60015764B /* XHPopMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D252EF1A4D31F60015764B /* XHPopMenuItem.m */; };
+		F7D2533E1A4D31F60015764B /* XHPopMenuItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D252F11A4D31F60015764B /* XHPopMenuItemView.m */; };
+		F7D2533F1A4D31F60015764B /* XHScanningView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D252F41A4D31F60015764B /* XHScanningView.m */; };
+		F7D253431A4D327E0015764B /* XHStoreManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D253421A4D327E0015764B /* XHStoreManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -290,6 +365,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F7122EE21A4D33E200734F17 /* XHAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHAlbum.h; sourceTree = "<group>"; };
+		F7122EE31A4D33E200734F17 /* XHAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHAlbum.m; sourceTree = "<group>"; };
+		F7122EE41A4D33E200734F17 /* XHContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHContact.h; sourceTree = "<group>"; };
+		F7122EE51A4D33E200734F17 /* XHContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHContact.m; sourceTree = "<group>"; };
 		F7D24A2D1A4D099F0015764B /* MessageDisplayKitWeChatExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessageDisplayKitWeChatExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7D24A311A4D099F0015764B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7D24A321A4D099F0015764B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -391,10 +470,6 @@
 		F7D24B6D1A4D0AA50015764B /* weChatBubble_Sending_Cavern@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weChatBubble_Sending_Cavern@2x.png"; sourceTree = "<group>"; };
 		F7D24B6E1A4D0AA50015764B /* weChatBubble_Sending_Solid@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weChatBubble_Sending_Solid@2x.png"; sourceTree = "<group>"; };
 		F7D24B701A4D0AA50015764B /* MessageDisplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageDisplayKit.framework; path = "../../../../../../../../Users/kingsoft_ios/Library/Developer/Xcode/DerivedData/MessageDisplayKitWorkSpace-bwtmvzqdsnglfuhcxcucroskvpwq/Build/Products/Debug-iphoneos/MessageDisplayKit.framework"; sourceTree = "<group>"; };
-		F7D24BCD1A4D0BB40015764B /* XHDemoWeChatMessageTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHDemoWeChatMessageTableViewController.h; sourceTree = "<group>"; };
-		F7D24BCE1A4D0BB40015764B /* XHDemoWeChatMessageTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHDemoWeChatMessageTableViewController.m; sourceTree = "<group>"; };
-		F7D24BCF1A4D0BB40015764B /* XHMessageRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMessageRootViewController.h; sourceTree = "<group>"; };
-		F7D24BD01A4D0BB40015764B /* XHMessageRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMessageRootViewController.m; sourceTree = "<group>"; };
 		F7D24DF71A4D0EB20015764B /* avator@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avator@2x.png"; sourceTree = "<group>"; };
 		F7D24DF91A4D0EB20015764B /* Contact_Female@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Contact_Female@2x.png"; sourceTree = "<group>"; };
 		F7D24DFA1A4D0EB20015764B /* Contact_Male@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Contact_Male@2x.png"; sourceTree = "<group>"; };
@@ -568,6 +643,153 @@
 		F7D24EAF1A4D0EB30015764B /* tabbarBkg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbarBkg@2x.png"; sourceTree = "<group>"; };
 		F7D24EB01A4D0EB30015764B /* WeChat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WeChat@2x.png"; sourceTree = "<group>"; };
 		F7D24EB11A4D0EB30015764B /* TableViewBackgroundImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TableViewBackgroundImage@2x.png"; sourceTree = "<group>"; };
+		F7D252331A4D31F60015764B /* NSString+XHDiskSizeTransfrom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+XHDiskSizeTransfrom.h"; sourceTree = "<group>"; };
+		F7D252341A4D31F60015764B /* NSString+XHDiskSizeTransfrom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+XHDiskSizeTransfrom.m"; sourceTree = "<group>"; };
+		F7D252361A4D31F60015764B /* UIButton+XHButtonTitlePosition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+XHButtonTitlePosition.h"; sourceTree = "<group>"; };
+		F7D252371A4D31F60015764B /* UIButton+XHButtonTitlePosition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+XHButtonTitlePosition.m"; sourceTree = "<group>"; };
+		F7D252391A4D31F60015764B /* UIView+XHBadgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XHBadgeView.h"; sourceTree = "<group>"; };
+		F7D2523A1A4D31F60015764B /* UIView+XHBadgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XHBadgeView.m"; sourceTree = "<group>"; };
+		F7D2523C1A4D31F60015764B /* XHFoundationCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHFoundationCommon.h; sourceTree = "<group>"; };
+		F7D2523D1A4D31F60015764B /* XHFoundationCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHFoundationCommon.m; sourceTree = "<group>"; };
+		F7D252401A4D31F60015764B /* XHBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHBaseNavigationController.h; sourceTree = "<group>"; };
+		F7D252411A4D31F60015764B /* XHBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHBaseNavigationController.m; sourceTree = "<group>"; };
+		F7D252431A4D31F60015764B /* XHBaseSearchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHBaseSearchTableViewController.h; sourceTree = "<group>"; };
+		F7D252441A4D31F60015764B /* XHBaseSearchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHBaseSearchTableViewController.m; sourceTree = "<group>"; };
+		F7D252461A4D31F60015764B /* XHBaseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHBaseTabBarController.h; sourceTree = "<group>"; };
+		F7D252471A4D31F60015764B /* XHBaseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHBaseTabBarController.m; sourceTree = "<group>"; };
+		F7D252491A4D31F60015764B /* XHBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHBaseTableViewController.h; sourceTree = "<group>"; };
+		F7D2524A1A4D31F60015764B /* XHBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHBaseTableViewController.m; sourceTree = "<group>"; };
+		F7D2524B1A4D31F60015764B /* XHPullRefreshTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHPullRefreshTableViewController.h; sourceTree = "<group>"; };
+		F7D2524C1A4D31F60015764B /* XHPullRefreshTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHPullRefreshTableViewController.m; sourceTree = "<group>"; };
+		F7D2524E1A4D31F60015764B /* XHBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHBaseViewController.h; sourceTree = "<group>"; };
+		F7D2524F1A4D31F60015764B /* XHBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHBaseViewController.m; sourceTree = "<group>"; };
+		F7D252521A4D31F60015764B /* XHContactDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHContactDetailTableViewController.h; sourceTree = "<group>"; };
+		F7D252531A4D31F60015764B /* XHContactDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHContactDetailTableViewController.m; sourceTree = "<group>"; };
+		F7D252541A4D31F60015764B /* XHContactTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHContactTableViewController.h; sourceTree = "<group>"; };
+		F7D252551A4D31F60015764B /* XHContactTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHContactTableViewController.m; sourceTree = "<group>"; };
+		F7D252571A4D31F60015764B /* XHDemoWeChatMessageTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHDemoWeChatMessageTableViewController.h; sourceTree = "<group>"; };
+		F7D252581A4D31F60015764B /* XHDemoWeChatMessageTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHDemoWeChatMessageTableViewController.m; sourceTree = "<group>"; };
+		F7D2525B1A4D31F60015764B /* XHAlbumTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHAlbumTableViewController.h; sourceTree = "<group>"; };
+		F7D2525C1A4D31F60015764B /* XHAlbumTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHAlbumTableViewController.m; sourceTree = "<group>"; };
+		F7D2525E1A4D31F60015764B /* XHBottleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHBottleViewController.h; sourceTree = "<group>"; };
+		F7D2525F1A4D31F60015764B /* XHBottleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHBottleViewController.m; sourceTree = "<group>"; };
+		F7D252601A4D31F60015764B /* XHDiscoverTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHDiscoverTableViewController.h; sourceTree = "<group>"; };
+		F7D252611A4D31F60015764B /* XHDiscoverTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHDiscoverTableViewController.m; sourceTree = "<group>"; };
+		F7D252631A4D31F60015764B /* XHLocationServiceTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLocationServiceTableViewController.h; sourceTree = "<group>"; };
+		F7D252641A4D31F60015764B /* XHLocationServiceTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHLocationServiceTableViewController.m; sourceTree = "<group>"; };
+		F7D252661A4D31F60015764B /* XHMoreGameTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMoreGameTableViewController.h; sourceTree = "<group>"; };
+		F7D252671A4D31F60015764B /* XHMoreGameTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMoreGameTableViewController.m; sourceTree = "<group>"; };
+		F7D252691A4D31F60015764B /* XHQRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHQRCodeViewController.h; sourceTree = "<group>"; };
+		F7D2526A1A4D31F60015764B /* XHQRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHQRCodeViewController.m; sourceTree = "<group>"; };
+		F7D2526C1A4D31F60015764B /* XHShakeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHShakeViewController.h; sourceTree = "<group>"; };
+		F7D2526D1A4D31F60015764B /* XHShakeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHShakeViewController.m; sourceTree = "<group>"; };
+		F7D2526F1A4D31F60015764B /* XHMessageRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMessageRootViewController.h; sourceTree = "<group>"; };
+		F7D252701A4D31F60015764B /* XHMessageRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMessageRootViewController.m; sourceTree = "<group>"; };
+		F7D252721A4D31F60015764B /* XHMultipleSectionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMultipleSectionTableViewController.h; sourceTree = "<group>"; };
+		F7D252731A4D31F60015764B /* XHMultipleSectionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMultipleSectionTableViewController.m; sourceTree = "<group>"; };
+		F7D252751A4D31F60015764B /* XHNewsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHNewsTableViewController.h; sourceTree = "<group>"; };
+		F7D252761A4D31F60015764B /* XHNewsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHNewsTableViewController.m; sourceTree = "<group>"; };
+		F7D252791A4D31F60015764B /* XHExpressionDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHExpressionDetailTableViewController.h; sourceTree = "<group>"; };
+		F7D2527A1A4D31F60015764B /* XHExpressionDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHExpressionDetailTableViewController.m; sourceTree = "<group>"; };
+		F7D2527B1A4D31F60015764B /* XHMoreExpressionShopsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMoreExpressionShopsTableViewController.h; sourceTree = "<group>"; };
+		F7D2527C1A4D31F60015764B /* XHMoreExpressionShopsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMoreExpressionShopsTableViewController.m; sourceTree = "<group>"; };
+		F7D2527E1A4D31F60015764B /* XHMoreMyAlbumTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMoreMyAlbumTableViewController.h; sourceTree = "<group>"; };
+		F7D2527F1A4D31F60015764B /* XHMoreMyAlbumTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMoreMyAlbumTableViewController.m; sourceTree = "<group>"; };
+		F7D252811A4D31F60015764B /* XHMoreMyBankCardTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMoreMyBankCardTableViewController.h; sourceTree = "<group>"; };
+		F7D252821A4D31F60015764B /* XHMoreMyBankCardTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMoreMyBankCardTableViewController.m; sourceTree = "<group>"; };
+		F7D252841A4D31F60015764B /* XHMoreMyFavoritesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMoreMyFavoritesTableViewController.h; sourceTree = "<group>"; };
+		F7D252851A4D31F60015764B /* XHMoreMyFavoritesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMoreMyFavoritesTableViewController.m; sourceTree = "<group>"; };
+		F7D252871A4D31F60015764B /* XHMoreMyProfileDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMoreMyProfileDetailTableViewController.h; sourceTree = "<group>"; };
+		F7D252881A4D31F60015764B /* XHMoreMyProfileDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMoreMyProfileDetailTableViewController.m; sourceTree = "<group>"; };
+		F7D2528A1A4D31F60015764B /* XHMoreSettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMoreSettingTableViewController.h; sourceTree = "<group>"; };
+		F7D2528B1A4D31F60015764B /* XHMoreSettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMoreSettingTableViewController.m; sourceTree = "<group>"; };
+		F7D2528C1A4D31F60015764B /* XHProfileTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHProfileTableViewController.h; sourceTree = "<group>"; };
+		F7D2528D1A4D31F60015764B /* XHProfileTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHProfileTableViewController.m; sourceTree = "<group>"; };
+		F7D252941A4D31F60015764B /* MLLetterIndexNavigationItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLLetterIndexNavigationItem.h; sourceTree = "<group>"; };
+		F7D252951A4D31F60015764B /* MLLetterIndexNavigationItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLLetterIndexNavigationItem.m; sourceTree = "<group>"; };
+		F7D252961A4D31F60015764B /* MLLetterIndexNavigationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLLetterIndexNavigationView.h; sourceTree = "<group>"; };
+		F7D252971A4D31F60015764B /* MLLetterIndexNavigationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLLetterIndexNavigationView.m; sourceTree = "<group>"; };
+		F7D252991A4D31F60015764B /* MultiSelectedPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiSelectedPanel.h; sourceTree = "<group>"; };
+		F7D2529A1A4D31F60015764B /* MultiSelectedPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiSelectedPanel.m; sourceTree = "<group>"; };
+		F7D2529B1A4D31F60015764B /* MultiSelectedPanel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MultiSelectedPanel.xib; sourceTree = "<group>"; };
+		F7D2529C1A4D31F60015764B /* MultiSelectItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiSelectItem.h; sourceTree = "<group>"; };
+		F7D2529D1A4D31F60015764B /* MultiSelectItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiSelectItem.m; sourceTree = "<group>"; };
+		F7D2529E1A4D31F60015764B /* MultiSelectSearchResultTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiSelectSearchResultTableViewCell.h; sourceTree = "<group>"; };
+		F7D2529F1A4D31F60015764B /* MultiSelectSearchResultTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiSelectSearchResultTableViewCell.m; sourceTree = "<group>"; };
+		F7D252A01A4D31F60015764B /* MultiSelectSearchResultTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MultiSelectSearchResultTableViewCell.xib; sourceTree = "<group>"; };
+		F7D252A11A4D31F60015764B /* MultiSelectTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiSelectTableViewCell.h; sourceTree = "<group>"; };
+		F7D252A21A4D31F60015764B /* MultiSelectTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiSelectTableViewCell.m; sourceTree = "<group>"; };
+		F7D252A31A4D31F60015764B /* MultiSelectTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MultiSelectTableViewCell.xib; sourceTree = "<group>"; };
+		F7D252A41A4D31F60015764B /* MultiSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiSelectViewController.h; sourceTree = "<group>"; };
+		F7D252A51A4D31F60015764B /* MultiSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiSelectViewController.m; sourceTree = "<group>"; };
+		F7D252A61A4D31F60015764B /* UIView+Convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Convenience.h"; sourceTree = "<group>"; };
+		F7D252A71A4D31F60015764B /* UIView+Convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Convenience.m"; sourceTree = "<group>"; };
+		F7D252A91A4D31F60015764B /* XHImageViewer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHImageViewer.h; sourceTree = "<group>"; };
+		F7D252AA1A4D31F60015764B /* XHImageViewer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHImageViewer.m; sourceTree = "<group>"; };
+		F7D252AB1A4D31F60015764B /* XHViewState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHViewState.h; sourceTree = "<group>"; };
+		F7D252AC1A4D31F60015764B /* XHViewState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHViewState.m; sourceTree = "<group>"; };
+		F7D252AD1A4D31F60015764B /* XHZoomingImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHZoomingImageView.h; sourceTree = "<group>"; };
+		F7D252AE1A4D31F60015764B /* XHZoomingImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHZoomingImageView.m; sourceTree = "<group>"; };
+		F7D252B01A4D31F60015764B /* XHPathCover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHPathCover.h; sourceTree = "<group>"; };
+		F7D252B11A4D31F60015764B /* XHPathCover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHPathCover.m; sourceTree = "<group>"; };
+		F7D252B21A4D31F60015764B /* XHSoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHSoundManager.h; sourceTree = "<group>"; };
+		F7D252B31A4D31F60015764B /* XHSoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHSoundManager.m; sourceTree = "<group>"; };
+		F7D252B41A4D31F60015764B /* XHWaterDropRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHWaterDropRefresh.h; sourceTree = "<group>"; };
+		F7D252B51A4D31F60015764B /* XHWaterDropRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHWaterDropRefresh.m; sourceTree = "<group>"; };
+		F7D252B71A4D31F60015764B /* XHLoadMoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLoadMoreView.h; sourceTree = "<group>"; };
+		F7D252B81A4D31F60015764B /* XHLoadMoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHLoadMoreView.m; sourceTree = "<group>"; };
+		F7D252B91A4D31F60015764B /* XHRefreshCircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHRefreshCircleView.h; sourceTree = "<group>"; };
+		F7D252BA1A4D31F60015764B /* XHRefreshCircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHRefreshCircleView.m; sourceTree = "<group>"; };
+		F7D252BB1A4D31F60015764B /* XHRefreshControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHRefreshControl.h; sourceTree = "<group>"; };
+		F7D252BC1A4D31F60015764B /* XHRefreshControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHRefreshControl.m; sourceTree = "<group>"; };
+		F7D252BD1A4D31F60015764B /* XHRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHRefreshView.h; sourceTree = "<group>"; };
+		F7D252BE1A4D31F60015764B /* XHRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHRefreshView.m; sourceTree = "<group>"; };
+		F7D252C11A4D31F60015764B /* XHAlbumCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHAlbumCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		F7D252C21A4D31F60015764B /* XHAlbumCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHAlbumCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		F7D252C31A4D31F60015764B /* XHAlbumPhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHAlbumPhotoCollectionViewCell.h; sourceTree = "<group>"; };
+		F7D252C41A4D31F60015764B /* XHAlbumPhotoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHAlbumPhotoCollectionViewCell.m; sourceTree = "<group>"; };
+		F7D252C51A4D31F60015764B /* XHAlbumRichTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHAlbumRichTextView.h; sourceTree = "<group>"; };
+		F7D252C61A4D31F60015764B /* XHAlbumRichTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHAlbumRichTextView.m; sourceTree = "<group>"; };
+		F7D252C71A4D31F60015764B /* XHAlbumTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHAlbumTableViewCell.h; sourceTree = "<group>"; };
+		F7D252C81A4D31F60015764B /* XHAlbumTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHAlbumTableViewCell.m; sourceTree = "<group>"; };
+		F7D252CA1A4D31F60015764B /* XHBaseCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHBaseCollectionViewCell.h; sourceTree = "<group>"; };
+		F7D252CB1A4D31F60015764B /* XHBaseCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHBaseCollectionViewCell.m; sourceTree = "<group>"; };
+		F7D252CD1A4D31F60015764B /* XHContactCommunicationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHContactCommunicationView.h; sourceTree = "<group>"; };
+		F7D252CE1A4D31F60015764B /* XHContactCommunicationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHContactCommunicationView.m; sourceTree = "<group>"; };
+		F7D252CF1A4D31F60015764B /* XHContactPhotosTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHContactPhotosTableViewCell.h; sourceTree = "<group>"; };
+		F7D252D01A4D31F60015764B /* XHContactPhotosTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHContactPhotosTableViewCell.m; sourceTree = "<group>"; };
+		F7D252D11A4D31F60015764B /* XHContactPhotosView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHContactPhotosView.h; sourceTree = "<group>"; };
+		F7D252D21A4D31F60015764B /* XHContactPhotosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHContactPhotosView.m; sourceTree = "<group>"; };
+		F7D252D31A4D31F60015764B /* XHContactTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHContactTableViewCell.h; sourceTree = "<group>"; };
+		F7D252D41A4D31F60015764B /* XHContactTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHContactTableViewCell.m; sourceTree = "<group>"; };
+		F7D252D51A4D31F60015764B /* XHContactView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHContactView.h; sourceTree = "<group>"; };
+		F7D252D61A4D31F60015764B /* XHContactView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHContactView.m; sourceTree = "<group>"; };
+		F7D252D81A4D31F60015764B /* XHHorizontalGridItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHHorizontalGridItem.h; sourceTree = "<group>"; };
+		F7D252D91A4D31F60015764B /* XHHorizontalGridItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHHorizontalGridItem.m; sourceTree = "<group>"; };
+		F7D252DA1A4D31F60015764B /* XHHorizontalGridItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHHorizontalGridItemView.h; sourceTree = "<group>"; };
+		F7D252DB1A4D31F60015764B /* XHHorizontalGridItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHHorizontalGridItemView.m; sourceTree = "<group>"; };
+		F7D252DC1A4D31F60015764B /* XHHorizontalGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHHorizontalGridView.h; sourceTree = "<group>"; };
+		F7D252DD1A4D31F60015764B /* XHHorizontalGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHHorizontalGridView.m; sourceTree = "<group>"; };
+		F7D252DF1A4D31F60015764B /* XHLocationServiceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHLocationServiceTableViewCell.h; sourceTree = "<group>"; };
+		F7D252E01A4D31F60015764B /* XHLocationServiceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHLocationServiceTableViewCell.m; sourceTree = "<group>"; };
+		F7D252E21A4D31F60015764B /* XHMoreExpressionShopsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHMoreExpressionShopsTableViewCell.h; sourceTree = "<group>"; };
+		F7D252E31A4D31F60015764B /* XHMoreExpressionShopsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHMoreExpressionShopsTableViewCell.m; sourceTree = "<group>"; };
+		F7D252E51A4D31F60015764B /* XHNewsContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHNewsContainerView.h; sourceTree = "<group>"; };
+		F7D252E61A4D31F60015764B /* XHNewsContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHNewsContainerView.m; sourceTree = "<group>"; };
+		F7D252E71A4D31F60015764B /* XHNewsTemplateContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHNewsTemplateContainerView.h; sourceTree = "<group>"; };
+		F7D252E81A4D31F60015764B /* XHNewsTemplateContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHNewsTemplateContainerView.m; sourceTree = "<group>"; };
+		F7D252E91A4D31F60015764B /* XHNewsTemplateTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHNewsTemplateTableViewCell.h; sourceTree = "<group>"; };
+		F7D252EA1A4D31F60015764B /* XHNewsTemplateTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHNewsTemplateTableViewCell.m; sourceTree = "<group>"; };
+		F7D252EC1A4D31F60015764B /* XHPopMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHPopMenu.h; sourceTree = "<group>"; };
+		F7D252ED1A4D31F60015764B /* XHPopMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHPopMenu.m; sourceTree = "<group>"; };
+		F7D252EE1A4D31F60015764B /* XHPopMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHPopMenuItem.h; sourceTree = "<group>"; };
+		F7D252EF1A4D31F60015764B /* XHPopMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHPopMenuItem.m; sourceTree = "<group>"; };
+		F7D252F01A4D31F60015764B /* XHPopMenuItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHPopMenuItemView.h; sourceTree = "<group>"; };
+		F7D252F11A4D31F60015764B /* XHPopMenuItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHPopMenuItemView.m; sourceTree = "<group>"; };
+		F7D252F31A4D31F60015764B /* XHScanningView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHScanningView.h; sourceTree = "<group>"; };
+		F7D252F41A4D31F60015764B /* XHScanningView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHScanningView.m; sourceTree = "<group>"; };
+		F7D253411A4D327E0015764B /* XHStoreManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHStoreManager.h; sourceTree = "<group>"; };
+		F7D253421A4D327E0015764B /* XHStoreManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHStoreManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -613,10 +835,12 @@
 			children = (
 				F7D24A341A4D099F0015764B /* AppDelegate.h */,
 				F7D24A351A4D099F0015764B /* AppDelegate.m */,
-				F7D24BCD1A4D0BB40015764B /* XHDemoWeChatMessageTableViewController.h */,
-				F7D24BCE1A4D0BB40015764B /* XHDemoWeChatMessageTableViewController.m */,
-				F7D24BCF1A4D0BB40015764B /* XHMessageRootViewController.h */,
-				F7D24BD01A4D0BB40015764B /* XHMessageRootViewController.m */,
+				F7D2528E1A4D31F60015764B /* Vendor */,
+				F7D2523B1A4D31F60015764B /* Common */,
+				F7D252311A4D31F60015764B /* Categorys */,
+				F7D253401A4D327E0015764B /* Models */,
+				F7D252BF1A4D31F60015764B /* VIews */,
+				F7D2523E1A4D31F60015764B /* Controllers */,
 				F7D24A401A4D099F0015764B /* Images.xcassets */,
 				F7D24A301A4D099F0015764B /* Supporting Files */,
 			);
@@ -1050,6 +1274,543 @@
 			path = TabbarImages;
 			sourceTree = "<group>";
 		};
+		F7D252311A4D31F60015764B /* Categorys */ = {
+			isa = PBXGroup;
+			children = (
+				F7D252321A4D31F60015764B /* NSString */,
+				F7D252351A4D31F60015764B /* UIButton */,
+				F7D252381A4D31F60015764B /* UIView */,
+			);
+			path = Categorys;
+			sourceTree = "<group>";
+		};
+		F7D252321A4D31F60015764B /* NSString */ = {
+			isa = PBXGroup;
+			children = (
+				F7D252331A4D31F60015764B /* NSString+XHDiskSizeTransfrom.h */,
+				F7D252341A4D31F60015764B /* NSString+XHDiskSizeTransfrom.m */,
+			);
+			path = NSString;
+			sourceTree = "<group>";
+		};
+		F7D252351A4D31F60015764B /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				F7D252361A4D31F60015764B /* UIButton+XHButtonTitlePosition.h */,
+				F7D252371A4D31F60015764B /* UIButton+XHButtonTitlePosition.m */,
+			);
+			path = UIButton;
+			sourceTree = "<group>";
+		};
+		F7D252381A4D31F60015764B /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				F7D252391A4D31F60015764B /* UIView+XHBadgeView.h */,
+				F7D2523A1A4D31F60015764B /* UIView+XHBadgeView.m */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		F7D2523B1A4D31F60015764B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F7D2523C1A4D31F60015764B /* XHFoundationCommon.h */,
+				F7D2523D1A4D31F60015764B /* XHFoundationCommon.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		F7D2523E1A4D31F60015764B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F7D2523F1A4D31F60015764B /* XHBaseNavigationController */,
+				F7D252421A4D31F60015764B /* XHBaseSearchTableViewController */,
+				F7D252451A4D31F60015764B /* XHBaseTabBarController */,
+				F7D252481A4D31F60015764B /* XHBaseTableViewController */,
+				F7D2524D1A4D31F60015764B /* XHBaseViewController */,
+				F7D252501A4D31F60015764B /* XHContactTableViewController */,
+				F7D252561A4D31F60015764B /* XHDemoWeChatMessageTableViewController */,
+				F7D252591A4D31F60015764B /* XHDiscoverTableViewController */,
+				F7D2526E1A4D31F60015764B /* XHMessageRootViewController */,
+				F7D252711A4D31F60015764B /* XHMultipleSectionTableViewController */,
+				F7D252741A4D31F60015764B /* XHNewsTableViewController */,
+				F7D252771A4D31F60015764B /* XHProfileTableViewController */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F7D2523F1A4D31F60015764B /* XHBaseNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				F7D252401A4D31F60015764B /* XHBaseNavigationController.h */,
+				F7D252411A4D31F60015764B /* XHBaseNavigationController.m */,
+			);
+			path = XHBaseNavigationController;
+			sourceTree = "<group>";
+		};
+		F7D252421A4D31F60015764B /* XHBaseSearchTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F7D252431A4D31F60015764B /* XHBaseSearchTableViewController.h */,
+				F7D252441A4D31F60015764B /* XHBaseSearchTableViewController.m */,
+			);
+			path = XHBaseSearchTableViewController;
+			sourceTree = "<group>";
+		};
+		F7D252451A4D31F60015764B /* XHBaseTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				F7D252461A4D31F60015764B /* XHBaseTabBarController.h */,
+				F7D252471A4D31F60015764B /* XHBaseTabBarController.m */,
+			);
+			path = XHBaseTabBarController;
+			sourceTree = "<group>";
+		};
+		F7D252481A4D31F60015764B /* XHBaseTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F7D252491A4D31F60015764B /* XHBaseTableViewController.h */,
+				F7D2524A1A4D31F60015764B /* XHBaseTableViewController.m */,
+				F7D2524B1A4D31F60015764B /* XHPullRefreshTableViewController.h */,
+				F7D2524C1A4D31F60015764B /* XHPullRefreshTableViewController.m */,
+			);
+			path = XHBaseTableViewController;
+			sourceTree = "<group>";
+		};
+		F7D2524D1A4D31F60015764B /* XHBaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F7D2524E1A4D31F60015764B /* XHBaseViewController.h */,
+				F7D2524F1A4D31F60015764B /* XHBaseViewController.m */,
+			);
+			path = XHBaseViewController;
+			sourceTree = "<group>";
+		};
+		F7D252501A4D31F60015764B /* XHContactTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F7D252511A4D31F60015764B /* XHContactDetailTableViewController */,
+				F7D252541A4D31F60015764B /* XHContactTableViewController.h */,
+				F7D252551A4D31F60015764B /* XHContactTableViewController.m */,
+			);
+			path = XHContactTableViewController;
+			sourceTree = "<group>";
+		};
+		F7D252511A4D31F60015764B /* XHContactDetailTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F7D252521A4D31F60015764B /* XHContactDetailTableViewController.h */,
+				F7D252531A4D31F60015764B /* XHContactDetailTableViewController.m */,
+			);
+			path = XHContactDetailTableViewController;
+			sourceTree = "<group>";
+		};
+		F7D252561A4D31F60015764B /* XHDemoWeChatMessageTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F7D252571A4D31F60015764B /* XHDemoWeChatMessageTableViewController.h */,
+				F7D252581A4D31F60015764B /* XHDemoWeChatMessageTableViewController.m */,
+			);
+			path = XHDemoWeChatMessageTableViewController;
+			sourceTree = "<group>";
+		};
+		F7D252591A4D31F60015764B /* XHDiscoverTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F7D2525A1A4D31F60015764B /* XHAlbumTableViewController */,
+				F7D2525D1A4D31F60015764B /* XHBottleViewController */,
+				F7D252601A4D31F60015764B /* XHDiscoverTableViewController.h */,
+				F7D252611A4D31F60015764B /* XHDiscoverTableViewController.m */,
+				F7D252621A4D31F60015764B /* XHLocationServiceTableViewController */,
+				F7D252651A4D31F60015764B /* XHMoreGameTableViewController */,
+				F7D252681A4D31F60015764B /* XHQRCodeViewController */,
+				F7D2526B1A4D31F60015764B /* XHShakeViewController */,
+			);
+			path = XHDiscoverTableViewController;
+			sourceTree = "<group>";
+		};
+		F7D2525A1A4D31F60015764B /* XHAlbumTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F7D2525B1A4D31F60015764B /* XHAlbumTableViewController.h */,
+				F7D2525C1A4D31F60015764B /* XHAlbumTableViewController.m */,
+			);
+			path = XHAlbumTableViewController;
+			sourceTree = "<group>";
+		};
+		F7D2525D1A4D31F60015764B /* XHBottleViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F7D2525E1A4D31F60015764B /* XHBottleViewController.h */,
+				F7D2525F1A4D31F60015764B /* XHBottleViewController.m */,
+			);
+			path = XHBottleViewController;
+			sourceTree = "<group>";
+		};
+		F7D252621A4D31F60015764B /* XHLocationServiceTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F7D252631A4D31F60015764B /* XHLocationServiceTableViewController.h */,
+				F7D252641A4D31F60015764B /* XHLocationServiceTableViewController.m */,
+			);
+			path = XHLocationServiceTableViewController;
+			sourceTree = "<group>";
+		};
+		F7D252651A4D31F60015764B /* XHMoreGameTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F7D252661A4D31F60015764B /* XHMoreGameTableViewController.h */,
+				F7D252671A4D31F60015764B /* XHMoreGameTableViewController.m */,
+			);
+			path = XHMoreGameTableViewController;
+			sourceTree = "<group>";
+		};
+		F7D252681A4D31F60015764B /* XHQRCodeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F7D252691A4D31F60015764B /* XHQRCodeViewController.h */,
+				F7D2526A1A4D31F60015764B /* XHQRCodeViewController.m */,
+			);
+			path = XHQRCodeViewController;
+			sourceTree = "<group>";
+		};
+		F7D2526B1A4D31F60015764B /* XHShakeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F7D2526C1A4D31F60015764B /* XHShakeViewController.h */,
+				F7D2526D1A4D31F60015764B /* XHShakeViewController.m */,
+			);
+			path = XHShakeViewController;
+			sourceTree = "<group>";
+		};
+		F7D2526E1A4D31F60015764B /* XHMessageRootViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F7D2526F1A4D31F60015764B /* XHMessageRootViewController.h */,
+				F7D252701A4D31F60015764B /* XHMessageRootViewController.m */,
+			);
+			path = XHMessageRootViewController;
+			sourceTree = "<group>";
+		};
+		F7D252711A4D31F60015764B /* XHMultipleSectionTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F7D252721A4D31F60015764B /* XHMultipleSectionTableViewController.h */,
+				F7D252731A4D31F60015764B /* XHMultipleSectionTableViewController.m */,
+			);
+			path = XHMultipleSectionTableViewController;
+			sourceTree = "<group>";
+		};
+		F7D252741A4D31F60015764B /* XHNewsTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F7D252751A4D31F60015764B /* XHNewsTableViewController.h */,
+				F7D252761A4D31F60015764B /* XHNewsTableViewController.m */,
+			);
+			path = XHNewsTableViewController;
+			sourceTree = "<group>";
+		};
+		F7D252771A4D31F60015764B /* XHProfileTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F7D252781A4D31F60015764B /* XHMoreExpressionShopsTableViewController */,
+				F7D2527D1A4D31F60015764B /* XHMoreMyAlbumTableViewController */,
+				F7D252801A4D31F60015764B /* XHMoreMyBankCardTableViewController */,
+				F7D252831A4D31F60015764B /* XHMoreMyFavoritesTableViewController */,
+				F7D252861A4D31F60015764B /* XHMoreMyProfileDetailTableViewController */,
+				F7D252891A4D31F60015764B /* XHMoreSettingTableViewController */,
+				F7D2528C1A4D31F60015764B /* XHProfileTableViewController.h */,
+				F7D2528D1A4D31F60015764B /* XHProfileTableViewController.m */,
+			);
+			path = XHProfileTableViewController;
+			sourceTree = "<group>";
+		};
+		F7D252781A4D31F60015764B /* XHMoreExpressionShopsTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F7D252791A4D31F60015764B /* XHExpressionDetailTableViewController.h */,
+				F7D2527A1A4D31F60015764B /* XHExpressionDetailTableViewController.m */,
+				F7D2527B1A4D31F60015764B /* XHMoreExpressionShopsTableViewController.h */,
+				F7D2527C1A4D31F60015764B /* XHMoreExpressionShopsTableViewController.m */,
+			);
+			path = XHMoreExpressionShopsTableViewController;
+			sourceTree = "<group>";
+		};
+		F7D2527D1A4D31F60015764B /* XHMoreMyAlbumTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F7D2527E1A4D31F60015764B /* XHMoreMyAlbumTableViewController.h */,
+				F7D2527F1A4D31F60015764B /* XHMoreMyAlbumTableViewController.m */,
+			);
+			path = XHMoreMyAlbumTableViewController;
+			sourceTree = "<group>";
+		};
+		F7D252801A4D31F60015764B /* XHMoreMyBankCardTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F7D252811A4D31F60015764B /* XHMoreMyBankCardTableViewController.h */,
+				F7D252821A4D31F60015764B /* XHMoreMyBankCardTableViewController.m */,
+			);
+			path = XHMoreMyBankCardTableViewController;
+			sourceTree = "<group>";
+		};
+		F7D252831A4D31F60015764B /* XHMoreMyFavoritesTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F7D252841A4D31F60015764B /* XHMoreMyFavoritesTableViewController.h */,
+				F7D252851A4D31F60015764B /* XHMoreMyFavoritesTableViewController.m */,
+			);
+			path = XHMoreMyFavoritesTableViewController;
+			sourceTree = "<group>";
+		};
+		F7D252861A4D31F60015764B /* XHMoreMyProfileDetailTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F7D252871A4D31F60015764B /* XHMoreMyProfileDetailTableViewController.h */,
+				F7D252881A4D31F60015764B /* XHMoreMyProfileDetailTableViewController.m */,
+			);
+			path = XHMoreMyProfileDetailTableViewController;
+			sourceTree = "<group>";
+		};
+		F7D252891A4D31F60015764B /* XHMoreSettingTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F7D2528A1A4D31F60015764B /* XHMoreSettingTableViewController.h */,
+				F7D2528B1A4D31F60015764B /* XHMoreSettingTableViewController.m */,
+			);
+			path = XHMoreSettingTableViewController;
+			sourceTree = "<group>";
+		};
+		F7D2528E1A4D31F60015764B /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				F7D252921A4D31F60015764B /* MultiSelectTableViewController */,
+				F7D252A81A4D31F60015764B /* XHImageViewer */,
+				F7D252AF1A4D31F60015764B /* XHPathCover */,
+				F7D252B61A4D31F60015764B /* XHRefreshControl */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		F7D252921A4D31F60015764B /* MultiSelectTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F7D252931A4D31F60015764B /* LetterIndex */,
+				F7D252981A4D31F60015764B /* MultiSelect */,
+				F7D252A61A4D31F60015764B /* UIView+Convenience.h */,
+				F7D252A71A4D31F60015764B /* UIView+Convenience.m */,
+			);
+			path = MultiSelectTableViewController;
+			sourceTree = "<group>";
+		};
+		F7D252931A4D31F60015764B /* LetterIndex */ = {
+			isa = PBXGroup;
+			children = (
+				F7D252941A4D31F60015764B /* MLLetterIndexNavigationItem.h */,
+				F7D252951A4D31F60015764B /* MLLetterIndexNavigationItem.m */,
+				F7D252961A4D31F60015764B /* MLLetterIndexNavigationView.h */,
+				F7D252971A4D31F60015764B /* MLLetterIndexNavigationView.m */,
+			);
+			path = LetterIndex;
+			sourceTree = "<group>";
+		};
+		F7D252981A4D31F60015764B /* MultiSelect */ = {
+			isa = PBXGroup;
+			children = (
+				F7D252991A4D31F60015764B /* MultiSelectedPanel.h */,
+				F7D2529A1A4D31F60015764B /* MultiSelectedPanel.m */,
+				F7D2529B1A4D31F60015764B /* MultiSelectedPanel.xib */,
+				F7D2529C1A4D31F60015764B /* MultiSelectItem.h */,
+				F7D2529D1A4D31F60015764B /* MultiSelectItem.m */,
+				F7D2529E1A4D31F60015764B /* MultiSelectSearchResultTableViewCell.h */,
+				F7D2529F1A4D31F60015764B /* MultiSelectSearchResultTableViewCell.m */,
+				F7D252A01A4D31F60015764B /* MultiSelectSearchResultTableViewCell.xib */,
+				F7D252A11A4D31F60015764B /* MultiSelectTableViewCell.h */,
+				F7D252A21A4D31F60015764B /* MultiSelectTableViewCell.m */,
+				F7D252A31A4D31F60015764B /* MultiSelectTableViewCell.xib */,
+				F7D252A41A4D31F60015764B /* MultiSelectViewController.h */,
+				F7D252A51A4D31F60015764B /* MultiSelectViewController.m */,
+			);
+			path = MultiSelect;
+			sourceTree = "<group>";
+		};
+		F7D252A81A4D31F60015764B /* XHImageViewer */ = {
+			isa = PBXGroup;
+			children = (
+				F7D252A91A4D31F60015764B /* XHImageViewer.h */,
+				F7D252AA1A4D31F60015764B /* XHImageViewer.m */,
+				F7D252AB1A4D31F60015764B /* XHViewState.h */,
+				F7D252AC1A4D31F60015764B /* XHViewState.m */,
+				F7D252AD1A4D31F60015764B /* XHZoomingImageView.h */,
+				F7D252AE1A4D31F60015764B /* XHZoomingImageView.m */,
+			);
+			path = XHImageViewer;
+			sourceTree = "<group>";
+		};
+		F7D252AF1A4D31F60015764B /* XHPathCover */ = {
+			isa = PBXGroup;
+			children = (
+				F7D252B01A4D31F60015764B /* XHPathCover.h */,
+				F7D252B11A4D31F60015764B /* XHPathCover.m */,
+				F7D252B21A4D31F60015764B /* XHSoundManager.h */,
+				F7D252B31A4D31F60015764B /* XHSoundManager.m */,
+				F7D252B41A4D31F60015764B /* XHWaterDropRefresh.h */,
+				F7D252B51A4D31F60015764B /* XHWaterDropRefresh.m */,
+			);
+			path = XHPathCover;
+			sourceTree = "<group>";
+		};
+		F7D252B61A4D31F60015764B /* XHRefreshControl */ = {
+			isa = PBXGroup;
+			children = (
+				F7D252B71A4D31F60015764B /* XHLoadMoreView.h */,
+				F7D252B81A4D31F60015764B /* XHLoadMoreView.m */,
+				F7D252B91A4D31F60015764B /* XHRefreshCircleView.h */,
+				F7D252BA1A4D31F60015764B /* XHRefreshCircleView.m */,
+				F7D252BB1A4D31F60015764B /* XHRefreshControl.h */,
+				F7D252BC1A4D31F60015764B /* XHRefreshControl.m */,
+				F7D252BD1A4D31F60015764B /* XHRefreshView.h */,
+				F7D252BE1A4D31F60015764B /* XHRefreshView.m */,
+			);
+			path = XHRefreshControl;
+			sourceTree = "<group>";
+		};
+		F7D252BF1A4D31F60015764B /* VIews */ = {
+			isa = PBXGroup;
+			children = (
+				F7D252C01A4D31F60015764B /* AlbumContentViews */,
+				F7D252C91A4D31F60015764B /* BaseCollectionViewCell */,
+				F7D252CC1A4D31F60015764B /* ContactViews */,
+				F7D252D71A4D31F60015764B /* HorizontalGridView */,
+				F7D252DE1A4D31F60015764B /* LocationServiceViews */,
+				F7D252E11A4D31F60015764B /* MoreExpressionShopsView */,
+				F7D252E41A4D31F60015764B /* NewsTemplateView */,
+				F7D252EB1A4D31F60015764B /* PopMenu */,
+				F7D252F21A4D31F60015764B /* ScanningView */,
+			);
+			path = VIews;
+			sourceTree = "<group>";
+		};
+		F7D252C01A4D31F60015764B /* AlbumContentViews */ = {
+			isa = PBXGroup;
+			children = (
+				F7D252C11A4D31F60015764B /* XHAlbumCollectionViewFlowLayout.h */,
+				F7D252C21A4D31F60015764B /* XHAlbumCollectionViewFlowLayout.m */,
+				F7D252C31A4D31F60015764B /* XHAlbumPhotoCollectionViewCell.h */,
+				F7D252C41A4D31F60015764B /* XHAlbumPhotoCollectionViewCell.m */,
+				F7D252C51A4D31F60015764B /* XHAlbumRichTextView.h */,
+				F7D252C61A4D31F60015764B /* XHAlbumRichTextView.m */,
+				F7D252C71A4D31F60015764B /* XHAlbumTableViewCell.h */,
+				F7D252C81A4D31F60015764B /* XHAlbumTableViewCell.m */,
+			);
+			path = AlbumContentViews;
+			sourceTree = "<group>";
+		};
+		F7D252C91A4D31F60015764B /* BaseCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				F7D252CA1A4D31F60015764B /* XHBaseCollectionViewCell.h */,
+				F7D252CB1A4D31F60015764B /* XHBaseCollectionViewCell.m */,
+			);
+			path = BaseCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		F7D252CC1A4D31F60015764B /* ContactViews */ = {
+			isa = PBXGroup;
+			children = (
+				F7D252CD1A4D31F60015764B /* XHContactCommunicationView.h */,
+				F7D252CE1A4D31F60015764B /* XHContactCommunicationView.m */,
+				F7D252CF1A4D31F60015764B /* XHContactPhotosTableViewCell.h */,
+				F7D252D01A4D31F60015764B /* XHContactPhotosTableViewCell.m */,
+				F7D252D11A4D31F60015764B /* XHContactPhotosView.h */,
+				F7D252D21A4D31F60015764B /* XHContactPhotosView.m */,
+				F7D252D31A4D31F60015764B /* XHContactTableViewCell.h */,
+				F7D252D41A4D31F60015764B /* XHContactTableViewCell.m */,
+				F7D252D51A4D31F60015764B /* XHContactView.h */,
+				F7D252D61A4D31F60015764B /* XHContactView.m */,
+			);
+			path = ContactViews;
+			sourceTree = "<group>";
+		};
+		F7D252D71A4D31F60015764B /* HorizontalGridView */ = {
+			isa = PBXGroup;
+			children = (
+				F7D252D81A4D31F60015764B /* XHHorizontalGridItem.h */,
+				F7D252D91A4D31F60015764B /* XHHorizontalGridItem.m */,
+				F7D252DA1A4D31F60015764B /* XHHorizontalGridItemView.h */,
+				F7D252DB1A4D31F60015764B /* XHHorizontalGridItemView.m */,
+				F7D252DC1A4D31F60015764B /* XHHorizontalGridView.h */,
+				F7D252DD1A4D31F60015764B /* XHHorizontalGridView.m */,
+			);
+			path = HorizontalGridView;
+			sourceTree = "<group>";
+		};
+		F7D252DE1A4D31F60015764B /* LocationServiceViews */ = {
+			isa = PBXGroup;
+			children = (
+				F7D252DF1A4D31F60015764B /* XHLocationServiceTableViewCell.h */,
+				F7D252E01A4D31F60015764B /* XHLocationServiceTableViewCell.m */,
+			);
+			path = LocationServiceViews;
+			sourceTree = "<group>";
+		};
+		F7D252E11A4D31F60015764B /* MoreExpressionShopsView */ = {
+			isa = PBXGroup;
+			children = (
+				F7D252E21A4D31F60015764B /* XHMoreExpressionShopsTableViewCell.h */,
+				F7D252E31A4D31F60015764B /* XHMoreExpressionShopsTableViewCell.m */,
+			);
+			path = MoreExpressionShopsView;
+			sourceTree = "<group>";
+		};
+		F7D252E41A4D31F60015764B /* NewsTemplateView */ = {
+			isa = PBXGroup;
+			children = (
+				F7D252E51A4D31F60015764B /* XHNewsContainerView.h */,
+				F7D252E61A4D31F60015764B /* XHNewsContainerView.m */,
+				F7D252E71A4D31F60015764B /* XHNewsTemplateContainerView.h */,
+				F7D252E81A4D31F60015764B /* XHNewsTemplateContainerView.m */,
+				F7D252E91A4D31F60015764B /* XHNewsTemplateTableViewCell.h */,
+				F7D252EA1A4D31F60015764B /* XHNewsTemplateTableViewCell.m */,
+			);
+			path = NewsTemplateView;
+			sourceTree = "<group>";
+		};
+		F7D252EB1A4D31F60015764B /* PopMenu */ = {
+			isa = PBXGroup;
+			children = (
+				F7D252EC1A4D31F60015764B /* XHPopMenu.h */,
+				F7D252ED1A4D31F60015764B /* XHPopMenu.m */,
+				F7D252EE1A4D31F60015764B /* XHPopMenuItem.h */,
+				F7D252EF1A4D31F60015764B /* XHPopMenuItem.m */,
+				F7D252F01A4D31F60015764B /* XHPopMenuItemView.h */,
+				F7D252F11A4D31F60015764B /* XHPopMenuItemView.m */,
+			);
+			path = PopMenu;
+			sourceTree = "<group>";
+		};
+		F7D252F21A4D31F60015764B /* ScanningView */ = {
+			isa = PBXGroup;
+			children = (
+				F7D252F31A4D31F60015764B /* XHScanningView.h */,
+				F7D252F41A4D31F60015764B /* XHScanningView.m */,
+			);
+			path = ScanningView;
+			sourceTree = "<group>";
+		};
+		F7D253401A4D327E0015764B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F7122EE21A4D33E200734F17 /* XHAlbum.h */,
+				F7122EE31A4D33E200734F17 /* XHAlbum.m */,
+				F7122EE41A4D33E200734F17 /* XHContact.h */,
+				F7122EE51A4D33E200734F17 /* XHContact.m */,
+				F7D253411A4D327E0015764B /* XHStoreManager.h */,
+				F7D253421A4D327E0015764B /* XHStoreManager.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1148,6 +1909,7 @@
 				F7D24BC41A4D0AA50015764B /* voice@2x.png in Resources */,
 				F7D24BA21A4D0AA50015764B /* RecordingSignal008@2x.png in Resources */,
 				F7D24F091A4D0EB30015764B /* bottleButtonThrow@2x.png in Resources */,
+				F7D253181A4D31F60015764B /* MultiSelectedPanel.xib in Resources */,
 				F7D24F2F1A4D0EB30015764B /* shake_sound_male.wav in Resources */,
 				F7D24EC91A4D0EB30015764B /* VoiceSearchFeedback011@2x.png in Resources */,
 				F7D24F3C1A4D0EB30015764B /* emotion3.gif in Resources */,
@@ -1273,6 +2035,7 @@
 				F7D24F381A4D0EB30015764B /* emotion14.gif in Resources */,
 				F7D24BC11A4D0AA50015764B /* sharemore_voiceinput@2x.png in Resources */,
 				F7D24BB41A4D0AA50015764B /* section0_emotion9@2x.png in Resources */,
+				F7D2531B1A4D31F60015764B /* MultiSelectSearchResultTableViewCell.xib in Resources */,
 				F7D24EB51A4D0EB30015764B /* VoiceSearchBtn@2x.png in Resources */,
 				F7D24BC91A4D0AA50015764B /* weChatBubble_Receiving_Solid@2x.png in Resources */,
 				F7D24F451A4D0EB30015764B /* EmotionListNewTips@2x.png in Resources */,
@@ -1304,6 +2067,7 @@
 				F7D24BA71A4D0AA50015764B /* section0_emotion11@2x.png in Resources */,
 				F7D24F361A4D0EB30015764B /* emotion12.gif in Resources */,
 				F7D24ECE1A4D0EB30015764B /* VoiceSearchFeedback013_ios7@2x.png in Resources */,
+				F7D2531D1A4D31F60015764B /* MultiSelectTableViewCell.xib in Resources */,
 				F7D24B8A1A4D0AA50015764B /* keyborad_HL@2x.png in Resources */,
 				F7D24F2C1A4D0EB30015764B /* Shake_Logo_Up@2x.png in Resources */,
 				F7D24B861A4D0AA50015764B /* input-bar-flat@2x.png in Resources */,
@@ -1411,10 +2175,82 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7D24BD21A4D0BB40015764B /* XHMessageRootViewController.m in Sources */,
+				F7D253171A4D31F60015764B /* MultiSelectedPanel.m in Sources */,
+				F7D253151A4D31F60015764B /* MLLetterIndexNavigationItem.m in Sources */,
+				F7D252F51A4D31F60015764B /* NSString+XHDiskSizeTransfrom.m in Sources */,
+				F7D252FB1A4D31F60015764B /* XHBaseTabBarController.m in Sources */,
+				F7D2530E1A4D31F60015764B /* XHMoreMyAlbumTableViewController.m in Sources */,
+				F7D253161A4D31F60015764B /* MLLetterIndexNavigationView.m in Sources */,
+				F7D2532C1A4D31F60015764B /* XHAlbumRichTextView.m in Sources */,
+				F7122EE61A4D33E200734F17 /* XHAlbum.m in Sources */,
+				F7D253041A4D31F60015764B /* XHDiscoverTableViewController.m in Sources */,
+				F7D253321A4D31F60015764B /* XHContactTableViewCell.m in Sources */,
+				F7D253341A4D31F60015764B /* XHHorizontalGridItem.m in Sources */,
+				F7D252FC1A4D31F60015764B /* XHBaseTableViewController.m in Sources */,
+				F7D253271A4D31F60015764B /* XHRefreshCircleView.m in Sources */,
+				F7D252FF1A4D31F60015764B /* XHContactDetailTableViewController.m in Sources */,
+				F7D253301A4D31F60015764B /* XHContactPhotosTableViewCell.m in Sources */,
+				F7D2533B1A4D31F60015764B /* XHNewsTemplateTableViewCell.m in Sources */,
+				F7D253031A4D31F60015764B /* XHBottleViewController.m in Sources */,
+				F7D252FE1A4D31F60015764B /* XHBaseViewController.m in Sources */,
+				F7D253081A4D31F60015764B /* XHShakeViewController.m in Sources */,
+				F7D253121A4D31F60015764B /* XHMoreSettingTableViewController.m in Sources */,
+				F7D2530B1A4D31F60015764B /* XHNewsTableViewController.m in Sources */,
+				F7D253281A4D31F60015764B /* XHRefreshControl.m in Sources */,
+				F7D253291A4D31F60015764B /* XHRefreshView.m in Sources */,
+				F7D253011A4D31F60015764B /* XHDemoWeChatMessageTableViewController.m in Sources */,
+				F7D2533F1A4D31F60015764B /* XHScanningView.m in Sources */,
+				F7D252F81A4D31F60015764B /* XHFoundationCommon.m in Sources */,
+				F7D253391A4D31F60015764B /* XHNewsContainerView.m in Sources */,
+				F7D2531E1A4D31F60015764B /* MultiSelectViewController.m in Sources */,
+				F7D253371A4D31F60015764B /* XHLocationServiceTableViewCell.m in Sources */,
 				F7D24A361A4D099F0015764B /* AppDelegate.m in Sources */,
+				F7D253221A4D31F60015764B /* XHZoomingImageView.m in Sources */,
+				F7D253311A4D31F60015764B /* XHContactPhotosView.m in Sources */,
+				F7D2531F1A4D31F60015764B /* UIView+Convenience.m in Sources */,
+				F7D253061A4D31F60015764B /* XHMoreGameTableViewController.m in Sources */,
+				F7D253211A4D31F60015764B /* XHViewState.m in Sources */,
+				F7D2533E1A4D31F60015764B /* XHPopMenuItemView.m in Sources */,
+				F7D253251A4D31F60015764B /* XHWaterDropRefresh.m in Sources */,
+				F7D2533C1A4D31F60015764B /* XHPopMenu.m in Sources */,
+				F7D253261A4D31F60015764B /* XHLoadMoreView.m in Sources */,
+				F7D252F71A4D31F60015764B /* UIView+XHBadgeView.m in Sources */,
+				F7D2531C1A4D31F60015764B /* MultiSelectTableViewCell.m in Sources */,
+				F7D2532F1A4D31F60015764B /* XHContactCommunicationView.m in Sources */,
+				F7D253201A4D31F60015764B /* XHImageViewer.m in Sources */,
+				F7D252FD1A4D31F60015764B /* XHPullRefreshTableViewController.m in Sources */,
+				F7D253231A4D31F60015764B /* XHPathCover.m in Sources */,
+				F7D2532B1A4D31F60015764B /* XHAlbumPhotoCollectionViewCell.m in Sources */,
+				F7122EE71A4D33E200734F17 /* XHContact.m in Sources */,
+				F7D252FA1A4D31F60015764B /* XHBaseSearchTableViewController.m in Sources */,
+				F7D253001A4D31F60015764B /* XHContactTableViewController.m in Sources */,
+				F7D253431A4D327E0015764B /* XHStoreManager.m in Sources */,
+				F7D253091A4D31F60015764B /* XHMessageRootViewController.m in Sources */,
+				F7D2530F1A4D31F60015764B /* XHMoreMyBankCardTableViewController.m in Sources */,
+				F7D2530A1A4D31F60015764B /* XHMultipleSectionTableViewController.m in Sources */,
+				F7D253051A4D31F60015764B /* XHLocationServiceTableViewController.m in Sources */,
+				F7D2531A1A4D31F60015764B /* MultiSelectSearchResultTableViewCell.m in Sources */,
+				F7D253381A4D31F60015764B /* XHMoreExpressionShopsTableViewCell.m in Sources */,
+				F7D253351A4D31F60015764B /* XHHorizontalGridItemView.m in Sources */,
+				F7D2530C1A4D31F60015764B /* XHExpressionDetailTableViewController.m in Sources */,
+				F7D253111A4D31F60015764B /* XHMoreMyProfileDetailTableViewController.m in Sources */,
+				F7D253361A4D31F60015764B /* XHHorizontalGridView.m in Sources */,
+				F7D253071A4D31F60015764B /* XHQRCodeViewController.m in Sources */,
+				F7D2532D1A4D31F60015764B /* XHAlbumTableViewCell.m in Sources */,
+				F7D253191A4D31F60015764B /* MultiSelectItem.m in Sources */,
+				F7D2533A1A4D31F60015764B /* XHNewsTemplateContainerView.m in Sources */,
+				F7D253101A4D31F60015764B /* XHMoreMyFavoritesTableViewController.m in Sources */,
+				F7D252F91A4D31F60015764B /* XHBaseNavigationController.m in Sources */,
+				F7D252F61A4D31F60015764B /* UIButton+XHButtonTitlePosition.m in Sources */,
+				F7D253241A4D31F60015764B /* XHSoundManager.m in Sources */,
+				F7D253331A4D31F60015764B /* XHContactView.m in Sources */,
+				F7D253131A4D31F60015764B /* XHProfileTableViewController.m in Sources */,
+				F7D2532E1A4D31F60015764B /* XHBaseCollectionViewCell.m in Sources */,
+				F7D2532A1A4D31F60015764B /* XHAlbumCollectionViewFlowLayout.m in Sources */,
+				F7D2530D1A4D31F60015764B /* XHMoreExpressionShopsTableViewController.m in Sources */,
+				F7D2533D1A4D31F60015764B /* XHPopMenuItem.m in Sources */,
 				F7D24A331A4D099F0015764B /* main.m in Sources */,
-				F7D24BD11A4D0BB40015764B /* XHDemoWeChatMessageTableViewController.m in Sources */,
+				F7D253021A4D31F60015764B /* XHAlbumTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1608,6 +2444,7 @@
 				F7D24A551A4D099F0015764B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F7D24A561A4D099F0015764B /* Build configuration list for PBXNativeTarget "MessageDisplayKitWeChatExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -1616,6 +2453,7 @@
 				F7D24A581A4D099F0015764B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,15 +7,16 @@
 //
 
 #import "AppDelegate.h"
-#import <MessageDisplayKit/XHBaseTabBarController.h>
-#import <MessageDisplayKit/XHBaseNavigationController.h>
-
-#import "XHMessageRootViewController.h"
-#import <MessageDisplayKit/XHContactTableViewController.h>
-#import <MessageDisplayKit/XHDiscoverTableViewController.h>
-#import <MessageDisplayKit/XHProfileTableViewController.h>
 
 #import <MessageDisplayKit/XHMacro.h>
+
+#import "XHContactTableViewController.h"
+#import "XHDiscoverTableViewController.h"
+#import "XHProfileTableViewController.h"
+
+#import "XHBaseTabBarController.h"
+#import "XHBaseNavigationController.h"
+#import "XHMessageRootViewController.h"
 
 @implementation AppDelegate
 

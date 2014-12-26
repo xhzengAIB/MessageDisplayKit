@@ -27,9 +27,6 @@
 #import "XHMessageAvatarFactory.h"
 #import "XHMessageVoiceFactory.h"
 
-// Categorys
-#import "UIImage+XHAnimatedFaceGif.h"
-
 #define kXHMessageBubbleDisplayMaxLine 200
 
 #define kXHTextLineSpacing 3.0

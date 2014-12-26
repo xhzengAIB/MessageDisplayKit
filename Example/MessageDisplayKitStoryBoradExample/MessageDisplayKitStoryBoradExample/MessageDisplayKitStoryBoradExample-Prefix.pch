@@ -13,5 +13,5 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
-    #import <MessageDisplayFramework/XHMessageTableViewController.h>
+    #import <MessageDisplayKit/XHMessageTableViewController.h>
 #endif
