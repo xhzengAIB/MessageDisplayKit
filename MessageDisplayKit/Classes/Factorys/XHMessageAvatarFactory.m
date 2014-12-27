@@ -1,5 +1,5 @@
 //
-//  XHMessageAvatorFactory.m
+//  XHMessageAvatarFactory.m
 //  MessageDisplayExample
 //
 //  Created by qtone-1 on 14-4-25.
@@ -12,23 +12,23 @@
 @implementation XHMessageAvatarFactory
 
 + (UIImage *)avatarImageNamed:(UIImage *)originImage
-            messageAvatorType:(XHMessageAvatorType)messageAvatorType {
+            messageAvatarType:(XHMessageAvatarType)messageAvatarType {
     CGFloat radius = 0.0;
-    switch (messageAvatorType) {
-        case XHMessageAvatorTypeNormal:
+    switch (messageAvatarType) {
+        case XHMessageAvatarTypeNormal:
             return originImage;
             break;
-        case XHMessageAvatorTypeCircle:
+        case XHMessageAvatarTypeCircle:
             radius = originImage.size.width / 2.0;
             break;
-        case XHMessageAvatorTypeSquare:
+        case XHMessageAvatarTypeSquare:
             radius = 8;
             break;
         default:
             break;
     }
-    UIImage *avator = [originImage createRoundedWithRadius:radius];
-    return avator;
+    UIImage *avatar = [originImage createRoundedWithRadius:radius];
+    return avatar;
 }
 
 @end

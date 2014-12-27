@@ -193,8 +193,8 @@
     _geolocations = nil;
     _location = nil;
     
-    _avator = nil;
-    _avatorUrl = nil;
+    _avatar = nil;
+    _avatarUrl = nil;
     
     _sender = nil;
     
@@ -226,8 +226,8 @@
         _geolocations = [aDecoder decodeObjectForKey:@"geolocations"];
         _location = [aDecoder decodeObjectForKey:@"location"];
         
-        _avator = [aDecoder decodeObjectForKey:@"avator"];
-        _avatorUrl = [aDecoder decodeObjectForKey:@"avatorUrl"];
+        _avatar = [aDecoder decodeObjectForKey:@"avatar"];
+        _avatarUrl = [aDecoder decodeObjectForKey:@"avatarUrl"];
         
         _sender = [aDecoder decodeObjectForKey:@"sender"];
         _timestamp = [aDecoder decodeObjectForKey:@"timestamp"];

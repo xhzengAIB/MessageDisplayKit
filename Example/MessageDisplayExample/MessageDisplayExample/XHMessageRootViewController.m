@@ -241,7 +241,7 @@
         } else {
             cell.textLabel.text = (indexPath.row % 2) ? @"曾宪华" : @"杨仁捷";
             cell.detailTextLabel.text = self.dataSource[indexPath.row];
-            cell.imageView.image = [UIImage imageNamed:@"avator"];
+            cell.imageView.image = [UIImage imageNamed:@"avatar"];
         }
     }
     

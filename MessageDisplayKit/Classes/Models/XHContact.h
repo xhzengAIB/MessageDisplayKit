@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#define kXHContactAvatorSize 80
+#define kXHContactAvatarSize 80
 #define kXHContactNameLabelHeight 30
 
 #define kXHContactButtonHeight 44

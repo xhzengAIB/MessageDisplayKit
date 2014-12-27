@@ -10,7 +10,7 @@
 
 @interface XHContactView ()
 
-@property (nonatomic, strong) UIImageView *avatorImageView;
+@property (nonatomic, strong) UIImageView *avatarImageView;
 
 @property (nonatomic, strong) UILabel *userNameLabel;
 
@@ -31,18 +31,18 @@
     self.weChatNumberLabel.text = displayContact.contactUserId;
 }
 
-- (UIImageView *)avatorImageView {
-    if (!_avatorImageView) {
-        _avatorImageView = [[UIImageView alloc] initWithFrame:CGRectMake(kXHAlbumAvatorSpacing, kXHAlbumAvatorSpacing, kXHContactAvatorSize, kXHContactAvatorSize)];
-        _avatorImageView.image = [UIImage imageNamed:@"MeIcon"];
+- (UIImageView *)avatarImageView {
+    if (!_avatarImageView) {
+        _avatarImageView = [[UIImageView alloc] initWithFrame:CGRectMake(kXHAlbumAvatarSpacing, kXHAlbumAvatarSpacing, kXHContactAvatarSize, kXHContactAvatarSize)];
+        _avatarImageView.image = [UIImage imageNamed:@"MeIcon"];
     }
-    return _avatorImageView;
+    return _avatarImageView;
 }
 
 - (UILabel *)userNameLabel {
     if (!_userNameLabel) {
-        CGFloat userNameLabelX = CGRectGetMaxX(self.avatorImageView.frame) + kXHAlbumAvatorSpacing;
-        _userNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(userNameLabelX, CGRectGetMinY(self.avatorImageView.frame), CGRectGetWidth(self.bounds) - userNameLabelX - kXHAlbumAvatorSpacing, kXHContactNameLabelHeight)];
+        CGFloat userNameLabelX = CGRectGetMaxX(self.avatarImageView.frame) + kXHAlbumAvatarSpacing;
+        _userNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(userNameLabelX, CGRectGetMinY(self.avatarImageView.frame), CGRectGetWidth(self.bounds) - userNameLabelX - kXHAlbumAvatarSpacing, kXHContactNameLabelHeight)];
         _userNameLabel.backgroundColor = [UIColor clearColor];
         _userNameLabel.textColor = [UIColor blackColor];
         _userNameLabel.font = [UIFont boldSystemFontOfSize:17];
@@ -75,7 +75,7 @@
 - (void)setup {
     self.backgroundColor = [UIColor clearColor];
     
-    [self addSubview:self.avatorImageView];
+    [self addSubview:self.avatarImageView];
     [self addSubview:self.userNameLabel];
     [self addSubview:self.userSexImageView];
     [self addSubview:self.weChatNumberLabel];

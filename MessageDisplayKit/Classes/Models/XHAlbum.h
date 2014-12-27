@@ -26,7 +26,7 @@
 @interface XHAlbum : NSObject
 
 @property (nonatomic, copy) NSString *userName;
-@property (nonatomic, copy) NSString *profileAvatorUrlString;
+@property (nonatomic, copy) NSString *profileAvatarUrlString;
 
 @property (nonatomic, copy) NSString *albumShareContent;
 

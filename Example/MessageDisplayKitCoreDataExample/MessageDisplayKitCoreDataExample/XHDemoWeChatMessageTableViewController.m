@@ -26,8 +26,8 @@
 
 - (XHMessage *)getTextMessageWithBubbleMessageType:(XHBubbleMessageType)bubbleMessageType {
     XHMessage *textMessage = [[XHMessage alloc] initWithText:@"Call Me 15915895880.这是华捷微信，为什么模仿这个页面效果呢？希望微信团队能看到我们在努力，请微信团队给个机会，让我好好的努力靠近大神，希望自己也能发亮，好像有点过分的希望了，如果大家喜欢这个开源库，请大家帮帮忙支持这个开源库吧！我是Jack，叫华仔也行，曾宪华就是我啦！" sender:@"华仔" timestamp:[NSDate distantPast]];
-    textMessage.avator = [UIImage imageNamed:@"avator"];
-    textMessage.avatorUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
+    textMessage.avatar = [UIImage imageNamed:@"avatar"];
+    textMessage.avatarUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
     textMessage.bubbleMessageType = bubbleMessageType;
     
     return textMessage;
@@ -35,8 +35,8 @@
 
 - (XHMessage *)getPhotoMessageWithBubbleMessageType:(XHBubbleMessageType)bubbleMessageType {
     XHMessage *photoMessage = [[XHMessage alloc] initWithPhoto:[UIImage imageNamed:@"placeholderImage"] thumbnailUrl:@"http://www.pailixiu.com/jack/networkPhoto.png" originPhotoUrl:nil sender:@"Jack" timestamp:[NSDate date]];
-    photoMessage.avator = [UIImage imageNamed:@"avator"];
-    photoMessage.avatorUrl = @"http://www.pailixiu.com/jack/JieIcon@2x.png";
+    photoMessage.avatar = [UIImage imageNamed:@"avatar"];
+    photoMessage.avatarUrl = @"http://www.pailixiu.com/jack/JieIcon@2x.png";
     photoMessage.bubbleMessageType = bubbleMessageType;
     
     return photoMessage;
@@ -45,8 +45,8 @@
 - (XHMessage *)getVideoMessageWithBubbleMessageType:(XHBubbleMessageType)bubbleMessageType {
     NSString *videoPath = [[NSBundle mainBundle] pathForResource:@"IMG_1555.MOV" ofType:@""];
     XHMessage *videoMessage = [[XHMessage alloc] initWithVideoConverPhoto:[XHMessageVideoConverPhotoFactory videoConverPhotoWithVideoPath:videoPath] videoPath:videoPath videoUrl:nil sender:@"Jayson" timestamp:[NSDate date]];
-    videoMessage.avator = [UIImage imageNamed:@"avator"];
-    videoMessage.avatorUrl = @"http://www.pailixiu.com/jack/JieIcon@2x.png";
+    videoMessage.avatar = [UIImage imageNamed:@"avatar"];
+    videoMessage.avatarUrl = @"http://www.pailixiu.com/jack/JieIcon@2x.png";
     videoMessage.bubbleMessageType = bubbleMessageType;
     
     return videoMessage;
@@ -54,8 +54,8 @@
 
 - (XHMessage *)getVoiceMessageWithBubbleMessageType:(XHBubbleMessageType)bubbleMessageType {
     XHMessage *voiceMessage = [[XHMessage alloc] initWithVoicePath:nil voiceUrl:nil voiceDuration:@"1" sender:@"Jayson" timestamp:[NSDate date]];    initWithVoicePath: voiceUrl: sender: timestamp:
-    voiceMessage.avator = [UIImage imageNamed:@"avator"];
-    voiceMessage.avatorUrl = @"http://www.pailixiu.com/jack/JieIcon@2x.png";
+    voiceMessage.avatar = [UIImage imageNamed:@"avatar"];
+    voiceMessage.avatarUrl = @"http://www.pailixiu.com/jack/JieIcon@2x.png";
     voiceMessage.bubbleMessageType = bubbleMessageType;
     
     return voiceMessage;
@@ -63,8 +63,8 @@
 
 - (XHMessage *)getEmotionMessageWithBubbleMessageType:(XHBubbleMessageType)bubbleMessageType {
     XHMessage *emotionMessage = [[XHMessage alloc] initWithEmotionPath:[[NSBundle mainBundle] pathForResource:@"Demo0.gif" ofType:nil] sender:@"Jayson" timestamp:[NSDate date]];
-    emotionMessage.avator = [UIImage imageNamed:@"avator"];
-    emotionMessage.avatorUrl = @"http://www.pailixiu.com/jack/JieIcon@2x.png";
+    emotionMessage.avatar = [UIImage imageNamed:@"avatar"];
+    emotionMessage.avatarUrl = @"http://www.pailixiu.com/jack/JieIcon@2x.png";
     emotionMessage.bubbleMessageType = bubbleMessageType;
     
     return emotionMessage;
@@ -72,8 +72,8 @@
 
 - (XHMessage *)getGeolocationsMessageWithBubbleMessageType:(XHBubbleMessageType)bubbleMessageType {
     XHMessage *localPositionMessage = [[XHMessage alloc] initWithLocalPositionPhoto:[UIImage imageNamed:@"Fav_Cell_Loc"] geolocations:@"中国广东省广州市天河区东圃二马路121号" location:[[CLLocation alloc] initWithLatitude:23.110387 longitude:113.399444] sender:@"Jack" timestamp:[NSDate date]];
-    localPositionMessage.avator = [UIImage imageNamed:@"avator"];
-    localPositionMessage.avatorUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
+    localPositionMessage.avatar = [UIImage imageNamed:@"avatar"];
+    localPositionMessage.avatarUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
     localPositionMessage.bubbleMessageType = bubbleMessageType;
     
     return localPositionMessage;
@@ -125,7 +125,7 @@
     
     // 添加第三方接入数据
     NSMutableArray *shareMenuItems = [NSMutableArray array];
-    NSArray *plugIcons = @[@"sharemore_pic", @"sharemore_video", @"sharemore_location", @"sharemore_friendcard", @"sharemore_myfav", @"sharemore_wxtalk", @"sharemore_videovoip", @"sharemore_voiceinput", @"sharemore_openapi", @"sharemore_openapi", @"avator"];
+    NSArray *plugIcons = @[@"sharemore_pic", @"sharemore_video", @"sharemore_location", @"sharemore_friendcard", @"sharemore_myfav", @"sharemore_wxtalk", @"sharemore_videovoip", @"sharemore_voiceinput", @"sharemore_openapi", @"sharemore_openapi", @"avatar"];
     NSArray *plugTitle = @[@"照片", @"拍摄", @"位置", @"名片", @"我的收藏", @"实时对讲机", @"视频聊天", @"语音输入", @"大众点评", @"应用", @"曾宪华"];
     for (NSString *plugIcon in plugIcons) {
         XHShareMenuItem *shareMenuItem = [[XHShareMenuItem alloc] initWithNormalIconImage:[UIImage imageNamed:plugIcon] title:[plugTitle objectAtIndex:[plugIcons indexOfObject:plugIcon]]];
@@ -241,7 +241,7 @@
     [self.navigationController pushViewController:displayTextViewController animated:YES];
 }
 
-- (void)didSelectedAvatorAtIndexPath:(NSIndexPath *)indexPath {
+- (void)didSelectedAvatarAtIndexPath:(NSIndexPath *)indexPath {
     DLog(@"indexPath : %@", indexPath);
     XHProfileTableViewController *profileTableViewController = [[XHProfileTableViewController alloc] init];
     [self.navigationController pushViewController:profileTableViewController animated:YES];
@@ -426,8 +426,8 @@
  */
 - (void)didSendText:(NSString *)text fromSender:(NSString *)sender onDate:(NSDate *)date {
     XHMessage *textMessage = [[XHMessage alloc] initWithText:text sender:sender timestamp:date];
-    textMessage.avator = [UIImage imageNamed:@"avator"];
-    textMessage.avatorUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
+    textMessage.avatar = [UIImage imageNamed:@"avatar"];
+    textMessage.avatarUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
     [self insertNewObject:textMessage];
     [self finishSendMessageWithBubbleMessageType:XHBubbleMessageMediaTypeText];
     [self scrollToBottomAnimated:YES];
@@ -442,8 +442,8 @@
  */
 - (void)didSendPhoto:(UIImage *)photo fromSender:(NSString *)sender onDate:(NSDate *)date {
     XHMessage *photoMessage = [[XHMessage alloc] initWithPhoto:photo thumbnailUrl:nil originPhotoUrl:nil sender:sender timestamp:date];
-    photoMessage.avator = [UIImage imageNamed:@"avator"];
-    photoMessage.avatorUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
+    photoMessage.avatar = [UIImage imageNamed:@"avatar"];
+    photoMessage.avatarUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
     [self addMessage:photoMessage];
     [self finishSendMessageWithBubbleMessageType:XHBubbleMessageMediaTypePhoto];
 }
@@ -457,8 +457,8 @@
  */
 - (void)didSendVideoConverPhoto:(UIImage *)videoConverPhoto videoPath:(NSString *)videoPath fromSender:(NSString *)sender onDate:(NSDate *)date {
     XHMessage *videoMessage = [[XHMessage alloc] initWithVideoConverPhoto:videoConverPhoto videoPath:videoPath videoUrl:nil sender:sender timestamp:date];
-    videoMessage.avator = [UIImage imageNamed:@"avator"];
-    videoMessage.avatorUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
+    videoMessage.avatar = [UIImage imageNamed:@"avatar"];
+    videoMessage.avatarUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
     [self addMessage:videoMessage];
     [self finishSendMessageWithBubbleMessageType:XHBubbleMessageMediaTypeVideo];
 }
@@ -473,8 +473,8 @@
  */
 - (void)didSendVoice:(NSString *)voicePath voiceDuration:(NSString*)voiceDuration fromSender:(NSString *)sender onDate:(NSDate *)date {
     XHMessage *voiceMessage = [[XHMessage alloc] initWithVoicePath:voicePath voiceUrl:nil voiceDuration:voiceDuration sender:sender timestamp:date];
-    voiceMessage.avator = [UIImage imageNamed:@"avator"];
-    voiceMessage.avatorUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
+    voiceMessage.avatar = [UIImage imageNamed:@"avatar"];
+    voiceMessage.avatarUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
     [self addMessage:voiceMessage];
     [self finishSendMessageWithBubbleMessageType:XHBubbleMessageMediaTypeVoice];
 }
@@ -488,8 +488,8 @@
  */
 - (void)didSendEmotion:(NSString *)emotionPath fromSender:(NSString *)sender onDate:(NSDate *)date {
     XHMessage *emotionMessage = [[XHMessage alloc] initWithEmotionPath:emotionPath sender:sender timestamp:date];
-    emotionMessage.avator = [UIImage imageNamed:@"avator"];
-    emotionMessage.avatorUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
+    emotionMessage.avatar = [UIImage imageNamed:@"avatar"];
+    emotionMessage.avatarUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
     [self addMessage:emotionMessage];
     [self finishSendMessageWithBubbleMessageType:XHBubbleMessageMediaTypeEmotion];
 }
@@ -499,8 +499,8 @@
  */
 - (void)didSendGeoLocationsPhoto:(UIImage *)geoLocationsPhoto geolocations:(NSString *)geolocations location:(CLLocation *)location fromSender:(NSString *)sender onDate:(NSDate *)date {
     XHMessage *geoLocationsMessage = [[XHMessage alloc] initWithLocalPositionPhoto:geoLocationsPhoto geolocations:geolocations location:location sender:sender timestamp:date];
-    geoLocationsMessage.avator = [UIImage imageNamed:@"avator"];
-    geoLocationsMessage.avatorUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
+    geoLocationsMessage.avatar = [UIImage imageNamed:@"avatar"];
+    geoLocationsMessage.avatarUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
     [self addMessage:geoLocationsMessage];
     [self finishSendMessageWithBubbleMessageType:XHBubbleMessageMediaTypeLocalPosition];
 }

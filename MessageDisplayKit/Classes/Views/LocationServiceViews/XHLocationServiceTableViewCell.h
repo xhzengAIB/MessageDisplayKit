@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-#define kXHNearAvatorSize 50
-#define kXHNearAvatorSpacing 10
+#define kXHNearAvatarSize 50
+#define kXHNearAvatarSpacing 10
 
 @interface XHLocationServiceTableViewCell : UITableViewCell
 
