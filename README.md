@@ -136,6 +136,7 @@ If you use this open source components in your project, please [Email us](mailto
 
 ## What app use this open source
 这里会列出所有使用该开源库的App列表。
+[leanchat-ios](https://github.com/leancloud/leanchat-ios)，LeanCloud 提供一站式后端云服务，从数据存储、实时聊天、消息推送到移动统计，涵盖应用开发的多方面后端需求。
 
 ## 使用到的第三方组件
 * [PathCover](https://github.com/JackTeam/PathCover)用于朋友圈的下拉刷新。
