@@ -18,7 +18,7 @@
 
 @interface XHAlbumRichTextView () <UICollectionViewDelegate, UICollectionViewDataSource>
 
-@property (nonatomic, strong) UIImageView *AvatarImageView;
+@property (nonatomic, strong) UIImageView *avatarImageView;
 @property (nonatomic, strong) UILabel *userNameLabel;
 
 @property (nonatomic, strong) UICollectionView *sharePhotoCollectionView;
@@ -77,18 +77,18 @@
     [self setNeedsLayout];
 }
 
-- (UIImageView *)AvatarImageView {
-    if (!_AvatarImageView) {
-        _AvatarImageView = [[UIImageView alloc] initWithFrame:CGRectMake(kXHAlbumAvatarSpacing, kXHAlbumAvatarSpacing, kXHAvatarImageSize, kXHAvatarImageSize)];
-        _AvatarImageView.image = [UIImage imageNamed:@"Avatar"];
+- (UIImageView *)avatarImageView {
+    if (!_avatarImageView) {
+        _avatarImageView = [[UIImageView alloc] initWithFrame:CGRectMake(kXHAlbumAvatarSpacing, kXHAlbumAvatarSpacing, kXHAvatarImageSize, kXHAvatarImageSize)];
+        _avatarImageView.image = [UIImage imageNamed:@"Avatar"];
     }
-    return _AvatarImageView;
+    return _avatarImageView;
 }
 
 - (UILabel *)userNameLabel {
     if (!_userNameLabel) {
-        CGFloat userNameLabelX = CGRectGetMaxX(self.AvatarImageView.frame) + kXHAlbumAvatarSpacing;
-        _userNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(userNameLabelX, CGRectGetMinY(self.AvatarImageView.frame), CGRectGetWidth([[UIScreen mainScreen] bounds]) - userNameLabelX - kXHAlbumAvatarSpacing, kXHAlbumUserNameHeigth)];
+        CGFloat userNameLabelX = CGRectGetMaxX(self.avatarImageView.frame) + kXHAlbumAvatarSpacing;
+        _userNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(userNameLabelX, CGRectGetMinY(self.avatarImageView.frame), CGRectGetWidth([[UIScreen mainScreen] bounds]) - userNameLabelX - kXHAlbumAvatarSpacing, kXHAlbumUserNameHeigth)];
         _userNameLabel.backgroundColor = [UIColor clearColor];
         _userNameLabel.textColor = [UIColor colorWithRed:0.294 green:0.595 blue:1.000 alpha:1.000];
     
@@ -147,7 +147,7 @@
     self.textAlignment = NSTextAlignmentLeft;
     self.lineSpacing = kXHAlbumContentLineSpacing;
     
-    [self addSubview:self.AvatarImageView];
+    [self addSubview:self.avatarImageView];
     [self addSubview:self.userNameLabel];
     
     [self addSubview:self.richTextView];
@@ -172,7 +172,7 @@
     self.richTextView = nil;
     _displayAlbum = nil;
     
-    self.AvatarImageView = nil;
+    self.avatarImageView = nil;
     self.userNameLabel = nil;
     self.sharePhotoCollectionView.delegate = nil;
     self.sharePhotoCollectionView.dataSource = nil;

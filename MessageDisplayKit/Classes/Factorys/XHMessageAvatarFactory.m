@@ -27,8 +27,8 @@
         default:
             break;
     }
-    UIImage *Avatar = [originImage createRoundedWithRadius:radius];
-    return Avatar;
+    UIImage *avatar = [originImage createRoundedWithRadius:radius];
+    return avatar;
 }
 
 @end

@@ -193,8 +193,8 @@
     _geolocations = nil;
     _location = nil;
     
-    _Avatar = nil;
-    _AvatarUrl = nil;
+    _avatar = nil;
+    _avatarUrl = nil;
     
     _sender = nil;
     
@@ -226,8 +226,8 @@
         _geolocations = [aDecoder decodeObjectForKey:@"geolocations"];
         _location = [aDecoder decodeObjectForKey:@"location"];
         
-        _Avatar = [aDecoder decodeObjectForKey:@"Avatar"];
-        _AvatarUrl = [aDecoder decodeObjectForKey:@"AvatarUrl"];
+        _avatar = [aDecoder decodeObjectForKey:@"avatar"];
+        _avatarUrl = [aDecoder decodeObjectForKey:@"avatarUrl"];
         
         _sender = [aDecoder decodeObjectForKey:@"sender"];
         _timestamp = [aDecoder decodeObjectForKey:@"timestamp"];
@@ -255,6 +255,10 @@
     [aCoder encodeObject:self.localPositionPhoto forKey:@"localPositionPhoto"];
     [aCoder encodeObject:self.geolocations forKey:@"geolocations"];
     [aCoder encodeObject:self.location forKey:@"location"];
+
+    [aCoder encodeObject:self.avatar forKey:@"avatar"];
+    [aCoder encodeObject:self.avatarUrl forKey:@"avatarUrl"];
+    
     
     [aCoder encodeObject:self.sender forKey:@"sender"];
     [aCoder encodeObject:self.timestamp forKey:@"timestamp"];

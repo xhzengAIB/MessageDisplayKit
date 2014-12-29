@@ -10,7 +10,7 @@
 
 @interface XHLocationServiceTableViewCell ()
 
-@property (nonatomic, strong) UIImageView *AvatarImageView;
+@property (nonatomic, strong) UIImageView *avatarImageView;
 
 @property (nonatomic, strong) UILabel *userNameLabel;
 @property (nonatomic, strong) UIImageView *userSexImageView;
@@ -37,17 +37,17 @@
 
 #pragma mark - Propertys
 
-- (UIImageView *)AvatarImageView {
-    if (!_AvatarImageView) {
-        _AvatarImageView = [[UIImageView alloc] initWithFrame:CGRectMake(kXHNearAvatarSpacing, kXHNearAvatarSpacing, kXHNearAvatarSize, kXHNearAvatarSize)];
-        _AvatarImageView.image = [UIImage imageNamed:@"Avatar"];
+- (UIImageView *)avatarImageView {
+    if (!_avatarImageView) {
+        _avatarImageView = [[UIImageView alloc] initWithFrame:CGRectMake(kXHNearAvatarSpacing, kXHNearAvatarSpacing, kXHNearAvatarSize, kXHNearAvatarSize)];
+        _avatarImageView.image = [UIImage imageNamed:@"avatar"];
     }
-    return _AvatarImageView;
+    return _avatarImageView;
 }
 
 - (UILabel *)userNameLabel {
     if (!_userNameLabel) {
-        _userNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.AvatarImageView.frame) + kXHNearAvatarSpacing, kXHNearAvatarSpacing, 55, 30)];
+        _userNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.avatarImageView.frame) + kXHNearAvatarSpacing, kXHNearAvatarSpacing, 55, 30)];
         _userNameLabel.backgroundColor = [UIColor clearColor];
         _userNameLabel.textColor = [UIColor blackColor];
         _userNameLabel.font = [UIFont boldSystemFontOfSize:17];
@@ -103,7 +103,7 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         // Initialization code
-        [self.contentView addSubview:self.AvatarImageView];
+        [self.contentView addSubview:self.avatarImageView];
         [self.contentView addSubview:self.userNameLabel];
         [self.contentView addSubview:self.userSexImageView];
         [self.contentView addSubview:self.distanseLabel];

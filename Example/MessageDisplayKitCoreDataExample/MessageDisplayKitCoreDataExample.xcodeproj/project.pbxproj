@@ -25,7 +25,6 @@
 		AB5C7E781937FE7000FA7D5B /* MessageDisplayKitCoreDataExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AB5C7E771937FE7000FA7D5B /* MessageDisplayKitCoreDataExampleTests.m */; };
 		AB5C7F131937FFCC00FA7D5B /* XHDemoWeChatMessageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB5C7F121937FFCC00FA7D5B /* XHDemoWeChatMessageTableViewController.m */; };
 		ABC47CFB193922EB00ECADEA /* MDKMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC47CFA193922EB00ECADEA /* MDKMessage.m */; };
-		F7705BCB1A4D5CE900CA551D /* avator@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7705B0F1A4D5CE900CA551D /* avator@2x.png */; };
 		F7705BCC1A4D5CE900CA551D /* Contact_Female@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7705B101A4D5CE900CA551D /* Contact_Female@2x.png */; };
 		F7705BCD1A4D5CE900CA551D /* Contact_Male@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7705B111A4D5CE900CA551D /* Contact_Male@2x.png */; };
 		F7705BCE1A4D5CE900CA551D /* VoiceSearchBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7705B121A4D5CE900CA551D /* VoiceSearchBtn@2x.png */; };
@@ -288,6 +287,7 @@
 		F7B9EB021A4D60500072F81B /* weChatBubble_Receiving_Solid@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7B9EAA71A4D60500072F81B /* weChatBubble_Receiving_Solid@2x.png */; };
 		F7B9EB031A4D60500072F81B /* weChatBubble_Sending_Cavern@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7B9EAA81A4D60500072F81B /* weChatBubble_Sending_Cavern@2x.png */; };
 		F7B9EB041A4D60500072F81B /* weChatBubble_Sending_Solid@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7B9EAA91A4D60500072F81B /* weChatBubble_Sending_Solid@2x.png */; };
+		F7CB57F41A50EA9A00CA5E49 /* avatar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7CB57F31A50EA9A00CA5E49 /* avatar@2x.png */; };
 		F7D249EB1A4D072F0015764B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D249EA1A4D072F0015764B /* ViewController.m */; };
 		F7E3993D1A4D437B003AB670 /* MessageDisplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7E398DF1A4D437B003AB670 /* MessageDisplayKit.framework */; };
 /* End PBXBuildFile section */
@@ -326,7 +326,6 @@
 		AB5C7F121937FFCC00FA7D5B /* XHDemoWeChatMessageTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHDemoWeChatMessageTableViewController.m; sourceTree = "<group>"; };
 		ABC47CF9193922EB00ECADEA /* MDKMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDKMessage.h; sourceTree = "<group>"; };
 		ABC47CFA193922EB00ECADEA /* MDKMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDKMessage.m; sourceTree = "<group>"; };
-		F7705B0F1A4D5CE900CA551D /* avator@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avator@2x.png"; sourceTree = "<group>"; };
 		F7705B101A4D5CE900CA551D /* Contact_Female@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Contact_Female@2x.png"; sourceTree = "<group>"; };
 		F7705B111A4D5CE900CA551D /* Contact_Male@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Contact_Male@2x.png"; sourceTree = "<group>"; };
 		F7705B121A4D5CE900CA551D /* VoiceSearchBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VoiceSearchBtn@2x.png"; sourceTree = "<group>"; };
@@ -590,6 +589,7 @@
 		F7B9EAA71A4D60500072F81B /* weChatBubble_Receiving_Solid@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weChatBubble_Receiving_Solid@2x.png"; sourceTree = "<group>"; };
 		F7B9EAA81A4D60500072F81B /* weChatBubble_Sending_Cavern@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weChatBubble_Sending_Cavern@2x.png"; sourceTree = "<group>"; };
 		F7B9EAA91A4D60500072F81B /* weChatBubble_Sending_Solid@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weChatBubble_Sending_Solid@2x.png"; sourceTree = "<group>"; };
+		F7CB57F31A50EA9A00CA5E49 /* avatar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar@2x.png"; sourceTree = "<group>"; };
 		F7D249E91A4D072F0015764B /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		F7D249EA1A4D072F0015764B /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F7E398DF1A4D437B003AB670 /* MessageDisplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MessageDisplayKit.framework; sourceTree = "<group>"; };
@@ -978,7 +978,7 @@
 		F7705BCA1A4D5CE900CA551D /* ExampleResources */ = {
 			isa = PBXGroup;
 			children = (
-				F7705B0F1A4D5CE900CA551D /* avator@2x.png */,
+				F7CB57F31A50EA9A00CA5E49 /* avatar@2x.png */,
 				F7705B571A4D5CE900CA551D /* ContactImages */,
 				F7705B5A1A4D5CE900CA551D /* Defaults */,
 				F7705B941A4D5CE900CA551D /* DisconverImages */,
@@ -1258,7 +1258,6 @@
 				F7B9EB031A4D60500072F81B /* weChatBubble_Sending_Cavern@2x.png in Resources */,
 				F7705C6D1A4D5CE900CA551D /* MoreExpressionShops@2x.png in Resources */,
 				F7705C731A4D5CE900CA551D /* Profile@2x.png in Resources */,
-				F7705BCB1A4D5CE900CA551D /* avator@2x.png in Resources */,
 				F7B9EAAD1A4D60500072F81B /* avator@2x.png in Resources */,
 				F7B9EAE01A4D60500072F81B /* section0_emotion11@2x.png in Resources */,
 				F7705BD31A4D5CE900CA551D /* VoiceSearchFeedback003_ios7@2x.png in Resources */,
@@ -1402,6 +1401,7 @@
 				F7705C3A1A4D5CE900CA551D /* ScanWord@2x.png in Resources */,
 				F7705BE51A4D5CE900CA551D /* VoiceSearchFeedback012_ios7@2x.png in Resources */,
 				F7B9EAAB1A4D60500072F81B /* AddGroupMemberBtn@2x.png in Resources */,
+				F7CB57F41A50EA9A00CA5E49 /* avatar@2x.png in Resources */,
 				F7B9EAB61A4D60500072F81B /* contacts_add_voip@2x.png in Resources */,
 				F7705BDA1A4D5CE900CA551D /* VoiceSearchFeedback007@2x.png in Resources */,
 				F7705C6E1A4D5CE900CA551D /* MoreMyAlbum@2x.png in Resources */,

@@ -103,7 +103,7 @@
 		F7D24A361A4D099F0015764B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D24A351A4D099F0015764B /* AppDelegate.m */; };
 		F7D24A411A4D099F0015764B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7D24A401A4D099F0015764B /* Images.xcassets */; };
 		F7D24A501A4D099F0015764B /* MessageDisplayKitWeChatExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D24A4F1A4D099F0015764B /* MessageDisplayKitWeChatExampleTests.m */; };
-		F7D24EB21A4D0EB30015764B /* avator@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7D24DF71A4D0EB20015764B /* avator@2x.png */; };
+		F7D24EB21A4D0EB30015764B /* avatar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7D24DF71A4D0EB20015764B /* avatar@2x.png */; };
 		F7D24EB31A4D0EB30015764B /* Contact_Female@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7D24DF91A4D0EB20015764B /* Contact_Female@2x.png */; };
 		F7D24EB41A4D0EB30015764B /* Contact_Male@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7D24DFA1A4D0EB20015764B /* Contact_Male@2x.png */; };
 		F7D24EB51A4D0EB30015764B /* VoiceSearchBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7D24DFC1A4D0EB20015764B /* VoiceSearchBtn@2x.png */; };
@@ -469,7 +469,7 @@
 		F7D24A491A4D099F0015764B /* MessageDisplayKitWeChatExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MessageDisplayKitWeChatExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7D24A4E1A4D099F0015764B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7D24A4F1A4D099F0015764B /* MessageDisplayKitWeChatExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageDisplayKitWeChatExampleTests.m; sourceTree = "<group>"; };
-		F7D24DF71A4D0EB20015764B /* avator@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avator@2x.png"; sourceTree = "<group>"; };
+		F7D24DF71A4D0EB20015764B /* avatar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar@2x.png"; sourceTree = "<group>"; };
 		F7D24DF91A4D0EB20015764B /* Contact_Female@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Contact_Female@2x.png"; sourceTree = "<group>"; };
 		F7D24DFA1A4D0EB20015764B /* Contact_Male@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Contact_Male@2x.png"; sourceTree = "<group>"; };
 		F7D24DFC1A4D0EB20015764B /* VoiceSearchBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VoiceSearchBtn@2x.png"; sourceTree = "<group>"; };
@@ -974,7 +974,7 @@
 		F7D24DF61A4D0EB20015764B /* ExampleResources */ = {
 			isa = PBXGroup;
 			children = (
-				F7D24DF71A4D0EB20015764B /* avator@2x.png */,
+				F7D24DF71A4D0EB20015764B /* avatar@2x.png */,
 				F7D24DF81A4D0EB20015764B /* ContactImages */,
 				F7D24E401A4D0EB30015764B /* Defaults */,
 				F7D24E431A4D0EB30015764B /* DisconverImages */,
@@ -2148,7 +2148,7 @@
 				F7D24F3B1A4D0EB30015764B /* emotion2.gif in Resources */,
 				F7D24EE51A4D0EB30015764B /* VoiceSearchLoading003@2x.png in Resources */,
 				F7D24F161A4D0EB30015764B /* MoreGame@2x.png in Resources */,
-				F7D24EB21A4D0EB30015764B /* avator@2x.png in Resources */,
+				F7D24EB21A4D0EB30015764B /* avatar@2x.png in Resources */,
 				F7B9EB6C1A4D605B0072F81B /* contacts_add_scan@2x.png in Resources */,
 				F7D24F271A4D0EB30015764B /* Shake_Line_Down@2x.png in Resources */,
 				F7D24F1B1A4D0EB30015764B /* ScanQR3@2x.png in Resources */,

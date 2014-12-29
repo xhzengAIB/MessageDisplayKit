@@ -35,8 +35,8 @@
 
 - (NSString *)emotionPath;
 
-- (UIImage *)Avatar;
-- (NSString *)AvatarUrl;
+- (UIImage *)avatar;
+- (NSString *)avatarUrl;
 
 - (XHBubbleMessageMediaType)messageMediaType;
 

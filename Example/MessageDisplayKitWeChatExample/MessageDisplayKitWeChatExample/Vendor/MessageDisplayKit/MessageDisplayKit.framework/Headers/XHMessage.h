@@ -32,8 +32,8 @@
 @property (nonatomic, copy) NSString *geolocations;
 @property (nonatomic, strong) CLLocation *location;
 
-@property (nonatomic, strong) UIImage *Avatar;
-@property (nonatomic, copy) NSString *AvatarUrl;
+@property (nonatomic, strong) UIImage *avatar;
+@property (nonatomic, copy) NSString *avatarUrl;
 
 @property (nonatomic, copy) NSString *sender;
 
