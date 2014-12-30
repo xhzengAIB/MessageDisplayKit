@@ -2,7 +2,7 @@
 //  XHMessage.m
 //  MessageDisplayExample
 //
-//  Created by qtone-1 on 14-4-24.
+//  Created by HUAJIE-1 on 14-4-24.
 //  Copyright (c) 2014年 曾宪华 开发团队(http://iyilunba.com ) 本人QQ:543413507 本人QQ群（142557668）. All rights reserved.
 //
 
@@ -193,8 +193,8 @@
     _geolocations = nil;
     _location = nil;
     
-    _avator = nil;
-    _avatorUrl = nil;
+    _avatar = nil;
+    _avatarUrl = nil;
     
     _sender = nil;
     
@@ -226,8 +226,8 @@
         _geolocations = [aDecoder decodeObjectForKey:@"geolocations"];
         _location = [aDecoder decodeObjectForKey:@"location"];
         
-        _avator = [aDecoder decodeObjectForKey:@"avator"];
-        _avatorUrl = [aDecoder decodeObjectForKey:@"avatorUrl"];
+        _avatar = [aDecoder decodeObjectForKey:@"avatar"];
+        _avatarUrl = [aDecoder decodeObjectForKey:@"avatarUrl"];
         
         _sender = [aDecoder decodeObjectForKey:@"sender"];
         _timestamp = [aDecoder decodeObjectForKey:@"timestamp"];
@@ -255,6 +255,10 @@
     [aCoder encodeObject:self.localPositionPhoto forKey:@"localPositionPhoto"];
     [aCoder encodeObject:self.geolocations forKey:@"geolocations"];
     [aCoder encodeObject:self.location forKey:@"location"];
+
+    [aCoder encodeObject:self.avatar forKey:@"avatar"];
+    [aCoder encodeObject:self.avatarUrl forKey:@"avatarUrl"];
+    
     
     [aCoder encodeObject:self.sender forKey:@"sender"];
     [aCoder encodeObject:self.timestamp forKey:@"timestamp"];

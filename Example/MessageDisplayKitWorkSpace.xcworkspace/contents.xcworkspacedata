@@ -2,12 +2,18 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:MessageDisplayKitWeChatExample/MessageDisplayKitWeChatExample.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:MessageDisplayKitCoreDataExample/MessageDisplayKitCoreDataExample.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:MessageDisplayKitStoryBoradExample/MessageDisplayKitStoryBoradExample.xcodeproj">
    </FileRef>
    <FileRef
-      location = "container:MessageDisplayExample/MessageDisplayExample.xcodeproj">
+      location = "group:MessageDisplayKit/MessageDisplayKit.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:MessageDisplayKitLib/MessageDisplayKitLib.xcodeproj">
    </FileRef>
 </Workspace>
