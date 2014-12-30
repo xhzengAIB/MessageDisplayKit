@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		F7122EE61A4D33E200734F17 /* XHAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = F7122EE31A4D33E200734F17 /* XHAlbum.m */; };
 		F7122EE71A4D33E200734F17 /* XHContact.m in Sources */ = {isa = PBXBuildFile; fileRef = F7122EE51A4D33E200734F17 /* XHContact.m */; };
+		F7220AE31A52693400DBDEE7 /* MessageDisplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7E396021A4D42B2003AB670 /* MessageDisplayKit.framework */; };
+		F7220AE41A52693400DBDEE7 /* MessageDisplayKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F7E396021A4D42B2003AB670 /* MessageDisplayKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F7B9EB621A4D605B0072F81B /* AddGroupMemberBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7B9EB051A4D605B0072F81B /* AddGroupMemberBtn@2x.png */; };
 		F7B9EB631A4D605B0072F81B /* AddGroupMemberBtnHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7B9EB061A4D605B0072F81B /* AddGroupMemberBtnHL@2x.png */; };
 		F7B9EB641A4D605B0072F81B /* avator@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7B9EB071A4D605B0072F81B /* avator@2x.png */; };
@@ -351,7 +353,6 @@
 		F7D2533E1A4D31F60015764B /* XHPopMenuItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D252F11A4D31F60015764B /* XHPopMenuItemView.m */; };
 		F7D2533F1A4D31F60015764B /* XHScanningView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D252F41A4D31F60015764B /* XHScanningView.m */; };
 		F7D253431A4D327E0015764B /* XHStoreManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D253421A4D327E0015764B /* XHStoreManager.m */; };
-		F7E396601A4D42B2003AB670 /* MessageDisplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7E396021A4D42B2003AB670 /* MessageDisplayKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -363,6 +364,20 @@
 			remoteInfo = MessageDisplayKitWeChatExample;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F7220AE51A52693400DBDEE7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F7220AE41A52693400DBDEE7 /* MessageDisplayKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		F7122EE21A4D33E200734F17 /* XHAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHAlbum.h; sourceTree = "<group>"; };
@@ -797,7 +812,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7E396601A4D42B2003AB670 /* MessageDisplayKit.framework in Frameworks */,
+				F7220AE31A52693400DBDEE7 /* MessageDisplayKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1820,6 +1835,7 @@
 				F7D24A291A4D099F0015764B /* Sources */,
 				F7D24A2A1A4D099F0015764B /* Frameworks */,
 				F7D24A2B1A4D099F0015764B /* Resources */,
+				F7220AE51A52693400DBDEE7 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

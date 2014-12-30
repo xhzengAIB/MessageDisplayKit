@@ -22,6 +22,8 @@
 		74180CA3190F496E00A35C82 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74180CA1190F496E00A35C82 /* InfoPlist.strings */; };
 		74180CA5190F496E00A35C82 /* MessageDisplayKitStoryBoradExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74180CA4190F496E00A35C82 /* MessageDisplayKitStoryBoradExampleTests.m */; };
 		74180CE9190F54C100A35C82 /* XHDemoWeChatMessageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74180CE8190F54C100A35C82 /* XHDemoWeChatMessageTableViewController.m */; };
+		F7220AE91A52694B00DBDEE7 /* MessageDisplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7E396BC1A4D4363003AB670 /* MessageDisplayKit.framework */; };
+		F7220AEA1A52694B00DBDEE7 /* MessageDisplayKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F7E396BC1A4D4363003AB670 /* MessageDisplayKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F7705D351A4D5CF500CA551D /* Contact_Female@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7705C791A4D5CF500CA551D /* Contact_Female@2x.png */; };
 		F7705D361A4D5CF500CA551D /* Contact_Male@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7705C7A1A4D5CF500CA551D /* Contact_Male@2x.png */; };
 		F7705D371A4D5CF500CA551D /* VoiceSearchBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7705C7B1A4D5CF500CA551D /* VoiceSearchBtn@2x.png */; };
@@ -285,7 +287,6 @@
 		F7B9EA4C1A4D60440072F81B /* weChatBubble_Sending_Cavern@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7B9E9F11A4D60440072F81B /* weChatBubble_Sending_Cavern@2x.png */; };
 		F7B9EA4D1A4D60440072F81B /* weChatBubble_Sending_Solid@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7B9E9F21A4D60440072F81B /* weChatBubble_Sending_Solid@2x.png */; };
 		F7CB57F61A50EAA800CA5E49 /* avatar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7CB57F51A50EAA800CA5E49 /* avatar@2x.png */; };
-		F7E3971A1A4D4363003AB670 /* MessageDisplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7E396BC1A4D4363003AB670 /* MessageDisplayKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -297,6 +298,20 @@
 			remoteInfo = MessageDisplayKitStoryBoradExample;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F7220AEB1A52694B00DBDEE7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F7220AEA1A52694B00DBDEE7 /* MessageDisplayKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		74180C73190F496E00A35C82 /* MessageDisplayKitStoryBoradExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessageDisplayKitStoryBoradExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -593,8 +608,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				74180C79190F496E00A35C82 /* CoreGraphics.framework in Frameworks */,
+				F7220AE91A52694B00DBDEE7 /* MessageDisplayKit.framework in Frameworks */,
 				74180C7B190F496E00A35C82 /* UIKit.framework in Frameworks */,
-				F7E3971A1A4D4363003AB670 /* MessageDisplayKit.framework in Frameworks */,
 				74180C77190F496E00A35C82 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1099,6 +1114,7 @@
 				74180C6F190F496E00A35C82 /* Sources */,
 				74180C70190F496E00A35C82 /* Frameworks */,
 				74180C71190F496E00A35C82 /* Resources */,
+				F7220AEB1A52694B00DBDEE7 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1605,6 +1621,7 @@
 				GCC_PREFIX_HEADER = "MessageDisplayKitStoryBoradExample/MessageDisplayKitStoryBoradExample-Prefix.pch";
 				INFOPLIST_FILE = "MessageDisplayKitStoryBoradExample/MessageDisplayKitStoryBoradExample-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
@@ -1627,6 +1644,7 @@
 				GCC_PREFIX_HEADER = "MessageDisplayKitStoryBoradExample/MessageDisplayKitStoryBoradExample-Prefix.pch";
 				INFOPLIST_FILE = "MessageDisplayKitStoryBoradExample/MessageDisplayKitStoryBoradExample-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
