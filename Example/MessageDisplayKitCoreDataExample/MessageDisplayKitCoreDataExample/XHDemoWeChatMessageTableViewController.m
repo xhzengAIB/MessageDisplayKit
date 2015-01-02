@@ -2,17 +2,15 @@
 //  XHDemoWeChatMessageTableViewController.m
 //  MessageDisplayExample
 //
-//  Created by qtone-1 on 14-4-27.
+//  Created by HUAJIE-1 on 14-4-27.
 //  Copyright (c) 2014年 曾宪华 开发团队(http://iyilunba.com ) 本人QQ:543413507 本人QQ群（142557668）. All rights reserved.
 //
 
 #import "XHDemoWeChatMessageTableViewController.h"
 
-#import <MessageDisplayFramework/XHDisplayTextViewController.h>
-#import <MessageDisplayFramework/XHDisplayMediaViewController.h>
-#import <MessageDisplayFramework/XHDisplayLocationViewController.h>
-
-#import <MessageDisplayFramework/XHProfileTableViewController.h>
+#import <MessageDisplayKit/XHDisplayTextViewController.h>
+#import <MessageDisplayKit/XHDisplayMediaViewController.h>
+#import <MessageDisplayKit/XHDisplayLocationViewController.h>
 
 #import "MDKMessage.h"
 
@@ -117,8 +115,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     // Custom UI
-    //    [self setBackgroundColor:[UIColor clearColor]];
-    //    [self setBackgroundImage:[UIImage imageNamed:@"TableViewBackgroundImage"]];
+//    [self setBackgroundColor:[UIColor clearColor]];
+//    [self setBackgroundImage:[UIImage imageNamed:@"TableViewBackgroundImage"]];
     
     // 设置自身用户名
     self.messageSender = @"Jack";
@@ -243,8 +241,7 @@
 
 - (void)didSelectedAvatarAtIndexPath:(NSIndexPath *)indexPath {
     DLog(@"indexPath : %@", indexPath);
-    XHProfileTableViewController *profileTableViewController = [[XHProfileTableViewController alloc] init];
-    [self.navigationController pushViewController:profileTableViewController animated:YES];
+    
 }
 
 - (void)menuDidSelectedAtBubbleMessageMenuSelecteType:(XHBubbleMessageMenuSelecteType)bubbleMessageMenuSelecteType {
@@ -487,11 +484,16 @@
  *  @param date     发送时间
  */
 - (void)didSendEmotion:(NSString *)emotionPath fromSender:(NSString *)sender onDate:(NSDate *)date {
-    XHMessage *emotionMessage = [[XHMessage alloc] initWithEmotionPath:emotionPath sender:sender timestamp:date];
-    emotionMessage.avatar = [UIImage imageNamed:@"avatar"];
-    emotionMessage.avatarUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
-    [self addMessage:emotionMessage];
-    [self finishSendMessageWithBubbleMessageType:XHBubbleMessageMediaTypeEmotion];
+    if (emotionPath) {
+        XHMessage *emotionMessage = [[XHMessage alloc] initWithEmotionPath:emotionPath sender:sender timestamp:date];
+        emotionMessage.avatar = [UIImage imageNamed:@"avatar"];
+        emotionMessage.avatarUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
+        [self addMessage:emotionMessage];
+        [self finishSendMessageWithBubbleMessageType:XHBubbleMessageMediaTypeEmotion];
+        
+    } else {
+        [[[UIAlertView alloc] initWithTitle:@"温馨提示" message:@"如果想测试，请运行MessageDisplayKitWeChatExample工程" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"确定", nil] show];
+    }
 }
 
 /**
