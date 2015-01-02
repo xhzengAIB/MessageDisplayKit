@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="B4K-zk-qmA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="B4K-zk-qmA">
     <dependencies>
-        <deployment defaultVersion="1536" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
-        <!--Demo We Chat Message Table View Controller - 华捷微信-->
+        <!--华捷微信-->
         <scene sceneID="Qw4-RM-yAj">
             <objects>
                 <viewController id="W6F-tC-tHJ" customClass="XHDemoWeChatMessageTableViewController" sceneMemberID="viewController">
@@ -35,12 +35,42 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="W6F-tC-tHJ" kind="relationship" relationship="rootViewController" id="phh-o8-1JM"/>
+                        <segue destination="aTR-dP-aKh" kind="relationship" relationship="rootViewController" id="kcA-Ee-BDK"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ud4-KE-5oh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-383" y="42"/>
+            <point key="canvasLocation" x="-738" y="42"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="X1b-wS-AQy">
+            <objects>
+                <viewController id="aTR-dP-aKh" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TA3-1I-tzh"/>
+                        <viewControllerLayoutGuide type="bottom" id="BKX-MY-wTb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HAh-LR-x5T">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8L-NK-FdA">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <state key="normal" title="进入华捷微信">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="W6F-tC-tHJ" kind="push" identifier="ShowMessage" id="ZcI-cu-aZg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="3UW-Dv-tYr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cXe-KY-gAr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-280" y="42"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

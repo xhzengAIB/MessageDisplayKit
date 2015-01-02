@@ -2,7 +2,7 @@
 //  XHMessageTableViewCell.m
 //  MessageDisplayExample
 //
-//  Created by qtone-1 on 14-4-24.
+//  Created by HUAJIE-1 on 14-4-24.
 //  Copyright (c) 2014年 曾宪华 开发团队(http://iyilunba.com ) 本人QQ:543413507 本人QQ群（142557668）. All rights reserved.
 //
 
@@ -167,13 +167,16 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
 }
 
 - (void)configAvatarWithMessage:(id <XHMessageModel>)message {
-    if (message.avatar) {
-        [self configAvatarWithPhoto:message.avatar];
-        if (message.avatarUrl) {
-            [self configAvatarWithPhotoURLString:message.avatarUrl];
+    UIImage *avatarPhoto = message.avatar;
+    NSString *avatarURL = message.avatarUrl;
+    
+    if (avatarPhoto) {
+        [self configAvatarWithPhoto:avatarPhoto];
+        if (avatarURL) {
+            [self configAvatarWithPhotoURLString:avatarURL];
         }
-    } else if (message.avatarUrl) {
-        [self configAvatarWithPhotoURLString:message.avatarUrl];
+    } else if (avatarURL) {
+        [self configAvatarWithPhotoURLString:avatarURL];
     } else {
         UIImage *avatarPhoto = [XHMessageAvatarFactory avatarImageNamed:[UIImage imageNamed:@"avatar"] messageAvatarType:XHMessageAvatarTypeSquare];
         [self configAvatarWithPhoto:avatarPhoto];
@@ -370,7 +373,11 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
         }
         
         // 2、配置头像
+<<<<<<< HEAD
         // avatar
+=======
+        // Avatar
+>>>>>>> 0ddd1c460a1ce7371dc21a1775346d48606bf4f0
         CGRect avatarButtonFrame;
         switch (message.bubbleMessageType) {
             case XHBubbleMessageTypeReceiving:
@@ -384,7 +391,11 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
         }
         
         UIButton *avatarButton = [[UIButton alloc] initWithFrame:avatarButtonFrame];
+<<<<<<< HEAD
         [avatarButton setImage:[XHMessageAvatarFactory avatarImageNamed:[UIImage imageNamed:@"avatar"] messageAvatarType:XHMessageAvatarTypeCircle] forState:UIControlStateNormal];
+=======
+        [avatarButton setImage:[XHMessageAvatarFactory avatarImageNamed:[UIImage imageNamed:@"Avatar"] messageAvatarType:XHMessageAvatarTypeCircle] forState:UIControlStateNormal];
+>>>>>>> 0ddd1c460a1ce7371dc21a1775346d48606bf4f0
         [avatarButton addTarget:self action:@selector(avatarButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
         [self.contentView addSubview:avatarButton];
         self.avatarButton = avatarButton;
