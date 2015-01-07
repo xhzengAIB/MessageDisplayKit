@@ -373,11 +373,7 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
         }
         
         // 2、配置头像
-<<<<<<< HEAD
         // avatar
-=======
-        // Avatar
->>>>>>> 0ddd1c460a1ce7371dc21a1775346d48606bf4f0
         CGRect avatarButtonFrame;
         switch (message.bubbleMessageType) {
             case XHBubbleMessageTypeReceiving:
@@ -391,11 +387,7 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
         }
         
         UIButton *avatarButton = [[UIButton alloc] initWithFrame:avatarButtonFrame];
-<<<<<<< HEAD
         [avatarButton setImage:[XHMessageAvatarFactory avatarImageNamed:[UIImage imageNamed:@"avatar"] messageAvatarType:XHMessageAvatarTypeCircle] forState:UIControlStateNormal];
-=======
-        [avatarButton setImage:[XHMessageAvatarFactory avatarImageNamed:[UIImage imageNamed:@"Avatar"] messageAvatarType:XHMessageAvatarTypeCircle] forState:UIControlStateNormal];
->>>>>>> 0ddd1c460a1ce7371dc21a1775346d48606bf4f0
         [avatarButton addTarget:self action:@selector(avatarButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
         [self.contentView addSubview:avatarButton];
         self.avatarButton = avatarButton;
