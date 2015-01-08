@@ -214,7 +214,7 @@
     [self.navigationController pushViewController:displayTextViewController animated:YES];
 }
 
-- (void)didSelectedAvatarAtIndexPath:(NSIndexPath *)indexPath {
+- (void)didSelectedAvatarOnMessage:(id <XHMessageModel>)message atIndexPath:(NSIndexPath *)indexPath {
     DLog(@"indexPath : %@", indexPath);
     
 }
