@@ -217,7 +217,7 @@
             message.isRead = YES;
             messageTableViewCell.messageBubbleView.voiceUnreadDotImageView.hidden = YES;
             
-            [[XHAudioPlayerHelper shareInstance] setDelegate:self];
+            [[XHAudioPlayerHelper shareInstance] setDelegate:(id<NSFileManagerDelegate>)self];
             if (_currentSelectedCell) {
                 [_currentSelectedCell.messageBubbleView.animationVoiceImageView stopAnimating];
             }
