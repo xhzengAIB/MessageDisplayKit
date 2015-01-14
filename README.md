@@ -28,7 +28,7 @@ UIWebView *librariesWebView = [[UIWebView alloc] initWithFrame:[[UIScreen mainSc
 
 * iOS 6.0+ 
 * ARC
-* System Frameworks : 'Foundation', 'CoreGraphics', 'UIKit', 'MobileCoreServices', 'AVFoundation', 'CoreLocation', 'MediaPlayer', 'CoreMedia', 'CoreText', 'AudioTollbox'.
+* System Frameworks : 'Foundation', 'CoreGraphics', 'UIKit', 'MobileCoreServices', 'AVFoundation', 'CoreLocation', 'MediaPlayer', 'CoreMedia', 'CoreText', 'AudioToolbox'.
 
 ## Podfile
 
