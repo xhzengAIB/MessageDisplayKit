@@ -80,7 +80,7 @@
 - (UIImageView *)avatarImageView {
     if (!_avatarImageView) {
         _avatarImageView = [[UIImageView alloc] initWithFrame:CGRectMake(kXHAlbumAvatarSpacing, kXHAlbumAvatarSpacing, kXHAvatarImageSize, kXHAvatarImageSize)];
-        _avatarImageView.image = [UIImage imageNamed:@"Avatar"];
+        _avatarImageView.image = [UIImage imageNamed:@"MeIcon"];
     }
     return _avatarImageView;
 }

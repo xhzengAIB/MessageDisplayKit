@@ -9,8 +9,7 @@
 /* Begin PBXBuildFile section */
 		F7122EE61A4D33E200734F17 /* XHAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = F7122EE31A4D33E200734F17 /* XHAlbum.m */; };
 		F7122EE71A4D33E200734F17 /* XHContact.m in Sources */ = {isa = PBXBuildFile; fileRef = F7122EE51A4D33E200734F17 /* XHContact.m */; };
-		F7220AE31A52693400DBDEE7 /* MessageDisplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7E396021A4D42B2003AB670 /* MessageDisplayKit.framework */; };
-		F7220AE41A52693400DBDEE7 /* MessageDisplayKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F7E396021A4D42B2003AB670 /* MessageDisplayKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F785EE2A1A63C0FC006E695B /* MessageDisplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F785EE291A63C0FC006E695B /* MessageDisplayKit.framework */; };
 		F7B9EB621A4D605B0072F81B /* AddGroupMemberBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7B9EB051A4D605B0072F81B /* AddGroupMemberBtn@2x.png */; };
 		F7B9EB631A4D605B0072F81B /* AddGroupMemberBtnHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7B9EB061A4D605B0072F81B /* AddGroupMemberBtnHL@2x.png */; };
 		F7B9EB641A4D605B0072F81B /* avator@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7B9EB071A4D605B0072F81B /* avator@2x.png */; };
@@ -372,7 +371,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F7220AE41A52693400DBDEE7 /* MessageDisplayKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -384,6 +382,7 @@
 		F7122EE31A4D33E200734F17 /* XHAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHAlbum.m; sourceTree = "<group>"; };
 		F7122EE41A4D33E200734F17 /* XHContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHContact.h; sourceTree = "<group>"; };
 		F7122EE51A4D33E200734F17 /* XHContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHContact.m; sourceTree = "<group>"; };
+		F785EE291A63C0FC006E695B /* MessageDisplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MessageDisplayKit.framework; sourceTree = "<group>"; };
 		F7B9EB051A4D605B0072F81B /* AddGroupMemberBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AddGroupMemberBtn@2x.png"; sourceTree = "<group>"; };
 		F7B9EB061A4D605B0072F81B /* AddGroupMemberBtnHL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AddGroupMemberBtnHL@2x.png"; sourceTree = "<group>"; };
 		F7B9EB071A4D605B0072F81B /* avator@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avator@2x.png"; sourceTree = "<group>"; };
@@ -804,7 +803,6 @@
 		F7D252F41A4D31F60015764B /* XHScanningView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHScanningView.m; sourceTree = "<group>"; };
 		F7D253411A4D327E0015764B /* XHStoreManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHStoreManager.h; sourceTree = "<group>"; };
 		F7D253421A4D327E0015764B /* XHStoreManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHStoreManager.m; sourceTree = "<group>"; };
-		F7E396021A4D42B2003AB670 /* MessageDisplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MessageDisplayKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -812,7 +810,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7220AE31A52693400DBDEE7 /* MessageDisplayKit.framework in Frameworks */,
+				F785EE2A1A63C0FC006E695B /* MessageDisplayKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1819,7 +1817,7 @@
 		F7E396011A4D42B2003AB670 /* MessageDisplayKit */ = {
 			isa = PBXGroup;
 			children = (
-				F7E396021A4D42B2003AB670 /* MessageDisplayKit.framework */,
+				F785EE291A63C0FC006E695B /* MessageDisplayKit.framework */,
 				F7B9EB611A4D605B0072F81B /* Resources */,
 			);
 			path = MessageDisplayKit;

@@ -160,9 +160,28 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
     self.displayTimestamp = displayTimestamp;
     self.timestampLabel.hidden = !self.displayTimestamp;
     if (displayTimestamp) {
-        self.timestampLabel.text = [NSDateFormatter localizedStringFromDate:message.timestamp
-                                                                  dateStyle:NSDateFormatterMediumStyle
-                                                                  timeStyle:NSDateFormatterShortStyle];
+        NSString *dateText = nil;
+        NSString *timeText = nil;
+        
+        NSDate *today = [NSDate date];
+        NSDateComponents *components = [[NSDateComponents alloc] init];
+        [components setDay:-1];
+        NSDate *yesterday = [[NSCalendar currentCalendar] dateByAddingComponents:components toDate:today options:0];
+        
+        NSDateComponents *dateComponents = [[NSCalendar currentCalendar] components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay fromDate:message.timestamp];
+        NSDateComponents *todayComponents = [[NSCalendar currentCalendar] components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay fromDate:today];
+        NSDateComponents *yesterdayComponents = [[NSCalendar currentCalendar] components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay fromDate:yesterday];
+        
+        if (dateComponents.year == todayComponents.year && dateComponents.month == todayComponents.month && dateComponents.day == todayComponents.day) {
+            dateText = NSLocalizedString(@"Today", @"Today");
+        } else if (dateComponents.year == yesterdayComponents.year && dateComponents.month == yesterdayComponents.month && dateComponents.day == yesterdayComponents.day) {
+            dateText = NSLocalizedString(@"Yesterday", @"Yesterday");
+        } else {
+            dateText = [NSDateFormatter localizedStringFromDate:message.timestamp dateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterNoStyle];
+        }
+        timeText = [NSDateFormatter localizedStringFromDate:message.timestamp dateStyle:NSDateFormatterNoStyle timeStyle:NSDateFormatterShortStyle];
+        
+        self.timestampLabel.text = [NSString stringWithFormat:@"%@ %@",dateText,timeText];
     }
 }
 
@@ -373,7 +392,7 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
         }
         
         // 2、配置头像
-        // Avatar
+        // avatar
         CGRect avatarButtonFrame;
         switch (message.bubbleMessageType) {
             case XHBubbleMessageTypeReceiving:
@@ -387,7 +406,7 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
         }
         
         UIButton *avatarButton = [[UIButton alloc] initWithFrame:avatarButtonFrame];
-        [avatarButton setImage:[XHMessageAvatarFactory avatarImageNamed:[UIImage imageNamed:@"Avatar"] messageAvatarType:XHMessageAvatarTypeCircle] forState:UIControlStateNormal];
+        [avatarButton setImage:[XHMessageAvatarFactory avatarImageNamed:[UIImage imageNamed:@"avatar"] messageAvatarType:XHMessageAvatarTypeCircle] forState:UIControlStateNormal];
         [avatarButton addTarget:self action:@selector(avatarButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
         [self.contentView addSubview:avatarButton];
         self.avatarButton = avatarButton;
