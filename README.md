@@ -26,6 +26,7 @@ UIWebView *librariesWebView = [[UIWebView alloc] initWithFrame:[[UIScreen mainSc
 
 ## 组件要求                                        Requirements
 
+* Xcode6 or later
 * iOS 6.0+ 
 * ARC
 * System Frameworks : 'Foundation', 'CoreGraphics', 'UIKit', 'MobileCoreServices', 'AVFoundation', 'CoreLocation', 'MediaPlayer', 'CoreMedia', 'CoreText', 'AudioToolbox'.
