@@ -5,11 +5,12 @@ MessageDisplayKit
 一个类似微信App的IM应用，拥有发送文字、图片、语音、视频、地理位置消息，管理本地通信录、分享朋友圈、漂流交友、摇一摇乐趣和更多有趣的功能。                                
 An IM APP like WeChat App has to send text, pictures, audio, video, location messaging, managing local address book, share a circle of friends, drifting friends, shake a fun and more interesting features.                                 
 
-代码都有注释，如果看完注释还是不懂的话，那你只能在githu开issue，[点击这里](https://github.com/xhzengAIB/MessageDisplayKit/issues?state=open)移步新建一个issue，写上你不明白的地方，我会在github给予帮助。                        
+如果有任何问题，请到githug开issue，[点击这里](https://github.com/xhzengAIB/MessageDisplayKit/issues?state=open)移步新建一个issue，写上你不明白的地方，我会在github给予帮助。                        
 
 It's ok if you don't understand how the code works. Most code has comments, which I believe will help you a lot. Feel free to [open an issue] (https://github.com/xhzengAIB/MessageDisplayKit/issues?state=open) if you have any questions. I will do my best to answer them.
 
-很多朋友说不能直接编译该项目的主要工程，其实原因很简单，只是没有打包静态库的插件，需要安装一个Xcode插件，点击以下链接[iOS-Universal-Framework](https://github.com/kstenerud/iOS-Universal-Framework)，安装方法很简单的，里面有教程，只要安装了该插件后，重启你的xcode，就可以开始编译了！
+## 注意，现在已经替换了这个插件的编译，使用Xcode6或者更高版本进行编译即可
+这里的方法已经失效（很多朋友说不能直接编译该项目的主要工程，其实原因很简单，只是没有打包静态库的插件，需要安装一个Xcode插件，点击以下链接[iOS-Universal-Framework](https://github.com/kstenerud/iOS-Universal-Framework)，安装方法很简单的，里面有教程，只要安装了该插件后，重启你的xcode，就可以开始编译了！）
 
 ## 开源许可协议
 很多人和我说，你不知道什么是开源许可协议，其实我也不清楚他是不知道还是不想知道，作为一个开发者，不懂得尊重别人的成果，那你到底想怎样，你自己最清楚。                      
