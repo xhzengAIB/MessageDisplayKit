@@ -29,6 +29,7 @@
 @end
 
 @implementation XHOperationNetworkKit
+@synthesize finished = _finished;
 
 + (NSOperationQueue *)queue {
     static NSOperationQueue *queue;

@@ -75,7 +75,7 @@
     if (!_operationView) {
         _operationView = [XHAlbumOperationView initailzerAlbumOperationView];
         _operationView.didSelectedOperationCompletion = ^(XHAlbumOperationType operationType) {
-            NSLog(@"operationType : %d", operationType);
+            NSLog(@"operationType : %ld", operationType);
         };
     }
     return _operationView;
