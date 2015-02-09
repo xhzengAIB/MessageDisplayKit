@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E4B290061A88645100CAC4C8 /* XHAlbumOperationView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4B290051A88645100CAC4C8 /* XHAlbumOperationView.m */; };
 		F7122EE61A4D33E200734F17 /* XHAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = F7122EE31A4D33E200734F17 /* XHAlbum.m */; };
 		F7122EE71A4D33E200734F17 /* XHContact.m in Sources */ = {isa = PBXBuildFile; fileRef = F7122EE51A4D33E200734F17 /* XHContact.m */; };
 		F785EE2A1A63C0FC006E695B /* MessageDisplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F785EE291A63C0FC006E695B /* MessageDisplayKit.framework */; };
@@ -378,6 +379,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E4B290041A88645100CAC4C8 /* XHAlbumOperationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHAlbumOperationView.h; sourceTree = "<group>"; };
+		E4B290051A88645100CAC4C8 /* XHAlbumOperationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHAlbumOperationView.m; sourceTree = "<group>"; };
 		F7122EE21A4D33E200734F17 /* XHAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHAlbum.h; sourceTree = "<group>"; };
 		F7122EE31A4D33E200734F17 /* XHAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHAlbum.m; sourceTree = "<group>"; };
 		F7122EE41A4D33E200734F17 /* XHContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHContact.h; sourceTree = "<group>"; };
@@ -1705,6 +1708,8 @@
 				F7D252C61A4D31F60015764B /* XHAlbumRichTextView.m */,
 				F7D252C71A4D31F60015764B /* XHAlbumTableViewCell.h */,
 				F7D252C81A4D31F60015764B /* XHAlbumTableViewCell.m */,
+				E4B290041A88645100CAC4C8 /* XHAlbumOperationView.h */,
+				E4B290051A88645100CAC4C8 /* XHAlbumOperationView.m */,
 			);
 			path = AlbumContentViews;
 			sourceTree = "<group>";
@@ -2242,6 +2247,7 @@
 				F7D253091A4D31F60015764B /* XHMessageRootViewController.m in Sources */,
 				F7D2530F1A4D31F60015764B /* XHMoreMyBankCardTableViewController.m in Sources */,
 				F7D2530A1A4D31F60015764B /* XHMultipleSectionTableViewController.m in Sources */,
+				E4B290061A88645100CAC4C8 /* XHAlbumOperationView.m in Sources */,
 				F7D253051A4D31F60015764B /* XHLocationServiceTableViewController.m in Sources */,
 				F7D2531A1A4D31F60015764B /* MultiSelectSearchResultTableViewCell.m in Sources */,
 				F7D253381A4D31F60015764B /* XHMoreExpressionShopsTableViewCell.m in Sources */,

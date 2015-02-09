@@ -12,10 +12,19 @@
 
 #import "XHAlbum.h"
 
+@protocol XHAlbumTableViewCellDelegate <NSObject>
+
+@optional
+- (void)didShowOperationView:(UIButton *)sender indexPath:(NSIndexPath *)indexPath;
+
+@end
+
 @interface XHAlbumTableViewCell : UITableViewCell
 
-@property (nonatomic, strong) XHAlbum *currentAlbum;
+@property (nonatomic, weak) id <XHAlbumTableViewCellDelegate> delegate;
 
+@property (nonatomic, strong) NSIndexPath *indexPath;
+@property (nonatomic, strong) XHAlbum *currentAlbum;
 
 + (CGFloat)calculateCellHeightWithAlbum:(XHAlbum *)currentAlbum;
 

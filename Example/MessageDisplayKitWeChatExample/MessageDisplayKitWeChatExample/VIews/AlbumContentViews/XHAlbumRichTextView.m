@@ -59,6 +59,14 @@
     return richTextHeight;
 }
 
+#pragma mark - Actions
+
+- (void)commentButtonDidClicked:(UIButton *)sender {
+    if (self.commentButtonDidSelectedCompletion) {
+        self.commentButtonDidSelectedCompletion(sender);
+    }
+}
+
 #pragma mark - Propertys
 
 - (void)setDisplayAlbum:(XHAlbum *)displayAlbum {
@@ -135,6 +143,7 @@
         _commentButton = [[UIButton alloc] initWithFrame:CGRectZero];
         [_commentButton setImage:[UIImage imageNamed:@"AlbumOperateMore"] forState:UIControlStateNormal];
         [_commentButton setImage:[UIImage imageNamed:@"AlbumOperateMoreHL"] forState:UIControlStateHighlighted];
+        [_commentButton addTarget:self action:@selector(commentButtonDidClicked:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _commentButton;
 }

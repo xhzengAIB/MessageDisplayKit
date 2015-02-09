@@ -16,7 +16,9 @@
 
 #import "XHStoreManager.h"
 
-@interface XHAlbumTableViewController ()
+#import "XHAlbumOperationView.h"
+
+@interface XHAlbumTableViewController () <XHAlbumTableViewCellDelegate>
 
 /**
  *  视觉差的TableViewHeaderView
@@ -24,6 +26,8 @@
 @property (nonatomic, strong) XHPathCover *albumHeaderContainerViewPathCover;
 
 @property (nonatomic, strong) XHPhotographyHelper *photographyHelper;
+
+@property (nonatomic, strong) XHAlbumOperationView *operationView;
 
 @end
 
@@ -65,6 +69,16 @@
         _photographyHelper = [[XHPhotographyHelper alloc] init];
     }
     return _photographyHelper;
+}
+
+- (XHAlbumOperationView *)operationView {
+    if (!_operationView) {
+        _operationView = [XHAlbumOperationView initailzerAlbumOperationView];
+        _operationView.didSelectedOperationCompletion = ^(XHAlbumOperationType operationType) {
+            NSLog(@"operationType : %d", operationType);
+        };
+    }
+    return _operationView;
 }
 
 #pragma mark - DataSource
@@ -113,6 +127,19 @@
     self.albumHeaderContainerViewPathCover = nil;
 }
 
+#pragma mark - XHAlbumTableViewCellDelegate
+
+- (void)didShowOperationView:(UIButton *)sender indexPath:(NSIndexPath *)indexPath {
+    CGRect rectInTableView = [self.tableView rectForRowAtIndexPath:indexPath];
+    CGFloat origin_Y = rectInTableView.origin.y + sender.frame.origin.y;
+    CGRect targetRect = CGRectMake(CGRectGetMinX(sender.frame), origin_Y, CGRectGetWidth(sender.bounds), CGRectGetHeight(sender.bounds));
+    if (self.operationView.shouldShowed) {
+        [self.operationView dismiss];
+        return;
+    }
+    [self.operationView showAtView:self.tableView rect:targetRect];
+}
+
 #pragma mark- UIScrollView Delegate
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
@@ -128,6 +155,8 @@
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    [self.operationView dismiss];
+    
     [_albumHeaderContainerViewPathCover scrollViewWillBeginDragging:scrollView];
 }
 
@@ -139,9 +168,11 @@
     XHAlbumTableViewCell *albumTableViewCell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (!albumTableViewCell) {
         albumTableViewCell = [[XHAlbumTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        albumTableViewCell.delegate = self;
     }
     
     if (indexPath.row < self.dataSource.count) {
+        albumTableViewCell.indexPath = indexPath;
         albumTableViewCell.currentAlbum = self.dataSource[indexPath.row];
     }
     
