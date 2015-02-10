@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E4644DC01A89B60200F915F3 /* MessageDisplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F785EE291A63C0FC006E695B /* MessageDisplayKit.framework */; };
+		E4644DC11A89B60200F915F3 /* MessageDisplayKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F785EE291A63C0FC006E695B /* MessageDisplayKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E4B290091A888A5100CAC4C8 /* XHAlbumOperationView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4B290081A888A5100CAC4C8 /* XHAlbumOperationView.m */; };
 		F7122EE61A4D33E200734F17 /* XHAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = F7122EE31A4D33E200734F17 /* XHAlbum.m */; };
 		F7122EE71A4D33E200734F17 /* XHContact.m in Sources */ = {isa = PBXBuildFile; fileRef = F7122EE51A4D33E200734F17 /* XHContact.m */; };
-		F785EE2A1A63C0FC006E695B /* MessageDisplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F785EE291A63C0FC006E695B /* MessageDisplayKit.framework */; };
 		F7B9EB621A4D605B0072F81B /* AddGroupMemberBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7B9EB051A4D605B0072F81B /* AddGroupMemberBtn@2x.png */; };
 		F7B9EB631A4D605B0072F81B /* AddGroupMemberBtnHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7B9EB061A4D605B0072F81B /* AddGroupMemberBtnHL@2x.png */; };
 		F7B9EB641A4D605B0072F81B /* avator@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7B9EB071A4D605B0072F81B /* avator@2x.png */; };
@@ -372,6 +373,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				E4644DC11A89B60200F915F3 /* MessageDisplayKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -813,7 +815,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F785EE2A1A63C0FC006E695B /* MessageDisplayKit.framework in Frameworks */,
+				E4644DC01A89B60200F915F3 /* MessageDisplayKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
