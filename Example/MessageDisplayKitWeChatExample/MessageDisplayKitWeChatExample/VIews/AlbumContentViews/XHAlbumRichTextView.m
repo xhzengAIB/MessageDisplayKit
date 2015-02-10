@@ -59,6 +59,14 @@
     return richTextHeight;
 }
 
+#pragma mark - Actions
+
+- (void)commentButtonDidClicked:(UIButton *)sender {
+    if (self.commentButtonDidSelectedCompletion) {
+        self.commentButtonDidSelectedCompletion(sender);
+    }
+}
+
 #pragma mark - Propertys
 
 - (void)setDisplayAlbum:(XHAlbum *)displayAlbum {
@@ -80,7 +88,7 @@
 - (UIImageView *)avatarImageView {
     if (!_avatarImageView) {
         _avatarImageView = [[UIImageView alloc] initWithFrame:CGRectMake(kXHAlbumAvatarSpacing, kXHAlbumAvatarSpacing, kXHAvatarImageSize, kXHAvatarImageSize)];
-        _avatarImageView.image = [UIImage imageNamed:@"Avatar"];
+        _avatarImageView.image = [UIImage imageNamed:@"MeIcon"];
     }
     return _avatarImageView;
 }
@@ -135,6 +143,7 @@
         _commentButton = [[UIButton alloc] initWithFrame:CGRectZero];
         [_commentButton setImage:[UIImage imageNamed:@"AlbumOperateMore"] forState:UIControlStateNormal];
         [_commentButton setImage:[UIImage imageNamed:@"AlbumOperateMoreHL"] forState:UIControlStateHighlighted];
+        [_commentButton addTarget:self action:@selector(commentButtonDidClicked:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _commentButton;
 }

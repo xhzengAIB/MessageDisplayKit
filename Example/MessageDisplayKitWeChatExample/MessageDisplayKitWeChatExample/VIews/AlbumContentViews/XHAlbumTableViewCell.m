@@ -10,6 +10,8 @@
 
 #import "XHAlbumRichTextView.h"
 
+#import <MessageDisplayKit/XHMacro.h>
+
 @interface XHAlbumTableViewCell ()
 
 @property (nonatomic, strong) XHAlbumRichTextView *albumRichTextView;
@@ -35,6 +37,13 @@
 - (XHAlbumRichTextView *)albumRichTextView {
     if (!_albumRichTextView) {
         _albumRichTextView = [[XHAlbumRichTextView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth([[UIScreen mainScreen] bounds]), 40)];
+        WEAKSELF
+        _albumRichTextView.commentButtonDidSelectedCompletion = ^(UIButton *sender){
+            STRONGSELF
+            if ([strongSelf.delegate respondsToSelector:@selector(didShowOperationView:indexPath:)]) {
+                [strongSelf.delegate didShowOperationView:sender indexPath:strongSelf.indexPath];
+            }
+        };
     }
     return _albumRichTextView;
 }

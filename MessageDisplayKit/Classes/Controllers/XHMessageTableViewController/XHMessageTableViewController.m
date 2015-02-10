@@ -644,19 +644,23 @@ static CGPoint  delayOffset = {0.0};
                                      forKeyPath:@"contentSize"
                                         options:NSKeyValueObservingOptionNew
                                         context:nil];
+    
+    [self.messageInputView.inputTextView setEditable:YES];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    // 取消输入框
-    [self.messageInputView.inputTextView resignFirstResponder];
-    [self setEditing:NO animated:YES];
+    
+    if (self.textViewInputViewType != XHInputViewTypeNormal) {
+        [self layoutOtherMenuViewHiden:YES];
+    }
     
     // remove键盘通知或者手势
     [self.messageTableView disSetupPanGestureControlKeyboardHide:self.allowsPanToDismissKeyboard];
     
     // remove KVO
     [self.messageInputView.inputTextView removeObserver:self forKeyPath:@"contentSize"];
+    [self.messageInputView.inputTextView setEditable:NO];
 }
 
 - (void)viewDidLoad {

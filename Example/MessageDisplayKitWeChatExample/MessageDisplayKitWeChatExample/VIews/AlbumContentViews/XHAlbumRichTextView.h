@@ -11,6 +11,8 @@
 
 #import "XHAlbum.h"
 
+typedef void(^CommentButtonDidSelectedBlock)(UIButton *sender);
+
 @interface XHAlbumRichTextView : UIView
 
 @property (nonatomic, strong) NSFont *font;
@@ -21,6 +23,8 @@
 @property (nonatomic, strong) SETextView *richTextView;
 
 @property (nonatomic, strong) XHAlbum *displayAlbum;
+
+@property (nonatomic, copy) CommentButtonDidSelectedBlock commentButtonDidSelectedCompletion;
 
 + (CGFloat)calculateRichTextHeightWithAlbum:(XHAlbum *)currentAlbum;
 
