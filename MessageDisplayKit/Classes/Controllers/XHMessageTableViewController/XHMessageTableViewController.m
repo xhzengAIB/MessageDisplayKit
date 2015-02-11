@@ -1201,6 +1201,12 @@ static CGPoint  delayOffset = {0.0};
     
     id <XHMessageModel> message = [self.dataSource messageForRowAtIndexPath:indexPath];
     
+    // 如果需要定制复杂的业务UI，那么就实现该DataSource方法
+    if ([self.dataSource respondsToSelector:@selector(tableView:cellForRowAtIndexPath:targetMessage:)]) {
+        UITableViewCell *tableViewCell = [self.dataSource tableView:tableView cellForRowAtIndexPath:indexPath targetMessage:message];
+        return tableViewCell;
+    }
+    
     BOOL displayTimestamp = YES;
     if ([self.delegate respondsToSelector:@selector(shouldDisplayTimestampForRowAtIndexPath:)]) {
         displayTimestamp = [self.delegate shouldDisplayTimestampForRowAtIndexPath:indexPath];
@@ -1230,7 +1236,17 @@ static CGPoint  delayOffset = {0.0};
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     id <XHMessageModel> message = [self.dataSource messageForRowAtIndexPath:indexPath];
-    return [self calculateCellHeightWithMessage:message atIndexPath:indexPath];
+    
+    CGFloat calculateCellHeight = 0;
+    
+    if ([self.delegate respondsToSelector:@selector(tableView:heightForRowAtIndexPath:targetMessage:)]) {
+        calculateCellHeight = [self.delegate tableView:tableView heightForRowAtIndexPath:indexPath targetMessage:message];
+        return calculateCellHeight;
+    } else {
+        calculateCellHeight = [self calculateCellHeightWithMessage:message atIndexPath:indexPath];
+    }
+    
+    return calculateCellHeight;
 }
 
 #pragma mark - Key-value Observing
