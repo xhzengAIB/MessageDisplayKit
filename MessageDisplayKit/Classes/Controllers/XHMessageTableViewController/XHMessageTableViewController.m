@@ -510,6 +510,11 @@ static CGPoint  delayOffset = {0.0};
     if ([self respondsToSelector:@selector(automaticallyAdjustsScrollViewInsets)]) {
         self.automaticallyAdjustsScrollViewInsets = NO;
     }
+    
+    if ([self respondsToSelector:@selector(edgesForExtendedLayout)]) {
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+    }
+    
     // 默认设置用户滚动为NO
     _isUserScrolling = NO;
     
@@ -711,7 +716,6 @@ static CGPoint  delayOffset = {0.0};
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter.dateFormat = @"yy-MMMM-dd";
     recorderPath = [[NSString alloc] initWithFormat:@"%@/Documents/", NSHomeDirectory()];
-//    dateFormatter.dateFormat = @"hh-mm-ss";
     dateFormatter.dateFormat = @"yyyy-MM-dd-hh-mm-ss";
     recorderPath = [recorderPath stringByAppendingFormat:@"%@-MySound.caf", [dateFormatter stringFromDate:now]];
     return recorderPath;
@@ -804,7 +808,7 @@ static CGPoint  delayOffset = {0.0};
     UIEdgeInsets insets = UIEdgeInsetsZero;
     
     if ([self respondsToSelector:@selector(topLayoutGuide)]) {
-        insets.top = 64;
+        insets.top = self.topLayoutGuide.length;
     }
     
     insets.bottom = bottom;
@@ -1143,7 +1147,7 @@ static CGPoint  delayOffset = {0.0};
     if ([self.delegate respondsToSelector:@selector(shouldLoadMoreMessagesScrollToTop)]) {
         BOOL shouldLoadMoreMessages = [self.delegate shouldLoadMoreMessagesScrollToTop];
         if (shouldLoadMoreMessages) {
-            if (scrollView.contentOffset.y >=0 && scrollView.contentOffset.y <= 44) {
+            if (scrollView.contentOffset.y >= 0 && scrollView.contentOffset.y <= 44) {
                 if (!self.loadingMoreMessage) {
                     if ([self.delegate respondsToSelector:@selector(loadMoreMessagesScrollTotop)]) {
                         [self.delegate loadMoreMessagesScrollTotop];

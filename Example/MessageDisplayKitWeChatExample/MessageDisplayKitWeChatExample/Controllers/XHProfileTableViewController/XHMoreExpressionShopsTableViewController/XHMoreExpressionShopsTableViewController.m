@@ -23,7 +23,6 @@
 - (void)loadDataSource {
     self.isDataLoading = YES;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        sleep(1);
         NSMutableArray *dataSource = [NSMutableArray arrayWithArray:@[@"emotionShopOne", @"emotionShopOne", @"emotionShopOne", @"emotionShopOne", @"emotionShopTwo", @"emotionShopOther", @"emotionShopTwo", @"", @"emotionShopTwo", @"emotionShopOther", @"emotionShopOne", @"emotionShopOther", @"emotionShopTwo", @"emotionShopOne", @"emotionShopTwo"]];
 
         dispatch_async(dispatch_get_main_queue(), ^{
