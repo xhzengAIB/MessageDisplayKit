@@ -139,7 +139,7 @@ If you use this open source components in your project, please [Email us](mailto
 
 ## What app use this open source
 这里会列出所有使用该开源库的App列表。                     
-[leanchat-ios](https://github.com/leancloud/leanchat-ios)，LeanCloud 提供一站式后端云服务，从数据存储、实时聊天、消息推送到移动统计，涵盖应用开发的多方面后端需求。
+[leanchat-ios](https://github.com/leancloud/leanchat-ios)，LeanCloud 提供一站式后端云服务，从数据存储、实时聊天、消息推送到移动统计，涵盖应用开发的多方面后端需求。                       
 [家信-导购员](https://itunes.apple.com/cn/app/jia-xin-dao-gou-yuan/id918014453?mt=8)家信，专属家居导购员的商务沟通APP。家信app，将家居消费者与离他最近的导购员及时对接。消费者微信在线随时随地与导购员接触沟通；导购员家信在线时时处处为消费者提供各种资讯、商品、咨询、导购服务，辅助消费者决策，促进消费购买，提升服务体验。
 
 ## 使用到的第三方组件
