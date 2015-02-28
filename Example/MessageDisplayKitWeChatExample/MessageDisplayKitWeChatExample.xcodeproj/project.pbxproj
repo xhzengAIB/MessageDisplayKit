@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E4644DC01A89B60200F915F3 /* MessageDisplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F785EE291A63C0FC006E695B /* MessageDisplayKit.framework */; };
 		E4644DC11A89B60200F915F3 /* MessageDisplayKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F785EE291A63C0FC006E695B /* MessageDisplayKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E47E73711AA1982B00CF7C0B /* XHSendMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = E47E73701AA1982B00CF7C0B /* XHSendMessageView.m */; };
 		E4B290091A888A5100CAC4C8 /* XHAlbumOperationView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4B290081A888A5100CAC4C8 /* XHAlbumOperationView.m */; };
 		E4CC32281A8B552500D536E3 /* XHCustomCellDemoMessageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CC32271A8B552500D536E3 /* XHCustomCellDemoMessageTableViewController.m */; };
 		F7122EE61A4D33E200734F17 /* XHAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = F7122EE31A4D33E200734F17 /* XHAlbum.m */; };
@@ -382,6 +383,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E47E736F1AA1982B00CF7C0B /* XHSendMessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHSendMessageView.h; sourceTree = "<group>"; };
+		E47E73701AA1982B00CF7C0B /* XHSendMessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHSendMessageView.m; sourceTree = "<group>"; };
 		E4B290071A888A5100CAC4C8 /* XHAlbumOperationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHAlbumOperationView.h; sourceTree = "<group>"; };
 		E4B290081A888A5100CAC4C8 /* XHAlbumOperationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHAlbumOperationView.m; sourceTree = "<group>"; };
 		E4CC32261A8B552500D536E3 /* XHCustomCellDemoMessageTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHCustomCellDemoMessageTableViewController.h; sourceTree = "<group>"; };
@@ -1717,6 +1720,8 @@
 				F7D252C81A4D31F60015764B /* XHAlbumTableViewCell.m */,
 				E4B290071A888A5100CAC4C8 /* XHAlbumOperationView.h */,
 				E4B290081A888A5100CAC4C8 /* XHAlbumOperationView.m */,
+				E47E736F1AA1982B00CF7C0B /* XHSendMessageView.h */,
+				E47E73701AA1982B00CF7C0B /* XHSendMessageView.m */,
 			);
 			path = AlbumContentViews;
 			sourceTree = "<group>";
@@ -2225,6 +2230,7 @@
 				F7D253281A4D31F60015764B /* XHRefreshControl.m in Sources */,
 				F7D253291A4D31F60015764B /* XHRefreshView.m in Sources */,
 				E4CC32281A8B552500D536E3 /* XHCustomCellDemoMessageTableViewController.m in Sources */,
+				E47E73711AA1982B00CF7C0B /* XHSendMessageView.m in Sources */,
 				F7D253011A4D31F60015764B /* XHDemoWeChatMessageTableViewController.m in Sources */,
 				F7D2533F1A4D31F60015764B /* XHScanningView.m in Sources */,
 				F7D252F81A4D31F60015764B /* XHFoundationCommon.m in Sources */,

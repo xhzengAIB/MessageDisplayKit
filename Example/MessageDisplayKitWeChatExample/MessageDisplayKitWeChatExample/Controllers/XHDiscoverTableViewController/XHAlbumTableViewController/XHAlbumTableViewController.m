@@ -17,8 +17,9 @@
 #import "XHStoreManager.h"
 
 #import "XHAlbumOperationView.h"
+#import "XHSendMessageView.h"
 
-@interface XHAlbumTableViewController () <XHAlbumTableViewCellDelegate>
+@interface XHAlbumTableViewController () <XHAlbumTableViewCellDelegate, UITextFieldDelegate, XHSendMessageViewDelegate>
 
 /**
  *  视觉差的TableViewHeaderView
@@ -28,10 +29,45 @@
 @property (nonatomic, strong) XHPhotographyHelper *photographyHelper;
 
 @property (nonatomic, strong) XHAlbumOperationView *operationView;
+@property (nonatomic, strong) XHSendMessageView *sendMessageView;
 
 @end
 
 @implementation XHAlbumTableViewController
+
+#pragma mark - Life Cycle
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    self.title = NSLocalizedStringFromTable(@"Album", @"MessageDisplayKitString", @"朋友圈");
+    
+    [self.view addSubview:self.sendMessageView];
+    
+    [self configureBarbuttonItemStyle:XHBarbuttonItemStyleCamera action:^{
+        DLog(@"发送朋友圈");
+    }];
+    
+    self.tableView.tableHeaderView = self.albumHeaderContainerViewPathCover;
+    
+    [self configuraTableViewNormalSeparatorInset];
+    
+    [self loadDataSource];
+    
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (void)dealloc {
+    self.albumHeaderContainerViewPathCover = nil;
+}
 
 #pragma mark - Propertys
 
@@ -74,11 +110,31 @@
 - (XHAlbumOperationView *)operationView {
     if (!_operationView) {
         _operationView = [XHAlbumOperationView initailzerAlbumOperationView];
+        WEAKSELF
         _operationView.didSelectedOperationCompletion = ^(XHAlbumOperationType operationType) {
+            STRONGSELF
             NSLog(@"operationType : %ld", operationType);
+            switch (operationType) {
+                case XHAlbumOperationTypeLike:
+                    
+                    break;
+                case XHAlbumOperationTypeReply:
+                    [strongSelf.sendMessageView becomeFirstResponderForTextField];
+                    break;
+                default:
+                    break;
+            }
         };
     }
     return _operationView;
+}
+
+- (XHSendMessageView *)sendMessageView {
+    if (!_sendMessageView) {
+        _sendMessageView = [[XHSendMessageView alloc] initWithFrame:CGRectZero];
+        _sendMessageView.sendMessageDelegate = self;
+    }
+    return _sendMessageView;
 }
 
 #pragma mark - DataSource
@@ -96,35 +152,12 @@
     });
 }
 
-#pragma mark - Life Cycle
+#pragma mark - XHSendMessageView Delegate
 
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-}
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    self.title = NSLocalizedStringFromTable(@"Album", @"MessageDisplayKitString", @"朋友圈");
-    
-    [self configureBarbuttonItemStyle:XHBarbuttonItemStyleCamera action:^{
-        DLog(@"发送朋友圈");
-    }];
-    
-    self.tableView.tableHeaderView = self.albumHeaderContainerViewPathCover;
-    
-    [self configuraTableViewNormalSeparatorInset];
-    
-    [self loadDataSource];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (void)dealloc {
-    self.albumHeaderContainerViewPathCover = nil;
+- (void)didSendMessage:(NSString *)message albumInputView:(XHSendMessageView *)sendMessageView {
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.8 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [sendMessageView finishSendMessage];
+    });
 }
 
 #pragma mark - XHAlbumTableViewCellDelegate
@@ -156,6 +189,8 @@
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
     [self.operationView dismiss];
+    
+    [self.sendMessageView resignFirstResponderForInputTextFields];
     
     [_albumHeaderContainerViewPathCover scrollViewWillBeginDragging:scrollView];
 }
