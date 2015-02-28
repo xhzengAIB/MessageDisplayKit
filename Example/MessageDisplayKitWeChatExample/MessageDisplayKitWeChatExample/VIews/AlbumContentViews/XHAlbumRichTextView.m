@@ -14,6 +14,8 @@
 
 #import "XHImageViewer.h"
 
+#import "XHAlbumLikesCommentsView.h"
+
 #define kXHPhotoCollectionViewCellIdentifier @"XHPhotoCollectionViewCellIdentifier"
 
 @interface XHAlbumRichTextView () <UICollectionViewDelegate, UICollectionViewDataSource>
@@ -25,6 +27,8 @@
 
 @property (nonatomic, strong) UILabel *timestampLabel;
 @property (nonatomic, strong) UIButton *commentButton;
+
+@property (nonatomic, strong) XHAlbumLikesCommentsView *albumLikesCommentsView;
 
 @end
 
@@ -55,6 +59,8 @@
     
     richTextHeight += kXHAlbumContentLineSpacing;
     richTextHeight += kXHAlbumCommentButtonHeight;
+    
+    richTextHeight += 40;
     
     return richTextHeight;
 }
@@ -148,6 +154,12 @@
     return _commentButton;
 }
 
+- (XHAlbumLikesCommentsView *)albumLikesCommentsView {
+    if (!_albumLikesCommentsView) {
+        _albumLikesCommentsView = [[XHAlbumLikesCommentsView alloc] initWithFrame:CGRectZero];
+    }
+    return _albumLikesCommentsView;
+}
 #pragma mark - Life Cycle
 
 - (void)setup {
@@ -164,6 +176,8 @@
     
     [self addSubview:self.timestampLabel];
     [self addSubview:self.commentButton];
+    
+    [self addSubview:self.albumLikesCommentsView];
 }
 
 - (id)initWithFrame:(CGRect)frame {
@@ -199,7 +213,7 @@
     self.sharePhotoCollectionView.frame = sharePhotoCollectionViewFrame;
     
     CGRect commentButtonFrame = self.commentButton.frame;
-    commentButtonFrame.origin = CGPointMake(CGRectGetWidth(self.bounds) - kXHAlbumAvatarSpacing - kXHAlbumCommentButtonWidth, CGRectGetMaxY(sharePhotoCollectionViewFrame) + kXHAlbumContentLineSpacing);
+    commentButtonFrame.origin = CGPointMake(CGRectGetMaxX(richTextViewFrame) - kXHAlbumCommentButtonWidth, CGRectGetMaxY(sharePhotoCollectionViewFrame) + kXHAlbumContentLineSpacing);
     commentButtonFrame.size = CGSizeMake(kXHAlbumCommentButtonWidth, kXHAlbumCommentButtonHeight);
     self.commentButton.frame = commentButtonFrame;
     
@@ -208,8 +222,11 @@
     timestampLabelFrame.size = CGSizeMake(CGRectGetWidth(self.bounds) - kXHAlbumAvatarSpacing * 3 - kXHAvatarImageSize - kXHAlbumCommentButtonWidth, CGRectGetHeight(commentButtonFrame));
     self.timestampLabel.frame = timestampLabelFrame;
     
+    CGRect likesCommentsViewFrame = CGRectMake(CGRectGetMinX(richTextViewFrame), CGRectGetMaxY(timestampLabelFrame), CGRectGetWidth(richTextViewFrame), 40);
+    self.albumLikesCommentsView.frame = likesCommentsViewFrame;
+    
     CGRect frame = self.frame;
-    frame.size.height = CGRectGetMaxY(commentButtonFrame);
+    frame.size.height = CGRectGetMaxY(likesCommentsViewFrame);
     self.frame = frame;
 }
 
