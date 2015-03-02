@@ -8,7 +8,77 @@
 
 #import "XHAlbumLikesCommentsView.h"
 
-@interface XHAlbumLikesCommentsView ()
+@interface XHAlbumCommentTableViewCell : UITableViewCell
+
+@property (nonatomic, strong) UILabel *userNameLabel;
+
+@property (nonatomic, strong) UILabel *commentLabel;
+
+@property (nonatomic, strong) id item;
+
+@property (nonatomic, strong) NSIndexPath *indexPath;
+
+- (void)setupItem:(id)item atIndexPath:(NSIndexPath *)indexPath;
+
+@end
+
+@implementation XHAlbumCommentTableViewCell
+
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self) {
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
+        self.backgroundColor = [UIColor clearColor];
+        self.contentView.backgroundColor = [UIColor clearColor];
+        
+        [self.contentView addSubview:self.userNameLabel];
+        [self.contentView addSubview:self.commentLabel];
+    }
+    return self;
+}
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    
+    CGRect userNameLabelFrame = self.userNameLabel.frame;
+    
+    CGRect commentLabelFrame = self.commentLabel.frame;
+    commentLabelFrame.origin.x = CGRectGetMaxX(userNameLabelFrame);
+    commentLabelFrame.size = CGSizeMake(100, 16);
+    self.commentLabel.frame = commentLabelFrame;
+}
+
+- (void)setupItem:(id)item atIndexPath:(NSIndexPath *)indexPath {
+    self.item = item;
+    self.indexPath = indexPath;
+    
+    self.userNameLabel.text = @"Jack";
+    self.commentLabel.text = [NSString stringWithFormat:@": %@", item];
+}
+
+#pragma mark - Propertys
+
+- (UILabel *)userNameLabel {
+    if (!_userNameLabel) {
+        _userNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(4, 0, 22, 16)];
+        _userNameLabel.textColor = [UIColor blueColor];
+        _userNameLabel.font = [UIFont systemFontOfSize:10];
+    }
+    return _userNameLabel;
+}
+
+- (UILabel *)commentLabel {
+    if (!_commentLabel) {
+        _commentLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+        _commentLabel.textColor = [UIColor blackColor];
+        _commentLabel.font = [UIFont systemFontOfSize:10];
+    }
+    return _commentLabel;
+}
+
+@end
+
+@interface XHAlbumLikesCommentsView () <UITableViewDataSource>
 
 @property (nonatomic, strong) UIImageView *backgroundImageView;
 
@@ -35,17 +105,39 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    CGRect likeIconImageViewFrame = self.likeIconImageView.frame;
-    likeIconImageViewFrame.origin = CGPointMake(5, 7);
-    self.likeContainerView.frame = likeIconImageViewFrame;
+
+}
+
+- (void)updateUserInterface {
+    BOOL shouldShowLike = self.likes.count > 0;
+    BOOL shouldShowComment = self.comments.count > 0;
     
-    CGRect likeContainerViewFrame = CGRectMake(0, 4, CGRectGetWidth(self.bounds), 20);
-    self.likeContainerView.frame = likeContainerViewFrame;
+    self.likeContainerView.hidden = !shouldShowLike;
+    self.commmentTableView.hidden = !shouldShowComment;
     
-    CGRect commentTableViewFrame = self.commmentTableView.frame;
-    commentTableViewFrame.size.height = 20;
-    commentTableViewFrame.origin.y = CGRectGetMaxY(likeContainerViewFrame);
-    self.commmentTableView.frame = commentTableViewFrame;
+    if (!shouldShowLike && !shouldShowComment) {
+        self.frame = CGRectZero;
+        return;
+    }
+    
+    CGRect likeContainerViewFrame = CGRectZero;
+    
+    if (shouldShowLike) {
+        likeContainerViewFrame = CGRectMake(0, 4, CGRectGetWidth(self.bounds), 14);
+        self.likeContainerView.frame = likeContainerViewFrame;
+    }
+    
+    CGRect commentTableViewFrame = CGRectZero;
+    if (shouldShowComment) {
+        commentTableViewFrame = self.commmentTableView.frame;
+        commentTableViewFrame.origin.y = CGRectGetMaxY(likeContainerViewFrame);
+        commentTableViewFrame.size.height = self.comments.count * 16;
+        self.commmentTableView.frame = commentTableViewFrame;
+    }
+    
+    CGRect frame = self.frame;
+    frame.size.height = CGRectGetMaxY((shouldShowComment ? commentTableViewFrame : likeContainerViewFrame));
+    self.frame = frame;
 }
 
 #pragma mark - Propertys
@@ -69,6 +161,9 @@
 - (UIImageView *)likeIconImageView {
     if (!_likeIconImageView) {
         _likeIconImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Album_like_icon"]];
+        CGRect likeIconImageViewFrame = _likeIconImageView.frame;
+        likeIconImageViewFrame.origin = CGPointMake(5, 0);
+        _likeIconImageView.frame = likeIconImageViewFrame;
     }
     return _likeIconImageView;
 }
@@ -76,18 +171,49 @@
 - (UITableView *)commmentTableView {
     if (!_commmentTableView) {
         _commmentTableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
+        _commmentTableView.separatorColor = [UIColor clearColor];
+        _commmentTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        [_commmentTableView registerClass:[XHAlbumCommentTableViewCell class] forCellReuseIdentifier:@"CellIdentifier"];
+        _commmentTableView.dataSource = self;
         _commmentTableView.scrollEnabled = NO;
         _commmentTableView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-        _commmentTableView.backgroundColor = [UIColor redColor];
-        _commmentTableView.rowHeight = 8;
+        _commmentTableView.backgroundColor = [UIColor clearColor];
+        _commmentTableView.rowHeight = 16;
     }
     return _commmentTableView;
 }
 
 #pragma mark - 公开方法
 
+- (void)reloadLikes {
+    CGRect likeLabelFrame = CGRectZero;
+    for (int i = 0; i < self.likes.count; i ++) {
+        likeLabelFrame = CGRectMake(CGRectGetMaxX(self.likeIconImageView.frame) + i * 30 + 5, CGRectGetMinY(self.likeIconImageView.frame), 30, CGRectGetHeight(self.likeIconImageView.bounds));
+        UILabel *likeLabel = [[UILabel alloc] initWithFrame:likeLabelFrame];
+        likeLabel.font = [UIFont systemFontOfSize:10];
+        likeLabel.textColor = [UIColor blueColor];
+        likeLabel.text = [NSString stringWithFormat:@"%@%@", self.likes[i], (i == self.likes.count - 1) ? @"" : @","];
+        [self.likeContainerView addSubview:likeLabel];
+    }
+}
+
 - (void)reloadData {
+    [self.commmentTableView reloadData];
+    [self reloadLikes];
+    [self updateUserInterface];
+}
+
+#pragma mark - UITableViewDataSource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.comments.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    XHAlbumCommentTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CellIdentifier" forIndexPath:indexPath];
+    [cell setupItem:self.comments[indexPath.row] atIndexPath:indexPath];
     
+    return cell;
 }
 
 @end

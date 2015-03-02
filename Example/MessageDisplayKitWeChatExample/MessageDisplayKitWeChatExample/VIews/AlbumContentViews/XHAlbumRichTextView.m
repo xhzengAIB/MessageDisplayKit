@@ -60,7 +60,9 @@
     richTextHeight += kXHAlbumContentLineSpacing;
     richTextHeight += kXHAlbumCommentButtonHeight;
     
-    richTextHeight += 40;
+    richTextHeight += 4;
+    richTextHeight += 14;
+    richTextHeight += currentAlbum.albumShareComments.count * 16;
     
     return richTextHeight;
 }
@@ -87,6 +89,10 @@
     self.timestampLabel.text = @"3小时前";
     
     [self.sharePhotoCollectionView reloadData];
+    
+    self.albumLikesCommentsView.likes = displayAlbum.albumShareLikes;
+    self.albumLikesCommentsView.comments = displayAlbum.albumShareComments;
+    [self.albumLikesCommentsView reloadData];
     
     [self setNeedsLayout];
 }
@@ -222,11 +228,14 @@
     timestampLabelFrame.size = CGSizeMake(CGRectGetWidth(self.bounds) - kXHAlbumAvatarSpacing * 3 - kXHAvatarImageSize - kXHAlbumCommentButtonWidth, CGRectGetHeight(commentButtonFrame));
     self.timestampLabel.frame = timestampLabelFrame;
     
-    CGRect likesCommentsViewFrame = CGRectMake(CGRectGetMinX(richTextViewFrame), CGRectGetMaxY(timestampLabelFrame), CGRectGetWidth(richTextViewFrame), 40);
+    // 这里出现延迟布局的情况，所以就不能正常排版
+    CGRect likesCommentsViewFrame = self.albumLikesCommentsView.frame;
+    likesCommentsViewFrame.origin = CGPointMake(CGRectGetMinX(richTextViewFrame), CGRectGetMaxY(timestampLabelFrame));
+    likesCommentsViewFrame.size.width = CGRectGetWidth(richTextViewFrame);
     self.albumLikesCommentsView.frame = likesCommentsViewFrame;
     
     CGRect frame = self.frame;
-    frame.size.height = CGRectGetMaxY(likesCommentsViewFrame);
+    frame.size.height = CGRectGetMaxY(likesCommentsViewFrame) + kXHAlbumAvatarSpacing;
     self.frame = frame;
 }
 
