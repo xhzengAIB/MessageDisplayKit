@@ -8,6 +8,8 @@
 
 #import "XHAlbumLikesCommentsView.h"
 
+#define kXHAlbumLikeLabelBaseTag 100
+
 @interface XHAlbumCommentTableViewCell : UITableViewCell
 
 @property (nonatomic, strong) UILabel *userNameLabel;
@@ -96,6 +98,7 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+        self.clipsToBounds = YES;
         [self addSubview:self.backgroundImageView];
         [self addSubview:self.likeContainerView];
         [self addSubview:self.commmentTableView];
@@ -186,10 +189,20 @@
 #pragma mark - 公开方法
 
 - (void)reloadLikes {
+    for (UIView *view in self.likeContainerView.subviews) {
+        if ([view isKindOfClass:[UILabel class]]) {
+            view.hidden = YES;
+        }
+    }
     CGRect likeLabelFrame = CGRectZero;
     for (int i = 0; i < self.likes.count; i ++) {
         likeLabelFrame = CGRectMake(CGRectGetMaxX(self.likeIconImageView.frame) + i * 30 + 5, CGRectGetMinY(self.likeIconImageView.frame), 30, CGRectGetHeight(self.likeIconImageView.bounds));
-        UILabel *likeLabel = [[UILabel alloc] initWithFrame:likeLabelFrame];
+        
+        UILabel *likeLabel = (UILabel *)[self.likeContainerView viewWithTag:kXHAlbumLikeLabelBaseTag + i];
+        if (!likeLabel) {
+            likeLabel = [[UILabel alloc] initWithFrame:likeLabelFrame];
+        }
+        likeLabel.hidden = NO;
         likeLabel.font = [UIFont systemFontOfSize:10];
         likeLabel.textColor = [UIColor blueColor];
         likeLabel.text = [NSString stringWithFormat:@"%@%@", self.likes[i], (i == self.likes.count - 1) ? @"" : @","];

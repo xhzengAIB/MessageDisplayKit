@@ -30,6 +30,7 @@
 
 @property (nonatomic, strong) XHAlbumOperationView *operationView;
 @property (nonatomic, strong) XHSendMessageView *sendMessageView;
+@property (nonatomic, strong) NSIndexPath *selectedIndexPath;
 
 @end
 
@@ -116,7 +117,7 @@
             NSLog(@"operationType : %ld", operationType);
             switch (operationType) {
                 case XHAlbumOperationTypeLike:
-                    
+                    [self addLike];
                     break;
                 case XHAlbumOperationTypeReply:
                     [strongSelf.sendMessageView becomeFirstResponderForTextField];
@@ -154,10 +155,26 @@
 
 #pragma mark - XHSendMessageView Delegate
 
+- (void)addLike {
+    if (self.selectedIndexPath && self.selectedIndexPath.row < self.dataSource.count) {
+        XHAlbum *updateCurrentAlbum = self.dataSource[self.selectedIndexPath.row];
+        NSMutableArray *likes = [[NSMutableArray alloc] initWithArray:updateCurrentAlbum.albumShareLikes];
+        [likes insertObject:@"仔仔" atIndex:0];
+        updateCurrentAlbum.albumShareLikes = likes;
+        [self.tableView reloadRowsAtIndexPaths:@[self.selectedIndexPath] withRowAnimation:UITableViewRowAnimationNone];
+    }
+}
+
 - (void)didSendMessage:(NSString *)message albumInputView:(XHSendMessageView *)sendMessageView {
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.8 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    if (self.selectedIndexPath && self.selectedIndexPath.row < self.dataSource.count) {
+        XHAlbum *updateCurrentAlbum = self.dataSource[self.selectedIndexPath.row];
+        NSMutableArray *comments = [[NSMutableArray alloc] initWithArray:updateCurrentAlbum.albumShareComments];
+        [comments insertObject:message atIndex:0];
+        updateCurrentAlbum.albumShareComments = comments;
+        [self.tableView reloadRowsAtIndexPaths:@[self.selectedIndexPath] withRowAnimation:UITableViewRowAnimationNone];
+        
         [sendMessageView finishSendMessage];
-    });
+    }
 }
 
 #pragma mark - XHAlbumTableViewCellDelegate
@@ -170,6 +187,7 @@
         [self.operationView dismiss];
         return;
     }
+    self.selectedIndexPath = indexPath;
     [self.operationView showAtView:self.tableView rect:targetRect];
 }
 
@@ -191,6 +209,8 @@
     [self.operationView dismiss];
     
     [self.sendMessageView resignFirstResponderForInputTextFields];
+    
+    self.selectedIndexPath = nil;
     
     [_albumHeaderContainerViewPathCover scrollViewWillBeginDragging:scrollView];
 }
