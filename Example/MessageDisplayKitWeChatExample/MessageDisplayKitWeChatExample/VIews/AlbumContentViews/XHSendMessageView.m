@@ -79,7 +79,7 @@
 - (UIView *)customInputAccessoryView {
     if (!_customInputAccessoryView) {
         _customInputAccessoryView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth([[UIScreen mainScreen] bounds]), 44)];
-        _customInputAccessoryView.backgroundColor = [UIColor whiteColor];
+        _customInputAccessoryView.backgroundColor = [UIColor colorWithWhite:0.910 alpha:1.000];
         [_customInputAccessoryView addSubview:self.inputTextField];
     }
     return _customInputAccessoryView;
