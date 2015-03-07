@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -12,11 +13,9 @@
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ld1-oS-IXB">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DDT-ci-h3H">
                     <rect key="frame" x="252" y="8" width="63" height="28"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="63" id="dnM-dA-aeW"/>
                         <constraint firstAttribute="height" constant="28" id="mPv-6D-dWP"/>
@@ -33,35 +32,42 @@
                         <action selector="confirmBtnPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="9mN-Rz-d4C"/>
                     </connections>
                 </button>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="87r-EQ-cZu">
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="T7U-Cx-h0y">
                     <rect key="frame" x="0.0" y="5" width="242" height="36"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <connections>
-                        <outlet property="dataSource" destination="iN0-l3-epB" id="niJ-FK-SPG"/>
-                        <outlet property="delegate" destination="iN0-l3-epB" id="o06-OV-ob5"/>
-                    </connections>
-                </tableView>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cRs-8P-JXS">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="DDT-ci-h3H" firstAttribute="leading" secondItem="87r-EQ-cZu" secondAttribute="trailing" constant="10" id="2ES-iM-D6S"/>
                 <constraint firstAttribute="trailing" secondItem="DDT-ci-h3H" secondAttribute="trailing" constant="5" id="4Ih-RX-NKl"/>
                 <constraint firstAttribute="bottom" secondItem="Ld1-oS-IXB" secondAttribute="bottom" id="Kq0-k5-y9s"/>
                 <constraint firstItem="Ld1-oS-IXB" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="O1C-cj-d4c"/>
-                <constraint firstItem="87r-EQ-cZu" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="cPc-p9-5MX"/>
+                <constraint firstItem="DDT-ci-h3H" firstAttribute="leading" secondItem="T7U-Cx-h0y" secondAttribute="trailing" constant="10" id="QTc-rS-Go7"/>
                 <constraint firstItem="Ld1-oS-IXB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="cgi-4p-9YE"/>
+                <constraint firstAttribute="bottom" secondItem="T7U-Cx-h0y" secondAttribute="bottom" constant="3" id="dcD-za-3Qp"/>
                 <constraint firstAttribute="centerY" secondItem="DDT-ci-h3H" secondAttribute="centerY" id="iFz-kd-nob"/>
-                <constraint firstAttribute="bottom" secondItem="87r-EQ-cZu" secondAttribute="bottom" constant="3" id="lg0-yI-YU0"/>
+                <constraint firstItem="T7U-Cx-h0y" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="pOY-mi-7Gq"/>
                 <constraint firstAttribute="trailing" secondItem="Ld1-oS-IXB" secondAttribute="trailing" id="rEU-hw-Nbu"/>
-                <constraint firstItem="87r-EQ-cZu" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="zsX-ur-d6y"/>
+                <constraint firstItem="T7U-Cx-h0y" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="teQ-zB-Isf"/>
             </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="bkgImageView" destination="Ld1-oS-IXB" id="MJv-cW-I0P"/>
+                <outlet property="collectionView" destination="T7U-Cx-h0y" id="I4f-LI-cHz"/>
                 <outlet property="confirmBtn" destination="DDT-ci-h3H" id="gFB-bH-MdA"/>
-                <outlet property="tableView" destination="87r-EQ-cZu" id="o1i-o7-6gq"/>
             </connections>
         </view>
     </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
 </document>
