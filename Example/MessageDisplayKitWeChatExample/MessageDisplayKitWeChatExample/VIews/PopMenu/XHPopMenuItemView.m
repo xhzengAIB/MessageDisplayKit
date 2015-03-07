@@ -51,12 +51,19 @@
     if (self) {
         self.backgroundColor = [UIColor clearColor];
         self.textLabel.textColor = [UIColor whiteColor];
-        self.textLabel.font = [UIFont systemFontOfSize:16];
+        self.textLabel.font = [UIFont systemFontOfSize:12];
         
         self.selectedBackgroundView = self.menuSelectedBackgroundView;
         [self.contentView addSubview:self.separatorLineImageView];
     }
     return self;
+}
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    CGRect textLabelFrame = self.textLabel.frame;
+    textLabelFrame.origin.x = CGRectGetMaxX(self.imageView.frame) + 5;
+    self.textLabel.frame = textLabelFrame;
 }
 
 @end

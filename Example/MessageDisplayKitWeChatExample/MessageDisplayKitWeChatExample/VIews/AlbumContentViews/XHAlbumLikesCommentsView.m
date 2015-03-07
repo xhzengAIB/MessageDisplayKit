@@ -133,7 +133,7 @@
     CGRect commentTableViewFrame = CGRectZero;
     if (shouldShowComment) {
         commentTableViewFrame = self.commmentTableView.frame;
-        commentTableViewFrame.origin.y = CGRectGetMaxY(likeContainerViewFrame);
+        commentTableViewFrame.origin.y = CGRectGetMaxY(likeContainerViewFrame) + (shouldShowLike ? 0 : 4);
         commentTableViewFrame.size.height = self.comments.count * 16;
         self.commmentTableView.frame = commentTableViewFrame;
     }
