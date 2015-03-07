@@ -14,16 +14,25 @@
 #import <MessageDisplayKit/UIView+XHRemoteImage.h>
 
 
-@interface MultiSelectedPanel()<UITableViewDataSource,UITabBarControllerDelegate>
+@interface MultiSelectedPanel()<UITabBarControllerDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,
+                                UICollectionViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *bkgImageView;
 @property (weak, nonatomic) IBOutlet UIButton *confirmBtn;
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+
+//@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic)IBOutlet UICollectionView  *collectionView;
 
 
 @end
 
 @implementation MultiSelectedPanel
+
+
+
+
+
 
 + (instancetype)instanceFromNib
 {
@@ -52,9 +61,14 @@
     
     self.bkgImageView.image = [[UIImage imageNamed:@"MultiSelectedPanelBkg"]resizableImageWithCapInsets:UIEdgeInsetsMake(5, 5, 5, 5)];
     
-    self.tableView.scrollsToTop = NO;
-    self.tableView.showsVerticalScrollIndicator = NO;
-    self.tableView.transform = CGAffineTransformMakeRotation(M_PI*1.5);
+    
+    
+    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"MultiSelectedPanelTableViewCell"];
+    self.collectionView.showsHorizontalScrollIndicator =  NO;
+    self.collectionView.dataSource = self;
+    self.collectionView.delegate =  self;
+    
+
     
     [self.confirmBtn setTitle:@"确认(0)" forState:UIControlStateNormal];
     self.confirmBtn.enabled = NO;
@@ -80,73 +94,81 @@
 {
     _selectedItems = selectedItems;
     
-    [self.tableView reloadData];
+    [self.collectionView reloadData];
     
     [self updateConfirmButton];
 }
 
-#pragma mark - tableview datasource
+#pragma mark - UICollectionViewDataSource
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     return self.selectedItems.count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (UICollectionViewCell*)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"MultiSelectedPanelTableViewCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (!cell) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        cell.transform = CGAffineTransformMakeRotation(M_PI*0.5f);
-        
-        //添加一个imageView
-        UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(2.0f, 0.0f, 36.0f, 36.0f)];
-        imageView.tag = 999;
-        imageView.layer.cornerRadius = 4.0f;
-        imageView.clipsToBounds = YES;
-        imageView.contentMode = UIViewContentModeScaleAspectFill;
-        [cell.contentView addSubview:imageView];
-    }
+
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    UIImageView *imageView = (UIImageView*)[cell.contentView viewWithTag:999];
+    
+    
+    //添加一个imageView
+    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(2.0f, 0.0f, 36.0f, 36.0f)];
+    imageView.tag = 999;
+    imageView.layer.cornerRadius = 4.0f;
+    imageView.clipsToBounds = YES;
+    imageView.contentMode = UIViewContentModeScaleAspectFill;
+    [cell.contentView addSubview:imageView];
+ 
+    
+//    UIImageView *imageView = (UIImageView*)[cell.contentView viewWithTag:999];
     
     MultiSelectItem *item = self.selectedItems[indexPath.row];
-    
-    imageView.image = nil;
     [imageView setImageWithURL:item.imageURL];
     
     return cell;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+
+
+#pragma mark --     UICollectionViewDelegateFlowLayout
+-(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 40.0f;
+    return CGSizeMake(36.0f, 36.0f);
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+#pragma mark  -- UICollectionViewDelegate
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    [collectionView deselectItemAtIndexPath:indexPath animated:YES];
     
     MultiSelectItem *item = self.selectedItems[indexPath.row];
     //删除某元素,实际上是告诉delegate去删除
-    if (self.delegate&&[self.delegate respondsToSelector:@selector(willDeleteRowWithItem:withMultiSelectedPanel:)]) {
+    if (self.delegate&&[self.delegate respondsToSelector:@selector(willDeleteRowWithItem:withMultiSelectedPanel:)]) { //委托给控制器   删除列表中item
         [self.delegate willDeleteRowWithItem:item withMultiSelectedPanel:self];
     }
+    
+    
     //确定没了删掉
     if ([self.selectedItems indexOfObject:item]==NSNotFound) {
         [self updateConfirmButton];
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        
+        [collectionView deleteItemsAtIndexPaths:@[indexPath]];
+        //[tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }
+    
 }
+
 
 #pragma mark - out call
 - (void)didDeleteSelectedIndex:(NSUInteger)selectedIndex
 {
     [self updateConfirmButton];
     //执行删除操作
-    [self.tableView deleteRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:selectedIndex inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
-    
+    //[self.tableView deleteRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:selectedIndex inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
+    [self.collectionView deleteItemsAtIndexPaths:@[[NSIndexPath indexPathForRow:selectedIndex inSection:0]]];
 }
 
 - (void)didAddSelectedIndex:(NSUInteger)selectedIndex
@@ -156,8 +178,11 @@
         [self updateConfirmButton];
         //执行插入操作
         NSIndexPath *indexPath = [NSIndexPath indexPathForRow:selectedIndex inSection:0];
-        [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-        [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+        //[self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        [self.collectionView insertItemsAtIndexPaths:@[indexPath]];
+        [self.collectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionRight animated:YES];
+        
+        //[self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
     }
 }
 @end
