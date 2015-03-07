@@ -14,7 +14,7 @@
 
 
 
-#define kXHSelectedButtonSpacing (kIsiPad ? 80 : 30)
+#define kXHSelectedButtonSpacing (kIsiPad ? 80 : 40)
 
 @interface XHShakeViewController () {
     SystemSoundID shakingSoundID;
@@ -28,6 +28,7 @@
 
 @property (nonatomic, strong) UIButton *peopleButton;
 @property (nonatomic, strong) UIButton *musicButton;
+@property (nonatomic, strong) UIButton *tvButton;
 
 @property (nonatomic, strong) UIImageView *shakeBackgroundImageView;
 
@@ -42,6 +43,7 @@
 - (void)buttonClicked:(UIButton *)sender {
     self.peopleButton.selected = (sender == self.peopleButton);
     self.musicButton.selected = (sender == self.musicButton);
+    self.tvButton.selected = (sender == self.tvButton);
 }
 
 - (void)shaking {
@@ -127,7 +129,15 @@
 
 - (UIButton *)peopleButton {
     if (!_peopleButton) {
-        _peopleButton = [[UIButton alloc] initWithFrame:CGRectMake(CGRectGetMidX(_shakeDownImageView.bounds) - 38 - kXHSelectedButtonSpacing, CGRectGetHeight(self.view.bounds) - 150, 38, 34)];
+        CGFloat width = 38;
+        _peopleButton = [[UIButton alloc] initWithFrame:CGRectMake(
+                                                                   CGRectGetWidth(self.view.bounds) -
+                                                                   (2 *
+                                                                    (2 * kXHSelectedButtonSpacing + 10 + width)
+                                                                    ),
+                                                                   CGRectGetHeight(self.view.bounds) - 130,
+                                                                   width,
+                                                                   54)];
         [_peopleButton setImage:[UIImage imageNamed:@"Shake_icon_people"] forState:UIControlStateNormal];
         [_peopleButton setImage:[UIImage imageNamed:@"Shake_icon_peopleHL"] forState:UIControlStateSelected];
         _peopleButton.titleLabel.font = [UIFont systemFontOfSize:12];
@@ -143,7 +153,7 @@
 
 - (UIButton *)musicButton {
     if (!_musicButton) {
-        _musicButton = [[UIButton alloc] initWithFrame:CGRectMake(CGRectGetMidX(self.shakeDownImageView.bounds) + kXHSelectedButtonSpacing, self.peopleButton.frame.origin.y, CGRectGetWidth(self.peopleButton.frame), CGRectGetHeight(self.peopleButton.frame))];
+        _musicButton = [[UIButton alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.peopleButton.frame) + kXHSelectedButtonSpacing, self.peopleButton.frame.origin.y, CGRectGetWidth(self.peopleButton.frame), CGRectGetHeight(self.peopleButton.frame))];
         [_musicButton setImage:[UIImage imageNamed:@"Shake_icon_music"] forState:UIControlStateNormal];
         [_musicButton setImage:[UIImage imageNamed:@"Shake_icon_musicHL"] forState:UIControlStateSelected];
         [_musicButton setTitle:@"歌曲" forState:UIControlStateNormal];
@@ -154,6 +164,21 @@
         [_musicButton setTitlePositionWithType:XHButtonTitlePostionTypeBottom];
     }
     return _musicButton;
+}
+
+- (UIButton *)tvButton {
+    if (!_tvButton) {
+        _tvButton = [[UIButton alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.musicButton.frame) + kXHSelectedButtonSpacing, self.peopleButton.frame.origin.y, CGRectGetWidth(self.peopleButton.frame), CGRectGetHeight(self.peopleButton.frame))];
+        [_tvButton setImage:[UIImage imageNamed:@"Shake_icon_music"] forState:UIControlStateNormal];
+        [_tvButton setImage:[UIImage imageNamed:@"Shake_icon_musicHL"] forState:UIControlStateSelected];
+        [_tvButton setTitle:@"电视" forState:UIControlStateNormal];
+        _tvButton.titleLabel.font = [UIFont systemFontOfSize:12];
+        [_tvButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [_tvButton addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
+        
+        [_tvButton setTitlePositionWithType:XHButtonTitlePostionTypeBottom];
+    }
+    return _tvButton;
 }
 
 #pragma mark - Life Cycle
@@ -183,6 +208,7 @@
     
     [self.view addSubview:self.peopleButton];
     [self.view addSubview:self.musicButton];
+    [self.view addSubview:self.tvButton];
     
     //想摇你的手机嘛？就写在这，然后，然后，没有然后了
     [UIApplication sharedApplication].applicationSupportsShakeToEdit = YES;
