@@ -12,19 +12,6 @@ It's ok if you don't understand how the code works. Most code has comments, whic
 ## 注意，现在已经替换了这个插件的编译，使用Xcode6或者更高版本进行编译即可
 这里的方法已经失效（很多朋友说不能直接编译该项目的主要工程，其实原因很简单，只是没有打包静态库的插件，需要安装一个Xcode插件，点击以下链接[iOS-Universal-Framework](https://github.com/kstenerud/iOS-Universal-Framework)，安装方法很简单的，里面有教程，只要安装了该插件后，重启你的xcode，就可以开始编译了！）
 
-## 开源许可协议
-很多人和我说，你不知道什么是开源许可协议，其实我也不清楚他是不知道还是不想知道，作为一个开发者，不懂得尊重别人的成果，那你到底想怎样，你自己最清楚。                      
-说一件事吧！曾经我也这么做了，没尊重作者的成果，最终被人鄙视了一段时间，于是我删除了那个开源库，现在终于明白，尊重这个词，这对于别人来说是一个认可，我们不可以剥夺这份利益。
-网易新闻App的开发者很厚道，他们有做到这一份尊重，他们是这么做的：                          
-```objc
-UIWebView *librariesWebView = [[UIWebView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.163.com/special/newsclient/ios_libraries.html"]]; // 这里的URL是网易新闻所用的，大家可以点击打开，如果你没有服务器，那你敢直接写个开源库的主页URL嘛？
-[librariesWebView loadRequest:urlRequest];
-[self.view addSubview:librariesWebView];
-```
-我把代码都给上了，哪怕你复制都不愿意，那我就无语了。                                 
-如果您还不知道开源许可协议是怎样的，那你点击[这里](http://m.163.com/special/newsclient/ios_libraries.html)看看网易大神们的节操。                     
-
 ## 组件要求                                        Requirements
 
 * Xcode6 or later
@@ -158,8 +145,7 @@ If you use this open source components in your project, please [Email us](mailto
 谢谢[微信App](https://itunes.apple.com/cn/app/wei-xin/id414478124?mt=8)给予我鼓励，我参考了很多框架设计问题、也提供了许多素材，但是请网友不要直接使用素材，我不知道是否会引起侵权的问题，所以请自重，我这里只是模仿微信，而不是攻击。使用该开源库所导致的所有侵权关系与我无关，我只是提供学习机会。                                         
 
 ## 警告
-请不要拿该工程的所有资源文件用于商业使用，如果不遵守规则，而产生的法律责任，一律与我无关。代码按照上文描述的License 和 Notes来使用。                              
-该工程里面任何一个效果组件都不能擅自使用，如需使用，请告之于我。
+请不要拿该工程的微信图片资源文件用于商业使用，如果不遵守规则，而产生的法律责任，一律与我无关。代码按照上文描述的License来使用。                              
 
 ## Credits
 Thanks to [jessesquires](https://github.com/jessesquires) who created [JSMessagesViewController](https://github.com/jessesquires/MessagesTableViewController) on which my chat list UI work is based.                             
