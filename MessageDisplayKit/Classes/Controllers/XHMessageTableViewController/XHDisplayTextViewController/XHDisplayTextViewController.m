@@ -42,6 +42,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = NSLocalizedStringFromTable(@"TextDetail", @"MessageDisplayKitString", @"文本消息");
+    self.view.backgroundColor = [UIColor whiteColor];
 }
 
 - (void)didReceiveMemoryWarning {
