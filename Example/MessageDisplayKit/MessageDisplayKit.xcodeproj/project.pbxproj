@@ -87,8 +87,6 @@
 		F751C4721A4C3EDB00743ECB /* FLAnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C2E01A4C3EDB00743ECB /* FLAnimatedImage.m */; };
 		F751C4731A4C3EDB00743ECB /* FLAnimatedImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C2E11A4C3EDB00743ECB /* FLAnimatedImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F751C4741A4C3EDB00743ECB /* FLAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C2E21A4C3EDB00743ECB /* FLAnimatedImageView.m */; };
-		F751C48A1A4C3EDB00743ECB /* NSMutableAttributedString+Helper.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C2FD1A4C3EDB00743ECB /* NSMutableAttributedString+Helper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F751C48B1A4C3EDB00743ECB /* NSMutableAttributedString+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C2FE1A4C3EDB00743ECB /* NSMutableAttributedString+Helper.m */; };
 		F751C48C1A4C3EDB00743ECB /* SECompatibility.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C2FF1A4C3EDB00743ECB /* SECompatibility.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F751C48D1A4C3EDB00743ECB /* SECompatibility.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C3001A4C3EDB00743ECB /* SECompatibility.m */; };
 		F751C48E1A4C3EDB00743ECB /* SEConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C3011A4C3EDB00743ECB /* SEConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -336,8 +334,6 @@
 		F751C2E01A4C3EDB00743ECB /* FLAnimatedImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLAnimatedImage.m; sourceTree = "<group>"; };
 		F751C2E11A4C3EDB00743ECB /* FLAnimatedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLAnimatedImageView.h; sourceTree = "<group>"; };
 		F751C2E21A4C3EDB00743ECB /* FLAnimatedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLAnimatedImageView.m; sourceTree = "<group>"; };
-		F751C2FD1A4C3EDB00743ECB /* NSMutableAttributedString+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+Helper.h"; sourceTree = "<group>"; };
-		F751C2FE1A4C3EDB00743ECB /* NSMutableAttributedString+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+Helper.m"; sourceTree = "<group>"; };
 		F751C2FF1A4C3EDB00743ECB /* SECompatibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SECompatibility.h; sourceTree = "<group>"; };
 		F751C3001A4C3EDB00743ECB /* SECompatibility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SECompatibility.m; sourceTree = "<group>"; };
 		F751C3011A4C3EDB00743ECB /* SEConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SEConstants.h; sourceTree = "<group>"; };
@@ -828,8 +824,6 @@
 		F751C2FC1A4C3EDB00743ECB /* SECoreTextView */ = {
 			isa = PBXGroup;
 			children = (
-				F751C2FD1A4C3EDB00743ECB /* NSMutableAttributedString+Helper.h */,
-				F751C2FE1A4C3EDB00743ECB /* NSMutableAttributedString+Helper.m */,
 				F751C2FF1A4C3EDB00743ECB /* SECompatibility.h */,
 				F751C3001A4C3EDB00743ECB /* SECompatibility.m */,
 				F751C3011A4C3EDB00743ECB /* SEConstants.h */,
@@ -1107,7 +1101,6 @@
 				F751C46D1A4C3EDB00743ECB /* XHShareMenuItem.h in Headers */,
 				F751C48E1A4C3EDB00743ECB /* SEConstants.h in Headers */,
 				F751C4681A4C3EDB00743ECB /* XHEmotionManager.h in Headers */,
-				F751C48A1A4C3EDB00743ECB /* NSMutableAttributedString+Helper.h in Headers */,
 				F751C4A01A4C3EDB00743ECB /* SETextMagnifierCaret.h in Headers */,
 				F751C4DA1A4C3EDB00743ECB /* XHMessageTableViewCell.h in Headers */,
 				F751C45B1A4C3EDB00743ECB /* XHVideoOutputSampleBufferFactory.h in Headers */,
@@ -1323,7 +1316,6 @@
 				F751C4741A4C3EDB00743ECB /* FLAnimatedImageView.m in Sources */,
 				F751C4E91A4C3EDB00743ECB /* XHEmotionSectionBar.m in Sources */,
 				F751C48D1A4C3EDB00743ECB /* SECompatibility.m in Sources */,
-				F751C48B1A4C3EDB00743ECB /* NSMutableAttributedString+Helper.m in Sources */,
 				F751C4991A4C3EDB00743ECB /* SETextEditingCaret.m in Sources */,
 				F751C3E61A4C3EDB00743ECB /* NSString+MessageInputView.m in Sources */,
 				F751C40C1A4C3EDB00743ECB /* XHVoiceCommonHelper.m in Sources */,
