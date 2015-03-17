@@ -32,7 +32,7 @@ typedef NS_ENUM (NSUInteger, SETouchPhase) {
     SETouchPhaseAny        = NSUIntegerMax
 };
 
-static NSString * const OBJECT_REPLACEMENT_CHARACTER = @" ";
+static NSString * const OBJECT_REPLACEMENT_CHARACTER = @"\uFFFC";
 static NSString * const ZERO_WIDTH_SPACE = @"\u200B";
 static NSString * const LINE_SEPARATOR = @"\u2028";
 static NSString * const PARAGRAPH_SEPARATOR = @"\u2029";
@@ -169,23 +169,38 @@ static NSString * const PARAGRAPH_SEPARATOR = @"\u2029";
                                            font:nil];
 }
 
+#if TARGET_OS_IPHONE
++ (CGRect)frameRectWithAttributtedString:(NSAttributedString *)attributedString
+                          constraintSize:(CGSize)constraintSize
+                             lineSpacing:(CGFloat)lineSpacing
+                                    font:(UIFont *)font
+#else
 + (CGRect)frameRectWithAttributtedString:(NSAttributedString *)attributedString
                           constraintSize:(CGSize)constraintSize
                              lineSpacing:(CGFloat)lineSpacing
                                     font:(NSFont *)font
+#endif
 {
     return [self frameRectWithAttributtedString:attributedString
                                  constraintSize:constraintSize
                                     lineSpacing:lineSpacing
                                paragraphSpacing:0.0f
-                                           font:font];
+                                           font:(id)font];
 }
 
+#if TARGET_OS_IPHONE
++ (CGRect)frameRectWithAttributtedString:(NSAttributedString *)attributedString
+                          constraintSize:(CGSize)constraintSize
+                             lineSpacing:(CGFloat)lineSpacing
+                        paragraphSpacing:(CGFloat)paragraphSpacing
+                                    font:(UIFont *)font
+#else
 + (CGRect)frameRectWithAttributtedString:(NSAttributedString *)attributedString
                           constraintSize:(CGSize)constraintSize
                              lineSpacing:(CGFloat)lineSpacing
                         paragraphSpacing:(CGFloat)paragraphSpacing
                                     font:(NSFont *)font
+#endif
 {
     NSInteger length = attributedString.length;
     NSMutableAttributedString *mutableAttributedString = attributedString.mutableCopy;
@@ -467,7 +482,7 @@ static NSString * const PARAGRAPH_SEPARATOR = @"\u2029";
         textAlignment = (CTTextAlignment)self.textAlignment;
     }
 #else
-    CTTextAlignment textAlignment = self.textAlignment;
+    CTTextAlignment textAlignment = (CTTextAlignment)self.textAlignment;
 #endif
     CTLineBreakMode lineBreakMode = (CTLineBreakMode)self.lineBreakMode;
     if (lineBreakMode == kCTLineBreakByTruncatingTail) {
@@ -508,25 +523,13 @@ static NSString * const PARAGRAPH_SEPARATOR = @"\u2029";
     self.attributedText = attributedString;
 }
 
-+ (CTLineBreakMode)lineBreakModeFromUILineBreakMode:(NSLineBreakMode)lineBreakMode {
-    switch (lineBreakMode) {
-        case NSLineBreakByWordWrapping: return kCTLineBreakByWordWrapping;
-        case NSLineBreakByCharWrapping: return kCTLineBreakByCharWrapping;
-        case NSLineBreakByClipping: return kCTLineBreakByClipping;
-        case NSLineBreakByTruncatingHead: return kCTLineBreakByTruncatingHead;
-        case NSLineBreakByTruncatingTail: return kCTLineBreakByWordWrapping; // We handle truncation ourself.
-        case NSLineBreakByTruncatingMiddle: return kCTLineBreakByTruncatingMiddle;
-        default: return 0;
-    }
-}
-
 - (void)updateLayout
 {
     [self setAdditionalAttributes];
     
     self.textLayout.bounds = self.bounds;
     self.textLayout.attributedString = self.attributedText;
-    self.textLayout.lineBreakMode = [self.class lineBreakModeFromUILineBreakMode:self.lineBreakMode];
+    self.textLayout.lineBreakMode = (CTLineBreakMode)self.lineBreakMode;
     
     [self.textLayout update];
 }

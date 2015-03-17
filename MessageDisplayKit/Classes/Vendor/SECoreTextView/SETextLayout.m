@@ -434,6 +434,11 @@
                     width = offset - CTLineGetOffsetForStringIndex(line, index - 1, NULL);
                 }
                 
+                
+                if (offset > self.bounds.size.width) {
+                    offset = self.bounds.size.width;
+                }
+
                 rect = lineLayout.rect;
                 rect.origin.x += offset - width;
                 rect.size.width = width;

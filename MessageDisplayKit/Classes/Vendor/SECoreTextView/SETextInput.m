@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 kishikawa katsumi. All rights reserved.
 //
 
+#import <TargetConditionals.h>
+
 #if TARGET_OS_IPHONE
 #import "SETextInput.h"
 
@@ -55,7 +57,7 @@
 
 - (NSString *)description
 {
-    return [NSString stringWithFormat:@"%@ (%lu)", [super description], (unsigned long)self.index];
+    return [NSString stringWithFormat:@"%@ (%@)", [super description], @(self.index)];
 }
 
 @end
