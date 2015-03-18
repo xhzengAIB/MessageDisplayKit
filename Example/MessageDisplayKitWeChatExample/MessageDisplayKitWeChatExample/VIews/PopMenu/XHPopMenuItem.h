@@ -9,10 +9,10 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-#define kXHMenuTableViewWidth 140
+#define kXHMenuTableViewWidth 122
 #define kXHMenuTableViewSapcing 7
 
-#define kXHMenuItemViewHeight 40
+#define kXHMenuItemViewHeight 36
 #define kXHMenuItemViewImageSapcing 15
 #define kXHSeparatorLineImageViewHeight 0.5
 

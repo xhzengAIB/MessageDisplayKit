@@ -14,6 +14,8 @@
 
 #import "XHImageViewer.h"
 
+#import "XHAlbumLikesCommentsView.h"
+
 #define kXHPhotoCollectionViewCellIdentifier @"XHPhotoCollectionViewCellIdentifier"
 
 @interface XHAlbumRichTextView () <UICollectionViewDelegate, UICollectionViewDataSource>
@@ -25,6 +27,8 @@
 
 @property (nonatomic, strong) UILabel *timestampLabel;
 @property (nonatomic, strong) UIButton *commentButton;
+
+@property (nonatomic, strong) XHAlbumLikesCommentsView *albumLikesCommentsView;
 
 @end
 
@@ -56,6 +60,10 @@
     richTextHeight += kXHAlbumContentLineSpacing;
     richTextHeight += kXHAlbumCommentButtonHeight;
     
+    richTextHeight += 4;
+    richTextHeight += 14;
+    richTextHeight += currentAlbum.albumShareComments.count * 16;
+    
     return richTextHeight;
 }
 
@@ -81,6 +89,10 @@
     self.timestampLabel.text = @"3小时前";
     
     [self.sharePhotoCollectionView reloadData];
+    
+    self.albumLikesCommentsView.likes = displayAlbum.albumShareLikes;
+    self.albumLikesCommentsView.comments = displayAlbum.albumShareComments;
+    [self.albumLikesCommentsView reloadData];
     
     [self setNeedsLayout];
 }
@@ -148,6 +160,12 @@
     return _commentButton;
 }
 
+- (XHAlbumLikesCommentsView *)albumLikesCommentsView {
+    if (!_albumLikesCommentsView) {
+        _albumLikesCommentsView = [[XHAlbumLikesCommentsView alloc] initWithFrame:CGRectZero];
+    }
+    return _albumLikesCommentsView;
+}
 #pragma mark - Life Cycle
 
 - (void)setup {
@@ -164,6 +182,8 @@
     
     [self addSubview:self.timestampLabel];
     [self addSubview:self.commentButton];
+    
+    [self addSubview:self.albumLikesCommentsView];
 }
 
 - (id)initWithFrame:(CGRect)frame {
@@ -199,7 +219,7 @@
     self.sharePhotoCollectionView.frame = sharePhotoCollectionViewFrame;
     
     CGRect commentButtonFrame = self.commentButton.frame;
-    commentButtonFrame.origin = CGPointMake(CGRectGetWidth(self.bounds) - kXHAlbumAvatarSpacing - kXHAlbumCommentButtonWidth, CGRectGetMaxY(sharePhotoCollectionViewFrame) + kXHAlbumContentLineSpacing);
+    commentButtonFrame.origin = CGPointMake(CGRectGetMaxX(richTextViewFrame) - kXHAlbumCommentButtonWidth, CGRectGetMaxY(sharePhotoCollectionViewFrame) + kXHAlbumContentLineSpacing);
     commentButtonFrame.size = CGSizeMake(kXHAlbumCommentButtonWidth, kXHAlbumCommentButtonHeight);
     self.commentButton.frame = commentButtonFrame;
     
@@ -208,8 +228,14 @@
     timestampLabelFrame.size = CGSizeMake(CGRectGetWidth(self.bounds) - kXHAlbumAvatarSpacing * 3 - kXHAvatarImageSize - kXHAlbumCommentButtonWidth, CGRectGetHeight(commentButtonFrame));
     self.timestampLabel.frame = timestampLabelFrame;
     
+    // 这里出现延迟布局的情况，所以就不能正常排版
+    CGRect likesCommentsViewFrame = self.albumLikesCommentsView.frame;
+    likesCommentsViewFrame.origin = CGPointMake(CGRectGetMinX(richTextViewFrame), CGRectGetMaxY(timestampLabelFrame));
+    likesCommentsViewFrame.size.width = CGRectGetWidth(richTextViewFrame);
+    self.albumLikesCommentsView.frame = likesCommentsViewFrame;
+    
     CGRect frame = self.frame;
-    frame.size.height = CGRectGetMaxY(commentButtonFrame);
+    frame.size.height = CGRectGetMaxY(likesCommentsViewFrame) + kXHAlbumAvatarSpacing;
     self.frame = frame;
 }
 

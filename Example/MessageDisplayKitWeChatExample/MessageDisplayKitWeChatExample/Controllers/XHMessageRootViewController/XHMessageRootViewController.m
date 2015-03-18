@@ -13,6 +13,7 @@
 #import "XHNewsTableViewController.h"
 #import "XHQRCodeViewController.h"
 #import "XHDemoWeChatMessageTableViewController.h"
+#import "XHCustomCellDemoMessageTableViewController.h"
 
 #import "XHPopMenu.h"
 #import "UIView+XHBadgeView.h"
@@ -35,6 +36,11 @@
 - (void)enterMessage {
     XHDemoWeChatMessageTableViewController *demoWeChatMessageTableViewController = [[XHDemoWeChatMessageTableViewController alloc] init];
     [self.navigationController pushViewController:demoWeChatMessageTableViewController animated:YES];
+}
+
+- (void)enterCustomCellMessage {
+    XHCustomCellDemoMessageTableViewController *customCellDemoMessageTableViewController = [[XHCustomCellDemoMessageTableViewController alloc] init];
+    [self.navigationController pushViewController:customCellDemoMessageTableViewController animated:YES];
 }
 
 - (void)enterNewsController {
@@ -191,7 +197,27 @@
 
 - (void)loadDataSource {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        NSMutableArray *dataSource = [[NSMutableArray alloc] initWithObjects:@"华捷新闻，点击查看美女新闻呢！", @"点击我查看最新消息，里面有惊喜哦！", @"点击我查看最新消息，里面有惊喜哦！", @"点击我查看最新消息，里面有惊喜哦！", @"点进入聊天页面，这里有多种显示样式", @"点击我查看最新消息，里面有惊喜哦！", @"点击我查看最新消息，里面有惊喜哦！", @"点击我查看最新消息，里面有惊喜哦！", @"点击我查看最新消息，里面有惊喜哦！", @"点击我查看最新消息，里面有惊喜哦！", @"点击我查看最新消息，里面有惊喜哦！", @"点击我查看最新消息，里面有惊喜哦！", @"请问你现在在哪里啊？我在广州天河", @"请问你现在在哪里啊？我在广州天河", @"请问你现在在哪里啊？我在广州天河", @"请问你现在在哪里啊？我在广州天河", @"请问你现在在哪里啊？我在广州天河", @"点击我查看最新消息，里面有惊喜哦！", @"点击我查看最新消息，里面有惊喜哦！", nil];
+        NSMutableArray *dataSource = [[NSMutableArray alloc] initWithObjects:
+                                      @"华捷新闻，点击查看美女新闻呢！",
+                                      @"点击我查看最新消息，里面有惊喜哦！",
+                                      @"点击我查看最新消息，里面有惊喜哦！",
+                                      @"点击我查看最新消息，里面有惊喜哦！",
+                                      @"点进入聊天页面，这里有多种显示样式",
+                                      @"点击我查看最新消息，里面有惊喜哦！",
+                                      @"点击查看自定义消息Cell的样式",
+                                      @"点击我查看最新消息，里面有惊喜哦！",
+                                      @"点击我查看最新消息，里面有惊喜哦！",
+                                      @"点击我查看最新消息，里面有惊喜哦！",
+                                      @"点击我查看最新消息，里面有惊喜哦！",
+                                      @"点击我查看最新消息，里面有惊喜哦！",
+                                      @"请问你现在在哪里啊？我在广州天河",
+                                      @"请问你现在在哪里啊？我在广州天河",
+                                      @"请问你现在在哪里啊？我在广州天河",
+                                      @"请问你现在在哪里啊？我在广州天河",
+                                      @"请问你现在在哪里啊？我在广州天河",
+                                      @"点击我查看最新消息，里面有惊喜哦！",
+                                      @"点击我查看最新消息，里面有惊喜哦！",
+                                      nil];
         dispatch_async(dispatch_get_main_queue(), ^{
             self.dataSource = dataSource;
             [self.tableView reloadData];
@@ -249,12 +275,15 @@
     [cell.imageView setupCircleBadge];
     
     cell.textLabel.textColor = [UIColor blackColor];
+    
     if (indexPath.row == 4) {
-        cell.detailTextLabel.textColor = [UIColor colorWithRed:0.097 green:0.633 blue:1.000 alpha:1.000];
-    } else if (indexPath.row == 0){
+        cell.textLabel.textColor = cell.detailTextLabel.textColor = [UIColor colorWithRed:0.097 green:0.633 blue:1.000 alpha:1.000];
+    } else if (indexPath.row == 0) {
         cell.textLabel.textColor = [UIColor colorWithRed:0.429 green:0.187 blue:1.000 alpha:1.000];
+    } else if (indexPath.row == 6) {
+        cell.textLabel.textColor = cell.detailTextLabel.textColor = [UIColor colorWithRed:1.000 green:0.222 blue:0.906 alpha:1.000];
     } else {
-        cell.detailTextLabel.textColor = [UIColor grayColor];
+        cell.textLabel.textColor = cell.detailTextLabel.textColor = [UIColor grayColor];
     }
     
     return cell;
@@ -270,6 +299,8 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (!indexPath.row) {
         [self enterNewsController];
+    } else if (indexPath.row == 6) {
+        [self enterCustomCellMessage];
     } else {
         [self enterMessage];
     }

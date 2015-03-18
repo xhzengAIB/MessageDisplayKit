@@ -12,19 +12,6 @@ It's ok if you don't understand how the code works. Most code has comments, whic
 ## 注意，现在已经替换了这个插件的编译，使用Xcode6或者更高版本进行编译即可
 这里的方法已经失效（很多朋友说不能直接编译该项目的主要工程，其实原因很简单，只是没有打包静态库的插件，需要安装一个Xcode插件，点击以下链接[iOS-Universal-Framework](https://github.com/kstenerud/iOS-Universal-Framework)，安装方法很简单的，里面有教程，只要安装了该插件后，重启你的xcode，就可以开始编译了！）
 
-## 开源许可协议
-很多人和我说，你不知道什么是开源许可协议，其实我也不清楚他是不知道还是不想知道，作为一个开发者，不懂得尊重别人的成果，那你到底想怎样，你自己最清楚。                      
-说一件事吧！曾经我也这么做了，没尊重作者的成果，最终被人鄙视了一段时间，于是我删除了那个开源库，现在终于明白，尊重这个词，这对于别人来说是一个认可，我们不可以剥夺这份利益。
-网易新闻App的开发者很厚道，他们有做到这一份尊重，他们是这么做的：                          
-```objc
-UIWebView *librariesWebView = [[UIWebView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://m.163.com/special/newsclient/ios_libraries.html"]]; // 这里的URL是网易新闻所用的，大家可以点击打开，如果你没有服务器，那你敢直接写个开源库的主页URL嘛？
-[librariesWebView loadRequest:urlRequest];
-[self.view addSubview:librariesWebView];
-```
-我把代码都给上了，哪怕你复制都不愿意，那我就无语了。                                 
-如果您还不知道开源许可协议是怎样的，那你点击[这里](http://m.163.com/special/newsclient/ios_libraries.html)看看网易大神们的节操。                     
-
 ## 组件要求                                        Requirements
 
 * Xcode6 or later
@@ -132,13 +119,15 @@ Easy to drop into your project.
 English: MessageDisplayKit is available under the MIT license, see the LICENSE file for more information.     
 
 ## 须知       Notes
-如果您在您的项目中使用该开源组件,请给我们发[电子邮件](mailto:xhzengAIB@gmail.com?subject=From%20GitHub%20MessageDisplayKit)告诉我们您的应用程序的名称，谢谢！主要是为了互推的效果，如果您的app火了，请给予少许的回报，如果您的App不火，或许能通过这个开源库了解到您的App！            
+如果您在您的项目中使用该开源组件，请给我们发[电子邮件](mailto:xhzengAIB@gmail.com?subject=From%20GitHub%20MessageDisplayKit)告诉我们您的应用程序的名称，谢谢！主要是为了互推的效果，如果您的app火了，请给予少许的回报，如果您的App不火，或许能通过这个开源库了解到您的App！         
+主要目的只有一个，互推，使用该开源库的开发者，我都会向其保证，永远免费，不涉及任何商业纠纷的事情，请放心使用。
                            
 If you use this open source components in your project, please [Email us](mailto:xhzengAIB@gmail.com?subject=From%20GitHub%20MessageDisplayKit) to notify us the name of your application(s). Thanks!
 
 ## What app use this open source
 这里会列出所有使用该开源库的App列表。                     
-[leanchat-ios](https://github.com/leancloud/leanchat-ios)，LeanCloud 提供一站式后端云服务，从数据存储、实时聊天、消息推送到移动统计，涵盖应用开发的多方面后端需求。
+[leanchat-ios](https://github.com/leancloud/leanchat-ios)，LeanCloud 提供一站式后端云服务，从数据存储、实时聊天、消息推送到移动统计，涵盖应用开发的多方面后端需求。                       
+[家信-导购员](https://itunes.apple.com/cn/app/jia-xin-dao-gou-yuan/id918014453?mt=8)家信，专属家居导购员的商务沟通APP。家信app，将家居消费者与离他最近的导购员及时对接。消费者微信在线随时随地与导购员接触沟通；导购员家信在线时时处处为消费者提供各种资讯、商品、咨询、导购服务，辅助消费者决策，促进消费购买，提升服务体验。
 
 ## 使用到的第三方组件
 * [PathCover](https://github.com/JackTeam/PathCover)用于朋友圈的下拉刷新。
@@ -156,8 +145,7 @@ If you use this open source components in your project, please [Email us](mailto
 谢谢[微信App](https://itunes.apple.com/cn/app/wei-xin/id414478124?mt=8)给予我鼓励，我参考了很多框架设计问题、也提供了许多素材，但是请网友不要直接使用素材，我不知道是否会引起侵权的问题，所以请自重，我这里只是模仿微信，而不是攻击。使用该开源库所导致的所有侵权关系与我无关，我只是提供学习机会。                                         
 
 ## 警告
-请不要拿该工程的所有资源文件用于商业使用，如果不遵守规则，而产生的法律责任，一律与我无关。代码按照上文描述的License 和 Notes来使用。                              
-该工程里面任何一个效果组件都不能擅自使用，如需使用，请告之于我。
+请不要拿该工程的微信图片资源文件用于商业使用，如果不遵守规则，而产生的法律责任，一律与我无关。代码按照上文描述的License和Notes来使用。                              
 
 ## Credits
 Thanks to [jessesquires](https://github.com/jessesquires) who created [JSMessagesViewController](https://github.com/jessesquires/MessagesTableViewController) on which my chat list UI work is based.                             

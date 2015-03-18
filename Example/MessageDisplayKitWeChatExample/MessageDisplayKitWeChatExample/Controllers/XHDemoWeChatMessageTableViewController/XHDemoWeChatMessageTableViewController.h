@@ -10,4 +10,6 @@
 
 @interface XHDemoWeChatMessageTableViewController : XHMessageTableViewController
 
+- (void)loadDemoDataSource;
+
 @end

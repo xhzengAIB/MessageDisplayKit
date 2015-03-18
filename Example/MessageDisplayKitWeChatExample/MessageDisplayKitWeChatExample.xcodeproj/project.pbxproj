@@ -9,7 +9,12 @@
 /* Begin PBXBuildFile section */
 		E4644DC01A89B60200F915F3 /* MessageDisplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F785EE291A63C0FC006E695B /* MessageDisplayKit.framework */; };
 		E4644DC11A89B60200F915F3 /* MessageDisplayKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F785EE291A63C0FC006E695B /* MessageDisplayKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E47E73711AA1982B00CF7C0B /* XHSendMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = E47E73701AA1982B00CF7C0B /* XHSendMessageView.m */; };
+		E47E737A1AA19FB800CF7C0B /* XHAlbumLikesCommentsView.m in Sources */ = {isa = PBXBuildFile; fileRef = E47E73791AA19FB800CF7C0B /* XHAlbumLikesCommentsView.m */; };
+		E47E737C1AA1A37600CF7C0B /* Album_likes_comments_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E47E737B1AA1A37600CF7C0B /* Album_likes_comments_background@2x.png */; };
+		E47E737E1AA1A7A800CF7C0B /* Album_like_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E47E737D1AA1A7A800CF7C0B /* Album_like_icon@2x.png */; };
 		E4B290091A888A5100CAC4C8 /* XHAlbumOperationView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4B290081A888A5100CAC4C8 /* XHAlbumOperationView.m */; };
+		E4CC32281A8B552500D536E3 /* XHCustomCellDemoMessageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CC32271A8B552500D536E3 /* XHCustomCellDemoMessageTableViewController.m */; };
 		F7122EE61A4D33E200734F17 /* XHAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = F7122EE31A4D33E200734F17 /* XHAlbum.m */; };
 		F7122EE71A4D33E200734F17 /* XHContact.m in Sources */ = {isa = PBXBuildFile; fileRef = F7122EE51A4D33E200734F17 /* XHContact.m */; };
 		F7B9EB621A4D605B0072F81B /* AddGroupMemberBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7B9EB051A4D605B0072F81B /* AddGroupMemberBtn@2x.png */; };
@@ -381,8 +386,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E47E736F1AA1982B00CF7C0B /* XHSendMessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHSendMessageView.h; sourceTree = "<group>"; };
+		E47E73701AA1982B00CF7C0B /* XHSendMessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHSendMessageView.m; sourceTree = "<group>"; };
+		E47E73781AA19FB800CF7C0B /* XHAlbumLikesCommentsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHAlbumLikesCommentsView.h; sourceTree = "<group>"; };
+		E47E73791AA19FB800CF7C0B /* XHAlbumLikesCommentsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHAlbumLikesCommentsView.m; sourceTree = "<group>"; };
+		E47E737B1AA1A37600CF7C0B /* Album_likes_comments_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Album_likes_comments_background@2x.png"; sourceTree = "<group>"; };
+		E47E737D1AA1A7A800CF7C0B /* Album_like_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Album_like_icon@2x.png"; sourceTree = "<group>"; };
 		E4B290071A888A5100CAC4C8 /* XHAlbumOperationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHAlbumOperationView.h; sourceTree = "<group>"; };
 		E4B290081A888A5100CAC4C8 /* XHAlbumOperationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHAlbumOperationView.m; sourceTree = "<group>"; };
+		E4CC32261A8B552500D536E3 /* XHCustomCellDemoMessageTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHCustomCellDemoMessageTableViewController.h; sourceTree = "<group>"; };
+		E4CC32271A8B552500D536E3 /* XHCustomCellDemoMessageTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHCustomCellDemoMessageTableViewController.m; sourceTree = "<group>"; };
 		F7122EE21A4D33E200734F17 /* XHAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHAlbum.h; sourceTree = "<group>"; };
 		F7122EE31A4D33E200734F17 /* XHAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHAlbum.m; sourceTree = "<group>"; };
 		F7122EE41A4D33E200734F17 /* XHContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHContact.h; sourceTree = "<group>"; };
@@ -1125,6 +1138,8 @@
 		F7D24E441A4D0EB30015764B /* AlbumImages */ = {
 			isa = PBXGroup;
 			children = (
+				E47E737D1AA1A7A800CF7C0B /* Album_like_icon@2x.png */,
+				E47E737B1AA1A37600CF7C0B /* Album_likes_comments_background@2x.png */,
 				F7D24E451A4D0EB30015764B /* album_add_photo@2x.png */,
 				F7D24E461A4D0EB30015764B /* AlbumFlagMark@2x.png */,
 				F7D24E471A4D0EB30015764B /* AlbumHeaderBackgrounImage@2x.png */,
@@ -1417,6 +1432,8 @@
 			children = (
 				F7D252571A4D31F60015764B /* XHDemoWeChatMessageTableViewController.h */,
 				F7D252581A4D31F60015764B /* XHDemoWeChatMessageTableViewController.m */,
+				E4CC32261A8B552500D536E3 /* XHCustomCellDemoMessageTableViewController.h */,
+				E4CC32271A8B552500D536E3 /* XHCustomCellDemoMessageTableViewController.m */,
 			);
 			path = XHDemoWeChatMessageTableViewController;
 			sourceTree = "<group>";
@@ -1708,10 +1725,14 @@
 				F7D252C41A4D31F60015764B /* XHAlbumPhotoCollectionViewCell.m */,
 				F7D252C51A4D31F60015764B /* XHAlbumRichTextView.h */,
 				F7D252C61A4D31F60015764B /* XHAlbumRichTextView.m */,
+				E47E73781AA19FB800CF7C0B /* XHAlbumLikesCommentsView.h */,
+				E47E73791AA19FB800CF7C0B /* XHAlbumLikesCommentsView.m */,
 				F7D252C71A4D31F60015764B /* XHAlbumTableViewCell.h */,
 				F7D252C81A4D31F60015764B /* XHAlbumTableViewCell.m */,
 				E4B290071A888A5100CAC4C8 /* XHAlbumOperationView.h */,
 				E4B290081A888A5100CAC4C8 /* XHAlbumOperationView.m */,
+				E47E736F1AA1982B00CF7C0B /* XHSendMessageView.h */,
+				E47E73701AA1982B00CF7C0B /* XHSendMessageView.m */,
 			);
 			path = AlbumContentViews;
 			sourceTree = "<group>";
@@ -1935,6 +1956,7 @@
 				F7B9EB941A4D605B0072F81B /* SECoreTextView.bundle in Resources */,
 				F7B9EBA21A4D605B0072F81B /* section0_emotion7@2x.png in Resources */,
 				F7B9EB951A4D605B0072F81B /* section0_emotion0@2x.png in Resources */,
+				E47E737C1AA1A37600CF7C0B /* Album_likes_comments_background@2x.png in Resources */,
 				F7D24EBA1A4D0EB30015764B /* VoiceSearchFeedback003_ios7@2x.png in Resources */,
 				F7B9EBA31A4D605B0072F81B /* section0_emotion8@2x.png in Resources */,
 				F7D24F0E1A4D0EB30015764B /* fishwater2@2x.png in Resources */,
@@ -2028,6 +2050,7 @@
 				F7B9EB861A4D605B0072F81B /* ReceiverVoiceNodePlaying002@2x.png in Resources */,
 				F7D24EE81A4D0EB30015764B /* VoiceSearchLoading004_ios7@2x.png in Resources */,
 				F7D24F591A4D0EB30015764B /* Contact@2x.png in Resources */,
+				E47E737E1AA1A7A800CF7C0B /* Album_like_icon@2x.png in Resources */,
 				F7D24F5B1A4D0EB30015764B /* SNS@2x.png in Resources */,
 				F7B9EBB01A4D605B0072F81B /* sharemore_videovoip@2x.png in Resources */,
 				F7D24F2D1A4D0EB30015764B /* shake_match.wav in Resources */,
@@ -2219,6 +2242,8 @@
 				F7D2530B1A4D31F60015764B /* XHNewsTableViewController.m in Sources */,
 				F7D253281A4D31F60015764B /* XHRefreshControl.m in Sources */,
 				F7D253291A4D31F60015764B /* XHRefreshView.m in Sources */,
+				E4CC32281A8B552500D536E3 /* XHCustomCellDemoMessageTableViewController.m in Sources */,
+				E47E73711AA1982B00CF7C0B /* XHSendMessageView.m in Sources */,
 				F7D253011A4D31F60015764B /* XHDemoWeChatMessageTableViewController.m in Sources */,
 				F7D2533F1A4D31F60015764B /* XHScanningView.m in Sources */,
 				F7D252F81A4D31F60015764B /* XHFoundationCommon.m in Sources */,
@@ -2273,6 +2298,7 @@
 				F7D2533D1A4D31F60015764B /* XHPopMenuItem.m in Sources */,
 				F7D24A331A4D099F0015764B /* main.m in Sources */,
 				F7D253021A4D31F60015764B /* XHAlbumTableViewController.m in Sources */,
+				E47E737A1AA19FB800CF7C0B /* XHAlbumLikesCommentsView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
