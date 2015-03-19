@@ -31,7 +31,7 @@
                                                               identifier:[NSString stringWithFormat:@"%f, %f", coord.latitude, coord.longitude]];
     
     // Create an annotation to show where the region is located on the map.
-    XHAnnotation *myRegionAnnotation = [[XHAnnotation alloc] initWithCLRegion:newRegion title:@"消息的位置" subtitle:self.message.geolocations];
+    XHAnnotation *myRegionAnnotation = [[XHAnnotation alloc] initWithCLRegion:newRegion title:NSLocalizedStringFromTable(@"MessageLocation", @"MessageDisplayKitString", nil) subtitle:self.message.geolocations];
     myRegionAnnotation.coordinate = newRegion.center;
     myRegionAnnotation.radius = newRegion.radius;
     

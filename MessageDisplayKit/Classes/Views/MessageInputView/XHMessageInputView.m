@@ -12,9 +12,6 @@
 #import "NSString+MessageInputView.h"
 #import "XHMacro.h"
 
-#define kXHTouchToRecord         @"按住 说话"
-#define kXHTouchToFinish         @"松开 结束"
-
 @interface XHMessageInputView () <UITextViewDelegate>
 
 @property (nonatomic, weak, readwrite) XHMessageTextView *inputTextView;
@@ -342,7 +339,7 @@
     textView.returnKeyType = UIReturnKeySend;
     textView.enablesReturnKeyAutomatically = YES; // UITextView内部判断send按钮是否可以用
     
-    textView.placeHolder = @"发送新消息";
+    textView.placeHolder = NSLocalizedStringFromTable(@"SendAMessage", @"MessageDisplayKitString", nil);
     textView.delegate = self;
     
     [self addSubview:textView];
@@ -387,8 +384,8 @@
         UIEdgeInsets edgeInsets = UIEdgeInsetsMake(9, 9, 9, 9);
         button = [self createButtonWithImage:XH_STRETCH_IMAGE([UIImage imageNamed:@"VoiceBtn_Black"], edgeInsets) HLImage:XH_STRETCH_IMAGE([UIImage imageNamed:@"VoiceBtn_BlackHL"], edgeInsets)];
         [button setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
-        [button setTitle:kXHTouchToRecord forState:UIControlStateNormal];
-        [button setTitle:kXHTouchToFinish forState:UIControlStateHighlighted];
+        [button setTitle:NSLocalizedStringFromTable(@"HoldToTalk", @"MessageDisplayKitString", nil) forState:UIControlStateNormal];
+        [button setTitle:NSLocalizedStringFromTable(@"ReleaseToSend", @"MessageDisplayKitString", nil)  forState:UIControlStateHighlighted];
         buttonFrame = _inputTextView.frame;
         button.frame = buttonFrame;
         button.alpha = self.voiceChangeButton.selected;

@@ -8,9 +8,6 @@
 
 #import "XHVoiceRecordHUD.h"
 
-#define kXHVoiceRecordPauseString @"手指上滑，取消发送"
-#define kXHVoiceRecordResaueString @"松开手指，取消发送"
-
 @interface XHVoiceRecordHUD ()
 
 @property (nonatomic, weak) UILabel *remindLabel;
@@ -58,13 +55,13 @@
 - (void)pauseRecord {
     [self configRecoding:YES];
     self.remindLabel.backgroundColor = [UIColor clearColor];
-    self.remindLabel.text = kXHVoiceRecordPauseString;
+    self.remindLabel.text = NSLocalizedStringFromTable(@"SlideToCancel", @"MessageDisplayKitString", nil);
 }
 
 - (void)resaueRecord {
     [self configRecoding:NO];
     self.remindLabel.backgroundColor = [UIColor colorWithRed:1.000 green:0.000 blue:0.000 alpha:0.630];
-    self.remindLabel.text = kXHVoiceRecordResaueString;
+    self.remindLabel.text = NSLocalizedStringFromTable(@"ReleaseToCancel", @"MessageDisplayKitString", nil);
 }
 
 - (void)stopRecordCompled:(void(^)(BOOL fnished))compled {
@@ -130,7 +127,7 @@
         remindLabel.layer.cornerRadius = 4;
         remindLabel.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
         remindLabel.backgroundColor = [UIColor clearColor];
-        remindLabel.text = kXHVoiceRecordPauseString;
+        remindLabel.text = NSLocalizedStringFromTable(@"SlideToCancel", @"MessageDisplayKitString", nil);
         remindLabel.textAlignment = NSTextAlignmentCenter;
         [self addSubview:remindLabel];
         _remindLabel = remindLabel;
