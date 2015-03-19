@@ -260,7 +260,7 @@
     NSError *error = nil;
     AVAudioPlayer *play = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:recordPath] error:&error];
     if (error) {
-        DLog(@"%@%@%@",THIS_FILE,THIS_METHOD,error);
+        DLog(@"recordPath：%@ error：%@", recordPath, error);
         self.recordDuration = @"";
     } else {
         DLog(@"时长:%f", play.duration);
