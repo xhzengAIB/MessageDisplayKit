@@ -6,8 +6,11 @@
 //  Copyright (c) 2013 kishikawa katsumi. All rights reserved.
 //
 
+#import <TargetConditionals.h>
+
 #if TARGET_OS_IPHONE
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface SETextRange : UITextRange
 

@@ -944,7 +944,9 @@ static CGPoint  delayOffset = {0.0};
         
         [self scrollToBottomAnimated:NO];
     } completion:^(BOOL finished) {
-        
+        if (hide) {
+            self.textViewInputViewType = XHInputViewTypeNormal;
+        }
     }];
 }
 
