@@ -52,10 +52,6 @@
 		<data>
 		/eBkVeT+9hr2nPgrXtPn+Jq9/1k=
 		</data>
-		<key>Headers/NSMutableAttributedString+Helper.h</key>
-		<data>
-		jVKDXhu1YTD/x0zi/73Wpm3+q5M=
-		</data>
 		<key>Headers/NSString+MessageInputView.h</key>
 		<data>
 		aqJBcG5B8df03eRbYC3X0GNOYuo=
@@ -66,7 +62,7 @@
 		</data>
 		<key>Headers/SECompatibility.h</key>
 		<data>
-		JPAI3mzClGWJMAL42cT6TokmOcg=
+		jdCJhm2t2TAvVGYnEB0Oeutpr0A=
 		</data>
 		<key>Headers/SEConstants.h</key>
 		<data>
@@ -82,7 +78,7 @@
 		</data>
 		<key>Headers/SESelectionGrabber.h</key>
 		<data>
-		ZGs2qQOO+S2CvYmjN0CZA/1OEQo=
+		LhyzI5TIQkM34SaR/g3szOR9nto=
 		</data>
 		<key>Headers/SETextAttachment.h</key>
 		<data>
@@ -90,15 +86,15 @@
 		</data>
 		<key>Headers/SETextEditingCaret.h</key>
 		<data>
-		cakS5an+eGxKGZaNMM/UfCfIhjk=
+		hJ2/al5xKZlXC1/9MzCIYWewn2Y=
 		</data>
 		<key>Headers/SETextGeometry.h</key>
 		<data>
-		txAcFFXP3VGHoYjeiinUtb2UdVg=
+		7WIZR7aSqzsdeeVCSvFmur2OJN4=
 		</data>
 		<key>Headers/SETextInput.h</key>
 		<data>
-		kVn1ioK3oxSZLQc0wCnG2h6othM=
+		7qehTtjM3j5z0U6kShTTMcJfOXU=
 		</data>
 		<key>Headers/SETextLayout.h</key>
 		<data>
@@ -106,11 +102,11 @@
 		</data>
 		<key>Headers/SETextMagnifierCaret.h</key>
 		<data>
-		3f2d7LeNtmwbjbBT7hwj+0M0x+k=
+		Pqxx/o9mBUYZBTcmGNubyo6y2j0=
 		</data>
 		<key>Headers/SETextMagnifierRanged.h</key>
 		<data>
-		z5lSVsLs83ickASSmEMuWxDZYno=
+		+TZCcY5Ek/JBc5MRQBJuGthM3Ok=
 		</data>
 		<key>Headers/SETextSelection.h</key>
 		<data>
@@ -118,11 +114,11 @@
 		</data>
 		<key>Headers/SETextSelectionView.h</key>
 		<data>
-		mKUAwEl84II41OCxUV3CiSm7+kQ=
+		kRyNAqht1NiIvcFFnO7IYK/DRr4=
 		</data>
 		<key>Headers/SETextView.h</key>
 		<data>
-		T3jZn+nchJnl58k7i6oCIQzSZGA=
+		LENMlk9FALKqS3gSqa2cgUGMzLA=
 		</data>
 		<key>Headers/UIImage+Alpha.h</key>
 		<data>
@@ -246,7 +242,7 @@
 		</data>
 		<key>Headers/XHMessageBubbleFactory.h</key>
 		<data>
-		1R95I+kSfG0iVh+eXINq11JzZ0k=
+		YH5uE9n6f3LS81zwfDEJ0RY+7+U=
 		</data>
 		<key>Headers/XHMessageBubbleHelper.h</key>
 		<data>
@@ -274,7 +270,7 @@
 		</data>
 		<key>Headers/XHMessageTableViewController.h</key>
 		<data>
-		ugQKAN9oPus7hMTUBX7ErN1ypi0=
+		ieZGjBMvwXmyZYai0Lu0z3tFAaY=
 		</data>
 		<key>Headers/XHMessageTextView.h</key>
 		<data>
@@ -326,7 +322,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		KvcRlSTZSOOfon7mLYOkWxxHWbU=
+		/pQ1E5n+EbHWPH00VIOg0MaNPIo=
 		</data>
 		<key>MessageVideoPlay@2x.png</key>
 		<data>
@@ -536,7 +532,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			KW7VbZddgjwOPZ0O2Ej7IQ0JP9E=
+			8E93ubb/gSgaF+e8HbXRCGY740A=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -789,10 +785,6 @@
 		<data>
 		/eBkVeT+9hr2nPgrXtPn+Jq9/1k=
 		</data>
-		<key>Headers/NSMutableAttributedString+Helper.h</key>
-		<data>
-		jVKDXhu1YTD/x0zi/73Wpm3+q5M=
-		</data>
 		<key>Headers/NSString+MessageInputView.h</key>
 		<data>
 		aqJBcG5B8df03eRbYC3X0GNOYuo=
@@ -803,7 +795,7 @@
 		</data>
 		<key>Headers/SECompatibility.h</key>
 		<data>
-		JPAI3mzClGWJMAL42cT6TokmOcg=
+		jdCJhm2t2TAvVGYnEB0Oeutpr0A=
 		</data>
 		<key>Headers/SEConstants.h</key>
 		<data>
@@ -819,7 +811,7 @@
 		</data>
 		<key>Headers/SESelectionGrabber.h</key>
 		<data>
-		ZGs2qQOO+S2CvYmjN0CZA/1OEQo=
+		LhyzI5TIQkM34SaR/g3szOR9nto=
 		</data>
 		<key>Headers/SETextAttachment.h</key>
 		<data>
@@ -827,15 +819,15 @@
 		</data>
 		<key>Headers/SETextEditingCaret.h</key>
 		<data>
-		cakS5an+eGxKGZaNMM/UfCfIhjk=
+		hJ2/al5xKZlXC1/9MzCIYWewn2Y=
 		</data>
 		<key>Headers/SETextGeometry.h</key>
 		<data>
-		txAcFFXP3VGHoYjeiinUtb2UdVg=
+		7WIZR7aSqzsdeeVCSvFmur2OJN4=
 		</data>
 		<key>Headers/SETextInput.h</key>
 		<data>
-		kVn1ioK3oxSZLQc0wCnG2h6othM=
+		7qehTtjM3j5z0U6kShTTMcJfOXU=
 		</data>
 		<key>Headers/SETextLayout.h</key>
 		<data>
@@ -843,11 +835,11 @@
 		</data>
 		<key>Headers/SETextMagnifierCaret.h</key>
 		<data>
-		3f2d7LeNtmwbjbBT7hwj+0M0x+k=
+		Pqxx/o9mBUYZBTcmGNubyo6y2j0=
 		</data>
 		<key>Headers/SETextMagnifierRanged.h</key>
 		<data>
-		z5lSVsLs83ickASSmEMuWxDZYno=
+		+TZCcY5Ek/JBc5MRQBJuGthM3Ok=
 		</data>
 		<key>Headers/SETextSelection.h</key>
 		<data>
@@ -855,11 +847,11 @@
 		</data>
 		<key>Headers/SETextSelectionView.h</key>
 		<data>
-		mKUAwEl84II41OCxUV3CiSm7+kQ=
+		kRyNAqht1NiIvcFFnO7IYK/DRr4=
 		</data>
 		<key>Headers/SETextView.h</key>
 		<data>
-		T3jZn+nchJnl58k7i6oCIQzSZGA=
+		LENMlk9FALKqS3gSqa2cgUGMzLA=
 		</data>
 		<key>Headers/UIImage+Alpha.h</key>
 		<data>
@@ -983,7 +975,7 @@
 		</data>
 		<key>Headers/XHMessageBubbleFactory.h</key>
 		<data>
-		1R95I+kSfG0iVh+eXINq11JzZ0k=
+		YH5uE9n6f3LS81zwfDEJ0RY+7+U=
 		</data>
 		<key>Headers/XHMessageBubbleHelper.h</key>
 		<data>
@@ -1011,7 +1003,7 @@
 		</data>
 		<key>Headers/XHMessageTableViewController.h</key>
 		<data>
-		ugQKAN9oPus7hMTUBX7ErN1ypi0=
+		ieZGjBMvwXmyZYai0Lu0z3tFAaY=
 		</data>
 		<key>Headers/XHMessageTextView.h</key>
 		<data>
@@ -1269,7 +1261,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			KW7VbZddgjwOPZ0O2Ej7IQ0JP9E=
+			8E93ubb/gSgaF+e8HbXRCGY740A=
 			</data>
 			<key>optional</key>
 			<true/>

@@ -128,13 +128,37 @@
  */
 - (void)loadMoreMessagesScrollTotop;
 
+/**
+ *  配置TableViewCell高度的方法，如果你想定制自己的Cell样式，那么你必须要实现DataSource中的方法
+ - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath targetMessage:(id<XHMessageModel>)message;
+ *
+ *  @param tableView 目标TableView
+ *  @param indexPath 目标IndexPath
+ *  @param message   目标消息Model
+ *
+ *  @return 返回计算好的Cell高度
+ */
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath targetMessage:(id<XHMessageModel>)message;
+
 @end
 
 @protocol XHMessageTableViewControllerDataSource <NSObject>
 
 @required
+- (id <XHMessageModel>)messageForRowAtIndexPath:(NSIndexPath *)indexPath;
 
-- (id<XHMessageModel>)messageForRowAtIndexPath:(NSIndexPath *)indexPath;
+@optional
+/**
+ *  配置TableViewCell的方法，如果你想定制自己的Cell样式，那么你必须要实现Delegate中的方法
+ - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath targetMessage:(id<XHMessageModel>)message;
+ *
+ *  @param tableView 目标TableView
+ *  @param indexPath 目标IndexPath
+ *  @param message   目标消息Model
+ *
+ *  @return 返回UITableViewCell或者继承于UITableViewCell的实例化对象
+ */
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath targetMessage:(id<XHMessageModel>)message;
 
 @end
 

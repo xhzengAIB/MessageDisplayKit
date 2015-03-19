@@ -11,7 +11,6 @@
 #import "SELinkText.h"
 #import "SETextAttachment.h"
 #import "SECompatibility.h"
-#import "NSMutableAttributedString+Helper.h"
 
 typedef void(^SETextAttachmentDrawingBlock)(CGRect rect, CGContextRef context);
 
@@ -35,7 +34,11 @@ typedef NS_ENUM(NSUInteger, SETextAttachmentDrawingOptions) {
 @property (nonatomic, copy) NSString *text;
 @property (nonatomic, copy) NSAttributedString *attributedText;
 
+#if TARGET_OS_IPHONE
+@property (nonatomic) UIFont *font;
+#else
 @property (nonatomic) NSFont *font;
+#endif
 @property (nonatomic) NSColor *textColor;
 @property (nonatomic) NSColor *highlightedTextColor;
 @property (nonatomic) NSTextAlignment textAlignment;
@@ -91,6 +94,17 @@ typedef NS_ENUM(NSUInteger, SETextAttachmentDrawingOptions) {
 + (CGRect)frameRectWithAttributtedString:(NSAttributedString *)attributedString
                           constraintSize:(CGSize)constraintSize
                              lineSpacing:(CGFloat)lineSpacing;
+#if TARGET_OS_IPHONE
++ (CGRect)frameRectWithAttributtedString:(NSAttributedString *)attributedString
+                          constraintSize:(CGSize)constraintSize
+                             lineSpacing:(CGFloat)lineSpacing
+                                    font:(UIFont *)font;
++ (CGRect)frameRectWithAttributtedString:(NSAttributedString *)attributedString
+                          constraintSize:(CGSize)constraintSize
+                             lineSpacing:(CGFloat)lineSpacing
+                        paragraphSpacing:(CGFloat)paragraphSpacing
+                                    font:(UIFont *)font;
+#else
 + (CGRect)frameRectWithAttributtedString:(NSAttributedString *)attributedString
                           constraintSize:(CGSize)constraintSize
                              lineSpacing:(CGFloat)lineSpacing
@@ -100,6 +114,7 @@ typedef NS_ENUM(NSUInteger, SETextAttachmentDrawingOptions) {
                              lineSpacing:(CGFloat)lineSpacing
                         paragraphSpacing:(CGFloat)paragraphSpacing
                                     font:(NSFont *)font;
+#endif
 
 - (void)addObject:(id)object size:(CGSize)size atIndex:(NSInteger)index;
 - (void)addObject:(id)object size:(CGSize)size replaceRange:(NSRange)range;

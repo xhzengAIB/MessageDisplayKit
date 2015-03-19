@@ -12,7 +12,6 @@
 #import <UIKit/UIKit.h>
 
 @compatibility_alias NSView UIView;
-@compatibility_alias NSFont UIFont;
 @compatibility_alias NSColor UIColor;
 @compatibility_alias NSBezierPath UIBezierPath;
 @compatibility_alias NSImage UIImage;
