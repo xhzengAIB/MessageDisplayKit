@@ -32,3 +32,10 @@
 "Setting" = "Setting";
 "Profile" = "Profile";
 "News" = "News";
+
+"HoldToTalk" = "Hold to talk";
+"ReleaseToSend" = "Release to send";
+"SlideToCancel" = "Slide up to cancel";
+"ReleaseToCancel" = "Release to cancel";
+"SendAMessage" = "Send a message";
+"MessageLocation" = "Message Location";
