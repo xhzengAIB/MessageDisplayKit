@@ -54,7 +54,8 @@
     
     UIImage *bublleImage = [UIImage imageNamed:messageTypeString];
     UIEdgeInsets bubbleImageEdgeInsets = [self bubbleImageEdgeInsetsWithStyle:style];
-    return XH_STRETCH_IMAGE(bublleImage, bubbleImageEdgeInsets);
+    UIImage *edgeBubbleImage = XH_STRETCH_IMAGE(bublleImage, bubbleImageEdgeInsets);
+    return edgeBubbleImage;
 }
 
 + (UIEdgeInsets)bubbleImageEdgeInsetsWithStyle:(XHBubbleImageViewStyle)style {

@@ -79,7 +79,7 @@
 
 + (CGFloat)calculateCellHeightWithMessage:(id <XHMessageModel>)message {
     CGSize size = [XHMessageBubbleView getBubbleFrameWithMessage:message];
-    return size.height + kTextMarginTop + kTextMarginBottom;
+    return size.height;
 }
 
 + (CGSize)getBubbleFrameWithMessage:(id <XHMessageModel>)message {
