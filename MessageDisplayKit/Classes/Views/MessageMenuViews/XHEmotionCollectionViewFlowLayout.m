@@ -17,7 +17,7 @@
         self.scrollDirection = UICollectionViewScrollDirectionHorizontal;
         self.itemSize = CGSizeMake(kXHEmotionImageViewSize, kXHEmotionImageViewSize);
         int count = MDK_SCREEN_WIDTH/(kXHEmotionImageViewSize+kXHEmotionMinimumLineSpacing);
-        int spacing = MDK_SCREEN_WIDTH/count - kXHEmotionImageViewSize;
+        CGFloat spacing = MDK_SCREEN_WIDTH/count - kXHEmotionImageViewSize;
         self.minimumLineSpacing = spacing;
         self.sectionInset = UIEdgeInsetsMake(10, spacing/2, 0, spacing/2);
         self.collectionView.alwaysBounceVertical = YES;
