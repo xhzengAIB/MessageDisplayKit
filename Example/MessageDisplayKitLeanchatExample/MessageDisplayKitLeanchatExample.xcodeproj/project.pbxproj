@@ -109,6 +109,14 @@
 		E4D674401ABD9F0B0000B18D /* LeanChatMessageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D6743F1ABD9F0B0000B18D /* LeanChatMessageTableViewController.m */; };
 		E4D674441ABDA18B0000B18D /* MessageDisplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4D673761ABD9CA30000B18D /* MessageDisplayKit.framework */; };
 		E4D674451ABDA18B0000B18D /* MessageDisplayKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E4D673761ABD9CA30000B18D /* MessageDisplayKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E4D6744A1ABDA2C40000B18D /* AVOSCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4D674481ABDA2C40000B18D /* AVOSCloud.framework */; };
+		E4D6744B1ABDA2C40000B18D /* AVOSCloudIM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4D674491ABDA2C40000B18D /* AVOSCloudIM.framework */; };
+		E4D6744D1ABDA4670000B18D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4D6744C1ABDA4670000B18D /* SystemConfiguration.framework */; };
+		E4D6744F1ABDA46F0000B18D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4D6744E1ABDA46F0000B18D /* MobileCoreServices.framework */; };
+		E4D674511ABDA4740000B18D /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4D674501ABDA4740000B18D /* CoreTelephony.framework */; };
+		E4D674531ABDA47B0000B18D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4D674521ABDA47B0000B18D /* CoreLocation.framework */; };
+		E4D674621ABDA6860000B18D /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E4D674611ABDA6860000B18D /* libicucore.dylib */; };
+		E4D674641ABDBF900000B18D /* TableViewBackgroundImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D674631ABDBF900000B18D /* TableViewBackgroundImage@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -246,6 +254,14 @@
 		E4D6743B1ABD9EAF0000B18D /* LeanChatManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeanChatManager.m; sourceTree = "<group>"; };
 		E4D6743E1ABD9F0B0000B18D /* LeanChatMessageTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeanChatMessageTableViewController.h; sourceTree = "<group>"; };
 		E4D6743F1ABD9F0B0000B18D /* LeanChatMessageTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeanChatMessageTableViewController.m; sourceTree = "<group>"; };
+		E4D674481ABDA2C40000B18D /* AVOSCloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloud.framework; sourceTree = "<group>"; };
+		E4D674491ABDA2C40000B18D /* AVOSCloudIM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloudIM.framework; sourceTree = "<group>"; };
+		E4D6744C1ABDA4670000B18D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		E4D6744E1ABDA46F0000B18D /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		E4D674501ABDA4740000B18D /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		E4D674521ABDA47B0000B18D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		E4D674611ABDA6860000B18D /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		E4D674631ABDBF900000B18D /* TableViewBackgroundImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TableViewBackgroundImage@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -253,7 +269,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4D674621ABDA6860000B18D /* libicucore.dylib in Frameworks */,
+				E4D674531ABDA47B0000B18D /* CoreLocation.framework in Frameworks */,
+				E4D674511ABDA4740000B18D /* CoreTelephony.framework in Frameworks */,
+				E4D6744F1ABDA46F0000B18D /* MobileCoreServices.framework in Frameworks */,
+				E4D6744D1ABDA4670000B18D /* SystemConfiguration.framework in Frameworks */,
 				E4D674441ABDA18B0000B18D /* MessageDisplayKit.framework in Frameworks */,
+				E4D6744A1ABDA2C40000B18D /* AVOSCloud.framework in Frameworks */,
+				E4D6744B1ABDA2C40000B18D /* AVOSCloudIM.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +295,7 @@
 			children = (
 				E4D6734A1ABD9C5F0000B18D /* MessageDisplayKitLeanchatExample */,
 				E4D673671ABD9C5F0000B18D /* MessageDisplayKitLeanchatExampleTests */,
+				E4D674561ABDA5070000B18D /* Frameworks */,
 				E4D673491ABD9C5F0000B18D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -303,6 +327,7 @@
 		E4D6734B1ABD9C5F0000B18D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E4D674631ABDBF900000B18D /* TableViewBackgroundImage@2x.png */,
 				E4D6734C1ABD9C5F0000B18D /* Info.plist */,
 				E4D6734D1ABD9C5F0000B18D /* main.m */,
 			);
@@ -329,6 +354,7 @@
 		E4D673741ABD9C930000B18D /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				E4D674471ABDA2C40000B18D /* LearnCloud */,
 				E4D673751ABD9C930000B18D /* MessageDisplayKit */,
 			);
 			path = Vendor;
@@ -495,6 +521,27 @@
 			path = IM;
 			sourceTree = "<group>";
 		};
+		E4D674471ABDA2C40000B18D /* LearnCloud */ = {
+			isa = PBXGroup;
+			children = (
+				E4D674481ABDA2C40000B18D /* AVOSCloud.framework */,
+				E4D674491ABDA2C40000B18D /* AVOSCloudIM.framework */,
+			);
+			path = LearnCloud;
+			sourceTree = "<group>";
+		};
+		E4D674561ABDA5070000B18D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E4D674611ABDA6860000B18D /* libicucore.dylib */,
+				E4D674521ABDA47B0000B18D /* CoreLocation.framework */,
+				E4D674501ABDA4740000B18D /* CoreTelephony.framework */,
+				E4D6744E1ABDA46F0000B18D /* MobileCoreServices.framework */,
+				E4D6744C1ABDA4670000B18D /* SystemConfiguration.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -611,6 +658,7 @@
 				E4D674101ABD9CAD0000B18D /* section0_emotion2@2x.png in Resources */,
 				E4D6742E1ABD9CAD0000B18D /* weChatBubble_Sending_Solid@2x.png in Resources */,
 				E4D674251ABD9CAD0000B18D /* sharemore_voipvoice@2x.png in Resources */,
+				E4D674641ABDBF900000B18D /* TableViewBackgroundImage@2x.png in Resources */,
 				E4D673F31ABD9CAD0000B18D /* multiMedia_HL@2x.png in Resources */,
 				E4D6742A1ABD9CAD0000B18D /* VoiceBtn_BlackHL@2x.png in Resources */,
 				E4D6740A1ABD9CAD0000B18D /* section0_emotion11@2x.png in Resources */,
@@ -828,6 +876,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MessageDisplayKitLeanchatExample/Vendor/MessageDisplayKit",
+					"$(PROJECT_DIR)/MessageDisplayKitLeanchatExample/Vendor/LearnCloud",
 				);
 				INFOPLIST_FILE = MessageDisplayKitLeanchatExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
@@ -843,6 +892,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MessageDisplayKitLeanchatExample/Vendor/MessageDisplayKit",
+					"$(PROJECT_DIR)/MessageDisplayKitLeanchatExample/Vendor/LearnCloud",
 				);
 				INFOPLIST_FILE = MessageDisplayKitLeanchatExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;

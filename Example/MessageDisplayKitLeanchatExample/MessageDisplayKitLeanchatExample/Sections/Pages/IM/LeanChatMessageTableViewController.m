@@ -13,32 +13,39 @@
 
 #import <MessageDisplayKit/XHAudioPlayerHelper.h>
 
+// IM
+#import "LeanChatManager.h"
+
 @interface LeanChatMessageTableViewController () <XHAudioPlayerHelperDelegate>
 
 @property (nonatomic, strong) NSArray *emotionManagers;
 
 @property (nonatomic, strong) XHMessageTableViewCell *currentSelectedCell;
 
+@property (nonatomic, strong) AVIMConversation *conversation;
+
+@property (nonatomic, strong) NSArray *clientIDs;
+
+@property (nonatomic, assign) ConversationType conversationType;
+
 @end
 
 @implementation LeanChatMessageTableViewController
 
-
+- (instancetype)initWithClientIDs:(NSArray *)clientIDs {
+    self = [super init];
+    if (self) {
+        self.clientIDs = clientIDs;
+        if (self.clientIDs.count > 1) {
+            self.conversationType = ConversationTypeGrop;
+        }
+    }
+    return self;
+}
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     [[XHAudioPlayerHelper shareInstance] stopAudio];
-}
-
-- (id)init {
-    self = [super init];
-    if (self) {
-        // 配置输入框UI的样式
-//        self.allowsSendVoice = NO;
-//        self.allowsSendFace = NO;
-//        self.allowsSendMultiMedia = NO;
-    }
-    return self;
 }
 
 - (void)viewDidLoad
@@ -52,7 +59,7 @@
 //    [self setBackgroundImage:[UIImage imageNamed:@"TableViewBackgroundImage"]];
     
     // 设置自身用户名
-    self.messageSender = @"Jack";
+    self.messageSender = kDarcyClientID;
     
     // 添加第三方接入数据
     NSMutableArray *shareMenuItems = [NSMutableArray array];
@@ -85,6 +92,23 @@
     
     self.shareMenuItems = shareMenuItems;
     [self.shareMenuView reloadData];
+    
+    // 创建一个对话
+    [[LeanChatManager manager] createConversationsWithClientIDs:self.clientIDs conversationType:self.conversationType completion:^(BOOL succeeded, AVIMConversation *createConversation) {
+        if (succeeded) {
+            self.conversation = createConversation;
+        }
+    }];
+    
+    // 设置接收消息
+    [[LeanChatManager manager] setupDidReceiveCommonMessageCompletion:^(AVIMMessage *message) {
+        // 普通信息
+        [self insertAVIMTextMessage:message];
+    }];
+    [[LeanChatManager manager] setupDidReceiveTypedMessageCompletion:^(AVIMTypedMessage *message) {
+        // 富文本信息
+        [self insertAVIMTextMessage:message];
+    }];
 }
 
 - (void)didReceiveMemoryWarning
@@ -96,6 +120,54 @@
 - (void)dealloc {
     self.emotionManagers = nil;
     [[XHAudioPlayerHelper shareInstance] setDelegate:nil];
+}
+
+
+#pragma mark - LearnChat Message Handle Method
+
+- (void)sendTextMessage:(XHMessage *)textMessage {
+    AVIMTextMessage *sendTextMessage = [AVIMTextMessage messageWithText:textMessage.text attributes:nil];
+    [self.conversation sendMessage:sendTextMessage options:AVIMMessageSendOptionNone callback:^(BOOL succeeded, NSError *error) {
+        
+    }];
+}
+
+- (void)sendPhotoMessage:(XHMessage *)photoMessage {
+    UIImage *photo = photoMessage.photo;
+    NSString *filePaht = [[NSBundle mainBundle] pathForResource:@"TableViewBackgroundImage" ofType:@"png"];
+    AVIMImageMessage *sendPhotoMessage = [AVIMImageMessage messageWithText:nil attachedFilePath:filePaht attributes:nil];
+    [self.conversation sendMessage:sendPhotoMessage callback:^(BOOL succeeded, NSError *error) {
+        
+    }];
+}
+
+- (void)insertAVIMTextMessage:(AVIMTypedMessage *)receiveMessage {
+    AVIMMessageMediaType msgType = receiveMessage.mediaType;
+    switch (msgType) {
+        case kAVIMMessageMediaTypeText: {
+            AVIMTextMessage *receiveTextMessage = (AVIMTextMessage *)receiveMessage;
+            XHMessage *textMessage = [[XHMessage alloc] initWithText:receiveTextMessage.text sender:receiveMessage.clientId timestamp:[NSDate date]];
+            textMessage.bubbleMessageType = XHBubbleMessageTypeReceiving;
+            textMessage.avatar = [UIImage imageNamed:@"Avatar"];
+            textMessage.avatarUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
+            [self addMessage:textMessage];
+            [self finishSendMessageWithBubbleMessageType:XHBubbleMessageMediaTypeText];
+            
+            break;
+        }
+        case kAVIMMessageMediaTypeImage: {
+            AVIMImageMessage *imageMessage = (AVIMImageMessage *)receiveMessage;
+            XHMessage *textMessage = [[XHMessage alloc] initWithPhoto:nil thumbnailUrl:imageMessage.file.url originPhotoUrl:nil sender:imageMessage.clientId timestamp:[NSDate date]];
+            textMessage.bubbleMessageType = XHBubbleMessageTypeReceiving;
+            textMessage.avatar = [UIImage imageNamed:@"Avatar"];
+            textMessage.avatarUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
+            [self addMessage:textMessage];
+            [self finishSendMessageWithBubbleMessageType:XHBubbleMessageMediaTypeText];
+            break;
+        }
+        default:
+            break;
+    }
 }
 
 /*
@@ -231,6 +303,7 @@
     textMessage.avatarUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
     [self addMessage:textMessage];
     [self finishSendMessageWithBubbleMessageType:XHBubbleMessageMediaTypeText];
+    [self sendTextMessage:textMessage];
 }
 
 /**
@@ -246,6 +319,7 @@
     photoMessage.avatarUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
     [self addMessage:photoMessage];
     [self finishSendMessageWithBubbleMessageType:XHBubbleMessageMediaTypePhoto];
+    [self sendPhotoMessage:photoMessage];
 }
 
 /**

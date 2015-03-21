@@ -10,6 +10,8 @@
 
 #import "LeanChatMessageTableViewController.h"
 
+#import "LeanChatManager.h"
+
 @interface ViewController ()
 
 @end
@@ -26,16 +28,32 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)enterSingleIM:(id)sender {
-    [self navigationToIM];
+- (IBAction)enterJackToDarcySingleIM:(id)sender {
+    // 打开通信链路
+    [[LeanChatManager manager] openSessionWithClientID:kJackClientID completion:^(BOOL succeeded, NSError *error) {
+        NSLog(@"成功与否 : %d  错误 : %@", succeeded, error);
+        [self navigationToIMWithTargetClientIDs:@[kDarcyClientID]];
+    }];
+}
+
+- (IBAction)enterDarcyToJackSingleIM:(id)sender {
+    // 打开通信链路
+    [[LeanChatManager manager] openSessionWithClientID:kDarcyClientID completion:^(BOOL succeeded, NSError *error) {
+        NSLog(@"成功与否 : %d  错误 : %@", succeeded, error);
+        [self navigationToIMWithTargetClientIDs:@[kJackClientID]];
+    }];
 }
 
 - (IBAction)enterMultipleIM:(id)sender {
-    [self navigationToIM];
+    // 打开通信链路
+    [[LeanChatManager manager] openSessionWithClientID:kJackClientID completion:^(BOOL succeeded, NSError *error) {
+        NSLog(@"成功与否 : %d  错误 : %@", succeeded, error);
+        [self navigationToIMWithTargetClientIDs:@[kJackClientID, kDarcyClientID, kJaysonClientID]];
+    }];
 }
 
-- (void)navigationToIM {
-    LeanChatMessageTableViewController *leanChatMessageTableViewController = [[LeanChatMessageTableViewController alloc] init];
+- (void)navigationToIMWithTargetClientIDs:(NSArray *)clientIDs {
+    LeanChatMessageTableViewController *leanChatMessageTableViewController = [[LeanChatMessageTableViewController alloc] initWithClientIDs:clientIDs];
     [self.navigationController pushViewController:leanChatMessageTableViewController animated:YES];
 }
 

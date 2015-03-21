@@ -10,4 +10,6 @@
 
 @interface LeanChatMessageTableViewController : XHMessageTableViewController
 
+- (instancetype)initWithClientIDs:(NSArray *)clientIDs;
+
 @end
