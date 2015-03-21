@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:MessageDisplayKitLeanchatExample/MessageDisplayKitLeanchatExample.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:MessageDisplayKitWeChatExample/MessageDisplayKitWeChatExample.xcodeproj">
    </FileRef>
    <FileRef
