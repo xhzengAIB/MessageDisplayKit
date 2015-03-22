@@ -174,8 +174,8 @@
 
 typedef void (^FetchFileBlock)(NSString* path,NSError* error);
 
--(void)fetchDataOfMessageFile:(AVFile*)file messageId:(NSString*)messageId completion:(FetchFileBlock)completion{
-    NSString* path=[[NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, YES) firstObject] stringByAppendingString:messageId];
+-(void)fetchDataOfMessageFile:(AVFile*)file fileName:(NSString*)fileName completion:(FetchFileBlock)completion{
+    NSString* path=[[NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, YES) firstObject] stringByAppendingString:fileName];
     [file getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
         if(error){
             DLog(@"%@",error);
@@ -214,7 +214,7 @@ typedef void (^FetchFileBlock)(NSString* path,NSError* error);
         }
         case kAVIMMessageMediaTypeAudio:{
             WEAKSELF;
-            [self fetchDataOfMessageFile:receiveMessage.file messageId:receiveMessage.messageId completion:^(NSString *path, NSError *error) {
+            [self fetchDataOfMessageFile:receiveMessage.file fileName:receiveMessage.messageId completion:^(NSString *path, NSError *error) {
                 NSDate* timestamp=[NSDate dateWithTimeIntervalSince1970:receiveMessage.sendTimestamp/1000];
                 AVIMAudioMessage* audioMessage=(AVIMAudioMessage*)receiveMessage;
                 XHMessage* voiceMessage=[[XHMessage alloc] initWithVoicePath:path voiceUrl:nil voiceDuration:[NSString stringWithFormat:@"%.1f",audioMessage.duration] sender:receiveMessage.clientId timestamp:timestamp];
@@ -229,7 +229,7 @@ typedef void (^FetchFileBlock)(NSString* path,NSError* error);
         case kAVIMMessageMediaTypeEmotion:{
             WEAKSELF
             AVFile* file=[AVFile fileWithURL:receiveMessage.text];
-            [self fetchDataOfMessageFile:file messageId:receiveMessage.messageId completion:^(NSString *path, NSError *error) {
+            [self fetchDataOfMessageFile:file fileName:receiveMessage.messageId completion:^(NSString *path, NSError *error) {
                 NSDate* timestamp=[NSDate dateWithTimeIntervalSince1970:receiveMessage.sendTimestamp/1000];
                 XHMessage *emotionMessage = [[XHMessage alloc] initWithEmotionPath:path sender:receiveMessage.clientId timestamp:timestamp];
                 emotionMessage.bubbleMessageType = XHBubbleMessageTypeReceiving;
@@ -242,13 +242,12 @@ typedef void (^FetchFileBlock)(NSString* path,NSError* error);
         }
         case kAVIMMessageMediaTypeVideo:{
             WEAKSELF
-            [self fetchDataOfMessageFile:receiveMessage.file messageId:receiveMessage.messageId completion:^(NSString *path, NSError *error) {
-                UIImage *thumbnailImage;
-                if(!error){
-                    thumbnailImage= [XHMessageVideoConverPhotoFactory videoConverPhotoWithVideoPath:path];
-                }
+            AVIMVideoMessage* receiveVideoMessage=(AVIMVideoMessage*)receiveMessage;
+            NSString* format=receiveVideoMessage.format;
+            [self fetchDataOfMessageFile:receiveMessage.file fileName:[NSString stringWithFormat:@"%@.%@",receiveMessage.messageId,format] completion:^(NSString *path, NSError *error) {
+                DLog(@"error:%@",error);
                 NSDate* timestamp=[NSDate dateWithTimeIntervalSince1970:receiveMessage.sendTimestamp/1000];
-                XHMessage *videoMessage = [[XHMessage alloc] initWithVideoConverPhoto:thumbnailImage videoPath:path videoUrl:nil sender:receiveMessage.clientId timestamp:timestamp];
+                XHMessage *videoMessage = [[XHMessage alloc] initWithVideoConverPhoto:[XHMessageVideoConverPhotoFactory videoConverPhotoWithVideoPath:path] videoPath:path videoUrl:nil sender:receiveMessage.clientId timestamp:timestamp];
                 videoMessage.bubbleMessageType = XHBubbleMessageTypeReceiving;
                 videoMessage.avatar = [UIImage imageNamed:@"Avatar"];
                 videoMessage.avatarUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
