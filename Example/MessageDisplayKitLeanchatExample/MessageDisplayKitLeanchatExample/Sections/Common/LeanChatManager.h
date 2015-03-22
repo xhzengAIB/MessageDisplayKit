@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <AVOSCloud/AVOSCloud.h>
 #import <AVOSCloudIM/AVOSCloudIM.h>
+#import "AVIMEmotionMessage.h"
 
 #define kJackClientID @"Jack"
 #define kDarcyClientID @"Darcy"
@@ -27,6 +28,8 @@ typedef void(^DidReceiveTypedMessageBlock)(AVIMTypedMessage *message);
 + (void)setupApplication;
 
 + (instancetype)manager;
+
+-(NSString*)selfClientID;
 
 - (void)setupDidReceiveCommonMessageCompletion:(DidReceiveCommonMessageBlock)didReceiveCommonMessageCompletion;
 - (void)setupDidReceiveTypedMessageCompletion:(DidReceiveTypedMessageBlock)didReceiveTypedMessageCompletion;

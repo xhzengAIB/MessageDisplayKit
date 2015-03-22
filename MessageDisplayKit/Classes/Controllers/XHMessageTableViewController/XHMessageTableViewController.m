@@ -1117,6 +1117,9 @@ static CGPoint  delayOffset = {0.0};
             }];
             break;
         }
+        case 4:{
+            break;
+        }
         default:
             break;
     }

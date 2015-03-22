@@ -11,13 +11,9 @@
 #define kApplicationId @"3zkueubi18r0r0n47rc9revnlun0xuajsfv5byo17kdodut8"
 #define kClientKey @"ujtz5q7cl84iqhtawjnbk32c4rqtjel3pz6xctekak054cje"
 
-// 有常量定义：
-const int kConversationTypeOneToOne = 0; // 表示一对一的单聊
-const int kConversationTypeGroup = 1;  // 表示多人群聊
-
 @interface LeanChatManager () <AVIMClientDelegate>
 
-@property (nonatomic, strong) AVIMClient *learnClient;
+@property (nonatomic, strong) AVIMClient *leanClient;
 
 @property (nonatomic, copy) NSString *selfClientID;
 
@@ -30,6 +26,13 @@ const int kConversationTypeGroup = 1;  // 表示多人群聊
 
 + (void)setupApplication {
     [AVOSCloud setApplicationId:kApplicationId clientKey:kClientKey];
+#ifdef DEBUG
+    [AVAnalytics setAnalyticsEnabled:NO];
+    [AVOSCloud setVerbosePolicy:kAVVerboseShow];
+    [AVLogger addLoggerDomain:AVLoggerDomainIM];
+    [AVLogger addLoggerDomain:AVLoggerDomainCURL];
+    [AVLogger setLoggerLevelMask:AVLoggerLevelAll];
+#endif
 }
 
 + (instancetype)manager {
@@ -42,8 +45,8 @@ const int kConversationTypeGroup = 1;  // 表示多人群聊
 }
 
 - (void)setup {
-    self.learnClient = [[AVIMClient alloc] init];
-    self.learnClient.delegate = self;
+    self.leanClient = [[AVIMClient alloc] init];
+    self.leanClient.delegate = self;
 }
 
 - (instancetype)init {
@@ -67,11 +70,11 @@ const int kConversationTypeGroup = 1;  // 表示多人群聊
 - (void)openSessionWithClientID:(NSString *)clientID
                      completion:(void (^)(BOOL succeeded, NSError *error))completion {
     self.selfClientID = clientID;
-    if (self.learnClient.status == AVIMClientStatusNone) {
-        [self.learnClient openWithClientId:clientID callback:completion];
+    if (self.leanClient.status == AVIMClientStatusNone) {
+        [self.leanClient openWithClientId:clientID callback:completion];
     } else {
-        [self.learnClient closeWithCallback:^(BOOL succeeded, NSError *error) {
-            [self.learnClient openWithClientId:clientID callback:completion];
+        [self.leanClient closeWithCallback:^(BOOL succeeded, NSError *error) {
+            [self.leanClient openWithClientId:clientID callback:completion];
         }];
     }
 }
@@ -87,7 +90,7 @@ const int kConversationTypeGroup = 1;  // 表示多人群聊
 - (void)createConversationsOnClientIDs:(NSArray *)clientIDs
                       conversationType:(int)conversationType
                             completion:(void (^)(BOOL, AVIMConversation *))completion {
-    AVIMConversationQuery *query = [self.learnClient conversationQuery];
+    AVIMConversationQuery *query = [self.leanClient conversationQuery];
     NSMutableArray *queryClientIDs = [[NSMutableArray alloc] initWithArray:clientIDs];
     [queryClientIDs insertObject:self.selfClientID atIndex:0];
     [query whereKey:kAVIMKeyMember containsAllObjectsInArray:queryClientIDs];
@@ -100,7 +103,7 @@ const int kConversationTypeGroup = 1;  // 表示多人群聊
             }
         } else if (!objects || [objects count] < 1) {
             // 新建一个对话
-            [self.learnClient createConversationWithName:nil
+            [self.leanClient createConversationWithName:nil
                                                clientIds:queryClientIDs
                                               attributes:@{@"type":[NSNumber numberWithInt:conversationType]}
                                                  options:AVIMConversationOptionNone
