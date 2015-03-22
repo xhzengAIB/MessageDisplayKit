@@ -11,10 +11,6 @@
 #define kApplicationId @"3zkueubi18r0r0n47rc9revnlun0xuajsfv5byo17kdodut8"
 #define kClientKey @"ujtz5q7cl84iqhtawjnbk32c4rqtjel3pz6xctekak054cje"
 
-// 有常量定义：
-const int kConversationTypeOneToOne = 0; // 表示一对一的单聊
-const int kConversationTypeGroup = 1;  // 表示多人群聊
-
 @interface LeanChatManager () <AVIMClientDelegate>
 
 @property (nonatomic, strong) AVIMClient *learnClient;
@@ -30,6 +26,13 @@ const int kConversationTypeGroup = 1;  // 表示多人群聊
 
 + (void)setupApplication {
     [AVOSCloud setApplicationId:kApplicationId clientKey:kClientKey];
+#ifdef DEBUG
+    [AVAnalytics setAnalyticsEnabled:NO];
+    [AVOSCloud setVerbosePolicy:kAVVerboseShow];
+    [AVLogger addLoggerDomain:AVLoggerDomainIM];
+    [AVLogger addLoggerDomain:AVLoggerDomainCURL];
+    [AVLogger setLoggerLevelMask:AVLoggerLevelAll];
+#endif
 }
 
 + (instancetype)manager {
