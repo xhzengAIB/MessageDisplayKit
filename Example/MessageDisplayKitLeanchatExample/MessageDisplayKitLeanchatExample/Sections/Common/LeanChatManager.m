@@ -13,7 +13,7 @@
 
 @interface LeanChatManager () <AVIMClientDelegate>
 
-@property (nonatomic, strong) AVIMClient *learnClient;
+@property (nonatomic, strong) AVIMClient *leanClient;
 
 @property (nonatomic, copy) NSString *selfClientID;
 
@@ -45,8 +45,8 @@
 }
 
 - (void)setup {
-    self.learnClient = [[AVIMClient alloc] init];
-    self.learnClient.delegate = self;
+    self.leanClient = [[AVIMClient alloc] init];
+    self.leanClient.delegate = self;
 }
 
 - (instancetype)init {
@@ -70,11 +70,11 @@
 - (void)openSessionWithClientID:(NSString *)clientID
                      completion:(void (^)(BOOL succeeded, NSError *error))completion {
     self.selfClientID = clientID;
-    if (self.learnClient.status == AVIMClientStatusNone) {
-        [self.learnClient openWithClientId:clientID callback:completion];
+    if (self.leanClient.status == AVIMClientStatusNone) {
+        [self.leanClient openWithClientId:clientID callback:completion];
     } else {
-        [self.learnClient closeWithCallback:^(BOOL succeeded, NSError *error) {
-            [self.learnClient openWithClientId:clientID callback:completion];
+        [self.leanClient closeWithCallback:^(BOOL succeeded, NSError *error) {
+            [self.leanClient openWithClientId:clientID callback:completion];
         }];
     }
 }
@@ -90,7 +90,7 @@
 - (void)createConversationsOnClientIDs:(NSArray *)clientIDs
                       conversationType:(int)conversationType
                             completion:(void (^)(BOOL, AVIMConversation *))completion {
-    AVIMConversationQuery *query = [self.learnClient conversationQuery];
+    AVIMConversationQuery *query = [self.leanClient conversationQuery];
     NSMutableArray *queryClientIDs = [[NSMutableArray alloc] initWithArray:clientIDs];
     [queryClientIDs insertObject:self.selfClientID atIndex:0];
     [query whereKey:kAVIMKeyMember containsAllObjectsInArray:queryClientIDs];
@@ -103,7 +103,7 @@
             }
         } else if (!objects || [objects count] < 1) {
             // 新建一个对话
-            [self.learnClient createConversationWithName:nil
+            [self.leanClient createConversationWithName:nil
                                                clientIds:queryClientIDs
                                               attributes:@{@"type":[NSNumber numberWithInt:conversationType]}
                                                  options:AVIMConversationOptionNone
