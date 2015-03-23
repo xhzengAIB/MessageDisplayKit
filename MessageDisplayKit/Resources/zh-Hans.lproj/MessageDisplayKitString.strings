@@ -35,3 +35,10 @@
 "Setting" = "设置";
 "Profile" = "我";
 "News" = "新闻";
+
+"HoldToTalk" = "按住说话";
+"ReleaseToSend" = "放开发送";
+"SlideToCancel" = "向上滑动取消";
+"ReleaseToCancel" = "松开取消";
+"SendAMessage" = "发送新消息";
+"MessageLocation" = "消息位置";
