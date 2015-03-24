@@ -48,7 +48,7 @@
 + (CGFloat)neededWidthForText:(NSString *)text {
     CGSize stringSize;
     stringSize = [text sizeWithFont:[[XHMessageBubbleView appearance] font]
-                     constrainedToSize:CGSizeMake(MAXFLOAT, 19)];
+                     constrainedToSize:CGSizeMake(MAXFLOAT, 19.5)];
     return roundf(stringSize.width);
 }
 
