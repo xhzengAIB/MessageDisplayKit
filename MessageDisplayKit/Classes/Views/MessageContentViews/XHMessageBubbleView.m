@@ -47,8 +47,22 @@
 
 + (CGFloat)neededWidthForText:(NSString *)text {
     CGSize stringSize;
-    stringSize = [text sizeWithFont:[[XHMessageBubbleView appearance] font]
-                     constrainedToSize:CGSizeMake(MAXFLOAT, 19)];
+    if ([text containsString:@"\n"]) {
+        NSArray* array = [text componentsSeparatedByString:@"\n"];
+        stringSize = CGSizeMake(0, 0);
+        CGSize temp;
+        for (int i=0; i<array.count; i++) {
+            temp = [[array objectAtIndex:i] sizeWithFont:[[XHMessageBubbleView appearance] font] constrainedToSize:CGSizeMake(MAXFLOAT, 20)];
+            if (temp.width>stringSize.width) {
+                stringSize = temp;
+            }
+        }
+    }
+    else{
+        stringSize = [text sizeWithFont:[[XHMessageBubbleView appearance] font]
+                      constrainedToSize:CGSizeMake(MAXFLOAT, 20)];
+    }
+
     return roundf(stringSize.width);
 }
 
