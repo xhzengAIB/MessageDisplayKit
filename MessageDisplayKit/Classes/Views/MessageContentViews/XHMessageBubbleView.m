@@ -47,7 +47,8 @@
 
 + (CGFloat)neededWidthForText:(NSString *)text {
     CGSize stringSize;
-    if ([text containsString:@"\n"]) {
+    NSRange range = [text rangeOfString:@"\n" options:0];
+    if (range.length > 0) {
         NSArray* array = [text componentsSeparatedByString:@"\n"];
         stringSize = CGSizeMake(0, 0);
         CGSize temp;
