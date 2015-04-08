@@ -379,7 +379,7 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
         
         // 1、是否显示Time Line的label
         if (!_timestampLabel) {
-            LKBadgeView *timestampLabel = [[LKBadgeView alloc] initWithFrame:CGRectMake(0, kXHLabelPadding, 160, kXHTimeStampLabelHeight)];
+            LKBadgeView *timestampLabel = [[LKBadgeView alloc] initWithFrame:CGRectMake(0, kXHLabelPadding, MDK_SCREEN_WIDTH, kXHTimeStampLabelHeight)];
             timestampLabel.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleLeftMargin;
             timestampLabel.badgeColor = [UIColor colorWithWhite:0.000 alpha:0.380];
             timestampLabel.textColor = [UIColor whiteColor];

@@ -386,7 +386,7 @@
         [button setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
         [button setTitle:NSLocalizedStringFromTable(@"HoldToTalk", @"MessageDisplayKitString", nil) forState:UIControlStateNormal];
         [button setTitle:NSLocalizedStringFromTable(@"ReleaseToSend", @"MessageDisplayKitString", nil)  forState:UIControlStateHighlighted];
-        buttonFrame = _inputTextView.frame;
+        buttonFrame = CGRectMake(textViewLeftMargin-5, 0, width+10, self.frame.size.height);
         button.frame = buttonFrame;
         button.alpha = self.voiceChangeButton.selected;
         [button addTarget:self action:@selector(holdDownButtonTouchDown) forControlEvents:UIControlEventTouchDown];
