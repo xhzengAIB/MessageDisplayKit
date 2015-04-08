@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GFn-pQ-f5D">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--主页-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X9U-Xi-nuK">
+                                <rect key="frame" x="144" y="156" width="312" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="106" id="OX1-Sg-RIM"/>
+                                    <constraint firstAttribute="height" constant="35" id="gsQ-2H-0ue"/>
+                                    <constraint firstAttribute="width" constant="312" id="yuH-4N-Bdp"/>
+                                </constraints>
+                                <state key="normal" title="点击进入单聊（是Jack想与Darcy一对一聊天）">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="OX1-Sg-RIM"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="enterJackToDarcySingleIM:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z6u-gq-1gK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N3r-tF-s8h">
+                                <rect key="frame" x="112" y="349" width="376" height="106"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="376" id="b2V-Ug-Qfp"/>
+                                    <constraint firstAttribute="height" constant="106" id="tFq-YG-DJs"/>
+                                </constraints>
+                                <state key="normal" title="点击进入群聊（是Jack想发起与Darcy和Jayson的群聊）">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="enterMultipleIM:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b3X-4a-nah"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我是Jack" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AEO-gr-WHn">
+                                <rect key="frame" x="16" y="78" width="71" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="待定的Jayson" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oJl-RA-UZD">
+                                <rect key="frame" x="247" y="559" width="106" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="对方是Darcy" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="da7-V6-t8Z">
+                                <rect key="frame" x="488" y="78" width="96" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gso-r2-eSs">
+                                <rect key="frame" x="144" y="204" width="312" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="9yO-Ef-hck"/>
+                                    <constraint firstAttribute="height" constant="106" id="fFQ-cF-faT"/>
+                                    <constraint firstAttribute="width" constant="312" id="kkJ-dh-ALa"/>
+                                </constraints>
+                                <state key="normal" title="点击进入单聊（是Darcy想与Jack一对一聊天）">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="fFQ-cF-faT"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="enterDarcyToJackSingleIM:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KNV-Fu-dkn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gso-r2-eSs" firstAttribute="top" secondItem="X9U-Xi-nuK" secondAttribute="bottom" constant="13" id="51D-0f-q9T"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="X9U-Xi-nuK" secondAttribute="trailing" constant="134" id="6PC-lh-cJO"/>
+                            <constraint firstItem="AEO-gr-WHn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="14" id="6Wv-XR-1Uo"/>
+                            <constraint firstAttribute="centerX" secondItem="X9U-Xi-nuK" secondAttribute="centerX" id="Agw-Gg-nja"/>
+                            <constraint firstItem="X9U-Xi-nuK" firstAttribute="width" secondItem="N3r-tF-s8h" secondAttribute="width" id="Brt-gL-qag"/>
+                            <constraint firstItem="X9U-Xi-nuK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="92" id="Cmv-5G-BsM"/>
+                            <constraint firstItem="N3r-tF-s8h" firstAttribute="top" secondItem="X9U-Xi-nuK" secondAttribute="bottom" constant="158" id="HCB-wk-8uq"/>
+                            <constraint firstItem="X9U-Xi-nuK" firstAttribute="centerX" secondItem="gso-r2-eSs" secondAttribute="centerX" id="Ihc-m2-eZT"/>
+                            <constraint firstItem="X9U-Xi-nuK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="134" id="Lg4-Ca-JyH"/>
+                            <constraint firstItem="X9U-Xi-nuK" firstAttribute="centerX" secondItem="N3r-tF-s8h" secondAttribute="centerX" id="RC4-bj-47z"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="oJl-RA-UZD" secondAttribute="bottom" constant="20" id="SVz-Lq-zNq"/>
+                            <constraint firstItem="X9U-Xi-nuK" firstAttribute="centerX" secondItem="N3r-tF-s8h" secondAttribute="centerX" id="VNH-xl-Xx6"/>
+                            <constraint firstItem="AEO-gr-WHn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="a0K-kn-sDu"/>
+                            <constraint firstItem="X9U-Xi-nuK" firstAttribute="centerX" secondItem="N3r-tF-s8h" secondAttribute="centerX" id="aTU-tn-sIT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="X9U-Xi-nuK" secondAttribute="trailing" constant="134" id="gDJ-xb-qk6"/>
+                            <constraint firstItem="da7-V6-t8Z" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="jGg-p9-JfQ"/>
+                            <constraint firstItem="N3r-tF-s8h" firstAttribute="top" secondItem="X9U-Xi-nuK" secondAttribute="bottom" constant="87" id="nHv-3w-Ifm"/>
+                            <constraint firstItem="X9U-Xi-nuK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="134" id="oFq-e1-p48"/>
+                            <constraint firstItem="X9U-Xi-nuK" firstAttribute="height" secondItem="N3r-tF-s8h" secondAttribute="height" id="ofT-WI-EA5"/>
+                            <constraint firstItem="X9U-Xi-nuK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="92" id="sgi-9Z-JAk"/>
+                            <constraint firstItem="da7-V6-t8Z" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="14" id="xJn-kc-obm"/>
+                            <constraint firstItem="X9U-Xi-nuK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="92" id="yoy-h4-ohC"/>
+                            <constraint firstAttribute="centerX" secondItem="oJl-RA-UZD" secondAttribute="centerX" id="zhK-fN-Mwg"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="6PC-lh-cJO"/>
+                                <exclude reference="Brt-gL-qag"/>
+                                <exclude reference="Cmv-5G-BsM"/>
+                                <exclude reference="Lg4-Ca-JyH"/>
+                                <exclude reference="RC4-bj-47z"/>
+                                <exclude reference="VNH-xl-Xx6"/>
+                                <exclude reference="gDJ-xb-qk6"/>
+                                <exclude reference="oFq-e1-p48"/>
+                                <exclude reference="ofT-WI-EA5"/>
+                                <exclude reference="yoy-h4-ohC"/>
+                                <exclude reference="nHv-3w-Ifm"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="主页" id="cE4-eI-zr7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="948" y="1076"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="w3q-c5-Y0m">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GFn-pQ-f5D" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dNn-Vi-rVN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="8Yj-2b-c4A"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QXo-T7-D80" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="180" y="1076"/>
+        </scene>
+    </scenes>
+</document>
