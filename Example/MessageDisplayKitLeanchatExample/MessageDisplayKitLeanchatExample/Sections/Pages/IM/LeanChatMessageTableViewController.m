@@ -105,10 +105,14 @@
                         [messages addObject:[self displayMessageByAVIMTypedMessage:typedMessage]];
                     }
                     dispatch_async(dispatch_get_main_queue(), ^{
+                        DLog();
                         self.messages=messages;
                         [self.messageTableView reloadData];
                         [self scrollToBottomAnimated:YES];
-                        self.loadingMoreMessage=NO;
+                        //延迟，以避免滚动触发上拉
+                        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.5*NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+                            self.loadingMoreMessage=NO;
+                        });
                     });
                 });
             }];
@@ -312,6 +316,7 @@
 }
 
 - (void)loadMoreMessagesScrollTotop {
+    DLog();
     if(self.messages.count==0){
         return;
     }else{
