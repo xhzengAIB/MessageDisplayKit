@@ -471,8 +471,9 @@
  *
  *  @return 根据indexPath获取消息的Model的对象，从而判断返回YES or NO来控制是否显示时间轴Label
  */
+
 - (BOOL)shouldDisplayTimestampForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if(indexPath.row==0){
+    if(indexPath.row==0 || indexPath.row>=self.messages.count){
         return YES;
     }else{
         XHMessage* message=[self.messages objectAtIndex:indexPath.row];
