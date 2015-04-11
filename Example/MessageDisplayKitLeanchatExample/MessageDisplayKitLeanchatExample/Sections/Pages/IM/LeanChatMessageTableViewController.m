@@ -227,7 +227,7 @@
 }
 
 -(NSString*)displayNameByClientId:(NSString*)clientId{
-    return [clientId stringByAppendingString:@"test"];
+    return clientId;
 }
 
 #pragma mark - XHMessageTableViewCell delegate
@@ -472,10 +472,18 @@
  *  @return 根据indexPath获取消息的Model的对象，从而判断返回YES or NO来控制是否显示时间轴Label
  */
 - (BOOL)shouldDisplayTimestampForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row % 2)
+    if(indexPath.row==0){
         return YES;
-    else
-        return NO;
+    }else{
+        XHMessage* message=[self.messages objectAtIndex:indexPath.row];
+        XHMessage* previousMessage=[self.messages objectAtIndex:indexPath.row-1];
+        NSInteger interval=[message.timestamp timeIntervalSinceDate:previousMessage.timestamp];
+        if(interval>60*3){
+            return YES;
+        }else{
+            return NO;
+        }
+    }
 }
 
 /**
