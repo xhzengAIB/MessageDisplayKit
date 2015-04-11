@@ -94,9 +94,24 @@
     [self.shareMenuView reloadData];
     
     // 创建一个对话
+    self.loadingMoreMessage=YES;
     [[LeanChatManager manager] createConversationsWithClientIDs:self.clientIDs conversationType:self.conversationType completion:^(BOOL succeeded, AVIMConversation *createConversation) {
         if (succeeded) {
             self.conversation = createConversation;
+            [self.conversation queryMessagesBeforeId:nil timestamp:0 limit:20 callback:^(NSArray *typedMessages, NSError *error) {
+                dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                    NSMutableArray* messages=[NSMutableArray array];
+                    for(AVIMTypedMessage* typedMessage in typedMessages){
+                        [messages addObject:[self displayMessageByAVIMTypedMessage:typedMessage]];
+                    }
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        self.messages=messages;
+                        [self.messageTableView reloadData];
+                        [self scrollToBottomAnimated:YES];
+                        self.loadingMoreMessage=NO;
+                    });
+                });
+            }];
         }
     }];
     
@@ -125,140 +140,70 @@
 
 #pragma mark - LearnChat Message Handle Method
 
-- (void)sendTextMessage:(XHMessage *)textMessage {
-    AVIMTextMessage *sendTextMessage = [AVIMTextMessage messageWithText:textMessage.text attributes:nil];
-    [self.conversation sendMessage:sendTextMessage options:AVIMMessageSendOptionNone callback:^(BOOL succeeded, NSError *error) {
-        
-    }];
-}
-
-- (void)sendPhotoMessage:(XHMessage *)photoMessage {
-    UIImage *photo = photoMessage.photo;
-    NSString *filePath = [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject] stringByAppendingPathComponent:@"tmp.jpg"];
-    NSData* photoData=UIImageJPEGRepresentation(photo,1.0);
-    [photoData writeToFile:filePath atomically:YES];
-    AVIMImageMessage *sendPhotoMessage = [AVIMImageMessage messageWithText:nil attachedFilePath:filePath attributes:nil];
-    [self.conversation sendMessage:sendPhotoMessage callback:^(BOOL succeeded, NSError *error) {
-        DLog(@"succeed: %d, error:%@ ",succeeded,error);
-    }];
-}
-
--(void)sendVoiceMessage:(XHMessage*)voiceMessage{;
-    AVIMAudioMessage* sendAudioMessage=[AVIMAudioMessage messageWithText:nil attachedFilePath:voiceMessage.voicePath attributes:nil];
-    [self.conversation sendMessage:sendAudioMessage callback:^(BOOL succeeded, NSError *error) {
-        DLog(@"succeed: %d, error:%@ ",succeeded,error);
-    }];
-}
-
--(void)sendEmotionMessage:(XHMessage*)emotionMessage{
-    AVFile* file=[AVFile fileWithName:@"emotion" contentsAtPath:emotionMessage.emotionPath];
-    WEAKSELF
-    [file saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if(error==nil){
-            AVIMEmotionMessage* sendEmotionMessage=[AVIMEmotionMessage messageWithText:file.url attributes:nil];
-            [weakSelf.conversation sendMessage:sendEmotionMessage callback:^(BOOL succeeded, NSError *error) {
-                DLog(@"succeed: %d, error:%@ ",succeeded,error);
-            }];
-        }else{
-            DLog(@"error:%@",error);
-        }
-    }];
-}
-
--(void)sendVideoMessage:(XHMessage*)videoMessage{
-    AVIMVideoMessage* sendVideoMessage=[AVIMVideoMessage messageWithText:nil attachedFilePath:videoMessage.videoPath attributes:nil];
-    [self.conversation sendMessage:sendVideoMessage callback:^(BOOL succeeded, NSError *error) {
-        DLog(@"succeed: %d, error:%@ ",succeeded,error);
-    }];
-}
-
-typedef void (^FetchFileBlock)(NSString* path,NSError* error);
-
--(void)fetchDataOfMessageFile:(AVFile*)file fileName:(NSString*)fileName completion:(FetchFileBlock)completion{
+-(NSString*)fetchDataOfMessageFile:(AVFile*)file fileName:(NSString*)fileName error:(NSError**)error{
     NSString* path=[[NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, YES) firstObject] stringByAppendingString:fileName];
-    [file getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
-        if(error){
-            DLog(@"%@",error);
-            completion(nil,error);
-        }else{
-            [data writeToFile:path atomically:YES];
-            completion(path,error);
-        }
-    }];
+    NSData* data=[file getData:error];
+    if(*error==nil){
+        [data writeToFile:path atomically:YES];
+    }
+    return path;
 }
 
-- (void)insertAVIMTypedMessage:(AVIMTypedMessage *)receiveMessage {
-    AVIMMessageMediaType msgType = receiveMessage.mediaType;
+-(XHMessage*)displayMessageByAVIMTypedMessage:(AVIMTypedMessage*)typedMessage{
+    AVIMMessageMediaType msgType = typedMessage.mediaType;
+    XHMessage* message;
+    NSDate* timestamp=[NSDate dateWithTimeIntervalSince1970:typedMessage.sendTimestamp/1000];
     switch (msgType) {
         case kAVIMMessageMediaTypeText: {
-            AVIMTextMessage *receiveTextMessage = (AVIMTextMessage *)receiveMessage;
-            NSDate* timestamp=[NSDate dateWithTimeIntervalSince1970:receiveMessage.sendTimestamp/1000];
-            XHMessage *textMessage = [[XHMessage alloc] initWithText:receiveTextMessage.text sender:receiveMessage.clientId timestamp:timestamp];
-            textMessage.bubbleMessageType = XHBubbleMessageTypeReceiving;
-            textMessage.avatar = [UIImage imageNamed:@"Avatar"];
-            textMessage.avatarUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
-            [self addMessage:textMessage];
-            [self finishSendMessageWithBubbleMessageType:XHBubbleMessageMediaTypeText];
+            AVIMTextMessage *receiveTextMessage = (AVIMTextMessage *)typedMessage;
+            message = [[XHMessage alloc] initWithText:receiveTextMessage.text sender:typedMessage.clientId timestamp:timestamp];
             break;
         }
         case kAVIMMessageMediaTypeImage: {
-            NSDate* timestamp=[NSDate dateWithTimeIntervalSince1970:receiveMessage.sendTimestamp/1000];
-            AVIMImageMessage *imageMessage = (AVIMImageMessage *)receiveMessage;
-            XHMessage *photoMessage = [[XHMessage alloc] initWithPhoto:nil thumbnailUrl:imageMessage.file.url originPhotoUrl:nil sender:imageMessage.clientId timestamp:timestamp];
-            photoMessage.bubbleMessageType = XHBubbleMessageTypeReceiving;
-            photoMessage.avatar = [UIImage imageNamed:@"Avatar"];
-            photoMessage.avatarUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
-            [self addMessage:photoMessage];
-            [self finishSendMessageWithBubbleMessageType:XHBubbleMessageMediaTypePhoto];
+            AVIMImageMessage *imageMessage = (AVIMImageMessage *)typedMessage;
+            message = [[XHMessage alloc] initWithPhoto:nil thumbnailUrl:imageMessage.file.url originPhotoUrl:nil sender:imageMessage.clientId timestamp:timestamp];
             break;
         }
         case kAVIMMessageMediaTypeAudio:{
-            WEAKSELF;
-            [self fetchDataOfMessageFile:receiveMessage.file fileName:receiveMessage.messageId completion:^(NSString *path, NSError *error) {
-                NSDate* timestamp=[NSDate dateWithTimeIntervalSince1970:receiveMessage.sendTimestamp/1000];
-                AVIMAudioMessage* audioMessage=(AVIMAudioMessage*)receiveMessage;
-                XHMessage* voiceMessage=[[XHMessage alloc] initWithVoicePath:path voiceUrl:nil voiceDuration:[NSString stringWithFormat:@"%.1f",audioMessage.duration] sender:receiveMessage.clientId timestamp:timestamp];
-                voiceMessage.bubbleMessageType = XHBubbleMessageTypeReceiving;
-                voiceMessage.avatar = [UIImage imageNamed:@"Avatar"];
-                voiceMessage.avatarUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
-                [weakSelf addMessage:voiceMessage];
-                [weakSelf finishSendMessageWithBubbleMessageType:XHBubbleMessageMediaTypeVoice];
-            }];
+            NSError* error;
+            NSString* path=[self fetchDataOfMessageFile:typedMessage.file fileName:typedMessage.messageId error:&error];
+            AVIMAudioMessage* audioMessage=(AVIMAudioMessage*)typedMessage;
+            message=[[XHMessage alloc] initWithVoicePath:path voiceUrl:nil voiceDuration:[NSString stringWithFormat:@"%.1f",audioMessage.duration] sender:typedMessage.clientId timestamp:timestamp];
             break;
         }
         case kAVIMMessageMediaTypeEmotion:{
-            WEAKSELF
-            AVFile* file=[AVFile fileWithURL:receiveMessage.text];
-            [self fetchDataOfMessageFile:file fileName:receiveMessage.messageId completion:^(NSString *path, NSError *error) {
-                NSDate* timestamp=[NSDate dateWithTimeIntervalSince1970:receiveMessage.sendTimestamp/1000];
-                XHMessage *emotionMessage = [[XHMessage alloc] initWithEmotionPath:path sender:receiveMessage.clientId timestamp:timestamp];
-                emotionMessage.bubbleMessageType = XHBubbleMessageTypeReceiving;
-                emotionMessage.avatar = [UIImage imageNamed:@"Avatar"];
-                emotionMessage.avatarUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
-                [weakSelf addMessage:emotionMessage];
-                [weakSelf finishSendMessageWithBubbleMessageType:XHBubbleMessageMediaTypeEmotion];
-            }];
+            AVFile* file=[AVFile fileWithURL:typedMessage.text];
+            NSError* error;
+            NSString* path=[self fetchDataOfMessageFile:file fileName:typedMessage.messageId error:&error];
+            message = [[XHMessage alloc] initWithEmotionPath:path sender:typedMessage.clientId timestamp:timestamp];
             break;
         }
         case kAVIMMessageMediaTypeVideo:{
-            WEAKSELF
-            AVIMVideoMessage* receiveVideoMessage=(AVIMVideoMessage*)receiveMessage;
+            AVIMVideoMessage* receiveVideoMessage=(AVIMVideoMessage*)typedMessage;
             NSString* format=receiveVideoMessage.format;
-            [self fetchDataOfMessageFile:receiveMessage.file fileName:[NSString stringWithFormat:@"%@.%@",receiveMessage.messageId,format] completion:^(NSString *path, NSError *error) {
-                DLog(@"error:%@",error);
-                NSDate* timestamp=[NSDate dateWithTimeIntervalSince1970:receiveMessage.sendTimestamp/1000];
-                XHMessage *videoMessage = [[XHMessage alloc] initWithVideoConverPhoto:[XHMessageVideoConverPhotoFactory videoConverPhotoWithVideoPath:path] videoPath:path videoUrl:nil sender:receiveMessage.clientId timestamp:timestamp];
-                videoMessage.bubbleMessageType = XHBubbleMessageTypeReceiving;
-                videoMessage.avatar = [UIImage imageNamed:@"Avatar"];
-                videoMessage.avatarUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
-                [weakSelf addMessage:videoMessage];
-                [weakSelf finishSendMessageWithBubbleMessageType:XHBubbleMessageMediaTypeVideo];
-            }];
+            NSError* error;
+            NSString* path=[self fetchDataOfMessageFile:typedMessage.file fileName:[NSString stringWithFormat:@"%@.%@",typedMessage.messageId,format] error:&error];
+            message= [[XHMessage alloc] initWithVideoConverPhoto:[XHMessageVideoConverPhotoFactory videoConverPhotoWithVideoPath:path] videoPath:path videoUrl:nil sender:typedMessage.clientId timestamp:timestamp];
             break;
         }
         default:
             break;
     }
+    if(typedMessage.ioType==AVIMMessageIOTypeIn){
+        message.bubbleMessageType=XHBubbleMessageTypeReceiving;
+    }else{
+        message.bubbleMessageType=XHBubbleMessageTypeSending;
+    }
+    message.avatar = [UIImage imageNamed:@"Avatar"];
+    message.avatarUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
+    return message;
+}
+
+- (void)insertAVIMTypedMessage:(AVIMTypedMessage *)typedMessage {
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        XHMessage* message=[self displayMessageByAVIMTypedMessage:typedMessage];
+        [self addMessage:message];
+    });
 }
 
 /*
@@ -367,20 +312,28 @@ typedef void (^FetchFileBlock)(NSString* path,NSError* error);
 }
 
 - (void)loadMoreMessagesScrollTotop {
-    if (!self.loadingMoreMessage) {
-        self.loadingMoreMessage = YES;
-        
-        WEAKSELF
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            // 加载本地数据
-            dispatch_async(dispatch_get_main_queue(), ^{
-                // 更新UI
-                weakSelf.loadingMoreMessage = NO;
-            });
-        });
+    if(self.messages.count==0){
+        return;
+    }else{
+        if (!self.loadingMoreMessage) {
+            self.loadingMoreMessage = YES;
+            XHMessage* message=self.messages[0];
+            WEAKSELF
+            [self.conversation queryMessagesBeforeId:nil timestamp:[message.timestamp timeIntervalSince1970]*1000 limit:20 callback:^(NSArray *typedMessages, NSError *error) {
+                dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                    NSMutableArray* messages=[NSMutableArray array];
+                    for(AVIMTypedMessage* typedMessage in typedMessages){
+                        [messages addObject:[weakSelf displayMessageByAVIMTypedMessage:typedMessage]];
+                    }
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [weakSelf insertOldMessages:messages];
+                        weakSelf.loadingMoreMessage=NO;
+                    });
+                });
+            }];
+        }
     }
 }
-
 /**
  *  发送文本消息的回调方法
  *
@@ -389,12 +342,11 @@ typedef void (^FetchFileBlock)(NSString* path,NSError* error);
  *  @param date   发送时间
  */
 - (void)didSendText:(NSString *)text fromSender:(NSString *)sender onDate:(NSDate *)date {
-    XHMessage *textMessage = [[XHMessage alloc] initWithText:text sender:sender timestamp:date];
-    textMessage.avatar = [UIImage imageNamed:@"Avatar"];
-    textMessage.avatarUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
-    [self addMessage:textMessage];
-    [self finishSendMessageWithBubbleMessageType:XHBubbleMessageMediaTypeText];
-    [self sendTextMessage:textMessage];
+    AVIMTextMessage *sendTextMessage = [AVIMTextMessage messageWithText:text attributes:nil];
+    [self.conversation sendMessage:sendTextMessage callback:^(BOOL succeeded, NSError *error) {
+        [self insertAVIMTypedMessage:sendTextMessage];
+        [self finishSendMessageWithBubbleMessageType:XHBubbleMessageMediaTypeText];
+    }];
 }
 
 /**
@@ -405,12 +357,15 @@ typedef void (^FetchFileBlock)(NSString* path,NSError* error);
  *  @param date   发送时间
  */
 - (void)didSendPhoto:(UIImage *)photo fromSender:(NSString *)sender onDate:(NSDate *)date {
-    XHMessage *photoMessage = [[XHMessage alloc] initWithPhoto:photo thumbnailUrl:nil originPhotoUrl:nil sender:sender timestamp:date];
-    photoMessage.avatar = [UIImage imageNamed:@"avatar"];
-    photoMessage.avatarUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
-    [self addMessage:photoMessage];
-    [self finishSendMessageWithBubbleMessageType:XHBubbleMessageMediaTypePhoto];
-    [self sendPhotoMessage:photoMessage];
+    NSString *filePath = [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject] stringByAppendingPathComponent:@"tmp.jpg"];
+    NSData* photoData=UIImageJPEGRepresentation(photo,1.0);
+    [photoData writeToFile:filePath atomically:YES];
+    AVIMImageMessage *sendPhotoMessage = [AVIMImageMessage messageWithText:nil attachedFilePath:filePath attributes:nil];
+    [self.conversation sendMessage:sendPhotoMessage callback:^(BOOL succeeded, NSError *error) {
+        DLog(@"succeed: %d, error:%@ ",succeeded,error);
+        [self insertAVIMTypedMessage:sendPhotoMessage];
+        [self finishSendMessageWithBubbleMessageType:XHBubbleMessageMediaTypePhoto];
+    }];
 }
 
 /**
@@ -421,12 +376,12 @@ typedef void (^FetchFileBlock)(NSString* path,NSError* error);
  *  @param date      发送时间
  */
 - (void)didSendVideoConverPhoto:(UIImage *)videoConverPhoto videoPath:(NSString *)videoPath fromSender:(NSString *)sender onDate:(NSDate *)date {
-    XHMessage *videoMessage = [[XHMessage alloc] initWithVideoConverPhoto:videoConverPhoto videoPath:videoPath videoUrl:nil sender:sender timestamp:date];
-    videoMessage.avatar = [UIImage imageNamed:@"avatar"];
-    videoMessage.avatarUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
-    [self addMessage:videoMessage];
-    [self finishSendMessageWithBubbleMessageType:XHBubbleMessageMediaTypeVideo];
-    [self sendVideoMessage:videoMessage];
+    AVIMVideoMessage* sendVideoMessage=[AVIMVideoMessage messageWithText:nil attachedFilePath:videoPath attributes:nil];
+    [self.conversation sendMessage:sendVideoMessage callback:^(BOOL succeeded, NSError *error) {
+        DLog(@"succeed: %d, error:%@ ",succeeded,error);
+        [self insertAVIMTypedMessage:sendVideoMessage];
+        [self finishSendMessageWithBubbleMessageType:XHBubbleMessageMediaTypeVideo];
+    }];
 }
 
 /**
@@ -438,12 +393,12 @@ typedef void (^FetchFileBlock)(NSString* path,NSError* error);
  *  @param date             发送时间
  */
 - (void)didSendVoice:(NSString *)voicePath voiceDuration:(NSString *)voiceDuration fromSender:(NSString *)sender onDate:(NSDate *)date {
-    XHMessage *voiceMessage = [[XHMessage alloc] initWithVoicePath:voicePath voiceUrl:nil voiceDuration:voiceDuration sender:sender timestamp:date];
-    voiceMessage.avatar = [UIImage imageNamed:@"avatar"];
-    voiceMessage.avatarUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
-    [self addMessage:voiceMessage];
-    [self finishSendMessageWithBubbleMessageType:XHBubbleMessageMediaTypeVoice];
-    [self sendVoiceMessage:voiceMessage];
+    AVIMAudioMessage* sendAudioMessage=[AVIMAudioMessage messageWithText:nil attachedFilePath:voicePath attributes:nil];
+    [self.conversation sendMessage:sendAudioMessage callback:^(BOOL succeeded, NSError *error) {
+        DLog(@"succeed: %d, error:%@ ",succeeded,error);
+        [self insertAVIMTypedMessage:sendAudioMessage];
+        [self finishSendMessageWithBubbleMessageType:XHBubbleMessageMediaTypeVoice];
+    }];
 }
 
 /**
@@ -454,12 +409,20 @@ typedef void (^FetchFileBlock)(NSString* path,NSError* error);
  *  @param date     发送时间
  */
 - (void)didSendEmotion:(NSString *)emotionPath fromSender:(NSString *)sender onDate:(NSDate *)date {
-    XHMessage *emotionMessage = [[XHMessage alloc] initWithEmotionPath:emotionPath sender:sender timestamp:date];
-    emotionMessage.avatar = [UIImage imageNamed:@"avatar"];
-    emotionMessage.avatarUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
-    [self addMessage:emotionMessage];
-    [self finishSendMessageWithBubbleMessageType:XHBubbleMessageMediaTypeEmotion];
-    [self sendEmotionMessage:emotionMessage];
+    AVFile* file=[AVFile fileWithName:@"emotion" contentsAtPath:emotionPath];
+    WEAKSELF
+    [file saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if(error==nil){
+            AVIMEmotionMessage* sendEmotionMessage=[AVIMEmotionMessage messageWithText:file.url attributes:nil];
+            [weakSelf.conversation sendMessage:sendEmotionMessage callback:^(BOOL succeeded, NSError *error) {
+                DLog(@"succeed: %d, error:%@ ",succeeded,error);
+                [weakSelf insertAVIMTypedMessage:sendEmotionMessage];
+                [weakSelf finishSendMessageWithBubbleMessageType:XHBubbleMessageMediaTypeEmotion];
+            }];
+        }else{
+            DLog(@"error:%@",error);
+        }
+    }];
 }
 
 /**
