@@ -59,7 +59,7 @@
 //    [self setBackgroundImage:[UIImage imageNamed:@"TableViewBackgroundImage"]];
     
     // 设置自身用户名
-    self.messageSender = [[LeanChatManager manager] selfClientID];
+    self.messageSender =[self displayNameByClientId:[[LeanChatManager manager] selfClientID]];
     
     // 添加第三方接入数据
     NSMutableArray *shareMenuItems = [NSMutableArray array];
@@ -83,7 +83,6 @@
             [emotions addObject:emotion];
         }
         emotionManager.emotions = emotions;
-        
         [emotionManagers addObject:emotionManager];
     }
     
@@ -109,7 +108,7 @@
                         weakSelf.messages=messages;
                         [weakSelf.messageTableView reloadData];
                         [weakSelf scrollToBottomAnimated:NO];
-                        //延迟，以避免滚动触发上拉
+                        //延迟，以避免上面的滚动触发上拉加载消息
                         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.5*NSEC_PER_SEC), dispatch_get_main_queue(), ^{
                             weakSelf.loadingMoreMessage=NO;
                         });
@@ -156,29 +155,30 @@
     AVIMMessageMediaType msgType = typedMessage.mediaType;
     XHMessage* message;
     NSDate* timestamp=[NSDate dateWithTimeIntervalSince1970:typedMessage.sendTimestamp/1000];
+    NSString* displayName=[self displayNameByClientId:typedMessage.clientId];
     switch (msgType) {
         case kAVIMMessageMediaTypeText: {
             AVIMTextMessage *receiveTextMessage = (AVIMTextMessage *)typedMessage;
-            message = [[XHMessage alloc] initWithText:receiveTextMessage.text sender:typedMessage.clientId timestamp:timestamp];
+            message = [[XHMessage alloc] initWithText:receiveTextMessage.text sender:displayName timestamp:timestamp];
             break;
         }
         case kAVIMMessageMediaTypeImage: {
             AVIMImageMessage *imageMessage = (AVIMImageMessage *)typedMessage;
-            message = [[XHMessage alloc] initWithPhoto:nil thumbnailUrl:imageMessage.file.url originPhotoUrl:nil sender:imageMessage.clientId timestamp:timestamp];
+            message = [[XHMessage alloc] initWithPhoto:nil thumbnailUrl:imageMessage.file.url originPhotoUrl:nil sender:displayName timestamp:timestamp];
             break;
         }
         case kAVIMMessageMediaTypeAudio:{
             NSError* error;
             NSString* path=[self fetchDataOfMessageFile:typedMessage.file fileName:typedMessage.messageId error:&error];
             AVIMAudioMessage* audioMessage=(AVIMAudioMessage*)typedMessage;
-            message=[[XHMessage alloc] initWithVoicePath:path voiceUrl:nil voiceDuration:[NSString stringWithFormat:@"%.1f",audioMessage.duration] sender:typedMessage.clientId timestamp:timestamp];
+            message=[[XHMessage alloc] initWithVoicePath:path voiceUrl:nil voiceDuration:[NSString stringWithFormat:@"%.1f",audioMessage.duration] sender:displayName timestamp:timestamp];
             break;
         }
         case kAVIMMessageMediaTypeEmotion:{
             AVFile* file=[AVFile fileWithURL:typedMessage.text];
             NSError* error;
             NSString* path=[self fetchDataOfMessageFile:file fileName:typedMessage.messageId error:&error];
-            message = [[XHMessage alloc] initWithEmotionPath:path sender:typedMessage.clientId timestamp:timestamp];
+            message = [[XHMessage alloc] initWithEmotionPath:path sender:displayName timestamp:timestamp];
             break;
         }
         case kAVIMMessageMediaTypeVideo:{
@@ -186,7 +186,7 @@
             NSString* format=receiveVideoMessage.format;
             NSError* error;
             NSString* path=[self fetchDataOfMessageFile:typedMessage.file fileName:[NSString stringWithFormat:@"%@.%@",typedMessage.messageId,format] error:&error];
-            message= [[XHMessage alloc] initWithVideoConverPhoto:[XHMessageVideoConverPhotoFactory videoConverPhotoWithVideoPath:path] videoPath:path videoUrl:nil sender:typedMessage.clientId timestamp:timestamp];
+            message= [[XHMessage alloc] initWithVideoConverPhoto:[XHMessageVideoConverPhotoFactory videoConverPhotoWithVideoPath:path] videoPath:path videoUrl:nil sender:displayName timestamp:timestamp];
             break;
         }
         default:
@@ -197,8 +197,7 @@
     }else{
         message.bubbleMessageType=XHBubbleMessageTypeSending;
     }
-    message.avatar = [UIImage imageNamed:@"Avatar"];
-    message.avatarUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
+    message.avatarUrl = [self avatarUrlByClientId:typedMessage.clientId];
     return message;
 }
 
@@ -221,10 +220,15 @@
     return YES;
 }
 
-/*
- [self removeMessageAtIndexPath:indexPath];
- [self insertOldMessages:self.messages];
- */
+#pragma mark - user info
+
+-(NSString*)avatarUrlByClientId:(NSString*)clientId{
+    return @"http://www.pailixiu.com/jack/meIcon@2x.png";
+}
+
+-(NSString*)displayNameByClientId:(NSString*)clientId{
+    return [clientId stringByAppendingString:@"test"];
+}
 
 #pragma mark - XHMessageTableViewCell delegate
 
@@ -455,8 +459,7 @@
  */
 - (void)didSendGeoLocationsPhoto:(UIImage *)geoLocationsPhoto geolocations:(NSString *)geolocations location:(CLLocation *)location fromSender:(NSString *)sender onDate:(NSDate *)date {
     XHMessage *geoLocationsMessage = [[XHMessage alloc] initWithLocalPositionPhoto:geoLocationsPhoto geolocations:geolocations location:location sender:sender timestamp:date];
-    geoLocationsMessage.avatar = [UIImage imageNamed:@"avatar"];
-    geoLocationsMessage.avatarUrl = @"http://www.pailixiu.com/jack/meIcon@2x.png";
+    geoLocationsMessage.avatarUrl = [self avatarUrlByClientId:sender];
     [self addMessage:geoLocationsMessage];
     [self finishSendMessageWithBubbleMessageType:XHBubbleMessageMediaTypeLocalPosition];
 }
