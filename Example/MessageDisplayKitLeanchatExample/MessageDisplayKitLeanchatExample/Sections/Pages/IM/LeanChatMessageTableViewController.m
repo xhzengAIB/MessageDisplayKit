@@ -98,7 +98,7 @@
     [[LeanChatManager manager] createConversationsWithClientIDs:self.clientIDs conversationType:self.conversationType completion:^(BOOL succeeded, AVIMConversation *createConversation) {
         if (succeeded) {
             self.conversation = createConversation;
-            [self.conversation queryMessagesBeforeId:nil timestamp:0 limit:20 callback:^(NSArray *typedMessages, NSError *error) {
+            [self.conversation queryMessagesBeforeId:nil timestamp:0 limit:10 callback:^(NSArray *typedMessages, NSError *error) {
                 dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
                     NSMutableArray* messages=[NSMutableArray array];
                     for(AVIMTypedMessage* typedMessage in typedMessages){
@@ -108,7 +108,7 @@
                         DLog();
                         self.messages=messages;
                         [self.messageTableView reloadData];
-                        [self scrollToBottomAnimated:YES];
+                        [self scrollToBottomAnimated:NO];
                         //延迟，以避免滚动触发上拉
                         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.5*NSEC_PER_SEC), dispatch_get_main_queue(), ^{
                             self.loadingMoreMessage=NO;
