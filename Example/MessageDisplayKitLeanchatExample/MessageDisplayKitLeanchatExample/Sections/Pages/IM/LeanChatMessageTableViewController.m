@@ -95,23 +95,23 @@
     
     // 创建一个对话
     self.loadingMoreMessage=YES;
+    WEAKSELF
     [[LeanChatManager manager] createConversationsWithClientIDs:self.clientIDs conversationType:self.conversationType completion:^(BOOL succeeded, AVIMConversation *createConversation) {
         if (succeeded) {
-            self.conversation = createConversation;
-            [self.conversation queryMessagesBeforeId:nil timestamp:0 limit:10 callback:^(NSArray *typedMessages, NSError *error) {
+            weakSelf.conversation = createConversation;
+            [weakSelf.conversation queryMessagesBeforeId:nil timestamp:0 limit:10 callback:^(NSArray *typedMessages, NSError *error) {
                 dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
                     NSMutableArray* messages=[NSMutableArray array];
                     for(AVIMTypedMessage* typedMessage in typedMessages){
-                        [messages addObject:[self displayMessageByAVIMTypedMessage:typedMessage]];
+                        [messages addObject:[weakSelf displayMessageByAVIMTypedMessage:typedMessage]];
                     }
                     dispatch_async(dispatch_get_main_queue(), ^{
-                        DLog();
-                        self.messages=messages;
-                        [self.messageTableView reloadData];
-                        [self scrollToBottomAnimated:NO];
+                        weakSelf.messages=messages;
+                        [weakSelf.messageTableView reloadData];
+                        [weakSelf scrollToBottomAnimated:NO];
                         //延迟，以避免滚动触发上拉
                         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.5*NSEC_PER_SEC), dispatch_get_main_queue(), ^{
-                            self.loadingMoreMessage=NO;
+                            weakSelf.loadingMoreMessage=NO;
                         });
                     });
                 });
@@ -122,11 +122,10 @@
     // 设置接收消息
     [[LeanChatManager manager] setupDidReceiveCommonMessageCompletion:^(AVIMMessage *message) {
         // 普通信息
-        //[self insertAVIMTypedMessage:message];
     }];
     [[LeanChatManager manager] setupDidReceiveTypedMessageCompletion:^(AVIMTypedMessage *message) {
         // 富文本信息
-        [self insertAVIMTypedMessage:message];
+        [weakSelf insertAVIMTypedMessage:message];
     }];
 }
 
@@ -204,10 +203,22 @@
 }
 
 - (void)insertAVIMTypedMessage:(AVIMTypedMessage *)typedMessage {
+    WEAKSELF
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         XHMessage* message=[self displayMessageByAVIMTypedMessage:typedMessage];
-        [self addMessage:message];
+        [weakSelf addMessage:message];
     });
+}
+
+-(BOOL)filterError:(NSError*)error{
+    if(error){
+        UIAlertView *alertView=[[UIAlertView alloc]
+                                initWithTitle:nil message:error.description delegate:nil
+                                cancelButtonTitle:@"确定" otherButtonTitles:nil];
+        [alertView show];
+        return NO;
+    }
+    return YES;
 }
 
 /*
@@ -232,7 +243,6 @@
             break;
         case XHBubbleMessageMediaTypeVoice: {
             DLog(@"message : %@", message.voicePath);
-            
             // Mark the voice as read and hide the red dot.
             message.isRead = YES;
             messageTableViewCell.messageBubbleView.voiceUnreadDotImageView.hidden = YES;
@@ -348,9 +358,12 @@
  */
 - (void)didSendText:(NSString *)text fromSender:(NSString *)sender onDate:(NSDate *)date {
     AVIMTextMessage *sendTextMessage = [AVIMTextMessage messageWithText:text attributes:nil];
+    WEAKSELF
     [self.conversation sendMessage:sendTextMessage callback:^(BOOL succeeded, NSError *error) {
-        [self insertAVIMTypedMessage:sendTextMessage];
-        [self finishSendMessageWithBubbleMessageType:XHBubbleMessageMediaTypeText];
+        if([weakSelf filterError:error]){
+            [weakSelf insertAVIMTypedMessage:sendTextMessage];
+            [weakSelf finishSendMessageWithBubbleMessageType:XHBubbleMessageMediaTypeText];
+        }
     }];
 }
 
@@ -366,10 +379,12 @@
     NSData* photoData=UIImageJPEGRepresentation(photo,1.0);
     [photoData writeToFile:filePath atomically:YES];
     AVIMImageMessage *sendPhotoMessage = [AVIMImageMessage messageWithText:nil attachedFilePath:filePath attributes:nil];
+    WEAKSELF
     [self.conversation sendMessage:sendPhotoMessage callback:^(BOOL succeeded, NSError *error) {
-        DLog(@"succeed: %d, error:%@ ",succeeded,error);
-        [self insertAVIMTypedMessage:sendPhotoMessage];
-        [self finishSendMessageWithBubbleMessageType:XHBubbleMessageMediaTypePhoto];
+        if([weakSelf filterError:error]){
+            [weakSelf insertAVIMTypedMessage:sendPhotoMessage];
+            [weakSelf finishSendMessageWithBubbleMessageType:XHBubbleMessageMediaTypePhoto];
+        }
     }];
 }
 
@@ -382,10 +397,12 @@
  */
 - (void)didSendVideoConverPhoto:(UIImage *)videoConverPhoto videoPath:(NSString *)videoPath fromSender:(NSString *)sender onDate:(NSDate *)date {
     AVIMVideoMessage* sendVideoMessage=[AVIMVideoMessage messageWithText:nil attachedFilePath:videoPath attributes:nil];
+    WEAKSELF
     [self.conversation sendMessage:sendVideoMessage callback:^(BOOL succeeded, NSError *error) {
-        DLog(@"succeed: %d, error:%@ ",succeeded,error);
-        [self insertAVIMTypedMessage:sendVideoMessage];
-        [self finishSendMessageWithBubbleMessageType:XHBubbleMessageMediaTypeVideo];
+        if([weakSelf filterError:error]){
+            [weakSelf insertAVIMTypedMessage:sendVideoMessage];
+            [weakSelf finishSendMessageWithBubbleMessageType:XHBubbleMessageMediaTypeVideo];
+        }
     }];
 }
 
@@ -399,10 +416,13 @@
  */
 - (void)didSendVoice:(NSString *)voicePath voiceDuration:(NSString *)voiceDuration fromSender:(NSString *)sender onDate:(NSDate *)date {
     AVIMAudioMessage* sendAudioMessage=[AVIMAudioMessage messageWithText:nil attachedFilePath:voicePath attributes:nil];
+    WEAKSELF
     [self.conversation sendMessage:sendAudioMessage callback:^(BOOL succeeded, NSError *error) {
         DLog(@"succeed: %d, error:%@ ",succeeded,error);
-        [self insertAVIMTypedMessage:sendAudioMessage];
-        [self finishSendMessageWithBubbleMessageType:XHBubbleMessageMediaTypeVoice];
+        if([weakSelf filterError:error]){
+            [self insertAVIMTypedMessage:sendAudioMessage];
+            [weakSelf finishSendMessageWithBubbleMessageType:XHBubbleMessageMediaTypeVoice];
+        }
     }];
 }
 
@@ -414,18 +434,18 @@
  *  @param date     发送时间
  */
 - (void)didSendEmotion:(NSString *)emotionPath fromSender:(NSString *)sender onDate:(NSDate *)date {
-    AVFile* file=[AVFile fileWithName:@"emotion" contentsAtPath:emotionPath];
     WEAKSELF
+    AVFile* file=[AVFile fileWithName:@"emotion" contentsAtPath:emotionPath];
     [file saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if(error==nil){
+        if([weakSelf filterError:error]){
             AVIMEmotionMessage* sendEmotionMessage=[AVIMEmotionMessage messageWithText:file.url attributes:nil];
             [weakSelf.conversation sendMessage:sendEmotionMessage callback:^(BOOL succeeded, NSError *error) {
                 DLog(@"succeed: %d, error:%@ ",succeeded,error);
-                [weakSelf insertAVIMTypedMessage:sendEmotionMessage];
-                [weakSelf finishSendMessageWithBubbleMessageType:XHBubbleMessageMediaTypeEmotion];
+                if([weakSelf filterError:error]){
+                    [weakSelf insertAVIMTypedMessage:sendEmotionMessage];
+                    [weakSelf finishSendMessageWithBubbleMessageType:XHBubbleMessageMediaTypeEmotion];
+                }
             }];
-        }else{
-            DLog(@"error:%@",error);
         }
     }];
 }
