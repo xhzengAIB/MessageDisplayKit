@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GFn-pQ-f5D">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GFn-pQ-f5D">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
@@ -9,7 +9,7 @@
         <!--主页-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LeanChatViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -38,7 +38,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N3r-tF-s8h">
-                                <rect key="frame" x="112" y="349" width="376" height="106"/>
+                                <rect key="frame" x="112" y="251" width="376" height="106"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="376" id="b2V-Ug-Qfp"/>
                                     <constraint firstAttribute="height" constant="106" id="tFq-YG-DJs"/>
@@ -53,19 +53,19 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我是Jack" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AEO-gr-WHn">
                                 <rect key="frame" x="16" y="78" width="71" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="待定的Jayson" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oJl-RA-UZD">
                                 <rect key="frame" x="247" y="559" width="106" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="对方是Darcy" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="da7-V6-t8Z">
                                 <rect key="frame" x="488" y="78" width="96" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gso-r2-eSs">
@@ -87,16 +87,26 @@
                                     <action selector="enterDarcyToJackSingleIM:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KNV-Fu-dkn"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5As-XC-Cwm">
+                                <rect key="frame" x="231" y="377" width="138" height="30"/>
+                                <state key="normal" title="Jack的最近对话列表">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="enterRecentConversations:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g3Y-8g-xiD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="gso-r2-eSs" firstAttribute="top" secondItem="X9U-Xi-nuK" secondAttribute="bottom" constant="13" id="51D-0f-q9T"/>
                             <constraint firstAttribute="trailingMargin" secondItem="X9U-Xi-nuK" secondAttribute="trailing" constant="134" id="6PC-lh-cJO"/>
                             <constraint firstItem="AEO-gr-WHn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="14" id="6Wv-XR-1Uo"/>
+                            <constraint firstItem="5As-XC-Cwm" firstAttribute="top" secondItem="N3r-tF-s8h" secondAttribute="bottom" constant="20" id="ARB-7M-dUV"/>
                             <constraint firstAttribute="centerX" secondItem="X9U-Xi-nuK" secondAttribute="centerX" id="Agw-Gg-nja"/>
                             <constraint firstItem="X9U-Xi-nuK" firstAttribute="width" secondItem="N3r-tF-s8h" secondAttribute="width" id="Brt-gL-qag"/>
                             <constraint firstItem="X9U-Xi-nuK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="92" id="Cmv-5G-BsM"/>
-                            <constraint firstItem="N3r-tF-s8h" firstAttribute="top" secondItem="X9U-Xi-nuK" secondAttribute="bottom" constant="158" id="HCB-wk-8uq"/>
+                            <constraint firstItem="N3r-tF-s8h" firstAttribute="top" secondItem="X9U-Xi-nuK" secondAttribute="bottom" constant="60" id="HCB-wk-8uq"/>
                             <constraint firstItem="X9U-Xi-nuK" firstAttribute="centerX" secondItem="gso-r2-eSs" secondAttribute="centerX" id="Ihc-m2-eZT"/>
                             <constraint firstItem="X9U-Xi-nuK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="134" id="Lg4-Ca-JyH"/>
                             <constraint firstItem="X9U-Xi-nuK" firstAttribute="centerX" secondItem="N3r-tF-s8h" secondAttribute="centerX" id="RC4-bj-47z"/>
@@ -105,6 +115,7 @@
                             <constraint firstItem="AEO-gr-WHn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="a0K-kn-sDu"/>
                             <constraint firstItem="X9U-Xi-nuK" firstAttribute="centerX" secondItem="N3r-tF-s8h" secondAttribute="centerX" id="aTU-tn-sIT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="X9U-Xi-nuK" secondAttribute="trailing" constant="134" id="gDJ-xb-qk6"/>
+                            <constraint firstAttribute="centerX" secondItem="5As-XC-Cwm" secondAttribute="centerX" id="gma-Ov-N1l"/>
                             <constraint firstItem="da7-V6-t8Z" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="jGg-p9-JfQ"/>
                             <constraint firstItem="N3r-tF-s8h" firstAttribute="top" secondItem="X9U-Xi-nuK" secondAttribute="bottom" constant="87" id="nHv-3w-Ifm"/>
                             <constraint firstItem="X9U-Xi-nuK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="134" id="oFq-e1-p48"/>

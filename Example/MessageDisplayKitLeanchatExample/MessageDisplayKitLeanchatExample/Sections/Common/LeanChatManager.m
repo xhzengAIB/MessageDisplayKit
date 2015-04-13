@@ -20,6 +20,8 @@
 @property (nonatomic, copy) DidReceiveCommonMessageBlock didReceiveCommonMessageCompletion;
 @property (nonatomic, copy) DidReceiveTypedMessageBlock didReceiveTypedMessageCompletion;
 
+@property (nonatomic, strong) NSMutableArray* recentConversations;
+
 @end
 
 @implementation LeanChatManager
@@ -126,19 +128,26 @@
     }];
 }
 
+-(void)findRecentConversationsWithBlock:(AVIMArrayResultBlock)block{
+    AVIMConversationQuery* query=[self.leanClient conversationQuery];
+    [query whereKey:kAVIMKeyMember containedIn:@[self.selfClientID]];
+    query.limit=1000;
+    [query findConversationsWithCallback:block];
+}
+
 #pragma mark - AVIMClientDelegate
 
 - (void)conversation:(AVIMConversation *)conversation didReceiveCommonMessage:(AVIMMessage *)message {
     // 接收到新的普通消息。
-    if (self.didReceiveCommonMessageCompletion) {
-        self.didReceiveCommonMessageCompletion(message);
+    if(self.didReceiveCommonMessageCompletion){
+        self.didReceiveCommonMessageCompletion(conversation,message);
     }
 }
 
 - (void)conversation:(AVIMConversation *)conversation didReceiveTypedMessage:(AVIMTypedMessage *)message {
     // 接收到新的富媒体消息。
-    if (self.didReceiveTypedMessageCompletion) {
-        self.didReceiveTypedMessageCompletion(message);
+    if(self.didReceiveTypedMessageCompletion){
+        self.didReceiveTypedMessageCompletion(conversation,message);
     }
 }
 

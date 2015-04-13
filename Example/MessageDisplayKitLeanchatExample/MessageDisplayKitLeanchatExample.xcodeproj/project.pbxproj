@@ -27,6 +27,7 @@
 		70013D721ABEB4190050D0F7 /* AVIMEmotionMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 70013D711ABEB4190050D0F7 /* AVIMEmotionMessage.m */; };
 		70013D981ABF1D650050D0F7 /* AVOSCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4D674481ABDA2C40000B18D /* AVOSCloud.framework */; };
 		70013D991ABF1D650050D0F7 /* AVOSCloudIM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4D674491ABDA2C40000B18D /* AVOSCloudIM.framework */; };
+		70457B1C1ADBB70600452531 /* LeanChatConversationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70457B1B1ADBB70600452531 /* LeanChatConversationTableViewController.m */; };
 		E4D6734E1ABD9C5F0000B18D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D6734D1ABD9C5F0000B18D /* main.m */; };
 		E4D673511ABD9C5F0000B18D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D673501ABD9C5F0000B18D /* AppDelegate.m */; };
 		E4D6735A1ABD9C5F0000B18D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4D673581ABD9C5F0000B18D /* Main.storyboard */; };
@@ -124,7 +125,7 @@
 		E4D6742D1ABD9CAD0000B18D /* weChatBubble_Sending_Cavern@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D673D21ABD9CAD0000B18D /* weChatBubble_Sending_Cavern@2x.png */; };
 		E4D6742E1ABD9CAD0000B18D /* weChatBubble_Sending_Solid@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D673D31ABD9CAD0000B18D /* weChatBubble_Sending_Solid@2x.png */; };
 		E4D674371ABD9DBC0000B18D /* MessageDisplayKitLeanchatExample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E4D674311ABD9DBC0000B18D /* MessageDisplayKitLeanchatExample.xcdatamodeld */; };
-		E4D674381ABD9DBC0000B18D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D674361ABD9DBC0000B18D /* ViewController.m */; };
+		E4D674381ABD9DBC0000B18D /* LeanChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D674361ABD9DBC0000B18D /* LeanChatViewController.m */; };
 		E4D6743C1ABD9EAF0000B18D /* LeanChatManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D6743B1ABD9EAF0000B18D /* LeanChatManager.m */; };
 		E4D674401ABD9F0B0000B18D /* LeanChatMessageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D6743F1ABD9F0B0000B18D /* LeanChatMessageTableViewController.m */; };
 		E4D674441ABDA18B0000B18D /* MessageDisplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4D673761ABD9CA30000B18D /* MessageDisplayKit.framework */; };
@@ -181,6 +182,8 @@
 		70013D5E1ABEB1730050D0F7 /* emotion9.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = emotion9.gif; sourceTree = "<group>"; };
 		70013D701ABEB4190050D0F7 /* AVIMEmotionMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVIMEmotionMessage.h; sourceTree = "<group>"; };
 		70013D711ABEB4190050D0F7 /* AVIMEmotionMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVIMEmotionMessage.m; sourceTree = "<group>"; };
+		70457B1A1ADBB70600452531 /* LeanChatConversationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeanChatConversationTableViewController.h; sourceTree = "<group>"; };
+		70457B1B1ADBB70600452531 /* LeanChatConversationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeanChatConversationTableViewController.m; sourceTree = "<group>"; };
 		E4D673481ABD9C5F0000B18D /* MessageDisplayKitLeanchatExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessageDisplayKitLeanchatExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4D6734C1ABD9C5F0000B18D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4D6734D1ABD9C5F0000B18D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -285,8 +288,8 @@
 		E4D673D31ABD9CAD0000B18D /* weChatBubble_Sending_Solid@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weChatBubble_Sending_Solid@2x.png"; sourceTree = "<group>"; };
 		E4D673D41ABD9CAD0000B18D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/MessageDisplayKitString.strings"; sourceTree = "<group>"; };
 		E4D674321ABD9DBC0000B18D /* MessageDisplayKitLeanchatExample.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MessageDisplayKitLeanchatExample.xcdatamodel; sourceTree = "<group>"; };
-		E4D674351ABD9DBC0000B18D /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E4D674361ABD9DBC0000B18D /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E4D674351ABD9DBC0000B18D /* LeanChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeanChatViewController.h; sourceTree = "<group>"; };
+		E4D674361ABD9DBC0000B18D /* LeanChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeanChatViewController.m; sourceTree = "<group>"; };
 		E4D6743A1ABD9EAF0000B18D /* LeanChatManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeanChatManager.h; sourceTree = "<group>"; };
 		E4D6743B1ABD9EAF0000B18D /* LeanChatManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeanChatManager.m; sourceTree = "<group>"; };
 		E4D6743E1ABD9F0B0000B18D /* LeanChatMessageTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeanChatMessageTableViewController.h; sourceTree = "<group>"; };
@@ -561,8 +564,8 @@
 		E4D674341ABD9DBC0000B18D /* Root */ = {
 			isa = PBXGroup;
 			children = (
-				E4D674351ABD9DBC0000B18D /* ViewController.h */,
-				E4D674361ABD9DBC0000B18D /* ViewController.m */,
+				E4D674351ABD9DBC0000B18D /* LeanChatViewController.h */,
+				E4D674361ABD9DBC0000B18D /* LeanChatViewController.m */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -581,6 +584,8 @@
 			children = (
 				E4D6743E1ABD9F0B0000B18D /* LeanChatMessageTableViewController.h */,
 				E4D6743F1ABD9F0B0000B18D /* LeanChatMessageTableViewController.m */,
+				70457B1A1ADBB70600452531 /* LeanChatConversationTableViewController.h */,
+				70457B1B1ADBB70600452531 /* LeanChatConversationTableViewController.m */,
 			);
 			path = IM;
 			sourceTree = "<group>";
@@ -820,8 +825,9 @@
 				E4D6734E1ABD9C5F0000B18D /* main.m in Sources */,
 				E4D6743C1ABD9EAF0000B18D /* LeanChatManager.m in Sources */,
 				E4D674401ABD9F0B0000B18D /* LeanChatMessageTableViewController.m in Sources */,
-				E4D674381ABD9DBC0000B18D /* ViewController.m in Sources */,
+				E4D674381ABD9DBC0000B18D /* LeanChatViewController.m in Sources */,
 				E4D674371ABD9DBC0000B18D /* MessageDisplayKitLeanchatExample.xcdatamodeld in Sources */,
+				70457B1C1ADBB70600452531 /* LeanChatConversationTableViewController.m in Sources */,
 				70013D721ABEB4190050D0F7 /* AVIMEmotionMessage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
