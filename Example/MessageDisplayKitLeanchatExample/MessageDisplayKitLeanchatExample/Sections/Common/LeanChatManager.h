@@ -29,7 +29,7 @@ typedef void(^DidReceiveTypedMessageBlock)(AVIMTypedMessage *message);
 
 + (instancetype)manager;
 
--(NSString*)selfClientID;
+- (NSString *)selfClientID;
 
 - (void)setupDidReceiveCommonMessageCompletion:(DidReceiveCommonMessageBlock)didReceiveCommonMessageCompletion;
 - (void)setupDidReceiveTypedMessageCompletion:(DidReceiveTypedMessageBlock)didReceiveTypedMessageCompletion;
