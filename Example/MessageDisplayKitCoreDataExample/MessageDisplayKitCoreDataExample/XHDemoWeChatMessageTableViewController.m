@@ -115,6 +115,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     // Custom UI
+    if (CURRENT_SYS_VERSION >= 7.0) {
+        self.navigationController.interactivePopGestureRecognizer.delaysTouchesBegan=NO;
+    }
+    
 //    [self setBackgroundColor:[UIColor clearColor]];
 //    [self setBackgroundImage:[UIImage imageNamed:@"TableViewBackgroundImage"]];
     
