@@ -135,6 +135,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.navigationController.interactivePopGestureRecognizer.delaysTouchesBegan=NO;
     self.title = NSLocalizedStringFromTable(@"Chat", @"MessageDisplayKitString", @"聊天");
     
     // Custom UI
