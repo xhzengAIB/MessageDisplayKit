@@ -32,7 +32,7 @@
 - (id)init {
     self = [super init];
     if (self) {
-        self.maxRecordTime = 60.0;
+        self.maxRecordTime = kVoiceRecorderTotalTime;
         self.recordDuration = @"0";
 #if TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE
 		_backgroundIdentifier = UIBackgroundTaskInvalid;

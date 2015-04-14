@@ -173,9 +173,9 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
         NSDateComponents *yesterdayComponents = [[NSCalendar currentCalendar] components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay fromDate:yesterday];
         
         if (dateComponents.year == todayComponents.year && dateComponents.month == todayComponents.month && dateComponents.day == todayComponents.day) {
-            dateText = NSLocalizedString(@"Today", @"Today");
+            dateText = NSLocalizedStringFromTable(@"Today", @"MessageDisplayKitString", @"今天");
         } else if (dateComponents.year == yesterdayComponents.year && dateComponents.month == yesterdayComponents.month && dateComponents.day == yesterdayComponents.day) {
-            dateText = NSLocalizedString(@"Yesterday", @"Yesterday");
+            dateText = NSLocalizedStringFromTable(@"Yesterday", @"MessageDisplayKitString", @"昨天");
         } else {
             dateText = [NSDateFormatter localizedStringFromDate:message.timestamp dateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterNoStyle];
         }
@@ -379,7 +379,7 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
         
         // 1、是否显示Time Line的label
         if (!_timestampLabel) {
-            LKBadgeView *timestampLabel = [[LKBadgeView alloc] initWithFrame:CGRectMake(0, kXHLabelPadding, 160, kXHTimeStampLabelHeight)];
+            LKBadgeView *timestampLabel = [[LKBadgeView alloc] initWithFrame:CGRectMake(0, kXHLabelPadding, MDK_SCREEN_WIDTH, kXHTimeStampLabelHeight)];
             timestampLabel.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleLeftMargin;
             timestampLabel.badgeColor = [UIColor colorWithWhite:0.000 alpha:0.380];
             timestampLabel.textColor = [UIColor whiteColor];

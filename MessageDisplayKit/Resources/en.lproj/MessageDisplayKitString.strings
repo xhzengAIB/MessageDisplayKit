@@ -32,6 +32,8 @@
 "Setting" = "Setting";
 "Profile" = "Profile";
 "News" = "News";
+"Today" = "Today";
+"Yesterday" = "Yesterday";
 
 "HoldToTalk" = "Hold to talk";
 "ReleaseToSend" = "Release to send";

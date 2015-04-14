@@ -52,6 +52,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    if (CURRENT_SYS_VERSION >= 7.0) {
+        self.navigationController.interactivePopGestureRecognizer.delaysTouchesBegan=NO;
+    }
     self.title = NSLocalizedStringFromTable(@"Chat", @"MessageDisplayKitString", @"聊天");
     
     // Custom UI
@@ -59,7 +62,7 @@
 //    [self setBackgroundImage:[UIImage imageNamed:@"TableViewBackgroundImage"]];
     
     // 设置自身用户名
-    self.messageSender =[self displayNameByClientId:[[LeanChatManager manager] selfClientID]];
+    self.messageSender = [self displayNameByClientId:[[LeanChatManager manager] selfClientID]];
     
     // 添加第三方接入数据
     NSMutableArray *shareMenuItems = [NSMutableArray array];
@@ -144,20 +147,20 @@
 
 #pragma mark - LearnChat Message Handle Method
 
--(NSString*)fetchDataOfMessageFile:(AVFile*)file fileName:(NSString*)fileName error:(NSError**)error{
+- (NSString *)fetchDataOfMessageFile:(AVFile *)file fileName:(NSString*)fileName error:(NSError**)error{
     NSString* path=[[NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, YES) firstObject] stringByAppendingString:fileName];
-    NSData* data=[file getData:error];
-    if(*error==nil){
+    NSData *data = [file getData:error];
+    if(*error == nil) {
         [data writeToFile:path atomically:YES];
     }
     return path;
 }
 
--(XHMessage*)displayMessageByAVIMTypedMessage:(AVIMTypedMessage*)typedMessage{
+- (XHMessage *)displayMessageByAVIMTypedMessage:(AVIMTypedMessage*)typedMessage {
     AVIMMessageMediaType msgType = typedMessage.mediaType;
-    XHMessage* message;
-    NSDate* timestamp=[NSDate dateWithTimeIntervalSince1970:typedMessage.sendTimestamp/1000];
-    NSString* displayName=[self displayNameByClientId:typedMessage.clientId];
+    XHMessage *message;
+    NSDate *timestamp=[NSDate dateWithTimeIntervalSince1970:typedMessage.sendTimestamp/1000];
+    NSString *displayName=[self displayNameByClientId:typedMessage.clientId];
     switch (msgType) {
         case kAVIMMessageMediaTypeText: {
             AVIMTextMessage *receiveTextMessage = (AVIMTextMessage *)typedMessage;
@@ -173,31 +176,31 @@
             NSError* error;
             NSString* path=[self fetchDataOfMessageFile:typedMessage.file fileName:typedMessage.messageId error:&error];
             AVIMAudioMessage* audioMessage=(AVIMAudioMessage*)typedMessage;
-            message=[[XHMessage alloc] initWithVoicePath:path voiceUrl:nil voiceDuration:[NSString stringWithFormat:@"%.1f",audioMessage.duration] sender:displayName timestamp:timestamp];
+            message = [[XHMessage alloc] initWithVoicePath:path voiceUrl:nil voiceDuration:[NSString stringWithFormat:@"%.1f",audioMessage.duration] sender:displayName timestamp:timestamp];
             break;
         }
         case kAVIMMessageMediaTypeEmotion:{
-            AVFile* file=[AVFile fileWithURL:typedMessage.text];
-            NSError* error;
-            NSString* path=[self fetchDataOfMessageFile:file fileName:typedMessage.messageId error:&error];
+            AVFile *file=[AVFile fileWithURL:typedMessage.text];
+            NSError *error;
+            NSString *path=[self fetchDataOfMessageFile:file fileName:typedMessage.messageId error:&error];
             message = [[XHMessage alloc] initWithEmotionPath:path sender:displayName timestamp:timestamp];
             break;
         }
         case kAVIMMessageMediaTypeVideo:{
-            AVIMVideoMessage* receiveVideoMessage=(AVIMVideoMessage*)typedMessage;
-            NSString* format=receiveVideoMessage.format;
-            NSError* error;
-            NSString* path=[self fetchDataOfMessageFile:typedMessage.file fileName:[NSString stringWithFormat:@"%@.%@",typedMessage.messageId,format] error:&error];
-            message= [[XHMessage alloc] initWithVideoConverPhoto:[XHMessageVideoConverPhotoFactory videoConverPhotoWithVideoPath:path] videoPath:path videoUrl:nil sender:displayName timestamp:timestamp];
+            AVIMVideoMessage *receiveVideoMessage=(AVIMVideoMessage*)typedMessage;
+            NSString *format=receiveVideoMessage.format;
+            NSError *error;
+            NSString *path=[self fetchDataOfMessageFile:typedMessage.file fileName:[NSString stringWithFormat:@"%@.%@",typedMessage.messageId,format] error:&error];
+            message = [[XHMessage alloc] initWithVideoConverPhoto:[XHMessageVideoConverPhotoFactory videoConverPhotoWithVideoPath:path] videoPath:path videoUrl:nil sender:displayName timestamp:timestamp];
             break;
         }
         default:
             break;
     }
-    if(typedMessage.ioType==AVIMMessageIOTypeIn){
-        message.bubbleMessageType=XHBubbleMessageTypeReceiving;
-    }else{
-        message.bubbleMessageType=XHBubbleMessageTypeSending;
+    if (typedMessage.ioType == AVIMMessageIOTypeIn){
+        message.bubbleMessageType = XHBubbleMessageTypeReceiving;
+    } else {
+        message.bubbleMessageType = XHBubbleMessageTypeSending;
     }
     message.avatarUrl = [self avatarUrlByClientId:typedMessage.clientId];
     return message;
@@ -211,9 +214,9 @@
     });
 }
 
--(BOOL)filterError:(NSError*)error{
-    if(error){
-        UIAlertView *alertView=[[UIAlertView alloc]
+- (BOOL)filterError:(NSError*)error {
+    if (error) {
+        UIAlertView *alertView = [[UIAlertView alloc]
                                 initWithTitle:nil message:error.description delegate:nil
                                 cancelButtonTitle:@"确定" otherButtonTitles:nil];
         [alertView show];
@@ -224,11 +227,11 @@
 
 #pragma mark - user info
 
--(NSString*)avatarUrlByClientId:(NSString*)clientId{
+- (NSString*)avatarUrlByClientId:(NSString*)clientId{
     return @"http://www.pailixiu.com/jack/meIcon@2x.png";
 }
 
--(NSString*)displayNameByClientId:(NSString*)clientId{
+- (NSString*)displayNameByClientId:(NSString*)clientId{
     return clientId;
 }
 
@@ -332,10 +335,9 @@
 }
 
 - (void)loadMoreMessagesScrollTotop {
-    DLog();
-    if(self.messages.count==0){
+    if (self.messages.count == 0) {
         return;
-    }else{
+    } else {
         if (!self.loadingMoreMessage) {
             self.loadingMoreMessage = YES;
             XHMessage* message=self.messages[0];
@@ -344,7 +346,9 @@
                 dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
                     NSMutableArray* messages=[NSMutableArray array];
                     for(AVIMTypedMessage* typedMessage in typedMessages){
-                        [messages addObject:[weakSelf displayMessageByAVIMTypedMessage:typedMessage]];
+                        if (weakSelf) {
+                            [messages addObject:[weakSelf displayMessageByAVIMTypedMessage:typedMessage]];
+                        }
                     }
                     dispatch_async(dispatch_get_main_queue(), ^{
                         [weakSelf insertOldMessages:messages];
@@ -387,7 +391,7 @@
     AVIMImageMessage *sendPhotoMessage = [AVIMImageMessage messageWithText:nil attachedFilePath:filePath attributes:nil];
     WEAKSELF
     [self.conversation sendMessage:sendPhotoMessage callback:^(BOOL succeeded, NSError *error) {
-        if([weakSelf filterError:error]){
+        if([weakSelf filterError:error]) {
             [weakSelf insertAVIMTypedMessage:sendPhotoMessage];
             [weakSelf finishSendMessageWithBubbleMessageType:XHBubbleMessageMediaTypePhoto];
         }

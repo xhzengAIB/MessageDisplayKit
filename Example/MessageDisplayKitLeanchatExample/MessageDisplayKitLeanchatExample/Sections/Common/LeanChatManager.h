@@ -33,7 +33,7 @@ typedef void(^DidReceiveTypedMessageBlock)(AVIMConversation *conversation, AVIMT
 
 + (instancetype)manager;
 
--(NSString*)selfClientID;
+- (NSString *)selfClientID;
 
 - (void)setupDidReceiveCommonMessageCompletion:(DidReceiveCommonMessageBlock)didReceiveCommonMessageCompletion;
 
