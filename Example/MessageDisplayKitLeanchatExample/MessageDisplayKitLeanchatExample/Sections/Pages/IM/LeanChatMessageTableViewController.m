@@ -226,11 +226,16 @@
 }
 
 #pragma mark - user info
-
+/**
+ * 配置头像
+ */
 - (NSString*)avatarUrlByClientId:(NSString*)clientId{
     return @"http://www.pailixiu.com/jack/meIcon@2x.png";
 }
 
+/**
+ * 配置用户名
+ */
 - (NSString*)displayNameByClientId:(NSString*)clientId{
     return clientId;
 }
