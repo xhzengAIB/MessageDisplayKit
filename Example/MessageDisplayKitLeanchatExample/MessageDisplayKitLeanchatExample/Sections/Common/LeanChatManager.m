@@ -7,6 +7,7 @@
 //
 
 #import "LeanChatManager.h"
+#import "LeanChatCoreDataManager.h"
 
 #define kApplicationId @"3zkueubi18r0r0n47rc9revnlun0xuajsfv5byo17kdodut8"
 #define kClientKey @"ujtz5q7cl84iqhtawjnbk32c4rqtjel3pz6xctekak054cje"
@@ -139,6 +140,7 @@
 
 - (void)conversation:(AVIMConversation *)conversation didReceiveCommonMessage:(AVIMMessage *)message {
     // 接收到新的普通消息。
+    [[LeanChatCoreDataManager manager] increaseUnreadCountByConversationId:conversation.conversationId];
     if(self.didReceiveCommonMessageCompletion){
         self.didReceiveCommonMessageCompletion(conversation,message);
     }
@@ -146,9 +148,12 @@
 
 - (void)conversation:(AVIMConversation *)conversation didReceiveTypedMessage:(AVIMTypedMessage *)message {
     // 接收到新的富媒体消息。
+    [[LeanChatCoreDataManager manager] increaseUnreadCountByConversationId:conversation.conversationId];
     if(self.didReceiveTypedMessageCompletion){
         self.didReceiveTypedMessageCompletion(conversation,message);
     }
 }
+
+#pragma mark - Core Data With Conversation
 
 @end
