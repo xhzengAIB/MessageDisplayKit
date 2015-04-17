@@ -18,7 +18,6 @@
 #define kDidReceiveCommonMessageNotification @"didReceiveCommonMessageNotification"
 #define kDidReceiveTypedMessageNotification @"didReceiveTypedMessageNotification"
 
-
 typedef enum : NSInteger{
     ConversationTypeOneToOne = 0,
     ConversationTypeGroup = 1,

@@ -30,6 +30,7 @@
 		702C68B01AE02FF30085CD78 /* LeanChatCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 702C68AF1AE02FF30085CD78 /* LeanChatCoreDataManager.m */; };
 		702C68B91AE038530085CD78 /* AVIMConversation+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 702C68B81AE038530085CD78 /* AVIMConversation+Custom.m */; };
 		702C68BD1AE03B280085CD78 /* JSBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 702C68BC1AE03B280085CD78 /* JSBadgeView.m */; };
+		702C68C01AE136210085CD78 /* LeanChatConversationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 702C68BF1AE136210085CD78 /* LeanChatConversationTableViewCell.m */; };
 		70457B1C1ADBB70600452531 /* LeanChatConversationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70457B1B1ADBB70600452531 /* LeanChatConversationTableViewController.m */; };
 		E4D6734E1ABD9C5F0000B18D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D6734D1ABD9C5F0000B18D /* main.m */; };
 		E4D673511ABD9C5F0000B18D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D673501ABD9C5F0000B18D /* AppDelegate.m */; };
@@ -191,6 +192,8 @@
 		702C68B81AE038530085CD78 /* AVIMConversation+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AVIMConversation+Custom.m"; sourceTree = "<group>"; };
 		702C68BB1AE03B280085CD78 /* JSBadgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBadgeView.h; sourceTree = "<group>"; };
 		702C68BC1AE03B280085CD78 /* JSBadgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBadgeView.m; sourceTree = "<group>"; };
+		702C68BE1AE136210085CD78 /* LeanChatConversationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeanChatConversationTableViewCell.h; sourceTree = "<group>"; };
+		702C68BF1AE136210085CD78 /* LeanChatConversationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeanChatConversationTableViewCell.m; sourceTree = "<group>"; };
 		70457B1A1ADBB70600452531 /* LeanChatConversationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeanChatConversationTableViewController.h; sourceTree = "<group>"; };
 		70457B1B1ADBB70600452531 /* LeanChatConversationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeanChatConversationTableViewController.m; sourceTree = "<group>"; };
 		E4D673481ABD9C5F0000B18D /* MessageDisplayKitLeanchatExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessageDisplayKitLeanchatExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -609,6 +612,8 @@
 				E4D6743F1ABD9F0B0000B18D /* LeanChatMessageTableViewController.m */,
 				70457B1A1ADBB70600452531 /* LeanChatConversationTableViewController.h */,
 				70457B1B1ADBB70600452531 /* LeanChatConversationTableViewController.m */,
+				702C68BE1AE136210085CD78 /* LeanChatConversationTableViewCell.h */,
+				702C68BF1AE136210085CD78 /* LeanChatConversationTableViewCell.m */,
 			);
 			path = IM;
 			sourceTree = "<group>";
@@ -848,6 +853,7 @@
 				702C68B01AE02FF30085CD78 /* LeanChatCoreDataManager.m in Sources */,
 				E4D673511ABD9C5F0000B18D /* AppDelegate.m in Sources */,
 				E4D6734E1ABD9C5F0000B18D /* main.m in Sources */,
+				702C68C01AE136210085CD78 /* LeanChatConversationTableViewCell.m in Sources */,
 				E4D6743C1ABD9EAF0000B18D /* LeanChatManager.m in Sources */,
 				E4D674401ABD9F0B0000B18D /* LeanChatMessageTableViewController.m in Sources */,
 				E4D674381ABD9DBC0000B18D /* LeanChatViewController.m in Sources */,

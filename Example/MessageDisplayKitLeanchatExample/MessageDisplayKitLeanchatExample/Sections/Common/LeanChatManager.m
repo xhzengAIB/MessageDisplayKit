@@ -107,18 +107,18 @@
         } else if (!objects || [objects count] < 1) {
             // 新建一个对话
             [self.leanClient createConversationWithName:nil
-                                               clientIds:queryClientIDs
-                                              attributes:@{@"type":[NSNumber numberWithInt:conversationType]}
-                                                 options:AVIMConversationOptionNone
-                                                callback:^(AVIMConversation *conversation, NSError *error) {
-                                                    BOOL succeeded = YES;
-                                                    if (error) {
-                                                        succeeded = NO;
-                                                    }
-                                                    if (completion) {
-                                                        completion(succeeded, conversation);
-                                                    }
-                                                }];
+                                              clientIds:queryClientIDs
+                                             attributes:@{@"type":[NSNumber numberWithInt:conversationType]}
+                                                options:AVIMConversationOptionNone
+                                               callback:^(AVIMConversation *conversation, NSError *error) {
+                                                   BOOL succeeded = YES;
+                                                   if (error) {
+                                                       succeeded = NO;
+                                                   }
+                                                   if (completion) {
+                                                       completion(succeeded, conversation);
+                                                   }
+                                               }];
         } else {
             // 已经有一个对话存在，继续在这一对话中聊天
             AVIMConversation *conversation = [objects lastObject];

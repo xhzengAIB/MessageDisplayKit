@@ -121,10 +121,6 @@
         }
     }];
     
-     // 设置接收消息
-    [[LeanChatManager manager] setupDidReceiveCommonMessageCompletion:^(AVIMConversation *conversation, AVIMMessage *message) {
-        // 普通信息
-    }];
     [[LeanChatManager manager] setupDidReceiveTypedMessageCompletion:^(AVIMConversation *conversation, AVIMTypedMessage *message) {
         // 富文本信息
         if([conversation.conversationId isEqualToString:self.conversation.conversationId]){
@@ -142,6 +138,7 @@
 - (void)dealloc {
     self.emotionManagers = nil;
     [[XHAudioPlayerHelper shareInstance] setDelegate:nil];
+    [[LeanChatManager manager] setupDidReceiveTypedMessageCompletion:nil];
 }
 
 
