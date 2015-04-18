@@ -37,7 +37,6 @@
 		E4D6735A1ABD9C5F0000B18D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4D673581ABD9C5F0000B18D /* Main.storyboard */; };
 		E4D6735C1ABD9C5F0000B18D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4D6735B1ABD9C5F0000B18D /* Images.xcassets */; };
 		E4D6735F1ABD9C5F0000B18D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4D6735D1ABD9C5F0000B18D /* LaunchScreen.xib */; };
-		E4D6736B1ABD9C5F0000B18D /* MessageDisplayKitLeanchatExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D6736A1ABD9C5F0000B18D /* MessageDisplayKitLeanchatExampleTests.m */; };
 		E4D673D51ABD9CAD0000B18D /* AddGroupMemberBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D673791ABD9CAD0000B18D /* AddGroupMemberBtn@2x.png */; };
 		E4D673D61ABD9CAD0000B18D /* AddGroupMemberBtnHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D6737A1ABD9CAD0000B18D /* AddGroupMemberBtnHL@2x.png */; };
 		E4D673D71ABD9CAD0000B18D /* avator@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D6737B1ABD9CAD0000B18D /* avator@2x.png */; };
@@ -142,16 +141,6 @@
 		E4D674641ABDBF900000B18D /* TableViewBackgroundImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D674631ABDBF900000B18D /* TableViewBackgroundImage@2x.png */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		E4D673651ABD9C5F0000B18D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E4D673401ABD9C5F0000B18D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E4D673471ABD9C5F0000B18D;
-			remoteInfo = MessageDisplayKitLeanchatExample;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		E4D674461ABDA18B0000B18D /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -204,7 +193,6 @@
 		E4D673591ABD9C5F0000B18D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E4D6735B1ABD9C5F0000B18D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E4D6735E1ABD9C5F0000B18D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		E4D673641ABD9C5F0000B18D /* MessageDisplayKitLeanchatExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MessageDisplayKitLeanchatExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4D673691ABD9C5F0000B18D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4D6736A1ABD9C5F0000B18D /* MessageDisplayKitLeanchatExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageDisplayKitLeanchatExampleTests.m; sourceTree = "<group>"; };
 		E4D673761ABD9CA30000B18D /* MessageDisplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MessageDisplayKit.framework; sourceTree = "<group>"; };
@@ -332,13 +320,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E4D673611ABD9C5F0000B18D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -389,7 +370,6 @@
 			isa = PBXGroup;
 			children = (
 				E4D673481ABD9C5F0000B18D /* MessageDisplayKitLeanchatExample.app */,
-				E4D673641ABD9C5F0000B18D /* MessageDisplayKitLeanchatExampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -660,24 +640,6 @@
 			productReference = E4D673481ABD9C5F0000B18D /* MessageDisplayKitLeanchatExample.app */;
 			productType = "com.apple.product-type.application";
 		};
-		E4D673631ABD9C5F0000B18D /* MessageDisplayKitLeanchatExampleTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E4D673711ABD9C5F0000B18D /* Build configuration list for PBXNativeTarget "MessageDisplayKitLeanchatExampleTests" */;
-			buildPhases = (
-				E4D673601ABD9C5F0000B18D /* Sources */,
-				E4D673611ABD9C5F0000B18D /* Frameworks */,
-				E4D673621ABD9C5F0000B18D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E4D673661ABD9C5F0000B18D /* PBXTargetDependency */,
-			);
-			name = MessageDisplayKitLeanchatExampleTests;
-			productName = MessageDisplayKitLeanchatExampleTests;
-			productReference = E4D673641ABD9C5F0000B18D /* MessageDisplayKitLeanchatExampleTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -689,10 +651,6 @@
 				TargetAttributes = {
 					E4D673471ABD9C5F0000B18D = {
 						CreatedOnToolsVersion = 6.2;
-					};
-					E4D673631ABD9C5F0000B18D = {
-						CreatedOnToolsVersion = 6.2;
-						TestTargetID = E4D673471ABD9C5F0000B18D;
 					};
 				};
 			};
@@ -711,7 +669,6 @@
 			projectRoot = "";
 			targets = (
 				E4D673471ABD9C5F0000B18D /* MessageDisplayKitLeanchatExample */,
-				E4D673631ABD9C5F0000B18D /* MessageDisplayKitLeanchatExampleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -835,13 +792,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E4D673621ABD9C5F0000B18D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -864,23 +814,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E4D673601ABD9C5F0000B18D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E4D6736B1ABD9C5F0000B18D /* MessageDisplayKitLeanchatExampleTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		E4D673661ABD9C5F0000B18D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E4D673471ABD9C5F0000B18D /* MessageDisplayKitLeanchatExample */;
-			targetProxy = E4D673651ABD9C5F0000B18D /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E4D673581ABD9C5F0000B18D /* Main.storyboard */ = {
@@ -945,7 +879,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -981,7 +915,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1021,40 +955,6 @@
 			};
 			name = Release;
 		};
-		E4D673721ABD9C5F0000B18D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = MessageDisplayKitLeanchatExampleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MessageDisplayKitLeanchatExample.app/MessageDisplayKitLeanchatExample";
-			};
-			name = Debug;
-		};
-		E4D673731ABD9C5F0000B18D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = MessageDisplayKitLeanchatExampleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MessageDisplayKitLeanchatExample.app/MessageDisplayKitLeanchatExample";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1072,15 +972,6 @@
 			buildConfigurations = (
 				E4D6736F1ABD9C5F0000B18D /* Debug */,
 				E4D673701ABD9C5F0000B18D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E4D673711ABD9C5F0000B18D /* Build configuration list for PBXNativeTarget "MessageDisplayKitLeanchatExampleTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E4D673721ABD9C5F0000B18D /* Debug */,
-				E4D673731ABD9C5F0000B18D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
