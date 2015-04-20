@@ -6,17 +6,17 @@
 //  Copyright (c) 2015年 iOS软件开发工程师 曾宪华 热衷于简洁的UI QQ:543413507 http://www.pailixiu.com/blog   http://www.pailixiu.com/Jack/personal. All rights reserved.
 //
 
-#import "ViewController.h"
-
+#import "LeanChatViewController.h"
 #import "LeanChatMessageTableViewController.h"
-
 #import "LeanChatManager.h"
+#import "LeanChatConversationTableViewController.h"
 
-@interface ViewController ()
+
+@interface LeanChatViewController ()
 
 @end
 
-@implementation ViewController
+@implementation LeanChatViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -49,6 +49,13 @@
     [[LeanChatManager manager] openSessionWithClientID:kJackClientID completion:^(BOOL succeeded, NSError *error) {
         NSLog(@"成功与否 : %d  错误 : %@", succeeded, error);
         [self navigationToIMWithTargetClientIDs:@[kJackClientID, kDarcyClientID, kJaysonClientID]];
+    }];
+}
+
+- (IBAction)enterRecentConversations:(id)sender {
+    [[LeanChatManager manager] openSessionWithClientID:kJackClientID completion:^(BOOL succeeded, NSError *error) {
+        LeanChatConversationTableViewController* conversationTableViewController=[[LeanChatConversationTableViewController alloc] init];
+        [self.navigationController pushViewController:conversationTableViewController animated:YES];
     }];
 }
 

@@ -37,7 +37,7 @@
     if (self) {
         self.clientIDs = clientIDs;
         if (self.clientIDs.count > 1) {
-            self.conversationType = ConversationTypeGrop;
+            self.conversationType = ConversationTypeGroup;
         }
     }
     return self;
@@ -121,13 +121,11 @@
         }
     }];
     
-    // 设置接收消息
-    [[LeanChatManager manager] setupDidReceiveCommonMessageCompletion:^(AVIMMessage *message) {
-        // 普通信息
-    }];
-    [[LeanChatManager manager] setupDidReceiveTypedMessageCompletion:^(AVIMTypedMessage *message) {
+    [[LeanChatManager manager] setupDidReceiveTypedMessageCompletion:^(AVIMConversation *conversation, AVIMTypedMessage *message) {
         // 富文本信息
-        [weakSelf insertAVIMTypedMessage:message];
+        if([conversation.conversationId isEqualToString:self.conversation.conversationId]){
+            [weakSelf insertAVIMTypedMessage:message];
+        }
     }];
 }
 
@@ -140,6 +138,7 @@
 - (void)dealloc {
     self.emotionManagers = nil;
     [[XHAudioPlayerHelper shareInstance] setDelegate:nil];
+    [[LeanChatManager manager] setupDidReceiveTypedMessageCompletion:nil];
 }
 
 
@@ -224,11 +223,16 @@
 }
 
 #pragma mark - user info
-
+/**
+ * 配置头像
+ */
 - (NSString*)avatarUrlByClientId:(NSString*)clientId{
     return @"http://www.pailixiu.com/jack/meIcon@2x.png";
 }
 
+/**
+ * 配置用户名
+ */
 - (NSString*)displayNameByClientId:(NSString*)clientId{
     return clientId;
 }

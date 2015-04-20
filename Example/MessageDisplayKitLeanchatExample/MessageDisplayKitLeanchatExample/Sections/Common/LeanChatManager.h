@@ -15,13 +15,16 @@
 #define kDarcyClientID @"Darcy"
 #define kJaysonClientID @"Jayson"
 
-typedef NS_ENUM(int, ConversationType) {
-    ConversationTypeOneToOne = 0,
-    ConversationTypeGrop = 1,
-};
+#define kDidReceiveCommonMessageNotification @"didReceiveCommonMessageNotification"
+#define kDidReceiveTypedMessageNotification @"didReceiveTypedMessageNotification"
 
-typedef void(^DidReceiveCommonMessageBlock)(AVIMMessage *message);
-typedef void(^DidReceiveTypedMessageBlock)(AVIMTypedMessage *message);
+typedef enum : NSInteger{
+    ConversationTypeOneToOne = 0,
+    ConversationTypeGroup = 1,
+}ConversationType;
+
+typedef void(^DidReceiveCommonMessageBlock)(AVIMConversation *conversation, AVIMMessage *message);
+typedef void(^DidReceiveTypedMessageBlock)(AVIMConversation *conversation, AVIMTypedMessage *message);
 
 @interface LeanChatManager : NSObject
 
@@ -32,6 +35,7 @@ typedef void(^DidReceiveTypedMessageBlock)(AVIMTypedMessage *message);
 - (NSString *)selfClientID;
 
 - (void)setupDidReceiveCommonMessageCompletion:(DidReceiveCommonMessageBlock)didReceiveCommonMessageCompletion;
+
 - (void)setupDidReceiveTypedMessageCompletion:(DidReceiveTypedMessageBlock)didReceiveTypedMessageCompletion;
 
 - (void)openSessionWithClientID:(NSString *)clientID
@@ -40,5 +44,7 @@ typedef void(^DidReceiveTypedMessageBlock)(AVIMTypedMessage *message);
 - (void)createConversationsWithClientIDs:(NSArray *)clientIDs
                         conversationType:(ConversationType)conversationType
                               completion:(void (^)(BOOL succeeded, AVIMConversation *createConversation))completion;
+
+-(void)findRecentConversationsWithBlock:(AVIMArrayResultBlock)block;
 
 @end

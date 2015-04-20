@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  ViewController.h
 //  MessageDisplayKitLeanchatExample
 //
 //  Created by Jack_iMac on 15/3/21.
@@ -8,9 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
+@interface LeanChatViewController : UIViewController
 
 
 @end

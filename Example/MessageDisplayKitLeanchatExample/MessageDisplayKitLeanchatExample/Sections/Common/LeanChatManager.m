@@ -7,6 +7,7 @@
 //
 
 #import "LeanChatManager.h"
+#import "LeanChatCoreDataManager.h"
 
 #define kApplicationId @"3zkueubi18r0r0n47rc9revnlun0xuajsfv5byo17kdodut8"
 #define kClientKey @"ujtz5q7cl84iqhtawjnbk32c4rqtjel3pz6xctekak054cje"
@@ -19,6 +20,8 @@
 
 @property (nonatomic, copy) DidReceiveCommonMessageBlock didReceiveCommonMessageCompletion;
 @property (nonatomic, copy) DidReceiveTypedMessageBlock didReceiveTypedMessageCompletion;
+
+@property (nonatomic, strong) NSMutableArray* recentConversations;
 
 @end
 
@@ -104,18 +107,18 @@
         } else if (!objects || [objects count] < 1) {
             // 新建一个对话
             [self.leanClient createConversationWithName:nil
-                                               clientIds:queryClientIDs
-                                              attributes:@{@"type":[NSNumber numberWithInt:conversationType]}
-                                                 options:AVIMConversationOptionNone
-                                                callback:^(AVIMConversation *conversation, NSError *error) {
-                                                    BOOL succeeded = YES;
-                                                    if (error) {
-                                                        succeeded = NO;
-                                                    }
-                                                    if (completion) {
-                                                        completion(succeeded, conversation);
-                                                    }
-                                                }];
+                                              clientIds:queryClientIDs
+                                             attributes:@{@"type":[NSNumber numberWithInt:conversationType]}
+                                                options:AVIMConversationOptionNone
+                                               callback:^(AVIMConversation *conversation, NSError *error) {
+                                                   BOOL succeeded = YES;
+                                                   if (error) {
+                                                       succeeded = NO;
+                                                   }
+                                                   if (completion) {
+                                                       completion(succeeded, conversation);
+                                                   }
+                                               }];
         } else {
             // 已经有一个对话存在，继续在这一对话中聊天
             AVIMConversation *conversation = [objects lastObject];
@@ -126,20 +129,31 @@
     }];
 }
 
+-(void)findRecentConversationsWithBlock:(AVIMArrayResultBlock)block{
+    AVIMConversationQuery* query=[self.leanClient conversationQuery];
+    [query whereKey:kAVIMKeyMember containedIn:@[self.selfClientID]];
+    query.limit=1000;
+    [query findConversationsWithCallback:block];
+}
+
 #pragma mark - AVIMClientDelegate
 
 - (void)conversation:(AVIMConversation *)conversation didReceiveCommonMessage:(AVIMMessage *)message {
     // 接收到新的普通消息。
-    if (self.didReceiveCommonMessageCompletion) {
-        self.didReceiveCommonMessageCompletion(message);
+    [[LeanChatCoreDataManager manager] increaseUnreadCountByConversationId:conversation.conversationId];
+    if(self.didReceiveCommonMessageCompletion){
+        self.didReceiveCommonMessageCompletion(conversation,message);
     }
 }
 
 - (void)conversation:(AVIMConversation *)conversation didReceiveTypedMessage:(AVIMTypedMessage *)message {
     // 接收到新的富媒体消息。
-    if (self.didReceiveTypedMessageCompletion) {
-        self.didReceiveTypedMessageCompletion(message);
+    [[LeanChatCoreDataManager manager] increaseUnreadCountByConversationId:conversation.conversationId];
+    if(self.didReceiveTypedMessageCompletion){
+        self.didReceiveTypedMessageCompletion(conversation,message);
     }
 }
+
+#pragma mark - Core Data With Conversation
 
 @end
