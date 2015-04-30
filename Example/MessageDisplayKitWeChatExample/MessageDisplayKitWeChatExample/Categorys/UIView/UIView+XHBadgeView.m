@@ -68,16 +68,25 @@ static NSString const * XHCircleBadgeViewKey = @"XHCircleBadgeViewKey";
 - (XHCircleView *)setupCircleBadge {
     self.opaque = NO;
     self.clipsToBounds = NO;
-    XHCircleView *circleView = objc_getAssociatedObject(self, &XHCircleBadgeViewKey);
-    if (circleView)
-        return circleView;
+    CGRect circleViewFrame = CGRectMake(CGRectGetWidth(self.bounds) - 4, 0, 8, 8);
     
+    XHCircleView *circleView = objc_getAssociatedObject(self, &XHCircleBadgeViewKey);
     if (!circleView) {
-        circleView = [[XHCircleView alloc] initWithFrame:CGRectMake(CGRectGetWidth(self.bounds), 0, 8, 8)];
+        circleView = [[XHCircleView alloc] initWithFrame:circleViewFrame];
         [self addSubview:circleView];
         objc_setAssociatedObject(self, &XHCircleBadgeViewKey, circleView, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
+    circleView.frame = circleViewFrame;
+    circleView.hidden = NO;
+
     return circleView;
+}
+
+- (void)destroyCircleBadge {
+    XHCircleView *circleView = objc_getAssociatedObject(self, &XHCircleBadgeViewKey);
+    if (circleView) {
+        circleView.hidden = YES;
+    }
 }
 
 @end

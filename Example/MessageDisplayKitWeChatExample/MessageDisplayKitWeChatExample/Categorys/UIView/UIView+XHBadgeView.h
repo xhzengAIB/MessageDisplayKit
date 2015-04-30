@@ -21,4 +21,6 @@
 
 - (XHCircleView *)setupCircleBadge;
 
+- (void)destroyCircleBadge;
+
 @end

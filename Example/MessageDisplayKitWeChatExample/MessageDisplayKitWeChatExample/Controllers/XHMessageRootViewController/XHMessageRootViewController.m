@@ -272,7 +272,11 @@
         }
     }
     
-    [cell.imageView setupCircleBadge];
+    if (indexPath.row % 2) {
+        [cell.imageView setupCircleBadge];
+    } else {
+        [cell.imageView destroyCircleBadge];
+    }
     
     cell.textLabel.textColor = [UIColor blackColor];
     
