@@ -12,6 +12,9 @@
 #import "XHContactPhotosTableViewCell.h"
 #import "XHContactCommunicationView.h"
 
+#import "XHDemoWeChatMessageTableViewController.h"
+#import "XHAlbumTableViewController.h"
+
 @interface XHContactDetailTableViewController ()
 
 @property (nonatomic, strong) XHContact *contact;
@@ -31,7 +34,8 @@
 }
 
 - (void)messageCommunicationButtonClicked:(UIButton *)sender {
-    
+    XHDemoWeChatMessageTableViewController *weChatMessageTableViewController = [[XHDemoWeChatMessageTableViewController alloc] init];
+    [self pushNewViewController:weChatMessageTableViewController];
 }
 
 #pragma mark - Propertys
@@ -48,8 +52,8 @@
     if (!_contactCommunicationView) {
         _contactCommunicationView = [[XHContactCommunicationView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), (kXHContactButtonHeight + kXHContactButtonSpacing) * 2)];
         _contactCommunicationView.backgroundColor = [UIColor clearColor];
-        [_contactCommunicationView.videoCommunicationButton addTarget:self action:@selector(videoCommunicationButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
-        [_contactCommunicationView.messageCommunicationButton addTarget:self action:@selector(messageCommunicationButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+        [_contactCommunicationView.videoCommunicationButton addTarget:self action:@selector(messageCommunicationButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+        [_contactCommunicationView.messageCommunicationButton addTarget:self action:@selector(videoCommunicationButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _contactCommunicationView;
 }
@@ -117,6 +121,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (indexPath.row == 3) {
+        XHAlbumTableViewController *albumTableViewController = [[XHAlbumTableViewController alloc] init];
+        [self pushNewViewController:albumTableViewController];
+    }
 }
 
 @end
