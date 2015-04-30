@@ -7,6 +7,8 @@ An IM APP like WeChat App has to send text, pictures, audio, video, location mes
 
 如果有任何问题，请到githug开issue，[点击这里](https://github.com/xhzengAIB/MessageDisplayKit/issues?state=open)移步新建一个issue，写上你不明白的地方，我会在github给予帮助。                        
 
+很多朋友反应，只看到静态库，看不到源码，一个工作区域内，有多个使用例子，也包含了源码，源码请[戳这里](https://github.com/xhzengAIB/MessageDisplayKit/tree/master/MessageDisplayKit), 让大家都可以快速查看到。
+
 It's ok if you don't understand how the code works. Most code has comments, which I believe will help you a lot. Feel free to [open an issue] (https://github.com/xhzengAIB/MessageDisplayKit/issues?state=open) if you have any questions. I will do my best to answer them.
 
 ## 注意，现在已经替换了这个插件的编译，使用Xcode6或者更高版本进行编译即可
