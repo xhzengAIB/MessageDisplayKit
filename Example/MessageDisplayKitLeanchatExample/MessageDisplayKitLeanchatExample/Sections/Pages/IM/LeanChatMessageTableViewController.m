@@ -120,13 +120,26 @@
             }];
         }
     }];
+}
+
+// 这里也要把 setupDidReceiveTypedMessageCompletion 放到 viewDidAppear 中
+// 不然, 就会冲突, 导致不能实时接收到对方的消息
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
     
+    WEAKSELF
     [[LeanChatManager manager] setupDidReceiveTypedMessageCompletion:^(AVIMConversation *conversation, AVIMTypedMessage *message) {
         // 富文本信息
         if([conversation.conversationId isEqualToString:self.conversation.conversationId]){
             [weakSelf insertAVIMTypedMessage:message];
         }
     }];
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    [[LeanChatManager manager] setupDidReceiveTypedMessageCompletion:nil];
 }
 
 - (void)didReceiveMemoryWarning
