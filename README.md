@@ -1,3 +1,4 @@
+![](https://github.com/xhzengAIB/LearnEnglish/raw/master/Screenshots/MessageDisplayKit.png)
 ![image](https://github.com/xhzengAIB/LearnEnglish/raw/master/Screenshots/MessageDisplayKit.gif)
 
 MessageDisplayKit
