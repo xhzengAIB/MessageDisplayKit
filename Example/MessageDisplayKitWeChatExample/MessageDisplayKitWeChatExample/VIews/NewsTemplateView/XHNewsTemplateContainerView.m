@@ -33,6 +33,8 @@
 - (UIImageView *)topNewsImageView {
     if (!_topNewsImageView) {
         _topNewsImageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10, CGRectGetWidth(self.bounds) - 20, CGRectGetHeight(self.bounds) - 180)];
+        _topNewsImageView.contentMode = UIViewContentModeScaleAspectFill;
+        _topNewsImageView.layer.masksToBounds = YES;
         _topNewsImageView.image = [UIImage imageNamed:@"AlbumHeaderBackgrounImage"];
         [_topNewsImageView addSubview:self.topNewsTitleLabel];
     }
@@ -41,9 +43,9 @@
 - (UILabel *)topNewsTitleLabel {
     if (!_topNewsTitleLabel) {
         _topNewsTitleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(_topNewsImageView.bounds) - 30, CGRectGetWidth(_topNewsImageView.bounds), 30)];
-        _topNewsTitleLabel.backgroundColor = [UIColor blackColor];
+        _topNewsTitleLabel.backgroundColor = [UIColor clearColor];
         _topNewsTitleLabel.textColor = [UIColor whiteColor];
-        _topNewsTitleLabel.font = [UIFont boldSystemFontOfSize:15];
+        _topNewsTitleLabel.font = [UIFont systemFontOfSize:14];
         _topNewsTitleLabel.text = @"我们是一个专业的团队，群聊开始做吧！";
     }
     return _topNewsTitleLabel;
@@ -51,7 +53,7 @@
 
 - (UIImageView *)sepatorImageViewWithWidth:(CGFloat)width {
     UIImageView *sepatorImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, width, 0.5)];
-    sepatorImageView.backgroundColor = [UIColor grayColor];
+    sepatorImageView.backgroundColor = [UIColor colorWithRed:0.711 green:0.747 blue:0.755 alpha:1.000];
     return sepatorImageView;
 }
 
@@ -91,14 +93,5 @@
     }
     return self;
 }
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
 
 @end

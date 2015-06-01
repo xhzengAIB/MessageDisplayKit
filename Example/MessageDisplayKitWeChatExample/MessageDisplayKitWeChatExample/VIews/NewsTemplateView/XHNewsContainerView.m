@@ -16,8 +16,8 @@
     if (!_newsSummeryLabel) {
         _newsSummeryLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 5, CGRectGetWidth(self.bounds) - 5 * 3 - 40, 40)];
         _newsSummeryLabel.numberOfLines = 2;
-        _newsSummeryLabel.font = [UIFont boldSystemFontOfSize:14];
-        _newsSummeryLabel.textColor = [UIColor blackColor];
+        _newsSummeryLabel.font = [UIFont systemFontOfSize:14];
+        _newsSummeryLabel.textColor = [UIColor colorWithWhite:0.151 alpha:1.000];
         _newsSummeryLabel.backgroundColor = [UIColor clearColor];
         _newsSummeryLabel.text = @"这里是iOS开发者大会，欢迎来到华捷，我们今天的主题是群聊，大多数人会为群里的核心技术在哪里？";
     }
