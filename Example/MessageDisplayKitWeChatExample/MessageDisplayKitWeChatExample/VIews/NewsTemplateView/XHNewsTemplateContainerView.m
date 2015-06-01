@@ -43,7 +43,7 @@
 - (UILabel *)topNewsTitleLabel {
     if (!_topNewsTitleLabel) {
         _topNewsTitleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(_topNewsImageView.bounds) - 30, CGRectGetWidth(_topNewsImageView.bounds), 30)];
-        _topNewsTitleLabel.backgroundColor = [UIColor clearColor];
+        _topNewsTitleLabel.backgroundColor = [UIColor colorWithWhite:0.000 alpha:0.500];
         _topNewsTitleLabel.textColor = [UIColor whiteColor];
         _topNewsTitleLabel.font = [UIFont systemFontOfSize:14];
         _topNewsTitleLabel.text = @"我们是一个专业的团队，群聊开始做吧！";
