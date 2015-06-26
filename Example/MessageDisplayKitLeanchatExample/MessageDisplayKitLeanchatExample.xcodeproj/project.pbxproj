@@ -7,31 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		70013D5F1ABEB1730050D0F7 /* emotion0.gif in Resources */ = {isa = PBXBuildFile; fileRef = 70013D4E1ABEB1730050D0F7 /* emotion0.gif */; };
-		70013D601ABEB1730050D0F7 /* emotion1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 70013D4F1ABEB1730050D0F7 /* emotion1.gif */; };
-		70013D611ABEB1730050D0F7 /* emotion10.gif in Resources */ = {isa = PBXBuildFile; fileRef = 70013D501ABEB1730050D0F7 /* emotion10.gif */; };
-		70013D621ABEB1730050D0F7 /* emotion11.gif in Resources */ = {isa = PBXBuildFile; fileRef = 70013D511ABEB1730050D0F7 /* emotion11.gif */; };
-		70013D631ABEB1730050D0F7 /* emotion12.gif in Resources */ = {isa = PBXBuildFile; fileRef = 70013D521ABEB1730050D0F7 /* emotion12.gif */; };
-		70013D641ABEB1730050D0F7 /* emotion13.gif in Resources */ = {isa = PBXBuildFile; fileRef = 70013D531ABEB1730050D0F7 /* emotion13.gif */; };
-		70013D651ABEB1730050D0F7 /* emotion14.gif in Resources */ = {isa = PBXBuildFile; fileRef = 70013D541ABEB1730050D0F7 /* emotion14.gif */; };
-		70013D661ABEB1730050D0F7 /* emotion15.gif in Resources */ = {isa = PBXBuildFile; fileRef = 70013D551ABEB1730050D0F7 /* emotion15.gif */; };
-		70013D671ABEB1730050D0F7 /* emotion16.gif in Resources */ = {isa = PBXBuildFile; fileRef = 70013D561ABEB1730050D0F7 /* emotion16.gif */; };
-		70013D681ABEB1730050D0F7 /* emotion2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 70013D571ABEB1730050D0F7 /* emotion2.gif */; };
-		70013D691ABEB1730050D0F7 /* emotion3.gif in Resources */ = {isa = PBXBuildFile; fileRef = 70013D581ABEB1730050D0F7 /* emotion3.gif */; };
-		70013D6A1ABEB1730050D0F7 /* emotion4.gif in Resources */ = {isa = PBXBuildFile; fileRef = 70013D591ABEB1730050D0F7 /* emotion4.gif */; };
-		70013D6B1ABEB1730050D0F7 /* emotion5.gif in Resources */ = {isa = PBXBuildFile; fileRef = 70013D5A1ABEB1730050D0F7 /* emotion5.gif */; };
-		70013D6C1ABEB1730050D0F7 /* emotion6.gif in Resources */ = {isa = PBXBuildFile; fileRef = 70013D5B1ABEB1730050D0F7 /* emotion6.gif */; };
-		70013D6D1ABEB1730050D0F7 /* emotion7.gif in Resources */ = {isa = PBXBuildFile; fileRef = 70013D5C1ABEB1730050D0F7 /* emotion7.gif */; };
-		70013D6E1ABEB1730050D0F7 /* emotion8.gif in Resources */ = {isa = PBXBuildFile; fileRef = 70013D5D1ABEB1730050D0F7 /* emotion8.gif */; };
-		70013D6F1ABEB1730050D0F7 /* emotion9.gif in Resources */ = {isa = PBXBuildFile; fileRef = 70013D5E1ABEB1730050D0F7 /* emotion9.gif */; };
 		70013D721ABEB4190050D0F7 /* AVIMEmotionMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 70013D711ABEB4190050D0F7 /* AVIMEmotionMessage.m */; };
-		70013D981ABF1D650050D0F7 /* AVOSCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4D674481ABDA2C40000B18D /* AVOSCloud.framework */; };
-		70013D991ABF1D650050D0F7 /* AVOSCloudIM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4D674491ABDA2C40000B18D /* AVOSCloudIM.framework */; };
 		702C68B91AE038530085CD78 /* AVIMConversation+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 702C68B81AE038530085CD78 /* AVIMConversation+Custom.m */; };
 		702C68BD1AE03B280085CD78 /* JSBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 702C68BC1AE03B280085CD78 /* JSBadgeView.m */; };
 		702C68C01AE136210085CD78 /* LeanChatConversationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 702C68BF1AE136210085CD78 /* LeanChatConversationTableViewCell.m */; };
 		70457B1C1ADBB70600452531 /* LeanChatConversationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70457B1B1ADBB70600452531 /* LeanChatConversationTableViewController.m */; };
-		E41BDAD41B301C7D00FAFFCC /* LeanChatCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E41BDAD31B301C7D00FAFFCC /* LeanChatCoreDataManager.m */; };
+		E4ABB0171B3D2F850015DC5F /* AVOSCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4ABB0151B3D2F850015DC5F /* AVOSCloud.framework */; };
+		E4ABB0181B3D2F850015DC5F /* AVOSCloudIM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4ABB0161B3D2F850015DC5F /* AVOSCloudIM.framework */; };
+		E4ABB0191B3D2F990015DC5F /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 70BEDC091B3415DC004A1D39 /* libsqlite3.dylib */; };
+		E4ABB01C1B3D2FB10015DC5F /* LeanChatCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E4ABB01B1B3D2FB10015DC5F /* LeanChatCoreDataManager.m */; };
+		E4ABB02F1B3D30C30015DC5F /* emotion0.gif in Resources */ = {isa = PBXBuildFile; fileRef = E4ABB01E1B3D30C30015DC5F /* emotion0.gif */; };
+		E4ABB0301B3D30C30015DC5F /* emotion1.gif in Resources */ = {isa = PBXBuildFile; fileRef = E4ABB01F1B3D30C30015DC5F /* emotion1.gif */; };
+		E4ABB0311B3D30C30015DC5F /* emotion10.gif in Resources */ = {isa = PBXBuildFile; fileRef = E4ABB0201B3D30C30015DC5F /* emotion10.gif */; };
+		E4ABB0321B3D30C30015DC5F /* emotion11.gif in Resources */ = {isa = PBXBuildFile; fileRef = E4ABB0211B3D30C30015DC5F /* emotion11.gif */; };
+		E4ABB0331B3D30C30015DC5F /* emotion12.gif in Resources */ = {isa = PBXBuildFile; fileRef = E4ABB0221B3D30C30015DC5F /* emotion12.gif */; };
+		E4ABB0341B3D30C30015DC5F /* emotion13.gif in Resources */ = {isa = PBXBuildFile; fileRef = E4ABB0231B3D30C30015DC5F /* emotion13.gif */; };
+		E4ABB0351B3D30C30015DC5F /* emotion14.gif in Resources */ = {isa = PBXBuildFile; fileRef = E4ABB0241B3D30C30015DC5F /* emotion14.gif */; };
+		E4ABB0361B3D30C30015DC5F /* emotion15.gif in Resources */ = {isa = PBXBuildFile; fileRef = E4ABB0251B3D30C30015DC5F /* emotion15.gif */; };
+		E4ABB0371B3D30C30015DC5F /* emotion16.gif in Resources */ = {isa = PBXBuildFile; fileRef = E4ABB0261B3D30C30015DC5F /* emotion16.gif */; };
+		E4ABB0381B3D30C30015DC5F /* emotion2.gif in Resources */ = {isa = PBXBuildFile; fileRef = E4ABB0271B3D30C30015DC5F /* emotion2.gif */; };
+		E4ABB0391B3D30C30015DC5F /* emotion3.gif in Resources */ = {isa = PBXBuildFile; fileRef = E4ABB0281B3D30C30015DC5F /* emotion3.gif */; };
+		E4ABB03A1B3D30C30015DC5F /* emotion4.gif in Resources */ = {isa = PBXBuildFile; fileRef = E4ABB0291B3D30C30015DC5F /* emotion4.gif */; };
+		E4ABB03B1B3D30C30015DC5F /* emotion5.gif in Resources */ = {isa = PBXBuildFile; fileRef = E4ABB02A1B3D30C30015DC5F /* emotion5.gif */; };
+		E4ABB03C1B3D30C30015DC5F /* emotion6.gif in Resources */ = {isa = PBXBuildFile; fileRef = E4ABB02B1B3D30C30015DC5F /* emotion6.gif */; };
+		E4ABB03D1B3D30C30015DC5F /* emotion7.gif in Resources */ = {isa = PBXBuildFile; fileRef = E4ABB02C1B3D30C30015DC5F /* emotion7.gif */; };
+		E4ABB03E1B3D30C30015DC5F /* emotion8.gif in Resources */ = {isa = PBXBuildFile; fileRef = E4ABB02D1B3D30C30015DC5F /* emotion8.gif */; };
+		E4ABB03F1B3D30C30015DC5F /* emotion9.gif in Resources */ = {isa = PBXBuildFile; fileRef = E4ABB02E1B3D30C30015DC5F /* emotion9.gif */; };
 		E4D6734E1ABD9C5F0000B18D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D6734D1ABD9C5F0000B18D /* main.m */; };
 		E4D673511ABD9C5F0000B18D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D673501ABD9C5F0000B18D /* AppDelegate.m */; };
 		E4D6735A1ABD9C5F0000B18D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4D673581ABD9C5F0000B18D /* Main.storyboard */; };
@@ -156,23 +157,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		70013D4E1ABEB1730050D0F7 /* emotion0.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = emotion0.gif; sourceTree = "<group>"; };
-		70013D4F1ABEB1730050D0F7 /* emotion1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = emotion1.gif; sourceTree = "<group>"; };
-		70013D501ABEB1730050D0F7 /* emotion10.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = emotion10.gif; sourceTree = "<group>"; };
-		70013D511ABEB1730050D0F7 /* emotion11.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = emotion11.gif; sourceTree = "<group>"; };
-		70013D521ABEB1730050D0F7 /* emotion12.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = emotion12.gif; sourceTree = "<group>"; };
-		70013D531ABEB1730050D0F7 /* emotion13.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = emotion13.gif; sourceTree = "<group>"; };
-		70013D541ABEB1730050D0F7 /* emotion14.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = emotion14.gif; sourceTree = "<group>"; };
-		70013D551ABEB1730050D0F7 /* emotion15.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = emotion15.gif; sourceTree = "<group>"; };
-		70013D561ABEB1730050D0F7 /* emotion16.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = emotion16.gif; sourceTree = "<group>"; };
-		70013D571ABEB1730050D0F7 /* emotion2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = emotion2.gif; sourceTree = "<group>"; };
-		70013D581ABEB1730050D0F7 /* emotion3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = emotion3.gif; sourceTree = "<group>"; };
-		70013D591ABEB1730050D0F7 /* emotion4.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = emotion4.gif; sourceTree = "<group>"; };
-		70013D5A1ABEB1730050D0F7 /* emotion5.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = emotion5.gif; sourceTree = "<group>"; };
-		70013D5B1ABEB1730050D0F7 /* emotion6.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = emotion6.gif; sourceTree = "<group>"; };
-		70013D5C1ABEB1730050D0F7 /* emotion7.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = emotion7.gif; sourceTree = "<group>"; };
-		70013D5D1ABEB1730050D0F7 /* emotion8.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = emotion8.gif; sourceTree = "<group>"; };
-		70013D5E1ABEB1730050D0F7 /* emotion9.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = emotion9.gif; sourceTree = "<group>"; };
 		70013D701ABEB4190050D0F7 /* AVIMEmotionMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVIMEmotionMessage.h; sourceTree = "<group>"; };
 		70013D711ABEB4190050D0F7 /* AVIMEmotionMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVIMEmotionMessage.m; sourceTree = "<group>"; };
 		702C68B71AE038530085CD78 /* AVIMConversation+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AVIMConversation+Custom.h"; sourceTree = "<group>"; };
@@ -183,8 +167,28 @@
 		702C68BF1AE136210085CD78 /* LeanChatConversationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeanChatConversationTableViewCell.m; sourceTree = "<group>"; };
 		70457B1A1ADBB70600452531 /* LeanChatConversationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeanChatConversationTableViewController.h; sourceTree = "<group>"; };
 		70457B1B1ADBB70600452531 /* LeanChatConversationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeanChatConversationTableViewController.m; sourceTree = "<group>"; };
-		E41BDAD21B301C7D00FAFFCC /* LeanChatCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeanChatCoreDataManager.h; sourceTree = "<group>"; };
-		E41BDAD31B301C7D00FAFFCC /* LeanChatCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeanChatCoreDataManager.m; sourceTree = "<group>"; };
+		70BEDC091B3415DC004A1D39 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		E4ABB0151B3D2F850015DC5F /* AVOSCloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloud.framework; sourceTree = "<group>"; };
+		E4ABB0161B3D2F850015DC5F /* AVOSCloudIM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloudIM.framework; sourceTree = "<group>"; };
+		E4ABB01A1B3D2FB10015DC5F /* LeanChatCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeanChatCoreDataManager.h; sourceTree = "<group>"; };
+		E4ABB01B1B3D2FB10015DC5F /* LeanChatCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeanChatCoreDataManager.m; sourceTree = "<group>"; };
+		E4ABB01E1B3D30C30015DC5F /* emotion0.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = emotion0.gif; sourceTree = "<group>"; };
+		E4ABB01F1B3D30C30015DC5F /* emotion1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = emotion1.gif; sourceTree = "<group>"; };
+		E4ABB0201B3D30C30015DC5F /* emotion10.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = emotion10.gif; sourceTree = "<group>"; };
+		E4ABB0211B3D30C30015DC5F /* emotion11.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = emotion11.gif; sourceTree = "<group>"; };
+		E4ABB0221B3D30C30015DC5F /* emotion12.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = emotion12.gif; sourceTree = "<group>"; };
+		E4ABB0231B3D30C30015DC5F /* emotion13.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = emotion13.gif; sourceTree = "<group>"; };
+		E4ABB0241B3D30C30015DC5F /* emotion14.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = emotion14.gif; sourceTree = "<group>"; };
+		E4ABB0251B3D30C30015DC5F /* emotion15.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = emotion15.gif; sourceTree = "<group>"; };
+		E4ABB0261B3D30C30015DC5F /* emotion16.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = emotion16.gif; sourceTree = "<group>"; };
+		E4ABB0271B3D30C30015DC5F /* emotion2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = emotion2.gif; sourceTree = "<group>"; };
+		E4ABB0281B3D30C30015DC5F /* emotion3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = emotion3.gif; sourceTree = "<group>"; };
+		E4ABB0291B3D30C30015DC5F /* emotion4.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = emotion4.gif; sourceTree = "<group>"; };
+		E4ABB02A1B3D30C30015DC5F /* emotion5.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = emotion5.gif; sourceTree = "<group>"; };
+		E4ABB02B1B3D30C30015DC5F /* emotion6.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = emotion6.gif; sourceTree = "<group>"; };
+		E4ABB02C1B3D30C30015DC5F /* emotion7.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = emotion7.gif; sourceTree = "<group>"; };
+		E4ABB02D1B3D30C30015DC5F /* emotion8.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = emotion8.gif; sourceTree = "<group>"; };
+		E4ABB02E1B3D30C30015DC5F /* emotion9.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = emotion9.gif; sourceTree = "<group>"; };
 		E4D673481ABD9C5F0000B18D /* MessageDisplayKitLeanchatExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessageDisplayKitLeanchatExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4D6734C1ABD9C5F0000B18D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4D6734D1ABD9C5F0000B18D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -294,8 +298,6 @@
 		E4D6743B1ABD9EAF0000B18D /* LeanChatManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeanChatManager.m; sourceTree = "<group>"; };
 		E4D6743E1ABD9F0B0000B18D /* LeanChatMessageTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeanChatMessageTableViewController.h; sourceTree = "<group>"; };
 		E4D6743F1ABD9F0B0000B18D /* LeanChatMessageTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeanChatMessageTableViewController.m; sourceTree = "<group>"; };
-		E4D674481ABDA2C40000B18D /* AVOSCloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloud.framework; sourceTree = "<group>"; };
-		E4D674491ABDA2C40000B18D /* AVOSCloudIM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloudIM.framework; sourceTree = "<group>"; };
 		E4D6744C1ABDA4670000B18D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		E4D6744E1ABDA46F0000B18D /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		E4D674501ABDA4740000B18D /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
@@ -309,44 +311,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70013D981ABF1D650050D0F7 /* AVOSCloud.framework in Frameworks */,
-				70013D991ABF1D650050D0F7 /* AVOSCloudIM.framework in Frameworks */,
+				E4ABB0191B3D2F990015DC5F /* libsqlite3.dylib in Frameworks */,
 				E4D674621ABDA6860000B18D /* libicucore.dylib in Frameworks */,
 				E4D674531ABDA47B0000B18D /* CoreLocation.framework in Frameworks */,
 				E4D674511ABDA4740000B18D /* CoreTelephony.framework in Frameworks */,
 				E4D6744F1ABDA46F0000B18D /* MobileCoreServices.framework in Frameworks */,
 				E4D6744D1ABDA4670000B18D /* SystemConfiguration.framework in Frameworks */,
+				E4ABB0171B3D2F850015DC5F /* AVOSCloud.framework in Frameworks */,
 				E4D674441ABDA18B0000B18D /* MessageDisplayKit.framework in Frameworks */,
+				E4ABB0181B3D2F850015DC5F /* AVOSCloudIM.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		70013D4D1ABEB1730050D0F7 /* emoticons */ = {
-			isa = PBXGroup;
-			children = (
-				70013D4E1ABEB1730050D0F7 /* emotion0.gif */,
-				70013D4F1ABEB1730050D0F7 /* emotion1.gif */,
-				70013D501ABEB1730050D0F7 /* emotion10.gif */,
-				70013D511ABEB1730050D0F7 /* emotion11.gif */,
-				70013D521ABEB1730050D0F7 /* emotion12.gif */,
-				70013D531ABEB1730050D0F7 /* emotion13.gif */,
-				70013D541ABEB1730050D0F7 /* emotion14.gif */,
-				70013D551ABEB1730050D0F7 /* emotion15.gif */,
-				70013D561ABEB1730050D0F7 /* emotion16.gif */,
-				70013D571ABEB1730050D0F7 /* emotion2.gif */,
-				70013D581ABEB1730050D0F7 /* emotion3.gif */,
-				70013D591ABEB1730050D0F7 /* emotion4.gif */,
-				70013D5A1ABEB1730050D0F7 /* emotion5.gif */,
-				70013D5B1ABEB1730050D0F7 /* emotion6.gif */,
-				70013D5C1ABEB1730050D0F7 /* emotion7.gif */,
-				70013D5D1ABEB1730050D0F7 /* emotion8.gif */,
-				70013D5E1ABEB1730050D0F7 /* emotion9.gif */,
-			);
-			path = emoticons;
-			sourceTree = "<group>";
-		};
 		702C68BA1AE03B280085CD78 /* JSBadgeView */ = {
 			isa = PBXGroup;
 			children = (
@@ -354,6 +333,39 @@
 				702C68BC1AE03B280085CD78 /* JSBadgeView.m */,
 			);
 			path = JSBadgeView;
+			sourceTree = "<group>";
+		};
+		E4ABB0141B3D2F850015DC5F /* LeanCloud */ = {
+			isa = PBXGroup;
+			children = (
+				E4ABB0151B3D2F850015DC5F /* AVOSCloud.framework */,
+				E4ABB0161B3D2F850015DC5F /* AVOSCloudIM.framework */,
+			);
+			path = LeanCloud;
+			sourceTree = "<group>";
+		};
+		E4ABB01D1B3D30C30015DC5F /* emoticons */ = {
+			isa = PBXGroup;
+			children = (
+				E4ABB01E1B3D30C30015DC5F /* emotion0.gif */,
+				E4ABB01F1B3D30C30015DC5F /* emotion1.gif */,
+				E4ABB0201B3D30C30015DC5F /* emotion10.gif */,
+				E4ABB0211B3D30C30015DC5F /* emotion11.gif */,
+				E4ABB0221B3D30C30015DC5F /* emotion12.gif */,
+				E4ABB0231B3D30C30015DC5F /* emotion13.gif */,
+				E4ABB0241B3D30C30015DC5F /* emotion14.gif */,
+				E4ABB0251B3D30C30015DC5F /* emotion15.gif */,
+				E4ABB0261B3D30C30015DC5F /* emotion16.gif */,
+				E4ABB0271B3D30C30015DC5F /* emotion2.gif */,
+				E4ABB0281B3D30C30015DC5F /* emotion3.gif */,
+				E4ABB0291B3D30C30015DC5F /* emotion4.gif */,
+				E4ABB02A1B3D30C30015DC5F /* emotion5.gif */,
+				E4ABB02B1B3D30C30015DC5F /* emotion6.gif */,
+				E4ABB02C1B3D30C30015DC5F /* emotion7.gif */,
+				E4ABB02D1B3D30C30015DC5F /* emotion8.gif */,
+				E4ABB02E1B3D30C30015DC5F /* emotion9.gif */,
+			);
+			path = emoticons;
 			sourceTree = "<group>";
 		};
 		E4D6733F1ABD9C5F0000B18D = {
@@ -392,7 +404,7 @@
 		E4D6734B1ABD9C5F0000B18D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				70013D4D1ABEB1730050D0F7 /* emoticons */,
+				E4ABB01D1B3D30C30015DC5F /* emoticons */,
 				E4D674631ABDBF900000B18D /* TableViewBackgroundImage@2x.png */,
 				E4D6734C1ABD9C5F0000B18D /* Info.plist */,
 				E4D6734D1ABD9C5F0000B18D /* main.m */,
@@ -420,8 +432,8 @@
 		E4D673741ABD9C930000B18D /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				E4ABB0141B3D2F850015DC5F /* LeanCloud */,
 				702C68BA1AE03B280085CD78 /* JSBadgeView */,
-				E4D674471ABDA2C40000B18D /* LearnCloud */,
 				E4D673751ABD9C930000B18D /* MessageDisplayKit */,
 			);
 			path = Vendor;
@@ -579,8 +591,8 @@
 				702C68B81AE038530085CD78 /* AVIMConversation+Custom.m */,
 				E4D6743A1ABD9EAF0000B18D /* LeanChatManager.h */,
 				E4D6743B1ABD9EAF0000B18D /* LeanChatManager.m */,
-				E41BDAD21B301C7D00FAFFCC /* LeanChatCoreDataManager.h */,
-				E41BDAD31B301C7D00FAFFCC /* LeanChatCoreDataManager.m */,
+				E4ABB01A1B3D2FB10015DC5F /* LeanChatCoreDataManager.h */,
+				E4ABB01B1B3D2FB10015DC5F /* LeanChatCoreDataManager.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -598,18 +610,10 @@
 			path = IM;
 			sourceTree = "<group>";
 		};
-		E4D674471ABDA2C40000B18D /* LearnCloud */ = {
-			isa = PBXGroup;
-			children = (
-				E4D674481ABDA2C40000B18D /* AVOSCloud.framework */,
-				E4D674491ABDA2C40000B18D /* AVOSCloudIM.framework */,
-			);
-			path = LearnCloud;
-			sourceTree = "<group>";
-		};
 		E4D674561ABDA5070000B18D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				70BEDC091B3415DC004A1D39 /* libsqlite3.dylib */,
 				E4D674611ABDA6860000B18D /* libicucore.dylib */,
 				E4D674521ABDA47B0000B18D /* CoreLocation.framework */,
 				E4D674501ABDA4740000B18D /* CoreTelephony.framework */,
@@ -681,45 +685,45 @@
 				E4D674081ABD9CAD0000B18D /* section0_emotion0@2x.png in Resources */,
 				E4D674171ABD9CAD0000B18D /* section0_emotion9@2x.png in Resources */,
 				E4D6742C1ABD9CAD0000B18D /* weChatBubble_Receiving_Solid@2x.png in Resources */,
-				70013D691ABEB1730050D0F7 /* emotion3.gif in Resources */,
+				E4ABB0391B3D30C30015DC5F /* emotion3.gif in Resources */,
 				E4D673E91ABD9CAD0000B18D /* input-bar-flat@2x.png in Resources */,
 				E4D674241ABD9CAD0000B18D /* sharemore_voiceinput@2x.png in Resources */,
 				E4D673D91ABD9CAD0000B18D /* CellGraySelected@2x.png in Resources */,
 				E4D673F01ABD9CAD0000B18D /* msg_chat_voice_unread.png in Resources */,
 				E4D6735A1ABD9C5F0000B18D /* Main.storyboard in Resources */,
-				70013D6C1ABEB1730050D0F7 /* emotion6.gif in Resources */,
+				E4ABB03C1B3D30C30015DC5F /* emotion6.gif in Resources */,
 				E4D673ED1ABD9CAD0000B18D /* keyborad_HL@2x.png in Resources */,
 				E4D674001ABD9CAD0000B18D /* RecordingSignal003@2x.png in Resources */,
 				E4D674121ABD9CAD0000B18D /* section0_emotion4@2x.png in Resources */,
-				70013D6E1ABEB1730050D0F7 /* emotion8.gif in Resources */,
+				E4ABB03E1B3D30C30015DC5F /* emotion8.gif in Resources */,
 				E4D6742B1ABD9CAD0000B18D /* weChatBubble_Receiving_Cavern@2x.png in Resources */,
 				E4D6741A1ABD9CAD0000B18D /* SenderVoiceNodePlaying002@2x.png in Resources */,
 				E4D674271ABD9CAD0000B18D /* voice@2x.png in Resources */,
 				E4D674141ABD9CAD0000B18D /* section0_emotion6@2x.png in Resources */,
 				E4D673FE1ABD9CAD0000B18D /* RecordingSignal001@2x.png in Resources */,
-				70013D6A1ABEB1730050D0F7 /* emotion4.gif in Resources */,
+				E4ABB03A1B3D30C30015DC5F /* emotion4.gif in Resources */,
 				E4D6735F1ABD9C5F0000B18D /* LaunchScreen.xib in Resources */,
 				E4D673F71ABD9CAD0000B18D /* ReceiverVoiceNodePlaying000@2x.png in Resources */,
-				70013D671ABEB1730050D0F7 /* emotion16.gif in Resources */,
+				E4ABB0371B3D30C30015DC5F /* emotion16.gif in Resources */,
 				E4D673DE1ABD9CAD0000B18D /* contacts_add_photo@2x.png in Resources */,
 				E4D6741D1ABD9CAD0000B18D /* sharemore_friendcard@2x.png in Resources */,
 				E4D673F21ABD9CAD0000B18D /* multiMedia@2x.png in Resources */,
-				70013D631ABEB1730050D0F7 /* emotion12.gif in Resources */,
+				E4ABB0331B3D30C30015DC5F /* emotion12.gif in Resources */,
 				E4D673DC1ABD9CAD0000B18D /* contacts_add_friend@2x.png in Resources */,
 				E4D673E31ABD9CAD0000B18D /* face@2x.png in Resources */,
 				E4D673E41ABD9CAD0000B18D /* face_HL@2x.png in Resources */,
 				E4D6741C1ABD9CAD0000B18D /* SenderVoiceNodePlaying@2x.png in Resources */,
 				E4D6735C1ABD9C5F0000B18D /* Images.xcassets in Resources */,
 				E4D674221ABD9CAD0000B18D /* sharemore_video@2x.png in Resources */,
-				70013D6F1ABEB1730050D0F7 /* emotion9.gif in Resources */,
-				70013D651ABEB1730050D0F7 /* emotion14.gif in Resources */,
+				E4ABB03F1B3D30C30015DC5F /* emotion9.gif in Resources */,
+				E4ABB0351B3D30C30015DC5F /* emotion14.gif in Resources */,
 				E4D6741B1ABD9CAD0000B18D /* SenderVoiceNodePlaying003@2x.png in Resources */,
-				70013D661ABEB1730050D0F7 /* emotion15.gif in Resources */,
+				E4ABB0361B3D30C30015DC5F /* emotion15.gif in Resources */,
 				E4D6742D1ABD9CAD0000B18D /* weChatBubble_Sending_Cavern@2x.png in Resources */,
 				E4D673D81ABD9CAD0000B18D /* CellBlueSelected@2x.png in Resources */,
 				E4D674161ABD9CAD0000B18D /* section0_emotion8@2x.png in Resources */,
 				E4D674101ABD9CAD0000B18D /* section0_emotion2@2x.png in Resources */,
-				70013D621ABEB1730050D0F7 /* emotion11.gif in Resources */,
+				E4ABB0321B3D30C30015DC5F /* emotion11.gif in Resources */,
 				E4D6742E1ABD9CAD0000B18D /* weChatBubble_Sending_Solid@2x.png in Resources */,
 				E4D674251ABD9CAD0000B18D /* sharemore_voipvoice@2x.png in Resources */,
 				E4D674641ABDBF900000B18D /* TableViewBackgroundImage@2x.png in Resources */,
@@ -732,26 +736,26 @@
 				E4D674261ABD9CAD0000B18D /* sharemore_wxtalk@2x.png in Resources */,
 				E4D673DF1ABD9CAD0000B18D /* contacts_add_scan@2x.png in Resources */,
 				E4D673EE1ABD9CAD0000B18D /* MessageVideoPlay@2x.png in Resources */,
-				70013D6B1ABEB1730050D0F7 /* emotion5.gif in Resources */,
+				E4ABB03B1B3D30C30015DC5F /* emotion5.gif in Resources */,
 				E4D673F81ABD9CAD0000B18D /* ReceiverVoiceNodePlaying001@2x.png in Resources */,
 				E4D674211ABD9CAD0000B18D /* sharemore_pic@2x.png in Resources */,
 				E4D673EF1ABD9CAD0000B18D /* MoreFunctionFrame@2x.png in Resources */,
 				E4D674071ABD9CAD0000B18D /* SECoreTextView.bundle in Resources */,
 				E4D673FD1ABD9CAD0000B18D /* RecordingBkg@2x.png in Resources */,
 				E4D673D61ABD9CAD0000B18D /* AddGroupMemberBtnHL@2x.png in Resources */,
-				70013D6D1ABEB1730050D0F7 /* emotion7.gif in Resources */,
+				E4ABB03D1B3D30C30015DC5F /* emotion7.gif in Resources */,
 				E4D6741E1ABD9CAD0000B18D /* sharemore_location@2x.png in Resources */,
 				E4D674201ABD9CAD0000B18D /* sharemore_openapi@2x.png in Resources */,
 				E4D673FC1ABD9CAD0000B18D /* RecordCancel@2x.png in Resources */,
 				E4D674231ABD9CAD0000B18D /* sharemore_videovoip@2x.png in Resources */,
 				E4D673FA1ABD9CAD0000B18D /* ReceiverVoiceNodePlaying003@2x.png in Resources */,
 				E4D6740C1ABD9CAD0000B18D /* section0_emotion13@2x.png in Resources */,
-				70013D681ABEB1730050D0F7 /* emotion2.gif in Resources */,
+				E4ABB0381B3D30C30015DC5F /* emotion2.gif in Resources */,
 				E4D674091ABD9CAD0000B18D /* section0_emotion10@2x.png in Resources */,
 				E4D6740F1ABD9CAD0000B18D /* section0_emotion1@2x.png in Resources */,
-				70013D5F1ABEB1730050D0F7 /* emotion0.gif in Resources */,
+				E4ABB02F1B3D30C30015DC5F /* emotion0.gif in Resources */,
 				E4D674041ABD9CAD0000B18D /* RecordingSignal007@2x.png in Resources */,
-				70013D601ABEB1730050D0F7 /* emotion1.gif in Resources */,
+				E4ABB0301B3D30C30015DC5F /* emotion1.gif in Resources */,
 				E4D673F91ABD9CAD0000B18D /* ReceiverVoiceNodePlaying002@2x.png in Resources */,
 				E4D674181ABD9CAD0000B18D /* SenderVoiceNodePlaying000@2x.png in Resources */,
 				E4D673F61ABD9CAD0000B18D /* placeholderImage@2x.png in Resources */,
@@ -759,7 +763,7 @@
 				E4D673FB1ABD9CAD0000B18D /* ReceiverVoiceNodePlaying@2x.png in Resources */,
 				E4D674111ABD9CAD0000B18D /* section0_emotion3@2x.png in Resources */,
 				E4D673F11ABD9CAD0000B18D /* msg_chat_voice_unread@2x.png in Resources */,
-				70013D611ABEB1730050D0F7 /* emotion10.gif in Resources */,
+				E4ABB0311B3D30C30015DC5F /* emotion10.gif in Resources */,
 				E4D6741F1ABD9CAD0000B18D /* sharemore_myfav@2x.png in Resources */,
 				E4D674151ABD9CAD0000B18D /* section0_emotion7@2x.png in Resources */,
 				E4D6740D1ABD9CAD0000B18D /* section0_emotion14@2x.png in Resources */,
@@ -769,7 +773,7 @@
 				E4D673F41ABD9CAD0000B18D /* MultiSelectedPanelBkg@2x.png in Resources */,
 				E4D674131ABD9CAD0000B18D /* section0_emotion5@2x.png in Resources */,
 				E4D673E01ABD9CAD0000B18D /* contacts_add_voip@2x.png in Resources */,
-				70013D641ABEB1730050D0F7 /* emotion13.gif in Resources */,
+				E4ABB0341B3D30C30015DC5F /* emotion13.gif in Resources */,
 				E4D673DD1ABD9CAD0000B18D /* contacts_add_newmessage@2x.png in Resources */,
 				E4D674011ABD9CAD0000B18D /* RecordingSignal004@2x.png in Resources */,
 				E4D673E11ABD9CAD0000B18D /* ContactsPanelDotRect@2x.png in Resources */,
@@ -805,7 +809,7 @@
 				702C68C01AE136210085CD78 /* LeanChatConversationTableViewCell.m in Sources */,
 				E4D6743C1ABD9EAF0000B18D /* LeanChatManager.m in Sources */,
 				E4D674401ABD9F0B0000B18D /* LeanChatMessageTableViewController.m in Sources */,
-				E41BDAD41B301C7D00FAFFCC /* LeanChatCoreDataManager.m in Sources */,
+				E4ABB01C1B3D2FB10015DC5F /* LeanChatCoreDataManager.m in Sources */,
 				E4D674381ABD9DBC0000B18D /* LeanChatViewController.m in Sources */,
 				E4D674371ABD9DBC0000B18D /* MessageDisplayKitLeanchatExample.xcdatamodeld in Sources */,
 				702C68BD1AE03B280085CD78 /* JSBadgeView.m in Sources */,
@@ -931,10 +935,12 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/MessageDisplayKitLeanchatExample/Vendor/MessageDisplayKit",
 					"$(PROJECT_DIR)/MessageDisplayKitLeanchatExample/Vendor/LearnCloud",
+					"$(PROJECT_DIR)/MessageDisplayKitLeanchatExample/Vendor/LeanCloud",
 				);
 				INFOPLIST_FILE = MessageDisplayKitLeanchatExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -947,10 +953,12 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/MessageDisplayKitLeanchatExample/Vendor/MessageDisplayKit",
 					"$(PROJECT_DIR)/MessageDisplayKitLeanchatExample/Vendor/LearnCloud",
+					"$(PROJECT_DIR)/MessageDisplayKitLeanchatExample/Vendor/LeanCloud",
 				);
 				INFOPLIST_FILE = MessageDisplayKitLeanchatExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

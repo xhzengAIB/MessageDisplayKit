@@ -1,0 +1,6 @@
+framework module AVOSCloudIM {
+  umbrella header "AVOSCloudIM.h"
+
+  export *
+  module * { export * }
+}

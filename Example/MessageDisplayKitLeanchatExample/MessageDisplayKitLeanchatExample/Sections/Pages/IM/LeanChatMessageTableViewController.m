@@ -16,6 +16,8 @@
 // IM
 #import "LeanChatManager.h"
 
+static NSInteger const kOnePageSize = 10;
+
 @interface LeanChatMessageTableViewController () <XHAudioPlayerHelperDelegate>
 
 @property (nonatomic, strong) NSArray *emotionManagers;
@@ -101,7 +103,7 @@
     [[LeanChatManager manager] createConversationsWithClientIDs:self.clientIDs conversationType:self.conversationType completion:^(BOOL succeeded, AVIMConversation *createConversation) {
         if (succeeded) {
             weakSelf.conversation = createConversation;
-            [weakSelf.conversation queryMessagesBeforeId:nil timestamp:0 limit:10 callback:^(NSArray *typedMessages, NSError *error) {
+            [weakSelf.conversation queryMessagesWithLimit:kOnePageSize callback:^(NSArray *typedMessages, NSError *error) {
                 dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
                     NSMutableArray* messages=[NSMutableArray array];
                     for(AVIMTypedMessage* typedMessage in typedMessages){
