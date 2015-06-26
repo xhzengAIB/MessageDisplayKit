@@ -85,6 +85,7 @@
 }
 
 - (void)prepareForReuse {
+    [super prepareForReuse];
     self.contactPhotosView.photos = nil;
     self.textLabel.text = nil;
     self.detailTextLabel.text = nil;
