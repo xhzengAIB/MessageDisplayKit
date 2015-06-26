@@ -107,7 +107,10 @@ static NSInteger const kOnePageSize = 10;
                 dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
                     NSMutableArray* messages=[NSMutableArray array];
                     for(AVIMTypedMessage* typedMessage in typedMessages){
-                        [messages addObject:[weakSelf displayMessageByAVIMTypedMessage:typedMessage]];
+                        XHMessage *message = [weakSelf displayMessageByAVIMTypedMessage:typedMessage];
+                        if (message) {
+                            [messages addObject:message];
+                        }
                     }
                     dispatch_async(dispatch_get_main_queue(), ^{
                         weakSelf.messages=messages;
@@ -364,7 +367,10 @@ static NSInteger const kOnePageSize = 10;
                     NSMutableArray* messages=[NSMutableArray array];
                     for(AVIMTypedMessage* typedMessage in typedMessages){
                         if (weakSelf) {
-                            [messages addObject:[weakSelf displayMessageByAVIMTypedMessage:typedMessage]];
+                            XHMessage *message = [weakSelf displayMessageByAVIMTypedMessage:typedMessage];
+                            if (message) {
+                                [messages addObject:message];
+                            }
                         }
                     }
                     dispatch_async(dispatch_get_main_queue(), ^{
