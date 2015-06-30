@@ -278,12 +278,10 @@ static CGPoint  delayOffset = {0.0};
         
         [weakSelf exMainQueue:^{
             [UIView setAnimationsEnabled:NO];
-            [weakSelf.messageTableView beginUpdates];
             weakSelf.messages = messages;
             [weakSelf.messageTableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationNone];
             
             [weakSelf.messageTableView setContentOffset:delayOffset animated:NO];
-            [weakSelf.messageTableView endUpdates];
             [UIView setAnimationsEnabled:YES];
             
         }];
