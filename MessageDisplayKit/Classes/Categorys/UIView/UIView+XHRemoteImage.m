@@ -166,6 +166,9 @@ const char* const kXHMessageAvatarTypeKey   = "XHMessageAvatarTypeKey";
 #pragma mark - Setup Image
 
 - (void)setupImage:(UIImage *)image {
+    if (!image) {
+        return;
+    }
     if ([self isKindOfClass:[UIButton class]]) {
         UIButton *currentButton = (UIButton *)self;
         [currentButton setImage:image forState:UIControlStateNormal];

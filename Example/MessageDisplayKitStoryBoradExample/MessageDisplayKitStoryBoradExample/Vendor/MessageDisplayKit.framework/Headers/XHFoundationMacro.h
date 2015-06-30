@@ -28,5 +28,7 @@
 // image STRETCH
 #define XH_STRETCH_IMAGE(image, edgeInsets) (CURRENT_SYS_VERSION < 6.0 ? [image stretchableImageWithLeftCapWidth:edgeInsets.left topCapHeight:edgeInsets.top] : [image resizableImageWithCapInsets:edgeInsets resizingMode:UIImageResizingModeStretch])
 
+#define MDK_SCREEN_WIDTH  [[UIScreen mainScreen] bounds].size.width
+#define MDK_SCREEN_HEIGHT [[UIScreen mainScreen] bounds].size.height
 
 #endif

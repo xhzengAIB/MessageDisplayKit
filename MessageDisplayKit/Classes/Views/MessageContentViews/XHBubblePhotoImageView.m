@@ -51,6 +51,7 @@
         WEAKSELF
         [self addSubview:self.activityIndicatorView];
         [self.activityIndicatorView startAnimating];
+        self.messagePhoto = [UIImage imageNamed:@"placeholder"];
         [self setImageWithURL:[NSURL URLWithString:thumbnailUrl] placeholer:nil showActivityIndicatorView:NO completionBlock:^(UIImage *image, NSURL *url, NSError *error) {
             if ([url.absoluteString isEqualToString:thumbnailUrl]) {
 

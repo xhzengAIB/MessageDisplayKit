@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E466FA521B42F43300EE02A6 /* XHConfigurationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E466FA511B42F43300EE02A6 /* XHConfigurationHelper.m */; };
 		F751C2161A4C3E5000743ECB /* libMessageDisplayKitLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F751C20A1A4C3E5000743ECB /* libMessageDisplayKitLib.a */; };
 		F751C7B61A4C429100743ECB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F751C7B51A4C429100743ECB /* UIKit.framework */; };
 		F751C7B81A4C429500743ECB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F751C7B71A4C429500743ECB /* Foundation.framework */; };
@@ -101,6 +102,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E466FA501B42F43300EE02A6 /* XHConfigurationHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHConfigurationHelper.h; sourceTree = "<group>"; };
+		E466FA511B42F43300EE02A6 /* XHConfigurationHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHConfigurationHelper.m; sourceTree = "<group>"; };
 		F751C20A1A4C3E5000743ECB /* libMessageDisplayKitLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMessageDisplayKitLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F751C2151A4C3E5000743ECB /* MessageDisplayKitLibTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MessageDisplayKitLibTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F751C21B1A4C3E5000743ECB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -528,6 +531,8 @@
 				F7B9E7BD1A4D5E7B0072F81B /* XHVoiceCommonHelper.m */,
 				F7B9E7BE1A4D5E7B0072F81B /* XHVoiceRecordHelper.h */,
 				F7B9E7BF1A4D5E7B0072F81B /* XHVoiceRecordHelper.m */,
+				E466FA501B42F43300EE02A6 /* XHConfigurationHelper.h */,
+				E466FA511B42F43300EE02A6 /* XHConfigurationHelper.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -1038,6 +1043,7 @@
 				F7B9E8651A4D5E7B0072F81B /* LKBadgeView.m in Sources */,
 				F7B9E8821A4D5E7B0072F81B /* XHShareMenuView.m in Sources */,
 				F7B9E84B1A4D5E7B0072F81B /* XHLocationHelper.m in Sources */,
+				E466FA521B42F43300EE02A6 /* XHConfigurationHelper.m in Sources */,
 				F7B9E84E1A4D5E7B0072F81B /* XHVoiceCommonHelper.m in Sources */,
 				F7B9E87E1A4D5E7B0072F81B /* XHEmotionCollectionViewCell.m in Sources */,
 				F7B9E85B1A4D5E7B0072F81B /* XHMessageVideoConverPhotoFactory.m in Sources */,
