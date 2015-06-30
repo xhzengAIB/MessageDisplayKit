@@ -58,7 +58,7 @@
 		</data>
 		<key>Headers/NSString+XHMD5.h</key>
 		<data>
-		Qlk78Xas+7AN9UM/DsgvLAHbe2Q=
+		EvIUT6KMcZX+SbKNuZSYGyQtgj8=
 		</data>
 		<key>Headers/SECompatibility.h</key>
 		<data>
@@ -134,7 +134,7 @@
 		</data>
 		<key>Headers/UIImage+Utility.h</key>
 		<data>
-		SAooL6Hwday7A/OqjD36VR/uIbA=
+		KIYF4OupJo5RmeyPWRNG+/UJHGU=
 		</data>
 		<key>Headers/UIImage+XHRounded.h</key>
 		<data>
@@ -172,6 +172,10 @@
 		<data>
 		qDwondx9l0ISI4JnY7lch6wzX3c=
 		</data>
+		<key>Headers/XHConfigurationHelper.h</key>
+		<data>
+		j7J3i8A6Zil5sVjD0P/WPgUoc5A=
+		</data>
 		<key>Headers/XHDisplayEmotionViewController.h</key>
 		<data>
 		V+UenTAYOSOeDZ36gfaZF50r5uo=
@@ -190,7 +194,7 @@
 		</data>
 		<key>Headers/XHEmotion.h</key>
 		<data>
-		p1HQRpyU3xVZuyC3TDf9Lpz5tX4=
+		muxcmi7IE+l9BtKNhHHMjjVSBx4=
 		</data>
 		<key>Headers/XHEmotionCollectionViewCell.h</key>
 		<data>
@@ -218,7 +222,7 @@
 		</data>
 		<key>Headers/XHFoundationMacro.h</key>
 		<data>
-		9BP8WuvzszKICN6zihZQlYUilDg=
+		gtPhd6wquiSJIFTnqn94P5BiiuI=
 		</data>
 		<key>Headers/XHHTTPClient.h</key>
 		<data>
@@ -266,7 +270,7 @@
 		</data>
 		<key>Headers/XHMessageTableViewCell.h</key>
 		<data>
-		Pl1HmuDyiw6qJpaUnJlcZhgWlS4=
+		CJjSgH+xJwSnxTXV1v8cg4NUvB8=
 		</data>
 		<key>Headers/XHMessageTableViewController.h</key>
 		<data>
@@ -322,7 +326,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		/pQ1E5n+EbHWPH00VIOg0MaNPIo=
+		vjWT34ttXechYYt6ktBjjp0u1b0=
 		</data>
 		<key>MessageVideoPlay@2x.png</key>
 		<data>
@@ -532,7 +536,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			8E93ubb/gSgaF+e8HbXRCGY740A=
+			5attu1fe2JTTuhjUZ09sb0frT0U=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -729,7 +733,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			2v86JH0f8YSEdYy7FdFW0xXlrNw=
+			7fzgSMzvrJpphjTWtsjIFf/gU6o=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -791,7 +795,7 @@
 		</data>
 		<key>Headers/NSString+XHMD5.h</key>
 		<data>
-		Qlk78Xas+7AN9UM/DsgvLAHbe2Q=
+		EvIUT6KMcZX+SbKNuZSYGyQtgj8=
 		</data>
 		<key>Headers/SECompatibility.h</key>
 		<data>
@@ -867,7 +871,7 @@
 		</data>
 		<key>Headers/UIImage+Utility.h</key>
 		<data>
-		SAooL6Hwday7A/OqjD36VR/uIbA=
+		KIYF4OupJo5RmeyPWRNG+/UJHGU=
 		</data>
 		<key>Headers/UIImage+XHRounded.h</key>
 		<data>
@@ -905,6 +909,10 @@
 		<data>
 		qDwondx9l0ISI4JnY7lch6wzX3c=
 		</data>
+		<key>Headers/XHConfigurationHelper.h</key>
+		<data>
+		j7J3i8A6Zil5sVjD0P/WPgUoc5A=
+		</data>
 		<key>Headers/XHDisplayEmotionViewController.h</key>
 		<data>
 		V+UenTAYOSOeDZ36gfaZF50r5uo=
@@ -923,7 +931,7 @@
 		</data>
 		<key>Headers/XHEmotion.h</key>
 		<data>
-		p1HQRpyU3xVZuyC3TDf9Lpz5tX4=
+		muxcmi7IE+l9BtKNhHHMjjVSBx4=
 		</data>
 		<key>Headers/XHEmotionCollectionViewCell.h</key>
 		<data>
@@ -951,7 +959,7 @@
 		</data>
 		<key>Headers/XHFoundationMacro.h</key>
 		<data>
-		9BP8WuvzszKICN6zihZQlYUilDg=
+		gtPhd6wquiSJIFTnqn94P5BiiuI=
 		</data>
 		<key>Headers/XHHTTPClient.h</key>
 		<data>
@@ -999,7 +1007,7 @@
 		</data>
 		<key>Headers/XHMessageTableViewCell.h</key>
 		<data>
-		Pl1HmuDyiw6qJpaUnJlcZhgWlS4=
+		CJjSgH+xJwSnxTXV1v8cg4NUvB8=
 		</data>
 		<key>Headers/XHMessageTableViewController.h</key>
 		<data>
@@ -1261,7 +1269,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			8E93ubb/gSgaF+e8HbXRCGY740A=
+			5attu1fe2JTTuhjUZ09sb0frT0U=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -1458,7 +1466,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			2v86JH0f8YSEdYy7FdFW0xXlrNw=
+			7fzgSMzvrJpphjTWtsjIFf/gU6o=
 			</data>
 			<key>optional</key>
 			<true/>

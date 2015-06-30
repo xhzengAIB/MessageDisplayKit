@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E466FA4E1B42EC0F00EE02A6 /* XHConfigurationHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = E466FA4C1B42EC0F00EE02A6 /* XHConfigurationHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E466FA4F1B42EC0F00EE02A6 /* XHConfigurationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E466FA4D1B42EC0F00EE02A6 /* XHConfigurationHelper.m */; };
 		F751C1F11A4C3E1B00743ECB /* MessageDisplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F751C1E51A4C3E1B00743ECB /* MessageDisplayKit.framework */; };
 		F751C1F81A4C3E1B00743ECB /* MessageDisplayKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F751C1F71A4C3E1B00743ECB /* MessageDisplayKitTests.m */; };
 		F751C3E51A4C3EDB00743ECB /* NSString+MessageInputView.h in Headers */ = {isa = PBXBuildFile; fileRef = F751C2291A4C3EDA00743ECB /* NSString+MessageInputView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -251,6 +253,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E466FA4C1B42EC0F00EE02A6 /* XHConfigurationHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHConfigurationHelper.h; sourceTree = "<group>"; };
+		E466FA4D1B42EC0F00EE02A6 /* XHConfigurationHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHConfigurationHelper.m; sourceTree = "<group>"; };
 		F751C1E51A4C3E1B00743ECB /* MessageDisplayKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MessageDisplayKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F751C1E91A4C3E1B00743ECB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F751C1F01A4C3E1B00743ECB /* MessageDisplayKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MessageDisplayKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -663,6 +667,8 @@
 				F751C2551A4C3EDA00743ECB /* XHVoiceCommonHelper.m */,
 				F751C2561A4C3EDA00743ECB /* XHVoiceRecordHelper.h */,
 				F751C2571A4C3EDA00743ECB /* XHVoiceRecordHelper.m */,
+				E466FA4C1B42EC0F00EE02A6 /* XHConfigurationHelper.h */,
+				E466FA4D1B42EC0F00EE02A6 /* XHConfigurationHelper.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -1114,6 +1120,7 @@
 				F751C4901A4C3EDB00743ECB /* SELineLayout.h in Headers */,
 				F751C45F1A4C3EDB00743ECB /* XHUIKitMacro.h in Headers */,
 				F751C4E01A4C3EDB00743ECB /* XHVoiceRecordHUD.h in Headers */,
+				E466FA4E1B42EC0F00EE02A6 /* XHConfigurationHelper.h in Headers */,
 				F7D253471A4D32B30015764B /* LKBadgeView.h in Headers */,
 				F751C4921A4C3EDB00743ECB /* SELinkText.h in Headers */,
 			);
@@ -1370,6 +1377,7 @@
 				F751C49D1A4C3EDB00743ECB /* SETextInput.m in Sources */,
 				F751C4341A4C3EDB00743ECB /* XHDisplayTextViewController.m in Sources */,
 				F751C3F81A4C3EDB00743ECB /* UIImage+XHRounded.m in Sources */,
+				E466FA4F1B42EC0F00EE02A6 /* XHConfigurationHelper.m in Sources */,
 				F751C48F1A4C3EDB00743ECB /* SEConstants.m in Sources */,
 				F751C4911A4C3EDB00743ECB /* SELineLayout.m in Sources */,
 			);

@@ -274,14 +274,39 @@ static const CGFloat kXHBubbleMessageViewPadding = 8;
     if (longPressGestureRecognizer.state != UIGestureRecognizerStateBegan || ![self becomeFirstResponder])
         return;
     
-    UIMenuItem *copy = [[UIMenuItem alloc] initWithTitle:NSLocalizedStringFromTable(@"copy", @"MessageDisplayKitString", @"复制文本消息") action:@selector(copyed:)];
-    UIMenuItem *transpond = [[UIMenuItem alloc] initWithTitle:NSLocalizedStringFromTable(@"transpond", @"MessageDisplayKitString", @"转发") action:@selector(transpond:)];
-    UIMenuItem *favorites = [[UIMenuItem alloc] initWithTitle:NSLocalizedStringFromTable(@"favorites", @"MessageDisplayKitString", @"收藏") action:@selector(favorites:)];
-    UIMenuItem *more = [[UIMenuItem alloc] initWithTitle:NSLocalizedStringFromTable(@"more", @"MessageDisplayKitString", @"更多") action:@selector(more:)];
+    NSArray *popMenuTitles = [[XHConfigurationHelper appearance] popMenuTitles];
+    NSMutableArray *menuItems = [[NSMutableArray alloc] init];
+    for (int i = 0; i < popMenuTitles.count; i ++) {
+        NSString *title = popMenuTitles[i];
+        SEL action = nil;
+        switch (i) {
+            case 0: {
+                action = @selector(copyed:);
+                break;
+            }
+            case 1: {
+                action = @selector(transpond:);
+                break;
+            }
+            case 2: {
+                action = @selector(favorites:);
+                break;
+            }
+            case 3: {
+                action = @selector(more:);
+                break;
+            }
+            default:
+                break;
+        }
+        UIMenuItem *item = [[UIMenuItem alloc] initWithTitle:title action:action];
+        if (item) {
+            [menuItems addObject:item];
+        }
+    }
     
     UIMenuController *menu = [UIMenuController sharedMenuController];
-    [menu setMenuItems:[NSArray arrayWithObjects:copy, transpond, favorites, more, nil]];
-    
+    [menu setMenuItems:menuItems];
     
     CGRect targetRect = [self convertRect:[self.messageBubbleView bubbleFrame]
                                  fromView:self.messageBubbleView];

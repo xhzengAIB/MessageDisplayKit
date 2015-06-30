@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 #import "XHBaseTableViewCell.h"
+#import "XHConfigurationHelper.h"
 
 #import "XHMessageBubbleView.h"
 #import "UIView+XHRemoteImage.h"
