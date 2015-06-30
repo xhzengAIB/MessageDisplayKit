@@ -48,7 +48,6 @@
 		F7B9E8631A4D5E7B0072F81B /* FLAnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = F7B9E7F91A4D5E7B0072F81B /* FLAnimatedImage.m */; };
 		F7B9E8641A4D5E7B0072F81B /* FLAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7B9E7FB1A4D5E7B0072F81B /* FLAnimatedImageView.m */; };
 		F7B9E8651A4D5E7B0072F81B /* LKBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7B9E7FE1A4D5E7B0072F81B /* LKBadgeView.m */; };
-		F7B9E8661A4D5E7B0072F81B /* NSMutableAttributedString+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = F7B9E8011A4D5E7B0072F81B /* NSMutableAttributedString+Helper.m */; };
 		F7B9E8671A4D5E7B0072F81B /* SECompatibility.m in Sources */ = {isa = PBXBuildFile; fileRef = F7B9E8031A4D5E7B0072F81B /* SECompatibility.m */; };
 		F7B9E8681A4D5E7B0072F81B /* SEConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = F7B9E8051A4D5E7B0072F81B /* SEConstants.m */; };
 		F7B9E8691A4D5E7B0072F81B /* SELineLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F7B9E8071A4D5E7B0072F81B /* SELineLayout.m */; };
@@ -1010,7 +1009,6 @@
 				F7B9E86A1A4D5E7B0072F81B /* SELinkText.m in Sources */,
 				F7B9E8791A4D5E7B0072F81B /* XHMessageTableView.m in Sources */,
 				F7B9E8601A4D5E7B0072F81B /* XHEmotionManager.m in Sources */,
-				F7B9E8661A4D5E7B0072F81B /* NSMutableAttributedString+Helper.m in Sources */,
 				F7B9E8431A4D5E7B0072F81B /* UIImage+Resize.m in Sources */,
 				F7B9E8621A4D5E7B0072F81B /* XHShareMenuItem.m in Sources */,
 				F7B9E8501A4D5E7B0072F81B /* XHDisplayEmotionViewController.m in Sources */,
