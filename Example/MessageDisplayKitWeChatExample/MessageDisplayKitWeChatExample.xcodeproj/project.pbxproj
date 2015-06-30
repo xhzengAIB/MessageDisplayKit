@@ -182,8 +182,6 @@
 		F7D24EF61A4D0EB30015764B /* VoiceSearchOn.wav in Resources */ = {isa = PBXBuildFile; fileRef = F7D24E3D1A4D0EB30015764B /* VoiceSearchOn.wav */; };
 		F7D24EF71A4D0EB30015764B /* VoiceSearchStartBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7D24E3E1A4D0EB30015764B /* VoiceSearchStartBtn@2x.png */; };
 		F7D24EF81A4D0EB30015764B /* VoiceSearchStartBtnHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7D24E3F1A4D0EB30015764B /* VoiceSearchStartBtnHL@2x.png */; };
-		F7D24EF91A4D0EB30015764B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7D24E411A4D0EB30015764B /* Default-568h@2x.png */; };
-		F7D24EFA1A4D0EB30015764B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7D24E421A4D0EB30015764B /* Default@2x.png */; };
 		F7D24EFB1A4D0EB30015764B /* album_add_photo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7D24E451A4D0EB30015764B /* album_add_photo@2x.png */; };
 		F7D24EFC1A4D0EB30015764B /* AlbumFlagMark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7D24E461A4D0EB30015764B /* AlbumFlagMark@2x.png */; };
 		F7D24EFD1A4D0EB30015764B /* AlbumHeaderBackgrounImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7D24E471A4D0EB30015764B /* AlbumHeaderBackgrounImage@2x.png */; };
@@ -572,8 +570,6 @@
 		F7D24E3D1A4D0EB30015764B /* VoiceSearchOn.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = VoiceSearchOn.wav; sourceTree = "<group>"; };
 		F7D24E3E1A4D0EB30015764B /* VoiceSearchStartBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VoiceSearchStartBtn@2x.png"; sourceTree = "<group>"; };
 		F7D24E3F1A4D0EB30015764B /* VoiceSearchStartBtnHL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VoiceSearchStartBtnHL@2x.png"; sourceTree = "<group>"; };
-		F7D24E411A4D0EB30015764B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		F7D24E421A4D0EB30015764B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		F7D24E451A4D0EB30015764B /* album_add_photo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "album_add_photo@2x.png"; sourceTree = "<group>"; };
 		F7D24E461A4D0EB30015764B /* AlbumFlagMark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AlbumFlagMark@2x.png"; sourceTree = "<group>"; };
 		F7D24E471A4D0EB30015764B /* AlbumHeaderBackgrounImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AlbumHeaderBackgrounImage@2x.png"; sourceTree = "<group>"; };
@@ -1007,7 +1003,6 @@
 			children = (
 				F7D24DF71A4D0EB20015764B /* avatar@2x.png */,
 				F7D24DF81A4D0EB20015764B /* ContactImages */,
-				F7D24E401A4D0EB30015764B /* Defaults */,
 				F7D24E431A4D0EB30015764B /* DisconverImages */,
 				F7D24E7D1A4D0EB30015764B /* EmotionImages */,
 				F7D24E991A4D0EB30015764B /* GameImages */,
@@ -1105,15 +1100,6 @@
 				F7D24E3F1A4D0EB30015764B /* VoiceSearchStartBtnHL@2x.png */,
 			);
 			path = VoiceImages;
-			sourceTree = "<group>";
-		};
-		F7D24E401A4D0EB30015764B /* Defaults */ = {
-			isa = PBXGroup;
-			children = (
-				F7D24E411A4D0EB30015764B /* Default-568h@2x.png */,
-				F7D24E421A4D0EB30015764B /* Default@2x.png */,
-			);
-			path = Defaults;
 			sourceTree = "<group>";
 		};
 		F7D24E431A4D0EB30015764B /* DisconverImages */ = {
@@ -2025,7 +2011,6 @@
 				F7B9EB931A4D605B0072F81B /* SearchIcon@2x.png in Resources */,
 				F7D24EC11A4D0EB30015764B /* VoiceSearchFeedback007@2x.png in Resources */,
 				F7B9EB841A4D605B0072F81B /* ReceiverVoiceNodePlaying000@2x.png in Resources */,
-				F7D24EFA1A4D0EB30015764B /* Default@2x.png in Resources */,
 				F7D24EF71A4D0EB30015764B /* VoiceSearchStartBtn@2x.png in Resources */,
 				F7B9EB721A4D605B0072F81B /* Fav_Cell_Loc@2x.png in Resources */,
 				F7D24F241A4D0EB30015764B /* Shake_icon_musicHL@2x.png in Resources */,
@@ -2184,7 +2169,6 @@
 				F7D24F0F1A4D0EB30015764B /* fishwater3@2x.png in Resources */,
 				F7D24EF81A4D0EB30015764B /* VoiceSearchStartBtnHL@2x.png in Resources */,
 				F7B9EB961A4D605B0072F81B /* section0_emotion10@2x.png in Resources */,
-				F7D24EF91A4D0EB30015764B /* Default-568h@2x.png in Resources */,
 				F7D24F471A4D0EB30015764B /* emotionShopOther@2x.png in Resources */,
 				F7D24F2E1A4D0EB30015764B /* shake_nomatch.wav in Resources */,
 				F7D24F511A4D0EB30015764B /* MeIcon@2x.png in Resources */,
@@ -2415,6 +2399,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/MessageDisplayKitWorkSpace-bwtmvzqdsnglfuhcxcucroskvpwq/Build/Products/Debug-iphoneos",
@@ -2430,6 +2415,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/MessageDisplayKitWorkSpace-bwtmvzqdsnglfuhcxcucroskvpwq/Build/Products/Debug-iphoneos",
