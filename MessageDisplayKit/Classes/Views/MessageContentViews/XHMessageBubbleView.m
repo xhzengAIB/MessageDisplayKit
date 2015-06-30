@@ -15,7 +15,7 @@
 
 #define kVoiceMargin 20.0f // 语音间隙
 
-#define kXHArrowMarginWidth 14.0f // 箭头宽度
+#define kXHArrowMarginWidth 5.0f // 箭头宽度
 
 #define kTextHorizontalBubblePadding 16.0f // 文本的水平间隙
 
