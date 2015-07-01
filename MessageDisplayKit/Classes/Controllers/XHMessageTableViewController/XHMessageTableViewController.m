@@ -264,26 +264,33 @@ static CGPoint  delayOffset = {0.0};
 - (void)insertOldMessages:(NSArray *)oldMessages {
     WEAKSELF
     [self exChangeMessageDataSourceQueue:^{
-        NSMutableArray *messages = [NSMutableArray arrayWithArray:oldMessages];
-        [messages addObjectsFromArray:weakSelf.messages];
+        NSMutableArray *messages = [[NSMutableArray alloc] initWithArray:weakSelf.messages];
         
         delayOffset = weakSelf.messageTableView.contentOffset;
-        NSMutableArray *indexPaths = [NSMutableArray arrayWithCapacity:oldMessages.count];
+        NSMutableArray *indexPaths = [[NSMutableArray alloc] initWithCapacity:oldMessages.count];
+        NSMutableIndexSet *indexSets = [[NSMutableIndexSet alloc] init];
         [oldMessages enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
             NSIndexPath *indexPath = [NSIndexPath indexPathForRow:idx inSection:0];
             [indexPaths addObject:indexPath];
             
             delayOffset.y += [weakSelf calculateCellHeightWithMessage:[messages objectAtIndex:idx] atIndexPath:indexPath];
+            [indexSets addIndex:idx];
         }];
+        [messages insertObjects:oldMessages atIndexes:indexSets];
+        
         
         [weakSelf exMainQueue:^{
             [UIView setAnimationsEnabled:NO];
+            [self.messageTableView beginUpdates];
+            
             weakSelf.messages = messages;
             [weakSelf.messageTableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationNone];
             
-            [weakSelf.messageTableView setContentOffset:delayOffset animated:NO];
+            [self.messageTableView endUpdates];
+            
             [UIView setAnimationsEnabled:YES];
             
+            [weakSelf.messageTableView setContentOffset:delayOffset animated:NO];
         }];
     }];
 }
