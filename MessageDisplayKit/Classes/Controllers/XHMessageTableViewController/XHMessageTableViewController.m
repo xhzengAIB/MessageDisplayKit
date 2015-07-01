@@ -583,7 +583,7 @@ static CGPoint  delayOffset = {0.0};
     }
     
     // block回调键盘通知
-    self.messageTableView.keyboardWillChange = ^(CGRect keyboardRect, UIViewAnimationOptions options, double duration, BOOL showKeyborad) {
+    self.messageTableView.keyboardWillChange = ^(CGRect keyboardRect, UIViewAnimationOptions options, double duration, BOOL showKeyboard) {
         if (weakSelf.textViewInputViewType == XHInputViewTypeText) {
             [UIView animateWithDuration:duration
                                   delay:0.0
@@ -606,7 +606,7 @@ static CGPoint  delayOffset = {0.0};
                                  
                                  [weakSelf setTableViewInsetsWithBottomValue:weakSelf.view.frame.size.height
                                   - weakSelf.messageInputView.frame.origin.y];
-                                 if (showKeyborad)
+                                 if (showKeyboard)
                                      [weakSelf scrollToBottomAnimated:NO];
                              }
                              completion:nil];
