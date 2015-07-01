@@ -12,6 +12,8 @@
 		702C68BD1AE03B280085CD78 /* JSBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 702C68BC1AE03B280085CD78 /* JSBadgeView.m */; };
 		702C68C01AE136210085CD78 /* LeanChatConversationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 702C68BF1AE136210085CD78 /* LeanChatConversationTableViewCell.m */; };
 		70457B1C1ADBB70600452531 /* LeanChatConversationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70457B1B1ADBB70600452531 /* LeanChatConversationTableViewController.m */; };
+		7053E7251B42F3FF00DE808D /* keyboard_HL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7053E7231B42F3FF00DE808D /* keyboard_HL@2x.png */; };
+		7053E7261B42F3FF00DE808D /* keyboard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7053E7241B42F3FF00DE808D /* keyboard@2x.png */; };
 		E4ABB0171B3D2F850015DC5F /* AVOSCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4ABB0151B3D2F850015DC5F /* AVOSCloud.framework */; };
 		E4ABB0181B3D2F850015DC5F /* AVOSCloudIM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4ABB0161B3D2F850015DC5F /* AVOSCloudIM.framework */; };
 		E4ABB0191B3D2F990015DC5F /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 70BEDC091B3415DC004A1D39 /* libsqlite3.dylib */; };
@@ -61,8 +63,6 @@
 		E4D673E91ABD9CAD0000B18D /* input-bar-flat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D6738E1ABD9CAD0000B18D /* input-bar-flat@2x.png */; };
 		E4D673EA1ABD9CAD0000B18D /* input-field-cover.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D6738F1ABD9CAD0000B18D /* input-field-cover.png */; };
 		E4D673EB1ABD9CAD0000B18D /* input-field-cover@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D673901ABD9CAD0000B18D /* input-field-cover@2x.png */; };
-		E4D673EC1ABD9CAD0000B18D /* keyborad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D673911ABD9CAD0000B18D /* keyborad@2x.png */; };
-		E4D673ED1ABD9CAD0000B18D /* keyborad_HL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D673921ABD9CAD0000B18D /* keyborad_HL@2x.png */; };
 		E4D673EE1ABD9CAD0000B18D /* MessageVideoPlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D673931ABD9CAD0000B18D /* MessageVideoPlay@2x.png */; };
 		E4D673EF1ABD9CAD0000B18D /* MoreFunctionFrame@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D673941ABD9CAD0000B18D /* MoreFunctionFrame@2x.png */; };
 		E4D673F01ABD9CAD0000B18D /* msg_chat_voice_unread.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D673951ABD9CAD0000B18D /* msg_chat_voice_unread.png */; };
@@ -167,6 +167,8 @@
 		702C68BF1AE136210085CD78 /* LeanChatConversationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeanChatConversationTableViewCell.m; sourceTree = "<group>"; };
 		70457B1A1ADBB70600452531 /* LeanChatConversationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeanChatConversationTableViewController.h; sourceTree = "<group>"; };
 		70457B1B1ADBB70600452531 /* LeanChatConversationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeanChatConversationTableViewController.m; sourceTree = "<group>"; };
+		7053E7231B42F3FF00DE808D /* keyboard_HL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "keyboard_HL@2x.png"; sourceTree = "<group>"; };
+		7053E7241B42F3FF00DE808D /* keyboard@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "keyboard@2x.png"; sourceTree = "<group>"; };
 		70BEDC091B3415DC004A1D39 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		E4ABB0151B3D2F850015DC5F /* AVOSCloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloud.framework; sourceTree = "<group>"; };
 		E4ABB0161B3D2F850015DC5F /* AVOSCloudIM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloudIM.framework; sourceTree = "<group>"; };
@@ -223,8 +225,6 @@
 		E4D6738E1ABD9CAD0000B18D /* input-bar-flat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "input-bar-flat@2x.png"; sourceTree = "<group>"; };
 		E4D6738F1ABD9CAD0000B18D /* input-field-cover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "input-field-cover.png"; sourceTree = "<group>"; };
 		E4D673901ABD9CAD0000B18D /* input-field-cover@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "input-field-cover@2x.png"; sourceTree = "<group>"; };
-		E4D673911ABD9CAD0000B18D /* keyborad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "keyborad@2x.png"; sourceTree = "<group>"; };
-		E4D673921ABD9CAD0000B18D /* keyborad_HL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "keyborad_HL@2x.png"; sourceTree = "<group>"; };
 		E4D673931ABD9CAD0000B18D /* MessageVideoPlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MessageVideoPlay@2x.png"; sourceTree = "<group>"; };
 		E4D673941ABD9CAD0000B18D /* MoreFunctionFrame@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MoreFunctionFrame@2x.png"; sourceTree = "<group>"; };
 		E4D673951ABD9CAD0000B18D /* msg_chat_voice_unread.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = msg_chat_voice_unread.png; sourceTree = "<group>"; };
@@ -467,6 +467,8 @@
 				E4D673861ABD9CAD0000B18D /* MessageDisplayKitString.strings */,
 				E4D673881ABD9CAD0000B18D /* face@2x.png */,
 				E4D673891ABD9CAD0000B18D /* face_HL@2x.png */,
+				7053E7231B42F3FF00DE808D /* keyboard_HL@2x.png */,
+				7053E7241B42F3FF00DE808D /* keyboard@2x.png */,
 				E4D6738A1ABD9CAD0000B18D /* Fav_Cell_Loc@2x.png */,
 				E4D6738B1ABD9CAD0000B18D /* input-bar-background.png */,
 				E4D6738C1ABD9CAD0000B18D /* input-bar-background@2x.png */,
@@ -474,8 +476,6 @@
 				E4D6738E1ABD9CAD0000B18D /* input-bar-flat@2x.png */,
 				E4D6738F1ABD9CAD0000B18D /* input-field-cover.png */,
 				E4D673901ABD9CAD0000B18D /* input-field-cover@2x.png */,
-				E4D673911ABD9CAD0000B18D /* keyborad@2x.png */,
-				E4D673921ABD9CAD0000B18D /* keyborad_HL@2x.png */,
 				E4D673931ABD9CAD0000B18D /* MessageVideoPlay@2x.png */,
 				E4D673941ABD9CAD0000B18D /* MoreFunctionFrame@2x.png */,
 				E4D673951ABD9CAD0000B18D /* msg_chat_voice_unread.png */,
@@ -692,7 +692,6 @@
 				E4D673F01ABD9CAD0000B18D /* msg_chat_voice_unread.png in Resources */,
 				E4D6735A1ABD9C5F0000B18D /* Main.storyboard in Resources */,
 				E4ABB03C1B3D30C30015DC5F /* emotion6.gif in Resources */,
-				E4D673ED1ABD9CAD0000B18D /* keyborad_HL@2x.png in Resources */,
 				E4D674001ABD9CAD0000B18D /* RecordingSignal003@2x.png in Resources */,
 				E4D674121ABD9CAD0000B18D /* section0_emotion4@2x.png in Resources */,
 				E4ABB03E1B3D30C30015DC5F /* emotion8.gif in Resources */,
@@ -701,6 +700,7 @@
 				E4D674271ABD9CAD0000B18D /* voice@2x.png in Resources */,
 				E4D674141ABD9CAD0000B18D /* section0_emotion6@2x.png in Resources */,
 				E4D673FE1ABD9CAD0000B18D /* RecordingSignal001@2x.png in Resources */,
+				7053E7261B42F3FF00DE808D /* keyboard@2x.png in Resources */,
 				E4ABB03A1B3D30C30015DC5F /* emotion4.gif in Resources */,
 				E4D6735F1ABD9C5F0000B18D /* LaunchScreen.xib in Resources */,
 				E4D673F71ABD9CAD0000B18D /* ReceiverVoiceNodePlaying000@2x.png in Resources */,
@@ -758,6 +758,7 @@
 				E4ABB0301B3D30C30015DC5F /* emotion1.gif in Resources */,
 				E4D673F91ABD9CAD0000B18D /* ReceiverVoiceNodePlaying002@2x.png in Resources */,
 				E4D674181ABD9CAD0000B18D /* SenderVoiceNodePlaying000@2x.png in Resources */,
+				7053E7251B42F3FF00DE808D /* keyboard_HL@2x.png in Resources */,
 				E4D673F61ABD9CAD0000B18D /* placeholderImage@2x.png in Resources */,
 				E4D674291ABD9CAD0000B18D /* VoiceBtn_Black@2x.png in Resources */,
 				E4D673FB1ABD9CAD0000B18D /* ReceiverVoiceNodePlaying@2x.png in Resources */,
@@ -769,7 +770,6 @@
 				E4D6740D1ABD9CAD0000B18D /* section0_emotion14@2x.png in Resources */,
 				E4D673F51ABD9CAD0000B18D /* MultiSelectedPanelConfirmBtnbKG@2x.png in Resources */,
 				E4D673E51ABD9CAD0000B18D /* Fav_Cell_Loc@2x.png in Resources */,
-				E4D673EC1ABD9CAD0000B18D /* keyborad@2x.png in Resources */,
 				E4D673F41ABD9CAD0000B18D /* MultiSelectedPanelBkg@2x.png in Resources */,
 				E4D674131ABD9CAD0000B18D /* section0_emotion5@2x.png in Resources */,
 				E4D673E01ABD9CAD0000B18D /* contacts_add_voip@2x.png in Resources */,

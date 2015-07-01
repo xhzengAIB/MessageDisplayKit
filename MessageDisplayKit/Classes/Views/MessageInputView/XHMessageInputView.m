@@ -281,7 +281,7 @@
         button = [self createButtonWithImage:[UIImage imageNamed:@"voice"] HLImage:[UIImage imageNamed:@"voice_HL"]];
         [button addTarget:self action:@selector(messageStyleButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
         button.tag = 0;
-        [button setImage:[UIImage imageNamed:@"keyborad"] forState:UIControlStateSelected];
+        [button setBackgroundImage:[UIImage imageNamed:@"keyboard"] forState:UIControlStateSelected];
         buttonFrame = button.frame;
         buttonFrame.origin = CGPointMake(horizontalPadding, verticalPadding);
         button.frame = buttonFrame;
@@ -311,7 +311,7 @@
     if (self.allowsSendFace) {
         button = [self createButtonWithImage:[UIImage imageNamed:@"face"] HLImage:[UIImage imageNamed:@"face_HL"]];
         button.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;
-        [button setImage:[UIImage imageNamed:@"keyborad"] forState:UIControlStateSelected];
+        [button setBackgroundImage:[UIImage imageNamed:@"keyboard"] forState:UIControlStateSelected];
         [button addTarget:self action:@selector(messageStyleButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
         button.tag = 1;
         buttonFrame = button.frame;

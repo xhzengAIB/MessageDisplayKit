@@ -15,7 +15,7 @@
 
 #define kVoiceMargin 20.0f // 语音间隙
 
-#define kXHArrowMarginWidth 14.0f // 箭头宽度
+#define kXHArrowMarginWidth 3.0f // 箭头宽度
 
 #define kTextHorizontalBubblePadding 16.0f // 文本的水平间隙
 
@@ -422,12 +422,12 @@
             CGFloat textX = CGRectGetMinX(bubbleFrame) + kTextHorizontalBubblePadding;
             
             if (self.message.bubbleMessageType == XHBubbleMessageTypeReceiving) {
-                textX += kXHArrowMarginWidth / 2.0;
+                textX += kXHArrowMarginWidth;
             }
             
             CGRect textFrame = CGRectMake(textX,
                                           CGRectGetMinY(bubbleFrame) + kTextMarginTop,
-                                          CGRectGetWidth(bubbleFrame) - kTextHorizontalBubblePadding * 2 - kXHArrowMarginWidth / 2.0,
+                                          CGRectGetWidth(bubbleFrame) - kTextHorizontalBubblePadding * 2 - kXHArrowMarginWidth,
                                           bubbleFrame.size.height - kTextMarginTop - kTextMarginBottom);
             
             self.displayTextView.frame = CGRectIntegral(textFrame);
