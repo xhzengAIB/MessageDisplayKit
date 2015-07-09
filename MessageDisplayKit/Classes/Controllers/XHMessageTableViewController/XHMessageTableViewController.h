@@ -263,7 +263,7 @@
  *  @param oldMessages 目标的旧消息数据
  *  @param completion  insert 完成回调
  */
-- (void)insertOldMessages:(NSArray *)oldMessages completion:(void (^)())completion ;
+- (void)insertOldMessages:(NSArray *)oldMessages completion:(void (^)())completion;
 
 #pragma mark - Messages view controller
 /**
