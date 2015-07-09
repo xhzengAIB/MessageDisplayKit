@@ -16,7 +16,7 @@
 // IM
 #import "LeanChatManager.h"
 
-static NSInteger const kOnePageSize = 10;
+static NSInteger const kOnePageSize = 7;
 
 @interface LeanChatMessageTableViewController () <XHAudioPlayerHelperDelegate>
 
@@ -212,10 +212,10 @@ static NSInteger const kOnePageSize = 10;
         default:
             break;
     }
-    if (typedMessage.ioType == AVIMMessageIOTypeIn){
-        message.bubbleMessageType = XHBubbleMessageTypeReceiving;
-    } else {
+    if ([typedMessage.clientId isEqualToString:[LeanChatManager manager].selfClientID]) {
         message.bubbleMessageType = XHBubbleMessageTypeSending;
+    } else {
+        message.bubbleMessageType = XHBubbleMessageTypeReceiving;
     }
     message.avatarUrl = [self avatarUrlByClientId:typedMessage.clientId];
     return message;
