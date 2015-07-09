@@ -16,7 +16,7 @@
 // IM
 #import "LeanChatManager.h"
 
-static NSInteger const kOnePageSize = 10;
+static NSInteger const kOnePageSize = 7;
 
 @interface LeanChatMessageTableViewController () <XHAudioPlayerHelperDelegate>
 
@@ -212,10 +212,10 @@ static NSInteger const kOnePageSize = 10;
         default:
             break;
     }
-    if (typedMessage.ioType == AVIMMessageIOTypeIn){
-        message.bubbleMessageType = XHBubbleMessageTypeReceiving;
-    } else {
+    if ([typedMessage.clientId isEqualToString:[LeanChatManager manager].selfClientID]) {
         message.bubbleMessageType = XHBubbleMessageTypeSending;
+    } else {
+        message.bubbleMessageType = XHBubbleMessageTypeReceiving;
     }
     message.avatarUrl = [self avatarUrlByClientId:typedMessage.clientId];
     return message;
@@ -362,7 +362,7 @@ static NSInteger const kOnePageSize = 10;
             self.loadingMoreMessage = YES;
             XHMessage* message=self.messages[0];
             WEAKSELF
-            [self.conversation queryMessagesBeforeId:nil timestamp:[message.timestamp timeIntervalSince1970]*1000 limit:20 callback:^(NSArray *typedMessages, NSError *error) {
+            [self.conversation queryMessagesBeforeId:nil timestamp:[message.timestamp timeIntervalSince1970]*1000 limit:kOnePageSize callback:^(NSArray *typedMessages, NSError *error) {
                 dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
                     NSMutableArray* messages=[NSMutableArray array];
                     for(AVIMTypedMessage* typedMessage in typedMessages){
@@ -374,8 +374,9 @@ static NSInteger const kOnePageSize = 10;
                         }
                     }
                     dispatch_async(dispatch_get_main_queue(), ^{
-                        [weakSelf insertOldMessages:messages];
-                        weakSelf.loadingMoreMessage=NO;
+                        [weakSelf insertOldMessages:messages completion:^{
+                            weakSelf.loadingMoreMessage=NO;
+                        }];
                     });
                 });
             }];
