@@ -231,6 +231,10 @@
         
         _sender = [aDecoder decodeObjectForKey:@"sender"];
         _timestamp = [aDecoder decodeObjectForKey:@"timestamp"];
+      
+        _messageMediaType = [[aDecoder decodeObjectForKey:@"messageMediaType"] integerValue];
+        _bubbleMessageType = [[aDecoder decodeObjectForKey:@"bubbleMessageType"] integerValue];
+        _isRead = [[aDecoder decodeObjectForKey:@"isRead"] boolValue];
     }
     return self;
 }
@@ -262,6 +266,10 @@
     
     [aCoder encodeObject:self.sender forKey:@"sender"];
     [aCoder encodeObject:self.timestamp forKey:@"timestamp"];
+  
+    [aCoder encodeObject:[NSNumber numberWithInteger:self.messageMediaType] forKey:@"messageMediaType"];
+    [aCoder encodeObject:[NSNumber numberWithInteger:self.bubbleMessageType] forKey:@"bubbleMessageType"];
+    [aCoder encodeObject:[NSNumber numberWithBool:self.isRead] forKey:@"isRead"];
 }
 
 #pragma mark - NSCopying
