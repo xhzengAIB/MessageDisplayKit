@@ -14,6 +14,9 @@
 		70457B1C1ADBB70600452531 /* LeanChatConversationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70457B1B1ADBB70600452531 /* LeanChatConversationTableViewController.m */; };
 		7053E7251B42F3FF00DE808D /* keyboard_HL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7053E7231B42F3FF00DE808D /* keyboard_HL@2x.png */; };
 		7053E7261B42F3FF00DE808D /* keyboard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7053E7241B42F3FF00DE808D /* keyboard@2x.png */; };
+		70A6A1711B669F1D005C2D21 /* MessageDisplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70A6A1701B669F1D005C2D21 /* MessageDisplayKit.framework */; };
+		70A6A1721B669F65005C2D21 /* MessageDisplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70A6A1701B669F1D005C2D21 /* MessageDisplayKit.framework */; };
+		70A6A1731B669F65005C2D21 /* MessageDisplayKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 70A6A1701B669F1D005C2D21 /* MessageDisplayKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E4ABB0171B3D2F850015DC5F /* AVOSCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4ABB0151B3D2F850015DC5F /* AVOSCloud.framework */; };
 		E4ABB0181B3D2F850015DC5F /* AVOSCloudIM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4ABB0161B3D2F850015DC5F /* AVOSCloudIM.framework */; };
 		E4ABB0191B3D2F990015DC5F /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 70BEDC091B3415DC004A1D39 /* libsqlite3.dylib */; };
@@ -132,8 +135,6 @@
 		E4D674381ABD9DBC0000B18D /* LeanChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D674361ABD9DBC0000B18D /* LeanChatViewController.m */; };
 		E4D6743C1ABD9EAF0000B18D /* LeanChatManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D6743B1ABD9EAF0000B18D /* LeanChatManager.m */; };
 		E4D674401ABD9F0B0000B18D /* LeanChatMessageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D6743F1ABD9F0B0000B18D /* LeanChatMessageTableViewController.m */; };
-		E4D674441ABDA18B0000B18D /* MessageDisplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4D673761ABD9CA30000B18D /* MessageDisplayKit.framework */; };
-		E4D674451ABDA18B0000B18D /* MessageDisplayKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E4D673761ABD9CA30000B18D /* MessageDisplayKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E4D6744D1ABDA4670000B18D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4D6744C1ABDA4670000B18D /* SystemConfiguration.framework */; };
 		E4D6744F1ABDA46F0000B18D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4D6744E1ABDA46F0000B18D /* MobileCoreServices.framework */; };
 		E4D674511ABDA4740000B18D /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4D674501ABDA4740000B18D /* CoreTelephony.framework */; };
@@ -149,7 +150,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				E4D674451ABDA18B0000B18D /* MessageDisplayKit.framework in Embed Frameworks */,
+				70A6A1731B669F65005C2D21 /* MessageDisplayKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -169,6 +170,7 @@
 		70457B1B1ADBB70600452531 /* LeanChatConversationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeanChatConversationTableViewController.m; sourceTree = "<group>"; };
 		7053E7231B42F3FF00DE808D /* keyboard_HL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "keyboard_HL@2x.png"; sourceTree = "<group>"; };
 		7053E7241B42F3FF00DE808D /* keyboard@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "keyboard@2x.png"; sourceTree = "<group>"; };
+		70A6A1701B669F1D005C2D21 /* MessageDisplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MessageDisplayKit.framework; sourceTree = "<group>"; };
 		70BEDC091B3415DC004A1D39 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		E4ABB0151B3D2F850015DC5F /* AVOSCloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloud.framework; sourceTree = "<group>"; };
 		E4ABB0161B3D2F850015DC5F /* AVOSCloudIM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloudIM.framework; sourceTree = "<group>"; };
@@ -201,7 +203,6 @@
 		E4D6735E1ABD9C5F0000B18D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		E4D673691ABD9C5F0000B18D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4D6736A1ABD9C5F0000B18D /* MessageDisplayKitLeanchatExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageDisplayKitLeanchatExampleTests.m; sourceTree = "<group>"; };
-		E4D673761ABD9CA30000B18D /* MessageDisplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MessageDisplayKit.framework; sourceTree = "<group>"; };
 		E4D673791ABD9CAD0000B18D /* AddGroupMemberBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AddGroupMemberBtn@2x.png"; sourceTree = "<group>"; };
 		E4D6737A1ABD9CAD0000B18D /* AddGroupMemberBtnHL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AddGroupMemberBtnHL@2x.png"; sourceTree = "<group>"; };
 		E4D6737B1ABD9CAD0000B18D /* avator@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avator@2x.png"; sourceTree = "<group>"; };
@@ -317,9 +318,10 @@
 				E4D674511ABDA4740000B18D /* CoreTelephony.framework in Frameworks */,
 				E4D6744F1ABDA46F0000B18D /* MobileCoreServices.framework in Frameworks */,
 				E4D6744D1ABDA4670000B18D /* SystemConfiguration.framework in Frameworks */,
+				70A6A1721B669F65005C2D21 /* MessageDisplayKit.framework in Frameworks */,
 				E4ABB0171B3D2F850015DC5F /* AVOSCloud.framework in Frameworks */,
-				E4D674441ABDA18B0000B18D /* MessageDisplayKit.framework in Frameworks */,
 				E4ABB0181B3D2F850015DC5F /* AVOSCloudIM.framework in Frameworks */,
+				70A6A1711B669F1D005C2D21 /* MessageDisplayKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,8 +444,8 @@
 		E4D673751ABD9C930000B18D /* MessageDisplayKit */ = {
 			isa = PBXGroup;
 			children = (
+				70A6A1701B669F1D005C2D21 /* MessageDisplayKit.framework */,
 				E4D673781ABD9CAD0000B18D /* Resources */,
-				E4D673761ABD9CA30000B18D /* MessageDisplayKit.framework */,
 			);
 			path = MessageDisplayKit;
 			sourceTree = "<group>";

@@ -257,6 +257,14 @@
  */
 - (void)insertOldMessages:(NSArray *)oldMessages;
 
+/**
+ *  同上，增加了 completion 来通知消息插入完毕
+ *
+ *  @param oldMessages 目标的旧消息数据
+ *  @param completion  insert 完成回调
+ */
+- (void)insertOldMessages:(NSArray *)oldMessages completion:(void (^)())completion;
+
 #pragma mark - Messages view controller
 /**
  *  完成发送消息的函数
