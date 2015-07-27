@@ -11,7 +11,7 @@
 @implementation XHMessageVoiceFactory
 
 + (UIImageView *)messageVoiceAnimationImageViewWithBubbleMessageType:(XHBubbleMessageType)type {
-    UIImageView *messageVoiceAniamtionImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
+    UIImageView *messageVoiceAniamtionImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 14, 17)];
     NSString *imageSepatorName;
     switch (type) {
         case XHBubbleMessageTypeSending:
