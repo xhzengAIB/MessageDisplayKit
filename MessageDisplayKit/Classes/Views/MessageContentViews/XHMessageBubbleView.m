@@ -436,8 +436,7 @@
             if (self.message.bubbleMessageType == XHBubbleMessageTypeReceiving) {
                 voiceImagePaddingX = CGRectGetMinX(bubbleFrame) + kVoiceMargin;
             }
-            animationVoiceImageViewFrame.origin = CGPointMake(voiceImagePaddingX,
-                                                              CGRectGetHeight(bubbleFrame) / 2.0);
+            animationVoiceImageViewFrame.origin = CGPointMake(voiceImagePaddingX, CGRectGetMidY(textFrame) - CGRectGetHeight(animationVoiceImageViewFrame) / 2);  // 垂直居中
             self.animationVoiceImageView.frame = animationVoiceImageViewFrame;
             
             [self configureVoiceDurationLabelFrameWithBubbleFrame:bubbleFrame];
