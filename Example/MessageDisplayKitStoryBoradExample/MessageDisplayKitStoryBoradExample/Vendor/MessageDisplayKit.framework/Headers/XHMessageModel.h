@@ -44,6 +44,8 @@
 
 @optional
 
+- (BOOL)shouldShowUserName;
+
 - (NSString *)sender;
 
 - (NSDate *)timestamp;
