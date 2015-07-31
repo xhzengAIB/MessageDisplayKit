@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		70A6A1751B669FB9005C2D21 /* MessageDisplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70A6A1741B669FB9005C2D21 /* MessageDisplayKit.framework */; };
-		70A6A1761B66A01F005C2D21 /* MessageDisplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70A6A1741B669FB9005C2D21 /* MessageDisplayKit.framework */; };
 		70A6A1771B66A01F005C2D21 /* MessageDisplayKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 70A6A1741B669FB9005C2D21 /* MessageDisplayKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		70A6A1D51B66A05D005C2D21 /* AddGroupMemberBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 70A6A1791B66A05D005C2D21 /* AddGroupMemberBtn@2x.png */; };
 		70A6A1D61B66A05D005C2D21 /* AddGroupMemberBtnHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 70A6A17A1B66A05D005C2D21 /* AddGroupMemberBtnHL@2x.png */; };
@@ -104,6 +102,7 @@
 		E47E737A1AA19FB800CF7C0B /* XHAlbumLikesCommentsView.m in Sources */ = {isa = PBXBuildFile; fileRef = E47E73791AA19FB800CF7C0B /* XHAlbumLikesCommentsView.m */; };
 		E47E737C1AA1A37600CF7C0B /* Album_likes_comments_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E47E737B1AA1A37600CF7C0B /* Album_likes_comments_background@2x.png */; };
 		E47E737E1AA1A7A800CF7C0B /* Album_like_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E47E737D1AA1A7A800CF7C0B /* Album_like_icon@2x.png */; };
+		E4A79B621B6B5319006B806F /* MessageDisplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70A6A1741B669FB9005C2D21 /* MessageDisplayKit.framework */; };
 		E4B290091A888A5100CAC4C8 /* XHAlbumOperationView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4B290081A888A5100CAC4C8 /* XHAlbumOperationView.m */; };
 		E4CC32281A8B552500D536E3 /* XHCustomCellDemoMessageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CC32271A8B552500D536E3 /* XHCustomCellDemoMessageTableViewController.m */; };
 		F7122EE61A4D33E200734F17 /* XHAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = F7122EE31A4D33E200734F17 /* XHAlbum.m */; };
@@ -825,8 +824,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70A6A1761B66A01F005C2D21 /* MessageDisplayKit.framework in Frameworks */,
-				70A6A1751B669FB9005C2D21 /* MessageDisplayKit.framework in Frameworks */,
+				E4A79B621B6B5319006B806F /* MessageDisplayKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
