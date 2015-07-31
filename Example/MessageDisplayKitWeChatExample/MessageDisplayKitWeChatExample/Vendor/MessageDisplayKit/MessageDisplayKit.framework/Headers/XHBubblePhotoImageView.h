@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "XHMessageBubbleFactory.h"
 
+#define kXHBubblePhotoMargin 8.0f
+
 @interface XHBubblePhotoImageView : UIView
 
 /**

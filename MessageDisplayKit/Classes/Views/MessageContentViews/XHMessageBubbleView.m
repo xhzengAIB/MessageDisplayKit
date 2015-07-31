@@ -10,16 +10,17 @@
 
 #import "XHMessageBubbleHelper.h"
 
-#define kBubbleMarginTop 15.0f // 距离气泡上边的间隙
-#define kBubbleMarginBottom 15.0f // 距离气泡下边的间隙
+#define kXHHaveBubbleMargin 15.0f // 距离气泡上下边的间隙
 
-#define kVoiceMargin 20.0f // 语音间隙
+#define kXHVoiceMargin 20.0f // 语音间隙
 
 #define kXHArrowMarginWidth 3.0f // 箭头宽度
 
-#define kTextHorizontalBubblePadding 16.0f // 文本的水平间隙
+#define kXHTextHorizontalBubblePadding 16.0f // 文本的水平间隙
 
-#define kUnReadDotSize 10.0f // 语音未读的红点大小
+#define kXHUnReadDotSize 10.0f // 语音未读的红点大小
+
+#define kXHNoneBubblePhotoMargin (kXHHaveBubbleMargin - kXHBubblePhotoMargin) // 在没有气泡的时候，也就是在图片、视频、地理位置的时候，图片内部做了Margin，所以需要减去内部的Margin
 
 @interface XHMessageBubbleView ()
 
@@ -119,35 +120,35 @@
     switch (message.messageMediaType) {
         case XHBubbleMessageMediaTypeText: {
             CGSize needTextSize = [XHMessageBubbleView neededSizeForText:message.text];
-            bubbleSize = CGSizeMake(needTextSize.width + kTextHorizontalBubblePadding * 2 + kXHArrowMarginWidth, needTextSize.height + kBubbleMarginTop * 2 + kBubbleMarginBottom * 2);
+            bubbleSize = CGSizeMake(needTextSize.width + kXHTextHorizontalBubblePadding * 2 + kXHArrowMarginWidth, needTextSize.height + kXHHaveBubbleMargin * 4); //这里*4的原因是：气泡内部的文本也做了margin，而且margin的大小和气泡的margin一样大小，所以需要加上*2的间隙大小
             break;
         }
         case XHBubbleMessageMediaTypeVoice: {
             // 这里的宽度是不定的，高度是固定的，根据需要根据语音长短来定制啦
             CGSize needVoiceSize = [XHMessageBubbleView neededSizeForVoicePath:message.voicePath voiceDuration:message.voiceDuration];
-            bubbleSize = CGSizeMake(needVoiceSize.width, needVoiceSize.height + kBubbleMarginTop + kBubbleMarginBottom);
+            bubbleSize = CGSizeMake(needVoiceSize.width, needVoiceSize.height + kXHHaveBubbleMargin * 2);
             break;
         }
         case XHBubbleMessageMediaTypeEmotion: {
             // 是否固定大小呢？
             CGSize emotionSize = [XHMessageBubbleView neededSizeForEmotion];
-            bubbleSize = CGSizeMake(emotionSize.width, emotionSize.height + kBubbleMarginTop + kBubbleMarginBottom);
+            bubbleSize = CGSizeMake(emotionSize.width, emotionSize.height + kXHHaveBubbleMargin * 2);
             break;
         }
         case XHBubbleMessageMediaTypePhoto: {
             CGSize needPhotoSize = [XHMessageBubbleView neededSizeForPhoto:message.photo];
-            bubbleSize = CGSizeMake(needPhotoSize.width, needPhotoSize.height + 7 + 7);
+            bubbleSize = CGSizeMake(needPhotoSize.width, needPhotoSize.height + kXHNoneBubblePhotoMargin * 2);
             break;
         }
         case XHBubbleMessageMediaTypeVideo: {
             CGSize needVideoConverPhotoSize = [XHMessageBubbleView neededSizeForPhoto:message.videoConverPhoto];
-            bubbleSize = CGSizeMake(needVideoConverPhotoSize.width, needVideoConverPhotoSize.height + 7 + 7);
+            bubbleSize = CGSizeMake(needVideoConverPhotoSize.width, needVideoConverPhotoSize.height + kXHNoneBubblePhotoMargin * 2);
             break;
         }
         case XHBubbleMessageMediaTypeLocalPosition: {
             // 固定大小，必须的
             CGSize localPostionSize = [XHMessageBubbleView neededSizeForLocalPostion];
-            bubbleSize = CGSizeMake(localPostionSize.width, localPostionSize.height + 7 + 7);
+            bubbleSize = CGSizeMake(localPostionSize.width, localPostionSize.height + kXHNoneBubblePhotoMargin * 2);
             break;
         }
         default:
@@ -186,9 +187,9 @@
     // 最终减去上下边距的像素就可以得到气泡的位置以及大小
     return CGRectIntegral(
                           CGRectMake(paddingX,
-                                     kBubbleMarginTop,
+                                     kXHHaveBubbleMargin,
                                      bubbleSize.width,
-                                     bubbleSize.height - kBubbleMarginTop - kBubbleMarginBottom)
+                                     bubbleSize.height - kXHHaveBubbleMargin * 2)
                           );
 }
 
@@ -314,8 +315,8 @@
 
 - (void)configureVoiceUnreadDotImageViewFrameWithBubbleFrame:(CGRect)bubbleFrame {
     CGRect voiceUnreadDotFrame = _voiceUnreadDotImageView.frame;
-    voiceUnreadDotFrame.origin.x = (self.message.bubbleMessageType == XHBubbleMessageTypeSending ? bubbleFrame.origin.x + kUnReadDotSize : CGRectGetMaxX(bubbleFrame) - kUnReadDotSize * 2);
-    voiceUnreadDotFrame.origin.y = CGRectGetMidY(bubbleFrame) - kUnReadDotSize / 2.0;
+    voiceUnreadDotFrame.origin.x = (self.message.bubbleMessageType == XHBubbleMessageTypeSending ? bubbleFrame.origin.x + kXHUnReadDotSize : CGRectGetMaxX(bubbleFrame) - kXHUnReadDotSize * 2);
+    voiceUnreadDotFrame.origin.y = CGRectGetMidY(bubbleFrame) - kXHUnReadDotSize / 2.0;
     _voiceUnreadDotImageView.frame = voiceUnreadDotFrame;
 }
 
@@ -396,7 +397,7 @@
         
         // 6. 初始化显示语音未读标记的imageview
         if (!_voiceUnreadDotImageView) {
-            UIImageView *voiceUnreadDotImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, kUnReadDotSize, kUnReadDotSize)];
+            UIImageView *voiceUnreadDotImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, kXHUnReadDotSize, kXHUnReadDotSize)];
             voiceUnreadDotImageView.image = [UIImage imageNamed:@"msg_chat_voice_unread"];
             voiceUnreadDotImageView.hidden = YES;
             [self addSubview:voiceUnreadDotImageView];
@@ -444,22 +445,22 @@
             CGRect bubbleFrame = [self bubbleFrame];
             self.bubbleImageView.frame = bubbleFrame;
             
-            CGFloat textX = CGRectGetMinX(bubbleFrame) + kTextHorizontalBubblePadding;
+            CGFloat textX = CGRectGetMinX(bubbleFrame) + kXHTextHorizontalBubblePadding;
             if (self.message.bubbleMessageType == XHBubbleMessageTypeReceiving) {
                 textX += kXHArrowMarginWidth;
             }
             
             CGRect textFrame = CGRectMake(textX,
-                                          CGRectGetMinY(bubbleFrame) + kBubbleMarginTop,
-                                          CGRectGetWidth(bubbleFrame) - kTextHorizontalBubblePadding * 2 - kXHArrowMarginWidth,
-                                          bubbleFrame.size.height - kBubbleMarginTop - kBubbleMarginBottom);
+                                          CGRectGetMinY(bubbleFrame) + kXHHaveBubbleMargin,
+                                          CGRectGetWidth(bubbleFrame) - kXHTextHorizontalBubblePadding * 2 - kXHArrowMarginWidth,
+                                          bubbleFrame.size.height - kXHHaveBubbleMargin * 2);
             
             self.displayTextView.frame = CGRectIntegral(textFrame);
             
             CGRect animationVoiceImageViewFrame = self.animationVoiceImageView.frame;
-            CGFloat voiceImagePaddingX = CGRectGetMaxX(bubbleFrame) - kVoiceMargin - CGRectGetWidth(animationVoiceImageViewFrame);
+            CGFloat voiceImagePaddingX = CGRectGetMaxX(bubbleFrame) - kXHVoiceMargin - CGRectGetWidth(animationVoiceImageViewFrame);
             if (self.message.bubbleMessageType == XHBubbleMessageTypeReceiving) {
-                voiceImagePaddingX = CGRectGetMinX(bubbleFrame) + kVoiceMargin;
+                voiceImagePaddingX = CGRectGetMinX(bubbleFrame) + kXHVoiceMargin;
             }
             animationVoiceImageViewFrame.origin = CGPointMake(voiceImagePaddingX, CGRectGetMidY(textFrame) - CGRectGetHeight(animationVoiceImageViewFrame) / 2);  // 垂直居中
             self.animationVoiceImageView.frame = animationVoiceImageViewFrame;
@@ -480,7 +481,7 @@
             if (self.message.bubbleMessageType == XHBubbleMessageTypeSending) {
                 paddingX = CGRectGetWidth(self.bounds) - needPhotoSize.width;
             }
-            CGRect photoImageViewFrame = CGRectMake(paddingX, 7, needPhotoSize.width, needPhotoSize.height);
+            CGRect photoImageViewFrame = CGRectMake(paddingX, kXHNoneBubblePhotoMargin, needPhotoSize.width, needPhotoSize.height);
             
             self.bubblePhotoImageView.frame = photoImageViewFrame;
             

@@ -116,7 +116,7 @@
     CGFloat height = rect.size.height+1;//莫名其妙会出现绘制底部有残留 +1像素遮盖
     // 简便起见，这里把圆角半径设置为长和宽平均值的1/10
     CGFloat radius = 6;
-    CGFloat margin = 8;//留出上下左右的边距
+    CGFloat margin = kXHBubblePhotoMargin;//留出上下左右的边距
     
     CGFloat triangleSize = 8;//三角形的边长
     CGFloat triangleMarginTop = 8;//三角形距离圆角的距离
