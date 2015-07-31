@@ -39,6 +39,8 @@
 
 @property (nonatomic, strong) NSDate *timestamp;
 
+@property (nonatomic, assign) BOOL shouldShowUserName;
+
 @property (nonatomic, assign) BOOL sended;
 
 @property (nonatomic, assign) XHBubbleMessageMediaType messageMediaType;

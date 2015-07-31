@@ -368,7 +368,7 @@ static const CGFloat kXHUserNameLabelHeight = 20;
     // 第一，是否有时间戳的显示
     CGFloat timestampHeight = displayTimestamp ? (kXHTimeStampLabelHeight + kXHLabelPadding * 2) : 0;
     
-    CGFloat userInfoNeedHeight = kXHAvatarPaddingY + kXHAvatarImageSize + kXHUserNameLabelHeight + kXHAvatarPaddingY + timestampHeight;
+    CGFloat userInfoNeedHeight = kXHAvatarPaddingY + kXHAvatarImageSize + (message.shouldShowUserName ? kXHUserNameLabelHeight : 0) + kXHAvatarPaddingY + timestampHeight;
     
     CGFloat bubbleMessageHeight = [XHMessageBubbleView calculateCellHeightWithMessage:message] + timestampHeight;
     
@@ -403,9 +403,9 @@ static const CGFloat kXHUserNameLabelHeight = 20;
         if (!_timestampLabel) {
             LKBadgeView *timestampLabel = [[LKBadgeView alloc] initWithFrame:CGRectMake(0, kXHLabelPadding, MDK_SCREEN_WIDTH, kXHTimeStampLabelHeight)];
             timestampLabel.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleLeftMargin;
-            timestampLabel.badgeColor = [UIColor colorWithWhite:0.000 alpha:0.380];
+            timestampLabel.badgeColor = [UIColor colorWithWhite:0.734 alpha:1.000];
             timestampLabel.textColor = [UIColor whiteColor];
-            timestampLabel.font = [UIFont systemFontOfSize:13.0f];
+            timestampLabel.font = [UIFont systemFontOfSize:10.0f];
             timestampLabel.center = CGPointMake(CGRectGetWidth([[UIScreen mainScreen] bounds]) / 2.0, timestampLabel.center.y);
             [self.contentView addSubview:timestampLabel];
             [self.contentView bringSubviewToFront:timestampLabel];
@@ -413,7 +413,6 @@ static const CGFloat kXHUserNameLabelHeight = 20;
         }
         
         // 2、配置头像
-        // avatar
         CGRect avatarButtonFrame;
         switch (message.bubbleMessageType) {
             case XHBubbleMessageTypeReceiving:
@@ -438,14 +437,16 @@ static const CGFloat kXHUserNameLabelHeight = 20;
         [self.contentView addSubview:avatarButton];
         self.avatarButton = avatarButton;
         
-        // 3、配置用户名
-        UILabel *userNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.avatarButton.bounds) + 20, kXHUserNameLabelHeight)];
-        userNameLabel.textAlignment = NSTextAlignmentCenter;
-        userNameLabel.backgroundColor = [UIColor clearColor];
-        userNameLabel.font = [UIFont systemFontOfSize:12];
-        userNameLabel.textColor = [UIColor colorWithRed:0.140 green:0.635 blue:0.969 alpha:1.000];
-        [self.contentView addSubview:userNameLabel];
-        self.userNameLabel = userNameLabel;
+        if (message.shouldShowUserName) {
+            // 3、配置用户名
+            UILabel *userNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.avatarButton.bounds) + 20, kXHUserNameLabelHeight)];
+            userNameLabel.textAlignment = NSTextAlignmentCenter;
+            userNameLabel.backgroundColor = [UIColor clearColor];
+            userNameLabel.font = [UIFont systemFontOfSize:12];
+            userNameLabel.textColor = [UIColor colorWithRed:0.140 green:0.635 blue:0.969 alpha:1.000];
+            [self.contentView addSubview:userNameLabel];
+            self.userNameLabel = userNameLabel;
+        }
         
         // 4、配置需要显示什么消息内容，比如语音、文字、视频、图片
         if (!_messageBubbleView) {
@@ -483,8 +484,10 @@ static const CGFloat kXHUserNameLabelHeight = 20;
     avatarButtonFrame.origin.x = ([self bubbleMessageType] == XHBubbleMessageTypeReceiving) ? kXHAvatarPaddingX : ((CGRectGetWidth(self.bounds) - kXHAvatarPaddingX - kXHAvatarImageSize));
     self.avatarButton.frame = avatarButtonFrame;
     
-    // 布局用户名
-    self.userNameLabel.center = CGPointMake(CGRectGetMidX(avatarButtonFrame), CGRectGetMaxY(avatarButtonFrame) + CGRectGetMidY(self.userNameLabel.bounds));
+    if (self.messageBubbleView.message.shouldShowUserName) {
+        // 布局用户名
+        self.userNameLabel.center = CGPointMake(CGRectGetMidX(avatarButtonFrame), CGRectGetMaxY(avatarButtonFrame) + CGRectGetMidY(self.userNameLabel.bounds));
+    }
     
     // 布局消息内容的View
     CGFloat bubbleX = 0.0f;

@@ -14,9 +14,10 @@
 
 #define kXHVoiceMargin 20.0f // 语音间隙
 
-#define kXHArrowMarginWidth 3.0f // 箭头宽度
+#define kXHArrowMarginWidth 9.0f // 箭头宽度
 
-#define kXHTextHorizontalBubblePadding 16.0f // 文本的水平间隙
+#define kXHLeftTextHorizontalBubblePadding 15.0f // 文本的水平间隙
+#define kXHRightTextHorizontalBubblePadding 15.0f // 文本的水平间隙
 
 #define kXHUnReadDotSize 10.0f // 语音未读的红点大小
 
@@ -66,13 +67,13 @@
         stringSize = [text sizeWithFont:[[XHMessageBubbleView appearance] font]
                       constrainedToSize:CGSizeMake(MAXFLOAT, 20)];
     }
-
+    
     return roundf(stringSize.width);
 }
 
 // 计算文本实际的大小
 + (CGSize)neededSizeForText:(NSString *)text {
-    CGFloat maxWidth = CGRectGetWidth([[UIScreen mainScreen] bounds]) * (kIsiPad ? 0.8 : 0.55);
+    CGFloat maxWidth = CGRectGetWidth([[UIScreen mainScreen] bounds]) * (kIsiPad ? 0.8 : (kIs_iPhone_6 ? 0.6 : (kIs_iPhone_6P ? 0.62 : 0.55)));
     
     CGFloat dyWidth = [XHMessageBubbleView neededWidthForText:text];
     
@@ -120,7 +121,7 @@
     switch (message.messageMediaType) {
         case XHBubbleMessageMediaTypeText: {
             CGSize needTextSize = [XHMessageBubbleView neededSizeForText:message.text];
-            bubbleSize = CGSizeMake(needTextSize.width + kXHTextHorizontalBubblePadding * 2 + kXHArrowMarginWidth, needTextSize.height + kXHHaveBubbleMargin * 4); //这里*4的原因是：气泡内部的文本也做了margin，而且margin的大小和气泡的margin一样大小，所以需要加上*2的间隙大小
+            bubbleSize = CGSizeMake(needTextSize.width + kXHLeftTextHorizontalBubblePadding + kXHRightTextHorizontalBubblePadding + kXHArrowMarginWidth, needTextSize.height + kXHHaveBubbleMargin * 4); //这里*4的原因是：气泡内部的文本也做了margin，而且margin的大小和气泡的margin一样大小，所以需要加上*2的间隙大小
             break;
         }
         case XHBubbleMessageMediaTypeVoice: {
@@ -342,6 +343,7 @@
         // 2、初始化显示文本消息的TextView
         if (!_displayTextView) {
             SETextView *displayTextView = [[SETextView alloc] initWithFrame:CGRectZero];
+            displayTextView.textColor = [UIColor colorWithWhite:0.143 alpha:1.000];
             displayTextView.backgroundColor = [UIColor clearColor];
             displayTextView.selectable = NO;
             displayTextView.lineSpacing = kXHTextLineSpacing;
@@ -379,7 +381,7 @@
         // 4、初始化显示语音时长的label
         if (!_voiceDurationLabel) {
             UILabel *voiceDurationLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 15, 30, 30)];
-            voiceDurationLabel.textColor = [UIColor lightGrayColor];
+            voiceDurationLabel.textColor = [UIColor colorWithWhite:0.579 alpha:1.000];
             voiceDurationLabel.backgroundColor = [UIColor clearColor];
             voiceDurationLabel.font = [UIFont systemFontOfSize:13.f];
             voiceDurationLabel.textAlignment = NSTextAlignmentRight;
@@ -445,14 +447,14 @@
             CGRect bubbleFrame = [self bubbleFrame];
             self.bubbleImageView.frame = bubbleFrame;
             
-            CGFloat textX = CGRectGetMinX(bubbleFrame) + kXHTextHorizontalBubblePadding;
+            CGFloat textX = CGRectGetMinX(bubbleFrame) + kXHRightTextHorizontalBubblePadding;
             if (self.message.bubbleMessageType == XHBubbleMessageTypeReceiving) {
-                textX += kXHArrowMarginWidth;
+                textX = CGRectGetMinX(bubbleFrame) + kXHArrowMarginWidth + kXHLeftTextHorizontalBubblePadding;
             }
             
             CGRect textFrame = CGRectMake(textX,
                                           CGRectGetMinY(bubbleFrame) + kXHHaveBubbleMargin,
-                                          CGRectGetWidth(bubbleFrame) - kXHTextHorizontalBubblePadding * 2 - kXHArrowMarginWidth,
+                                          CGRectGetWidth(bubbleFrame) - kXHLeftTextHorizontalBubblePadding - kXHRightTextHorizontalBubblePadding - kXHArrowMarginWidth,
                                           bubbleFrame.size.height - kXHHaveBubbleMargin * 2);
             
             self.displayTextView.frame = CGRectIntegral(textFrame);

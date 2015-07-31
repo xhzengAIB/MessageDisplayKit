@@ -22,13 +22,18 @@
 // device verson float value
 #define CURRENT_SYS_VERSION [[[UIDevice currentDevice] systemVersion] floatValue]
 
+// Size
+#define MDK_SCREEN_WIDTH  [[UIScreen mainScreen] bounds].size.width
+#define MDK_SCREEN_HEIGHT [[UIScreen mainScreen] bounds].size.height
+
 // iPad
 #define kIsiPad (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+#define kIs_iPhone (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#define kIs_iPhone_6 (kIs_iPhone && MDK_SCREEN_HEIGHT == 667.0)
+#define kIs_iPhone_6P (kIs_iPhone && MDK_SCREEN_HEIGHT == 736.0)
 
 // image STRETCH
 #define XH_STRETCH_IMAGE(image, edgeInsets) (CURRENT_SYS_VERSION < 6.0 ? [image stretchableImageWithLeftCapWidth:edgeInsets.left topCapHeight:edgeInsets.top] : [image resizableImageWithCapInsets:edgeInsets resizingMode:UIImageResizingModeStretch])
 
-#define MDK_SCREEN_WIDTH  [[UIScreen mainScreen] bounds].size.width
-#define MDK_SCREEN_HEIGHT [[UIScreen mainScreen] bounds].size.height
 
 #endif
