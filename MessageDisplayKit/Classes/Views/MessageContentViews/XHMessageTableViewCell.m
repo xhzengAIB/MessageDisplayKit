@@ -280,7 +280,9 @@ static const CGFloat kXHUserNameLabelHeight = 20;
         SEL action = nil;
         switch (i) {
             case 0: {
-                action = @selector(copyed:);
+                if ([self.messageBubbleView.message messageMediaType] == XHBubbleMessageMediaTypeText) {
+                    action = @selector(copyed:);
+                }
                 break;
             }
             case 1: {
@@ -298,9 +300,11 @@ static const CGFloat kXHUserNameLabelHeight = 20;
             default:
                 break;
         }
-        UIMenuItem *item = [[UIMenuItem alloc] initWithTitle:title action:action];
-        if (item) {
-            [menuItems addObject:item];
+        if (action) {
+            UIMenuItem *item = [[UIMenuItem alloc] initWithTitle:title action:action];
+            if (item) {
+                [menuItems addObject:item];
+            }
         }
     }
     
