@@ -16,6 +16,7 @@ It's ok if you don't understand how the code works. Most code has comments, whic
 
 ## 组件要求                                        Requirements
 
+* iPhone4/5/6/6+/iPad，Portrait
 * Xcode6 or later
 * iOS 6.0+ 
 * ARC
