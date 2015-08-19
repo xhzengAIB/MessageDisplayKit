@@ -18,6 +18,22 @@
 
 #define kXHPhotoCollectionViewCellIdentifier @"XHPhotoCollectionViewCellIdentifier"
 
+@interface XHAlbumCollectionView : UICollectionView
+
+@end
+
+@implementation XHAlbumCollectionView
+
+- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
+    NSIndexPath *touchIndexPath = [self indexPathForItemAtPoint:point];
+    if (!touchIndexPath) {
+        return nil;
+    }
+    return [super hitTest:point withEvent:event];
+}
+
+@end
+
 @interface XHAlbumRichTextView () <UICollectionViewDelegate, UICollectionViewDataSource>
 
 @property (nonatomic, strong) UIImageView *avatarImageView;
