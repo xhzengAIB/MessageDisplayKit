@@ -1,7 +1,7 @@
 ![](https://github.com/xhzengAIB/LearnEnglish/raw/master/Screenshots/MessageDisplayKit.png)
 MessageDisplayKit
 =================
-一个类似微信App的IM应用，拥有发送文字、图片、语音、视频、地理位置消息，管理本地通信录、分享朋友圈、漂流交友、摇一摇乐趣和更多有趣的功能。                                
+一个类似微信App的IM应用，拥有发送文字、图片、语音、视频、地理位置消息，管理本地通信录、分享朋友圈、漂流交友、摇一摇和更多有趣的功能。                                
 An IM APP like WeChat App has to send text, pictures, audio, video, location messaging, managing local address book, share a circle of friends, drifting friends, shake a fun and more interesting features.                                 
 ![image](https://github.com/xhzengAIB/LearnEnglish/raw/master/Screenshots/MessageDisplayKit.gif)
 
