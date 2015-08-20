@@ -168,6 +168,8 @@
 
 @property (nonatomic, weak) id <XHMessageTableViewControllerDataSource> dataSource;
 
+@property (nonatomic, assign, readonly) XHInputViewType textViewInputViewType;
+
 /**
  *  数据源，显示多少消息
  */
@@ -302,5 +304,13 @@
 - (void)scrollToRowAtIndexPath:(NSIndexPath *)indexPath
 			  atScrollPosition:(UITableViewScrollPosition)position
 					  animated:(BOOL)animated;
+
+#pragma mark - Other Menu View Frame Helper Mehtod
+/**
+ *  根据显示或隐藏的需求对所有第三方Menu进行管理
+ *
+ *  @param hide 需求条件
+ */
+- (void)layoutOtherMenuViewHiden:(BOOL)hide;
 
 @end

@@ -26,7 +26,7 @@
  */
 @property (nonatomic, assign) CGFloat keyboardViewHeight;
 
-@property (nonatomic, assign) XHInputViewType textViewInputViewType;
+@property (nonatomic, assign, readwrite) XHInputViewType textViewInputViewType;
 
 @property (nonatomic, weak, readwrite) XHMessageTableView *messageTableView;
 @property (nonatomic, weak, readwrite) XHMessageInputView *messageInputView;
@@ -186,14 +186,6 @@
  *  @param location    目标地理经纬度
  */
 - (void)didSendGeolocationsMessageWithGeolocaltions:(NSString *)geolcations location:(CLLocation *)location;
-
-#pragma mark - Other Menu View Frame Helper Mehtod
-/**
- *  根据显示或隐藏的需求对所有第三方Menu进行管理
- *
- *  @param hide 需求条件
- */
-- (void)layoutOtherMenuViewHiden:(BOOL)hide;
 
 #pragma mark - Voice Recording Helper Method
 /**
