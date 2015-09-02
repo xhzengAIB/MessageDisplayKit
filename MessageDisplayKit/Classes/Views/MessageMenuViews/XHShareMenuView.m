@@ -126,6 +126,12 @@
                                                                    onPage:page];
         XHShareMenuItemView *shareMenuItemView = [[XHShareMenuItemView alloc] initWithFrame:shareMenuItemViewFrame];
         
+        if (shareMenuItem.titleColor) {
+            shareMenuItemView.shareMenuItemTitleLabel.textColor = shareMenuItem.titleColor;
+        }
+        if (shareMenuItem.titleFont) {
+            shareMenuItemView.shareMenuItemTitleLabel.font = shareMenuItem.titleFont;
+        }
         shareMenuItemView.shareMenuItemButton.tag = index;
         [shareMenuItemView.shareMenuItemButton addTarget:self action:@selector(shareMenuItemButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
         [shareMenuItemView.shareMenuItemButton setImage:shareMenuItem.normalIconImage forState:UIControlStateNormal];
