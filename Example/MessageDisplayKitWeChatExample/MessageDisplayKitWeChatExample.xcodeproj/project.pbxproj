@@ -25,8 +25,6 @@
 		70A6A1E31B66A05D005C2D21 /* face@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 70A6A1881B66A05D005C2D21 /* face@2x.png */; };
 		70A6A1E41B66A05D005C2D21 /* face_HL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 70A6A1891B66A05D005C2D21 /* face_HL@2x.png */; };
 		70A6A1E51B66A05D005C2D21 /* Fav_Cell_Loc@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 70A6A18A1B66A05D005C2D21 /* Fav_Cell_Loc@2x.png */; };
-		70A6A1E61B66A05D005C2D21 /* input-bar-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 70A6A18B1B66A05D005C2D21 /* input-bar-background.png */; };
-		70A6A1E71B66A05D005C2D21 /* input-bar-background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 70A6A18C1B66A05D005C2D21 /* input-bar-background@2x.png */; };
 		70A6A1E81B66A05D005C2D21 /* input-bar-flat.png in Resources */ = {isa = PBXBuildFile; fileRef = 70A6A18D1B66A05D005C2D21 /* input-bar-flat.png */; };
 		70A6A1E91B66A05D005C2D21 /* input-bar-flat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 70A6A18E1B66A05D005C2D21 /* input-bar-flat@2x.png */; };
 		70A6A1EA1B66A05D005C2D21 /* input-field-cover.png in Resources */ = {isa = PBXBuildFile; fileRef = 70A6A18F1B66A05D005C2D21 /* input-field-cover.png */; };
@@ -402,8 +400,6 @@
 		70A6A1881B66A05D005C2D21 /* face@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "face@2x.png"; sourceTree = "<group>"; };
 		70A6A1891B66A05D005C2D21 /* face_HL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "face_HL@2x.png"; sourceTree = "<group>"; };
 		70A6A18A1B66A05D005C2D21 /* Fav_Cell_Loc@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fav_Cell_Loc@2x.png"; sourceTree = "<group>"; };
-		70A6A18B1B66A05D005C2D21 /* input-bar-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "input-bar-background.png"; sourceTree = "<group>"; };
-		70A6A18C1B66A05D005C2D21 /* input-bar-background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "input-bar-background@2x.png"; sourceTree = "<group>"; };
 		70A6A18D1B66A05D005C2D21 /* input-bar-flat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "input-bar-flat.png"; sourceTree = "<group>"; };
 		70A6A18E1B66A05D005C2D21 /* input-bar-flat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "input-bar-flat@2x.png"; sourceTree = "<group>"; };
 		70A6A18F1B66A05D005C2D21 /* input-field-cover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "input-field-cover.png"; sourceTree = "<group>"; };
@@ -858,8 +854,6 @@
 				70A6A1881B66A05D005C2D21 /* face@2x.png */,
 				70A6A1891B66A05D005C2D21 /* face_HL@2x.png */,
 				70A6A18A1B66A05D005C2D21 /* Fav_Cell_Loc@2x.png */,
-				70A6A18B1B66A05D005C2D21 /* input-bar-background.png */,
-				70A6A18C1B66A05D005C2D21 /* input-bar-background@2x.png */,
 				70A6A18D1B66A05D005C2D21 /* input-bar-flat.png */,
 				70A6A18E1B66A05D005C2D21 /* input-bar-flat@2x.png */,
 				70A6A18F1B66A05D005C2D21 /* input-field-cover.png */,
@@ -1962,7 +1956,6 @@
 				F7D24EDD1A4D0EB30015764B /* VoiceSearchIcon@2x.png in Resources */,
 				F7D24F221A4D0EB30015764B /* ScanWord_HL@2x.png in Resources */,
 				70A6A1F31B66A05D005C2D21 /* multiMedia_HL@2x.png in Resources */,
-				70A6A1E61B66A05D005C2D21 /* input-bar-background.png in Resources */,
 				F7D24EF31A4D0EB30015764B /* VoiceSearchLoading010@2x.png in Resources */,
 				F7D24F1C1A4D0EB30015764B /* ScanQR4@2x.png in Resources */,
 				F7D24EFC1A4D0EB30015764B /* AlbumFlagMark@2x.png in Resources */,
@@ -2054,7 +2047,6 @@
 				70A6A22B1B66A05D005C2D21 /* weChatBubble_Receiving_Cavern@2x.png in Resources */,
 				70A6A2001B66A05D005C2D21 /* RecordingSignal003@2x.png in Resources */,
 				F7D24F571A4D0EB30015764B /* MoreMyFavorites@2x.png in Resources */,
-				70A6A1E71B66A05D005C2D21 /* input-bar-background@2x.png in Resources */,
 				70A6A2251B66A05D005C2D21 /* sharemore_voipvoice@2x.png in Resources */,
 				70A6A1D81B66A05D005C2D21 /* CellBlueSelected@2x.png in Resources */,
 				F7D24EF21A4D0EB30015764B /* VoiceSearchLoading009_ios7@2x.png in Resources */,

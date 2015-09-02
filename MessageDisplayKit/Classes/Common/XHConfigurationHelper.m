@@ -8,9 +8,31 @@
 
 #import "XHConfigurationHelper.h"
 
+// (Input Tool Bar Style Key)
+NSString *kXHMessageInputViewVoiceNormalImageNameKey = @"com.HUAJIE.MDK.XHMessageInputViewVoiceNormalImageNameKey";
+NSString *kXHMessageInputViewVoiceHLImageNameKey = @"com.HUAJIE.MDK.XHMessageInputViewVoiceHLImageNameKey";
+NSString *kXHMessageInputViewVoiceHolderImageNameKey = @"com.HUAJIE.MDK.XHMessageInputViewVoiceHolderImageNameKey";
+NSString *kXHMessageInputViewVoiceHolderHLImageNameKey = @"com.HUAJIE.MDK.XHMessageInputViewVoiceHolderHLImageNameKey";
+NSString *kXHMessageInputViewExtensionNormalImageNameKey = @"com.HUAJIE.MDK.XHMessageInputViewExtensionNormalImageNameKey";
+NSString *kXHMessageInputViewExtensionHLImageNameKey = @"com.HUAJIE.MDK.XHMessageInputViewExtensionHLImageNameKey";
+NSString *kXHMessageInputViewKeyboradNormalImageNameKey = @"com.HUAJIE.MDK.XHMessageInputViewKeyboradNormalImageNameKey";
+NSString *kXHMessageInputViewKeyboradHLImageNameKey = @"com.HUAJIE.MDK.XHMessageInputViewKeyboradHLImageNameKey";
+NSString *kXHMessageInputViewEmotionNormalImageNameKey = @"com.HUAJIE.MDK.XHMessageInputViewEmotionNormalImageNameKey";
+NSString *kXHMessageInputViewEmotionHLImageNameKey = @"com.HUAJIE.MDK.XHMessageInputViewEmotionHLImageNameKey";
+NSString *kXHMessageInputViewBackgroundImageNameKey = @"com.HUAJIE.MDK.XHMessageInputViewBackgroundImageNameKey";
+
+// (Message Table Style Key)
+NSString *kXHMessageTablePlaceholderImageNameKey = @"com.HUAJIE.MDK.XHMessageTablePlaceholderImageNameKey";
+NSString *kXHMessageTableReceivingSolidImageNameKey = @"com.HUAJIE.MDK.XHMessageTableReceivingSolidImageNameKey";
+NSString *kXHMessageTableSendingSolidImageNameKey = @"com.HUAJIE.MDK.XHMessageTableSendingSolidImageNameKey";
+
 @interface XHConfigurationHelper ()
 
-@property (nonatomic, strong) NSArray *popMenuTitles;
+@property (nonatomic, strong, readwrite) NSArray *popMenuTitles;
+
+@property (nonatomic, strong, readwrite) NSDictionary *messageInputViewStyle;
+
+@property (nonatomic, strong, readwrite) NSDictionary *messageTableStyle;
 
 @end
 
@@ -38,6 +60,14 @@
 
 - (void)setupPopMenuTitles:(NSArray *)popMenuTitles {
     self.popMenuTitles = popMenuTitles;
+}
+
+- (void)setupMessageInputViewStyle:(NSDictionary *)messageInputViewStyle {
+    self.messageInputViewStyle = messageInputViewStyle;
+}
+
+- (void)setupMessageTableStyle:(NSDictionary *)messageTableStyle {
+    self.messageTableStyle = messageTableStyle;
 }
 
 @end

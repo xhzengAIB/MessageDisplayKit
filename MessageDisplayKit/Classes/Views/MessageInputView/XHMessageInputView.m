@@ -11,6 +11,7 @@
 
 #import "NSString+MessageInputView.h"
 #import "XHMacro.h"
+#import "XHConfigurationHelper.h"
 
 @interface XHMessageInputView () <UITextViewDelegate>
 
@@ -278,7 +279,16 @@
     
     // 允许发送语音
     if (self.allowsSendVoice) {
-        button = [self createButtonWithImage:[UIImage imageNamed:@"voice"] HLImage:[UIImage imageNamed:@"voice_HL"]];
+        NSString *voiceNormalImageName = [[XHConfigurationHelper appearance].messageInputViewStyle objectForKey:kXHMessageInputViewVoiceNormalImageNameKey];
+        if (!voiceNormalImageName) {
+            voiceNormalImageName = @"voice";
+        }
+        NSString *voiceHLImageName = [[XHConfigurationHelper appearance].messageInputViewStyle objectForKey:kXHMessageInputViewVoiceHLImageNameKey];
+        if (!voiceHLImageName) {
+            voiceHLImageName = @"voice_HL";
+        }
+        
+        button = [self createButtonWithImage:[UIImage imageNamed:voiceNormalImageName] HLImage:[UIImage imageNamed:voiceHLImageName]];
         [button addTarget:self action:@selector(messageStyleButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
         button.tag = 0;
         [button setBackgroundImage:[UIImage imageNamed:@"keyboard"] forState:UIControlStateSelected];
@@ -294,7 +304,16 @@
     
     // 允许发送多媒体消息，为什么不是先放表情按钮呢？因为布局的需要！
     if (self.allowsSendMultiMedia) {
-        button = [self createButtonWithImage:[UIImage imageNamed:@"multiMedia"] HLImage:[UIImage imageNamed:@"multiMedia_HL"]];
+        NSString *extensionNormalImageName = [[XHConfigurationHelper appearance].messageInputViewStyle objectForKey:kXHMessageInputViewExtensionNormalImageNameKey];
+        if (!extensionNormalImageName) {
+            extensionNormalImageName = @"multiMedia";
+        }
+        NSString *extensionHLImageName = [[XHConfigurationHelper appearance].messageInputViewStyle objectForKey:kXHMessageInputViewExtensionHLImageNameKey];
+        if (!extensionHLImageName) {
+            extensionHLImageName = @"multiMedia_HL";
+        }
+        
+        button = [self createButtonWithImage:[UIImage imageNamed:extensionNormalImageName] HLImage:[UIImage imageNamed:extensionHLImageName]];
         button.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;
         [button addTarget:self action:@selector(messageStyleButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
         button.tag = 2;
@@ -309,7 +328,16 @@
     
     // 允许发送表情
     if (self.allowsSendFace) {
-        button = [self createButtonWithImage:[UIImage imageNamed:@"face"] HLImage:[UIImage imageNamed:@"face_HL"]];
+        NSString *emotionNormalImageName = [[XHConfigurationHelper appearance].messageInputViewStyle objectForKey:kXHMessageInputViewEmotionNormalImageNameKey];
+        if (!emotionNormalImageName) {
+            emotionNormalImageName = @"face";
+        }
+        NSString *emotionHLImageName = [[XHConfigurationHelper appearance].messageInputViewStyle objectForKey:kXHMessageInputViewEmotionHLImageNameKey];
+        if (!emotionHLImageName) {
+            emotionHLImageName = @"face_HL";
+        }
+        
+        button = [self createButtonWithImage:[UIImage imageNamed:emotionNormalImageName] HLImage:[UIImage imageNamed:emotionHLImageName]];
         button.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;
         [button setBackgroundImage:[UIImage imageNamed:@"keyboard"] forState:UIControlStateSelected];
         [button addTarget:self action:@selector(messageStyleButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
@@ -347,31 +375,18 @@
     
     // 配置不同iOS SDK版本的样式
     switch (style) {
-        case XHMessageInputViewStyleQuasiphysical: {
-            _inputTextView.frame = CGRectMake(textViewLeftMargin, 3.0f, width, height);
-            _inputTextView.backgroundColor = [UIColor whiteColor];
-            
-            self.image = [[UIImage imageNamed:@"input-bar-background"] resizableImageWithCapInsets:UIEdgeInsetsMake(19.0f, 3.0f, 19.0f, 3.0f)
-                                                                                      resizingMode:UIImageResizingModeStretch];
-            
-            UIImageView *inputFieldBack = [[UIImageView alloc] initWithFrame:CGRectMake(_inputTextView.frame.origin.x - 1.0f,
-                                                                                        0.0f,
-                                                                                        _inputTextView.frame.size.width + 2.0f,
-                                                                                        self.frame.size.height)];
-            inputFieldBack.image = [[UIImage imageNamed:@"input-field-cover"] resizableImageWithCapInsets:UIEdgeInsetsMake(20.0f, 12.0f, 18.0f, 18.0f)];
-            inputFieldBack.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
-            inputFieldBack.backgroundColor = [UIColor clearColor];
-            [self addSubview:inputFieldBack];
-            break;
-        }
         case XHMessageInputViewStyleFlat: {
+            NSString *inputViewBackgroundImageName = [[XHConfigurationHelper appearance].messageInputViewStyle objectForKey:kXHMessageInputViewBackgroundImageNameKey];
+            if (!inputViewBackgroundImageName) {
+                inputViewBackgroundImageName = @"input-bar-flat";
+            }
+            
             _inputTextView.frame = CGRectMake(textViewLeftMargin, 4.5f, width, height);
             _inputTextView.backgroundColor = [UIColor clearColor];
             _inputTextView.layer.borderColor = [UIColor colorWithWhite:0.8f alpha:1.0f].CGColor;
             _inputTextView.layer.borderWidth = 0.65f;
             _inputTextView.layer.cornerRadius = 6.0f;
-            self.backgroundColor = [UIColor whiteColor];
-            self.image = [[UIImage imageNamed:@"input-bar-flat"] resizableImageWithCapInsets:UIEdgeInsetsMake(2.0f, 0.0f, 0.0f, 0.0f)
+            self.image = [[UIImage imageNamed:inputViewBackgroundImageName] resizableImageWithCapInsets:UIEdgeInsetsMake(2.0f, 0.0f, 0.0f, 0.0f)
                                                                                  resizingMode:UIImageResizingModeTile];
             break;
         }
@@ -379,10 +394,19 @@
             break;
     }
     
-    // 如果是可以发送语言的，那就需要一个按钮录音的按钮，事件可以在外部添加
+    // 如果是可以发送语音的，那就需要一个按钮录音的按钮，事件可以在外部添加
     if (self.allowsSendVoice) {
+        NSString *voiceHolderImageName = [[XHConfigurationHelper appearance].messageInputViewStyle objectForKey:kXHMessageInputViewVoiceHolderImageNameKey];
+        if (!voiceHolderImageName) {
+            voiceHolderImageName = @"VoiceBtn_Black";
+        }
+        NSString *voiceHolderHLImageName = [[XHConfigurationHelper appearance].messageInputViewStyle objectForKey:kXHMessageInputViewEmotionHLImageNameKey];
+        if (!voiceHolderHLImageName) {
+            voiceHolderHLImageName = @"VoiceBtn_BlackHL";
+        }
+        
         UIEdgeInsets edgeInsets = UIEdgeInsetsMake(9, 9, 9, 9);
-        button = [self createButtonWithImage:XH_STRETCH_IMAGE([UIImage imageNamed:@"VoiceBtn_Black"], edgeInsets) HLImage:XH_STRETCH_IMAGE([UIImage imageNamed:@"VoiceBtn_BlackHL"], edgeInsets)];
+        button = [self createButtonWithImage:XH_STRETCH_IMAGE([UIImage imageNamed:voiceHolderImageName], edgeInsets) HLImage:XH_STRETCH_IMAGE([UIImage imageNamed:voiceHolderHLImageName], edgeInsets)];
         [button setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
         [button setTitle:NSLocalizedStringFromTable(@"HoldToTalk", @"MessageDisplayKitString", nil) forState:UIControlStateNormal];
         [button setTitle:NSLocalizedStringFromTable(@"ReleaseToSend", @"MessageDisplayKitString", nil)  forState:UIControlStateHighlighted];

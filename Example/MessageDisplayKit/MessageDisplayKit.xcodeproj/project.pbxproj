@@ -167,8 +167,6 @@
 		F7B9E8EE1A4D602C0072F81B /* face@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7B9E8931A4D602C0072F81B /* face@2x.png */; };
 		F7B9E8EF1A4D602C0072F81B /* face_HL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7B9E8941A4D602C0072F81B /* face_HL@2x.png */; };
 		F7B9E8F01A4D602C0072F81B /* Fav_Cell_Loc@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7B9E8951A4D602C0072F81B /* Fav_Cell_Loc@2x.png */; };
-		F7B9E8F11A4D602C0072F81B /* input-bar-background.png in Resources */ = {isa = PBXBuildFile; fileRef = F7B9E8961A4D602C0072F81B /* input-bar-background.png */; };
-		F7B9E8F21A4D602C0072F81B /* input-bar-background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7B9E8971A4D602C0072F81B /* input-bar-background@2x.png */; };
 		F7B9E8F31A4D602C0072F81B /* input-bar-flat.png in Resources */ = {isa = PBXBuildFile; fileRef = F7B9E8981A4D602C0072F81B /* input-bar-flat.png */; };
 		F7B9E8F41A4D602C0072F81B /* input-bar-flat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7B9E8991A4D602C0072F81B /* input-bar-flat@2x.png */; };
 		F7B9E8F51A4D602C0072F81B /* input-field-cover.png in Resources */ = {isa = PBXBuildFile; fileRef = F7B9E89A1A4D602C0072F81B /* input-field-cover.png */; };
@@ -416,8 +414,6 @@
 		F7B9E8931A4D602C0072F81B /* face@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "face@2x.png"; sourceTree = "<group>"; };
 		F7B9E8941A4D602C0072F81B /* face_HL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "face_HL@2x.png"; sourceTree = "<group>"; };
 		F7B9E8951A4D602C0072F81B /* Fav_Cell_Loc@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fav_Cell_Loc@2x.png"; sourceTree = "<group>"; };
-		F7B9E8961A4D602C0072F81B /* input-bar-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "input-bar-background.png"; sourceTree = "<group>"; };
-		F7B9E8971A4D602C0072F81B /* input-bar-background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "input-bar-background@2x.png"; sourceTree = "<group>"; };
 		F7B9E8981A4D602C0072F81B /* input-bar-flat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "input-bar-flat.png"; sourceTree = "<group>"; };
 		F7B9E8991A4D602C0072F81B /* input-bar-flat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "input-bar-flat@2x.png"; sourceTree = "<group>"; };
 		F7B9E89A1A4D602C0072F81B /* input-field-cover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "input-field-cover.png"; sourceTree = "<group>"; };
@@ -960,8 +956,6 @@
 				F7B9E8951A4D602C0072F81B /* Fav_Cell_Loc@2x.png */,
 				7053E7131B42EE6C00DE808D /* keyboard_HL@2x.png */,
 				7053E7141B42EE6C00DE808D /* keyboard@2x.png */,
-				F7B9E8961A4D602C0072F81B /* input-bar-background.png */,
-				F7B9E8971A4D602C0072F81B /* input-bar-background@2x.png */,
 				F7B9E8981A4D602C0072F81B /* input-bar-flat.png */,
 				F7B9E8991A4D602C0072F81B /* input-bar-flat@2x.png */,
 				F7B9E89A1A4D602C0072F81B /* input-field-cover.png */,
@@ -1209,7 +1203,6 @@
 				F7B9E9081A4D602C0072F81B /* RecordingBkg@2x.png in Resources */,
 				F7B9E8FA1A4D602C0072F81B /* MoreFunctionFrame@2x.png in Resources */,
 				F7B9E8FB1A4D602C0072F81B /* msg_chat_voice_unread.png in Resources */,
-				F7B9E8F21A4D602C0072F81B /* input-bar-background@2x.png in Resources */,
 				F7B9E9041A4D602C0072F81B /* ReceiverVoiceNodePlaying002@2x.png in Resources */,
 				F7B9E8E01A4D602C0072F81B /* AddGroupMemberBtn@2x.png in Resources */,
 				F7B9E9291A4D602C0072F81B /* sharemore_location@2x.png in Resources */,
@@ -1267,7 +1260,6 @@
 				F7B9E9261A4D602C0072F81B /* SenderVoiceNodePlaying003@2x.png in Resources */,
 				F7B9E9071A4D602C0072F81B /* RecordCancel@2x.png in Resources */,
 				F7B9E91F1A4D602C0072F81B /* section0_emotion6@2x.png in Resources */,
-				F7B9E8F11A4D602C0072F81B /* input-bar-background.png in Resources */,
 				F7B9E9211A4D602C0072F81B /* section0_emotion8@2x.png in Resources */,
 				F7B9E9321A4D602C0072F81B /* voice@2x.png in Resources */,
 				F7B9E90D1A4D602C0072F81B /* RecordingSignal005@2x.png in Resources */,

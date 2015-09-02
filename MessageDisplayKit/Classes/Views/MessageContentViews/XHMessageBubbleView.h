@@ -66,7 +66,7 @@
 /**
  *  用于显示语音时长的label
  */
-@property (nonatomic, weak) UILabel *voiceDurationLabel;
+@property (nonatomic, weak, readonly) UILabel *voiceDurationLabel;
 
 /**
  *  用于显示仿微信发送图片的控件

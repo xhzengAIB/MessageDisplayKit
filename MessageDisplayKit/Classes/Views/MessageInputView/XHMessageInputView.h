@@ -11,8 +11,7 @@
 #import "XHMessageTextView.h"
 
 typedef NS_ENUM(NSInteger, XHMessageInputViewStyle) {
-    // 分两种,一种是iOS6样式的，一种是iOS7样式的
-    XHMessageInputViewStyleQuasiphysical,
+    // iOS7样式的
     XHMessageInputViewStyleFlat
 };
 

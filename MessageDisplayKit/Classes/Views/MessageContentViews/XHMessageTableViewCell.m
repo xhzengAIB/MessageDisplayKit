@@ -232,9 +232,7 @@ static const CGFloat kXHUserNameLabelHeight = 20;
             break;
         }
         case XHBubbleMessageMediaTypeText:
-        case XHBubbleMessageMediaTypeVoice: {
-            self.messageBubbleView.voiceDurationLabel.text = [NSString stringWithFormat:@"%@\'\'", message.voiceDuration];
-        }
+        case XHBubbleMessageMediaTypeVoice:
         case XHBubbleMessageMediaTypeEmotion: {
             UITapGestureRecognizer *tapGestureRecognizer;
             if (currentMediaType == XHBubbleMessageMediaTypeText) {

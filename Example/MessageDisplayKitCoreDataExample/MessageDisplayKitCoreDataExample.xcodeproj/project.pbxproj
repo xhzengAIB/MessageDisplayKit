@@ -218,8 +218,6 @@
 		F7B9EAB91A4D60500072F81B /* face@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7B9EA5E1A4D60500072F81B /* face@2x.png */; };
 		F7B9EABA1A4D60500072F81B /* face_HL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7B9EA5F1A4D60500072F81B /* face_HL@2x.png */; };
 		F7B9EABB1A4D60500072F81B /* Fav_Cell_Loc@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7B9EA601A4D60500072F81B /* Fav_Cell_Loc@2x.png */; };
-		F7B9EABC1A4D60500072F81B /* input-bar-background.png in Resources */ = {isa = PBXBuildFile; fileRef = F7B9EA611A4D60500072F81B /* input-bar-background.png */; };
-		F7B9EABD1A4D60500072F81B /* input-bar-background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7B9EA621A4D60500072F81B /* input-bar-background@2x.png */; };
 		F7B9EABE1A4D60500072F81B /* input-bar-flat.png in Resources */ = {isa = PBXBuildFile; fileRef = F7B9EA631A4D60500072F81B /* input-bar-flat.png */; };
 		F7B9EABF1A4D60500072F81B /* input-bar-flat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7B9EA641A4D60500072F81B /* input-bar-flat@2x.png */; };
 		F7B9EAC01A4D60500072F81B /* input-field-cover.png in Resources */ = {isa = PBXBuildFile; fileRef = F7B9EA651A4D60500072F81B /* input-field-cover.png */; };
@@ -533,8 +531,6 @@
 		F7B9EA5E1A4D60500072F81B /* face@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "face@2x.png"; sourceTree = "<group>"; };
 		F7B9EA5F1A4D60500072F81B /* face_HL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "face_HL@2x.png"; sourceTree = "<group>"; };
 		F7B9EA601A4D60500072F81B /* Fav_Cell_Loc@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fav_Cell_Loc@2x.png"; sourceTree = "<group>"; };
-		F7B9EA611A4D60500072F81B /* input-bar-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "input-bar-background.png"; sourceTree = "<group>"; };
-		F7B9EA621A4D60500072F81B /* input-bar-background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "input-bar-background@2x.png"; sourceTree = "<group>"; };
 		F7B9EA631A4D60500072F81B /* input-bar-flat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "input-bar-flat.png"; sourceTree = "<group>"; };
 		F7B9EA641A4D60500072F81B /* input-bar-flat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "input-bar-flat@2x.png"; sourceTree = "<group>"; };
 		F7B9EA651A4D60500072F81B /* input-field-cover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "input-field-cover.png"; sourceTree = "<group>"; };
@@ -1033,8 +1029,6 @@
 				7053E7171B42F03500DE808D /* keyboard_HL@2x.png */,
 				7053E7181B42F03500DE808D /* keyboard@2x.png */,
 				F7B9EA601A4D60500072F81B /* Fav_Cell_Loc@2x.png */,
-				F7B9EA611A4D60500072F81B /* input-bar-background.png */,
-				F7B9EA621A4D60500072F81B /* input-bar-background@2x.png */,
 				F7B9EA631A4D60500072F81B /* input-bar-flat.png */,
 				F7B9EA641A4D60500072F81B /* input-bar-flat@2x.png */,
 				F7B9EA651A4D60500072F81B /* input-field-cover.png */,
@@ -1239,7 +1233,6 @@
 				F7705C391A4D5CE900CA551D /* ScanStreet_HL@2x.png in Resources */,
 				F7705C0E1A4D5CE900CA551D /* VoiceSearchOff.wav in Resources */,
 				F7705C121A4D5CE900CA551D /* Default-568h@2x.png in Resources */,
-				F7B9EABD1A4D60500072F81B /* input-bar-background@2x.png in Resources */,
 				F7705C101A4D5CE900CA551D /* VoiceSearchStartBtn@2x.png in Resources */,
 				F7705C141A4D5CE900CA551D /* album_add_photo@2x.png in Resources */,
 				F7705C431A4D5CE900CA551D /* Shake_Logo_Female_Down@2x.png in Resources */,
@@ -1263,7 +1256,6 @@
 				F7705C701A4D5CE900CA551D /* MoreMyFavorites@2x.png in Resources */,
 				F7705C5B1A4D5CE900CA551D /* emotion9.gif in Resources */,
 				F7705BD81A4D5CE900CA551D /* VoiceSearchFeedback006@2x.png in Resources */,
-				F7B9EABC1A4D60500072F81B /* input-bar-background.png in Resources */,
 				F7B9EABF1A4D60500072F81B /* input-bar-flat@2x.png in Resources */,
 				F7B9EACD1A4D60500072F81B /* ReceiverVoiceNodePlaying000@2x.png in Resources */,
 				F7705BFC1A4D5CE900CA551D /* VoiceSearchLoading002@2x.png in Resources */,
