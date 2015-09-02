@@ -287,11 +287,19 @@
         if (!voiceHLImageName) {
             voiceHLImageName = @"voice_HL";
         }
+        NSString *keyboardNormalImageName = [[XHConfigurationHelper appearance].messageInputViewStyle objectForKey:kXHMessageInputViewKeyboardNormalImageNameKey];
+        if (!keyboardNormalImageName) {
+            keyboardNormalImageName = @"keyboard";
+        }
+        NSString *keyboardHLImageName = [[XHConfigurationHelper appearance].messageInputViewStyle objectForKey:kXHMessageInputViewKeyboardHLImageNameKey];
+        if (!keyboardHLImageName) {
+            keyboardHLImageName = @"keyboard_HL";
+        }
         
         button = [self createButtonWithImage:[UIImage imageNamed:voiceNormalImageName] HLImage:[UIImage imageNamed:voiceHLImageName]];
         [button addTarget:self action:@selector(messageStyleButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
         button.tag = 0;
-        [button setBackgroundImage:[UIImage imageNamed:@"keyboard"] forState:UIControlStateSelected];
+        [button setBackgroundImage:[UIImage imageNamed:keyboardNormalImageName] forState:UIControlStateSelected];
         buttonFrame = button.frame;
         buttonFrame.origin = CGPointMake(horizontalPadding, verticalPadding);
         button.frame = buttonFrame;
@@ -337,9 +345,18 @@
             emotionHLImageName = @"face_HL";
         }
         
+        NSString *keyboardNormalImageName = [[XHConfigurationHelper appearance].messageInputViewStyle objectForKey:kXHMessageInputViewKeyboardNormalImageNameKey];
+        if (!keyboardNormalImageName) {
+            keyboardNormalImageName = @"keyboard";
+        }
+        NSString *keyboardHLImageName = [[XHConfigurationHelper appearance].messageInputViewStyle objectForKey:kXHMessageInputViewKeyboardHLImageNameKey];
+        if (!keyboardHLImageName) {
+            keyboardHLImageName = @"keyboard_HL";
+        }
+        
         button = [self createButtonWithImage:[UIImage imageNamed:emotionNormalImageName] HLImage:[UIImage imageNamed:emotionHLImageName]];
         button.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;
-        [button setBackgroundImage:[UIImage imageNamed:@"keyboard"] forState:UIControlStateSelected];
+        [button setBackgroundImage:[UIImage imageNamed:keyboardNormalImageName] forState:UIControlStateSelected];
         [button addTarget:self action:@selector(messageStyleButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
         button.tag = 1;
         buttonFrame = button.frame;

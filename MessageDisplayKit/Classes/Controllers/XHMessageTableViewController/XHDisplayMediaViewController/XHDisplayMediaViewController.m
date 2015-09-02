@@ -10,6 +10,7 @@
 #import <MediaPlayer/MediaPlayer.h>
 
 #import "UIView+XHRemoteImage.h"
+#import "XHConfigurationHelper.h"
 
 @interface XHDisplayMediaViewController ()
 
@@ -53,7 +54,12 @@
         self.title = NSLocalizedStringFromTable(@"Photo", @"MessageDisplayKitString", @"详细照片");
         self.photoImageView.image = message.photo;
         if (message.thumbnailUrl) {
-            [self.photoImageView setImageWithURL:[NSURL URLWithString:[message thumbnailUrl]] placeholer:[UIImage imageNamed:@"placeholderImage"]];
+            NSString *placeholderImageName = [[XHConfigurationHelper appearance].messageInputViewStyle objectForKey:kXHMessageTablePlaceholderImageNameKey];
+            if (!placeholderImageName) {
+                placeholderImageName = @"placeholderImage";
+            }
+            
+            [self.photoImageView setImageWithURL:[NSURL URLWithString:[message thumbnailUrl]] placeholer:[UIImage imageNamed:placeholderImageName]];
         }
     }
 }

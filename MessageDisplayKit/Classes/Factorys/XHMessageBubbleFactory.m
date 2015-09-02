@@ -8,6 +8,7 @@
 
 #import "XHMessageBubbleFactory.h"
 #import "XHMacro.h"
+#import "XHConfigurationHelper.h"
 
 @implementation XHMessageBubbleFactory
 
@@ -51,6 +52,17 @@
             break;
     }
     
+    if (type == XHBubbleMessageTypeReceiving) {
+        NSString *receivingSolidImageName = [[XHConfigurationHelper appearance].messageTableStyle objectForKey:kXHMessageTableReceivingSolidImageNameKey];
+        if (receivingSolidImageName) {
+            messageTypeString = receivingSolidImageName;
+        }
+    } else {
+        NSString *sendingSolidImageName = [[XHConfigurationHelper appearance].messageTableStyle objectForKey:kXHMessageTableSendingSolidImageNameKey];
+        if (sendingSolidImageName) {
+            messageTypeString = sendingSolidImageName;
+        }
+    }
     
     UIImage *bublleImage = [UIImage imageNamed:messageTypeString];
     UIEdgeInsets bubbleImageEdgeInsets = [self bubbleImageEdgeInsetsWithStyle:style];

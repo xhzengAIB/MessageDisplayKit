@@ -196,9 +196,17 @@ static const CGFloat kXHUserNameLabelHeight = 20;
     } else if (avatarURL) {
         [self configAvatarWithPhotoURLString:avatarURL];
     } else {
-        UIImage *avatarPhoto = [XHMessageAvatarFactory avatarImageNamed:[UIImage imageNamed:@"avatar"] messageAvatarType:XHMessageAvatarTypeSquare];
+        UIImage *avatarPhoto = [self getAvatarPlaceholderImage];
         [self configAvatarWithPhoto:avatarPhoto];
     }
+}
+
+- (UIImage *)getAvatarPlaceholderImage {
+    NSString *avatarPalceholderImageName = [[XHConfigurationHelper appearance].messageTableStyle objectForKey:kXHMessageTableAvatarPalceholderImageNameKey];
+    if (!avatarPalceholderImageName) {
+        avatarPalceholderImageName = @"avatar";
+    }
+    return [UIImage imageNamed:avatarPalceholderImageName];
 }
 
 - (void)configAvatarWithPhoto:(UIImage *)photo {
@@ -206,9 +214,12 @@ static const CGFloat kXHUserNameLabelHeight = 20;
 }
 
 - (void)configAvatarWithPhotoURLString:(NSString *)photoURLString {
-    self.avatarButton.messageAvatarType = XHMessageAvatarTypeSquare;
-    [self.avatarButton setImageWithURL:[NSURL URLWithString:photoURLString] placeholer:[UIImage imageNamed:@"avatar"]];
-    
+    BOOL customLoadAvatarNetworkImage = [[[XHConfigurationHelper appearance].messageTableStyle objectForKey:kXHMessageTableCustomLoadAvatarNetworImageKey] boolValue];
+    if (!customLoadAvatarNetworkImage) {
+        XHMessageAvatarType avatarType = [[[XHConfigurationHelper appearance].messageTableStyle objectForKey:kXHMessageTableAvatarTypeKey] integerValue];
+        self.avatarButton.messageAvatarType = avatarType;
+        [self.avatarButton setImageWithURL:[NSURL URLWithString:photoURLString] placeholer:[self getAvatarPlaceholderImage]];
+    }
 }
 
 - (void)configUserNameWithMessage:(id <XHMessageModel>)message {
@@ -403,10 +414,18 @@ static const CGFloat kXHUserNameLabelHeight = 20;
         
         // 1、是否显示Time Line的label
         if (!_timestampLabel) {
+            UIColor *timestampLabelTextColor = [[XHConfigurationHelper appearance].messageTableStyle objectForKey:kXHMessageTableTimestampTextColorKey];
+            if (!timestampLabelTextColor) {
+                timestampLabelTextColor = [UIColor whiteColor];
+            }
+            UIColor *timestampBackgroundColor = [[XHConfigurationHelper appearance].messageTableStyle objectForKey:kXHMessageTableTimestampBackgroundColorKey];
+            if (!timestampBackgroundColor) {
+                timestampBackgroundColor = [UIColor colorWithWhite:0.734 alpha:1.000];
+            }
             LKBadgeView *timestampLabel = [[LKBadgeView alloc] initWithFrame:CGRectMake(0, kXHLabelPadding, MDK_SCREEN_WIDTH, kXHTimeStampLabelHeight)];
             timestampLabel.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleLeftMargin;
-            timestampLabel.badgeColor = [UIColor colorWithWhite:0.734 alpha:1.000];
-            timestampLabel.textColor = [UIColor whiteColor];
+            timestampLabel.badgeColor = timestampBackgroundColor;
+            timestampLabel.textColor = timestampLabelTextColor;
             timestampLabel.font = [UIFont systemFontOfSize:10.0f];
             timestampLabel.center = CGPointMake(CGRectGetWidth([[UIScreen mainScreen] bounds]) / 2.0, timestampLabel.center.y);
             [self.contentView addSubview:timestampLabel];
@@ -434,7 +453,7 @@ static const CGFloat kXHUserNameLabelHeight = 20;
         }
         
         UIButton *avatarButton = [[UIButton alloc] initWithFrame:avatarButtonFrame];
-        [avatarButton setImage:[XHMessageAvatarFactory avatarImageNamed:[UIImage imageNamed:@"avatar"] messageAvatarType:XHMessageAvatarTypeCircle] forState:UIControlStateNormal];
+        [avatarButton setImage:[self getAvatarPlaceholderImage] forState:UIControlStateNormal];
         [avatarButton addTarget:self action:@selector(avatarButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
         [self.contentView addSubview:avatarButton];
         self.avatarButton = avatarButton;

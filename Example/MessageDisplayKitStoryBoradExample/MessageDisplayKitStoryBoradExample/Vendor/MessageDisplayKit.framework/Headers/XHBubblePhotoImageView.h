@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "XHMessageBubbleFactory.h"
 
-#define kXHBubblePhotoMargin 8.0f
+#define kXHBubblePhotoMargin 8.0f // 上下左右的边距
 
 @interface XHBubblePhotoImageView : UIView
 

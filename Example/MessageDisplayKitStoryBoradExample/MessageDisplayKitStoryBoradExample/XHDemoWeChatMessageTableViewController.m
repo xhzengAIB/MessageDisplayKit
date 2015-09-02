@@ -30,7 +30,7 @@
 }
 
 - (XHMessage *)getPhotoMessageWithBubbleMessageType:(XHBubbleMessageType)bubbleMessageType {
-    XHMessage *photoMessage = [[XHMessage alloc] initWithPhoto:[UIImage imageNamed:@"placeholderImage"] thumbnailUrl:@"http://www.pailixiu.com/jack/networkPhoto.png" originPhotoUrl:nil sender:@"Jack" timestamp:[NSDate date]];
+    XHMessage *photoMessage = [[XHMessage alloc] initWithPhoto:nil thumbnailUrl:@"http://www.pailixiu.com/jack/networkPhoto.png" originPhotoUrl:nil sender:@"Jack" timestamp:[NSDate date]];
     photoMessage.avatar = [UIImage imageNamed:@"avatar"];
     photoMessage.avatarUrl = @"http://www.pailixiu.com/jack/JieIcon@2x.png";
     photoMessage.bubbleMessageType = bubbleMessageType;

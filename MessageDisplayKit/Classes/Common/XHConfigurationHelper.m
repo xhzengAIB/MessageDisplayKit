@@ -15,8 +15,8 @@ NSString *kXHMessageInputViewVoiceHolderImageNameKey = @"com.HUAJIE.MDK.XHMessag
 NSString *kXHMessageInputViewVoiceHolderHLImageNameKey = @"com.HUAJIE.MDK.XHMessageInputViewVoiceHolderHLImageNameKey";
 NSString *kXHMessageInputViewExtensionNormalImageNameKey = @"com.HUAJIE.MDK.XHMessageInputViewExtensionNormalImageNameKey";
 NSString *kXHMessageInputViewExtensionHLImageNameKey = @"com.HUAJIE.MDK.XHMessageInputViewExtensionHLImageNameKey";
-NSString *kXHMessageInputViewKeyboradNormalImageNameKey = @"com.HUAJIE.MDK.XHMessageInputViewKeyboradNormalImageNameKey";
-NSString *kXHMessageInputViewKeyboradHLImageNameKey = @"com.HUAJIE.MDK.XHMessageInputViewKeyboradHLImageNameKey";
+NSString *kXHMessageInputViewKeyboardNormalImageNameKey = @"com.HUAJIE.MDK.XHMessageInputViewKeyboardNormalImageNameKey";
+NSString *kXHMessageInputViewKeyboardHLImageNameKey = @"com.HUAJIE.MDK.XHMessageInputViewKeyboardHLImageNameKey";
 NSString *kXHMessageInputViewEmotionNormalImageNameKey = @"com.HUAJIE.MDK.XHMessageInputViewEmotionNormalImageNameKey";
 NSString *kXHMessageInputViewEmotionHLImageNameKey = @"com.HUAJIE.MDK.XHMessageInputViewEmotionHLImageNameKey";
 NSString *kXHMessageInputViewBackgroundImageNameKey = @"com.HUAJIE.MDK.XHMessageInputViewBackgroundImageNameKey";
@@ -25,6 +25,12 @@ NSString *kXHMessageInputViewBackgroundImageNameKey = @"com.HUAJIE.MDK.XHMessage
 NSString *kXHMessageTablePlaceholderImageNameKey = @"com.HUAJIE.MDK.XHMessageTablePlaceholderImageNameKey";
 NSString *kXHMessageTableReceivingSolidImageNameKey = @"com.HUAJIE.MDK.XHMessageTableReceivingSolidImageNameKey";
 NSString *kXHMessageTableSendingSolidImageNameKey = @"com.HUAJIE.MDK.XHMessageTableSendingSolidImageNameKey";
+NSString *kXHMessageTableVoiceUnreadImageNameKey = @"com.HUAJIE.MDK.XHMessageTableVoiceUnreadImageNameKey";
+NSString *kXHMessageTableAvatarPalceholderImageNameKey = @"com.HUAJIE.MDK.XHMessageTableAvatarPalceholderImageNameKey";
+NSString *kXHMessageTableTimestampBackgroundColorKey = @"com.HUAJIE.MDK.XHMessageTableTimestampBackgroundColorKey";
+NSString *kXHMessageTableTimestampTextColorKey = @"com.HUAJIE.MDK.XHMessageTableTimestampTextColorKey";
+NSString *kXHMessageTableAvatarTypeKey = @"com.HUAJIE.MDK.XHMessageTableAvatarTypeKey";
+NSString *kXHMessageTableCustomLoadAvatarNetworImageKey = @"com.HUAJIE.MDK.XHMessageTableCustomLoadAvatarNetworImageKey";
 
 @interface XHConfigurationHelper ()
 

@@ -54,7 +54,7 @@
         [self.activityIndicatorView startAnimating];
         NSString *placeholderImageName = [[XHConfigurationHelper appearance].messageInputViewStyle objectForKey:kXHMessageTablePlaceholderImageNameKey];
         if (!placeholderImageName) {
-            placeholderImageName = @"placeholder";
+            placeholderImageName = @"placeholderImage";
         }
         
         self.messagePhoto = [UIImage imageNamed:placeholderImageName];

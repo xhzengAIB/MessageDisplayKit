@@ -9,6 +9,7 @@
 #import "XHMessageBubbleView.h"
 
 #import "XHMessageBubbleHelper.h"
+#import "XHConfigurationHelper.h"
 
 #define kXHHaveBubbleMargin 8.0f // 文本、视频、表情气泡上下边的间隙
 #define kXHHaveBubbleVoiceMargin 13.5f // 语音气泡上下边的间隙
@@ -422,8 +423,13 @@
         
         // 6. 初始化显示语音未读标记的imageview
         if (!_voiceUnreadDotImageView) {
+            NSString *voiceUnreadImageName = [[XHConfigurationHelper appearance].messageTableStyle objectForKey:kXHMessageTableVoiceUnreadImageNameKey];
+            if (!voiceUnreadImageName) {
+                voiceUnreadImageName = @"msg_chat_voice_unread";
+            }
+            
             UIImageView *voiceUnreadDotImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, kXHUnReadDotSize, kXHUnReadDotSize)];
-            voiceUnreadDotImageView.image = [UIImage imageNamed:@"msg_chat_voice_unread"];
+            voiceUnreadDotImageView.image = [UIImage imageNamed:voiceUnreadImageName];
             voiceUnreadDotImageView.hidden = YES;
             [self addSubview:voiceUnreadDotImageView];
             _voiceUnreadDotImageView = voiceUnreadDotImageView;

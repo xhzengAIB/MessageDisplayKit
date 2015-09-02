@@ -18,6 +18,9 @@
 #import "XHBaseNavigationController.h"
 #import "XHMessageRootViewController.h"
 
+#import <MessageDisplayKit/XHConfigurationHelper.h>
+#import <MessageDisplayKit/XHMessageAvatarFactory.h>
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -25,6 +28,26 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    
+    /* 测试用例
+    [[XHConfigurationHelper appearance] setupMessageInputViewStyle:@{
+                                                                    kXHMessageInputViewKeyboardNormalImageNameKey : @"icon_keyboard",
+                                                                    kXHMessageInputViewKeyboardHLImageNameKey : @"icon_keyboard_HL",
+                                                                    kXHMessageInputViewVoiceNormalImageNameKey : @"icon_voice",
+                                                                    kXHMessageInputViewVoiceHLImageNameKey : @"icon_voice_HL",
+                                                                    kXHMessageInputViewExtensionNormalImageNameKey : @"icon_multiMedia",
+                                                                    kXHMessageInputViewExtensionHLImageNameKey : @"icon_multiMedia_HL",
+                                                                     }];
+    
+    [[XHConfigurationHelper appearance] setupMessageTableStyle:@{
+                                                                kXHMessageTableReceivingSolidImageNameKey : @"icon_weChatBubble_Receiving_Solid",
+                                                                kXHMessageTableSendingSolidImageNameKey : @"icon_weChatBubble_Sending_Solid",
+                                                                kXHMessageTableTimestampTextColorKey : [UIColor blackColor],
+                                                                kXHMessageTableTimestampBackgroundColorKey : [UIColor magentaColor],
+                                                                kXHMessageTableAvatarTypeKey : @(XHMessageAvatarTypeCircle),
+                                                                kXHMessageTableCustomLoadAvatarNetworImageKey : @(1),
+                                                                 }];
+     */
     
     // message
     XHMessageRootViewController *messageRootViewController = [[XHMessageRootViewController alloc] init];

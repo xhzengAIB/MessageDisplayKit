@@ -15,8 +15,8 @@ extern NSString *kXHMessageInputViewVoiceHolderImageNameKey;
 extern NSString *kXHMessageInputViewVoiceHolderHLImageNameKey;
 extern NSString *kXHMessageInputViewExtensionNormalImageNameKey;
 extern NSString *kXHMessageInputViewExtensionHLImageNameKey;
-extern NSString *kXHMessageInputViewKeyboradNormalImageNameKey;
-extern NSString *kXHMessageInputViewKeyboradHLImageNameKey;
+extern NSString *kXHMessageInputViewKeyboardNormalImageNameKey;
+extern NSString *kXHMessageInputViewKeyboardHLImageNameKey;
 extern NSString *kXHMessageInputViewEmotionNormalImageNameKey;
 extern NSString *kXHMessageInputViewEmotionHLImageNameKey;
 extern NSString *kXHMessageInputViewBackgroundImageNameKey;
@@ -25,7 +25,12 @@ extern NSString *kXHMessageInputViewBackgroundImageNameKey;
 extern NSString *kXHMessageTablePlaceholderImageNameKey;
 extern NSString *kXHMessageTableReceivingSolidImageNameKey;
 extern NSString *kXHMessageTableSendingSolidImageNameKey;
-
+extern NSString *kXHMessageTableVoiceUnreadImageNameKey;
+extern NSString *kXHMessageTableAvatarPalceholderImageNameKey;
+extern NSString *kXHMessageTableTimestampBackgroundColorKey;
+extern NSString *kXHMessageTableTimestampTextColorKey;
+extern NSString *kXHMessageTableAvatarTypeKey; // XHMessageAvatarType for NSNumber， if kXHMessageTableCustomLoadAvatarNetworImageKey is YES, kXHMessageTableAvatarTypeKey is invalid
+extern NSString *kXHMessageTableCustomLoadAvatarNetworImageKey; // for NSNumber(BOOL)
 
 // 优先控制MDK的UI控件样式，比如输入框的按钮图
 @interface XHConfigurationHelper : NSObject
