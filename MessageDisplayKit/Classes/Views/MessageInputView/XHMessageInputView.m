@@ -398,11 +398,24 @@
                 inputViewBackgroundImageName = @"input-bar-flat";
             }
             
+            UIColor *borderColor = [[XHConfigurationHelper appearance].messageInputViewStyle objectForKey:kXHMessageInputViewBorderColorKey];
+            if (!borderColor) {
+                borderColor = [UIColor colorWithWhite:0.8f alpha:1.0f];
+            }
+            CGFloat borderWidth = [[[XHConfigurationHelper appearance].messageInputViewStyle objectForKey:kXHMessageInputViewBorderWidthKey] floatValue];
+            if (borderWidth == 0) {
+                borderWidth = 0.65f;
+            }
+            CGFloat cornerRadius = [[[XHConfigurationHelper appearance].messageInputViewStyle objectForKey:kXHMessageInputViewCornerRadiusKey] floatValue];
+            if (cornerRadius == 0) {
+                cornerRadius = 6.0f;
+            }
+            
             _inputTextView.frame = CGRectMake(textViewLeftMargin, 4.5f, width, height);
             _inputTextView.backgroundColor = [UIColor clearColor];
-            _inputTextView.layer.borderColor = [UIColor colorWithWhite:0.8f alpha:1.0f].CGColor;
-            _inputTextView.layer.borderWidth = 0.65f;
-            _inputTextView.layer.cornerRadius = 6.0f;
+            _inputTextView.layer.borderColor = borderColor.CGColor;
+            _inputTextView.layer.borderWidth = borderWidth;
+            _inputTextView.layer.cornerRadius = cornerRadius;
             self.image = [[UIImage imageNamed:inputViewBackgroundImageName] resizableImageWithCapInsets:UIEdgeInsetsMake(2.0f, 0.0f, 0.0f, 0.0f)
                                                                                  resizingMode:UIImageResizingModeTile];
             break;

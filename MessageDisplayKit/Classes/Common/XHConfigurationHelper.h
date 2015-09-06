@@ -20,6 +20,9 @@ extern NSString *kXHMessageInputViewKeyboardHLImageNameKey;
 extern NSString *kXHMessageInputViewEmotionNormalImageNameKey;
 extern NSString *kXHMessageInputViewEmotionHLImageNameKey;
 extern NSString *kXHMessageInputViewBackgroundImageNameKey;
+extern NSString *kXHMessageInputViewBorderColorKey;
+extern NSString *kXHMessageInputViewBorderWidthKey;
+extern NSString *kXHMessageInputViewCornerRadiusKey;
 
 // (Message Table Style Key)
 extern NSString *kXHMessageTablePlaceholderImageNameKey;
