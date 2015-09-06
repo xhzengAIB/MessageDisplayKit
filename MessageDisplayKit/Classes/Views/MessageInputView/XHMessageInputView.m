@@ -417,7 +417,7 @@
         if (!voiceHolderImageName) {
             voiceHolderImageName = @"VoiceBtn_Black";
         }
-        NSString *voiceHolderHLImageName = [[XHConfigurationHelper appearance].messageInputViewStyle objectForKey:kXHMessageInputViewEmotionHLImageNameKey];
+        NSString *voiceHolderHLImageName = [[XHConfigurationHelper appearance].messageInputViewStyle objectForKey:kXHMessageInputViewVoiceHolderHLImageNameKey];
         if (!voiceHolderHLImageName) {
             voiceHolderHLImageName = @"VoiceBtn_BlackHL";
         }
