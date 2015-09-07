@@ -98,22 +98,23 @@ static NSInteger const kOnePageSize = 7;
     [self.shareMenuView reloadData];
     
     // 创建一个对话
-    self.loadingMoreMessage=YES;
+    self.loadingMoreMessage = YES;
     WEAKSELF
     [[LeanChatManager manager] createConversationsWithClientIDs:self.clientIDs conversationType:self.conversationType completion:^(BOOL succeeded, AVIMConversation *createConversation) {
         if (succeeded) {
             weakSelf.conversation = createConversation;
-            [weakSelf.conversation queryMessagesWithLimit:kOnePageSize callback:^(NSArray *typedMessages, NSError *error) {
+            [weakSelf.conversation queryMessagesWithLimit:kOnePageSize callback:^(NSArray *queryMessages, NSError *error) {
                 dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-                    NSMutableArray* messages=[NSMutableArray array];
-                    for(AVIMTypedMessage* typedMessage in typedMessages){
+                    NSMutableArray *typedMessages = [self filterTypedMessage:queryMessages];
+                    NSMutableArray *messages = [NSMutableArray array];
+                    for(AVIMTypedMessage *typedMessage in typedMessages){
                         XHMessage *message = [weakSelf displayMessageByAVIMTypedMessage:typedMessage];
                         if (message) {
                             [messages addObject:message];
                         }
                     }
                     dispatch_async(dispatch_get_main_queue(), ^{
-                        weakSelf.messages=messages;
+                        weakSelf.messages = messages;
                         [weakSelf.messageTableView reloadData];
                         [weakSelf scrollToBottomAnimated:NO];
                         //延迟，以避免上面的滚动触发上拉加载消息
@@ -162,8 +163,18 @@ static NSInteger const kOnePageSize = 7;
 
 #pragma mark - LearnChat Message Handle Method
 
+- (NSMutableArray *)filterTypedMessage:(NSArray *)messages {
+    NSMutableArray *typedMessages = [NSMutableArray array];
+    for (AVIMMessage *message in messages) {
+        if ([message isKindOfClass:[AVIMTypedMessage class]]) {
+            [typedMessages addObject:message];
+        }
+    }
+    return typedMessages;
+}
+
 - (NSString *)fetchDataOfMessageFile:(AVFile *)file fileName:(NSString*)fileName error:(NSError**)error{
-    NSString* path=[[NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, YES) firstObject] stringByAppendingString:fileName];
+    NSString* path = [[NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, YES) firstObject] stringByAppendingString:fileName];
     NSData *data = [file getData:error];
     if(*error == nil) {
         [data writeToFile:path atomically:YES];
@@ -174,8 +185,8 @@ static NSInteger const kOnePageSize = 7;
 - (XHMessage *)displayMessageByAVIMTypedMessage:(AVIMTypedMessage*)typedMessage {
     AVIMMessageMediaType msgType = typedMessage.mediaType;
     XHMessage *message;
-    NSDate *timestamp=[NSDate dateWithTimeIntervalSince1970:typedMessage.sendTimestamp/1000];
-    NSString *displayName=[self displayNameByClientId:typedMessage.clientId];
+    NSDate *timestamp = [NSDate dateWithTimeIntervalSince1970:typedMessage.sendTimestamp/1000];
+    NSString *displayName = [self displayNameByClientId:typedMessage.clientId];
     switch (msgType) {
         case kAVIMMessageMediaTypeText: {
             AVIMTextMessage *receiveTextMessage = (AVIMTextMessage *)typedMessage;
@@ -187,25 +198,25 @@ static NSInteger const kOnePageSize = 7;
             message = [[XHMessage alloc] initWithPhoto:nil thumbnailUrl:imageMessage.file.url originPhotoUrl:nil sender:displayName timestamp:timestamp];
             break;
         }
-        case kAVIMMessageMediaTypeAudio:{
-            NSError* error;
-            NSString* path=[self fetchDataOfMessageFile:typedMessage.file fileName:typedMessage.messageId error:&error];
-            AVIMAudioMessage* audioMessage=(AVIMAudioMessage*)typedMessage;
+        case kAVIMMessageMediaTypeAudio: {
+            NSError *error;
+            NSString *path = [self fetchDataOfMessageFile:typedMessage.file fileName:typedMessage.messageId error:&error];
+            AVIMAudioMessage* audioMessage = (AVIMAudioMessage *)typedMessage;
             message = [[XHMessage alloc] initWithVoicePath:path voiceUrl:nil voiceDuration:[NSString stringWithFormat:@"%.1f",audioMessage.duration] sender:displayName timestamp:timestamp];
             break;
         }
-        case kAVIMMessageMediaTypeEmotion:{
-            AVFile *file=[AVFile fileWithURL:typedMessage.text];
+        case kAVIMMessageMediaTypeEmotion: {
+            AVFile *file = [AVFile fileWithURL:typedMessage.text];
             NSError *error;
-            NSString *path=[self fetchDataOfMessageFile:file fileName:typedMessage.messageId error:&error];
+            NSString *path = [self fetchDataOfMessageFile:file fileName:typedMessage.messageId error:&error];
             message = [[XHMessage alloc] initWithEmotionPath:path sender:displayName timestamp:timestamp];
             break;
         }
-        case kAVIMMessageMediaTypeVideo:{
+        case kAVIMMessageMediaTypeVideo: {
             AVIMVideoMessage *receiveVideoMessage=(AVIMVideoMessage*)typedMessage;
-            NSString *format=receiveVideoMessage.format;
+            NSString *format = receiveVideoMessage.format;
             NSError *error;
-            NSString *path=[self fetchDataOfMessageFile:typedMessage.file fileName:[NSString stringWithFormat:@"%@.%@",typedMessage.messageId,format] error:&error];
+            NSString *path = [self fetchDataOfMessageFile:typedMessage.file fileName:[NSString stringWithFormat:@"%@.%@",typedMessage.messageId,format] error:&error];
             message = [[XHMessage alloc] initWithVideoConverPhoto:[XHMessageVideoConverPhotoFactory videoConverPhotoWithVideoPath:path] videoPath:path videoUrl:nil sender:displayName timestamp:timestamp];
             break;
         }
@@ -224,7 +235,7 @@ static NSInteger const kOnePageSize = 7;
 - (void)insertAVIMTypedMessage:(AVIMTypedMessage *)typedMessage {
     WEAKSELF
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        XHMessage* message=[self displayMessageByAVIMTypedMessage:typedMessage];
+        XHMessage *message=[self displayMessageByAVIMTypedMessage:typedMessage];
         [weakSelf addMessage:message];
     });
 }
@@ -360,12 +371,13 @@ static NSInteger const kOnePageSize = 7;
     } else {
         if (!self.loadingMoreMessage) {
             self.loadingMoreMessage = YES;
-            XHMessage* message=self.messages[0];
+            XHMessage *message = self.messages[0];
             WEAKSELF
-            [self.conversation queryMessagesBeforeId:nil timestamp:[message.timestamp timeIntervalSince1970]*1000 limit:kOnePageSize callback:^(NSArray *typedMessages, NSError *error) {
+            [self.conversation queryMessagesBeforeId:nil timestamp:[message.timestamp timeIntervalSince1970]*1000 limit:kOnePageSize callback:^(NSArray *queryMessages, NSError *error) {
                 dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-                    NSMutableArray* messages=[NSMutableArray array];
-                    for(AVIMTypedMessage* typedMessage in typedMessages){
+                    NSMutableArray *messages=[NSMutableArray array];
+                    NSMutableArray *typedMessages = [self filterTypedMessage:queryMessages];
+                    for(AVIMTypedMessage *typedMessage in typedMessages){
                         if (weakSelf) {
                             XHMessage *message = [weakSelf displayMessageByAVIMTypedMessage:typedMessage];
                             if (message) {
@@ -430,7 +442,7 @@ static NSInteger const kOnePageSize = 7;
  *  @param date      发送时间
  */
 - (void)didSendVideoConverPhoto:(UIImage *)videoConverPhoto videoPath:(NSString *)videoPath fromSender:(NSString *)sender onDate:(NSDate *)date {
-    AVIMVideoMessage* sendVideoMessage=[AVIMVideoMessage messageWithText:nil attachedFilePath:videoPath attributes:nil];
+    AVIMVideoMessage* sendVideoMessage = [AVIMVideoMessage messageWithText:nil attachedFilePath:videoPath attributes:nil];
     WEAKSELF
     [self.conversation sendMessage:sendVideoMessage callback:^(BOOL succeeded, NSError *error) {
         if([weakSelf filterError:error]){
@@ -449,7 +461,7 @@ static NSInteger const kOnePageSize = 7;
  *  @param date             发送时间
  */
 - (void)didSendVoice:(NSString *)voicePath voiceDuration:(NSString *)voiceDuration fromSender:(NSString *)sender onDate:(NSDate *)date {
-    AVIMAudioMessage* sendAudioMessage=[AVIMAudioMessage messageWithText:nil attachedFilePath:voicePath attributes:nil];
+    AVIMAudioMessage* sendAudioMessage = [AVIMAudioMessage messageWithText:nil attachedFilePath:voicePath attributes:nil];
     WEAKSELF
     [self.conversation sendMessage:sendAudioMessage callback:^(BOOL succeeded, NSError *error) {
         DLog(@"succeed: %d, error:%@ ",succeeded,error);
@@ -503,15 +515,15 @@ static NSInteger const kOnePageSize = 7;
  */
 
 - (BOOL)shouldDisplayTimestampForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if(indexPath.row==0 || indexPath.row>=self.messages.count){
+    if(indexPath.row == 0 || indexPath.row >= self.messages.count) {
         return YES;
-    }else{
-        XHMessage* message=[self.messages objectAtIndex:indexPath.row];
-        XHMessage* previousMessage=[self.messages objectAtIndex:indexPath.row-1];
-        NSInteger interval=[message.timestamp timeIntervalSinceDate:previousMessage.timestamp];
-        if(interval>60*3){
+    } else {
+        XHMessage *message = [self.messages objectAtIndex:indexPath.row];
+        XHMessage *previousMessage = [self.messages objectAtIndex:indexPath.row-1];
+        NSInteger interval = [message.timestamp timeIntervalSinceDate:previousMessage.timestamp];
+        if (interval > 60 * 3) {
             return YES;
-        }else{
+        } else {
             return NO;
         }
     }
