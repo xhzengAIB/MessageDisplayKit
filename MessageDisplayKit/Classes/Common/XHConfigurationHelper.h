@@ -23,6 +23,10 @@ extern NSString *kXHMessageInputViewBackgroundImageNameKey;
 extern NSString *kXHMessageInputViewBorderColorKey;
 extern NSString *kXHMessageInputViewBorderWidthKey;
 extern NSString *kXHMessageInputViewCornerRadiusKey;
+extern NSString *kXHMessageInputViewPlaceHolderTextColorKey;
+extern NSString *kXHMessageInputViewPlaceHolderKey;
+extern NSString *kXHMessageInputViewTextColorKey;
+
 
 // (Message Table Style Key)
 extern NSString *kXHMessageTablePlaceholderImageNameKey;

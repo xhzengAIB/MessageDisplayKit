@@ -23,6 +23,9 @@ NSString *kXHMessageInputViewBackgroundImageNameKey = @"com.HUAJIE.MDK.XHMessage
 NSString *kXHMessageInputViewBorderColorKey = @"com.HUAJIE.MDK.XHMessageInputViewBorderColorKey";
 NSString *kXHMessageInputViewBorderWidthKey = @"com.HUAJIE.MDK.XHMessageInputViewBorderWidthKey";
 NSString *kXHMessageInputViewCornerRadiusKey = @"com.HUAJIE.MDK.XHMessageInputViewCornerRadiusKey";
+NSString *kXHMessageInputViewPlaceHolderTextColorKey = @"com.HUAJIE.MDK.XHMessageInputViewPlaceHolderTextColorKey";
+NSString *kXHMessageInputViewPlaceHolderKey = @"com.HUAJIE.MDK.XHMessageInputViewPlaceHolderKey";
+NSString *kXHMessageInputViewTextColorKey = @"com.HUAJIE.MDK.XHMessageInputViewTextColorKey";
 
 // (Message Table Style Key)
 NSString *kXHMessageTablePlaceholderImageNameKey = @"com.HUAJIE.MDK.XHMessageTablePlaceholderImageNameKey";

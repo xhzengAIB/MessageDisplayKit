@@ -384,7 +384,22 @@
     textView.returnKeyType = UIReturnKeySend;
     textView.enablesReturnKeyAutomatically = YES; // UITextView内部判断send按钮是否可以用
     
-    textView.placeHolder = NSLocalizedStringFromTable(@"SendAMessage", @"MessageDisplayKitString", nil);
+    UIColor *placeHolderTextColor = [[XHConfigurationHelper appearance].messageInputViewStyle objectForKey:kXHMessageInputViewPlaceHolderTextColorKey];
+    if (placeHolderTextColor) {
+        textView.placeHolderTextColor = placeHolderTextColor;
+    }
+    
+    UIColor *textColor = [[XHConfigurationHelper appearance].messageInputViewStyle objectForKey:kXHMessageInputViewTextColorKey];
+    if (textColor) {
+        textView.textColor = textColor;
+    }
+    
+    NSString *placeHolder = [[XHConfigurationHelper appearance].messageInputViewStyle objectForKey:kXHMessageInputViewPlaceHolderKey];
+    if (!placeHolder) {
+        placeHolder = NSLocalizedStringFromTable(@"SendAMessage", @"MessageDisplayKitString", nil);
+    }
+    
+    textView.placeHolder = placeHolder;
     textView.delegate = self;
     
     [self addSubview:textView];
