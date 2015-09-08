@@ -192,8 +192,6 @@
 		F7B9E7FB1A4D5E7B0072F81B /* FLAnimatedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLAnimatedImageView.m; sourceTree = "<group>"; };
 		F7B9E7FD1A4D5E7B0072F81B /* LKBadgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKBadgeView.h; sourceTree = "<group>"; };
 		F7B9E7FE1A4D5E7B0072F81B /* LKBadgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKBadgeView.m; sourceTree = "<group>"; };
-		F7B9E8001A4D5E7B0072F81B /* NSMutableAttributedString+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+Helper.h"; sourceTree = "<group>"; };
-		F7B9E8011A4D5E7B0072F81B /* NSMutableAttributedString+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+Helper.m"; sourceTree = "<group>"; };
 		F7B9E8021A4D5E7B0072F81B /* SECompatibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SECompatibility.h; sourceTree = "<group>"; };
 		F7B9E8031A4D5E7B0072F81B /* SECompatibility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SECompatibility.m; sourceTree = "<group>"; };
 		F7B9E8041A4D5E7B0072F81B /* SEConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SEConstants.h; sourceTree = "<group>"; };
@@ -655,8 +653,6 @@
 		F7B9E7FF1A4D5E7B0072F81B /* SECoreTextView */ = {
 			isa = PBXGroup;
 			children = (
-				F7B9E8001A4D5E7B0072F81B /* NSMutableAttributedString+Helper.h */,
-				F7B9E8011A4D5E7B0072F81B /* NSMutableAttributedString+Helper.m */,
 				F7B9E8021A4D5E7B0072F81B /* SECompatibility.h */,
 				F7B9E8031A4D5E7B0072F81B /* SECompatibility.m */,
 				F7B9E8041A4D5E7B0072F81B /* SEConstants.h */,
