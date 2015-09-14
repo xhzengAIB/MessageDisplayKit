@@ -215,10 +215,10 @@
 }
 
 - (void)dealloc {
-    self.shareMenuItems = nil;
-    self.shareMenuScrollView.delegate = self;
-    self.shareMenuScrollView = nil;
-    self.shareMenuPageControl = nil;
+    _shareMenuItems = nil;
+    _shareMenuScrollView.delegate = nil;
+    _shareMenuScrollView = nil;
+    _shareMenuPageControl = nil;
 }
 
 - (void)willMoveToSuperview:(UIView *)newSuperview {
