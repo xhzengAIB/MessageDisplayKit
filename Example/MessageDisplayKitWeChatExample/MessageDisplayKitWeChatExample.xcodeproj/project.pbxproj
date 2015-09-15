@@ -54,6 +54,7 @@
 		E47E737A1AA19FB800CF7C0B /* XHAlbumLikesCommentsView.m in Sources */ = {isa = PBXBuildFile; fileRef = E47E73791AA19FB800CF7C0B /* XHAlbumLikesCommentsView.m */; };
 		E47E737C1AA1A37600CF7C0B /* Album_likes_comments_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E47E737B1AA1A37600CF7C0B /* Album_likes_comments_background@2x.png */; };
 		E47E737E1AA1A7A800CF7C0B /* Album_like_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E47E737D1AA1A7A800CF7C0B /* Album_like_icon@2x.png */; };
+		E4A581311BA801D600BA55F6 /* customAvatarDefault@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E4A581301BA801D600BA55F6 /* customAvatarDefault@2x.png */; };
 		E4A79B621B6B5319006B806F /* MessageDisplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70A6A1741B669FB9005C2D21 /* MessageDisplayKit.framework */; };
 		E4B290091A888A5100CAC4C8 /* XHAlbumOperationView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4B290081A888A5100CAC4C8 /* XHAlbumOperationView.m */; };
 		E4CC32281A8B552500D536E3 /* XHCustomCellDemoMessageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4CC32271A8B552500D536E3 /* XHCustomCellDemoMessageTableViewController.m */; };
@@ -423,6 +424,7 @@
 		E47E73791AA19FB800CF7C0B /* XHAlbumLikesCommentsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHAlbumLikesCommentsView.m; sourceTree = "<group>"; };
 		E47E737B1AA1A37600CF7C0B /* Album_likes_comments_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Album_likes_comments_background@2x.png"; sourceTree = "<group>"; };
 		E47E737D1AA1A7A800CF7C0B /* Album_like_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Album_like_icon@2x.png"; sourceTree = "<group>"; };
+		E4A581301BA801D600BA55F6 /* customAvatarDefault@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "customAvatarDefault@2x.png"; sourceTree = "<group>"; };
 		E4B290071A888A5100CAC4C8 /* XHAlbumOperationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHAlbumOperationView.h; sourceTree = "<group>"; };
 		E4B290081A888A5100CAC4C8 /* XHAlbumOperationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHAlbumOperationView.m; sourceTree = "<group>"; };
 		E4CC32261A8B552500D536E3 /* XHCustomCellDemoMessageTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHCustomCellDemoMessageTableViewController.h; sourceTree = "<group>"; };
@@ -931,6 +933,7 @@
 		F7D24DF61A4D0EB20015764B /* ExampleResources */ = {
 			isa = PBXGroup;
 			children = (
+				E4A581301BA801D600BA55F6 /* customAvatarDefault@2x.png */,
 				E4EE99F41B975FAA00866998 /* CellBlueSelected@2x.png */,
 				E4EE99F51B975FAA00866998 /* CellGraySelected@2x.png */,
 				E4EE99F61B975FAA00866998 /* CellNotSelected@2x.png */,
@@ -1940,6 +1943,7 @@
 				F7D24EC31A4D0EB30015764B /* VoiceSearchFeedback008@2x.png in Resources */,
 				E4EE9A411B975FAB00866998 /* sharemore_wxtalk@2x.png in Resources */,
 				F7D24F3F1A4D0EB30015764B /* emotion6.gif in Resources */,
+				E4A581311BA801D600BA55F6 /* customAvatarDefault@2x.png in Resources */,
 				70A6A1EC1B66A05D005C2D21 /* keyboard@2x.png in Resources */,
 				F7D24F4A1A4D0EB30015764B /* dgame0.png in Resources */,
 				70A6A1FB1B66A05D005C2D21 /* ReceiverVoiceNodePlaying@2x.png in Resources */,

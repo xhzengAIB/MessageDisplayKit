@@ -20,6 +20,7 @@ NSString *kXHMessageInputViewKeyboardHLImageNameKey = @"com.HUAJIE.MDK.XHMessage
 NSString *kXHMessageInputViewEmotionNormalImageNameKey = @"com.HUAJIE.MDK.XHMessageInputViewEmotionNormalImageNameKey";
 NSString *kXHMessageInputViewEmotionHLImageNameKey = @"com.HUAJIE.MDK.XHMessageInputViewEmotionHLImageNameKey";
 NSString *kXHMessageInputViewBackgroundImageNameKey = @"com.HUAJIE.MDK.XHMessageInputViewBackgroundImageNameKey";
+NSString *kXHMessageInputViewBackgroundColorKey = @"com.HUAJIE.MDK.XHMessageInputViewBackgroundColorKey";
 NSString *kXHMessageInputViewBorderColorKey = @"com.HUAJIE.MDK.XHMessageInputViewBorderColorKey";
 NSString *kXHMessageInputViewBorderWidthKey = @"com.HUAJIE.MDK.XHMessageInputViewBorderWidthKey";
 NSString *kXHMessageInputViewCornerRadiusKey = @"com.HUAJIE.MDK.XHMessageInputViewCornerRadiusKey";

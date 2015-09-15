@@ -23,6 +23,10 @@
  */
 @property (nonatomic, copy) NSString *title;
 
+@property (nonatomic, strong) UIColor *titleColor;
+
+@property (nonatomic, strong) UIFont *titleFont;
+
 /**
  *  根据正常图片和标题初始化一个Model对象
  *
@@ -34,4 +38,8 @@
 - (instancetype)initWithNormalIconImage:(UIImage *)normalIconImage
                                   title:(NSString *)title;
 
+- (instancetype)initWithNormalIconImage:(UIImage *)normalIconImage
+                                  title:(NSString *)title
+                             titleColor:(UIColor *)titleColor
+                              titleFont:(UIFont *)titleFont;
 @end

@@ -408,9 +408,13 @@
     // 配置不同iOS SDK版本的样式
     switch (style) {
         case XHMessageInputViewStyleFlat: {
-            NSString *inputViewBackgroundImageName = [[XHConfigurationHelper appearance].messageInputViewStyle objectForKey:kXHMessageInputViewBackgroundImageNameKey];
-            if (!inputViewBackgroundImageName) {
-                inputViewBackgroundImageName = @"input-bar-flat";
+            UIColor *inputBackgroundColor = [XHConfigurationHelper appearance].messageInputViewStyle[kXHMessageInputViewBackgroundColorKey];
+            NSString *inputViewBackgroundImageName = nil;
+            if (!inputBackgroundColor) {
+                inputViewBackgroundImageName = [[XHConfigurationHelper appearance].messageInputViewStyle objectForKey:kXHMessageInputViewBackgroundImageNameKey];
+                if (!inputViewBackgroundImageName) {
+                    inputViewBackgroundImageName = @"input-bar-flat";
+                }
             }
             
             UIColor *borderColor = [[XHConfigurationHelper appearance].messageInputViewStyle objectForKey:kXHMessageInputViewBorderColorKey];
@@ -431,8 +435,12 @@
             _inputTextView.layer.borderColor = borderColor.CGColor;
             _inputTextView.layer.borderWidth = borderWidth;
             _inputTextView.layer.cornerRadius = cornerRadius;
-            self.image = [[UIImage imageNamed:inputViewBackgroundImageName] resizableImageWithCapInsets:UIEdgeInsetsMake(2.0f, 0.0f, 0.0f, 0.0f)
-                                                                                 resizingMode:UIImageResizingModeTile];
+            if (inputBackgroundColor) {
+                self.backgroundColor = inputBackgroundColor;
+            } else {
+                self.image = [[UIImage imageNamed:inputViewBackgroundImageName] resizableImageWithCapInsets:UIEdgeInsetsMake(2.0f, 0.0f, 0.0f, 0.0f)
+                                                                                               resizingMode:UIImageResizingModeTile];
+            }
             break;
         }
         default:
