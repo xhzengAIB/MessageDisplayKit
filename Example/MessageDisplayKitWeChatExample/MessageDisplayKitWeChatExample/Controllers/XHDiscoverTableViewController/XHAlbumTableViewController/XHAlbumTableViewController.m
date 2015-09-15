@@ -117,7 +117,7 @@
             NSLog(@"operationType : %ld", operationType);
             switch (operationType) {
                 case XHAlbumOperationTypeLike:
-                    [self addLike];
+                    [strongSelf addLike];
                     break;
                 case XHAlbumOperationTypeReply:
                     [strongSelf.sendMessageView becomeFirstResponderForTextField];

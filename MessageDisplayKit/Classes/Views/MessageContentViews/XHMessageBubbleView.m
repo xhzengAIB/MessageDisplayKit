@@ -17,11 +17,11 @@
 
 #define kXHVoiceMargin 20.0f // 播放语音时的动画控件距离头像的间隙
 
-#define kXHArrowMarginWidth 9.0f // 箭头宽度
+#define kXHArrowMarginWidth 5.2f // 箭头宽度
 
-#define kXHTopAndBottomBubbleMargin 15.0f // 文本在气泡内部的上下间隙
-#define kXHLeftTextHorizontalBubblePadding 15.0f // 文本的水平间隙
-#define kXHRightTextHorizontalBubblePadding 15.0f // 文本的水平间隙
+#define kXHTopAndBottomBubbleMargin 13.0f // 文本在气泡内部的上下间隙
+#define kXHLeftTextHorizontalBubblePadding 13.0f // 文本的水平间隙
+#define kXHRightTextHorizontalBubblePadding 13.0f // 文本的水平间隙
 
 #define kXHUnReadDotSize 10.0f // 语音未读的红点大小
 
@@ -57,28 +57,21 @@
 
 // 获取文本的实际大小
 + (CGFloat)neededWidthForText:(NSString *)text {
-    CGSize stringSize;
-    NSRange range = [text rangeOfString:@"\n" options:0];
-    if (range.length > 0) {
-        NSArray *array = [text componentsSeparatedByString:@"\n"];
-        stringSize = CGSizeMake(0, 0);
-        CGSize temp;
-        for (int i = 0; i < array.count; i++) {
-            temp = [[array objectAtIndex:i] sizeWithFont:[[XHMessageBubbleView appearance] font] constrainedToSize:CGSizeMake(MAXFLOAT, 20)];
-            if (temp.width > stringSize.width) {
-                stringSize = temp;
-            }
-        }
-    } else {
-        stringSize = [text sizeWithFont:[[XHMessageBubbleView appearance] font]
-                      constrainedToSize:CGSizeMake(MAXFLOAT, 20)];
-    }
+    UIFont *systemFont = [[XHMessageBubbleView appearance] font];
+    CGSize textSize = CGSizeMake(CGFLOAT_MAX, 20); // rough accessory size
+    CGSize sizeWithFont = [text sizeWithFont:systemFont constrainedToSize:textSize lineBreakMode:NSLineBreakByWordWrapping];
     
-    return roundf(stringSize.width);
+#if defined(__LP64__) && __LP64__
+    return ceil(sizeWithFont.width);
+#else
+    return ceilf(sizeWithFont.width);
+#endif
 }
 
 // 计算文本实际的大小
 + (CGSize)neededSizeForText:(NSString *)text {
+    // 实际处理文本的时候
+    // 文本只有一行的时候，宽度可能出现很小到最大的情况，所以需要计算一行文字需要的宽度
     CGFloat maxWidth = CGRectGetWidth([[UIScreen mainScreen] bounds]) * (kIsiPad ? 0.8 : (kIs_iPhone_6 ? 0.6 : (kIs_iPhone_6P ? 0.62 : 0.55)));
     
     CGFloat dyWidth = [XHMessageBubbleView neededWidthForText:text];
@@ -191,10 +184,12 @@
         paddingX = CGRectGetWidth(self.bounds) - bubbleSize.width;
     }
     
+    XHBubbleMessageMediaType currentMessageMediaType = self.message.messageMediaType;
+    
     // 最终减去上下边距的像素就可以得到气泡的位置以及大小
     CGFloat marginY = 0.0;
     CGFloat topSumForBottom = 0.0;
-    switch (self.message.messageMediaType) {
+    switch (currentMessageMediaType) {
         case XHBubbleMessageMediaTypeVoice:
             marginY = kXHHaveBubbleVoiceMargin;
             topSumForBottom = kXHHaveBubbleVoiceMargin * 2;
@@ -205,17 +200,16 @@
             topSumForBottom = kXHHaveBubblePhotoMargin * 2;
             break;
         default:
+            // 文本、视频、表情
             marginY = kXHHaveBubbleMargin;
             topSumForBottom = kXHHaveBubbleMargin * 2;
             break;
     }
     
-    return CGRectIntegral(
-                          CGRectMake(paddingX,
-                                     marginY,
-                                     bubbleSize.width,
-                                     bubbleSize.height - topSumForBottom)
-                          );
+    return CGRectMake(paddingX,
+                      marginY,
+                      bubbleSize.width,
+                      bubbleSize.height - topSumForBottom);
 }
 
 #pragma mark - Configure Methods
@@ -477,19 +471,15 @@
             self.bubbleImageView.frame = bubbleFrame;
             
             if (currentType == XHBubbleMessageMediaTypeText) {
-                CGFloat textX = CGRectGetMinX(bubbleFrame) + kXHRightTextHorizontalBubblePadding;
+                CGFloat textX = -(kXHArrowMarginWidth / 2.0);
                 if (self.message.bubbleMessageType == XHBubbleMessageTypeReceiving) {
-                    textX = CGRectGetMinX(bubbleFrame) + kXHArrowMarginWidth + kXHLeftTextHorizontalBubblePadding;
+                    textX = kXHArrowMarginWidth / 2.0;
                 }
-                
-                CGFloat marginY = kXHTopAndBottomBubbleMargin;
-                
-                CGRect textFrame = CGRectMake(textX,
-                                              CGRectGetMinY(bubbleFrame) + marginY,
-                                              CGRectGetWidth(bubbleFrame) - kXHLeftTextHorizontalBubblePadding - kXHRightTextHorizontalBubblePadding - kXHArrowMarginWidth,
-                                              bubbleFrame.size.height - kXHHaveBubbleMargin * 2);
-                
-                self.displayTextView.frame = CGRectIntegral(textFrame);
+                CGRect displayTextViewFrame = CGRectZero;
+                displayTextViewFrame.size.width = CGRectGetWidth(bubbleFrame) - kXHLeftTextHorizontalBubblePadding - kXHRightTextHorizontalBubblePadding - kXHArrowMarginWidth;
+                displayTextViewFrame.size.height = CGRectGetHeight(bubbleFrame) - kXHHaveBubbleMargin * 3;
+                self.displayTextView.frame = displayTextViewFrame;
+                self.displayTextView.center = CGPointMake(self.bubbleImageView.center.x + textX, self.bubbleImageView.center.y);
             }
             
             if (currentType == XHBubbleMessageMediaTypeVoice) {
