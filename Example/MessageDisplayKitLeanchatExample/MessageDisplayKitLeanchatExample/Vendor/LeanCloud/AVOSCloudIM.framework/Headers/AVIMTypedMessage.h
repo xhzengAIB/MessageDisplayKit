@@ -17,7 +17,8 @@ enum : AVIMMessageMediaType {
     kAVIMMessageMediaTypeImage = -2,
     kAVIMMessageMediaTypeAudio = -3,
     kAVIMMessageMediaTypeVideo = -4,
-    kAVIMMessageMediaTypeLocation = -5
+    kAVIMMessageMediaTypeLocation = -5,
+    kAVIMMessageMediaTypeFile = -6
 };
 @protocol AVIMTypedMessageSubclassing <NSObject>
 @required
@@ -39,5 +40,25 @@ enum : AVIMMessageMediaType {
  子类调用此方法进行注册，一般可在子类的 [+(void)load] 方法里面调用
  */
 + (void)registerSubclass;
+
+/*!
+ 使用本地文件，创建消息。
+ @param text － 消息文本。
+ @param attachedFilePath － 本地文件路径。
+ @param attributes － 用户附加属性。
+ */
++ (instancetype)messageWithText:(NSString *)text
+               attachedFilePath:(NSString *)attachedFilePath
+                     attributes:(NSDictionary *)attributes;
+
+/*!
+ 使用 AVFile，创建消息。
+ @param text － 消息文本。
+ @param file － AVFile 对象。
+ @param attributes － 用户附加属性。
+ */
++ (instancetype)messageWithText:(NSString *)text
+                           file:(AVFile *)file
+                     attributes:(NSDictionary *)attributes;
 
 @end

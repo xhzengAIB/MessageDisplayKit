@@ -1,6 +1,6 @@
 //
 //  AVRole.h
-//  AVOS Cloud
+//  LeanCloud
 //
 
 #import <Foundation/Foundation.h>
@@ -9,7 +9,7 @@
 @class AVQuery;
 
 /*!
- Represents a Role on the AVOS Cloud server. AVRoles represent groupings
+ Represents a Role on the LeanCloud server. AVRoles represent groupings
  of AVUsers for the purposes of granting permissions (e.g. specifying a
  AVACL for a AVObject). Roles are specified by their sets of child users
  and child roles, all of which are granted any permissions that the

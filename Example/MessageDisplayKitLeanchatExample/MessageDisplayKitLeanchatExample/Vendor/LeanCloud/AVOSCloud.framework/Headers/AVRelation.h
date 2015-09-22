@@ -1,6 +1,6 @@
 //
 //  AVRelation.h
-//  AVOS Cloud
+//  LeanCloud
 //
 //
 

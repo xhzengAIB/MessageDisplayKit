@@ -1,6 +1,6 @@
 //
 //  AVInstallation.h
-//  AVOS Cloud
+//  LeanCloud
 //
 
 #import <Foundation/Foundation.h>
@@ -8,8 +8,8 @@
 #import "AVQuery.h"
 
 /*!
- A AVOS Cloud Framework Installation Object that is a local representation of an
- installation persisted to the AVOS Cloud. This class is a subclass of a
+ A LeanCloud Framework Installation Object that is a local representation of an
+ installation persisted to the LeanCloud. This class is a subclass of a
  AVObject, and retains the same functionality of a AVObject, but also extends
  it with installation-specific fields and related immutability and validity
  checks.
@@ -22,9 +22,9 @@
  latest device state if the installation has not recently been saved.
 
  AVInstallation objects which have a valid deviceToken and are saved to
- the AVOS Cloud can be used to target push notifications.
+ the LeanCloud can be used to target push notifications.
 
- This class is currently for iOS only. There is no AVInstallation for AVOS Cloud
+ This class is currently for iOS only. There is no AVInstallation for LeanCloud
  applications running on OS X, because they cannot receive push notifications.
  */
 

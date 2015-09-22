@@ -1,6 +1,6 @@
 //
 //  AVCloud.h
-//  AVOS Cloud
+//  LeanCloud
 //
 //  Created by Zhu Zeng on 2/25/13.
 //  Copyright (c) 2013 AVOS. All rights reserved.

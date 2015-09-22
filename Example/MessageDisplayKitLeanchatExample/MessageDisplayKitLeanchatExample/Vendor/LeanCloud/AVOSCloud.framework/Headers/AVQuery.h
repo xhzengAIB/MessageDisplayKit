@@ -8,7 +8,7 @@
 /*!
   A class that defines a query that is used to query for AVObjects.
  */
-@class AVOperation;
+@class AVRequestOperation;
 @interface AVQuery : NSObject
 
 #pragma mark Query options
@@ -621,7 +621,7 @@
 @property (readwrite, assign) AVCachePolicy cachePolicy;
 
 /* !
- The age after which a cached value will be ignored
+ The age(seconds) after which a cached value will be ignored.
  */
 @property (readwrite, assign) NSTimeInterval maxCacheAge;
 
