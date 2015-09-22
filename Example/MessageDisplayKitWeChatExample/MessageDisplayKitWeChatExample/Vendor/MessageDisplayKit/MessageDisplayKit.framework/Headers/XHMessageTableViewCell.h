@@ -52,6 +52,8 @@
  */
 - (void)menuDidSelectedAtBubbleMessageMenuSelecteType:(XHBubbleMessageMenuSelecteType)bubbleMessageMenuSelecteType;
 
+- (void)didSelectedLink;
+
 @end
 
 @interface XHMessageTableViewCell : XHBaseTableViewCell
