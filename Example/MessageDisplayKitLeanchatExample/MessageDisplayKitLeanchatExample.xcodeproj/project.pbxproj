@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		70013D721ABEB4190050D0F7 /* AVIMEmotionMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 70013D711ABEB4190050D0F7 /* AVIMEmotionMessage.m */; };
+		702136D21BB1257100919837 /* AVOSCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 702136D11BB1257100919837 /* AVOSCloud.framework */; settings = {ASSET_TAGS = (); }; };
+		702136D41BB1258200919837 /* AVOSCloudIM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 702136D31BB1258200919837 /* AVOSCloudIM.framework */; settings = {ASSET_TAGS = (); }; };
+		702136D51BB125AF00919837 /* AVOSCloudIM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 702136D31BB1258200919837 /* AVOSCloudIM.framework */; };
+		702136D61BB125AF00919837 /* AVOSCloudIM.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 702136D31BB1258200919837 /* AVOSCloudIM.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		702136D71BB125AF00919837 /* AVOSCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 702136D11BB1257100919837 /* AVOSCloud.framework */; };
+		702136D81BB125AF00919837 /* AVOSCloud.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 702136D11BB1257100919837 /* AVOSCloud.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		702C68B91AE038530085CD78 /* AVIMConversation+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 702C68B81AE038530085CD78 /* AVIMConversation+Custom.m */; };
 		702C68BD1AE03B280085CD78 /* JSBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 702C68BC1AE03B280085CD78 /* JSBadgeView.m */; };
 		702C68C01AE136210085CD78 /* LeanChatConversationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 702C68BF1AE136210085CD78 /* LeanChatConversationTableViewCell.m */; };
@@ -17,8 +23,6 @@
 		70A6A1711B669F1D005C2D21 /* MessageDisplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70A6A1701B669F1D005C2D21 /* MessageDisplayKit.framework */; };
 		70A6A1721B669F65005C2D21 /* MessageDisplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70A6A1701B669F1D005C2D21 /* MessageDisplayKit.framework */; };
 		70A6A1731B669F65005C2D21 /* MessageDisplayKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 70A6A1701B669F1D005C2D21 /* MessageDisplayKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		E4ABB0171B3D2F850015DC5F /* AVOSCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4ABB0151B3D2F850015DC5F /* AVOSCloud.framework */; };
-		E4ABB0181B3D2F850015DC5F /* AVOSCloudIM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4ABB0161B3D2F850015DC5F /* AVOSCloudIM.framework */; };
 		E4ABB0191B3D2F990015DC5F /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 70BEDC091B3415DC004A1D39 /* libsqlite3.dylib */; };
 		E4ABB01C1B3D2FB10015DC5F /* LeanChatCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E4ABB01B1B3D2FB10015DC5F /* LeanChatCoreDataManager.m */; };
 		E4ABB02F1B3D30C30015DC5F /* emotion0.gif in Resources */ = {isa = PBXBuildFile; fileRef = E4ABB01E1B3D30C30015DC5F /* emotion0.gif */; };
@@ -130,6 +134,8 @@
 			dstSubfolderSpec = 10;
 			files = (
 				70A6A1731B669F65005C2D21 /* MessageDisplayKit.framework in Embed Frameworks */,
+				702136D61BB125AF00919837 /* AVOSCloudIM.framework in Embed Frameworks */,
+				702136D81BB125AF00919837 /* AVOSCloud.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +145,8 @@
 /* Begin PBXFileReference section */
 		70013D701ABEB4190050D0F7 /* AVIMEmotionMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVIMEmotionMessage.h; sourceTree = "<group>"; };
 		70013D711ABEB4190050D0F7 /* AVIMEmotionMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVIMEmotionMessage.m; sourceTree = "<group>"; };
+		702136D11BB1257100919837 /* AVOSCloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloud.framework; sourceTree = "<group>"; };
+		702136D31BB1258200919837 /* AVOSCloudIM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloudIM.framework; sourceTree = "<group>"; };
 		702C68B71AE038530085CD78 /* AVIMConversation+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AVIMConversation+Custom.h"; sourceTree = "<group>"; };
 		702C68B81AE038530085CD78 /* AVIMConversation+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AVIMConversation+Custom.m"; sourceTree = "<group>"; };
 		702C68BB1AE03B280085CD78 /* JSBadgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBadgeView.h; sourceTree = "<group>"; };
@@ -151,8 +159,6 @@
 		7053E7241B42F3FF00DE808D /* keyboard@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "keyboard@2x.png"; sourceTree = "<group>"; };
 		70A6A1701B669F1D005C2D21 /* MessageDisplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MessageDisplayKit.framework; sourceTree = "<group>"; };
 		70BEDC091B3415DC004A1D39 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		E4ABB0151B3D2F850015DC5F /* AVOSCloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloud.framework; sourceTree = "<group>"; };
-		E4ABB0161B3D2F850015DC5F /* AVOSCloudIM.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloudIM.framework; sourceTree = "<group>"; };
 		E4ABB01A1B3D2FB10015DC5F /* LeanChatCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeanChatCoreDataManager.h; sourceTree = "<group>"; };
 		E4ABB01B1B3D2FB10015DC5F /* LeanChatCoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeanChatCoreDataManager.m; sourceTree = "<group>"; };
 		E4ABB01E1B3D30C30015DC5F /* emotion0.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = emotion0.gif; sourceTree = "<group>"; };
@@ -272,14 +278,16 @@
 			files = (
 				E4ABB0191B3D2F990015DC5F /* libsqlite3.dylib in Frameworks */,
 				E4D674621ABDA6860000B18D /* libicucore.dylib in Frameworks */,
+				702136D51BB125AF00919837 /* AVOSCloudIM.framework in Frameworks */,
 				E4D674531ABDA47B0000B18D /* CoreLocation.framework in Frameworks */,
 				E4D674511ABDA4740000B18D /* CoreTelephony.framework in Frameworks */,
 				E4D6744F1ABDA46F0000B18D /* MobileCoreServices.framework in Frameworks */,
 				E4D6744D1ABDA4670000B18D /* SystemConfiguration.framework in Frameworks */,
 				70A6A1721B669F65005C2D21 /* MessageDisplayKit.framework in Frameworks */,
-				E4ABB0171B3D2F850015DC5F /* AVOSCloud.framework in Frameworks */,
-				E4ABB0181B3D2F850015DC5F /* AVOSCloudIM.framework in Frameworks */,
+				702136D41BB1258200919837 /* AVOSCloudIM.framework in Frameworks */,
 				70A6A1711B669F1D005C2D21 /* MessageDisplayKit.framework in Frameworks */,
+				702136D21BB1257100919837 /* AVOSCloud.framework in Frameworks */,
+				702136D71BB125AF00919837 /* AVOSCloud.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,8 +306,8 @@
 		E4ABB0141B3D2F850015DC5F /* LeanCloud */ = {
 			isa = PBXGroup;
 			children = (
-				E4ABB0151B3D2F850015DC5F /* AVOSCloud.framework */,
-				E4ABB0161B3D2F850015DC5F /* AVOSCloudIM.framework */,
+				702136D31BB1258200919837 /* AVOSCloudIM.framework */,
+				702136D11BB1257100919837 /* AVOSCloud.framework */,
 			);
 			path = LeanCloud;
 			sourceTree = "<group>";
@@ -856,7 +864,7 @@
 					"$(PROJECT_DIR)/MessageDisplayKitLeanchatExample/Vendor/LeanCloud",
 				);
 				INFOPLIST_FILE = MessageDisplayKitLeanchatExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -874,7 +882,7 @@
 					"$(PROJECT_DIR)/MessageDisplayKitLeanchatExample/Vendor/LeanCloud",
 				);
 				INFOPLIST_FILE = MessageDisplayKitLeanchatExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";

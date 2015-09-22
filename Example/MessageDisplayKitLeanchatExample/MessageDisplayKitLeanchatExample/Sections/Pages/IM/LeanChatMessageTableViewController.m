@@ -256,7 +256,7 @@ static NSInteger const kOnePageSize = 7;
  * 配置头像
  */
 - (NSString*)avatarUrlByClientId:(NSString*)clientId{
-    return @"http://www.pailixiu.com/jack/meIcon@2x.png";
+    return @"https://avatars1.githubusercontent.com/u/1969908?v=3&s=200";
 }
 
 /**
