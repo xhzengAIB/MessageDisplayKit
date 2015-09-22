@@ -76,6 +76,10 @@
     
     CGFloat dyWidth = [XHMessageBubbleView neededWidthForText:text];
     
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] == 9.0) {
+        dyWidth += 1;
+    }
+    
     CGSize textSize = [SETextView frameRectWithAttributtedString:[[XHMessageBubbleHelper sharedMessageBubbleHelper] bubbleAttributtedStringWithText:text]
                                                   constraintSize:CGSizeMake(maxWidth, MAXFLOAT)
                                                      lineSpacing:kXHTextLineSpacing
