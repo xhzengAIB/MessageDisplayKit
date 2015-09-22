@@ -6,31 +6,39 @@
 	<dict>
 		<key>Headers/AVIMAudioMessage.h</key>
 		<data>
-		a96LPtBBrpgf8xCmMobVozkOp9w=
+		eb9XiqqnJmiMlmGvRvALiOm3xmU=
 		</data>
 		<key>Headers/AVIMClient.h</key>
 		<data>
-		JB6FGhiD8mhHRR+nzVqymi5aW3k=
+		FgejVP5LZfWs0uunPnRf7c2Rpt4=
 		</data>
 		<key>Headers/AVIMCommon.h</key>
 		<data>
-		ohLswetQ+ucyirSwHCyBn1ct3+E=
+		QAWRFjLC2taDLa7eosbdeqrTiyY=
 		</data>
 		<key>Headers/AVIMConversation.h</key>
 		<data>
-		WAlcBu64QhpJEyOQa04PGB6Rmzk=
+		59KO62oMQp6tp8uUtkGg+9GYYKE=
 		</data>
 		<key>Headers/AVIMConversationQuery.h</key>
 		<data>
-		RVQJRzgndyXFg13dVGyyDVY/lHs=
+		RD1UZjaGwxd3i54h8nAt3FC5800=
 		</data>
 		<key>Headers/AVIMConversationUpdateBuilder.h</key>
 		<data>
 		Orqrkom7ENzNJMhs0kiFFK4O5Ds=
 		</data>
+		<key>Headers/AVIMFileMessage.h</key>
+		<data>
+		KaQcbxHCrrRQARntVsOY8kH9Tww=
+		</data>
 		<key>Headers/AVIMImageMessage.h</key>
 		<data>
-		up1l2VzWLlohn6G0WevnN3c2ekw=
+		KVoQvLWX1kAM4v5w+Oc4l3CgeTQ=
+		</data>
+		<key>Headers/AVIMKeyedConversation.h</key>
+		<data>
+		z4zDuR550PDWLkbEv5EokQHDA7w=
 		</data>
 		<key>Headers/AVIMLocationMessage.h</key>
 		<data>
@@ -38,7 +46,7 @@
 		</data>
 		<key>Headers/AVIMMessage.h</key>
 		<data>
-		5QZ7AWJ3RZ9yffGjStH+HihYfsA=
+		lAKG6TsTFNqLylpi55CL0U/7h70=
 		</data>
 		<key>Headers/AVIMSignature.h</key>
 		<data>
@@ -50,19 +58,23 @@
 		</data>
 		<key>Headers/AVIMTypedMessage.h</key>
 		<data>
-		ufEkRT7dd8Bt3VyML74+B8VFu0o=
+		tiPQ7VawfkMgFMoUM2h6j5ei+xs=
+		</data>
+		<key>Headers/AVIMUserOptions.h</key>
+		<data>
+		W//pE8VrASwMVMf+gSLCJ9dwg2o=
 		</data>
 		<key>Headers/AVIMVideoMessage.h</key>
 		<data>
-		b1EJIe1DiZsaXJTdH2filXEqbCM=
+		vJBPJCbR4EGM41ZsmfmjkI098fo=
 		</data>
 		<key>Headers/AVOSCloudIM.h</key>
 		<data>
-		2YRRHELLVynFgjApsoHGUD38OqY=
+		kv9eIzARnKWctlrNf36gh8YvsjI=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		1fuqoTxPlNP9jrXW7ofZCORdHi4=
+		nukMjTX/paK0pMFhX1OzRcVjpbk=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -73,31 +85,39 @@
 	<dict>
 		<key>Headers/AVIMAudioMessage.h</key>
 		<data>
-		a96LPtBBrpgf8xCmMobVozkOp9w=
+		eb9XiqqnJmiMlmGvRvALiOm3xmU=
 		</data>
 		<key>Headers/AVIMClient.h</key>
 		<data>
-		JB6FGhiD8mhHRR+nzVqymi5aW3k=
+		FgejVP5LZfWs0uunPnRf7c2Rpt4=
 		</data>
 		<key>Headers/AVIMCommon.h</key>
 		<data>
-		ohLswetQ+ucyirSwHCyBn1ct3+E=
+		QAWRFjLC2taDLa7eosbdeqrTiyY=
 		</data>
 		<key>Headers/AVIMConversation.h</key>
 		<data>
-		WAlcBu64QhpJEyOQa04PGB6Rmzk=
+		59KO62oMQp6tp8uUtkGg+9GYYKE=
 		</data>
 		<key>Headers/AVIMConversationQuery.h</key>
 		<data>
-		RVQJRzgndyXFg13dVGyyDVY/lHs=
+		RD1UZjaGwxd3i54h8nAt3FC5800=
 		</data>
 		<key>Headers/AVIMConversationUpdateBuilder.h</key>
 		<data>
 		Orqrkom7ENzNJMhs0kiFFK4O5Ds=
 		</data>
+		<key>Headers/AVIMFileMessage.h</key>
+		<data>
+		KaQcbxHCrrRQARntVsOY8kH9Tww=
+		</data>
 		<key>Headers/AVIMImageMessage.h</key>
 		<data>
-		up1l2VzWLlohn6G0WevnN3c2ekw=
+		KVoQvLWX1kAM4v5w+Oc4l3CgeTQ=
+		</data>
+		<key>Headers/AVIMKeyedConversation.h</key>
+		<data>
+		z4zDuR550PDWLkbEv5EokQHDA7w=
 		</data>
 		<key>Headers/AVIMLocationMessage.h</key>
 		<data>
@@ -105,7 +125,7 @@
 		</data>
 		<key>Headers/AVIMMessage.h</key>
 		<data>
-		5QZ7AWJ3RZ9yffGjStH+HihYfsA=
+		lAKG6TsTFNqLylpi55CL0U/7h70=
 		</data>
 		<key>Headers/AVIMSignature.h</key>
 		<data>
@@ -117,15 +137,19 @@
 		</data>
 		<key>Headers/AVIMTypedMessage.h</key>
 		<data>
-		ufEkRT7dd8Bt3VyML74+B8VFu0o=
+		tiPQ7VawfkMgFMoUM2h6j5ei+xs=
+		</data>
+		<key>Headers/AVIMUserOptions.h</key>
+		<data>
+		W//pE8VrASwMVMf+gSLCJ9dwg2o=
 		</data>
 		<key>Headers/AVIMVideoMessage.h</key>
 		<data>
-		b1EJIe1DiZsaXJTdH2filXEqbCM=
+		vJBPJCbR4EGM41ZsmfmjkI098fo=
 		</data>
 		<key>Headers/AVOSCloudIM.h</key>
 		<data>
-		2YRRHELLVynFgjApsoHGUD38OqY=
+		kv9eIzARnKWctlrNf36gh8YvsjI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>

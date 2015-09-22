@@ -17,7 +17,10 @@ typedef enum : NSUInteger {
 } AVLoggerLevel;
 
 extern NSString *const AVLoggerDomainCURL;
+extern NSString *const AVLoggerDomainNetwork;
 extern NSString *const AVLoggerDomainIM;
+extern NSString *const AVLoggerDomainStorage;
+
 @interface AVLogger : NSObject
 + (void)setLoggerLevelMask:(NSUInteger)levelMask;
 + (void)addLoggerDomain:(NSString *)domain;

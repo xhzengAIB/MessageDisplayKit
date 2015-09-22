@@ -4,12 +4,12 @@
 #import <Foundation/Foundation.h>
 #import "AVConstants.h"
 #import "AVObject.h"
-
+#import "AVSubclassing.h"
 
 @class AVQuery;
 
 /*!
-A AVOS Cloud Framework User Object that is a local representation of a user persisted to the AVOS Cloud. This class
+A LeanCloud Framework User Object that is a local representation of a user persisted to the LeanCloud. This class
  is a subclass of a AVObject, and retains the same functionality of a AVObject, but also extends it with various
  user specific methods, like authentication, signing up, and validation uniqueness.
  
@@ -18,7 +18,7 @@ A AVOS Cloud Framework User Object that is a local representation of a user pers
  */
 
 
-@interface AVUser : AVObject
+@interface AVUser : AVObject<AVSubclassing>
 
 /** @name Accessing the Current User */
 
@@ -279,6 +279,20 @@ A AVOS Cloud Framework User Object that is a local representation of a user pers
 +(void)resetPasswordWithSmsCode:(NSString *)code
                     newPassword:(NSString *)password
                           block:(AVBooleanResultBlock)block;
+
+/*!
+ *  用 sessionToken 来登录用户
+ *  @param sessionToken sessionToken
+ *  @param block        回调结果
+ */
++ (void)becomeWithSessionTokenInBackground:(NSString *)sessionToken block:(AVUserResultBlock)block;
+/*!
+ *  用 sessionToken 来登录用户
+ *  @param sessionToken sessionToken
+ *  @param error        回调错误
+ *  @return 登录的用户对象
+ */
++ (instancetype)becomeWithSessionToken:(NSString *)sessionToken error:(NSError **)error;
 
 /** @name Querying for Users */
 

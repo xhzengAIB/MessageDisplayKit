@@ -29,6 +29,16 @@ extern NSString *const kAVIMKeyConversationId;
 @property (nonatomic) NSInteger skip;
 
 /*!
+ 设置缓存策略，默认是 kAVCachePolicyCacheElseNetwork
+ */
+@property (nonatomic) AVCachePolicy cachePolicy;
+
+/*!
+ 设置缓存的过期时间，默认是 1 小时（1 * 60 * 60）
+ */
+@property (nonatomic) NSTimeInterval cacheMaxAge;
+
+/*!
  添加等于条件
  @param key 添加条件的 key
  @param object 需要等于的 object
@@ -220,7 +230,7 @@ extern NSString *const kAVIMKeyConversationId;
 
 /*!
  查询服务器获取一个 AVIMConversation 对象数组
- @param conversationId 查询使用的对话 id
+ 如果未设置 limit，或 limit 非法，默认返回 10 个结果
  @param callback 查询结果回调
  */
 - (void)findConversationsWithCallback:(AVIMArrayResultBlock)callback;

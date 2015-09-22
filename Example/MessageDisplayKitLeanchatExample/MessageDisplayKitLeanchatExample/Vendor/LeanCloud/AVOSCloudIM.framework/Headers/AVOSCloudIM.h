@@ -8,17 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-//! Project version number for AVOSCloudIM.
-FOUNDATION_EXPORT double AVOSCloudIMVersionNumber;
-
-//! Project version string for AVOSCloudIM.
-FOUNDATION_EXPORT const unsigned char AVOSCloudIMVersionString[];
-
 // In this header, you should import all the public headers of your framework using statements like #import <AVOSCloudIM/PublicHeader.h>
 
 #import "AVIMCommon.h"
 #import "AVIMClient.h"
 #import "AVIMConversation.h"
+#import "AVIMKeyedConversation.h"
 #import "AVIMConversationQuery.h"
 #import "AVIMConversationUpdateBuilder.h"
 #import "AVIMMessage.h"
@@ -28,4 +23,6 @@ FOUNDATION_EXPORT const unsigned char AVOSCloudIMVersionString[];
 #import "AVIMAudioMessage.h"
 #import "AVIMVideoMessage.h"
 #import "AVIMLocationMessage.h"
+#import "AVIMFileMessage.h"
 #import "AVIMSignature.h"
+#import "AVIMUserOptions.h"

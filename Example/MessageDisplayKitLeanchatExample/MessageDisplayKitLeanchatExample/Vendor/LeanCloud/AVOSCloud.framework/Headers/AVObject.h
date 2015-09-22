@@ -8,7 +8,7 @@
 @class AVACL;
 
 /*!
- An object that is a local representation of data persisted to the AVOS Cloud. This is the
+ An object that is a local representation of data persisted to the LeanCloud. This is the
  main class that is used to interact with objects in your app.
 */
 
@@ -49,7 +49,7 @@
  @param newClassName A class name can be any alphanumeric string that begins with a letter. It represents an object in your app, like a User or a Document.
  @return the object that is instantiated with the given class name.
  */
-- (id)initWithClassName:(NSString *)newClassName;
+- (instancetype)initWithClassName:(NSString *)newClassName;
 
 #pragma mark -
 #pragma mark Properties
@@ -200,7 +200,7 @@
 #pragma mark -
 #pragma mark Save
 
-/*! @name Saving an Object to AVOS Cloud */
+/*! @name Saving an Object to LeanCloud */
 
 /*!
  Saves the AVObject.
@@ -239,12 +239,12 @@
 - (void)saveEventually;
 
 /*!
- Saves this object to the server at some unspecified time in the future, even if AVOS Cloud is currently inaccessible.
+ Saves this object to the server at some unspecified time in the future, even if LeanCloud is currently inaccessible.
  Use this when you may not have a solid network connection, and don't need to know when the save completes.
  If there is some problem with the object such that it can't be saved, it will be silently discarded.  If the save
  completes successfully while the object is still in memory, then callback will be called.
 
- Objects saved with this method will be stored locally in an on-disk cache until they can be delivered to AVOS Cloud.
+ Objects saved with this method will be stored locally in an on-disk cache until they can be delivered to LeanCloud.
  They will be sent immediately if possible.  Otherwise, they will be sent the next time a network connection is
  available.  Objects saved this way will persist even after the app is closed, in which case they will be sent the
  next time the app is opened.  If more than 10MB of data is waiting to be sent, subsequent calls to saveEventually
@@ -259,7 +259,7 @@
 #pragma mark -
 #pragma mark Save All
 
-/*! @name Saving Many Objects to AVOS Cloud */
+/*! @name Saving Many Objects to LeanCloud */
 
 /*!
  Saves a collection of objects all at once.
@@ -300,10 +300,9 @@
                      target:(id)target
                    selector:(SEL)selector;
 
-#pragma mark -
-#pragma mark Refresh
+#pragma mark - Refresh
 
-/*! @name Getting an Object from AVOS Cloud */
+/*! @name Getting an Object from LeanCloud */
 
 /*!
  Gets whether the AVObject has been fetched.
@@ -354,10 +353,12 @@
 - (void)refreshInBackgroundWithTarget:(id)target selector:(SEL)selector;
 #endif
 
+#pragma mark - Fetch
+
 /*!
  Fetches the AVObject with the current data from the server.
  */
-- (void)fetch;
+- (BOOL)fetch;
 /*!
  Fetches the AVObject with the current data from the server and sets an error if it occurs.
  @param error Pointer to an NSError that will be set if necessary.
@@ -440,7 +441,7 @@
 - (void)fetchIfNeededInBackgroundWithTarget:(id)target
                                    selector:(SEL)selector;
 
-/*! @name Getting Many Objects from AVOS Cloud */
+/*! @name Getting Many Objects from LeanCloud */
 
 /*!
  Fetches all of the AVObjects with the current data from the server
@@ -507,10 +508,9 @@
                               target:(id)target
                             selector:(SEL)selector;
 
-#pragma mark -
-#pragma mark Delete
+#pragma mark - Delete
 
-/*! @name Removing an Object from AVOS Cloud */
+/*! @name Removing an Object from LeanCloud */
 
 /*!
  Deletes the AVObject.
@@ -545,12 +545,12 @@
                             selector:(SEL)selector;
 
 /*!
- Deletes this object from the server at some unspecified time in the future, even if AVOS Cloud is currently inaccessible.
+ Deletes this object from the server at some unspecified time in the future, even if LeanCloud is currently inaccessible.
  Use this when you may not have a solid network connection, and don't need to know when the delete completes.
  If there is some problem with the object such that it can't be deleted, the request will be silently discarded.
 
  Delete instructions made with this method will be stored locally in an on-disk cache until they can be transmitted
- to AVOS Cloud. They will be sent immediately if possible.  Otherwise, they will be sent the next time a network connection
+ to LeanCloud. They will be sent immediately if possible.  Otherwise, they will be sent the next time a network connection
  is available. Delete requests will persist even after the app is closed, in which case they will be sent the
  next time the app is opened.  If more than 10MB of saveEventually or deleteEventually commands are waiting to be sent,
  subsequent calls to saveEventually or deleteEventually will cause old requests to be silently discarded until the
@@ -564,6 +564,22 @@
  @param block The block to execute.
  */
 - (void)deleteEventuallyWithBlock:(AVIdResultBlock)block;
+
+
+/*!
+ *  Deletes all objects specified in object array.
+ *  @param objects object array
+ *  @return whether the delete succeeded
+ */
++ (BOOL)deleteAll:(NSArray *)objects;
+
+/*!
+ *  Deletes all objects specified in object array.
+ *  @param objects object array
+ *  @param error Pointer to an NSError that will be set if necessary.
+ *  @return whether the delete succeeded.
+ */
++ (BOOL)deleteAll:(NSArray *)objects error:(NSError **)error;
 
 /**
  *  Deletes all objects specified in object array. The element of objects array is AVObject or its subclass.
@@ -582,12 +598,17 @@
  */
 -(NSMutableDictionary *)dictionaryForObject;
 
+/*!
+ * Construct an AVObject with dictionary.
+ * @param dictionary A dictionary to construct an AVObject.
+ */
++ (AVObject *)objectWithDictionary:(NSDictionary *)dictionary;
+
 /**
  *  Load object properties from JSON dictionary.
  *
  *  @param dict JSON dictionary
  */
 -(void)objectFromDictionary:(NSDictionary *)dict;
-
 
 @end

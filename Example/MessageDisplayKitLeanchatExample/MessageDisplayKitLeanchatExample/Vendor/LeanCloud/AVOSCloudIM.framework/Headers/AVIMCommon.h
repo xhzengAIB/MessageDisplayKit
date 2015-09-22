@@ -11,8 +11,6 @@
 #import <AVFoundation/AVFoundation.h>
 #import <AVOSCloud/AVOSCloud.h>
 
-//#define AVIM_USE_PROTOCOL_MESSAGE_PACK 1
-
 @class AVIMConversation;
 
 extern NSString *AVOSCloudIMErrorDomain;
@@ -25,6 +23,13 @@ extern NSInteger const kAVIMErrorConnectionLost;  //连接断开
 extern NSInteger const kAVIMErrorInvalidData;  //非法数据
 extern NSInteger const kAVIMErrorMessageTooLong;  //消息内容太长
 extern NSInteger const kAVIMErrorClientNotOpen;  //client 没有打开
+
+/* AVOSCloud IM code key */
+FOUNDATION_EXPORT NSString *const kAVIMCodeKey;
+/* AVOSCloud IM app code key */
+FOUNDATION_EXPORT NSString *const kAVIMAppCodeKey;
+/* AVOSCloud IM reason key */
+FOUNDATION_EXPORT NSString *const kAVIMReasonKey;
 
 typedef void (^AVIMBooleanResultBlock)(BOOL succeeded, NSError *error);
 typedef void (^AVIMIntegerResultBlock)(NSInteger number, NSError *error);

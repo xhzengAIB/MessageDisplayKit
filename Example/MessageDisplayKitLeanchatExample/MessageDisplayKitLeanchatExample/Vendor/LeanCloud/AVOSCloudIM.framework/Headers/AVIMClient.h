@@ -10,12 +10,13 @@
 #import "AVIMSignature.h"
 
 @class AVIMConversation;
+@class AVIMKeyedConversation;
 @class AVIMMessage;
 @class AVIMTypedMessage;
 @class AVIMConversationQuery;
 @protocol AVIMClientDelegate;
 
-typedef enum : NSUInteger {
+typedef NS_ENUM(NSUInteger, AVIMClientStatus) {
     AVIMClientStatusNone,
     AVIMClientStatusOpening,
     AVIMClientStatusOpened,
@@ -23,25 +24,39 @@ typedef enum : NSUInteger {
     AVIMClientStatusResuming,
     AVIMClientStatusClosing,
     AVIMClientStatusClosed
-} AVIMClientStatus;
+};
 
-typedef uint64_t AVIMConversationOption;
-enum : AVIMConversationOption {
-    AVIMConversationOptionNone = 0,
+typedef NS_OPTIONS(uint64_t, AVIMConversationOption) {
+    AVIMConversationOptionNone      = 0,
     AVIMConversationOptionTransient = 1 << 0,
+    AVIMConversationOptionUnique    = 1 << 1,
 };
 
 @interface AVIMClient : NSObject
-@property(nonatomic, weak)id<AVIMClientDelegate> delegate;
-@property(nonatomic, weak)id<AVIMSignatureDataSource> signatureDataSource;
-@property(nonatomic, readonly)NSString *clientId;
-@property(nonatomic, readonly)AVIMClientStatus status;
+
+@property (nonatomic, weak) id<AVIMClientDelegate> delegate;
+@property (nonatomic, weak) id<AVIMSignatureDataSource> signatureDataSource;
+@property (nonatomic, readonly, copy) NSString *clientId;
+@property (nonatomic, readonly, assign) AVIMClientStatus status;
 
 /*!
  默认 AVIMClient 实例
  @return AVIMClient 实例
  */
 + (instancetype)defaultClient;
+
+/*!
+ * 设置用户选项。
+ * 该接口用于控制 AVIMClient 的一些细节行为。
+ * @param userOptions 用户选项。
+ */
++ (void)setUserOptions:(NSDictionary *)userOptions;
+
+/*!
+ * 设置实时通信的超时时间，默认 15 秒。
+ * @param seconds 超时时间，单位是秒。
+ */
++ (void)setTimeoutIntervalInSeconds:(NSTimeInterval)seconds;
 
 /*!
  重置默认 AVIMClient 实例
@@ -92,6 +107,21 @@ enum : AVIMConversationOption {
                         attributes:(NSDictionary *)attributes
                            options:(AVIMConversationOption)options
                           callback:(AVIMConversationResultBlock)callback;
+
+/*!
+ 通过 conversationId 查找已激活会话。
+ 已激活会话是指通过查询、创建、或通过 KeyedConversation 所得到的会话。
+ @param conversationId Conversation 的 id。
+ @return 与 conversationId 匹配的会话，若找不到，返回 nil。
+ */
+- (AVIMConversation *)conversationForId:(NSString *)conversationId;
+
+/*!
+ 创建一个绑定到当前 client 的会话。
+ @param keyedConversation AVIMKeyedConversation 对象。
+ @return 已绑定到当前 client 的会话。
+ */
+- (AVIMConversation *)conversationWithKeyedConversation:(AVIMKeyedConversation *)keyedConversation;
 
 /*!
  构造一个对话查询对象
@@ -181,5 +211,12 @@ enum : AVIMConversationOption {
  @return None.
  */
 - (void)conversation:(AVIMConversation *)conversation kickedByClientId:(NSString *)clientId;
+
+/*
+ 收到未读通知。
+ @param conversation 所属会话。
+ @param unread 未读消息数量。
+ */
+- (void)conversation:(AVIMConversation *)conversation didReceiveUnread:(NSInteger)unread;
 
 @end

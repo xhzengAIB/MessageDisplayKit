@@ -43,7 +43,7 @@ typedef enum : NSUInteger {
 #define kAVVerboseAuto kAVVerboseNone
 #endif
 /// Cache policies
-typedef NS_ENUM(int, AVCachePolicy){
+typedef NS_ENUM(int, AVCachePolicy) {
     ///Ignore Cache
     kAVCachePolicyIgnoreCache = 0,
     
@@ -62,14 +62,6 @@ typedef NS_ENUM(int, AVCachePolicy){
     ///CacheThenNetwork
     kAVCachePolicyCacheThenNetwork,
 } ;
-
-typedef AVCachePolicy PFCachePolicy;
-#define kPFCachePolicyIgnoreCache kAVCachePolicyIgnoreCache
-#define kPFCachePolicyCacheOnly kAVCachePolicyCacheOnly
-#define kPFCachePolicyNetworkOnly kAVCachePolicyNetworkOnly
-#define kPFCachePolicyCacheElseNetwork kAVCachePolicyCacheElseNetwork
-#define kPFCachePolicyNetworkElseCache kAVCachePolicyNetworkElseCache
-#define kPFCachePolicyCacheThenNetwork kAVCachePolicyCacheThenNetwork
 
 // Errors
 
@@ -183,98 +175,19 @@ extern NSInteger const kAVErrorFacebookInvalidSession;
 /*! @abstract 251: Invalid linked session */
 extern NSInteger const kAVErrorInvalidLinkedSession;
 
-
-
-
-
-#define kPFErrorInternalServer kAVErrorInternalServer
-#define kPFErrorConnectionFailed kAVErrorConnectionFailed
-#define kPFErrorObjectNotFound kAVErrorObjectNotFound
-#define kPFErrorInvalidQuery kAVErrorInvalidQuery
-#define kPFErrorInvalidClassName kAVErrorInvalidClassName
-#define kPFErrorMissingObjectId kAVErrorMissingObjectId
-#define kPFErrorInvalidKeyName kAVErrorInvalidKeyName
-#define kPFErrorInvalidPointer kAVErrorInvalidPointer
-#define kPFErrorInvalidJSON kAVErrorInvalidJSON
-#define kPFErrorCommandUnavailable kAVErrorCommandUnavailable
-#define kPFErrorIncorrectType kAVErrorIncorrectType
-#define kPFErrorInvalidChannelName kAVErrorInvalidChannelName
-#define kPFErrorInvalidDeviceToken kAVErrorInvalidDeviceToken
-#define kPFErrorPushMisconfigured kAVErrorPushMisconfigured
-#define kPFErrorObjectTooLarge kAVErrorObjectTooLarge
-#define kPFErrorOperationForbidden kAVErrorOperationForbidden
-#define kPFErrorCacheMiss kAVErrorCacheMiss
-#define kPFErrorInvalidNestedKey kAVErrorInvalidNestedKey
-#define kPFErrorInvalidFileName kAVErrorInvalidFileName
-#define kPFErrorInvalidACL kAVErrorInvalidACL
-#define kPFErrorTimeout kAVErrorTimeout
-#define kPFErrorInvalidEmailAddress kAVErrorInvalidEmailAddress
-#define kPFErrorDuplicateValue kAVErrorDuplicateValue
-#define kPFErrorInvalidRoleName kAVErrorInvalidRoleName
-#define kPFErrorExceededQuota kAVErrorExceededQuota
-#define kPFScriptError kAVScriptError
-#define kPFValidationError kAVValidationError
-#define kPFErrorReceiptMissing kAVErrorReceiptMissing
-#define kPFErrorInvalidPurchaseReceipt kAVErrorInvalidPurchaseReceipt
-#define kPFErrorPaymentDisabled kAVErrorPaymentDisabled
-#define kPFErrorInvalidProductIdentifier kAVErrorInvalidProductIdentifier
-#define kPFErrorProductNotFoundInAppStore kAVErrorProductNotFoundInAppStore
-#define kPFErrorInvalidServerResponse kAVErrorInvalidServerResponse
-#define kPFErrorProductDownloadFileSystemFailure kAVErrorProductDownloadFileSystemFailure
-#define kPFErrorInvalidImageData kAVErrorInvalidImageData
-#define kPFErrorUnsavedFile kAVErrorUnsavedFile
-#define kPFErrorFileDeleteFailure kAVErrorFileDeleteFailure
-#define kPFErrorUsernameMissing kAVErrorUsernameMissing
-#define kPFErrorUserPasswordMissing kAVErrorUserPasswordMissing
-#define kPFErrorUsernameTaken kAVErrorUsernameTaken
-#define kPFErrorUserEmailTaken kAVErrorUserEmailTaken
-#define kPFErrorUserEmailMissing kAVErrorUserEmailMissing
-#define kPFErrorUserWithEmailNotFound kAVErrorUserWithEmailNotFound
-#define kPFErrorUserCannotBeAlteredWithoutSession kAVErrorUserCannotBeAlteredWithoutSession
-#define kPFErrorUserCanOnlyBeCreatedThroughSignUp kAVErrorUserCanOnlyBeCreatedThroughSignUp
-#define kPFErrorFacebookAccountAlreadyLinked kAVErrorFacebookAccountAlreadyLinked
-#define kPFErrorAccountAlreadyLinked kAVErrorAccountAlreadyLinked
-#define kPFErrorUserIdMismatch kAVErrorUserIdMismatch
-#define kPFErrorUsernamePasswordMismatch kAVErrorUsernamePasswordMismatch
-#define kPFErrorUserNotFound kAVErrorUserNotFound
-#define kPFErrorFacebookIdMissing kAVErrorFacebookIdMissing
-#define kPFErrorLinkedIdMissing kAVErrorLinkedIdMissing
-#define kPFErrorFacebookInvalidSession kAVErrorFacebookInvalidSession
-#define kPFErrorInvalidLinkedSession kAVErrorInvalidLinkedSession
-
-#define kPFErrorInvalidMobilePhoneNumber kAVErrorInvalidMobilePhoneNumber
-#define kPFErrorUserMobilePhoneMissing kAVErrorUserMobilePhoneMissing
-#define kPFErrorUserWithMobilePhoneNotFound kAVErrorUserWithMobilePhoneNotFound
-#define kPFErrorUserMobilePhoneNumberTaken kAVErrorUserMobilePhoneNumberTaken
-#define kPFErrorUserMobilePhoneNotVerified kAVErrorUserMobilePhoneNotVerified
-
-typedef void (^PFBooleanResultBlock)(BOOL succeeded, NSError *error);
-typedef void (^PFIntegerResultBlock)(NSInteger number, NSError *error);
-typedef void (^PFArrayResultBlock)(NSArray *objects, NSError *error);
-typedef void (^PFObjectResultBlock)(AVObject *object, NSError *error);
-typedef void (^PFSetResultBlock)(NSSet *channels, NSError *error);
-typedef void (^PFUserResultBlock)(AVUser *user, NSError *error);
-typedef void (^PFDataResultBlock)(NSData *data, NSError *error);
-typedef void (^PFImageResultBlock)(UIImage * image, NSError *error);
-typedef void (^PFDataStreamResultBlock)(NSInputStream *stream, NSError *error);
-typedef void (^PFStringResultBlock)(NSString *string, NSError *error);
-typedef void (^PFIdResultBlock)(id object, NSError *error);
-typedef void (^PFProgressBlock)(NSInteger percentDone);
-typedef void (^PFFileResultBlock)(AVFile * file, NSError *error);
+typedef void (^AVBooleanResultBlock)(BOOL succeeded, NSError *error);
+typedef void (^AVIntegerResultBlock)(NSInteger number, NSError *error);
+typedef void (^AVArrayResultBlock)(NSArray *objects, NSError *error);
+typedef void (^AVObjectResultBlock)(AVObject *object, NSError *error);
+typedef void (^AVSetResultBlock)(NSSet *channels, NSError *error);
+typedef void (^AVUserResultBlock)(AVUser *user, NSError *error);
+typedef void (^AVDataResultBlock)(NSData *data, NSError *error);
+typedef void (^AVImageResultBlock)(UIImage * image, NSError *error);
+typedef void (^AVDataStreamResultBlock)(NSInputStream *stream, NSError *error);
+typedef void (^AVStringResultBlock)(NSString *string, NSError *error);
+typedef void (^AVIdResultBlock)(id object, NSError *error);
+typedef void (^AVProgressBlock)(NSInteger percentDone);
+typedef void (^AVFileResultBlock)(AVFile * file, NSError *error);
 typedef void (^AVDictionaryResultBlock)(NSDictionary * dict, NSError *error);
-
-typedef PFBooleanResultBlock AVBooleanResultBlock;
-typedef PFIntegerResultBlock AVIntegerResultBlock;
-typedef PFArrayResultBlock AVArrayResultBlock;
-typedef PFObjectResultBlock AVObjectResultBlock;
-typedef PFSetResultBlock AVSetResultBlock;
-typedef PFUserResultBlock AVUserResultBlock;
-typedef PFDataResultBlock AVDataResultBlock;
-typedef PFImageResultBlock AVImageResultBlock;
-typedef PFDataStreamResultBlock AVDataStreamResultBlock;
-typedef PFStringResultBlock AVStringResultBlock;
-typedef PFIdResultBlock AVIdResultBlock;
-typedef PFProgressBlock AVProgressBlock;
-typedef PFFileResultBlock AVFileResultBlock;
 
 #define AVDeprecated(explain) __attribute__((deprecated(explain)))

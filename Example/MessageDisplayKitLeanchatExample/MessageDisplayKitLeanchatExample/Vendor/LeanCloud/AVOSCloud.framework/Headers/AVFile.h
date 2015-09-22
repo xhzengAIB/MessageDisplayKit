@@ -1,13 +1,13 @@
 //
 //  AVFile.h
-//  AVOS Cloud
+//  LeanCloud
 //
 
 #import <Foundation/Foundation.h>
 #import "AVConstants.h"
 
 /*!
- A file of binary data stored on the AVOS Cloud servers. This can be a image, video, or anything else
+ A file of binary data stored on the LeanCloud servers. This can be a image, video, or anything else
  that an application needs to reference in a non-relational way.
  */
 @interface AVFile : NSObject
@@ -19,7 +19,7 @@
  @param data The contents of the new AVFile.
  @return A AVFile.
  */
-+ (id)fileWithData:(NSData *)data;
++ (instancetype)fileWithData:(NSData *)data;
 
 /*!
  Creates a file with given data and name.
@@ -27,7 +27,7 @@
  @param data The contents of the new AVFile.
  @return A AVFile.
  */
-+ (id)fileWithName:(NSString *)name data:(NSData *)data;
++ (instancetype)fileWithName:(NSString *)name data:(NSData *)data;
 
 
 /*!
@@ -36,14 +36,14 @@
  @param url The url of file.
  @return an AVFile.
  */
-+ (id)fileWithURL:(NSString *)url;
++ (instancetype)fileWithURL:(NSString *)url;
 
 /*!
  Creates a file with the contents of another file.
  @param name The name of the new AVFile
- @param path The path to the file that will be uploaded to AVOS Cloud
+ @param path The path to the file that will be uploaded to LeanCloud
  */
-+ (id)fileWithName:(NSString *)name 
++ (instancetype)fileWithName:(NSString *)name
     contentsAtPath:(NSString *)path;
 
 /*!
@@ -67,7 +67,7 @@ The name of the file.
  */
 @property (readonly) NSString *bucket;
 
-/** @name Storing Data with AVOS Cloud */
+/** @name Storing Data with LeanCloud */
 
 /*!
  Whether the file has been uploaded for the first time.
@@ -124,7 +124,7 @@ The name of the file.
  */
 - (void)saveInBackgroundWithTarget:(id)target selector:(SEL)selector;
 
-/** @name Getting Data from AVOS Cloud */
+/** @name Getting Data from LeanCloud */
 
 /*!
  Whether the data is available in memory or needs to be downloaded.
@@ -132,7 +132,7 @@ The name of the file.
 @property (readonly) BOOL isDataAvailable;
 
 /*!
- Gets the data from cache if available or fetches its contents from the AVOS Cloud
+ Gets the data from cache if available or fetches its contents from the LeanCloud
  servers.
  @return The data. Returns nil if there was an error in fetching.
  */
@@ -148,7 +148,7 @@ The name of the file.
 - (NSInputStream *)getDataStream;
 
 /*!
- Gets the data from cache if available or fetches its contents from the AVOS Cloud
+ Gets the data from cache if available or fetches its contents from the LeanCloud
  servers. Sets an error if it occurs.
  @param error Pointer to an NSError that will be set if necessary.
  @return The data. Returns nil if there was an error in fetching.
@@ -167,7 +167,7 @@ The name of the file.
 
 /*!
  Asynchronously gets the data from cache if available or fetches its contents 
- from the AVOS Cloud servers. Executes the given block.
+ from the LeanCloud servers. Executes the given block.
  @param block The block should have the following argument signature: (NSData *result, NSError *error)
  */
 - (void)getDataInBackgroundWithBlock:(AVDataResultBlock)block;
@@ -182,7 +182,7 @@ The name of the file.
 
 /*!
  Asynchronously gets the data from cache if available or fetches its contents 
- from the AVOS Cloud servers. Executes the resultBlock upon
+ from the LeanCloud servers. Executes the resultBlock upon
  completion or error. Executes the progressBlock periodically with the percent progress. progressBlock will get called with 100 before resultBlock is called.
  @param resultBlock The block should have the following argument signature: (NSData *result, NSError *error)
  @param progressBlock The block should have the following argument signature: (int percentDone)
@@ -202,7 +202,7 @@ The name of the file.
 
 /*!
  Asynchronously gets the data from cache if available or fetches its contents 
- from the AVOS Cloud servers.
+ from the LeanCloud servers.
  @param target The object to call selector on.
  @param selector The selector to call. It should have the following signature: (void)callbackWithResult:(NSData *)result error:(NSError *)error. error will be nil on success and set if there was an error.
  */
@@ -224,6 +224,33 @@ The name of the file.
  */
 + (void)getFileWithObjectId:(NSString *)objectId
                   withBlock:(AVFileResultBlock)block;
+
+/*!
+ Get a thumbnail URL for image saved on Qiniu.
+
+ @param scaleToFit Scale the thumbnail and keep aspect ratio.
+ @param width The thumbnail width.
+ @param height The thumbnail height.
+ @param quality The thumbnail image quality in 1 - 100.
+ @param format The thumbnail image format such as 'jpg', 'gif', 'png', 'tif' etc.
+ */
+- (NSString *)getThumbnailURLWithScaleToFit:(BOOL)scaleToFit
+                                      width:(int)width
+                                     height:(int)height
+                                    quality:(int)quality
+                                     format:(NSString *)format;
+
+/*!
+ Get a thumbnail URL for image saved on Qiniu.
+ @see -getThumbnailURLWithScaleToFit:width:height:quality:format
+
+ @param scaleToFit Scale the thumbnail and keep aspect ratio.
+ @param width The thumbnail width.
+ @param height The thumbnail height.
+ */
+- (NSString *)getThumbnailURLWithScaleToFit:(BOOL)scaleToFit
+                                      width:(int)width
+                                     height:(int)height;
 
 /*!
  Gets a thumbnail asynchronously and calls the given block with the result.
@@ -261,6 +288,11 @@ The name of the file.
  Gets file path extension from url, name or local file path.
  */
 -(NSString *)pathExtension;
+
+/*!
+ Gets local file path.
+ */
+- (NSString *)localPath;
 
 /*!
  Remove file in background.

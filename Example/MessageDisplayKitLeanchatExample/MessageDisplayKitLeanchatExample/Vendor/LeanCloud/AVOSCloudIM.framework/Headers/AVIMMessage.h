@@ -31,6 +31,7 @@ typedef enum : int8_t {
 @property (nonatomic, strong) NSString *content;          // 消息文本
 @property (nonatomic, assign) int64_t sendTimestamp;      // 发送时间（精确到毫秒）
 @property (nonatomic, assign) int64_t deliveredTimestamp; // 接收时间（精确到毫秒）
+@property (nonatomic, readonly) BOOL transient;           // 是否是暂态消息
 
 /*!
  创建文本消息。
