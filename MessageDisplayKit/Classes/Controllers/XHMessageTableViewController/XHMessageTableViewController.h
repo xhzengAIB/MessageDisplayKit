@@ -170,6 +170,8 @@
 
 @property (nonatomic, assign, readonly) XHInputViewType textViewInputViewType;
 
+@property (nonatomic, assign, setter=activityIndicatorViewStyle:) UIActivityIndicatorViewStyle activityIndicatorViewStyle;
+
 /**
  *  数据源，显示多少消息
  */
