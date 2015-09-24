@@ -329,8 +329,9 @@ static CGPoint  delayOffset = {0.0};
         [self.loadMoreActivityIndicatorView stopAnimating];
     }
 }
-- (void)setActivityIndicatorViewStyle:(UIActivityIndicatorViewStyle)activityIndicatorViewStyle {
-    self.loadMoreActivityIndicatorView.activityIndicatorViewStyle = activityIndicatorViewStyle;
+- (void)setLoadMoreActivityIndicatorViewStyle:(UIActivityIndicatorViewStyle)loadMoreActivityIndicatorViewStyle {
+    _loadMoreActivityIndicatorViewStyle = loadMoreActivityIndicatorViewStyle;
+    self.loadMoreActivityIndicatorView.activityIndicatorViewStyle = loadMoreActivityIndicatorViewStyle;
 }
 
 - (XHShareMenuView *)shareMenuView {

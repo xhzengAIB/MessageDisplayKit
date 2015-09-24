@@ -60,7 +60,7 @@ static NSInteger const kOnePageSize = 7;
     self.title = NSLocalizedStringFromTable(@"Chat", @"MessageDisplayKitString", @"聊天");
     
     // Custom UI
-//    self.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhite;
+//    self.loadMoreActivityIndicatorViewStyle = UIActivityIndicatorViewStyleWhite;
 //    [self setBackgroundColor:[UIColor clearColor]];
 //    [self setBackgroundImage:[UIImage imageNamed:@"TableViewBackgroundImage"]];
     
