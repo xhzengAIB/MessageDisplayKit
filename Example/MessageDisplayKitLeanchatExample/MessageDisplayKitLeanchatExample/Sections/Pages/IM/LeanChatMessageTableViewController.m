@@ -55,11 +55,12 @@ static NSInteger const kOnePageSize = 7;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     if (CURRENT_SYS_VERSION >= 7.0) {
-        self.navigationController.interactivePopGestureRecognizer.delaysTouchesBegan=NO;
+        self.navigationController.interactivePopGestureRecognizer.delaysTouchesBegan = NO;
     }
     self.title = NSLocalizedStringFromTable(@"Chat", @"MessageDisplayKitString", @"聊天");
     
     // Custom UI
+//    self.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhite;
 //    [self setBackgroundColor:[UIColor clearColor]];
 //    [self setBackgroundImage:[UIImage imageNamed:@"TableViewBackgroundImage"]];
     
@@ -107,7 +108,7 @@ static NSInteger const kOnePageSize = 7;
                 dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
                     NSMutableArray *typedMessages = [self filterTypedMessage:queryMessages];
                     NSMutableArray *messages = [NSMutableArray array];
-                    for(AVIMTypedMessage *typedMessage in typedMessages){
+                    for (AVIMTypedMessage *typedMessage in typedMessages) {
                         XHMessage *message = [weakSelf displayMessageByAVIMTypedMessage:typedMessage];
                         if (message) {
                             [messages addObject:message];
@@ -118,8 +119,8 @@ static NSInteger const kOnePageSize = 7;
                         [weakSelf.messageTableView reloadData];
                         [weakSelf scrollToBottomAnimated:NO];
                         //延迟，以避免上面的滚动触发上拉加载消息
-                        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.5*NSEC_PER_SEC), dispatch_get_main_queue(), ^{
-                            weakSelf.loadingMoreMessage=NO;
+                        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.5 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+                            weakSelf.loadingMoreMessage = NO;
                         });
                     });
                 });
@@ -159,7 +160,6 @@ static NSInteger const kOnePageSize = 7;
     [[XHAudioPlayerHelper shareInstance] setDelegate:nil];
     [[LeanChatManager manager] setupDidReceiveTypedMessageCompletion:nil];
 }
-
 
 #pragma mark - LearnChat Message Handle Method
 
@@ -375,7 +375,7 @@ static NSInteger const kOnePageSize = 7;
             WEAKSELF
             [self.conversation queryMessagesBeforeId:nil timestamp:[message.timestamp timeIntervalSince1970]*1000 limit:kOnePageSize callback:^(NSArray *queryMessages, NSError *error) {
                 dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-                    NSMutableArray *messages=[NSMutableArray array];
+                    NSMutableArray *messages = [NSMutableArray array];
                     NSMutableArray *typedMessages = [self filterTypedMessage:queryMessages];
                     for(AVIMTypedMessage *typedMessage in typedMessages){
                         if (weakSelf) {
@@ -406,7 +406,7 @@ static NSInteger const kOnePageSize = 7;
     AVIMTextMessage *sendTextMessage = [AVIMTextMessage messageWithText:text attributes:nil];
     WEAKSELF
     [self.conversation sendMessage:sendTextMessage callback:^(BOOL succeeded, NSError *error) {
-        if([weakSelf filterError:error]){
+        if ([weakSelf filterError:error]) {
             [weakSelf insertAVIMTypedMessage:sendTextMessage];
             [weakSelf finishSendMessageWithBubbleMessageType:XHBubbleMessageMediaTypeText];
         }
@@ -442,10 +442,10 @@ static NSInteger const kOnePageSize = 7;
  *  @param date      发送时间
  */
 - (void)didSendVideoConverPhoto:(UIImage *)videoConverPhoto videoPath:(NSString *)videoPath fromSender:(NSString *)sender onDate:(NSDate *)date {
-    AVIMVideoMessage* sendVideoMessage = [AVIMVideoMessage messageWithText:nil attachedFilePath:videoPath attributes:nil];
+    AVIMVideoMessage *sendVideoMessage = [AVIMVideoMessage messageWithText:nil attachedFilePath:videoPath attributes:nil];
     WEAKSELF
     [self.conversation sendMessage:sendVideoMessage callback:^(BOOL succeeded, NSError *error) {
-        if([weakSelf filterError:error]){
+        if ([weakSelf filterError:error]) {
             [weakSelf insertAVIMTypedMessage:sendVideoMessage];
             [weakSelf finishSendMessageWithBubbleMessageType:XHBubbleMessageMediaTypeVideo];
         }
@@ -481,13 +481,13 @@ static NSInteger const kOnePageSize = 7;
  */
 - (void)didSendEmotion:(NSString *)emotionPath fromSender:(NSString *)sender onDate:(NSDate *)date {
     WEAKSELF
-    AVFile* file=[AVFile fileWithName:@"emotion" contentsAtPath:emotionPath];
+    AVFile *file = [AVFile fileWithName:@"emotion" contentsAtPath:emotionPath];
     [file saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if([weakSelf filterError:error]){
-            AVIMEmotionMessage* sendEmotionMessage=[AVIMEmotionMessage messageWithText:file.url attributes:nil];
+        if ([weakSelf filterError:error]) {
+            AVIMEmotionMessage *sendEmotionMessage=[AVIMEmotionMessage messageWithText:file.url attributes:nil];
             [weakSelf.conversation sendMessage:sendEmotionMessage callback:^(BOOL succeeded, NSError *error) {
                 DLog(@"succeed: %d, error:%@ ",succeeded,error);
-                if([weakSelf filterError:error]){
+                if ([weakSelf filterError:error]) {
                     [weakSelf insertAVIMTypedMessage:sendEmotionMessage];
                     [weakSelf finishSendMessageWithBubbleMessageType:XHBubbleMessageMediaTypeEmotion];
                 }
@@ -515,7 +515,7 @@ static NSInteger const kOnePageSize = 7;
  */
 
 - (BOOL)shouldDisplayTimestampForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if(indexPath.row == 0 || indexPath.row >= self.messages.count) {
+    if (indexPath.row == 0 || indexPath.row >= self.messages.count) {
         return YES;
     } else {
         XHMessage *message = [self.messages objectAtIndex:indexPath.row];
