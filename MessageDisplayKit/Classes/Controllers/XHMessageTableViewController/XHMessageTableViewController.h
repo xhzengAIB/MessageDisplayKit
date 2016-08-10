@@ -162,14 +162,30 @@
 
 @end
 
-@interface XHMessageTableViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, XHMessageTableViewControllerDelegate, XHMessageTableViewControllerDataSource, XHMessageInputViewDelegate, XHMessageTableViewCellDelegate, XHShareMenuViewDelegate, XHEmotionManagerViewDelegate, XHEmotionManagerViewDataSource>
+@interface XHMessageTableViewController : UIViewController <
+UITableViewDataSource,
+UITableViewDelegate,
+XHMessageTableViewControllerDelegate,
+XHMessageTableViewControllerDataSource,
+XHMessageInputViewDelegate,
+XHMessageTableViewCellDelegate,
+XHShareMenuViewDelegate,
+XHEmotionManagerViewDelegate,
+XHEmotionManagerViewDataSource
+>
 
 @property (nonatomic, weak) id <XHMessageTableViewControllerDelegate> delegate;
 
 @property (nonatomic, weak) id <XHMessageTableViewControllerDataSource> dataSource;
 
+/**
+ *  用户输入方式
+ */
 @property (nonatomic, assign, readonly) XHInputViewType textViewInputViewType;
 
+/**
+ *  加载更多数据的指示器
+ */
 @property (nonatomic, assign) UIActivityIndicatorViewStyle loadMoreActivityIndicatorViewStyle;
 
 /**
