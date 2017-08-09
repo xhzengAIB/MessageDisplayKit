@@ -1,4 +1,7 @@
 ![](https://github.com/xhzengAIB/LearnEnglish/raw/master/Screenshots/MessageDisplayKit.png)
+
+由于本人工作内容的变化，不打算长期维护，该项目仅限于提供学习参考；
+
 MessageDisplayKit
 =================
 一个类似微信App的IM应用，拥有发送文字、图片、语音、视频、地理位置消息，管理本地通信录、分享朋友圈、漂流交友、摇一摇和更多有趣的功能。                                
